@@ -1,0 +1,28 @@
+{
+  "language": "french",
+  "stages": [
+    {
+      "id": 1,
+      "title": "First Steps",
+      "level_hint": "beginner",
+      "vocabulary": [
+        { "word": "bonjour", "translation": "hello", "pos": "interjection", "example": "Bonjour, comment ca va ?" },
+        { "word": "merci", "translation": "thank you", "pos": "interjection", "example": "Merci beaucoup !" },
+        { "word": "oui", "translation": "yes", "pos": "adverb", "example": "Oui, je suis etudiant." },
+        { "word": "non", "translation": "no", "pos": "adverb", "example": "Non, je ne suis pas fatigue." },
+        { "word": "je", "translation": "I", "pos": "pronoun", "example": "Je suis etudiant." },
+        { "word": "suis", "translation": "am", "pos": "verb", "example": "Je suis etudiant." },
+        { "word": "etudiant", "translation": "student", "pos": "noun", "example": "Je suis etudiant." },
+        { "word": "comment", "translation": "how", "pos": "adverb", "example": "Comment ca va ?" }
+      ],
+      "exercises": [
+        { "type": "translation", "prompt": "Je suis etudiant.", "answer": "I am a student" },
+        { "type": "translation", "prompt": "Comment ca va ?", "answer": "How are you?" },
+        { "type": "multiple_choice", "prompt": "Choose the correct greeting:", "options": ["bonjour", "maison", "manger"], "answer": "bonjour" },
+        { "type": "multiple_choice", "prompt": "Choose the word for 'yes':", "options": ["non", "oui", "merci"], "answer": "oui" },
+        { "type": "fill_blank", "prompt": "___, comment ca va ?", "answer": "Bonjour" },
+        { "type": "fill_blank", "prompt": "Je ___ etudiant.", "answer": "suis" }
+      ]
+    }
+  ]
+}
