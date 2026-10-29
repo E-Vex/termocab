@@ -1,5 +1,6 @@
 mod content;
 mod progress;
+mod storage;
 mod engine;
 
 fn main() {
