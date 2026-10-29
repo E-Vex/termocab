@@ -5,12 +5,12 @@ fn main() {
     let stages = match content::load_language("languages/french/stages.json") {
         Ok(stages) => stages,
         Err(e) => {
-            eprintln!("tvocab: failed to load French content: {e}");
+            eprintln!("termocab: failed to load French content: {e}");
             std::process::exit(1);
         }
     };
 
-    println!("tvocab — language learning for terminal enthusiasts");
+    println!("termocab — language learning for terminal enthusiasts");
     println!();
     println!("French: {} stage(s) loaded", stages.len());
 
