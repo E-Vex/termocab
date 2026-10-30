@@ -53,9 +53,7 @@ impl LanguageProgress {
         &self,
         stages: &'a [crate::engine::Stage],
     ) -> Option<&'a crate::engine::Stage> {
-        stages
-            .iter()
-            .find(|s| !self.completed.contains(&s.id))
+        stages.iter().find(|s| !self.completed.contains(&s.id))
     }
 
     /// The stage the learner should play: the first stage not yet completed.
@@ -160,7 +158,11 @@ fn prev_day(date: &str) -> Option<String> {
             _ => {
                 let prev_len = match m {
                     3 => {
-                        if leap { 29 } else { 28 }
+                        if leap {
+                            29
+                        } else {
+                            28
+                        }
                     }
                     5 | 7 | 10 | 12 => 30,
                     _ => 31,

@@ -83,9 +83,10 @@ impl SrsState {
     pub fn introduce(&mut self, words: &[String], date: &str) -> usize {
         let before = self.cards.len();
         for word in words {
-            self.cards
-                .entry(word.clone())
-                .or_insert_with(|| Card { box_number: 1, due: date.to_string() });
+            self.cards.entry(word.clone()).or_insert_with(|| Card {
+                box_number: 1,
+                due: date.to_string(),
+            });
         }
         self.cards.len() - before
     }
@@ -181,7 +182,11 @@ fn month_len(y: i64, m: i64) -> i64 {
         4 | 6 | 9 | 11 => 30,
         _ => {
             let leap = (y % 4 == 0 && y % 100 != 0) || y % 400 == 0;
-            if leap { 29 } else { 28 }
+            if leap {
+                29
+            } else {
+                28
+            }
         }
     }
 }
@@ -233,10 +238,22 @@ mod tests {
         s.introduce(&["bonjour".to_string()], "2026-10-30");
         // box 1 → 2: due in 2 days
         let sched = s.answer("bonjour", true, "2026-10-30").unwrap();
-        assert_eq!(sched, Schedule { box_number: 2, due: "2026-11-01".into() });
+        assert_eq!(
+            sched,
+            Schedule {
+                box_number: 2,
+                due: "2026-11-01".into()
+            }
+        );
         // box 2 → 3: due 4 days later
         let sched = s.answer("bonjour", true, "2026-11-01").unwrap();
-        assert_eq!(sched, Schedule { box_number: 3, due: "2026-11-05".into() });
+        assert_eq!(
+            sched,
+            Schedule {
+                box_number: 3,
+                due: "2026-11-05".into()
+            }
+        );
     }
 
     #[test]
@@ -246,14 +263,26 @@ mod tests {
         s.answer("merci", true, "2026-10-30");
         s.answer("merci", true, "2026-11-01");
         let sched = s.answer("merci", false, "2026-11-05").unwrap();
-        assert_eq!(sched, Schedule { box_number: 1, due: "2026-11-06".into() });
+        assert_eq!(
+            sched,
+            Schedule {
+                box_number: 1,
+                due: "2026-11-06".into()
+            }
+        );
     }
 
     #[test]
     fn box_six_is_the_ceiling() {
         let mut s = SrsState::from_parts(vec![("mot".to_string(), 6, "2026-10-30".to_string())]);
         let sched = s.answer("mot", true, "2026-10-30").unwrap();
-        assert_eq!(sched, Schedule { box_number: 6, due: "2026-12-01".into() });
+        assert_eq!(
+            sched,
+            Schedule {
+                box_number: 6,
+                due: "2026-12-01".into()
+            }
+        );
     }
 
     #[test]
@@ -286,7 +315,11 @@ mod tests {
         assert!(s.answer("inconnu", true, "2026-10-30").is_none());
         assert!(s.answer("bonjour", true, "not-a-date").is_none());
         // a bad date leaves the card untouched
-        let (_, card) = s.cards().into_iter().find(|(w, _)| *w == "bonjour").unwrap();
+        let (_, card) = s
+            .cards()
+            .into_iter()
+            .find(|(w, _)| *w == "bonjour")
+            .unwrap();
         assert_eq!(card.box_number, 1);
         assert_eq!(card.due, "2026-10-30");
     }

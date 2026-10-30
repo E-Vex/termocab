@@ -118,7 +118,9 @@ fn usage_error(msg: &str) -> ! {
 
 fn expect_lang(rest: &[String], cmd: &str) -> String {
     let Some(lang) = rest.first() else {
-        usage_error(&format!("'{cmd}' needs a language, e.g. 'termocab {cmd} french'"));
+        usage_error(&format!(
+            "'{cmd}' needs a language, e.g. 'termocab {cmd} french'"
+        ));
     };
     if rest.len() > 2 {
         usage_error(&format!("'{cmd}' takes at most one extra argument"));
@@ -254,7 +256,10 @@ fn list_words(rest: &[String]) {
     let lang = expect_lang(rest, "list-words");
     let stages = load_lang(&lang);
     for stage in &stages {
-        println!("Stage {} — {} [{}]", stage.id, stage.title, stage.level_hint);
+        println!(
+            "Stage {} — {} [{}]",
+            stage.id, stage.title, stage.level_hint
+        );
         for v in &stage.vocabulary {
             println!("  {} ({}) — {}", v.word, v.pos, v.translation);
             println!("    e.g. {}", v.example);
@@ -274,8 +279,15 @@ fn progress(rest: &[String]) {
     let done = prog.completed_stages();
     println!("{lang}: {}/{} stage(s) complete", done.len(), stages.len());
     for stage in &stages {
-        let mark = if prog.is_stage_completed(stage.id) { "[x]" } else { "[ ]" };
-        println!("  {mark} Stage {} — {} [{}]", stage.id, stage.title, stage.level_hint);
+        let mark = if prog.is_stage_completed(stage.id) {
+            "[x]"
+        } else {
+            "[ ]"
+        };
+        println!(
+            "  {mark} Stage {} — {} [{}]",
+            stage.id, stage.title, stage.level_hint
+        );
     }
     match prog.current_stage_id(&stages) {
         Some(id) => println!("  next up: stage {id}"),
@@ -337,9 +349,11 @@ fn load_lang(lang: &str) -> Vec<crate::engine::Stage> {
     let path = stages_path(lang);
     match content::load_language(&path) {
         Ok(s) => s,
-        Err(content::LoadError::Io(e)) if e.kind() == std::io::ErrorKind::NotFound => die(&format!(
+        Err(content::LoadError::Io(e)) if e.kind() == std::io::ErrorKind::NotFound => {
+            die(&format!(
             "no content for language '{lang}'. add one with: termocab add-lang {lang} <stages.json>"
-        )),
+        ))
+        }
         Err(e) => die(&format!("{lang}: {e}")),
     }
 }

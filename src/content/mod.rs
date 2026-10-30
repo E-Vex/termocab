@@ -93,7 +93,11 @@ impl From<serde_json::Error> for LoadError {
 pub fn load_language<P: AsRef<Path>>(path: P) -> Result<Vec<engine::Stage>, LoadError> {
     let text = fs::read_to_string(path)?;
     let parsed: JsonLanguageFile = serde_json::from_str(&text)?;
-    Ok(parsed.stages.into_iter().map(JsonStage::into_engine).collect())
+    Ok(parsed
+        .stages
+        .into_iter()
+        .map(JsonStage::into_engine)
+        .collect())
 }
 
 impl JsonStage {
@@ -102,8 +106,16 @@ impl JsonStage {
             id: self.id,
             title: self.title,
             level_hint: self.level_hint,
-            vocabulary: self.vocabulary.into_iter().map(JsonVocabulary::into_engine).collect(),
-            exercises: self.exercises.into_iter().map(JsonExercise::into_engine).collect(),
+            vocabulary: self
+                .vocabulary
+                .into_iter()
+                .map(JsonVocabulary::into_engine)
+                .collect(),
+            exercises: self
+                .exercises
+                .into_iter()
+                .map(JsonExercise::into_engine)
+                .collect(),
         }
     }
 }
@@ -125,9 +137,15 @@ impl JsonExercise {
             JsonExercise::Translation { prompt, answer } => {
                 engine::Exercise::Translation { prompt, answer }
             }
-            JsonExercise::MultipleChoice { prompt, options, answer } => {
-                engine::Exercise::MultipleChoice { prompt, options, answer }
-            }
+            JsonExercise::MultipleChoice {
+                prompt,
+                options,
+                answer,
+            } => engine::Exercise::MultipleChoice {
+                prompt,
+                options,
+                answer,
+            },
             JsonExercise::FillBlank { prompt, answer } => {
                 engine::Exercise::FillBlank { prompt, answer }
             }

@@ -66,7 +66,7 @@ impl Terminal for StdioTerminal {
 fn render(stage_title: &str, index: usize, total: usize, exercise: &Exercise) -> String {
     let mut out = format!("[{stage_title} — {index}/{total}] {}", exercise.prompt());
     if let Exercise::MultipleChoice { options, .. } = exercise {
-        out.push_str("\n");
+        out.push('\n');
         for (i, opt) in options.iter().enumerate() {
             out.push_str(&format!("  {}. {}\n", (b'a' + i as u8) as char, opt));
         }
@@ -99,7 +99,9 @@ pub fn run_stage<T: Terminal>(term: &mut T, stage: &Stage) -> Outcome {
     let total = stage.exercises.len();
     let mut correct = 0usize;
     term.print(&format!("— Stage {}: {} —", stage.id, stage.title));
-    term.print(&format!("{total} exercise(s). Answer each, then press Enter."));
+    term.print(&format!(
+        "{total} exercise(s). Answer each, then press Enter."
+    ));
 
     for (i, exercise) in stage.exercises.iter().enumerate() {
         term.print("");
@@ -166,7 +168,11 @@ pub fn run_review<T: Terminal>(
     vocabulary: &[&crate::engine::Vocabulary],
     today: &str,
 ) -> ReviewOutcome {
-    let due: Vec<String> = srs.due_on(today).into_iter().map(|(w, _)| w.to_string()).collect();
+    let due: Vec<String> = srs
+        .due_on(today)
+        .into_iter()
+        .map(|(w, _)| w.to_string())
+        .collect();
     let total = due.len();
     let mut outcome = ReviewOutcome::default();
 
@@ -175,7 +181,9 @@ pub fn run_review<T: Terminal>(
 
     for (i, word) in due.iter().enumerate() {
         let Some(v) = vocabulary.iter().find(|v| v.word == *word) else {
-            term.print(&format!("skipping '{word}' — no longer in the loaded content."));
+            term.print(&format!(
+                "skipping '{word}' — no longer in the loaded content."
+            ));
             continue;
         };
         term.print("");
@@ -287,7 +295,13 @@ mod tests {
         let mut p = LanguageProgress::new();
         let mut t = Scripted::new(&["I am a student", "b", "bonjour", "suis"]);
         let out = run_and_record(&mut t, &fixture_stage(), &mut p, "2026-08-22");
-        assert_eq!(out, Outcome::Passed { correct: 4, total: 4 });
+        assert_eq!(
+            out,
+            Outcome::Passed {
+                correct: 4,
+                total: 4
+            }
+        );
         assert!(p.is_stage_completed(1));
         assert_eq!(p.active_days(), &["2026-08-22".to_string()]);
     }
@@ -296,7 +310,13 @@ mod tests {
     fn grading_is_case_insensitive() {
         let mut t = Scripted::new(&["i AM a student", "b", "  bonjour  ", "SUIS"]);
         let out = run_stage(&mut t, &fixture_stage());
-        assert_eq!(out, Outcome::Passed { correct: 4, total: 4 });
+        assert_eq!(
+            out,
+            Outcome::Passed {
+                correct: 4,
+                total: 4
+            }
+        );
     }
 
     #[test]
@@ -304,21 +324,36 @@ mod tests {
         // 3/4 = 75% — just under the 80% bar.
         let mut t = Scripted::new(&["wrong", "b", "bonjour", "suis"]);
         let out = run_stage(&mut t, &fixture_stage());
-        assert_eq!(out, Outcome::Failed { correct: 3, total: 4 });
+        assert_eq!(
+            out,
+            Outcome::Failed {
+                correct: 3,
+                total: 4
+            }
+        );
     }
 
     #[test]
     fn letter_answers_resolve_to_options() {
         let mut t = Scripted::new(&["I am a student", "bonjour", "bonjour", "suis"]);
         let out = run_stage(&mut t, &fixture_stage());
-        assert_eq!(out, Outcome::Passed { correct: 4, total: 4 });
+        assert_eq!(
+            out,
+            Outcome::Passed {
+                correct: 4,
+                total: 4
+            }
+        );
     }
 
     #[test]
     fn feedback_shows_expected_answer() {
         let mut t = Scripted::new(&["nope", "b", "bonjour", "suis"]);
         run_stage(&mut t, &fixture_stage());
-        assert!(t.printed.iter().any(|l| l.contains("expected: I am a student")));
+        assert!(t
+            .printed
+            .iter()
+            .any(|l| l.contains("expected: I am a student")));
     }
 
     fn vocab(word: &str, translation: &str) -> crate::engine::Vocabulary {
@@ -345,7 +380,13 @@ mod tests {
         let mut t = Scripted::new(&["hello", "nope"]);
         let out = run_review(&mut t, &mut srs, &vocabulary, "2026-10-30");
 
-        assert_eq!(out, ReviewOutcome { answered: 2, correct: 1 });
+        assert_eq!(
+            out,
+            ReviewOutcome {
+                answered: 2,
+                correct: 1
+            }
+        );
         assert_eq!(card_of(&srs, "bonjour").box_number, 2);
         assert_eq!(card_of(&srs, "bonjour").due, "2026-11-01");
         assert_eq!(card_of(&srs, "merci").box_number, 1);
@@ -361,7 +402,13 @@ mod tests {
 
         let mut t = Scripted::new(&["  HeLLo "]);
         let out = run_review(&mut t, &mut srs, &[&v], "2026-10-30");
-        assert_eq!(out, ReviewOutcome { answered: 1, correct: 1 });
+        assert_eq!(
+            out,
+            ReviewOutcome {
+                answered: 1,
+                correct: 1
+            }
+        );
     }
 
     #[test]
@@ -374,7 +421,13 @@ mod tests {
         // only one answer scripted: the second read hits EOF and stops
         let mut t = Scripted::new(&["hello"]);
         let out = run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30");
-        assert_eq!(out, ReviewOutcome { answered: 1, correct: 1 });
+        assert_eq!(
+            out,
+            ReviewOutcome {
+                answered: 1,
+                correct: 1
+            }
+        );
         assert!(t.printed.iter().any(|l| l.contains("input closed")));
         // the card never reached is untouched
         assert_eq!(card_of(&srs, "merci").due, "2026-10-30");

@@ -89,10 +89,15 @@ pub fn load(lang: &str) -> Result<LanguageProgress, StoreError> {
         }
         let mut parts = line.splitn(2, ' ');
         match (parts.next(), parts.next()) {
-            (Some("stage"), Some(id)) => completed.push(id
-                .trim()
-                .parse::<u32>()
-                .map_err(|_| StoreError::Parse(format!("{}: line {}: bad stage id: {id:?}", path.display(), no + 1)))?),
+            (Some("stage"), Some(id)) => {
+                completed.push(id.trim().parse::<u32>().map_err(|_| {
+                    StoreError::Parse(format!(
+                        "{}: line {}: bad stage id: {id:?}",
+                        path.display(),
+                        no + 1
+                    ))
+                })?)
+            }
             (Some("day"), Some(day)) => days.push(day.trim().to_string()),
             _ => {
                 return Err(StoreError::Parse(format!(
@@ -114,7 +119,9 @@ pub fn save(lang: &str, progress: &LanguageProgress) -> Result<(), StoreError> {
         fs::create_dir_all(dir).map_err(StoreError::Io)?;
     }
 
-    let mut text = String::from("# termocab progress\n# stage <id> = completed stage; day <date> = active day\n");
+    let mut text = String::from(
+        "# termocab progress\n# stage <id> = completed stage; day <date> = active day\n",
+    );
     for id in progress.completed_stages() {
         text.push_str(&format!("stage {id}\n"));
     }
@@ -155,10 +162,12 @@ pub fn load_srs(lang: &str) -> Result<SrsState, StoreError> {
         let rest = line
             .strip_prefix("word ")
             .ok_or_else(|| bad_line(&path, no + 1, line))?;
-        let (word, tail) =
-            rest.split_once(" box ").ok_or_else(|| bad_line(&path, no + 1, line))?;
-        let (b, d) =
-            tail.split_once(" due ").ok_or_else(|| bad_line(&path, no + 1, line))?;
+        let (word, tail) = rest
+            .split_once(" box ")
+            .ok_or_else(|| bad_line(&path, no + 1, line))?;
+        let (b, d) = tail
+            .split_once(" due ")
+            .ok_or_else(|| bad_line(&path, no + 1, line))?;
         if word.is_empty() {
             return Err(StoreError::Parse(format!(
                 "{}: line {}: empty word: {line:?}",
@@ -211,7 +220,10 @@ pub fn save_srs(lang: &str, state: &SrsState) -> Result<(), StoreError> {
 
     let mut text = String::from("# termocab srs\n# word <word> box <1-6> due <YYYY-MM-DD>\n");
     for (word, card) in state.cards() {
-        text.push_str(&format!("word {} box {} due {}\n", word, card.box_number, card.due));
+        text.push_str(&format!(
+            "word {} box {} due {}\n",
+            word, card.box_number, card.due
+        ));
     }
 
     let tmp = path.with_extension("txt.tmp");
@@ -262,7 +274,10 @@ mod tests {
         let _guard = lock_env();
         let dir = scratch("missing");
         std::env::set_var("XDG_CONFIG_HOME", &dir);
-        assert_eq!(load("klingon").unwrap().completed_stages(), Vec::<u32>::new());
+        assert_eq!(
+            load("klingon").unwrap().completed_stages(),
+            Vec::<u32>::new()
+        );
     }
 
     #[test]
