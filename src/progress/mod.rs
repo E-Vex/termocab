@@ -24,14 +24,22 @@ impl LanguageProgress {
         Self::default()
     }
 
+    /// Records a calendar date as active. Recording the day is its own
+    /// operation (not just a side effect of completing a stage) because
+    /// review sessions keep a streak alive the same way — the caller
+    /// decides what counts as activity. Idempotent per date.
+    pub fn record_active_day(&mut self, date: &str) {
+        if !self.active_days.contains(&date.to_string()) {
+            self.active_days.push(date.to_string());
+        }
+    }
+
     /// Records a stage as completed, plus the date it was completed on.
     /// The date is an opaque YYYY-MM-DD string — deciding what "today" is
     /// belongs to the caller (the app layer), not to this module.
     pub fn record_stage_completion(&mut self, stage_id: u32, date: &str) {
         self.completed.insert(stage_id);
-        if !self.active_days.contains(&date.to_string()) {
-            self.active_days.push(date.to_string());
-        }
+        self.record_active_day(date);
     }
 
     pub fn is_stage_completed(&self, stage_id: u32) -> bool {
@@ -223,6 +231,15 @@ mod tests {
         assert_eq!(prev_day("2026-12-31").as_deref(), Some("2026-12-30"));
         assert_eq!(prev_day("garbage"), None);
         assert_eq!(prev_day("2026-13-01"), None);
+    }
+
+    #[test]
+    fn active_day_recording_is_idempotent() {
+        let mut p = LanguageProgress::new();
+        p.record_active_day("2026-10-30");
+        p.record_active_day("2026-10-30");
+        assert_eq!(p.active_days(), &["2026-10-30".to_string()]);
+        assert_eq!(p.streak_on("2026-10-30"), 1);
     }
 
     #[test]
