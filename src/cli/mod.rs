@@ -88,6 +88,18 @@ fn stages_path(lang: &LangId) -> PathBuf {
     content_dir().join(lang.as_str()).join("stages.json")
 }
 
+/// The config root for user state, resolved from the environment here —
+/// the CLI edge — and handed to the storage layer, which never reads the
+/// environment itself (item 16). Failing loudly here is item 10: never
+/// fall back to writing in the current directory.
+fn config_root() -> Result<PathBuf, CliError> {
+    storage::config_root(
+        std::env::var("XDG_CONFIG_HOME").ok().as_deref(),
+        std::env::var("HOME").ok().as_deref(),
+    )
+    .map_err(|e| runtime(e.to_string()))
+}
+
 /// "Today" as YYYY-MM-DD. UTC-based unless the TZHOURS override shifts
 /// it — see [`local_utc_offset_seconds`] for why the real local clock
 /// is not read yet (review item 6 tracks the fix).
@@ -204,8 +216,9 @@ fn start(rest: &[String]) -> Result<(), CliError> {
     }
     let lang = parse_lang(&rest[0])?;
     let stages = load_lang(&lang)?;
+    let root = config_root()?;
 
-    let mut prog = storage::load(&lang).map_err(|e| runtime(e.to_string()))?;
+    let mut prog = storage::load(&root, &lang).map_err(|e| runtime(e.to_string()))?;
 
     let stage = match rest.get(1) {
         Some(n) => match n.parse::<u32>() {
@@ -252,7 +265,7 @@ fn start(rest: &[String]) -> Result<(), CliError> {
     let outcome = session::run_and_record(&mut term, stage, &mut prog, &today);
     let changed = outcome.passed() && !(stage_was_done && day_was_recorded);
     if changed {
-        storage::save(&lang, &prog).map_err(|e| runtime(e.to_string()))?;
+        storage::save(&root, &lang, &prog).map_err(|e| runtime(e.to_string()))?;
         println!("progress saved.");
     }
     Ok(())
@@ -277,12 +290,13 @@ fn reviewable_words<'a>(
 /// (in memory — `review` persists it) and returns it, plus how many
 /// cards are due on `today`.
 fn due_reviews(
+    root: &Path,
     lang: &LangId,
     stages: &[crate::engine::Stage],
     prog: &LanguageProgress,
     today: &str,
 ) -> Result<(crate::srs::SrsState, usize), CliError> {
-    let mut srs = storage::load_srs(lang).map_err(|e| runtime(e.to_string()))?;
+    let mut srs = storage::load_srs(root, lang).map_err(|e| runtime(e.to_string()))?;
     let words: Vec<String> = reviewable_words(stages, prog)
         .into_iter()
         .map(|v| v.word.clone())
@@ -300,9 +314,10 @@ fn due_reviews(
 fn review(rest: &[String]) -> Result<(), CliError> {
     let lang = expect_lang(rest, "review")?;
     let stages = load_lang(&lang)?;
-    let mut prog = storage::load(&lang).map_err(|e| runtime(e.to_string()))?;
+    let root = config_root()?;
+    let mut prog = storage::load(&root, &lang).map_err(|e| runtime(e.to_string()))?;
     let today = today();
-    let (mut srs, due) = due_reviews(&lang, &stages, &prog, &today)?;
+    let (mut srs, due) = due_reviews(&root, &lang, &stages, &prog, &today)?;
 
     if due == 0 {
         match srs.next_due(&today) {
@@ -327,9 +342,9 @@ fn review(rest: &[String]) -> Result<(), CliError> {
         // content on every review.
         let day_is_new = !prog.is_active_day(&today);
         prog.record_active_day(&today);
-        storage::save_srs(&lang, &srs).map_err(|e| runtime(e.to_string()))?;
+        storage::save_srs(&root, &lang, &srs).map_err(|e| runtime(e.to_string()))?;
         if day_is_new {
-            storage::save(&lang, &prog).map_err(|e| runtime(e.to_string()))?;
+            storage::save(&root, &lang, &prog).map_err(|e| runtime(e.to_string()))?;
         }
         println!("review saved.");
     }
@@ -357,7 +372,8 @@ fn list_words(rest: &[String]) -> Result<(), CliError> {
 fn progress(rest: &[String]) -> Result<(), CliError> {
     let lang = expect_lang(rest, "progress")?;
     let stages = load_lang(&lang)?;
-    let prog = storage::load(&lang).map_err(|e| runtime(e.to_string()))?;
+    let root = config_root()?;
+    let prog = storage::load(&root, &lang).map_err(|e| runtime(e.to_string()))?;
     let today = today();
     let done = prog.completed_stages();
     println!("{lang}: {}/{} stage(s) complete", done.len(), stages.len());
@@ -377,7 +393,7 @@ fn progress(rest: &[String]) -> Result<(), CliError> {
         None => println!("  all stages complete."),
     }
     println!("  streak: {} day(s)", prog.streak_on(&today));
-    let (_, due) = due_reviews(&lang, &stages, &prog, &today)?;
+    let (_, due) = due_reviews(&root, &lang, &stages, &prog, &today)?;
     println!("  reviews due today: {due} word(s) — run 'termocab review {lang}'");
     Ok(())
 }
@@ -385,7 +401,8 @@ fn progress(rest: &[String]) -> Result<(), CliError> {
 /// streak <lang> — print just the streak count, script-friendly.
 fn streak(rest: &[String]) -> Result<(), CliError> {
     let lang = expect_lang(rest, "streak")?;
-    let prog = storage::load(&lang).map_err(|e| runtime(e.to_string()))?;
+    let root = config_root()?;
+    let prog = storage::load(&root, &lang).map_err(|e| runtime(e.to_string()))?;
     println!("{}", prog.streak_on(&today()));
     Ok(())
 }
@@ -536,6 +553,25 @@ mod tests {
             assert_eq!(err.exit_code(), 2, "{bad:?}");
             assert!(err.message().contains("invalid language name"), "{bad:?}");
         }
+    }
+
+    #[test]
+    fn cli_config_root_reads_the_environment() {
+        // The one env-reading test so far — holds the shared env lock so
+        // it never races another env-touching test in the same process.
+        let _env = crate::testenv::env_lock();
+        std::env::set_var("XDG_CONFIG_HOME", "/tmp/termocab-cfg-test");
+        assert_eq!(
+            config_root().unwrap(),
+            PathBuf::from("/tmp/termocab-cfg-test/termocab")
+        );
+        std::env::remove_var("XDG_CONFIG_HOME");
+        std::env::set_var("HOME", "/tmp/termocab-home-test");
+        assert_eq!(
+            config_root().unwrap(),
+            PathBuf::from("/tmp/termocab-home-test/.config/termocab")
+        );
+        std::env::remove_var("HOME");
     }
 
     fn stage_with_vocab(id: u32, words: &[&str]) -> crate::engine::Stage {
