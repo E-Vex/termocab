@@ -74,18 +74,60 @@ impl CliError {
     }
 }
 
-/// Where language content lives. `$TERMOCAB_CONTENT_DIR` overrides the
-/// default, which is `languages/` relative to the current directory —
-/// the same place `cargo run` finds it.
-fn content_dir() -> PathBuf {
-    match std::env::var("TERMOCAB_CONTENT_DIR") {
-        Ok(dir) if !dir.is_empty() => PathBuf::from(dir),
-        _ => PathBuf::from("languages"),
+/// Candidate content directories, in lookup order — the first one that
+/// actually holds the language wins (item 5 / decision D2):
+///  1. $TERMOCAB_CONTENT_DIR — an explicit override (a directory that
+///     directly contains <lang>/stages.json);
+///  2. $XDG_DATA_HOME/termocab/languages, or ~/.local/share/termocab/languages
+///     — where add-lang installs, so an installed binary finds its
+///     content no matter the current directory;
+///  3. ./languages — development convenience, so `cargo run` works.
+fn content_dirs() -> Vec<PathBuf> {
+    let mut dirs = Vec::new();
+    if let Ok(dir) = std::env::var("TERMOCAB_CONTENT_DIR") {
+        if !dir.is_empty() {
+            dirs.push(PathBuf::from(dir));
+        }
+    }
+    match std::env::var("XDG_DATA_HOME") {
+        Ok(xdg) if !xdg.is_empty() => {
+            dirs.push(Path::new(&xdg).join("termocab").join("languages"));
+        }
+        _ => {
+            if let Ok(home) = std::env::var("HOME") {
+                if !home.is_empty() {
+                    dirs.push(Path::new(&home).join(".local/share/termocab/languages"));
+                }
+            }
+        }
+    }
+    dirs.push(PathBuf::from("languages"));
+    dirs
+}
+
+/// Where add-lang installs: always the XDG data location, never the
+/// dev fallback or whatever directory the user happens to be in (the
+/// old cwd-relative behavior — item 5).
+fn install_dir() -> Result<PathBuf, CliError> {
+    match std::env::var("XDG_DATA_HOME") {
+        Ok(xdg) if !xdg.is_empty() => Ok(Path::new(&xdg).join("termocab").join("languages")),
+        _ => match std::env::var("HOME") {
+            Ok(home) if !home.is_empty() => {
+                Ok(Path::new(&home).join(".local/share/termocab/languages"))
+            }
+            _ => Err(runtime(
+                "could not determine where to install content: XDG_DATA_HOME and HOME are both unset",
+            )),
+        },
     }
 }
 
-fn stages_path(lang: &LangId) -> PathBuf {
-    content_dir().join(lang.as_str()).join("stages.json")
+/// The first candidate directory that holds `lang`'s stages.json.
+fn stages_path(lang: &LangId) -> Option<PathBuf> {
+    content_dirs()
+        .into_iter()
+        .map(|dir| dir.join(lang.as_str()).join("stages.json"))
+        .find(|path| path.is_file())
 }
 
 /// The config root for user state, resolved from the environment here —
@@ -428,7 +470,7 @@ fn add_lang(rest: &[String]) -> Result<(), CliError> {
     let loaded = content::load_language(src, Some(&lang))
         .map_err(|e| runtime(format!("not a valid stages file: {e}")))?;
 
-    let dest = stages_path(&lang);
+    let dest = install_dir()?.join(lang.as_str()).join("stages.json");
     let replacing = dest.exists();
     if replacing && !force {
         return Err(runtime(format!(
@@ -452,14 +494,19 @@ fn add_lang(rest: &[String]) -> Result<(), CliError> {
 }
 
 fn load_lang(lang: &LangId) -> Result<Vec<crate::engine::Stage>, CliError> {
-    let path = stages_path(lang);
+    let Some(path) = stages_path(lang) else {
+        let searched = content_dirs()
+            .into_iter()
+            .map(|dir| dir.display().to_string())
+            .collect::<Vec<_>>()
+            .join(", ");
+        return Err(runtime(format!(
+            "no content for language '{lang}' (searched: {searched}). \
+             add one with: termocab add-lang {lang} <stages.json>"
+        )));
+    };
     match content::load_language(&path, Some(lang)) {
         Ok(loaded) => Ok(loaded.stages),
-        Err(content::LoadError::Io(e)) if e.kind() == std::io::ErrorKind::NotFound => {
-            Err(runtime(format!(
-                "no content for language '{lang}'. add one with: termocab add-lang {lang} <stages.json>"
-            )))
-        }
         Err(e) => Err(runtime(format!("{lang}: {e}"))),
     }
 }
@@ -574,6 +621,48 @@ mod tests {
         std::env::remove_var("HOME");
     }
 
+    #[test]
+    fn content_lookup_order_is_override_then_xdg_then_home() {
+        let _env = crate::testenv::env_lock();
+        let override_dir = crate::testenv::TempDir::new("lookup-override");
+        let xdg_dir = crate::testenv::TempDir::new("lookup-xdg");
+        std::env::set_var("TERMOCAB_CONTENT_DIR", override_dir.path());
+        std::env::set_var("XDG_DATA_HOME", xdg_dir.path());
+
+        let klingon = LangId::parse("klingon").unwrap();
+        // nowhere (klingon exists in no candidate, including the
+        // ./languages dev fallback of this repo checkout)
+        assert!(stages_path(&klingon).is_none());
+
+        // in the XDG location only -> found there
+        let xdg_lang = xdg_dir.path().join("termocab/languages/klingon");
+        std::fs::create_dir_all(&xdg_lang).unwrap();
+        std::fs::write(xdg_lang.join("stages.json"), "{}").unwrap();
+        assert_eq!(
+            stages_path(&klingon),
+            Some(
+                xdg_dir
+                    .path()
+                    .join("termocab/languages/klingon/stages.json")
+            )
+        );
+
+        // in the override too -> the override wins
+        let over_lang = override_dir.path().join("klingon");
+        std::fs::create_dir_all(&over_lang).unwrap();
+        std::fs::write(over_lang.join("stages.json"), "{}").unwrap();
+        assert_eq!(
+            stages_path(&klingon),
+            Some(override_dir.path().join("klingon/stages.json"))
+        );
+
+        // without XDG_DATA_HOME the candidate comes from $HOME
+        std::env::remove_var("XDG_DATA_HOME");
+        let home = crate::testenv::TempDir::new("lookup-home");
+        std::env::set_var("HOME", home.path());
+        assert!(content_dirs().contains(&home.path().join(".local/share/termocab/languages")));
+    }
+
     /// A stages.json body for add-lang tests: one valid stage.
     const VALID_STAGES: &str = r#"{
         "language": "french",
@@ -591,17 +680,20 @@ mod tests {
     #[test]
     fn add_lang_installs_refuses_overwrite_and_validates() {
         let _env = crate::testenv::env_lock();
-        let content = crate::testenv::TempDir::new("addlang-content");
-        std::env::set_var("TERMOCAB_CONTENT_DIR", content.path());
+        // add-lang installs into the XDG data location, hermetically
+        // pointed at a temp dir for this test (item 5).
+        let data = crate::testenv::TempDir::new("addlang-data");
+        std::env::set_var("XDG_DATA_HOME", data.path());
+        let installed = data.path().join("termocab/languages/french/stages.json");
 
         let src = crate::testenv::TempDir::new("addlang-src");
         let valid = src.path().join("stages.json");
         std::fs::write(&valid, VALID_STAGES).unwrap();
         let valid = valid.to_str().unwrap().to_string();
 
-        // happy path: installs under <content dir>/<lang>/stages.json
+        // happy path: installs under <data>/termocab/languages/<lang>/
         run(&args(&["add-lang", "french", &valid])).unwrap();
-        assert!(content.path().join("french/stages.json").exists());
+        assert!(installed.exists());
 
         // a second add of the same language is refused without --force
         let err = run(&args(&["add-lang", "french", &valid])).unwrap_err();
@@ -631,10 +723,10 @@ mod tests {
         assert!(err
             .message()
             .contains("answer \"z\" is not one of the options"));
-        assert!(!content.path().join("german").exists());
+        assert!(!data.path().join("termocab/languages/german").exists());
 
-        // and the installed language actually loads through `progress`
-        // (the config dir is irrelevant here; content is all add-lang needs)
+        // and the installed language actually loads through `progress`,
+        // found via the XDG data location (the config dir holds progress)
         let cfg = crate::testenv::TempDir::new("addlang-cfg");
         std::env::set_var("XDG_CONFIG_HOME", cfg.path());
         run(&args(&["progress", "french"])).unwrap();

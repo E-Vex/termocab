@@ -29,6 +29,10 @@ impl Scratch {
         Self { root }
     }
 
+    fn root(&self) -> PathBuf {
+        self.root.clone()
+    }
+
     fn home(&self) -> PathBuf {
         self.root.join("home")
     }
@@ -87,6 +91,20 @@ fn stderr(out: &Output) -> String {
     String::from_utf8_lossy(&out.stderr).into_owned()
 }
 
+/// A one-stage course: a single exercise whose answer is "a".
+fn one_stage_course() -> String {
+    r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Only", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "alpha", "translation": "a", "pos": "x", "example": "alpha" }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "alpha", "answer": "a" }
+            ] }
+       ] }"#
+        .to_string()
+}
+
 /// A tiny two-stage course with known answers: every exercise's answer
 /// is "a" (stage 1) / "b" (stage 2). One exercise each keeps the 80%
 /// bar simple: one correct answer completes a stage, zero does not.
@@ -109,18 +127,17 @@ fn two_stage_course() -> String {
     )
 }
 
-/// Installs `two_stage_course` as `test` via add-lang with the content
-/// dir pointing inside the scratch area, and returns the content dir.
-fn install_course(scratch: &Scratch) -> PathBuf {
-    let content = scratch.root.join("content");
+/// Installs `two_stage_course` as `test` via add-lang into the scratch
+/// $HOME's XDG data location — the real install path (item 5). Later
+/// commands find it through $HOME alone, which is the whole point: an
+/// installed binary must not depend on the current directory.
+fn install_course(scratch: &Scratch) {
     let file = scratch.stages_file("course.json", &two_stage_course());
     let out = termocab(scratch)
-        .env("TERMOCAB_CONTENT_DIR", &content)
         .args(["add-lang", "test", file.to_str().unwrap()])
         .output()
         .expect("add-lang");
     assert!(out.status.success(), "add-lang failed: {}", stderr(&out));
-    content
 }
 
 #[test]
@@ -166,9 +183,8 @@ fn traversal_in_language_name_exits_two() {
 #[test]
 fn fresh_progress_shows_every_stage_incomplete() {
     let scratch = Scratch::new("fresh");
-    let content = install_course(&scratch);
+    install_course(&scratch);
     let out = termocab(&scratch)
-        .env("TERMOCAB_CONTENT_DIR", &content)
         .args(["progress", "test"])
         .output()
         .unwrap();
@@ -183,10 +199,9 @@ fn fresh_progress_shows_every_stage_incomplete() {
 #[test]
 fn passing_run_completes_the_stage_and_persists_it() {
     let scratch = Scratch::new("pass");
-    let content = install_course(&scratch);
+    install_course(&scratch);
     let mut cmd = termocab(&scratch);
-    cmd.env("TERMOCAB_CONTENT_DIR", &content)
-        .args(["start", "test"]);
+    cmd.args(["start", "test"]);
     let out = feed(&mut cmd, "a\n");
     assert!(out.status.success(), "{}", stderr(&out));
     assert!(stdout(&out).contains("stage complete: 1/1 correct"));
@@ -209,7 +224,6 @@ fn passing_run_completes_the_stage_and_persists_it() {
 
     // the next run knows the stage is done and offers stage 2
     let out = termocab(&scratch)
-        .env("TERMOCAB_CONTENT_DIR", &content)
         .args(["progress", "test"])
         .output()
         .unwrap();
@@ -221,10 +235,9 @@ fn passing_run_completes_the_stage_and_persists_it() {
 #[test]
 fn failing_run_leaves_no_progress_file() {
     let scratch = Scratch::new("fail");
-    let content = install_course(&scratch);
+    install_course(&scratch);
     let mut cmd = termocab(&scratch);
-    cmd.env("TERMOCAB_CONTENT_DIR", &content)
-        .args(["start", "test"]);
+    cmd.args(["start", "test"]);
     let out = feed(&mut cmd, "wrong\n");
     assert!(out.status.success(), "{}", stderr(&out));
     assert!(stdout(&out).contains("below the 80% bar"));
@@ -238,10 +251,9 @@ fn failing_run_leaves_no_progress_file() {
 #[test]
 fn eof_run_writes_nothing() {
     let scratch = Scratch::new("eof");
-    let content = install_course(&scratch);
+    install_course(&scratch);
     let mut cmd = termocab(&scratch);
-    cmd.env("TERMOCAB_CONTENT_DIR", &content)
-        .args(["start", "test"]);
+    cmd.args(["start", "test"]);
     let out = feed(&mut cmd, "");
     assert!(out.status.success());
     assert!(stdout(&out).contains("input closed"));
@@ -254,11 +266,10 @@ fn eof_run_writes_nothing() {
 #[test]
 fn stages_unlock_in_order() {
     let scratch = Scratch::new("order");
-    let content = install_course(&scratch);
+    install_course(&scratch);
 
     // skip-ahead is refused before anything is completed
     let out = termocab(&scratch)
-        .env("TERMOCAB_CONTENT_DIR", &content)
         .args(["start", "test", "2"])
         .output()
         .unwrap();
@@ -267,21 +278,18 @@ fn stages_unlock_in_order() {
 
     // stage 1 done: stage 2 is the next one, so it runs
     let mut cmd = termocab(&scratch);
-    cmd.env("TERMOCAB_CONTENT_DIR", &content)
-        .args(["start", "test"]);
+    cmd.args(["start", "test"]);
     feed(&mut cmd, "a\n");
 
     let mut cmd = termocab(&scratch);
-    cmd.env("TERMOCAB_CONTENT_DIR", &content)
-        .args(["start", "test", "2"]);
+    cmd.args(["start", "test", "2"]);
     let out = feed(&mut cmd, "b\n");
     assert!(out.status.success(), "{}", stderr(&out));
     assert!(stdout(&out).contains("stage complete"));
 
     // and replaying the completed stage 1 is always allowed
     let mut cmd = termocab(&scratch);
-    cmd.env("TERMOCAB_CONTENT_DIR", &content)
-        .args(["start", "test", "1"]);
+    cmd.args(["start", "test", "1"]);
     let out = feed(&mut cmd, "a\n");
     assert!(out.status.success(), "{}", stderr(&out));
 }
@@ -289,20 +297,17 @@ fn stages_unlock_in_order() {
 #[test]
 fn add_lang_refuses_overwrite_until_forced() {
     let scratch = Scratch::new("force");
-    let content = scratch.root.join("content");
     let file = scratch.stages_file("course.json", &two_stage_course());
+    let installed = scratch
+        .home()
+        .join(".local/share/termocab/languages/test/stages.json");
 
-    let run_add = |args: &[&str]| {
-        termocab(&scratch)
-            .env("TERMOCAB_CONTENT_DIR", &content)
-            .args(args)
-            .output()
-            .unwrap()
-    };
+    let run_add = |args: &[&str]| termocab(&scratch).args(args).output().unwrap();
     let file_arg = file.to_str().unwrap();
 
     let out = run_add(&["add-lang", "test", file_arg]);
     assert!(out.status.success());
+    assert!(installed.exists());
     let out = run_add(&["add-lang", "test", file_arg]);
     assert_eq!(out.status.code(), Some(1));
     assert!(stderr(&out).contains("use --force"));
@@ -314,7 +319,6 @@ fn add_lang_refuses_overwrite_until_forced() {
 #[test]
 fn invalid_content_is_rejected_and_installed_nowhere() {
     let scratch = Scratch::new("invalid");
-    let content = scratch.root.join("content");
     let bad = scratch.stages_file(
         "bad.json",
         r#"{ "language": "test", "stages": [
@@ -327,7 +331,6 @@ fn invalid_content_is_rejected_and_installed_nowhere() {
            ] }"#,
     );
     let out = termocab(&scratch)
-        .env("TERMOCAB_CONTENT_DIR", &content)
         .args(["add-lang", "test", bad.to_str().unwrap()])
         .output()
         .unwrap();
@@ -335,7 +338,10 @@ fn invalid_content_is_rejected_and_installed_nowhere() {
     let err = stderr(&out);
     assert!(err.contains("answer \"z\" is not one of the options"));
     assert!(err.contains("must contain \"___\""));
-    assert!(!content.join("test").exists());
+    assert!(!scratch
+        .home()
+        .join(".local/share/termocab/languages/test")
+        .exists());
 }
 
 #[test]
@@ -358,38 +364,74 @@ fn check_reports_validation_verdicts() {
 }
 
 #[test]
-fn installed_language_runs_from_any_directory() {
-    // The accept criterion of item 5, in its TERMOCAB_CONTENT_DIR form
-    // for now: a binary executed from an unrelated directory finds the
-    // installed content through the env var. The XDG data dir joins the
-    // lookup order with item 5.
-    let scratch = Scratch::new("anydir");
-    let content = install_course(&scratch);
+fn installed_language_works_from_any_directory_with_only_home() {
+    // Item 5's accept criterion: `cargo install` puts the binary
+    // anywhere; with just $HOME set, add-lang installs into
+    // ~/.local/share/termocab/languages and every command finds it
+    // there — the current directory is irrelevant.
+    let scratch = Scratch::new("homeonly");
+    install_course(&scratch);
+    assert!(scratch
+        .home()
+        .join(".local/share/termocab/languages/test/stages.json")
+        .exists());
 
     let mut cmd = Command::new(env!("CARGO_BIN_EXE_termocab"));
     cmd.env_clear()
         .env("HOME", scratch.home())
-        .env("TERMOCAB_CONTENT_DIR", &content)
         .current_dir("/") // not the repo, not the scratch dir
         .args(["start", "test"]);
     let out = feed(&mut cmd, "a\n");
     assert!(out.status.success(), "{}", stderr(&out));
     assert!(stdout(&out).contains("stage complete"));
+
+    // XDG_DATA_HOME, when set, overrides the ~/.local/share location
+    let scratch = Scratch::new("xdgdata");
+    let file = scratch.stages_file("course.json", &two_stage_course());
+    let out = termocab(&scratch)
+        .env("XDG_DATA_HOME", scratch.root.join("data"))
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+    assert!(scratch
+        .root()
+        .join("data/termocab/languages/test/stages.json")
+        .exists());
+}
+
+#[test]
+fn content_dir_override_beats_the_installed_location() {
+    // First hit wins: TERMOCAB_CONTENT_DIR shadows the installed copy,
+    // which lets a content author test a file without reinstalling.
+    let scratch = Scratch::new("override");
+    install_course(&scratch);
+
+    let shadow = scratch.root.join("langs/test");
+    std::fs::create_dir_all(&shadow).unwrap();
+    std::fs::write(shadow.join("stages.json"), one_stage_course()).unwrap();
+
+    let out = termocab(&scratch)
+        .env("TERMOCAB_CONTENT_DIR", scratch.root.join("langs"))
+        .args(["progress", "test"])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+    // the shadow (1 stage) wins over the installed course (2 stages)
+    assert!(stdout(&out).contains("0/1 stage(s) complete"));
 }
 
 #[test]
 fn review_flows_end_to_end() {
     let scratch = Scratch::new("review");
-    let content = install_course(&scratch);
+    install_course(&scratch);
 
     // complete stage 1 -> its vocabulary is due for review immediately
     let mut cmd = termocab(&scratch);
-    cmd.env("TERMOCAB_CONTENT_DIR", &content)
-        .args(["start", "test"]);
+    cmd.args(["start", "test"]);
     feed(&mut cmd, "a\n");
 
     let out = termocab(&scratch)
-        .env("TERMOCAB_CONTENT_DIR", &content)
         .args(["progress", "test"])
         .output()
         .unwrap();
@@ -397,8 +439,7 @@ fn review_flows_end_to_end() {
 
     // review it correctly: the card moves up a box and the day counts
     let mut cmd = termocab(&scratch);
-    cmd.env("TERMOCAB_CONTENT_DIR", &content)
-        .args(["review", "test"]);
+    cmd.args(["review", "test"]);
     let out = feed(&mut cmd, "a\n");
     assert!(out.status.success(), "{}", stderr(&out));
     assert!(stdout(&out).contains("box 2"));
@@ -410,8 +451,7 @@ fn review_flows_end_to_end() {
 
     // nothing is due anymore
     let mut cmd = termocab(&scratch);
-    cmd.env("TERMOCAB_CONTENT_DIR", &content)
-        .args(["review", "test"]);
+    cmd.args(["review", "test"]);
     let out = feed(&mut cmd, "");
     assert!(stdout(&out).contains("no cards due today"));
 }
