@@ -28,6 +28,10 @@ use std::path::PathBuf;
 pub enum StoreError {
     Io(std::io::Error),
     Parse(String),
+    /// Neither XDG_CONFIG_HOME nor HOME is set: there is nowhere to put
+    /// the config directory, and writing into the current directory
+    /// instead would be a surprise, not a fallback.
+    NoConfigDir,
 }
 
 impl fmt::Display for StoreError {
@@ -35,6 +39,10 @@ impl fmt::Display for StoreError {
         match self {
             StoreError::Io(e) => write!(f, "could not read or write progress file: {e}"),
             StoreError::Parse(msg) => write!(f, "{msg}"),
+            StoreError::NoConfigDir => write!(
+                f,
+                "could not determine the config directory: XDG_CONFIG_HOME and HOME are both unset"
+            ),
         }
     }
 }
@@ -42,36 +50,35 @@ impl fmt::Display for StoreError {
 impl std::error::Error for StoreError {}
 
 /// Config root everything lives under: $XDG_CONFIG_HOME/termocab, or
-/// ~/.config/termocab when XDG_CONFIG_HOME is unset.
-fn config_root() -> PathBuf {
+/// ~/.config/termocab when XDG_CONFIG_HOME is unset. With neither
+/// XDG_CONFIG_HOME nor HOME set there is no honest answer — error
+/// instead of quietly writing into the current directory (item 10).
+fn config_root() -> Result<PathBuf, StoreError> {
     let base = match std::env::var("XDG_CONFIG_HOME") {
         Ok(dir) if !dir.is_empty() => PathBuf::from(dir),
-        _ => home_dir().join(".config"),
+        _ => match std::env::var("HOME") {
+            Ok(home) if !home.is_empty() => PathBuf::from(home).join(".config"),
+            _ => return Err(StoreError::NoConfigDir),
+        },
     };
-    base.join("termocab")
+    Ok(base.join("termocab"))
 }
 
 /// Per-language progress file path under the config directory.
-pub fn progress_path(lang: &str) -> PathBuf {
-    config_root().join("progress").join(format!("{lang}.txt"))
+pub fn progress_path(lang: &str) -> Result<PathBuf, StoreError> {
+    Ok(config_root()?.join("progress").join(format!("{lang}.txt")))
 }
 
 /// Per-language srs state file path under the config directory.
-pub fn srs_path(lang: &str) -> PathBuf {
-    config_root().join("srs").join(format!("{lang}.txt"))
-}
-
-fn home_dir() -> PathBuf {
-    std::env::var("HOME")
-        .map(PathBuf::from)
-        .unwrap_or_else(|_| PathBuf::from("."))
+pub fn srs_path(lang: &str) -> Result<PathBuf, StoreError> {
+    Ok(config_root()?.join("srs").join(format!("{lang}.txt")))
 }
 
 /// Loads progress for a language. A missing file is not an error — it
 /// just means the learner is brand new — so this returns fresh progress
 /// instead of failing.
 pub fn load(lang: &str) -> Result<LanguageProgress, StoreError> {
-    let path = progress_path(lang);
+    let path = progress_path(lang)?;
     let text = match fs::read_to_string(&path) {
         Ok(t) => t,
         Err(e) if e.kind() == std::io::ErrorKind::NotFound => {
@@ -114,7 +121,7 @@ pub fn load(lang: &str) -> Result<LanguageProgress, StoreError> {
 /// Saves progress for a language. Written to a sibling temp file first
 /// and renamed into place, so a crash mid-write can't destroy history.
 pub fn save(lang: &str, progress: &LanguageProgress) -> Result<(), StoreError> {
-    let path = progress_path(lang);
+    let path = progress_path(lang)?;
     if let Some(dir) = path.parent() {
         fs::create_dir_all(dir).map_err(StoreError::Io)?;
     }
@@ -144,7 +151,7 @@ pub fn save(lang: &str, progress: &LanguageProgress) -> Result<(), StoreError> {
 /// guaranteed to be a single token), so the line is split on the fixed
 /// ` box ` and ` due ` markers rather than on whitespace.
 pub fn load_srs(lang: &str) -> Result<SrsState, StoreError> {
-    let path = srs_path(lang);
+    let path = srs_path(lang)?;
     let text = match fs::read_to_string(&path) {
         Ok(t) => t,
         Err(e) if e.kind() == std::io::ErrorKind::NotFound => {
@@ -213,7 +220,7 @@ fn bad_line(path: &std::path::Path, no: usize, line: &str) -> StoreError {
 /// Saves the srs state for a language, temp-file + rename like progress.
 /// Cards are written in word order, so diffs stay small.
 pub fn save_srs(lang: &str, state: &SrsState) -> Result<(), StoreError> {
-    let path = srs_path(lang);
+    let path = srs_path(lang)?;
     if let Some(dir) = path.parent() {
         fs::create_dir_all(dir).map_err(StoreError::Io)?;
     }
@@ -251,6 +258,28 @@ mod tests {
         let dir = std::env::temp_dir().join(format!("termocab-test-{}-{name}", std::process::id()));
         fs::create_dir_all(&dir).unwrap();
         dir
+    }
+
+    #[test]
+    fn missing_home_is_an_error_not_cwd() {
+        let _guard = lock_env();
+        // an empty HOME is just as unset for our purposes
+        std::env::remove_var("XDG_CONFIG_HOME");
+        std::env::set_var("HOME", "");
+        assert!(matches!(load("french"), Err(StoreError::NoConfigDir)));
+        // and so is no HOME at all
+        std::env::remove_var("HOME");
+        assert!(matches!(
+            save("french", &LanguageProgress::new()),
+            Err(StoreError::NoConfigDir)
+        ));
+        assert!(matches!(load_srs("french"), Err(StoreError::NoConfigDir)));
+        assert!(matches!(
+            save_srs("french", &SrsState::new()),
+            Err(StoreError::NoConfigDir)
+        ));
+        // and nothing was created in the current directory
+        assert!(!PathBuf::from(".config").exists());
     }
 
     #[test]
