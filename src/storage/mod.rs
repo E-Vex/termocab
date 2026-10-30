@@ -1,22 +1,25 @@
-//! Storage Layer — plain-text persistence for user progress.
+//! Storage Layer — plain-text persistence for user progress and srs state.
 //!
-//! This module is the only place that knows both `progress::` types and
-//! the on-disk format at the same time (the same role `content::` plays
-//! for engine + JSON). When SQLite replaces plain text later, only this
-//! module changes.
+//! This module is the only place that knows both the `progress::` and
+//! `srs::` domain types AND their on-disk formats at the same time (the
+//! same role `content::` plays for engine + JSON). When SQLite replaces
+//! plain text later, only this module changes.
 //!
-//! File layout: one file per language at
+//! File layout: one file per language under the config directory
 //!   $XDG_CONFIG_HOME/termocab/progress/<lang>.txt   (or ~/.config/... if
 //!   XDG_CONFIG_HOME is unset)
+//!   $XDG_CONFIG_HOME/termocab/srs/<lang>.txt
 //!
-//! File format (human-readable, diff-friendly, line-oriented):
+//! Both formats are human-readable, diff-friendly, line-oriented:
 //!   - blank lines and lines starting with '#' are ignored
-//!   - `stage <id>`  marks a stage as completed
-//!   - `day <YYYY-MM-DD>`  records an active day
+//!   - progress: `stage <id>` marks a stage complete; `day <YYYY-MM-DD>`
+//!     records an active day
+//!   - srs: `word <word> box <1-6> due <YYYY-MM-DD>` schedules one word
 //!   - anything else is a parse error — strict on purpose, so a format
 //!     change fails loudly instead of silently dropping history
 
 use crate::progress::LanguageProgress;
+use crate::srs::{self, SrsState};
 use std::fmt;
 use std::fs;
 use std::path::PathBuf;
@@ -38,13 +41,24 @@ impl fmt::Display for StoreError {
 
 impl std::error::Error for StoreError {}
 
-/// Per-language progress file path under the config directory.
-pub fn progress_path(lang: &str) -> PathBuf {
+/// Config root everything lives under: $XDG_CONFIG_HOME/termocab, or
+/// ~/.config/termocab when XDG_CONFIG_HOME is unset.
+fn config_root() -> PathBuf {
     let base = match std::env::var("XDG_CONFIG_HOME") {
         Ok(dir) if !dir.is_empty() => PathBuf::from(dir),
         _ => home_dir().join(".config"),
     };
-    base.join("termocab").join("progress").join(format!("{lang}.txt"))
+    base.join("termocab")
+}
+
+/// Per-language progress file path under the config directory.
+pub fn progress_path(lang: &str) -> PathBuf {
+    config_root().join("progress").join(format!("{lang}.txt"))
+}
+
+/// Per-language srs state file path under the config directory.
+pub fn srs_path(lang: &str) -> PathBuf {
+    config_root().join("srs").join(format!("{lang}.txt"))
 }
 
 fn home_dir() -> PathBuf {
@@ -114,6 +128,98 @@ pub fn save(lang: &str, progress: &LanguageProgress) -> Result<(), StoreError> {
     Ok(())
 }
 
+/// Loads the srs state for a language. A missing file is a brand-new
+/// schedule, not an error — same stance as progress.
+///
+/// One line per card:
+///   `word <word> box <1-6> due <YYYY-MM-DD>`
+/// The word itself may contain spaces (a vocabulary entry is not
+/// guaranteed to be a single token), so the line is split on the fixed
+/// ` box ` and ` due ` markers rather than on whitespace.
+pub fn load_srs(lang: &str) -> Result<SrsState, StoreError> {
+    let path = srs_path(lang);
+    let text = match fs::read_to_string(&path) {
+        Ok(t) => t,
+        Err(e) if e.kind() == std::io::ErrorKind::NotFound => {
+            return Ok(SrsState::new());
+        }
+        Err(e) => return Err(StoreError::Io(e)),
+    };
+
+    let mut entries = Vec::new();
+    for (no, raw) in text.lines().enumerate() {
+        let line = raw.trim();
+        if line.is_empty() || line.starts_with('#') {
+            continue;
+        }
+        let rest = line
+            .strip_prefix("word ")
+            .ok_or_else(|| bad_line(&path, no + 1, line))?;
+        let (word, tail) =
+            rest.split_once(" box ").ok_or_else(|| bad_line(&path, no + 1, line))?;
+        let (b, d) =
+            tail.split_once(" due ").ok_or_else(|| bad_line(&path, no + 1, line))?;
+        if word.is_empty() {
+            return Err(StoreError::Parse(format!(
+                "{}: line {}: empty word: {line:?}",
+                path.display(),
+                no + 1
+            )));
+        }
+        let box_number = b.parse::<u8>().map_err(|_| {
+            StoreError::Parse(format!(
+                "{}: line {}: bad box number: {b:?}",
+                path.display(),
+                no + 1
+            ))
+        })?;
+        if !(1..=srs::MAX_BOX).contains(&box_number) {
+            return Err(StoreError::Parse(format!(
+                "{}: line {}: box number out of range 1-{}: {box_number}",
+                path.display(),
+                no + 1,
+                srs::MAX_BOX
+            )));
+        }
+        if !srs::valid_date(d) {
+            return Err(StoreError::Parse(format!(
+                "{}: line {}: bad due date: {d:?}",
+                path.display(),
+                no + 1
+            )));
+        }
+        entries.push((word.to_string(), box_number, d.to_string()));
+    }
+    Ok(SrsState::from_parts(entries))
+}
+
+fn bad_line(path: &std::path::Path, no: usize, line: &str) -> StoreError {
+    StoreError::Parse(format!(
+        "{}: line {}: unrecognized line: {line:?}",
+        path.display(),
+        no
+    ))
+}
+
+/// Saves the srs state for a language, temp-file + rename like progress.
+/// Cards are written in word order, so diffs stay small.
+pub fn save_srs(lang: &str, state: &SrsState) -> Result<(), StoreError> {
+    let path = srs_path(lang);
+    if let Some(dir) = path.parent() {
+        fs::create_dir_all(dir).map_err(StoreError::Io)?;
+    }
+
+    let mut text = String::from("# termocab srs\n# word <word> box <1-6> due <YYYY-MM-DD>\n");
+    for (word, card) in state.cards() {
+        text.push_str(&format!("word {} box {} due {}\n", word, card.box_number, card.due));
+    }
+
+    let tmp = path.with_extension("txt.tmp");
+    fs::write(&tmp, text).map_err(StoreError::Io)?;
+    fs::rename(&tmp, &path).map_err(StoreError::Io)?;
+    Ok(())
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -171,5 +277,65 @@ mod tests {
         )
         .unwrap();
         assert!(matches!(load("french"), Err(StoreError::Parse(_))));
+    }
+
+    #[test]
+    fn srs_round_trips_through_disk() {
+        let _guard = lock_env();
+        let dir = scratch("srs-roundtrip");
+        std::env::set_var("XDG_CONFIG_HOME", &dir);
+
+        let mut s = crate::srs::SrsState::new();
+        // one vocabulary entry that contains spaces, to prove the
+        // split-on-markers parse keeps such words intact
+        s.introduce(
+            &["bonjour".to_string(), "c'est a dire".to_string()],
+            "2026-10-30",
+        );
+        s.answer("bonjour", true, "2026-10-30");
+        save_srs("french", &s).unwrap();
+
+        let loaded = load_srs("french").unwrap();
+        let (_, bonjour) = loaded
+            .cards()
+            .into_iter()
+            .find(|(w, _)| *w == "bonjour")
+            .unwrap();
+        assert_eq!(bonjour.box_number, 2);
+        assert_eq!(bonjour.due, "2026-11-01");
+        // the untouched card is still due today
+        assert_eq!(loaded.due_on("2026-10-30").len(), 1);
+    }
+
+    #[test]
+    fn missing_srs_file_is_a_fresh_schedule() {
+        let _guard = lock_env();
+        let dir = scratch("srs-missing");
+        std::env::set_var("XDG_CONFIG_HOME", &dir);
+        assert_eq!(load_srs("klingon").unwrap().cards().len(), 0);
+    }
+
+    #[test]
+    fn bad_srs_lines_are_errors() {
+        let _guard = lock_env();
+        for (name, content) in [
+            ("unknown", "stage 1\n"),
+            ("nobox", "word bonjour due 2026-10-30\n"),
+            ("nodue", "word bonjour box 2\n"),
+            ("badbox", "word bonjour box x due 2026-10-30\n"),
+            ("rangebox", "word bonjour box 9 due 2026-10-30\n"),
+            ("zerobox", "word bonjour box 0 due 2026-10-30\n"),
+            ("baddate", "word bonjour box 2 due 2026-13-01\n"),
+            ("emptyword", "word  box 2 due 2026-10-30\n"),
+        ] {
+            let dir = scratch(&format!("srs-strict-{name}"));
+            std::env::set_var("XDG_CONFIG_HOME", &dir);
+            fs::create_dir_all(dir.join("termocab/srs")).unwrap();
+            fs::write(dir.join("termocab/srs/french.txt"), content).unwrap();
+            assert!(
+                matches!(load_srs("french"), Err(StoreError::Parse(_))),
+                "{name} should be a parse error"
+            );
+        }
     }
 }
