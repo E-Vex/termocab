@@ -68,28 +68,49 @@ fn render(stage_title: &str, index: usize, total: usize, exercise: &Exercise) ->
     if let Exercise::MultipleChoice { options, .. } = exercise {
         out.push('\n');
         for (i, opt) in options.iter().enumerate() {
-            out.push_str(&format!("  {}. {}\n", (b'a' + i as u8) as char, opt));
+            out.push_str(&format!("  {}. {}\n", option_letter(i), opt));
         }
         out.push_str("(answer with a letter or the word itself)");
     }
     out
 }
 
+/// The option letter for a 0-based index: 'a' for the first option,
+/// 'b' for the second, and so on. Content validation caps options at
+/// 26, so every index has a letter — the assert documents that
+/// invariant instead of silently wrapping past 'z' the way
+/// `b'a' + i as u8` does.
+fn option_letter(index: usize) -> char {
+    assert!(index < 26, "content validation caps options at 26");
+    (b'a' + index as u8) as char
+}
+
 /// Resolves a multiple-choice attempt: 'b' picks the second option; any
 /// other text is compared against the answer directly.
 fn resolve_attempt(exercise: &Exercise, raw: &str) -> String {
     if let Exercise::MultipleChoice { options, .. } = exercise {
-        let t = raw.trim();
-        if t.len() == 1 {
-            let c = t.chars().next().expect("len 1").to_ascii_lowercase();
-            if let Some(idx) = c.to_digit(36).map(|d| d.wrapping_sub(10)) {
-                if (idx as usize) < options.len() {
-                    return options[idx as usize].clone();
+        let trimmed = raw.trim().to_lowercase();
+        let mut chars = trimmed.chars();
+        // exactly one character, and that character is an option letter
+        if let (Some(c), None) = (chars.next(), chars.next()) {
+            if let Some(index) = letter_index(c) {
+                if index < options.len() {
+                    return options[index].clone();
                 }
             }
         }
     }
     raw.to_string()
+}
+
+/// 'a' -> 0, 'b' -> 1, … 'z' -> 25; anything else (digits, accents,
+/// multi-byte characters) is not an option letter.
+fn letter_index(c: char) -> Option<usize> {
+    if c.is_ascii_lowercase() {
+        Some((c as u8 - b'a') as usize)
+    } else {
+        None
+    }
 }
 
 /// Runs every exercise in the stage once, in order, then reports the

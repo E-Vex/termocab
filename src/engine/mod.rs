@@ -74,16 +74,19 @@ fn normalize(s: &str) -> String {
     s.trim().to_lowercase()
 }
 
-/// A stage is completed when the learner answered at least this fraction
-/// of its exercises correctly in one run. Set at 80% per the handoff's
-/// unlock-condition decision — 7 of 8 exercises, 5 of 6, and so on.
-pub const STAGE_PASS_FRACTION: f64 = 0.8;
+/// A stage is completed when the learner answered at least this
+/// percentage of its exercises correctly in one run. Set at 80% per the
+/// handoff's unlock-condition decision — 7 of 8 exercises, 5 of 6, and
+/// so on. Kept as an integer percentage so the comparison is exact
+/// integer math, not a float equality on the pass bar.
+pub const STAGE_PASS_PERCENT: u32 = 80;
 
 impl Stage {
     /// Whether a run of `correct` out of this stage's exercises completes
-    /// the stage. A stage with no exercises can never be completed.
+    /// the stage. A stage with no exercises can never be completed
+    /// (content validation rejects such stages; this stays defensive).
     pub fn is_completed_by(&self, correct: usize) -> bool {
         let total = self.exercises.len();
-        total > 0 && correct as f64 / total as f64 >= STAGE_PASS_FRACTION
+        total > 0 && correct * 100 >= total * STAGE_PASS_PERCENT as usize
     }
 }

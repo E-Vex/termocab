@@ -53,9 +53,9 @@ fn stages_path(lang: &LangId) -> PathBuf {
     content_dir().join(lang.as_str()).join("stages.json")
 }
 
-/// "Today" as YYYY-MM-DD from the TZ-local clock, without a time crate:
-/// the unix-seconds-to-civil-date math is a handful of lines (Howard
-/// Hinnant's algorithm) and avoids pulling chrono in for one value.
+/// "Today" as YYYY-MM-DD. UTC-based unless the TZHOURS override shifts
+/// it — see [`local_utc_offset_seconds`] for why the real local clock
+/// is not read yet (review item 6 tracks the fix).
 fn today() -> String {
     let secs = std::time::SystemTime::now()
         .duration_since(std::time::UNIX_EPOCH)
@@ -65,11 +65,12 @@ fn today() -> String {
     civil_from_unix(secs)
 }
 
-/// Best-effort UTC offset for the local timezone. std can't read the
-/// TZ database, so we probe a few fixed offsets is out of scope; we use
-/// the offset implied by the difference between localtime-formatted…
-/// which std also can't do. Simplest honest answer: read $TZ offsets is
-/// overkill — we use UTC unless the caller sets TZHOURS.
+/// UTC offset in seconds for the local timezone, taken from the TZHOURS
+/// override (hours, may be negative). std cannot read the system's
+/// timezone — reading the TZ database (DST rules included) means either
+/// a time crate or parsing /etc/localtime ourselves; the dependency rule
+/// (§6) and review item 6 track that decision. Until then TZHOURS is the
+/// explicit, honest override.
 fn local_utc_offset_seconds() -> i64 {
     std::env::var("TZHOURS")
         .ok()
