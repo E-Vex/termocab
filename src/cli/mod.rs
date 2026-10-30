@@ -14,7 +14,11 @@
 //!   termocab help                   usage text
 //!
 //! Exit codes follow the Unix habits git users expect: 0 success, 1
-//! runtime failure, 2 usage error (same as git).
+//! runtime failure, 2 usage error (same as git). Errors are values
+//! here — [`run`] returns `Result<(), CliError>` and `main` is the only
+//! place that prints and exits — so the CLI is unit-testable and no
+//! helper skips destructors or stdout flushes by calling `exit` mid-run
+//! (review item 14).
 
 use crate::content;
 use crate::engine::Vocabulary;
@@ -23,7 +27,6 @@ use crate::progress::LanguageProgress;
 use crate::session::{self, StdioTerminal};
 use crate::storage;
 use std::path::{Path, PathBuf};
-use std::process::exit;
 
 const USAGE: &str = "\
 termocab — language learning for terminal enthusiasts
@@ -39,6 +42,37 @@ commands:
   add-lang [--force] <lang> <file>  install a stages.json file as a new language
   check <file>              validate a stages.json file without installing it
   help                      show this help";
+
+/// Everything that can end a termocab run early. Carries the exit code,
+/// so `main` decides once how to report and exit — no `process::exit`
+/// from deep inside a command helper.
+#[derive(Debug, PartialEq, Eq)]
+pub enum CliError {
+    /// Bad invocation: unknown command, wrong argument count, invalid
+    /// language name. Exit code 2, like git.
+    Usage(String),
+    /// The invocation was fine but the run failed: unreadable progress,
+    /// locked stage, invalid content, … Exit code 1.
+    Runtime(String),
+}
+
+impl CliError {
+    pub fn exit_code(&self) -> i32 {
+        match self {
+            CliError::Usage(_) => 2,
+            CliError::Runtime(_) => 1,
+        }
+    }
+
+    /// The message `main` prints after the "termocab: " prefix. Usage
+    /// errors also point at `termocab help`, like git does.
+    pub fn message(&self) -> String {
+        match self {
+            CliError::Usage(msg) => format!("{msg}\nrun 'termocab help' for usage."),
+            CliError::Runtime(msg) => msg.clone(),
+        }
+    }
+}
 
 /// Where language content lives. `$TERMOCAB_CONTENT_DIR` overrides the
 /// default, which is `languages/` relative to the current directory —
@@ -98,17 +132,16 @@ fn civil_from_unix(secs: i64) -> String {
 }
 
 /// What main() hands us: the raw argument list after the program name.
-pub fn run(args: &[String]) {
+pub fn run(args: &[String]) -> Result<(), CliError> {
     let Some((cmd, rest)) = args.split_first() else {
         println!("{USAGE}");
-        return;
+        return Ok(());
     };
     match cmd.as_str() {
         "help" | "--help" | "-h" => {
-            if !rest.is_empty() {
-                usage_error("'help' takes no arguments\nusage: termocab help");
-            }
+            expect_no_args(rest, "help")?;
             println!("{USAGE}");
+            Ok(())
         }
         "start" => start(rest),
         "review" => review(rest),
@@ -117,33 +150,44 @@ pub fn run(args: &[String]) {
         "streak" => streak(rest),
         "add-lang" => add_lang(rest),
         "check" => check(rest),
-        other => usage_error(&format!("unknown command: {other}")),
+        other => Err(CliError::Usage(format!("unknown command: {other}"))),
     }
 }
 
-fn usage_error(msg: &str) -> ! {
-    eprintln!("termocab: {msg}");
-    eprintln!("run 'termocab help' for usage.");
-    exit(2);
+fn usage(msg: impl Into<String>) -> CliError {
+    CliError::Usage(msg.into())
+}
+
+fn runtime(msg: impl Into<String>) -> CliError {
+    CliError::Runtime(msg.into())
+}
+
+/// Commands that take no arguments at all.
+fn expect_no_args(rest: &[String], cmd: &str) -> Result<(), CliError> {
+    if !rest.is_empty() {
+        return Err(usage(format!(
+            "'{cmd}' takes no arguments\nusage: termocab {cmd}"
+        )));
+    }
+    Ok(())
 }
 
 /// Commands that take exactly one argument (a language): parse it as a
 /// [`LangId`] and reject anything else, naming the command's usage
 /// line (item 9). The lang id is validated here, at the CLI edge, so a
-/// traversal attempt like `../x` dies as a usage error (item 4).
-fn expect_lang(rest: &[String], cmd: &str) -> LangId {
+/// traversal attempt like `../x` fails as a usage error (item 4).
+fn expect_lang(rest: &[String], cmd: &str) -> Result<LangId, CliError> {
     let [lang] = rest else {
-        usage_error(&format!(
+        return Err(usage(format!(
             "'{cmd}' takes exactly one argument: a language\nusage: termocab {cmd} <lang>"
-        ));
+        )));
     };
     parse_lang(lang)
 }
 
-/// Parses a language name or dies with a usage error (exit 2).
-fn parse_lang(raw: &str) -> LangId {
-    LangId::parse(raw)
-        .unwrap_or_else(|reason| usage_error(&format!("invalid language name: {reason}")))
+/// Parses a language name into a [`LangId`] or reports a usage error.
+fn parse_lang(raw: &str) -> Result<LangId, CliError> {
+    LangId::parse(raw).map_err(|reason| usage(format!("invalid language name: {reason}")))
 }
 
 /// start <lang> [stage] — run the next uncompleted stage, or a chosen
@@ -152,19 +196,16 @@ fn parse_lang(raw: &str) -> LangId {
 /// Stages unlock strictly in order: an explicit stage number may only be
 /// a completed stage (replay) or the next uncompleted one (review item 7
 /// / decision D4 — the original spec's unlock condition, now enforced).
-fn start(rest: &[String]) {
+fn start(rest: &[String]) -> Result<(), CliError> {
     if rest.is_empty() || rest.len() > 2 {
-        usage_error(
+        return Err(usage(
             "'start' takes a language and an optional stage number\nusage: termocab start <lang> [stage]",
-        );
+        ));
     }
-    let lang = parse_lang(&rest[0]);
-    let stages = load_lang(&lang);
+    let lang = parse_lang(&rest[0])?;
+    let stages = load_lang(&lang)?;
 
-    let mut prog = match storage::load(&lang) {
-        Ok(p) => p,
-        Err(e) => die(&e.to_string()),
-    };
+    let mut prog = storage::load(&lang).map_err(|e| runtime(e.to_string()))?;
 
     let stage = match rest.get(1) {
         Some(n) => match n.parse::<u32>() {
@@ -172,26 +213,30 @@ fn start(rest: &[String]) {
                 let stage = stages
                     .iter()
                     .find(|s| s.id == id)
-                    .unwrap_or_else(|| die(&format!("no stage {id} in {lang}")));
+                    .ok_or_else(|| runtime(format!("no stage {id} in {lang}")))?;
                 let unlocked =
                     prog.is_stage_completed(id) || prog.current_stage_id(&stages) == Some(id);
                 if !unlocked {
-                    match prog.current_stage_id(&stages) {
-                        Some(next) => die(&format!(
+                    return match prog.current_stage_id(&stages) {
+                        Some(next) => Err(runtime(format!(
                             "stage {id} is locked — complete stage {next} first"
-                        )),
-                        None => die(&format!("stage {id} is locked")),
-                    }
+                        ))),
+                        None => Err(runtime(format!("stage {id} is locked"))),
+                    };
                 }
                 stage
             }
-            Err(_) => usage_error("stage must be a number, e.g. 'termocab start french 1'"),
+            Err(_) => {
+                return Err(usage(
+                    "stage must be a number, e.g. 'termocab start french 1'",
+                ))
+            }
         },
         None => match prog.next_stage(&stages) {
             Some(s) => s,
             None => {
                 println!("every stage in {lang} is complete. nothing left to start.");
-                return;
+                return Ok(());
             }
         },
     };
@@ -207,11 +252,10 @@ fn start(rest: &[String]) {
     let outcome = session::run_and_record(&mut term, stage, &mut prog, &today);
     let changed = outcome.passed() && !(stage_was_done && day_was_recorded);
     if changed {
-        if let Err(e) = storage::save(&lang, &prog) {
-            die(&e.to_string());
-        }
+        storage::save(&lang, &prog).map_err(|e| runtime(e.to_string()))?;
         println!("progress saved.");
     }
+    Ok(())
 }
 
 /// Vocabulary of every completed stage — the words eligible for
@@ -237,8 +281,8 @@ fn due_reviews(
     stages: &[crate::engine::Stage],
     prog: &LanguageProgress,
     today: &str,
-) -> Result<(crate::srs::SrsState, usize), String> {
-    let mut srs = storage::load_srs(lang).map_err(|e| e.to_string())?;
+) -> Result<(crate::srs::SrsState, usize), CliError> {
+    let mut srs = storage::load_srs(lang).map_err(|e| runtime(e.to_string()))?;
     let words: Vec<String> = reviewable_words(stages, prog)
         .into_iter()
         .map(|v| v.word.clone())
@@ -253,18 +297,12 @@ fn due_reviews(
 /// records the day in progress, so a review keeps the streak alive
 /// exactly like a completed stage does. Nothing is written when there
 /// was nothing to answer.
-fn review(rest: &[String]) {
-    let lang = expect_lang(rest, "review");
-    let stages = load_lang(&lang);
-    let mut prog = match storage::load(&lang) {
-        Ok(p) => p,
-        Err(e) => die(&e.to_string()),
-    };
+fn review(rest: &[String]) -> Result<(), CliError> {
+    let lang = expect_lang(rest, "review")?;
+    let stages = load_lang(&lang)?;
+    let mut prog = storage::load(&lang).map_err(|e| runtime(e.to_string()))?;
     let today = today();
-    let (mut srs, due) = match due_reviews(&lang, &stages, &prog, &today) {
-        Ok(x) => x,
-        Err(e) => die(&e),
-    };
+    let (mut srs, due) = due_reviews(&lang, &stages, &prog, &today)?;
 
     if due == 0 {
         match srs.next_due(&today) {
@@ -275,7 +313,7 @@ fn review(rest: &[String]) {
                 "no cards due for {lang} yet — complete a stage to start scheduling reviews."
             ),
         }
-        return;
+        return Ok(());
     }
 
     let vocabulary = reviewable_words(&stages, &prog);
@@ -289,22 +327,19 @@ fn review(rest: &[String]) {
         // content on every review.
         let day_is_new = !prog.is_active_day(&today);
         prog.record_active_day(&today);
-        if let Err(e) = storage::save_srs(&lang, &srs) {
-            die(&e.to_string());
-        }
+        storage::save_srs(&lang, &srs).map_err(|e| runtime(e.to_string()))?;
         if day_is_new {
-            if let Err(e) = storage::save(&lang, &prog) {
-                die(&e.to_string());
-            }
+            storage::save(&lang, &prog).map_err(|e| runtime(e.to_string()))?;
         }
         println!("review saved.");
     }
+    Ok(())
 }
 
 /// list-words <lang> — every vocabulary entry across all stages.
-fn list_words(rest: &[String]) {
-    let lang = expect_lang(rest, "list-words");
-    let stages = load_lang(&lang);
+fn list_words(rest: &[String]) -> Result<(), CliError> {
+    let lang = expect_lang(rest, "list-words")?;
+    let stages = load_lang(&lang)?;
     for stage in &stages {
         println!(
             "Stage {} — {} [{}]",
@@ -315,16 +350,14 @@ fn list_words(rest: &[String]) {
             println!("    e.g. {}", v.example);
         }
     }
+    Ok(())
 }
 
 /// progress <lang> — completed stages, current streak, due reviews.
-fn progress(rest: &[String]) {
-    let lang = expect_lang(rest, "progress");
-    let stages = load_lang(&lang);
-    let prog = match storage::load(&lang) {
-        Ok(p) => p,
-        Err(e) => die(&e.to_string()),
-    };
+fn progress(rest: &[String]) -> Result<(), CliError> {
+    let lang = expect_lang(rest, "progress")?;
+    let stages = load_lang(&lang)?;
+    let prog = storage::load(&lang).map_err(|e| runtime(e.to_string()))?;
     let today = today();
     let done = prog.completed_stages();
     println!("{lang}: {}/{} stage(s) complete", done.len(), stages.len());
@@ -344,21 +377,17 @@ fn progress(rest: &[String]) {
         None => println!("  all stages complete."),
     }
     println!("  streak: {} day(s)", prog.streak_on(&today));
-    let due = match due_reviews(&lang, &stages, &prog, &today) {
-        Ok((_, n)) => n,
-        Err(e) => die(&e),
-    };
+    let (_, due) = due_reviews(&lang, &stages, &prog, &today)?;
     println!("  reviews due today: {due} word(s) — run 'termocab review {lang}'");
+    Ok(())
 }
 
 /// streak <lang> — print just the streak count, script-friendly.
-fn streak(rest: &[String]) {
-    let lang = expect_lang(rest, "streak");
-    let prog = match storage::load(&lang) {
-        Ok(p) => p,
-        Err(e) => die(&e.to_string()),
-    };
+fn streak(rest: &[String]) -> Result<(), CliError> {
+    let lang = expect_lang(rest, "streak")?;
+    let prog = storage::load(&lang).map_err(|e| runtime(e.to_string()))?;
     println!("{}", prog.streak_on(&today()));
+    Ok(())
 }
 
 /// add-lang [--force] <lang> <file> — validate and copy a stages.json
@@ -366,75 +395,67 @@ fn streak(rest: &[String]) {
 /// language is never silently replaced: recorded stage completions and
 /// srs cards may point at content that would change under them, so the
 /// overwrite must be named explicitly with --force (item 12).
-fn add_lang(rest: &[String]) {
+fn add_lang(rest: &[String]) -> Result<(), CliError> {
     let force = rest.iter().any(|arg| arg == "--force");
     let args: Vec<&String> = rest.iter().filter(|arg| *arg != "--force").collect();
     if args.len() != 2 {
-        usage_error(
+        return Err(usage(
             "'add-lang' takes a language and a stages.json file, plus an optional --force\nusage: termocab add-lang [--force] <lang> <file>",
-        );
+        ));
     }
-    let lang = parse_lang(args[0]);
+    let lang = parse_lang(args[0])?;
     let src = Path::new(args[1]);
 
     // Validate before installing: it must parse as our content format and
     // pass every content rule, including declaring itself as `lang`.
-    let loaded = match content::load_language(src, Some(&lang)) {
-        Ok(c) => c,
-        Err(e) => die(&format!("not a valid stages file: {e}")),
-    };
+    let loaded = content::load_language(src, Some(&lang))
+        .map_err(|e| runtime(format!("not a valid stages file: {e}")))?;
 
     let dest = stages_path(&lang);
     let replacing = dest.exists();
     if replacing && !force {
-        die(&format!(
+        return Err(runtime(format!(
             "language '{lang}' already exists at {} — use --force to replace it",
             dest.display()
-        ));
+        )));
     }
     if let Some(dir) = dest.parent() {
-        if let Err(e) = std::fs::create_dir_all(dir) {
-            die(&format!("could not create content dir: {e}"));
-        }
+        std::fs::create_dir_all(dir)
+            .map_err(|e| runtime(format!("could not create content dir: {e}")))?;
     }
-    if let Err(e) = std::fs::copy(src, &dest) {
-        die(&format!("could not install language file: {e}"));
-    }
+    std::fs::copy(src, &dest)
+        .map_err(|e| runtime(format!("could not install language file: {e}")))?;
     let verb = if replacing { "replaced" } else { "added" };
     println!(
         "{verb} language '{lang}' — {} stage(s) installed at {}",
         loaded.stages.len(),
         dest.display()
     );
+    Ok(())
 }
 
-fn load_lang(lang: &LangId) -> Vec<crate::engine::Stage> {
+fn load_lang(lang: &LangId) -> Result<Vec<crate::engine::Stage>, CliError> {
     let path = stages_path(lang);
     match content::load_language(&path, Some(lang)) {
-        Ok(loaded) => loaded.stages,
+        Ok(loaded) => Ok(loaded.stages),
         Err(content::LoadError::Io(e)) if e.kind() == std::io::ErrorKind::NotFound => {
-            die(&format!(
-            "no content for language '{lang}'. add one with: termocab add-lang {lang} <stages.json>"
-        ))
+            Err(runtime(format!(
+                "no content for language '{lang}'. add one with: termocab add-lang {lang} <stages.json>"
+            )))
         }
-        Err(e) => die(&format!("{lang}: {e}")),
+        Err(e) => Err(runtime(format!("{lang}: {e}"))),
     }
-}
-
-fn die(msg: &str) -> ! {
-    eprintln!("termocab: {msg}");
-    exit(1);
 }
 
 /// check <file> — run the content validator on a stages.json file
 /// without installing it, so a content author gets the full violation
 /// list (and a quick sanity summary when the file is good) before
 /// offering it to a learner.
-fn check(rest: &[String]) {
+fn check(rest: &[String]) -> Result<(), CliError> {
     let [file] = rest else {
-        usage_error(
+        return Err(usage(
             "'check' takes exactly one argument: a stages.json file\nusage: termocab check <file>",
-        );
+        ));
     };
     match content::load_language(Path::new(file), None) {
         Ok(loaded) => {
@@ -444,8 +465,9 @@ fn check(rest: &[String]) {
                 loaded.stages.len(),
                 loaded.language
             );
+            Ok(())
         }
-        Err(e) => die(&format!("{file}: {e}")),
+        Err(e) => Err(runtime(format!("{file}: {e}"))),
     }
 }
 
@@ -460,10 +482,60 @@ mod tests {
         assert_eq!(civil_from_unix(951_782_400), "2000-02-29"); // leap day
     }
 
+    // With run() returning Result (item 14), CLI behaviour is testable
+    // without a process — these are the first of the item-15 batch.
+
+    fn args(list: &[&str]) -> Vec<String> {
+        list.iter().map(|s| s.to_string()).collect()
+    }
+
     #[test]
-    fn usage_needs_no_args() {
-        // run with no args prints usage and exits 0 — smoke-checked by
-        // main's test harness instead of here, since run() prints.
+    fn unknown_command_is_a_usage_error() {
+        let err = run(&args(&["frobnicate"])).unwrap_err();
+        assert_eq!(err.exit_code(), 2);
+        assert!(err.message().contains("unknown command: frobnicate"));
+    }
+
+    #[test]
+    fn help_with_extra_arguments_is_a_usage_error() {
+        let err = run(&args(&["help", "please"])).unwrap_err();
+        assert_eq!(err.exit_code(), 2);
+        assert!(err.message().contains("'help' takes no arguments"));
+    }
+
+    #[test]
+    fn arity_errors_name_the_usage_line() {
+        for (cmd_line, fragment) in [
+            (
+                vec!["progress", "french", "junk"],
+                "termocab progress <lang>",
+            ),
+            (vec!["streak", "french", "junk"], "termocab streak <lang>"),
+            (vec!["review", "french", "junk"], "termocab review <lang>"),
+            (
+                vec!["list-words", "french", "junk"],
+                "termocab list-words <lang>",
+            ),
+            (
+                vec!["add-lang", "french"],
+                "termocab add-lang [--force] <lang> <file>",
+            ),
+            (vec!["check", "a.json", "b.json"], "termocab check <file>"),
+            (vec!["start"], "termocab start <lang> [stage]"),
+        ] {
+            let err = run(&args(&cmd_line)).unwrap_err();
+            assert_eq!(err.exit_code(), 2, "{cmd_line:?}");
+            assert!(err.message().contains(fragment), "{}", err.message());
+        }
+    }
+
+    #[test]
+    fn invalid_language_names_are_usage_errors() {
+        for bad in ["..", "../x", "a/b", "FRENCH", "café"] {
+            let err = run(&args(&["progress", bad])).unwrap_err();
+            assert_eq!(err.exit_code(), 2, "{bad:?}");
+            assert!(err.message().contains("invalid language name"), "{bad:?}");
+        }
     }
 
     fn stage_with_vocab(id: u32, words: &[&str]) -> crate::engine::Stage {

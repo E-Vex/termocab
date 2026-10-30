@@ -9,5 +9,8 @@ mod storage;
 
 fn main() {
     let args: Vec<String> = std::env::args().skip(1).collect();
-    cli::run(&args);
+    if let Err(e) = cli::run(&args) {
+        eprintln!("termocab: {}", e.message());
+        std::process::exit(e.exit_code());
+    }
 }
