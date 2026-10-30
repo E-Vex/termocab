@@ -99,7 +99,12 @@ pub fn run(args: &[String]) {
         return;
     };
     match cmd.as_str() {
-        "help" | "--help" | "-h" => println!("{USAGE}"),
+        "help" | "--help" | "-h" => {
+            if !rest.is_empty() {
+                usage_error("'help' takes no arguments\nusage: termocab help");
+            }
+            println!("{USAGE}");
+        }
         "start" => start(rest),
         "review" => review(rest),
         "list-words" => list_words(rest),
@@ -116,15 +121,14 @@ fn usage_error(msg: &str) -> ! {
     exit(2);
 }
 
+/// Commands that take exactly one argument (a language): parse it and
+/// reject anything else, naming the command's usage line (item 9).
 fn expect_lang(rest: &[String], cmd: &str) -> String {
-    let Some(lang) = rest.first() else {
+    let [lang] = rest else {
         usage_error(&format!(
-            "'{cmd}' needs a language, e.g. 'termocab {cmd} french'"
+            "'{cmd}' takes exactly one argument: a language\nusage: termocab {cmd} <lang>"
         ));
     };
-    if rest.len() > 2 {
-        usage_error(&format!("'{cmd}' takes at most one extra argument"));
-    }
     lang.clone()
 }
 
@@ -133,7 +137,9 @@ fn expect_lang(rest: &[String], cmd: &str) -> String {
 /// every learner starts at Stage 1 (documented in the handoff, §9).
 fn start(rest: &[String]) {
     if rest.is_empty() || rest.len() > 2 {
-        usage_error("'start' needs a language and optionally a stage number");
+        usage_error(
+            "'start' takes a language and an optional stage number\nusage: termocab start <lang> [stage]",
+        );
     }
     let lang = rest[0].clone();
     let stages = load_lang(&lang);
@@ -315,7 +321,9 @@ fn streak(rest: &[String]) {
 /// content dir, so the next `start` can find it.
 fn add_lang(rest: &[String]) {
     if rest.len() != 2 {
-        usage_error("'add-lang' needs a language and a stages.json file path");
+        usage_error(
+            "'add-lang' takes a language and a stages.json file\nusage: termocab add-lang <lang> <file>",
+        );
     }
     let lang = &rest[0];
     let src = Path::new(&rest[1]);
