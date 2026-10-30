@@ -36,11 +36,11 @@ commands:
   add-lang <lang> <file>    install a stages.json file as a new language
   help                      show this help";
 
-/// Where language content lives. `$TERMCOCAB_CONTENT_DIR` overrides the
+/// Where language content lives. `$TERMOCAB_CONTENT_DIR` overrides the
 /// default, which is `languages/` relative to the current directory —
 /// the same place `cargo run` finds it.
 fn content_dir() -> PathBuf {
-    match std::env::var("TERMCOCAB_CONTENT_DIR") {
+    match std::env::var("TERMOCAB_CONTENT_DIR") {
         Ok(dir) if !dir.is_empty() => PathBuf::from(dir),
         _ => PathBuf::from("languages"),
     }

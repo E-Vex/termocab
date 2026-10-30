@@ -178,7 +178,7 @@ Rules:
 **Explicitly out of scope for now** (don't build unless asked): audio, in-app AI, online accounts, achievements, SM-2/EF-style scheduling, ncurses TUI, SQLite.
 
 Known rough edges (fine to leave, fine to fix):
-- Content dir is `languages/` relative to cwd (or `$TERMCOCAB_CONTENT_DIR`); no install-time content location yet.
+- Content dir is `languages/` relative to cwd (or `$TERMOCAB_CONTENT_DIR`); no install-time content location yet.
 - `TZHOURS` env var shifts the streak date from UTC; std can't read the local timezone — a deliberate tradeoff documented in `cli/mod.rs`.
 - Broken pipe on `list-words | head` panics (Rust default SIGPIPE handling); cosmetic, noted in the Oct 2026 session.
 
