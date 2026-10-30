@@ -7,7 +7,7 @@
 //! unit tests can drive it with a scripted player instead of a real
 //! stdin/stdout.
 
-use crate::engine::{Exercise, Stage};
+use crate::engine::{Exercise, Grade, Stage};
 use crate::progress::LanguageProgress;
 use std::io::{self, BufRead, Write};
 
@@ -157,7 +157,13 @@ pub fn run_stage<T: Terminal>(term: &mut T, stage: &Stage) -> Outcome {
         };
         if exercise.is_correct(&answer) {
             correct += 1;
-            term.print("correct.");
+            match exercise.grade(&answer) {
+                Grade::Correct => term.print("correct."),
+                Grade::CorrectWithHint(expected) => {
+                    term.print(&format!("correct — watch the accents: {expected}"))
+                }
+                Grade::Incorrect => unreachable!("is_correct said otherwise"),
+            }
         } else {
             term.print(&format!("not quite — expected: {}", exercise.answer()));
         }
@@ -244,27 +250,35 @@ pub fn run_review<T: Terminal>(
             }
         };
         // a review card IS a translation exercise: this reuses the
-        // engine's grading (case- and whitespace-insensitive) instead
-        // of growing a second, slightly different rule here
+        // engine's grading (the full normalization table, accent hint
+        // included) instead of growing a second, slightly different
+        // rule here
         let exercise = Exercise::Translation {
             prompt: v.word.clone(),
             answer: v.translation.clone(),
+            accepted_answers: vec![],
         };
         outcome.answered += 1;
-        if exercise.is_correct(&attempt) {
+        let grade = exercise.grade(&attempt);
+        let right = !matches!(grade, Grade::Incorrect);
+        if right {
             outcome.correct += 1;
-            match srs.answer(word, true, today) {
-                Some(s) => term.print(&format!("correct — box {}, due {}.", s.box_number, s.due)),
-                None => term.print("correct."),
-            }
-        } else {
-            match srs.answer(word, false, today) {
-                Some(s) => term.print(&format!(
-                    "not quite — expected: {}. back to box {}, due {}.",
-                    v.translation, s.box_number, s.due
-                )),
-                None => term.print(&format!("not quite — expected: {}.", v.translation)),
-            }
+        }
+        let hint = match &grade {
+            Grade::CorrectWithHint(expected) => format!(" (watch the accents: {expected})"),
+            _ => String::new(),
+        };
+        match srs.answer(word, right, today) {
+            Some(s) if right => term.print(&format!(
+                "correct{hint} — box {}, due {}.",
+                s.box_number, s.due
+            )),
+            Some(s) => term.print(&format!(
+                "not quite — expected: {}. back to box {}, due {}.",
+                v.translation, s.box_number, s.due
+            )),
+            None if right => term.print(&format!("correct{hint}.")),
+            None => term.print(&format!("not quite — expected: {}.", v.translation)),
         }
     }
 
@@ -329,6 +343,7 @@ mod tests {
                 Exercise::Translation {
                     prompt: "Je suis etudiant.".into(),
                     answer: "I am a student".into(),
+                    accepted_answers: vec![],
                 },
                 Exercise::MultipleChoice {
                     prompt: "Choose the correct greeting:".into(),
@@ -338,10 +353,12 @@ mod tests {
                 Exercise::FillBlank {
                     prompt: "___, comment ca va ?".into(),
                     answer: "Bonjour".into(),
+                    accepted_answers: vec![],
                 },
                 Exercise::FillBlank {
                     prompt: "Je ___ etudiant.".into(),
                     answer: "suis".into(),
+                    accepted_answers: vec![],
                 },
             ],
         }
@@ -411,6 +428,37 @@ mod tests {
             .printed
             .iter()
             .any(|l| l.contains("expected: I am a student")));
+    }
+
+    #[test]
+    fn accent_only_mismatch_is_correct_with_an_accent_hint() {
+        // "etudiant" without the accent still passes — but the session
+        // shows the accented form, so the learner learns the accent
+        // (review item 3 / D1).
+        let stage = Stage {
+            id: 1,
+            title: "Accents".into(),
+            level_hint: "beginner".into(),
+            vocabulary: vec![],
+            exercises: vec![Exercise::Translation {
+                prompt: "student?".into(),
+                answer: "étudiant".into(),
+                accepted_answers: vec![],
+            }],
+        };
+        let mut t = Scripted::new(&["etudiant"]);
+        let out = run_stage(&mut t, &stage);
+        assert_eq!(
+            out,
+            Outcome::Passed {
+                correct: 1,
+                total: 1
+            }
+        );
+        assert!(t
+            .printed
+            .iter()
+            .any(|l| l.contains("watch the accents: étudiant")));
     }
 
     fn vocab(word: &str, translation: &str) -> crate::engine::Vocabulary {

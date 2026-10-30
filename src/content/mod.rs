@@ -54,6 +54,10 @@ enum JsonExercise {
     Translation {
         prompt: String,
         answer: String,
+        /// Optional alternative spellings that also count as correct
+        /// (review item 3 / D1). Absent in existing files = none.
+        #[serde(default)]
+        accepted_answers: Vec<String>,
     },
     MultipleChoice {
         prompt: String,
@@ -63,6 +67,8 @@ enum JsonExercise {
     FillBlank {
         prompt: String,
         answer: String,
+        #[serde(default)]
+        accepted_answers: Vec<String>,
     },
 }
 
@@ -251,6 +257,14 @@ fn validate_exercise(
             "stage {stage_id}, exercise {n} ({kind}): answer must not be empty"
         ));
     }
+    for (m, alt) in exercise.accepted_answers().iter().enumerate() {
+        if alt.trim().is_empty() {
+            errors.push(format!(
+                "stage {stage_id}, exercise {n} ({kind}): accepted_answers entry {} must not be empty",
+                m + 1
+            ));
+        }
+    }
     match exercise {
         engine::Exercise::MultipleChoice { options, .. } => {
             // Rule 3 — options and answer.
@@ -331,9 +345,15 @@ impl JsonVocabulary {
 impl JsonExercise {
     fn into_engine(self) -> engine::Exercise {
         match self {
-            JsonExercise::Translation { prompt, answer } => {
-                engine::Exercise::Translation { prompt, answer }
-            }
+            JsonExercise::Translation {
+                prompt,
+                answer,
+                accepted_answers,
+            } => engine::Exercise::Translation {
+                prompt,
+                answer,
+                accepted_answers,
+            },
             JsonExercise::MultipleChoice {
                 prompt,
                 options,
@@ -343,9 +363,15 @@ impl JsonExercise {
                 options,
                 answer,
             },
-            JsonExercise::FillBlank { prompt, answer } => {
-                engine::Exercise::FillBlank { prompt, answer }
-            }
+            JsonExercise::FillBlank {
+                prompt,
+                answer,
+                accepted_answers,
+            } => engine::Exercise::FillBlank {
+                prompt,
+                answer,
+                accepted_answers,
+            },
         }
     }
 }
@@ -531,6 +557,18 @@ mod tests {
             r#"{ "type": "fill_blank", "prompt": "bonjour means hello", "answer": "hello" }"#;
         let v = violations_of(&file_of("french", &stage_json(1, VOCAB_OK, bad_fb)), None);
         assert!(v.iter().any(|e| e.contains("must contain \"___\"")));
+    }
+
+    #[test]
+    fn accepted_answers_are_optional_but_must_be_nonempty_strings() {
+        // absent is fine (backwards compatible)
+        load_text(&file_of("french", &good_stage(1)), Some(&french())).unwrap();
+        // an empty entry is a violation
+        let bad = r#"{ "type": "translation", "prompt": "bonjour", "answer": "hello", "accepted_answers": [""] }"#;
+        let v = violations_of(&file_of("french", &stage_json(1, VOCAB_OK, bad)), None);
+        assert!(v
+            .iter()
+            .any(|e| e.contains("accepted_answers entry 1 must not be empty")));
     }
 
     #[test]

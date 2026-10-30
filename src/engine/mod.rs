@@ -30,6 +30,10 @@ pub enum Exercise {
     Translation {
         prompt: String,
         answer: String,
+        /// Alternative spellings that also count as correct, e.g.
+        /// "I'm a student" for "I am a student". Optional in content
+        /// files; absent means "only the answer".
+        accepted_answers: Vec<String>,
     },
     MultipleChoice {
         prompt: String,
@@ -39,7 +43,20 @@ pub enum Exercise {
     FillBlank {
         prompt: String,
         answer: String,
+        accepted_answers: Vec<String>,
     },
+}
+
+/// The outcome of grading one attempt (review item 3 / decision D1).
+#[derive(Debug, PartialEq, Eq)]
+pub enum Grade {
+    /// Right, after normalization.
+    Correct,
+    /// Right except for accents or ligatures — it counts as correct,
+    /// but the learner should see the properly spelled form, so the
+    /// expected spelling rides along as a hint.
+    CorrectWithHint(String),
+    Incorrect,
 }
 
 impl Exercise {
@@ -61,17 +78,148 @@ impl Exercise {
         }
     }
 
-    /// Grades a learner's attempt. Case-insensitive and whitespace-
-    /// insensitive: "bonjour", "Bonjour" and "  bonjour " are all correct
-    /// for answer "Bonjour". The three MVP exercise kinds share this one
-    /// rule — there is deliberately no kind-specific grading yet.
+    /// Alternative accepted spellings (empty for multiple choice, which
+    /// has its options instead).
+    pub fn accepted_answers(&self) -> &[String] {
+        match self {
+            Exercise::Translation {
+                accepted_answers, ..
+            }
+            | Exercise::FillBlank {
+                accepted_answers, ..
+            } => accepted_answers,
+            Exercise::MultipleChoice { .. } => &[],
+        }
+    }
+
+    /// Grades an attempt against the answer and its accepted
+    /// alternatives. See [`normalize_strict`] for what "the same" means.
+    pub fn grade(&self, attempt: &str) -> Grade {
+        let candidates: Vec<&str> = once(self.answer())
+            .chain(self.accepted_answers().iter().map(String::as_str))
+            .collect();
+
+        // Strict first: identical after normalization.
+        let strict = normalize_strict(attempt);
+        for candidate in &candidates {
+            if normalize_strict(candidate) == strict {
+                return Grade::Correct;
+            }
+        }
+        // Loose second: same except accents/ligatures — correct, with
+        // the properly spelled form as a hint.
+        let loose = normalize_loose(attempt);
+        for candidate in &candidates {
+            if normalize_loose(candidate) == loose {
+                return Grade::CorrectWithHint((*candidate).to_string());
+            }
+        }
+        Grade::Incorrect
+    }
+
+    /// Whether an attempt counts toward the pass bar. An accent-only
+    /// mismatch does (the hint is pedagogical, not punitive).
     pub fn is_correct(&self, attempt: &str) -> bool {
-        normalize(attempt) == normalize(self.answer())
+        !matches!(self.grade(attempt), Grade::Incorrect)
     }
 }
 
-fn normalize(s: &str) -> String {
-    s.trim().to_lowercase()
+use std::iter::once;
+
+/// Accented French letters, decomposed to base letter + combining mark.
+/// Decomposing (rather than stripping) in the strict pass makes
+/// precomposed "é" equal to "e" + U+0301 typed on a macOS keyboard —
+/// same letter, same accent, different encoding. Hand-written on
+/// purpose: sixteen entries beat a Unicode-normalization crate for one
+/// language, and §6 asks for justification before any dependency.
+const ACCENTED: [(char, &str); 16] = [
+    ('à', "a\u{0300}"),
+    ('â', "a\u{0302}"),
+    ('ä', "a\u{0308}"),
+    ('ç', "c\u{0327}"),
+    ('é', "e\u{0301}"),
+    ('è', "e\u{0300}"),
+    ('ê', "e\u{0302}"),
+    ('ë', "e\u{0308}"),
+    ('î', "i\u{0302}"),
+    ('ï', "i\u{0308}"),
+    ('ô', "o\u{0302}"),
+    ('ö', "o\u{0308}"),
+    ('ù', "u\u{0300}"),
+    ('û', "u\u{0302}"),
+    ('ü', "u\u{0308}"),
+    ('ÿ', "y\u{0308}"),
+];
+
+/// The two French ligatures open up only in the loose pass — "œuvre"
+/// and "oeuvre" are the same word, but the learner should see the
+/// ligature spelled out.
+const LIGATURES: [(char, &str); 2] = [('œ', "oe"), ('æ', "ae")];
+
+/// Punctuation that may differ at the ends of an answer: a missing "?"
+/// must not fail "How are you?".
+const EDGE_PUNCTUATION: [char; 5] = ['.', '?', '!', ',', ';'];
+
+/// The normalization both sides go through before comparing: trim,
+/// lowercase, collapse internal whitespace, strip leading and trailing
+/// punctuation, fold apostrophes, and fold Unicode composition for the
+/// accented French letters. Accents are still significant here —
+/// "etudiant" is NOT yet "étudiant".
+pub fn normalize_strict(input: &str) -> String {
+    let collapsed: String = input
+        .trim()
+        .to_lowercase()
+        .split_whitespace()
+        .collect::<Vec<_>>()
+        .join(" ");
+    let stripped = strip_edge_punctuation(&collapsed);
+    let mut out = String::with_capacity(stripped.len());
+    for c in stripped.chars() {
+        match c {
+            '’' | '‘' => out.push('\''),
+            _ => match ACCENTED.iter().find(|(letter, _)| *letter == c) {
+                Some((_, expansion)) => out.push_str(expansion),
+                None => out.push(c),
+            },
+        }
+    }
+    out
+}
+
+/// Strict normalization plus the accent fold: combining marks drop
+/// ("étudiant" == "etudiant") and the ligatures open ("œuvre" ==
+/// "oeuvre"). A loose-only match is correct with a hint.
+pub fn normalize_loose(input: &str) -> String {
+    let strict = normalize_strict(input);
+    let mut out = String::with_capacity(strict.len());
+    for c in strict.chars() {
+        // combining diacritical marks
+        if ('\u{0300}'..='\u{036F}').contains(&c) {
+            continue;
+        }
+        match LIGATURES.iter().find(|(letter, _)| *letter == c) {
+            Some((_, expansion)) => out.push_str(expansion),
+            None => out.push(c),
+        }
+    }
+    out
+}
+
+fn strip_edge_punctuation(s: &str) -> String {
+    let mut chars: Vec<char> = s.chars().collect();
+    while chars
+        .first()
+        .is_some_and(|c| c.is_whitespace() || EDGE_PUNCTUATION.contains(c))
+    {
+        chars.remove(0);
+    }
+    while chars
+        .last()
+        .is_some_and(|c| c.is_whitespace() || EDGE_PUNCTUATION.contains(c))
+    {
+        chars.pop();
+    }
+    chars.into_iter().collect()
 }
 
 /// A stage is completed when the learner answered at least this
@@ -105,6 +253,7 @@ mod tests {
                 .map(|_| Exercise::Translation {
                     prompt: "prompt".into(),
                     answer: "answer".into(),
+                    accepted_answers: vec![],
                 })
                 .collect(),
         }
@@ -133,17 +282,89 @@ mod tests {
         assert!(!stage_with(0).is_completed_by(0));
     }
 
+    fn translation(answer: &str, accepted: &[&str]) -> Exercise {
+        Exercise::Translation {
+            prompt: "…".into(),
+            answer: answer.into(),
+            accepted_answers: accepted.iter().map(|s| s.to_string()).collect(),
+        }
+    }
+
+    /// One row per grading rule — the table the review asked for.
     #[test]
-    fn grading_is_case_and_whitespace_insensitive() {
-        let ex = Exercise::Translation {
-            prompt: "Bonjour".into(),
-            answer: "Bonjour".into(),
-        };
-        assert!(ex.is_correct("bonjour"));
-        assert!(ex.is_correct("  BONJOUR  "));
-        assert!(ex.is_correct("Bonjour"));
-        assert!(!ex.is_correct("salut"));
-        assert!(!ex.is_correct(""));
+    fn grading_normalization_table() {
+        let cases: Vec<(&str, Exercise, Grade)> = vec![
+            // trim + case + internal whitespace
+            ("  BONJOUR  ", translation("bonjour", &[]), Grade::Correct),
+            (
+                "comment   ça   va",
+                translation("comment ça va", &[]),
+                Grade::Correct,
+            ),
+            // leading/trailing punctuation is forgiven, not internal
+            (
+                "How are you?",
+                translation("how are you", &[]),
+                Grade::Correct,
+            ),
+            ("Bonjour !", translation("bonjour", &[]), Grade::Correct),
+            ("a.b", translation("ab", &[]), Grade::Incorrect),
+            // apostrophes fold
+            ("l’homme", translation("l'homme", &[]), Grade::Correct),
+            // accent fold: correct, with the accented form as the hint
+            (
+                "etudiant",
+                translation("étudiant", &[]),
+                Grade::CorrectWithHint("étudiant".into()),
+            ),
+            (
+                "Je suis fatigue",
+                translation("Je suis fatigué", &[]),
+                Grade::CorrectWithHint("Je suis fatigué".into()),
+            ),
+            // composition fold: decomposed é equals precomposed é, no hint
+            (
+                "e\u{0301}tudiant",
+                translation("étudiant", &[]),
+                Grade::Correct,
+            ),
+            (
+                "e\u{0301}tudiant",
+                translation("etudiant", &[]),
+                Grade::CorrectWithHint("etudiant".into()),
+            ),
+            // ligatures open, with a hint
+            (
+                "oeuvre",
+                translation("œuvre", &[]),
+                Grade::CorrectWithHint("œuvre".into()),
+            ),
+            // accepted alternative spellings
+            (
+                "I'm a student",
+                translation("I am a student", &["I'm a student"]),
+                Grade::Correct,
+            ),
+            (
+                "je suis etudiante",
+                translation("je suis étudiant", &["je suis étudiante"]),
+                Grade::CorrectWithHint("je suis étudiante".into()),
+            ),
+            // and still wrong answers are wrong
+            ("salut", translation("bonjour", &[]), Grade::Incorrect),
+            ("", translation("bonjour", &[]), Grade::Incorrect),
+        ];
+        for (attempt, exercise, expected) in cases {
+            assert_eq!(exercise.grade(attempt), expected, "attempt {attempt:?}");
+        }
+    }
+
+    #[test]
+    fn accent_only_mismatches_count_as_correct() {
+        let exercise = translation("étudiant", &[]);
+        assert!(exercise.is_correct("etudiant"));
+        assert!(exercise.is_correct("ÉTUDIANT"));
+        assert!(!exercise.is_correct("étudiante"));
     }
 
     #[test]
@@ -156,10 +377,13 @@ mod tests {
         let fb = Exercise::FillBlank {
             prompt: "___ means hello".into(),
             answer: "bonjour".into(),
+            accepted_answers: vec![],
         };
         assert_eq!(mc.prompt(), "pick one");
         assert_eq!(mc.answer(), "x");
+        assert!(mc.accepted_answers().is_empty());
         assert_eq!(fb.prompt(), "___ means hello");
         assert_eq!(fb.answer(), "bonjour");
+        assert!(fb.accepted_answers().is_empty());
     }
 }
