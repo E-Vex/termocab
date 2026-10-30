@@ -1,11 +1,12 @@
 //! CLI — git-style direct subcommands, hand-rolled from std::env::args().
 //!
-//! No CLI-parsing crate: with six verbs and one optional flag, a match
+//! No CLI-parsing crate: with seven verbs and one optional flag, a match
 //! over the argument list is clearer than a dependency (§6 of the
 //! handoff). Verbs:
 //!   termocab start <lang> [stage]   run the next (or a given) stage
+//!   termocab review <lang>          spaced-repetition review of due words
 //!   termocab list-words <lang>      all vocabulary in a language
-//!   termocab progress <lang>        completed stages + streak
+//!   termocab progress <lang>        completed stages + streak + due count
 //!   termocab streak <lang>          just the streak number
 //!   termocab add-lang <lang> <file> install a stages.json as a language
 //!   termocab help                   usage text
@@ -14,6 +15,8 @@
 //! runtime failure, 2 usage error (same as git).
 
 use crate::content;
+use crate::engine::Vocabulary;
+use crate::progress::LanguageProgress;
 use crate::session::{self, StdioTerminal};
 use crate::storage;
 use std::path::{Path, PathBuf};
@@ -26,8 +29,9 @@ usage: termocab <command> [args]
 
 commands:
   start <lang> [stage]     run the next uncompleted stage (or a specific one)
+  review <lang>            review due vocabulary with spaced repetition
   list-words <lang>         list all vocabulary in a language's stages
-  progress <lang>           show completed stages and current streak
+  progress <lang>           show completed stages, streak and due reviews
   streak <lang>             print the current streak in days
   add-lang <lang> <file>    install a stages.json file as a new language
   help                      show this help";
@@ -97,6 +101,7 @@ pub fn run(args: &[String]) {
     match cmd.as_str() {
         "help" | "--help" | "-h" => println!("{USAGE}"),
         "start" => start(rest),
+        "review" => review(rest),
         "list-words" => list_words(rest),
         "progress" => progress(rest),
         "streak" => streak(rest),
@@ -164,6 +169,86 @@ fn start(rest: &[String]) {
     }
 }
 
+/// Vocabulary of every completed stage — the words eligible for
+/// spaced-repetition review. Anything the learner hasn't met by
+/// completing a stage is deliberately not scheduled yet, so reviews
+/// only ever ask about material that was actually taught.
+fn reviewable_words<'a>(
+    stages: &'a [crate::engine::Stage],
+    prog: &LanguageProgress,
+) -> Vec<&'a Vocabulary> {
+    stages
+        .iter()
+        .filter(|s| prog.is_stage_completed(s.id))
+        .flat_map(|s| s.vocabulary.iter())
+        .collect()
+}
+
+/// Synchronizes the srs state with the completed stages' vocabulary
+/// (in memory — `review` persists it) and returns it, plus how many
+/// cards are due on `today`.
+fn due_reviews(
+    lang: &str,
+    stages: &[crate::engine::Stage],
+    prog: &LanguageProgress,
+    today: &str,
+) -> Result<(crate::srs::SrsState, usize), String> {
+    let mut srs = storage::load_srs(lang).map_err(|e| e.to_string())?;
+    let words: Vec<String> = reviewable_words(stages, prog)
+        .into_iter()
+        .map(|v| v.word.clone())
+        .collect();
+    srs.introduce(&words, today);
+    let due = srs.due_on(today).len();
+    Ok((srs, due))
+}
+
+/// review <lang> — spaced-repetition session over the vocabulary of
+/// completed stages (Leitner boxes, see `srs/`). Any answered card
+/// records the day in progress, so a review keeps the streak alive
+/// exactly like a completed stage does. Nothing is written when there
+/// was nothing to answer.
+fn review(rest: &[String]) {
+    let lang = expect_lang(rest, "review");
+    let stages = load_lang(&lang);
+    let mut prog = match storage::load(&lang) {
+        Ok(p) => p,
+        Err(e) => die(&e.to_string()),
+    };
+    let today = today();
+    let (mut srs, due) = match due_reviews(&lang, &stages, &prog, &today) {
+        Ok(x) => x,
+        Err(e) => die(&e),
+    };
+
+    if due == 0 {
+        match srs.next_due(&today) {
+            Some((date, n)) => {
+                println!("no cards due today. next review: {date} ({n} word(s)).")
+            }
+            None => println!(
+                "no cards due for {lang} yet — complete a stage to start scheduling reviews."
+            ),
+        }
+        return;
+    }
+
+    let vocabulary = reviewable_words(&stages, &prog);
+    let mut term = StdioTerminal;
+    let outcome = session::run_review(&mut term, &mut srs, &vocabulary, &today);
+
+    if outcome.answered > 0 {
+        prog.record_active_day(&today);
+        if let Err(e) = storage::save_srs(&lang, &srs) {
+            die(&e.to_string());
+        }
+        if let Err(e) = storage::save(&lang, &prog) {
+            die(&e.to_string());
+        }
+        println!("review saved.");
+    }
+}
+
 /// list-words <lang> — every vocabulary entry across all stages.
 fn list_words(rest: &[String]) {
     let lang = expect_lang(rest, "list-words");
@@ -177,7 +262,7 @@ fn list_words(rest: &[String]) {
     }
 }
 
-/// progress <lang> — completed stages, current streak.
+/// progress <lang> — completed stages, current streak, due reviews.
 fn progress(rest: &[String]) {
     let lang = expect_lang(rest, "progress");
     let stages = load_lang(&lang);
@@ -185,6 +270,7 @@ fn progress(rest: &[String]) {
         Ok(p) => p,
         Err(e) => die(&e.to_string()),
     };
+    let today = today();
     let done = prog.completed_stages();
     println!("{lang}: {}/{} stage(s) complete", done.len(), stages.len());
     for stage in &stages {
@@ -195,7 +281,12 @@ fn progress(rest: &[String]) {
         Some(id) => println!("  next up: stage {id}"),
         None => println!("  all stages complete."),
     }
-    println!("  streak: {} day(s)", prog.streak_on(&today()));
+    println!("  streak: {} day(s)", prog.streak_on(&today));
+    let due = match due_reviews(&lang, &stages, &prog, &today) {
+        Ok((_, n)) => n,
+        Err(e) => die(&e),
+    };
+    println!("  reviews due today: {due} word(s) — run 'termocab review {lang}'");
 }
 
 /// streak <lang> — print just the streak count, script-friendly.
@@ -273,5 +364,38 @@ mod tests {
     fn usage_needs_no_args() {
         // run with no args prints usage and exits 0 — smoke-checked by
         // main's test harness instead of here, since run() prints.
+    }
+
+    fn stage_with_vocab(id: u32, words: &[&str]) -> crate::engine::Stage {
+        crate::engine::Stage {
+            id,
+            title: format!("Stage {id}"),
+            level_hint: "beginner".into(),
+            vocabulary: words
+                .iter()
+                .map(|w| crate::engine::Vocabulary {
+                    word: w.to_string(),
+                    translation: format!("translation of {w}"),
+                    pos: "noun".into(),
+                    example: format!("{w} example"),
+                })
+                .collect(),
+            exercises: vec![],
+        }
+    }
+
+    #[test]
+    fn reviewable_words_come_from_completed_stages_only() {
+        let stages = vec![
+            stage_with_vocab(1, &["bonjour", "merci"]),
+            stage_with_vocab(2, &["suis"]),
+        ];
+        let mut p = LanguageProgress::new();
+        p.record_stage_completion(1, "2026-10-30");
+        let words: Vec<&str> = reviewable_words(&stages, &p)
+            .into_iter()
+            .map(|v| v.word.as_str())
+            .collect();
+        assert_eq!(words, vec!["bonjour", "merci"]);
     }
 }
