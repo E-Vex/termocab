@@ -1,6 +1,6 @@
 //! CLI — git-style direct subcommands, hand-rolled from std::env::args().
 //!
-//! No CLI-parsing crate: with seven verbs and one optional flag, a match
+//! No CLI-parsing crate: with eight verbs and one optional flag, a match
 //! over the argument list is clearer than a dependency (§6 of the
 //! handoff). Verbs:
 //!   termocab start <lang> [stage]   run the next (or a given) stage
@@ -9,6 +9,7 @@
 //!   termocab progress <lang>        completed stages + streak + due count
 //!   termocab streak <lang>          just the streak number
 //!   termocab add-lang <lang> <file> install a stages.json as a language
+//!   termocab check <file>           validate a stages.json without installing
 //!   termocab help                   usage text
 //!
 //! Exit codes follow the Unix habits git users expect: 0 success, 1
@@ -35,6 +36,7 @@ commands:
   progress <lang>           show completed stages, streak and due reviews
   streak <lang>             print the current streak in days
   add-lang <lang> <file>    install a stages.json file as a new language
+  check <file>              validate a stages.json file without installing it
   help                      show this help";
 
 /// Where language content lives. `$TERMOCAB_CONTENT_DIR` overrides the
@@ -112,6 +114,7 @@ pub fn run(args: &[String]) {
         "progress" => progress(rest),
         "streak" => streak(rest),
         "add-lang" => add_lang(rest),
+        "check" => check(rest),
         other => usage_error(&format!("unknown command: {other}")),
     }
 }
@@ -337,14 +340,12 @@ fn add_lang(rest: &[String]) {
     let lang = parse_lang(&rest[0]);
     let src = Path::new(&rest[1]);
 
-    // Validate before installing: it must parse as our content format.
-    let loaded = match content::load_language(src) {
-        Ok(s) => s,
+    // Validate before installing: it must parse as our content format and
+    // pass every content rule, including declaring itself as `lang`.
+    let loaded = match content::load_language(src, Some(&lang)) {
+        Ok(c) => c,
         Err(e) => die(&format!("not a valid stages file: {e}")),
     };
-    if loaded.is_empty() {
-        die("refusing to add a language with zero stages");
-    }
 
     let dest = stages_path(&lang);
     if let Some(dir) = dest.parent() {
@@ -357,15 +358,15 @@ fn add_lang(rest: &[String]) {
     }
     println!(
         "added language '{lang}' — {} stage(s) installed at {}",
-        loaded.len(),
+        loaded.stages.len(),
         dest.display()
     );
 }
 
 fn load_lang(lang: &LangId) -> Vec<crate::engine::Stage> {
     let path = stages_path(lang);
-    match content::load_language(&path) {
-        Ok(s) => s,
+    match content::load_language(&path, Some(lang)) {
+        Ok(loaded) => loaded.stages,
         Err(content::LoadError::Io(e)) if e.kind() == std::io::ErrorKind::NotFound => {
             die(&format!(
             "no content for language '{lang}'. add one with: termocab add-lang {lang} <stages.json>"
@@ -378,6 +379,29 @@ fn load_lang(lang: &LangId) -> Vec<crate::engine::Stage> {
 fn die(msg: &str) -> ! {
     eprintln!("termocab: {msg}");
     exit(1);
+}
+
+/// check <file> — run the content validator on a stages.json file
+/// without installing it, so a content author gets the full violation
+/// list (and a quick sanity summary when the file is good) before
+/// offering it to a learner.
+fn check(rest: &[String]) {
+    let [file] = rest else {
+        usage_error(
+            "'check' takes exactly one argument: a stages.json file\nusage: termocab check <file>",
+        );
+    };
+    match content::load_language(Path::new(file), None) {
+        Ok(loaded) => {
+            let exercises: usize = loaded.stages.iter().map(|s| s.exercises.len()).sum();
+            println!(
+                "ok: {} stage(s), {exercises} exercise(s), language '{}'",
+                loaded.stages.len(),
+                loaded.language
+            );
+        }
+        Err(e) => die(&format!("{file}: {e}")),
+    }
 }
 
 #[cfg(test)]
