@@ -90,3 +90,76 @@ impl Stage {
         total > 0 && correct * 100 >= total * STAGE_PASS_PERCENT as usize
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn stage_with(exercise_count: usize) -> Stage {
+        Stage {
+            id: 1,
+            title: "Thresholds".into(),
+            level_hint: "beginner".into(),
+            vocabulary: vec![],
+            exercises: (0..exercise_count)
+                .map(|_| Exercise::Translation {
+                    prompt: "prompt".into(),
+                    answer: "answer".into(),
+                })
+                .collect(),
+        }
+    }
+
+    #[test]
+    fn pass_bar_sits_at_exactly_80_percent() {
+        // 4/5 = 80% exactly — passes, the >= matters.
+        assert!(stage_with(5).is_completed_by(4));
+        // The handoff's own examples: 7 of 8 and 5 of 6 pass…
+        assert!(stage_with(8).is_completed_by(7));
+        assert!(stage_with(6).is_completed_by(5));
+        // …4 of 6 (~67%) and 3/4 (75%) do not.
+        assert!(!stage_with(6).is_completed_by(4));
+        assert!(!stage_with(4).is_completed_by(3));
+        // All correct always passes (except the empty stage below).
+        assert!(stage_with(3).is_completed_by(3));
+        assert!(stage_with(100).is_completed_by(80));
+        assert!(!stage_with(100).is_completed_by(79));
+    }
+
+    #[test]
+    fn a_stage_with_no_exercises_never_completes() {
+        // Content validation keeps such stages out of the files; the
+        // engine stays defensive anyway (review item 1's root cause).
+        assert!(!stage_with(0).is_completed_by(0));
+    }
+
+    #[test]
+    fn grading_is_case_and_whitespace_insensitive() {
+        let ex = Exercise::Translation {
+            prompt: "Bonjour".into(),
+            answer: "Bonjour".into(),
+        };
+        assert!(ex.is_correct("bonjour"));
+        assert!(ex.is_correct("  BONJOUR  "));
+        assert!(ex.is_correct("Bonjour"));
+        assert!(!ex.is_correct("salut"));
+        assert!(!ex.is_correct(""));
+    }
+
+    #[test]
+    fn prompt_and_answer_accessors_cover_every_kind() {
+        let mc = Exercise::MultipleChoice {
+            prompt: "pick one".into(),
+            options: vec!["x".into(), "y".into()],
+            answer: "x".into(),
+        };
+        let fb = Exercise::FillBlank {
+            prompt: "___ means hello".into(),
+            answer: "bonjour".into(),
+        };
+        assert_eq!(mc.prompt(), "pick one");
+        assert_eq!(mc.answer(), "x");
+        assert_eq!(fb.prompt(), "___ means hello");
+        assert_eq!(fb.answer(), "bonjour");
+    }
+}

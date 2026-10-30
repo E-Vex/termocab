@@ -574,6 +574,72 @@ mod tests {
         std::env::remove_var("HOME");
     }
 
+    /// A stages.json body for add-lang tests: one valid stage.
+    const VALID_STAGES: &str = r#"{
+        "language": "french",
+        "stages": [
+          { "id": 1, "title": "One", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "bonjour", "translation": "hello", "pos": "x", "example": "Bonjour !" }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "bonjour", "answer": "hello" }
+            ] }
+        ]
+      }"#;
+
+    #[test]
+    fn add_lang_installs_refuses_overwrite_and_validates() {
+        let _env = crate::testenv::env_lock();
+        let content = crate::testenv::TempDir::new("addlang-content");
+        std::env::set_var("TERMOCAB_CONTENT_DIR", content.path());
+
+        let src = crate::testenv::TempDir::new("addlang-src");
+        let valid = src.path().join("stages.json");
+        std::fs::write(&valid, VALID_STAGES).unwrap();
+        let valid = valid.to_str().unwrap().to_string();
+
+        // happy path: installs under <content dir>/<lang>/stages.json
+        run(&args(&["add-lang", "french", &valid])).unwrap();
+        assert!(content.path().join("french/stages.json").exists());
+
+        // a second add of the same language is refused without --force
+        let err = run(&args(&["add-lang", "french", &valid])).unwrap_err();
+        assert_eq!(err.exit_code(), 1);
+        assert!(err.message().contains("use --force to replace it"));
+
+        // --force replaces it
+        run(&args(&["add-lang", "--force", "french", &valid])).unwrap();
+
+        // invalid content is rejected, every violation listed, nothing installed
+        let bad = src.path().join("bad.json");
+        std::fs::write(
+            &bad,
+            r#"{ "language": "german", "stages": [
+                 { "id": 1, "title": "X", "level_hint": "b",
+                   "vocabulary": [],
+                   "exercises": [
+                     { "type": "multiple_choice", "prompt": "p",
+                       "options": ["x", "y"], "answer": "z" }
+                   ] }
+               ] }"#,
+        )
+        .unwrap();
+        let bad = bad.to_str().unwrap().to_string();
+        let err = run(&args(&["add-lang", "german", &bad])).unwrap_err();
+        assert_eq!(err.exit_code(), 1);
+        assert!(err
+            .message()
+            .contains("answer \"z\" is not one of the options"));
+        assert!(!content.path().join("german").exists());
+
+        // and the installed language actually loads through `progress`
+        // (the config dir is irrelevant here; content is all add-lang needs)
+        let cfg = crate::testenv::TempDir::new("addlang-cfg");
+        std::env::set_var("XDG_CONFIG_HOME", cfg.path());
+        run(&args(&["progress", "french"])).unwrap();
+    }
+
     fn stage_with_vocab(id: u32, words: &[&str]) -> crate::engine::Stage {
         crate::engine::Stage {
             id,
