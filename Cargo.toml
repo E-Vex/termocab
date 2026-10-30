@@ -2,6 +2,11 @@
 name = "termocab"
 version = "0.1.0"
 edition = "2021"
+description = "Language learning for terminal enthusiasts — staged lessons, spaced repetition, plain-text progress"
+license = "MIT"
+repository = "https://github.com/E-Vex/termocab"
+# The lockfile is version 4, which cargo cannot parse before 1.78.
+rust-version = "1.78"
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }
