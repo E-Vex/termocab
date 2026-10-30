@@ -20,6 +20,8 @@
 //! helper skips destructors or stdout flushes by calling `exit` mid-run
 //! (review item 14).
 
+mod time;
+
 use crate::content;
 use crate::engine::Vocabulary;
 use crate::lang::LangId;
@@ -142,51 +144,40 @@ fn config_root() -> Result<PathBuf, CliError> {
     .map_err(|e| runtime(e.to_string()))
 }
 
-/// "Today" as YYYY-MM-DD. UTC-based unless the TZHOURS override shifts
-/// it — see [`local_utc_offset_seconds`] for why the real local clock
-/// is not read yet (review item 6 tracks the fix).
-fn today() -> String {
-    let secs = std::time::SystemTime::now()
-        .duration_since(std::time::UNIX_EPOCH)
-        .map(|d| d.as_secs() as i64)
-        .unwrap_or(0)
-        + local_utc_offset_seconds();
-    civil_from_unix(secs)
+/// Where "today" comes from. Real runs read the local calendar date
+/// (see the [`time`] module); tests inject a fixed date so no test ever
+/// depends on the wall clock (review item 6).
+trait Clock {
+    fn today(&self) -> String;
 }
 
-/// UTC offset in seconds for the local timezone, taken from the TZHOURS
-/// override (hours, may be negative). std cannot read the system's
-/// timezone — reading the TZ database (DST rules included) means either
-/// a time crate or parsing /etc/localtime ourselves; the dependency rule
-/// (§6) and review item 6 track that decision. Until then TZHOURS is the
-/// explicit, honest override.
-fn local_utc_offset_seconds() -> i64 {
-    std::env::var("TZHOURS")
-        .ok()
-        .and_then(|v| v.trim().parse::<i64>().ok())
-        .map(|h| h * 3600)
-        .unwrap_or(0)
+/// The real clock: the local date, DST included — see `cli/time.rs`.
+struct LocalClock;
+
+impl Clock for LocalClock {
+    fn today(&self) -> String {
+        time::today_local()
+    }
 }
 
-/// Converts unix seconds (UTC) to a YYYY-MM-DD civil date.
-/// Howard Hinnant's public-domain civil-from-days algorithm.
-fn civil_from_unix(secs: i64) -> String {
-    let days = secs.div_euclid(86_400);
-    let z = days + 719_468;
-    let era = z.div_euclid(146_097);
-    let doe = z.rem_euclid(146_097);
-    let yoe = (doe - doe / 1460 + doe / 36_524 - doe / 146_096) / 365;
-    let y = yoe + era * 400;
-    let doy = doe - (365 * yoe + yoe / 4 - yoe / 100);
-    let mp = (5 * doy + 2) / 153;
-    let d = doy - (153 * mp + 2) / 5 + 1;
-    let m = if mp < 10 { mp + 3 } else { mp - 9 };
-    let y = if m <= 2 { y + 1 } else { y };
-    format!("{:04}-{:02}-{:02}", y, m, d)
+/// A clock frozen at a fixed date, for tests.
+#[cfg(test)]
+struct FixedClock(&'static str);
+
+#[cfg(test)]
+impl Clock for FixedClock {
+    fn today(&self) -> String {
+        self.0.to_string()
+    }
 }
 
 /// What main() hands us: the raw argument list after the program name.
 pub fn run(args: &[String]) -> Result<(), CliError> {
+    run_with(args, &LocalClock)
+}
+
+/// [`run`] with the clock injected — the seam tests use.
+fn run_with(args: &[String], clock: &dyn Clock) -> Result<(), CliError> {
     let Some((cmd, rest)) = args.split_first() else {
         println!("{USAGE}");
         return Ok(());
@@ -197,11 +188,11 @@ pub fn run(args: &[String]) -> Result<(), CliError> {
             println!("{USAGE}");
             Ok(())
         }
-        "start" => start(rest),
-        "review" => review(rest),
+        "start" => start(rest, clock),
+        "review" => review(rest, clock),
         "list-words" => list_words(rest),
-        "progress" => progress(rest),
-        "streak" => streak(rest),
+        "progress" => progress(rest, clock),
+        "streak" => streak(rest, clock),
         "add-lang" => add_lang(rest),
         "check" => check(rest),
         other => Err(CliError::Usage(format!("unknown command: {other}"))),
@@ -250,7 +241,7 @@ fn parse_lang(raw: &str) -> Result<LangId, CliError> {
 /// Stages unlock strictly in order: an explicit stage number may only be
 /// a completed stage (replay) or the next uncompleted one (review item 7
 /// / decision D4 — the original spec's unlock condition, now enforced).
-fn start(rest: &[String]) -> Result<(), CliError> {
+fn start(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
     if rest.is_empty() || rest.len() > 2 {
         return Err(usage(
             "'start' takes a language and an optional stage number\nusage: termocab start <lang> [stage]",
@@ -297,7 +288,7 @@ fn start(rest: &[String]) -> Result<(), CliError> {
     };
 
     let mut term = StdioTerminal;
-    let today = today();
+    let today = clock.today();
     // Snapshot what the run could change, so the file is written only
     // when something actually does: a failed or aborted run never saves,
     // and a passed replay on an already-recorded day rewrites nothing
@@ -353,12 +344,12 @@ fn due_reviews(
 /// records the day in progress, so a review keeps the streak alive
 /// exactly like a completed stage does. Nothing is written when there
 /// was nothing to answer.
-fn review(rest: &[String]) -> Result<(), CliError> {
+fn review(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
     let lang = expect_lang(rest, "review")?;
     let stages = load_lang(&lang)?;
     let root = config_root()?;
     let mut prog = storage::load(&root, &lang).map_err(|e| runtime(e.to_string()))?;
-    let today = today();
+    let today = clock.today();
     let (mut srs, due) = due_reviews(&root, &lang, &stages, &prog, &today)?;
 
     if due == 0 {
@@ -411,12 +402,12 @@ fn list_words(rest: &[String]) -> Result<(), CliError> {
 }
 
 /// progress <lang> — completed stages, current streak, due reviews.
-fn progress(rest: &[String]) -> Result<(), CliError> {
+fn progress(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
     let lang = expect_lang(rest, "progress")?;
     let stages = load_lang(&lang)?;
     let root = config_root()?;
     let prog = storage::load(&root, &lang).map_err(|e| runtime(e.to_string()))?;
-    let today = today();
+    let today = clock.today();
     let done = prog.completed_stages();
     println!("{lang}: {}/{} stage(s) complete", done.len(), stages.len());
     for stage in &stages {
@@ -441,11 +432,11 @@ fn progress(rest: &[String]) -> Result<(), CliError> {
 }
 
 /// streak <lang> — print just the streak count, script-friendly.
-fn streak(rest: &[String]) -> Result<(), CliError> {
+fn streak(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
     let lang = expect_lang(rest, "streak")?;
     let root = config_root()?;
     let prog = storage::load(&root, &lang).map_err(|e| runtime(e.to_string()))?;
-    println!("{}", prog.streak_on(&today()));
+    println!("{}", prog.streak_on(&clock.today()));
     Ok(())
 }
 
@@ -539,13 +530,6 @@ fn check(rest: &[String]) -> Result<(), CliError> {
 mod tests {
     use super::*;
 
-    #[test]
-    fn civil_date_matches_known_values() {
-        assert_eq!(civil_from_unix(0), "1970-01-01");
-        assert_eq!(civil_from_unix(1_755_846_000), "2025-08-22"); // 2025-08-22 05:00 UTC
-        assert_eq!(civil_from_unix(951_782_400), "2000-02-29"); // leap day
-    }
-
     // With run() returning Result (item 14), CLI behaviour is testable
     // without a process — these are the first of the item-15 batch.
 
@@ -600,6 +584,35 @@ mod tests {
             assert_eq!(err.exit_code(), 2, "{bad:?}");
             assert!(err.message().contains("invalid language name"), "{bad:?}");
         }
+    }
+
+    #[test]
+    fn fixed_clock_pins_today_for_tests() {
+        // The seam (review item 6): handlers take the clock, tests
+        // freeze the date. The behavioral date logic itself is covered
+        // by the session/progress tests, which inject date strings.
+        assert_eq!(FixedClock("2026-10-30").today(), "2026-10-30");
+    }
+
+    #[test]
+    fn read_only_commands_run_against_the_injected_clock() {
+        // Dispatch threads the clock through to the handlers; a
+        // read-only verb completes without touching the wall clock.
+        let _env = crate::testenv::env_lock();
+        let data = crate::testenv::TempDir::new("clock-data");
+        std::env::set_var("TERMOCAB_CONTENT_DIR", data.path());
+        std::fs::create_dir_all(data.path().join("french")).unwrap();
+        std::fs::write(data.path().join("french/stages.json"), VALID_STAGES).unwrap();
+        let cfg = crate::testenv::TempDir::new("clock-cfg");
+        std::env::set_var("XDG_CONFIG_HOME", cfg.path());
+        std::fs::create_dir_all(cfg.path().join("termocab/progress")).unwrap();
+        std::fs::write(
+            cfg.path().join("termocab/progress/french.txt"),
+            "stage 1\nday 2024-01-01\n",
+        )
+        .unwrap();
+        run_with(&args(&["progress", "french"]), &FixedClock("2024-01-01")).unwrap();
+        run_with(&args(&["streak", "french"]), &FixedClock("2024-01-01")).unwrap();
     }
 
     #[test]
