@@ -9,6 +9,7 @@
 //!   termocab progress <lang>        completed stages + streak + due count
 //!   termocab streak <lang>          just the streak number
 //!   termocab add-lang <lang> <file> install a stages.json as a language
+//!                                 (add --force to replace an existing one)
 //!   termocab check <file>           validate a stages.json without installing
 //!   termocab help                   usage text
 //!
@@ -35,7 +36,7 @@ commands:
   list-words <lang>         list all vocabulary in a language's stages
   progress <lang>           show completed stages, streak and due reviews
   streak <lang>             print the current streak in days
-  add-lang <lang> <file>    install a stages.json file as a new language
+  add-lang [--force] <lang> <file>  install a stages.json file as a new language
   check <file>              validate a stages.json file without installing it
   help                      show this help";
 
@@ -360,16 +361,21 @@ fn streak(rest: &[String]) {
     println!("{}", prog.streak_on(&today()));
 }
 
-/// add-lang <lang> <file> — validate and copy a stages.json into the
-/// content dir, so the next `start` can find it.
+/// add-lang [--force] <lang> <file> — validate and copy a stages.json
+/// into the content dir, so the next `start` can find it. An existing
+/// language is never silently replaced: recorded stage completions and
+/// srs cards may point at content that would change under them, so the
+/// overwrite must be named explicitly with --force (item 12).
 fn add_lang(rest: &[String]) {
-    if rest.len() != 2 {
+    let force = rest.iter().any(|arg| arg == "--force");
+    let args: Vec<&String> = rest.iter().filter(|arg| *arg != "--force").collect();
+    if args.len() != 2 {
         usage_error(
-            "'add-lang' takes a language and a stages.json file\nusage: termocab add-lang <lang> <file>",
+            "'add-lang' takes a language and a stages.json file, plus an optional --force\nusage: termocab add-lang [--force] <lang> <file>",
         );
     }
-    let lang = parse_lang(&rest[0]);
-    let src = Path::new(&rest[1]);
+    let lang = parse_lang(args[0]);
+    let src = Path::new(args[1]);
 
     // Validate before installing: it must parse as our content format and
     // pass every content rule, including declaring itself as `lang`.
@@ -379,6 +385,13 @@ fn add_lang(rest: &[String]) {
     };
 
     let dest = stages_path(&lang);
+    let replacing = dest.exists();
+    if replacing && !force {
+        die(&format!(
+            "language '{lang}' already exists at {} — use --force to replace it",
+            dest.display()
+        ));
+    }
     if let Some(dir) = dest.parent() {
         if let Err(e) = std::fs::create_dir_all(dir) {
             die(&format!("could not create content dir: {e}"));
@@ -387,8 +400,9 @@ fn add_lang(rest: &[String]) {
     if let Err(e) = std::fs::copy(src, &dest) {
         die(&format!("could not install language file: {e}"));
     }
+    let verb = if replacing { "replaced" } else { "added" };
     println!(
-        "added language '{lang}' — {} stage(s) installed at {}",
+        "{verb} language '{lang}' — {} stage(s) installed at {}",
         loaded.stages.len(),
         dest.display()
     );
