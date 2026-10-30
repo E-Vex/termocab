@@ -197,11 +197,18 @@ fn start(rest: &[String]) {
 
     let mut term = StdioTerminal;
     let today = today();
+    // Snapshot what the run could change, so the file is written only
+    // when something actually does: a failed or aborted run never saves,
+    // and a passed replay on an already-recorded day rewrites nothing
+    // (item 11 — the old code rewrote the file even on </dev/null runs).
+    let stage_was_done = prog.is_stage_completed(stage.id);
+    let day_was_recorded = prog.is_active_day(&today);
     let outcome = session::run_and_record(&mut term, stage, &mut prog, &today);
-    if let Err(e) = storage::save(&lang, &prog) {
-        die(&e.to_string());
-    }
-    if outcome.passed() {
+    let changed = outcome.passed() && !(stage_was_done && day_was_recorded);
+    if changed {
+        if let Err(e) = storage::save(&lang, &prog) {
+            die(&e.to_string());
+        }
         println!("progress saved.");
     }
 }
@@ -275,12 +282,19 @@ fn review(rest: &[String]) {
     let outcome = session::run_review(&mut term, &mut srs, &vocabulary, &today);
 
     if outcome.answered > 0 {
+        // Every answered card was rescheduled, so the srs state always
+        // changes. The progress file only changes when today is a new
+        // active day — otherwise it would be rewritten with identical
+        // content on every review.
+        let day_is_new = !prog.is_active_day(&today);
         prog.record_active_day(&today);
         if let Err(e) = storage::save_srs(&lang, &srs) {
             die(&e.to_string());
         }
-        if let Err(e) = storage::save(&lang, &prog) {
-            die(&e.to_string());
+        if day_is_new {
+            if let Err(e) = storage::save(&lang, &prog) {
+                die(&e.to_string());
+            }
         }
         println!("review saved.");
     }

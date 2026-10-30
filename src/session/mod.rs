@@ -34,12 +34,27 @@ pub struct ReviewOutcome {
     pub correct: usize,
 }
 
+/// One line of user input, or why there is not one. EOF (the learner
+/// pressed Ctrl-D) and unreadable input (invalid UTF-8, an I/O error)
+/// are distinct on purpose: the runner reports them differently instead
+/// of describing both as "input closed" (review item 11).
+#[derive(Debug, PartialEq, Eq, Clone)]
+pub enum Input {
+    /// A line as typed, trailing newline included.
+    Line(String),
+    /// End of input.
+    Closed,
+    /// Input arrived but could not be read; carries the underlying
+    /// error text ("stream did not contain valid UTF-8", …).
+    Unreadable(String),
+}
+
 /// Minimal terminal the runner needs. Tests implement it with a queue of
 /// pre-scripted answers; real usage uses `StdioTerminal`.
 pub trait Terminal {
     fn print(&mut self, line: &str);
-    /// Reads one line of user input. `None` means EOF / input closed.
-    fn read_line(&mut self) -> Option<String>;
+    /// Reads one line of user input.
+    fn read_line(&mut self) -> Input;
 }
 
 /// The real terminal: stdout + stdin.
@@ -51,12 +66,12 @@ impl Terminal for StdioTerminal {
         let _ = io::stdout().flush();
     }
 
-    fn read_line(&mut self) -> Option<String> {
+    fn read_line(&mut self) -> Input {
         let mut line = String::new();
         match io::stdin().lock().read_line(&mut line) {
-            Ok(0) => None, // EOF
-            Ok(_) => Some(line),
-            Err(_) => None,
+            Ok(0) => Input::Closed, // EOF
+            Ok(_) => Input::Line(line),
+            Err(e) => Input::Unreadable(e.to_string()), // e.g. invalid UTF-8
         }
     }
 }
@@ -128,9 +143,15 @@ pub fn run_stage<T: Terminal>(term: &mut T, stage: &Stage) -> Outcome {
         term.print("");
         term.print(&render(&stage.title, i + 1, total, exercise));
         let answer = match term.read_line() {
-            Some(line) => resolve_attempt(exercise, &line),
-            None => {
+            Input::Line(line) => resolve_attempt(exercise, &line),
+            Input::Closed => {
                 term.print("input closed — stopping this stage.");
+                break;
+            }
+            Input::Unreadable(e) => {
+                term.print(&format!(
+                    "could not read input ({e}) — stopping this stage."
+                ));
                 break;
             }
         };
@@ -210,9 +231,15 @@ pub fn run_review<T: Terminal>(
         term.print("");
         term.print(&format!("[{}/{}] {}", i + 1, total, v.word));
         let attempt = match term.read_line() {
-            Some(line) => line,
-            None => {
+            Input::Line(line) => line,
+            Input::Closed => {
                 term.print("input closed — stopping this review.");
+                break;
+            }
+            Input::Unreadable(e) => {
+                term.print(&format!(
+                    "could not read input ({e}) — stopping this review."
+                ));
                 break;
             }
         };
@@ -255,17 +282,26 @@ pub fn run_review<T: Terminal>(
 mod tests {
     use super::*;
 
-    /// A player with scripted answers, capturing everything printed.
+    /// A player with scripted input, capturing everything printed.
     struct Scripted {
-        answers: Vec<String>,
+        inputs: Vec<Input>,
         printed: Vec<String>,
         at: usize,
     }
 
     impl Scripted {
         fn new(answers: &[&str]) -> Self {
+            Self::with_inputs(
+                answers
+                    .iter()
+                    .map(|a| Input::Line((*a).to_string()))
+                    .collect(),
+            )
+        }
+
+        fn with_inputs(inputs: Vec<Input>) -> Self {
             Self {
-                answers: answers.iter().map(|s| s.to_string()).collect(),
+                inputs,
                 printed: vec![],
                 at: 0,
             }
@@ -276,10 +312,10 @@ mod tests {
         fn print(&mut self, line: &str) {
             self.printed.push(line.to_string());
         }
-        fn read_line(&mut self) -> Option<String> {
-            let a = self.answers.get(self.at).cloned();
+        fn read_line(&mut self) -> Input {
+            let input = self.inputs.get(self.at).cloned();
             self.at += 1;
-            a
+            input.unwrap_or(Input::Closed)
         }
     }
 
@@ -450,6 +486,48 @@ mod tests {
             }
         );
         assert!(t.printed.iter().any(|l| l.contains("input closed")));
+        // the card never reached is untouched
+        assert_eq!(card_of(&srs, "merci").due, "2026-10-30");
+    }
+
+    #[test]
+    fn unreadable_input_aborts_a_stage_with_a_distinct_message() {
+        let mut t = Scripted::with_inputs(vec![
+            Input::Line("I am a student".into()),
+            Input::Unreadable("stream did not contain valid UTF-8".into()),
+        ]);
+        let out = run_stage(&mut t, &fixture_stage());
+        assert_eq!(
+            out,
+            Outcome::Failed {
+                correct: 1,
+                total: 4
+            }
+        );
+        assert!(t.printed.iter().any(|l| l.contains("could not read input")));
+        assert!(!t.printed.iter().any(|l| l.contains("input closed")));
+    }
+
+    #[test]
+    fn unreadable_input_aborts_a_review_with_a_distinct_message() {
+        let mut srs = crate::srs::SrsState::new();
+        srs.introduce(&["bonjour".into(), "merci".into()], "2026-10-30");
+        let v1 = vocab("bonjour", "hello");
+        let v2 = vocab("merci", "thank you");
+
+        let mut t = Scripted::with_inputs(vec![
+            Input::Line("hello".into()),
+            Input::Unreadable("stream did not contain valid UTF-8".into()),
+        ]);
+        let out = run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30");
+        assert_eq!(
+            out,
+            ReviewOutcome {
+                answered: 1,
+                correct: 1
+            }
+        );
+        assert!(t.printed.iter().any(|l| l.contains("could not read input")));
         // the card never reached is untouched
         assert_eq!(card_of(&srs, "merci").due, "2026-10-30");
     }

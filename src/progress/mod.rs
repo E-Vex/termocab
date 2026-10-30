@@ -37,6 +37,12 @@ impl LanguageProgress {
         self.active_days.insert(date.to_string());
     }
 
+    /// Whether this date is already recorded as active — lets callers
+    /// save only when recording would actually change anything.
+    pub fn is_active_day(&self, date: &str) -> bool {
+        self.active_days.contains(date)
+    }
+
     /// Records a stage as completed, plus the date it was completed on.
     /// The date is an opaque YYYY-MM-DD string — deciding what "today" is
     /// belongs to the caller (the app layer), not to this module.
