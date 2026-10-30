@@ -16,6 +16,7 @@
 
 use crate::content;
 use crate::engine::Vocabulary;
+use crate::lang::LangId;
 use crate::progress::LanguageProgress;
 use crate::session::{self, StdioTerminal};
 use crate::storage;
@@ -46,8 +47,8 @@ fn content_dir() -> PathBuf {
     }
 }
 
-fn stages_path(lang: &str) -> PathBuf {
-    content_dir().join(lang).join("stages.json")
+fn stages_path(lang: &LangId) -> PathBuf {
+    content_dir().join(lang.as_str()).join("stages.json")
 }
 
 /// "Today" as YYYY-MM-DD from the TZ-local clock, without a time crate:
@@ -121,15 +122,23 @@ fn usage_error(msg: &str) -> ! {
     exit(2);
 }
 
-/// Commands that take exactly one argument (a language): parse it and
-/// reject anything else, naming the command's usage line (item 9).
-fn expect_lang(rest: &[String], cmd: &str) -> String {
+/// Commands that take exactly one argument (a language): parse it as a
+/// [`LangId`] and reject anything else, naming the command's usage
+/// line (item 9). The lang id is validated here, at the CLI edge, so a
+/// traversal attempt like `../x` dies as a usage error (item 4).
+fn expect_lang(rest: &[String], cmd: &str) -> LangId {
     let [lang] = rest else {
         usage_error(&format!(
             "'{cmd}' takes exactly one argument: a language\nusage: termocab {cmd} <lang>"
         ));
     };
-    lang.clone()
+    parse_lang(lang)
+}
+
+/// Parses a language name or dies with a usage error (exit 2).
+fn parse_lang(raw: &str) -> LangId {
+    LangId::parse(raw)
+        .unwrap_or_else(|reason| usage_error(&format!("invalid language name: {reason}")))
 }
 
 /// start <lang> [stage] — run the next uncompleted stage, or a chosen
@@ -141,7 +150,7 @@ fn start(rest: &[String]) {
             "'start' takes a language and an optional stage number\nusage: termocab start <lang> [stage]",
         );
     }
-    let lang = rest[0].clone();
+    let lang = parse_lang(&rest[0]);
     let stages = load_lang(&lang);
 
     let mut prog = match storage::load(&lang) {
@@ -196,7 +205,7 @@ fn reviewable_words<'a>(
 /// (in memory — `review` persists it) and returns it, plus how many
 /// cards are due on `today`.
 fn due_reviews(
-    lang: &str,
+    lang: &LangId,
     stages: &[crate::engine::Stage],
     prog: &LanguageProgress,
     today: &str,
@@ -325,7 +334,7 @@ fn add_lang(rest: &[String]) {
             "'add-lang' takes a language and a stages.json file\nusage: termocab add-lang <lang> <file>",
         );
     }
-    let lang = &rest[0];
+    let lang = parse_lang(&rest[0]);
     let src = Path::new(&rest[1]);
 
     // Validate before installing: it must parse as our content format.
@@ -337,7 +346,7 @@ fn add_lang(rest: &[String]) {
         die("refusing to add a language with zero stages");
     }
 
-    let dest = stages_path(lang);
+    let dest = stages_path(&lang);
     if let Some(dir) = dest.parent() {
         if let Err(e) = std::fs::create_dir_all(dir) {
             die(&format!("could not create content dir: {e}"));
@@ -353,7 +362,7 @@ fn add_lang(rest: &[String]) {
     );
 }
 
-fn load_lang(lang: &str) -> Vec<crate::engine::Stage> {
+fn load_lang(lang: &LangId) -> Vec<crate::engine::Stage> {
     let path = stages_path(lang);
     match content::load_language(&path) {
         Ok(s) => s,

@@ -1,6 +1,7 @@
 mod cli;
 mod content;
 mod engine;
+mod lang;
 mod progress;
 mod session;
 mod srs;

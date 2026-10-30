@@ -18,6 +18,7 @@
 //!   - anything else is a parse error — strict on purpose, so a format
 //!     change fails loudly instead of silently dropping history
 
+use crate::lang::LangId;
 use crate::progress::LanguageProgress;
 use crate::srs::{self, SrsState};
 use std::fmt;
@@ -65,19 +66,23 @@ fn config_root() -> Result<PathBuf, StoreError> {
 }
 
 /// Per-language progress file path under the config directory.
-pub fn progress_path(lang: &str) -> Result<PathBuf, StoreError> {
-    Ok(config_root()?.join("progress").join(format!("{lang}.txt")))
+pub fn progress_path(lang: &LangId) -> Result<PathBuf, StoreError> {
+    Ok(config_root()?
+        .join("progress")
+        .join(format!("{}.txt", lang.as_str())))
 }
 
 /// Per-language srs state file path under the config directory.
-pub fn srs_path(lang: &str) -> Result<PathBuf, StoreError> {
-    Ok(config_root()?.join("srs").join(format!("{lang}.txt")))
+pub fn srs_path(lang: &LangId) -> Result<PathBuf, StoreError> {
+    Ok(config_root()?
+        .join("srs")
+        .join(format!("{}.txt", lang.as_str())))
 }
 
 /// Loads progress for a language. A missing file is not an error — it
 /// just means the learner is brand new — so this returns fresh progress
 /// instead of failing.
-pub fn load(lang: &str) -> Result<LanguageProgress, StoreError> {
+pub fn load(lang: &LangId) -> Result<LanguageProgress, StoreError> {
     let path = progress_path(lang)?;
     let text = match fs::read_to_string(&path) {
         Ok(t) => t,
@@ -120,7 +125,7 @@ pub fn load(lang: &str) -> Result<LanguageProgress, StoreError> {
 
 /// Saves progress for a language. Written to a sibling temp file first
 /// and renamed into place, so a crash mid-write can't destroy history.
-pub fn save(lang: &str, progress: &LanguageProgress) -> Result<(), StoreError> {
+pub fn save(lang: &LangId, progress: &LanguageProgress) -> Result<(), StoreError> {
     let path = progress_path(lang)?;
     if let Some(dir) = path.parent() {
         fs::create_dir_all(dir).map_err(StoreError::Io)?;
@@ -150,7 +155,7 @@ pub fn save(lang: &str, progress: &LanguageProgress) -> Result<(), StoreError> {
 /// The word itself may contain spaces (a vocabulary entry is not
 /// guaranteed to be a single token), so the line is split on the fixed
 /// ` box ` and ` due ` markers rather than on whitespace.
-pub fn load_srs(lang: &str) -> Result<SrsState, StoreError> {
+pub fn load_srs(lang: &LangId) -> Result<SrsState, StoreError> {
     let path = srs_path(lang)?;
     let text = match fs::read_to_string(&path) {
         Ok(t) => t,
@@ -219,7 +224,7 @@ fn bad_line(path: &std::path::Path, no: usize, line: &str) -> StoreError {
 
 /// Saves the srs state for a language, temp-file + rename like progress.
 /// Cards are written in word order, so diffs stay small.
-pub fn save_srs(lang: &str, state: &SrsState) -> Result<(), StoreError> {
+pub fn save_srs(lang: &LangId, state: &SrsState) -> Result<(), StoreError> {
     let path = srs_path(lang)?;
     if let Some(dir) = path.parent() {
         fs::create_dir_all(dir).map_err(StoreError::Io)?;
@@ -254,6 +259,11 @@ mod tests {
         ENV_LOCK.get_or_init(|| Mutex::new(())).lock().unwrap()
     }
 
+    /// A valid LangId for tests — "french" unless said otherwise.
+    fn lang(s: &str) -> LangId {
+        LangId::parse(s).unwrap()
+    }
+
     fn scratch(name: &str) -> PathBuf {
         let dir = std::env::temp_dir().join(format!("termocab-test-{}-{name}", std::process::id()));
         fs::create_dir_all(&dir).unwrap();
@@ -266,16 +276,22 @@ mod tests {
         // an empty HOME is just as unset for our purposes
         std::env::remove_var("XDG_CONFIG_HOME");
         std::env::set_var("HOME", "");
-        assert!(matches!(load("french"), Err(StoreError::NoConfigDir)));
+        assert!(matches!(
+            load(&lang("french")),
+            Err(StoreError::NoConfigDir)
+        ));
         // and so is no HOME at all
         std::env::remove_var("HOME");
         assert!(matches!(
-            save("french", &LanguageProgress::new()),
+            save(&lang("french"), &LanguageProgress::new()),
             Err(StoreError::NoConfigDir)
         ));
-        assert!(matches!(load_srs("french"), Err(StoreError::NoConfigDir)));
         assert!(matches!(
-            save_srs("french", &SrsState::new()),
+            load_srs(&lang("french")),
+            Err(StoreError::NoConfigDir)
+        ));
+        assert!(matches!(
+            save_srs(&lang("french"), &SrsState::new()),
             Err(StoreError::NoConfigDir)
         ));
         // and nothing was created in the current directory
@@ -291,9 +307,9 @@ mod tests {
         let mut p = LanguageProgress::new();
         p.record_stage_completion(1, "2026-08-21");
         p.record_stage_completion(2, "2026-08-22");
-        save("french", &p).unwrap();
+        save(&lang("french"), &p).unwrap();
 
-        let loaded = load("french").unwrap();
+        let loaded = load(&lang("french")).unwrap();
         assert_eq!(loaded.completed_stages(), vec![1, 2]);
         assert_eq!(loaded.streak_on("2026-08-22"), 2);
     }
@@ -304,7 +320,7 @@ mod tests {
         let dir = scratch("missing");
         std::env::set_var("XDG_CONFIG_HOME", &dir);
         assert_eq!(
-            load("klingon").unwrap().completed_stages(),
+            load(&lang("klingon")).unwrap().completed_stages(),
             Vec::<u32>::new()
         );
     }
@@ -320,7 +336,7 @@ mod tests {
             "stage 1\nfrobnicate 7\n",
         )
         .unwrap();
-        assert!(matches!(load("french"), Err(StoreError::Parse(_))));
+        assert!(matches!(load(&lang("french")), Err(StoreError::Parse(_))));
     }
 
     #[test]
@@ -337,9 +353,9 @@ mod tests {
             "2026-10-30",
         );
         s.answer("bonjour", true, "2026-10-30");
-        save_srs("french", &s).unwrap();
+        save_srs(&lang("french"), &s).unwrap();
 
-        let loaded = load_srs("french").unwrap();
+        let loaded = load_srs(&lang("french")).unwrap();
         let (_, bonjour) = loaded
             .cards()
             .into_iter()
@@ -356,7 +372,7 @@ mod tests {
         let _guard = lock_env();
         let dir = scratch("srs-missing");
         std::env::set_var("XDG_CONFIG_HOME", &dir);
-        assert_eq!(load_srs("klingon").unwrap().cards().len(), 0);
+        assert_eq!(load_srs(&lang("klingon")).unwrap().cards().len(), 0);
     }
 
     #[test]
@@ -377,7 +393,7 @@ mod tests {
             fs::create_dir_all(dir.join("termocab/srs")).unwrap();
             fs::write(dir.join("termocab/srs/french.txt"), content).unwrap();
             assert!(
-                matches!(load_srs("french"), Err(StoreError::Parse(_))),
+                matches!(load_srs(&lang("french")), Err(StoreError::Parse(_))),
                 "{name} should be a parse error"
             );
         }
