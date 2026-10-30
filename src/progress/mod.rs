@@ -6,7 +6,7 @@
 //! module allowed to know about `progress::` types AND about the on-disk
 //! plain-text format at the same time; it converts between the two.
 
-use std::collections::HashSet;
+use std::collections::{BTreeSet, HashSet};
 
 /// One language's progress. Stage numbers are the only level concept the
 /// user ever sees (no CEFR anywhere near here).
@@ -15,8 +15,12 @@ pub struct LanguageProgress {
     /// Every stage id completed (passed with >= 80% correct in one run).
     completed: HashSet<u32>,
     /// Every calendar date (YYYY-MM-DD, local time) on which the learner
-    /// completed at least one stage.
-    active_days: Vec<String>,
+    /// was active, sorted and deduplicated by construction. Dates are
+    /// validated where untrusted text enters — `storage::load` rejects a
+    /// malformed `day` line instead of letting it quietly zero the
+    /// streak later; dates recorded at runtime come from the CLI's
+    /// clock and are well-formed by construction.
+    active_days: BTreeSet<String>,
 }
 
 impl LanguageProgress {
@@ -27,11 +31,10 @@ impl LanguageProgress {
     /// Records a calendar date as active. Recording the day is its own
     /// operation (not just a side effect of completing a stage) because
     /// review sessions keep a streak alive the same way — the caller
-    /// decides what counts as activity. Idempotent per date.
+    /// decides what counts as activity. Idempotent per date (the set
+    /// drops duplicates).
     pub fn record_active_day(&mut self, date: &str) {
-        if !self.active_days.contains(&date.to_string()) {
-            self.active_days.push(date.to_string());
-        }
+        self.active_days.insert(date.to_string());
     }
 
     /// Records a stage as completed, plus the date it was completed on.
@@ -69,9 +72,8 @@ impl LanguageProgress {
         if self.active_days.is_empty() {
             return 0;
         }
-        let mut sorted: Vec<&str> = self.active_days.iter().map(String::as_str).collect();
-        sorted.sort_unstable();
-        sorted.dedup();
+        // The set is already sorted and deduplicated.
+        let sorted: Vec<&str> = self.active_days.iter().map(String::as_str).collect();
 
         // If neither today nor yesterday is active, the streak is dead.
         let last = *sorted.last().expect("checked non-empty");
@@ -106,17 +108,18 @@ impl LanguageProgress {
 
     /// All distinct active dates, sorted — exposed for `storage/`, which
     /// needs the full history to serialize.
-    pub fn active_days(&self) -> &[String] {
-        &self.active_days
+    pub fn active_days(&self) -> Vec<String> {
+        self.active_days.iter().cloned().collect()
     }
 
     /// Rebuilds progress from parts. This is the `storage/` entry point:
     /// the plain-text layer parses its file into completed ids and dates,
     /// then hands them here so the invariants stay in one place.
+    /// Duplicate days collapse; the set keeps everything sorted.
     pub fn from_parts(completed: Vec<u32>, active_days: Vec<String>) -> Self {
         Self {
             completed: completed.into_iter().collect(),
-            active_days,
+            active_days: active_days.into_iter().collect(),
         }
     }
 }
@@ -194,7 +197,7 @@ mod tests {
         p.record_stage_completion(1, "2026-08-22");
         p.record_stage_completion(1, "2026-08-22");
         assert_eq!(p.completed_stages(), vec![1]);
-        assert_eq!(p.active_days(), &["2026-08-22".to_string()]);
+        assert_eq!(p.active_days(), ["2026-08-22".to_string()]);
     }
 
     #[test]
@@ -240,8 +243,24 @@ mod tests {
         let mut p = LanguageProgress::new();
         p.record_active_day("2026-10-30");
         p.record_active_day("2026-10-30");
-        assert_eq!(p.active_days(), &["2026-10-30".to_string()]);
+        assert_eq!(p.active_days(), ["2026-10-30".to_string()]);
         assert_eq!(p.streak_on("2026-10-30"), 1);
+    }
+
+    #[test]
+    fn from_parts_sorts_and_deduplicates_days() {
+        let p = LanguageProgress::from_parts(
+            vec![],
+            vec![
+                "2026-05-02".into(),
+                "2026-05-01".into(),
+                "2026-05-02".into(),
+            ],
+        );
+        assert_eq!(
+            p.active_days(),
+            ["2026-05-01".to_string(), "2026-05-02".to_string()]
+        );
     }
 
     #[test]

@@ -110,7 +110,20 @@ pub fn load(lang: &LangId) -> Result<LanguageProgress, StoreError> {
                     ))
                 })?)
             }
-            (Some("day"), Some(day)) => days.push(day.trim().to_string()),
+            (Some("day"), Some(day)) => {
+                let day = day.trim();
+                // A malformed date would make prev_day return None and the
+                // streak silently become 0 — reject it here, loudly, like
+                // every other bad line (review item 13).
+                if !srs::valid_date(day) {
+                    return Err(StoreError::Parse(format!(
+                        "{}: line {}: bad date (expected a real YYYY-MM-DD day): {day:?}",
+                        path.display(),
+                        no + 1
+                    )));
+                }
+                days.push(day.to_string());
+            }
             _ => {
                 return Err(StoreError::Parse(format!(
                     "{}: line {}: unrecognized line: {line:?}",
@@ -337,6 +350,26 @@ mod tests {
         )
         .unwrap();
         assert!(matches!(load(&lang("french")), Err(StoreError::Parse(_))));
+    }
+
+    #[test]
+    fn bad_day_lines_are_errors() {
+        let _guard = lock_env();
+        for (name, content) in [
+            ("garbage", "stage 1\nday yesterday\n"),
+            ("notreal", "day 2026-02-30\n"),
+            ("badmonth", "day 2026-13-01\n"),
+            ("shortform", "day 2026-9-9\n"),
+        ] {
+            let dir = scratch(&format!("day-strict-{name}"));
+            std::env::set_var("XDG_CONFIG_HOME", &dir);
+            fs::create_dir_all(dir.join("termocab/progress")).unwrap();
+            fs::write(dir.join("termocab/progress/french.txt"), content).unwrap();
+            assert!(
+                matches!(load(&lang("french")), Err(StoreError::Parse(_))),
+                "{name} should be a parse error"
+            );
+        }
     }
 
     #[test]
