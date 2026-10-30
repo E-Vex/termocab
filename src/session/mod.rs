@@ -1,9 +1,11 @@
 //! Session runner — the application layer between the CLI and the
 //! engine. Runs one stage's exercises in the terminal, grades them
 //! through `engine::`, applies the >= 80% completion rule, and records
-//! the outcome via `progress::`. It talks to the user through the
-//! `Terminal` trait so unit tests can drive it with a scripted player
-//! instead of a real stdin/stdout.
+//! the outcome via `progress::`. Runs spaced-repetition review sessions
+//! the same way: due cards in, rescheduled cards out, grading through
+//! `engine::`. It talks to the user through the `Terminal` trait so
+//! unit tests can drive it with a scripted player instead of a real
+//! stdin/stdout.
 
 use crate::engine::{Exercise, Stage};
 use crate::progress::LanguageProgress;
@@ -22,6 +24,14 @@ impl Outcome {
     pub fn passed(&self) -> bool {
         matches!(self, Outcome::Passed { .. })
     }
+}
+
+/// How a review session went — enough for the caller to decide whether
+/// the day counts as active (any card answered) and what to save.
+#[derive(Debug, Default, PartialEq, Eq)]
+pub struct ReviewOutcome {
+    pub answered: usize,
+    pub correct: usize,
 }
 
 /// Minimal terminal the runner needs. Tests implement it with a queue of
@@ -141,6 +151,77 @@ pub fn run_and_record<T: Terminal>(
     outcome
 }
 
+/// Runs one spaced-repetition review: every card due on `today` is
+/// shown as a plain translation prompt — the foreign word, the learner
+/// types its translation — graded with the same case-insensitive rule
+/// as stage exercises, and rescheduled through `srs::`. Pure with
+/// respect to storage: the caller decides what to do with the outcome.
+///
+/// A card whose word is missing from `vocabulary` (the content changed
+/// under it) is skipped and left untouched, rather than crashing or
+/// silently resetting it.
+pub fn run_review<T: Terminal>(
+    term: &mut T,
+    srs: &mut crate::srs::SrsState,
+    vocabulary: &[&crate::engine::Vocabulary],
+    today: &str,
+) -> ReviewOutcome {
+    let due: Vec<String> = srs.due_on(today).into_iter().map(|(w, _)| w.to_string()).collect();
+    let total = due.len();
+    let mut outcome = ReviewOutcome::default();
+
+    term.print(&format!("— review: {total} word(s) —"));
+    term.print("give the translation of each word, then press Enter.");
+
+    for (i, word) in due.iter().enumerate() {
+        let Some(v) = vocabulary.iter().find(|v| v.word == *word) else {
+            term.print(&format!("skipping '{word}' — no longer in the loaded content."));
+            continue;
+        };
+        term.print("");
+        term.print(&format!("[{}/{}] {}", i + 1, total, v.word));
+        let attempt = match term.read_line() {
+            Some(line) => line,
+            None => {
+                term.print("input closed — stopping this review.");
+                break;
+            }
+        };
+        // a review card IS a translation exercise: this reuses the
+        // engine's grading (case- and whitespace-insensitive) instead
+        // of growing a second, slightly different rule here
+        let exercise = Exercise::Translation {
+            prompt: v.word.clone(),
+            answer: v.translation.clone(),
+        };
+        outcome.answered += 1;
+        if exercise.is_correct(&attempt) {
+            outcome.correct += 1;
+            match srs.answer(word, true, today) {
+                Some(s) => term.print(&format!("correct — box {}, due {}.", s.box_number, s.due)),
+                None => term.print("correct."),
+            }
+        } else {
+            match srs.answer(word, false, today) {
+                Some(s) => term.print(&format!(
+                    "not quite — expected: {}. back to box {}, due {}.",
+                    v.translation, s.box_number, s.due
+                )),
+                None => term.print(&format!("not quite — expected: {}.", v.translation)),
+            }
+        }
+    }
+
+    term.print("");
+    term.print(&format!(
+        "reviewed {} word(s): {} correct, {} to revisit.",
+        outcome.answered,
+        outcome.correct,
+        outcome.answered - outcome.correct
+    ));
+    outcome
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -238,5 +319,75 @@ mod tests {
         let mut t = Scripted::new(&["nope", "b", "bonjour", "suis"]);
         run_stage(&mut t, &fixture_stage());
         assert!(t.printed.iter().any(|l| l.contains("expected: I am a student")));
+    }
+
+    fn vocab(word: &str, translation: &str) -> crate::engine::Vocabulary {
+        crate::engine::Vocabulary {
+            word: word.into(),
+            translation: translation.into(),
+            pos: "noun".into(),
+            example: format!("{word}!"),
+        }
+    }
+
+    fn card_of<'a>(srs: &'a crate::srs::SrsState, word: &str) -> &'a crate::srs::Card {
+        srs.cards().into_iter().find(|(w, _)| *w == word).unwrap().1
+    }
+
+    #[test]
+    fn review_grades_and_reschedules_due_cards() {
+        let mut srs = crate::srs::SrsState::new();
+        srs.introduce(&["bonjour".into(), "merci".into()], "2026-10-30");
+        let v1 = vocab("bonjour", "hello");
+        let v2 = vocab("merci", "thank you");
+        let vocabulary = [&v1, &v2];
+
+        let mut t = Scripted::new(&["hello", "nope"]);
+        let out = run_review(&mut t, &mut srs, &vocabulary, "2026-10-30");
+
+        assert_eq!(out, ReviewOutcome { answered: 2, correct: 1 });
+        assert_eq!(card_of(&srs, "bonjour").box_number, 2);
+        assert_eq!(card_of(&srs, "bonjour").due, "2026-11-01");
+        assert_eq!(card_of(&srs, "merci").box_number, 1);
+        assert_eq!(card_of(&srs, "merci").due, "2026-10-31");
+        assert!(t.printed.iter().any(|l| l.contains("expected: thank you")));
+    }
+
+    #[test]
+    fn review_grading_is_case_insensitive() {
+        let mut srs = crate::srs::SrsState::new();
+        srs.introduce(&["bonjour".into()], "2026-10-30");
+        let v = vocab("bonjour", "hello");
+
+        let mut t = Scripted::new(&["  HeLLo "]);
+        let out = run_review(&mut t, &mut srs, &[&v], "2026-10-30");
+        assert_eq!(out, ReviewOutcome { answered: 1, correct: 1 });
+    }
+
+    #[test]
+    fn review_input_closed_stops_gracefully() {
+        let mut srs = crate::srs::SrsState::new();
+        srs.introduce(&["bonjour".into(), "merci".into()], "2026-10-30");
+        let v1 = vocab("bonjour", "hello");
+        let v2 = vocab("merci", "thank you");
+
+        // only one answer scripted: the second read hits EOF and stops
+        let mut t = Scripted::new(&["hello"]);
+        let out = run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30");
+        assert_eq!(out, ReviewOutcome { answered: 1, correct: 1 });
+        assert!(t.printed.iter().any(|l| l.contains("input closed")));
+        // the card never reached is untouched
+        assert_eq!(card_of(&srs, "merci").due, "2026-10-30");
+    }
+
+    #[test]
+    fn review_skips_cards_missing_from_content() {
+        let mut srs = crate::srs::SrsState::new();
+        srs.introduce(&["orphelin".into()], "2026-10-30");
+
+        let mut t = Scripted::new(&[]);
+        let out = run_review(&mut t, &mut srs, &[], "2026-10-30");
+        assert_eq!(out, ReviewOutcome::default());
+        assert!(t.printed.iter().any(|l| l.contains("skipping 'orphelin'")));
     }
 }
