@@ -3,6 +3,7 @@ mod content;
 mod engine;
 mod progress;
 mod session;
+mod srs;
 mod storage;
 
 fn main() {
