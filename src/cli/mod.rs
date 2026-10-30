@@ -148,6 +148,9 @@ fn parse_lang(raw: &str) -> LangId {
 /// start <lang> [stage] — run the next uncompleted stage, or a chosen
 /// one. Records progress on pass. There is no placement system yet, so
 /// every learner starts at Stage 1 (documented in the handoff, §9).
+/// Stages unlock strictly in order: an explicit stage number may only be
+/// a completed stage (replay) or the next uncompleted one (review item 7
+/// / decision D4 — the original spec's unlock condition, now enforced).
 fn start(rest: &[String]) {
     if rest.is_empty() || rest.len() > 2 {
         usage_error(
@@ -164,10 +167,23 @@ fn start(rest: &[String]) {
 
     let stage = match rest.get(1) {
         Some(n) => match n.parse::<u32>() {
-            Ok(id) => stages
-                .iter()
-                .find(|s| s.id == id)
-                .unwrap_or_else(|| die(&format!("no stage {id} in {lang}"))),
+            Ok(id) => {
+                let stage = stages
+                    .iter()
+                    .find(|s| s.id == id)
+                    .unwrap_or_else(|| die(&format!("no stage {id} in {lang}")));
+                let unlocked =
+                    prog.is_stage_completed(id) || prog.current_stage_id(&stages) == Some(id);
+                if !unlocked {
+                    match prog.current_stage_id(&stages) {
+                        Some(next) => die(&format!(
+                            "stage {id} is locked — complete stage {next} first"
+                        )),
+                        None => die(&format!("stage {id} is locked")),
+                    }
+                }
+                stage
+            }
             Err(_) => usage_error("stage must be a number, e.g. 'termocab start french 1'"),
         },
         None => match prog.next_stage(&stages) {
