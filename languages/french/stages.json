@@ -9,24 +9,28 @@
         {
           "word": "bonjour",
           "translation": "hello",
+          "accepted_translations": ["hi", "good morning"],
           "pos": "interjection",
           "example": "Bonjour, comment ça va ?"
         },
         {
           "word": "salut",
           "translation": "hi",
+          "accepted_translations": ["hello"],
           "pos": "interjection",
           "example": "Salut, ça va ?"
         },
         {
           "word": "au revoir",
           "translation": "goodbye",
+          "accepted_translations": ["bye", "farewell"],
           "pos": "interjection",
           "example": "Au revoir, à bientôt !"
         },
         {
           "word": "merci",
           "translation": "thank you",
+          "accepted_translations": ["thanks"],
           "pos": "interjection",
           "example": "Merci beaucoup !"
         },
@@ -51,6 +55,7 @@
         {
           "word": "ça va",
           "translation": "I'm fine",
+          "accepted_translations": ["I am fine"],
           "pos": "phrase",
           "example": "Ça va bien, merci."
         },
@@ -63,12 +68,14 @@
         {
           "word": "enchanté",
           "translation": "nice to meet you",
+          "accepted_translations": ["pleased to meet you", "delighted"],
           "pos": "adjective",
           "example": "Enchanté, je m'appelle Léa."
         },
         {
           "word": "bonne journée",
           "translation": "have a good day",
+          "accepted_translations": ["have a nice day", "good day"],
           "pos": "phrase",
           "example": "Bonne journée !"
         },
@@ -332,6 +339,7 @@
         {
           "word": "professeur",
           "translation": "teacher",
+          "accepted_translations": ["professor"],
           "pos": "noun",
           "example": "Le professeur parle anglais."
         },
@@ -344,12 +352,14 @@
         {
           "word": "père",
           "translation": "father",
+          "accepted_translations": ["dad"],
           "pos": "noun",
           "example": "Mon père s'appelle Paul."
         },
         {
           "word": "mère",
           "translation": "mother",
+          "accepted_translations": ["mom"],
           "pos": "noun",
           "example": "Ma mère est professeur."
         },
@@ -374,6 +384,7 @@
         {
           "word": "enfant",
           "translation": "child",
+          "accepted_translations": ["kid"],
           "pos": "noun",
           "example": "L'enfant joue dehors."
         },
@@ -386,24 +397,28 @@
         {
           "word": "femme",
           "translation": "woman",
+          "accepted_translations": ["wife"],
           "pos": "noun",
           "example": "La femme travaille ici."
         },
         {
           "word": "grand-père",
           "translation": "grandfather",
+          "accepted_translations": ["grandpa", "granddad"],
           "pos": "noun",
           "example": "Mon grand-père habite à Lyon."
         },
         {
           "word": "grand-mère",
           "translation": "grandmother",
+          "accepted_translations": ["grandma", "granny"],
           "pos": "noun",
           "example": "Ma grand-mère fait la cuisine."
         },
         {
           "word": "prénom",
           "translation": "first name",
+          "accepted_translations": ["given name"],
           "pos": "noun",
           "example": "Quel est ton prénom ?"
         }
@@ -1032,6 +1047,7 @@
         {
           "word": "faire",
           "translation": "to do",
+          "accepted_translations": ["to make"],
           "pos": "verb",
           "example": "Je fais du sport."
         },
@@ -1050,6 +1066,7 @@
         {
           "word": "parler",
           "translation": "to speak",
+          "accepted_translations": ["to talk"],
           "pos": "verb",
           "example": "Je parle français."
         },
@@ -1068,6 +1085,7 @@
         {
           "word": "aimer",
           "translation": "to like",
+          "accepted_translations": ["to love"],
           "pos": "verb",
           "example": "J'aime le chocolat."
         },
@@ -1080,6 +1098,7 @@
         {
           "word": "pouvoir",
           "translation": "to be able to",
+          "accepted_translations": ["can"],
           "pos": "verb",
           "example": "Je peux venir."
         },
@@ -1351,12 +1370,14 @@
         {
           "word": "grand",
           "translation": "tall",
+          "accepted_translations": ["big", "large", "great"],
           "pos": "adjective",
           "example": "Mon frère est grand."
         },
         {
           "word": "petit",
           "translation": "short",
+          "accepted_translations": ["small", "little"],
           "pos": "adjective",
           "example": "Le café est petit."
         },
@@ -1369,18 +1390,21 @@
         {
           "word": "content",
           "translation": "happy",
+          "accepted_translations": ["glad", "pleased", "content"],
           "pos": "adjective",
           "example": "Elle est contente."
         },
         {
           "word": "triste",
           "translation": "sad",
+          "accepted_translations": ["unhappy"],
           "pos": "adjective",
           "example": "Pourquoi es-tu triste ?"
         },
         {
           "word": "beau",
           "translation": "beautiful",
+          "accepted_translations": ["handsome", "lovely", "pretty"],
           "pos": "adjective",
           "example": "Quel beau jardin !"
         },
@@ -1393,6 +1417,7 @@
         {
           "word": "chaud",
           "translation": "hot",
+          "accepted_translations": ["warm"],
           "pos": "adjective",
           "example": "Il fait chaud."
         },
@@ -1411,12 +1436,14 @@
         {
           "word": "facile",
           "translation": "easy",
+          "accepted_translations": ["simple"],
           "pos": "adjective",
           "example": "Le français est facile !"
         },
         {
           "word": "difficile",
           "translation": "hard",
+          "accepted_translations": ["difficult"],
           "pos": "adjective",
           "example": "C'est difficile."
         },
@@ -1441,6 +1468,7 @@
         {
           "word": "combien",
           "translation": "how much",
+          "accepted_translations": ["how many"],
           "pos": "adverb",
           "example": "Combien ça coûte ?"
         }
