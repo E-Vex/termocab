@@ -51,8 +51,14 @@ pub enum Input {
 
 /// Minimal terminal the runner needs. Tests implement it with a queue of
 /// pre-scripted answers; real usage uses `StdioTerminal`.
+///
+/// Printing can fail — a closed stdout (`termocab start french | head`)
+/// is a broken pipe — so `print` returns the error instead of letting
+/// `println!` panic mid-session (decision D6). The runner stops on the
+/// first failure; the caller treats the run as aborted and saves
+/// nothing.
 pub trait Terminal {
-    fn print(&mut self, line: &str);
+    fn print(&mut self, line: &str) -> io::Result<()>;
     /// Reads one line of user input.
     fn read_line(&mut self) -> Input;
 }
@@ -61,9 +67,10 @@ pub trait Terminal {
 pub struct StdioTerminal;
 
 impl Terminal for StdioTerminal {
-    fn print(&mut self, line: &str) {
-        println!("{line}");
-        let _ = io::stdout().flush();
+    fn print(&mut self, line: &str) -> io::Result<()> {
+        let mut out = io::stdout().lock();
+        writeln!(out, "{line}")?;
+        out.flush()
     }
 
     fn read_line(&mut self) -> Input {
@@ -130,42 +137,43 @@ fn letter_index(c: char) -> Option<usize> {
 
 /// Runs every exercise in the stage once, in order, then reports the
 /// outcome. Pure with respect to storage: the caller decides what to do
-/// with the result.
-pub fn run_stage<T: Terminal>(term: &mut T, stage: &Stage) -> Outcome {
+/// with the result. Fails when the terminal goes away mid-run (a closed
+/// stdout is a broken pipe, D6) — an aborted run reports no outcome.
+pub fn run_stage<T: Terminal>(term: &mut T, stage: &Stage) -> Result<Outcome, io::Error> {
     let total = stage.exercises.len();
     let mut correct = 0usize;
-    term.print(&format!("— Stage {}: {} —", stage.id, stage.title));
+    term.print(&format!("— Stage {}: {} —", stage.id, stage.title))?;
     term.print(&format!(
         "{total} exercise(s). Answer each, then press Enter."
-    ));
+    ))?;
 
     for (i, exercise) in stage.exercises.iter().enumerate() {
-        term.print("");
-        term.print(&render(&stage.title, i + 1, total, exercise));
+        term.print("")?;
+        term.print(&render(&stage.title, i + 1, total, exercise))?;
         let answer = match term.read_line() {
             Input::Line(line) => resolve_attempt(exercise, &line),
             Input::Closed => {
-                term.print("input closed — stopping this stage.");
+                term.print("input closed — stopping this stage.")?;
                 break;
             }
             Input::Unreadable(e) => {
                 term.print(&format!(
                     "could not read input ({e}) — stopping this stage."
-                ));
+                ))?;
                 break;
             }
         };
         if exercise.is_correct(&answer) {
             correct += 1;
             match exercise.grade(&answer) {
-                Grade::Correct => term.print("correct."),
+                Grade::Correct => term.print("correct.")?,
                 Grade::CorrectWithHint(expected) => {
-                    term.print(&format!("correct — watch the accents: {expected}"))
+                    term.print(&format!("correct — watch the accents: {expected}"))?
                 }
                 Grade::Incorrect => unreachable!("is_correct said otherwise"),
             }
         } else {
-            term.print(&format!("not quite — expected: {}", exercise.answer()));
+            term.print(&format!("not quite — expected: {}", exercise.answer()))?;
         }
     }
 
@@ -174,31 +182,33 @@ pub fn run_stage<T: Terminal>(term: &mut T, stage: &Stage) -> Outcome {
     } else {
         Outcome::Failed { correct, total }
     };
-    term.print("");
+    term.print("")?;
     match outcome {
         Outcome::Passed { correct, total } => {
-            term.print(&format!("stage complete: {correct}/{total} correct. nice."))
+            term.print(&format!("stage complete: {correct}/{total} correct. nice."))?
         }
         Outcome::Failed { correct, total } => term.print(&format!(
             "{correct}/{total} correct — below the 80% bar. run it again when ready."
-        )),
+        ))?,
     }
-    outcome
+    Ok(outcome)
 }
 
 /// Convenience wrapper: run the stage, and if it passed, record it in
 /// progress with the given date (the caller decides what "today" is).
+/// A run that dies on a closed stdout records nothing — an aborted run
+/// is not a completed stage (D6).
 pub fn run_and_record<T: Terminal>(
     term: &mut T,
     stage: &Stage,
     progress: &mut LanguageProgress,
     today: &str,
-) -> Outcome {
-    let outcome = run_stage(term, stage);
+) -> Result<Outcome, io::Error> {
+    let outcome = run_stage(term, stage)?;
     if let Outcome::Passed { .. } = outcome {
         progress.record_stage_completion(stage.id, today);
     }
-    outcome
+    Ok(outcome)
 }
 
 /// Runs one spaced-repetition review: every card due on `today` is
@@ -215,7 +225,7 @@ pub fn run_review<T: Terminal>(
     srs: &mut crate::srs::SrsState,
     vocabulary: &[&crate::engine::Vocabulary],
     today: &str,
-) -> ReviewOutcome {
+) -> Result<ReviewOutcome, io::Error> {
     let due: Vec<String> = srs
         .due_on(today)
         .into_iter()
@@ -224,28 +234,28 @@ pub fn run_review<T: Terminal>(
     let total = due.len();
     let mut outcome = ReviewOutcome::default();
 
-    term.print(&format!("— review: {total} word(s) —"));
-    term.print("give the translation of each word, then press Enter.");
+    term.print(&format!("— review: {total} word(s) —"))?;
+    term.print("give the translation of each word, then press Enter.")?;
 
     for (i, word) in due.iter().enumerate() {
         let Some(v) = vocabulary.iter().find(|v| v.word == *word) else {
             term.print(&format!(
                 "skipping '{word}' — no longer in the loaded content."
-            ));
+            ))?;
             continue;
         };
-        term.print("");
-        term.print(&format!("[{}/{}] {}", i + 1, total, v.word));
+        term.print("")?;
+        term.print(&format!("[{}/{}] {}", i + 1, total, v.word))?;
         let attempt = match term.read_line() {
             Input::Line(line) => line,
             Input::Closed => {
-                term.print("input closed — stopping this review.");
+                term.print("input closed — stopping this review.")?;
                 break;
             }
             Input::Unreadable(e) => {
                 term.print(&format!(
                     "could not read input ({e}) — stopping this review."
-                ));
+                ))?;
                 break;
             }
         };
@@ -272,24 +282,24 @@ pub fn run_review<T: Terminal>(
             Some(s) if right => term.print(&format!(
                 "correct{hint} — box {}, due {}.",
                 s.box_number, s.due
-            )),
+            ))?,
             Some(s) => term.print(&format!(
                 "not quite — expected: {}. back to box {}, due {}.",
                 v.translation, s.box_number, s.due
-            )),
-            None if right => term.print(&format!("correct{hint}.")),
-            None => term.print(&format!("not quite — expected: {}.", v.translation)),
+            ))?,
+            None if right => term.print(&format!("correct{hint}."))?,
+            None => term.print(&format!("not quite — expected: {}.", v.translation))?,
         }
     }
 
-    term.print("");
+    term.print("")?;
     term.print(&format!(
         "reviewed {} word(s): {} correct, {} to revisit.",
         outcome.answered,
         outcome.correct,
         outcome.answered - outcome.correct
-    ));
-    outcome
+    ))?;
+    Ok(outcome)
 }
 
 #[cfg(test)]
@@ -323,13 +333,34 @@ mod tests {
     }
 
     impl Terminal for Scripted {
-        fn print(&mut self, line: &str) {
+        fn print(&mut self, line: &str) -> io::Result<()> {
             self.printed.push(line.to_string());
+            Ok(())
         }
         fn read_line(&mut self) -> Input {
             let input = self.inputs.get(self.at).cloned();
             self.at += 1;
             input.unwrap_or(Input::Closed)
+        }
+    }
+
+    /// A terminal whose stdout goes away after `prints_left` lines —
+    /// what `termocab start french | head` looks like from the inside
+    /// (D6).
+    struct ClosedPipe {
+        prints_left: usize,
+    }
+
+    impl Terminal for ClosedPipe {
+        fn print(&mut self, _line: &str) -> io::Result<()> {
+            if self.prints_left == 0 {
+                return Err(io::Error::from(io::ErrorKind::BrokenPipe));
+            }
+            self.prints_left -= 1;
+            Ok(())
+        }
+        fn read_line(&mut self) -> Input {
+            Input::Line("whatever\n".into())
         }
     }
 
@@ -368,7 +399,7 @@ mod tests {
     fn all_correct_passes_and_records() {
         let mut p = LanguageProgress::new();
         let mut t = Scripted::new(&["I am a student", "b", "bonjour", "suis"]);
-        let out = run_and_record(&mut t, &fixture_stage(), &mut p, "2026-08-22");
+        let out = run_and_record(&mut t, &fixture_stage(), &mut p, "2026-08-22").unwrap();
         assert_eq!(
             out,
             Outcome::Passed {
@@ -383,7 +414,7 @@ mod tests {
     #[test]
     fn grading_is_case_insensitive() {
         let mut t = Scripted::new(&["i AM a student", "b", "  bonjour  ", "SUIS"]);
-        let out = run_stage(&mut t, &fixture_stage());
+        let out = run_stage(&mut t, &fixture_stage()).unwrap();
         assert_eq!(
             out,
             Outcome::Passed {
@@ -397,7 +428,7 @@ mod tests {
     fn three_of_four_is_below_the_bar() {
         // 3/4 = 75% — just under the 80% bar.
         let mut t = Scripted::new(&["wrong", "b", "bonjour", "suis"]);
-        let out = run_stage(&mut t, &fixture_stage());
+        let out = run_stage(&mut t, &fixture_stage()).unwrap();
         assert_eq!(
             out,
             Outcome::Failed {
@@ -410,7 +441,7 @@ mod tests {
     #[test]
     fn letter_answers_resolve_to_options() {
         let mut t = Scripted::new(&["I am a student", "bonjour", "bonjour", "suis"]);
-        let out = run_stage(&mut t, &fixture_stage());
+        let out = run_stage(&mut t, &fixture_stage()).unwrap();
         assert_eq!(
             out,
             Outcome::Passed {
@@ -423,7 +454,7 @@ mod tests {
     #[test]
     fn feedback_shows_expected_answer() {
         let mut t = Scripted::new(&["nope", "b", "bonjour", "suis"]);
-        run_stage(&mut t, &fixture_stage());
+        run_stage(&mut t, &fixture_stage()).unwrap();
         assert!(t
             .printed
             .iter()
@@ -447,7 +478,7 @@ mod tests {
             }],
         };
         let mut t = Scripted::new(&["etudiant"]);
-        let out = run_stage(&mut t, &stage);
+        let out = run_stage(&mut t, &stage).unwrap();
         assert_eq!(
             out,
             Outcome::Passed {
@@ -483,7 +514,7 @@ mod tests {
         let vocabulary = [&v1, &v2];
 
         let mut t = Scripted::new(&["hello", "nope"]);
-        let out = run_review(&mut t, &mut srs, &vocabulary, "2026-10-30");
+        let out = run_review(&mut t, &mut srs, &vocabulary, "2026-10-30").unwrap();
 
         assert_eq!(
             out,
@@ -506,7 +537,7 @@ mod tests {
         let v = vocab("bonjour", "hello");
 
         let mut t = Scripted::new(&["  HeLLo "]);
-        let out = run_review(&mut t, &mut srs, &[&v], "2026-10-30");
+        let out = run_review(&mut t, &mut srs, &[&v], "2026-10-30").unwrap();
         assert_eq!(
             out,
             ReviewOutcome {
@@ -525,7 +556,7 @@ mod tests {
 
         // only one answer scripted: the second read hits EOF and stops
         let mut t = Scripted::new(&["hello"]);
-        let out = run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30");
+        let out = run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30").unwrap();
         assert_eq!(
             out,
             ReviewOutcome {
@@ -544,7 +575,7 @@ mod tests {
             Input::Line("I am a student".into()),
             Input::Unreadable("stream did not contain valid UTF-8".into()),
         ]);
-        let out = run_stage(&mut t, &fixture_stage());
+        let out = run_stage(&mut t, &fixture_stage()).unwrap();
         assert_eq!(
             out,
             Outcome::Failed {
@@ -567,7 +598,7 @@ mod tests {
             Input::Line("hello".into()),
             Input::Unreadable("stream did not contain valid UTF-8".into()),
         ]);
-        let out = run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30");
+        let out = run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30").unwrap();
         assert_eq!(
             out,
             ReviewOutcome {
@@ -586,8 +617,38 @@ mod tests {
         srs.introduce(&["orphelin".into()], "2026-10-30");
 
         let mut t = Scripted::new(&[]);
-        let out = run_review(&mut t, &mut srs, &[], "2026-10-30");
+        let out = run_review(&mut t, &mut srs, &[], "2026-10-30").unwrap();
         assert_eq!(out, ReviewOutcome::default());
         assert!(t.printed.iter().any(|l| l.contains("skipping 'orphelin'")));
+    }
+
+    #[test]
+    fn a_broken_pipe_aborts_the_stage_and_records_nothing() {
+        // The pipe closes right after the two header lines: the first
+        // exercise print fails and the whole run unwinds as an error.
+        let mut p = LanguageProgress::new();
+        let mut t = ClosedPipe { prints_left: 2 };
+        let err = run_and_record(&mut t, &fixture_stage(), &mut p, "2026-08-22").unwrap_err();
+        assert_eq!(err.kind(), io::ErrorKind::BrokenPipe);
+        // an aborted run is not a completed stage — nothing was saved
+        assert!(!p.is_stage_completed(1));
+        assert!(p.active_days().is_empty());
+    }
+
+    #[test]
+    fn a_broken_pipe_aborts_the_review_and_answers_no_cards() {
+        let mut srs = crate::srs::SrsState::new();
+        srs.introduce(&["bonjour".into(), "merci".into()], "2026-10-30");
+        let v1 = vocab("bonjour", "hello");
+        let v2 = vocab("merci", "thank you");
+
+        // the pipe survives the header but dies on the first card
+        let mut t = ClosedPipe { prints_left: 3 };
+        let err = run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30").unwrap_err();
+        assert_eq!(err.kind(), io::ErrorKind::BrokenPipe);
+        // no card was answered, so the caller must not save the srs
+        // state — the cards are still due today, untouched
+        assert_eq!(srs.due_on("2026-10-30").len(), 2);
+        assert_eq!(card_of(&srs, "bonjour").box_number, 1);
     }
 }

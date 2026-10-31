@@ -14,11 +14,12 @@
 //!   termocab help                   usage text
 //!
 //! Exit codes follow the Unix habits git users expect: 0 success, 1
-//! runtime failure, 2 usage error (same as git). Errors are values
-//! here — [`run`] returns `Result<(), CliError>` and `main` is the only
-//! place that prints and exits — so the CLI is unit-testable and no
-//! helper skips destructors or stdout flushes by calling `exit` mid-run
-//! (review item 14).
+//! runtime failure, 2 usage error (same as git). A closed stdout
+//! (broken pipe) exits 141 — silently, like cat and git (D6). Errors
+//! are values here — [`run`] returns `Result<(), CliError>` and `main`
+//! is the only place that prints and exits — so the CLI is
+//! unit-testable and no helper skips destructors or stdout flushes by
+//! calling `exit` mid-run (review item 14).
 
 mod time;
 
@@ -28,6 +29,7 @@ use crate::lang::LangId;
 use crate::progress::LanguageProgress;
 use crate::session::{self, StdioTerminal};
 use crate::storage;
+use std::io::{self, Write};
 use std::path::{Path, PathBuf};
 
 const USAGE: &str = "\
@@ -56,6 +58,13 @@ pub enum CliError {
     /// The invocation was fine but the run failed: unreadable progress,
     /// locked stage, invalid content, … Exit code 1.
     Runtime(String),
+    /// stdout closed mid-run — `termocab list-words french | head` must
+    /// not panic. The reader of the pipe had enough, so the run ends
+    /// the way cat and git do: nothing printed, exit code 141
+    /// (128 + SIGPIPE). Re-raising the actual signal would need unsafe
+    /// libc calls, which §6 rules out; 141 is what the shell reports
+    /// either way (decision D6).
+    BrokenPipe,
 }
 
 impl CliError {
@@ -63,7 +72,14 @@ impl CliError {
         match self {
             CliError::Usage(_) => 2,
             CliError::Runtime(_) => 1,
+            CliError::BrokenPipe => 141,
         }
+    }
+
+    /// Whether `main` should print nothing at all — a broken pipe is
+    /// silent by definition (D6).
+    pub fn quiet(&self) -> bool {
+        matches!(self, CliError::BrokenPipe)
     }
 
     /// The message `main` prints after the "termocab: " prefix. Usage
@@ -72,7 +88,30 @@ impl CliError {
         match self {
             CliError::Usage(msg) => format!("{msg}\nrun 'termocab help' for usage."),
             CliError::Runtime(msg) => msg.clone(),
+            CliError::BrokenPipe => String::new(),
         }
+    }
+}
+
+/// One line to stdout, error-checked. Every line termocab prints goes
+/// through here — `println!` panics when the pipe is gone
+/// (`termocab list-words french | head`), which is the one way this
+/// tool ever crashed on a healthy system (D6).
+fn say(text: &str) -> Result<(), CliError> {
+    let mut out = io::stdout().lock();
+    match writeln!(out, "{text}") {
+        Ok(()) => Ok(()),
+        Err(e) => Err(stdout_error(e)),
+    }
+}
+
+/// What a failed stdout write means: a closed pipe is the reader
+/// saying "enough" (quiet exit 141, D6); anything else (disk full,
+/// I/O error) is an ordinary runtime failure.
+fn stdout_error(e: io::Error) -> CliError {
+    match e.kind() {
+        io::ErrorKind::BrokenPipe => CliError::BrokenPipe,
+        _ => runtime(format!("could not write to stdout: {e}")),
     }
 }
 
@@ -179,13 +218,13 @@ pub fn run(args: &[String]) -> Result<(), CliError> {
 /// [`run`] with the clock injected — the seam tests use.
 fn run_with(args: &[String], clock: &dyn Clock) -> Result<(), CliError> {
     let Some((cmd, rest)) = args.split_first() else {
-        println!("{USAGE}");
+        say(USAGE)?;
         return Ok(());
     };
     match cmd.as_str() {
         "help" | "--help" | "-h" => {
             expect_no_args(rest, "help")?;
-            println!("{USAGE}");
+            say(USAGE)?;
             Ok(())
         }
         "start" => start(rest, clock),
@@ -281,7 +320,9 @@ fn start(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
         None => match prog.next_stage(&stages) {
             Some(s) => s,
             None => {
-                println!("every stage in {lang} is complete. nothing left to start.");
+                say(&format!(
+                    "every stage in {lang} is complete. nothing left to start."
+                ))?;
                 return Ok(());
             }
         },
@@ -293,13 +334,15 @@ fn start(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
     // when something actually does: a failed or aborted run never saves,
     // and a passed replay on an already-recorded day rewrites nothing
     // (item 11 — the old code rewrote the file even on </dev/null runs).
+    // A run that dies on a closed stdout is aborted the same way (D6).
     let stage_was_done = prog.is_stage_completed(stage.id);
     let day_was_recorded = prog.is_active_day(&today);
-    let outcome = session::run_and_record(&mut term, stage, &mut prog, &today);
+    let outcome =
+        session::run_and_record(&mut term, stage, &mut prog, &today).map_err(stdout_error)?;
     let changed = outcome.passed() && !(stage_was_done && day_was_recorded);
     if changed {
         storage::save(&root, &lang, &prog).map_err(|e| runtime(e.to_string()))?;
-        println!("progress saved.");
+        say("progress saved.")?;
     }
     Ok(())
 }
@@ -355,18 +398,21 @@ fn review(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
     if due == 0 {
         match srs.next_due(&today) {
             Some((date, n)) => {
-                println!("no cards due today. next review: {date} ({n} word(s)).")
+                say(&format!(
+                    "no cards due today. next review: {date} ({n} word(s))."
+                ))?;
             }
-            None => println!(
+            None => say(&format!(
                 "no cards due for {lang} yet — complete a stage to start scheduling reviews."
-            ),
+            ))?,
         }
         return Ok(());
     }
 
     let vocabulary = reviewable_words(&stages, &prog);
     let mut term = StdioTerminal;
-    let outcome = session::run_review(&mut term, &mut srs, &vocabulary, &today);
+    let outcome =
+        session::run_review(&mut term, &mut srs, &vocabulary, &today).map_err(stdout_error)?;
 
     if outcome.answered > 0 {
         // Every answered card was rescheduled, so the srs state always
@@ -379,7 +425,7 @@ fn review(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
         if day_is_new {
             storage::save(&root, &lang, &prog).map_err(|e| runtime(e.to_string()))?;
         }
-        println!("review saved.");
+        say("review saved.")?;
     }
     Ok(())
 }
@@ -389,13 +435,13 @@ fn list_words(rest: &[String]) -> Result<(), CliError> {
     let lang = expect_lang(rest, "list-words")?;
     let stages = load_lang(&lang)?;
     for stage in &stages {
-        println!(
+        say(&format!(
             "Stage {} — {} [{}]",
             stage.id, stage.title, stage.level_hint
-        );
+        ))?;
         for v in &stage.vocabulary {
-            println!("  {} ({}) — {}", v.word, v.pos, v.translation);
-            println!("    e.g. {}", v.example);
+            say(&format!("  {} ({}) — {}", v.word, v.pos, v.translation))?;
+            say(&format!("    e.g. {}", v.example))?;
         }
     }
     Ok(())
@@ -409,25 +455,31 @@ fn progress(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
     let prog = storage::load(&root, &lang).map_err(|e| runtime(e.to_string()))?;
     let today = clock.today();
     let done = prog.completed_stages();
-    println!("{lang}: {}/{} stage(s) complete", done.len(), stages.len());
+    say(&format!(
+        "{lang}: {}/{} stage(s) complete",
+        done.len(),
+        stages.len()
+    ))?;
     for stage in &stages {
         let mark = if prog.is_stage_completed(stage.id) {
             "[x]"
         } else {
             "[ ]"
         };
-        println!(
+        say(&format!(
             "  {mark} Stage {} — {} [{}]",
             stage.id, stage.title, stage.level_hint
-        );
+        ))?;
     }
     match prog.current_stage_id(&stages) {
-        Some(id) => println!("  next up: stage {id}"),
-        None => println!("  all stages complete."),
+        Some(id) => say(&format!("  next up: stage {id}"))?,
+        None => say("  all stages complete.")?,
     }
-    println!("  streak: {} day(s)", prog.streak_on(&today));
+    say(&format!("  streak: {} day(s)", prog.streak_on(&today)))?;
     let (_, due) = due_reviews(&root, &lang, &stages, &prog, &today)?;
-    println!("  reviews due today: {due} word(s) — run 'termocab review {lang}'");
+    say(&format!(
+        "  reviews due today: {due} word(s) — run 'termocab review {lang}'"
+    ))?;
     Ok(())
 }
 
@@ -436,7 +488,7 @@ fn streak(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
     let lang = expect_lang(rest, "streak")?;
     let root = config_root()?;
     let prog = storage::load(&root, &lang).map_err(|e| runtime(e.to_string()))?;
-    println!("{}", prog.streak_on(&clock.today()));
+    say(&format!("{}", prog.streak_on(&clock.today())))?;
     Ok(())
 }
 
@@ -476,11 +528,11 @@ fn add_lang(rest: &[String]) -> Result<(), CliError> {
     std::fs::copy(src, &dest)
         .map_err(|e| runtime(format!("could not install language file: {e}")))?;
     let verb = if replacing { "replaced" } else { "added" };
-    println!(
+    say(&format!(
         "{verb} language '{lang}' — {} stage(s) installed at {}",
         loaded.stages.len(),
         dest.display()
-    );
+    ))?;
     Ok(())
 }
 
@@ -515,11 +567,11 @@ fn check(rest: &[String]) -> Result<(), CliError> {
     match content::load_language(Path::new(file), None) {
         Ok(loaded) => {
             let exercises: usize = loaded.stages.iter().map(|s| s.exercises.len()).sum();
-            println!(
+            say(&format!(
                 "ok: {} stage(s), {exercises} exercise(s), language '{}'",
                 loaded.stages.len(),
                 loaded.language
-            );
+            ))?;
             Ok(())
         }
         Err(e) => Err(runtime(format!("{file}: {e}"))),
@@ -592,6 +644,22 @@ mod tests {
         // freeze the date. The behavioral date logic itself is covered
         // by the session/progress tests, which inject date strings.
         assert_eq!(FixedClock("2026-10-30").today(), "2026-10-30");
+    }
+
+    #[test]
+    fn broken_pipe_maps_to_a_quiet_141_exit() {
+        // The D6 mapping: EPIPE is silent success-as-far-as-the-reader-
+        // is-concerned; every other write failure is an ordinary error.
+        let e = stdout_error(io::Error::from(io::ErrorKind::BrokenPipe));
+        assert_eq!(e, CliError::BrokenPipe);
+        assert_eq!(e.exit_code(), 141);
+        assert!(e.quiet());
+        assert!(e.message().is_empty());
+
+        let e = stdout_error(io::Error::other("no space left on device"));
+        assert_eq!(e.exit_code(), 1);
+        assert!(!e.quiet());
+        assert!(e.message().contains("could not write to stdout"));
     }
 
     #[test]

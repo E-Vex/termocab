@@ -4,7 +4,7 @@
 //! effects are exercised exactly as a user would see them. No test
 //! crate — std::process::Command plus temp dirs.
 
-use std::io::Write;
+use std::io::{BufRead, BufReader, Write};
 use std::path::PathBuf;
 use std::process::{Command, Output, Stdio};
 use std::sync::atomic::{AtomicUsize, Ordering};
@@ -454,4 +454,61 @@ fn review_flows_end_to_end() {
     cmd.args(["review", "test"]);
     let out = feed(&mut cmd, "");
     assert!(stdout(&out).contains("no cards due today"));
+}
+
+/// The reported crash: `termocab list-words french | head -2` used to
+/// panic with "failed printing to stdout: Broken pipe". It must end the
+/// way cat and git do — nothing on stderr, exit 141 (D6).
+///
+/// The course is deliberately far bigger than a pipe buffer (64 KiB),
+/// so the child is guaranteed to still be writing when the read end
+/// closes: the broken pipe is forced, not raced for.
+#[test]
+fn broken_pipe_is_silent_and_exits_141_like_cat_and_git() {
+    let scratch = Scratch::new("epipe");
+
+    // 4000 words -> ~250 KiB of list-words output, well past the buffer
+    let mut vocabulary = String::new();
+    let mut exercises = String::new();
+    for i in 0..4000 {
+        vocabulary.push_str(&format!(
+            r#"{{ "word": "mot{i}", "translation": "t{i}", "pos": "x", "example": "mot{i}" }},"#
+        ));
+        if i == 0 {
+            exercises.push_str(r#"{ "type": "translation", "prompt": "mot0", "answer": "t0" }"#);
+        }
+    }
+    vocabulary.pop(); // trailing comma
+    let course = format!(
+        r#"{{ "language": "test", "stages": [
+             {{ "id": 1, "title": "Big", "level_hint": "beginner",
+                "vocabulary": [{vocabulary}], "exercises": [{exercises}] }}
+           ] }}"#
+    );
+    let file = scratch.stages_file("big.json", &course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    let mut child = termocab(&scratch)
+        .args(["list-words", "test"])
+        .stdout(Stdio::piped())
+        .stderr(Stdio::piped())
+        .spawn()
+        .expect("spawn list-words");
+    let mut reader = BufReader::new(child.stdout.take().expect("piped stdout"));
+    let mut first_line = String::new();
+    reader.read_line(&mut first_line).expect("read a line");
+    assert!(first_line.contains("Stage 1"));
+    drop(reader); // close the pipe: `head` exiting, from the child's view
+
+    let out = child.wait_with_output().expect("wait for list-words");
+    assert_eq!(out.status.code(), Some(141), "exit code like cat and git");
+    let err = stderr(&out);
+    assert!(
+        err.is_empty(),
+        "a broken pipe is silent, stderr said: {err}"
+    );
 }
