@@ -3,7 +3,9 @@
 //! No CLI-parsing crate: with eight verbs and one optional flag, a match
 //! over the argument list is clearer than a dependency (§6 of the
 //! handoff). Verbs:
-//!   termocab start <lang> [stage]   run the next (or a given) stage
+//!   termocab start [--no-shuffle|--seed <n>] <lang> [stage]
+//!                                 run the next (or a given) stage —
+//!                                 exercises shuffle by default (D7)
 //!   termocab review <lang>          spaced-repetition review of due words
 //!   termocab list-words <lang>      all vocabulary in a language
 //!   termocab progress <lang>        completed stages + streak + due count
@@ -27,10 +29,11 @@ use crate::content;
 use crate::engine::Vocabulary;
 use crate::lang::LangId;
 use crate::progress::LanguageProgress;
-use crate::session::{self, StdioTerminal};
+use crate::session::{self, ExerciseOrder, RunOptions, StdioTerminal};
 use crate::storage;
 use std::io::{self, Write};
 use std::path::{Path, PathBuf};
+use std::time::{SystemTime, UNIX_EPOCH};
 
 const USAGE: &str = "\
 termocab — language learning for terminal enthusiasts
@@ -38,7 +41,9 @@ termocab — language learning for terminal enthusiasts
 usage: termocab <command> [args]
 
 commands:
-  start <lang> [stage]     run the next uncompleted stage (or a specific one)
+  start [--no-shuffle|--seed <n>] <lang> [stage]
+                            run the next uncompleted stage (or a specific one);
+                            exercises shuffle by default (D7)
   review <lang>            review due vocabulary with spaced repetition
   list-words <lang>         list all vocabulary in a language's stages
   progress <lang>           show completed stages, streak and due reviews
@@ -113,6 +118,73 @@ fn stdout_error(e: io::Error) -> CliError {
         io::ErrorKind::BrokenPipe => CliError::BrokenPipe,
         _ => runtime(format!("could not write to stdout: {e}")),
     }
+}
+
+/// Extracts `--no-shuffle` / `--seed <n>` from a `start` argument list
+/// (any position, like add-lang's `--force`) and returns the exercise
+/// order plus the remaining positional arguments. Unknown `--` options
+/// are usage errors rather than being eaten as language names. Without
+/// either flag the exercises shuffle under a fresh OS seed — the
+/// default the review asked for (D7).
+fn parse_order_flags(rest: &[String]) -> Result<(ExerciseOrder, Vec<String>), CliError> {
+    const USAGE_LINE: &str = "usage: termocab start [--no-shuffle|--seed <n>] <lang> [stage]";
+    let mut positional = Vec::new();
+    let mut order: Option<ExerciseOrder> = None;
+    let mut i = 0;
+    while i < rest.len() {
+        match rest[i].as_str() {
+            "--no-shuffle" => {
+                if order.is_some() {
+                    return Err(usage(format!(
+                        "--no-shuffle and --seed say opposite things\n{USAGE_LINE}"
+                    )));
+                }
+                order = Some(ExerciseOrder::InOrder);
+            }
+            "--seed" => {
+                let Some(value) = rest.get(i + 1) else {
+                    return Err(usage(format!(
+                        "'--seed' needs a number: --seed <n>\n{USAGE_LINE}"
+                    )));
+                };
+                let seed = value.parse::<u64>().map_err(|_| {
+                    usage(format!(
+                        "--seed wants a number, not {value:?}\n{USAGE_LINE}"
+                    ))
+                })?;
+                if order.is_some() {
+                    return Err(usage(format!(
+                        "--no-shuffle and --seed say opposite things\n{USAGE_LINE}"
+                    )));
+                }
+                order = Some(ExerciseOrder::Shuffled(seed));
+                i += 1; // the seed value is consumed, not positional
+            }
+            other if other.starts_with("--") => {
+                return Err(usage(format!("unknown option: {other}\n{USAGE_LINE}")));
+            }
+            other => positional.push(other.to_string()),
+        }
+        i += 1;
+    }
+    Ok((
+        order.unwrap_or_else(|| ExerciseOrder::Shuffled(os_seed())),
+        positional,
+    ))
+}
+
+/// A fresh shuffle seed from the operating system: nanoseconds from
+/// the system clock mixed with the process id. Not cryptographic —
+/// just different on every run, which is all a vocabulary shuffle
+/// needs. Lives here, at the CLI edge and unwitnessed by tests, for
+/// the same reason the wall clock does; the session layer stays pure
+/// and takes the seed as a value (D7).
+fn os_seed() -> u64 {
+    let nanos = SystemTime::now()
+        .duration_since(UNIX_EPOCH)
+        .map(|d| d.as_nanos() as u64)
+        .unwrap_or(0);
+    nanos ^ (u64::from(std::process::id()) << 32)
 }
 
 /// Candidate content directories, in lookup order — the first one that
@@ -274,16 +346,22 @@ fn parse_lang(raw: &str) -> Result<LangId, CliError> {
     LangId::parse(raw).map_err(|reason| usage(format!("invalid language name: {reason}")))
 }
 
-/// start <lang> [stage] — run the next uncompleted stage, or a chosen
-/// one. Records progress on pass. There is no placement system yet, so
-/// every learner starts at Stage 1 (documented in the handoff, §9).
-/// Stages unlock strictly in order: an explicit stage number may only be
-/// a completed stage (replay) or the next uncompleted one (review item 7
-/// / decision D4 — the original spec's unlock condition, now enforced).
+/// start [--no-shuffle | --seed <n>] <lang> [stage] — run the next
+/// uncompleted stage, or a chosen one. Records progress on pass. There
+/// is no placement system yet, so every learner starts at Stage 1
+/// (documented in the handoff, §9). Stages unlock strictly in order: an
+/// explicit stage number may only be a completed stage (replay) or the
+/// next uncompleted one (review item 7 / decision D4 — the original
+/// spec's unlock condition, now enforced).
+///
+/// Exercises shuffle on every run by default — positions are not
+/// vocabulary (D7). `--no-shuffle` keeps the authored order;
+/// `--seed <n>` pins the order for reproducible runs and tests.
 fn start(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
+    let (order, rest) = parse_order_flags(rest)?;
     if rest.is_empty() || rest.len() > 2 {
         return Err(usage(
-            "'start' takes a language and an optional stage number\nusage: termocab start <lang> [stage]",
+            "'start' takes a language and an optional stage number, plus --no-shuffle or --seed <n>\nusage: termocab start [--no-shuffle|--seed <n>] <lang> [stage]",
         ));
     }
     let lang = parse_lang(&rest[0])?;
@@ -337,8 +415,9 @@ fn start(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
     // A run that dies on a closed stdout is aborted the same way (D6).
     let stage_was_done = prog.is_stage_completed(stage.id);
     let day_was_recorded = prog.is_active_day(&today);
-    let outcome =
-        session::run_and_record(&mut term, stage, &mut prog, &today).map_err(stdout_error)?;
+    let opts = RunOptions { order };
+    let outcome = session::run_and_record(&mut term, stage, &mut prog, &today, &opts)
+        .map_err(stdout_error)?;
     let changed = outcome.passed() && !(stage_was_done && day_was_recorded);
     if changed {
         storage::save(&root, &lang, &prog).map_err(|e| runtime(e.to_string()))?;
@@ -631,7 +710,10 @@ mod tests {
                 "termocab add-lang [--force] <lang> <file>",
             ),
             (vec!["check", "a.json", "b.json"], "termocab check <file>"),
-            (vec!["start"], "termocab start <lang> [stage]"),
+            (
+                vec!["start"],
+                "termocab start [--no-shuffle|--seed <n>] <lang> [stage]",
+            ),
         ] {
             let err = run(&args(&cmd_line)).unwrap_err();
             assert_eq!(err.exit_code(), 2, "{cmd_line:?}");
@@ -670,6 +752,47 @@ mod tests {
         assert_eq!(e.exit_code(), 1);
         assert!(!e.quiet());
         assert!(e.message().contains("could not write to stdout"));
+    }
+
+    #[test]
+    fn order_flags_parse_in_any_position() {
+        let args = |list: &[&str]| list.iter().map(|s| s.to_string()).collect::<Vec<_>>();
+
+        // --no-shuffle alone, before or after the positionals
+        let (order, rest) = parse_order_flags(&args(&["--no-shuffle", "french"])).unwrap();
+        assert_eq!(order, ExerciseOrder::InOrder);
+        assert_eq!(rest, vec!["french".to_string()]);
+        let (order, rest) = parse_order_flags(&args(&["french", "2", "--no-shuffle"])).unwrap();
+        assert_eq!(order, ExerciseOrder::InOrder);
+        assert_eq!(rest, vec!["french".to_string(), "2".to_string()]);
+
+        // --seed consumes its value, wherever both sit
+        let (order, rest) = parse_order_flags(&args(&["--seed", "42", "french", "1"])).unwrap();
+        assert_eq!(order, ExerciseOrder::Shuffled(42));
+        assert_eq!(rest, vec!["french".to_string(), "1".to_string()]);
+        let (order, rest) = parse_order_flags(&args(&["french", "--seed", "7", "1"])).unwrap();
+        assert_eq!(order, ExerciseOrder::Shuffled(7));
+        assert_eq!(rest, vec!["french".to_string(), "1".to_string()]);
+    }
+
+    #[test]
+    fn order_flags_reject_the_wrong_and_the_unknown() {
+        let args = |list: &[&str]| list.iter().map(|s| s.to_string()).collect::<Vec<_>>();
+
+        for bad in [
+            vec!["--no-shuffle", "--seed", "1", "french"], // opposite asks
+            vec!["french", "--seed"],                      // value missing
+            vec!["french", "--seed", "abc"],               // not a number
+            vec!["french", "--shuffel"],                   // typo, not eaten silently
+        ] {
+            let err = parse_order_flags(&args(&bad)).unwrap_err();
+            assert_eq!(err.exit_code(), 2, "{bad:?}");
+            assert!(
+                err.message().contains("termocab start"),
+                "{bad:?}: {}",
+                err.message()
+            );
+        }
     }
 
     #[test]

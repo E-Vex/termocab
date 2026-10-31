@@ -503,6 +503,99 @@ fn review_accepts_listed_alternative_translations() {
         .contains("word salut box 2"));
 }
 
+/// A three-exercise stage with distinct prompts and one shared answer,
+/// so exercise order is observable while correctness is not.
+fn three_prompt_course() -> String {
+    r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Only", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "alpha", "translation": "a", "pos": "x", "example": "alpha" }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "one", "answer": "a" },
+              { "type": "translation", "prompt": "two", "answer": "a" },
+              { "type": "translation", "prompt": "three", "answer": "a" }
+            ] }
+       ] }"#
+        .to_string()
+}
+
+/// D7: same seed, same exercise order — `--seed N` is the reproducible
+/// mode (and the mode tests can assert on). The second run is a replay
+/// of the completed stage, which is always allowed.
+#[test]
+fn same_seed_replays_the_same_exercise_order() {
+    let scratch = Scratch::new("seed");
+    let file = scratch.stages_file("course.json", &three_prompt_course());
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    let run = || {
+        let mut cmd = termocab(&scratch);
+        cmd.args(["start", "--seed", "7", "test", "1"]);
+        let out = feed(&mut cmd, "a\na\na\n");
+        assert!(out.status.success(), "{}", stderr(&out));
+        assert!(stdout(&out).contains("stage complete"));
+        stdout(&out)
+            .lines()
+            .filter(|l| l.contains("/3]"))
+            .map(String::from)
+            .collect::<Vec<_>>()
+    };
+
+    let first = run();
+    let second = run();
+    assert_eq!(first, second, "same seed must give the same order");
+    assert_eq!(first.len(), 3, "all three exercises ran: {first:?}");
+}
+
+/// D7: --no-shuffle keeps the authored order, exercise for exercise.
+#[test]
+fn no_shuffle_keeps_the_authored_order() {
+    let scratch = Scratch::new("noshuffle");
+    let file = scratch.stages_file("course.json", &three_prompt_course());
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "--no-shuffle", "test"]);
+    let out = feed(&mut cmd, "a\na\na\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    let asked: Vec<&str> = text.lines().filter(|l| l.contains("/3]")).collect();
+    assert_eq!(
+        asked,
+        vec!["[Only — 1/3] one", "[Only — 2/3] two", "[Only — 3/3] three"]
+    );
+}
+
+/// D7: a bad flag combination is a usage error, exit 2 — not a
+/// language-name lookup, and not a silent accept.
+#[test]
+fn start_rejects_bad_order_flags_as_usage_errors() {
+    let scratch = Scratch::new("badflags");
+    for args in [
+        vec!["start", "test", "--shuffel"],
+        vec!["start", "test", "--seed", "abc"],
+        vec!["start", "test", "--seed"],
+        vec!["start", "--no-shuffle", "--seed", "1", "test"],
+    ] {
+        let out = termocab(&scratch).args(&args).output().unwrap();
+        assert_eq!(out.status.code(), Some(2), "{args:?}");
+        assert!(
+            stderr(&out).contains("termocab start"),
+            "{args:?}: {}",
+            stderr(&out)
+        );
+    }
+}
+
 /// The reported crash: `termocab list-words french | head -2` used to
 /// panic with "failed printing to stdout: Broken pipe". It must end the
 /// way cat and git do — nothing on stderr, exit 141 (D6).

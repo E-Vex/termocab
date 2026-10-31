@@ -34,6 +34,71 @@ pub struct ReviewOutcome {
     pub correct: usize,
 }
 
+/// Exercise order for a stage run (decision D7).
+///
+/// Learners memorize positions, not words, when every run presents the
+/// same sequence — so stages shuffle by default. A named seed makes
+/// the order reproducible (`--seed N`, for tests and for comparing two
+/// runs); `InOrder` is the authored content order (`--no-shuffle`).
+/// Reviews are deliberately not shuffled: their order follows due
+/// dates and stays deterministic (§7).
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum ExerciseOrder {
+    /// Content order, exactly as authored.
+    InOrder,
+    /// Fisher–Yates under this seed — same seed, same order.
+    Shuffled(u64),
+}
+
+/// How a session presents a stage: the exercise order. Resolved at the
+/// CLI edge (flags, OS seed) and injected here, so the runner stays
+/// pure and testable against a fixed order.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub struct RunOptions {
+    pub order: ExerciseOrder,
+}
+
+impl Default for RunOptions {
+    /// The shape tests script against: authored order.
+    fn default() -> Self {
+        Self {
+            order: ExerciseOrder::InOrder,
+        }
+    }
+}
+
+/// Shuffles `items` with Fisher–Yates, driven by a SplitMix64
+/// generator — 11 lines of std-only code, which is the whole reason
+/// it exists instead of a `rand` dependency (§6). Deterministic per
+/// seed, which is what `--seed N` promises. The modulo bias for n
+/// items is n/2^64 — beyond irrelevant at vocabulary sizes.
+fn shuffle<T>(items: &mut [T], seed: u64) {
+    let mut state = seed;
+    for i in (1..items.len()).rev() {
+        let j = (splitmix64(&mut state) % (i as u64 + 1)) as usize;
+        items.swap(i, j);
+    }
+}
+
+/// SplitMix64: one step, one well-spread value.
+fn splitmix64(state: &mut u64) -> u64 {
+    *state = state.wrapping_add(0x9E37_79B9_7F4A_7C15);
+    let mut z = *state;
+    z = (z ^ (z >> 30)).wrapping_mul(0xBF58_476D_1CE4_E5B9);
+    z = (z ^ (z >> 27)).wrapping_mul(0x94D0_49BB_1331_11EB);
+    z ^ (z >> 31)
+}
+
+/// The order exercises are presented in for a run: either the
+/// authored sequence or its seeded permutation.
+fn exercise_sequence(total: usize, order: ExerciseOrder) -> Vec<usize> {
+    let mut sequence: Vec<usize> = (0..total).collect();
+    if let ExerciseOrder::Shuffled(seed) = order {
+        shuffle(&mut sequence, seed);
+    }
+    sequence
+}
+
 /// One line of user input, or why there is not one. EOF (the learner
 /// pressed Ctrl-D) and unreadable input (invalid UTF-8, an I/O error)
 /// are distinct on purpose: the runner reports them differently instead
@@ -135,19 +200,26 @@ fn letter_index(c: char) -> Option<usize> {
     }
 }
 
-/// Runs every exercise in the stage once, in order, then reports the
-/// outcome. Pure with respect to storage: the caller decides what to do
-/// with the result. Fails when the terminal goes away mid-run (a closed
-/// stdout is a broken pipe, D6) — an aborted run reports no outcome.
-pub fn run_stage<T: Terminal>(term: &mut T, stage: &Stage) -> Result<Outcome, io::Error> {
+/// Runs every exercise in the stage once — in [`RunOptions`] order —
+/// then reports the outcome. Pure with respect to storage: the caller
+/// decides what to do with the result. Fails when the terminal goes
+/// away mid-run (a closed stdout is a broken pipe, D6) — an aborted
+/// run reports no outcome.
+pub fn run_stage<T: Terminal>(
+    term: &mut T,
+    stage: &Stage,
+    opts: &RunOptions,
+) -> Result<Outcome, io::Error> {
     let total = stage.exercises.len();
+    let sequence = exercise_sequence(total, opts.order);
     let mut correct = 0usize;
     term.print(&format!("— Stage {}: {} —", stage.id, stage.title))?;
     term.print(&format!(
         "{total} exercise(s). Answer each, then press Enter."
     ))?;
 
-    for (i, exercise) in stage.exercises.iter().enumerate() {
+    for (i, &n) in sequence.iter().enumerate() {
+        let exercise = &stage.exercises[n];
         term.print("")?;
         term.print(&render(&stage.title, i + 1, total, exercise))?;
         let answer = match term.read_line() {
@@ -203,8 +275,9 @@ pub fn run_and_record<T: Terminal>(
     stage: &Stage,
     progress: &mut LanguageProgress,
     today: &str,
+    opts: &RunOptions,
 ) -> Result<Outcome, io::Error> {
-    let outcome = run_stage(term, stage)?;
+    let outcome = run_stage(term, stage, opts)?;
     if let Outcome::Passed { .. } = outcome {
         progress.record_stage_completion(stage.id, today);
     }
@@ -401,7 +474,14 @@ mod tests {
     fn all_correct_passes_and_records() {
         let mut p = LanguageProgress::new();
         let mut t = Scripted::new(&["I am a student", "b", "bonjour", "suis"]);
-        let out = run_and_record(&mut t, &fixture_stage(), &mut p, "2026-08-22").unwrap();
+        let out = run_and_record(
+            &mut t,
+            &fixture_stage(),
+            &mut p,
+            "2026-08-22",
+            &RunOptions::default(),
+        )
+        .unwrap();
         assert_eq!(
             out,
             Outcome::Passed {
@@ -416,7 +496,7 @@ mod tests {
     #[test]
     fn grading_is_case_insensitive() {
         let mut t = Scripted::new(&["i AM a student", "b", "  bonjour  ", "SUIS"]);
-        let out = run_stage(&mut t, &fixture_stage()).unwrap();
+        let out = run_stage(&mut t, &fixture_stage(), &RunOptions::default()).unwrap();
         assert_eq!(
             out,
             Outcome::Passed {
@@ -430,7 +510,7 @@ mod tests {
     fn three_of_four_is_below_the_bar() {
         // 3/4 = 75% — just under the 80% bar.
         let mut t = Scripted::new(&["wrong", "b", "bonjour", "suis"]);
-        let out = run_stage(&mut t, &fixture_stage()).unwrap();
+        let out = run_stage(&mut t, &fixture_stage(), &RunOptions::default()).unwrap();
         assert_eq!(
             out,
             Outcome::Failed {
@@ -443,7 +523,7 @@ mod tests {
     #[test]
     fn letter_answers_resolve_to_options() {
         let mut t = Scripted::new(&["I am a student", "bonjour", "bonjour", "suis"]);
-        let out = run_stage(&mut t, &fixture_stage()).unwrap();
+        let out = run_stage(&mut t, &fixture_stage(), &RunOptions::default()).unwrap();
         assert_eq!(
             out,
             Outcome::Passed {
@@ -456,7 +536,7 @@ mod tests {
     #[test]
     fn feedback_shows_expected_answer() {
         let mut t = Scripted::new(&["nope", "b", "bonjour", "suis"]);
-        run_stage(&mut t, &fixture_stage()).unwrap();
+        run_stage(&mut t, &fixture_stage(), &RunOptions::default()).unwrap();
         assert!(t
             .printed
             .iter()
@@ -480,7 +560,7 @@ mod tests {
             }],
         };
         let mut t = Scripted::new(&["etudiant"]);
-        let out = run_stage(&mut t, &stage).unwrap();
+        let out = run_stage(&mut t, &stage, &RunOptions::default()).unwrap();
         assert_eq!(
             out,
             Outcome::Passed {
@@ -578,7 +658,7 @@ mod tests {
             Input::Line("I am a student".into()),
             Input::Unreadable("stream did not contain valid UTF-8".into()),
         ]);
-        let out = run_stage(&mut t, &fixture_stage()).unwrap();
+        let out = run_stage(&mut t, &fixture_stage(), &RunOptions::default()).unwrap();
         assert_eq!(
             out,
             Outcome::Failed {
@@ -662,7 +742,14 @@ mod tests {
         // exercise print fails and the whole run unwinds as an error.
         let mut p = LanguageProgress::new();
         let mut t = ClosedPipe { prints_left: 2 };
-        let err = run_and_record(&mut t, &fixture_stage(), &mut p, "2026-08-22").unwrap_err();
+        let err = run_and_record(
+            &mut t,
+            &fixture_stage(),
+            &mut p,
+            "2026-08-22",
+            &RunOptions::default(),
+        )
+        .unwrap_err();
         assert_eq!(err.kind(), io::ErrorKind::BrokenPipe);
         // an aborted run is not a completed stage — nothing was saved
         assert!(!p.is_stage_completed(1));
@@ -684,5 +771,90 @@ mod tests {
         // state — the cards are still due today, untouched
         assert_eq!(srs.due_on("2026-10-30").len(), 2);
         assert_eq!(card_of(&srs, "bonjour").box_number, 1);
+    }
+
+    /// A stage whose every exercise answers to the same word, with
+    /// distinct prompts — order is observable, correctness is not.
+    fn uniform_stage(n: usize) -> Stage {
+        Stage {
+            id: 1,
+            title: "Uniform".into(),
+            level_hint: "beginner".into(),
+            vocabulary: vec![],
+            exercises: (0..n)
+                .map(|i| Exercise::Translation {
+                    prompt: format!("prompt {i}"),
+                    answer: "a".into(),
+                    accepted_answers: vec![],
+                })
+                .collect(),
+        }
+    }
+
+    #[test]
+    fn shuffle_runs_every_exercise_exactly_once() {
+        // Whatever the seed, the run still asks all 6 exercises — same
+        // multiset of prompts, just a different order (D7).
+        let opts = RunOptions {
+            order: ExerciseOrder::Shuffled(42),
+        };
+        let mut t = Scripted::new(&["a", "a", "a", "a", "a", "a"]);
+        let out = run_stage(&mut t, &uniform_stage(6), &opts).unwrap();
+        assert_eq!(
+            out,
+            Outcome::Passed {
+                correct: 6,
+                total: 6
+            }
+        );
+        // sorted as multisets: same six prompts, whatever the order
+        let mut asked: Vec<usize> = t
+            .printed
+            .iter()
+            .filter(|l| l.contains("[Uniform — "))
+            .map(|l| {
+                l.rsplit("prompt ")
+                    .next()
+                    .and_then(|n| n.parse::<usize>().ok())
+                    .expect("a numbered prompt line")
+            })
+            .collect();
+        asked.sort();
+        assert_eq!(asked, (0..6).collect::<Vec<_>>());
+        // and the seed really shuffled for this run: not the authored order
+        let asked_in_order: Vec<String> = t
+            .printed
+            .iter()
+            .filter(|l| l.contains("[Uniform — "))
+            .cloned()
+            .collect();
+        let authored: Vec<String> = (1..=6)
+            .map(|i| format!("[Uniform — {i}/6] prompt {}", i - 1))
+            .collect();
+        assert_ne!(asked_in_order, authored);
+    }
+
+    #[test]
+    fn same_seed_same_order_and_some_seed_moves_something() {
+        // determinism: one seed, two runs, identical sequence
+        let a = exercise_sequence(8, ExerciseOrder::Shuffled(7));
+        let b = exercise_sequence(8, ExerciseOrder::Shuffled(7));
+        assert_eq!(a, b);
+
+        // a permutation, always: same elements, none lost
+        let mut sorted = a.clone();
+        sorted.sort();
+        assert_eq!(sorted, (0..8).collect::<Vec<_>>());
+
+        // and among a handful of seeds at least one order differs from
+        // the authored one — the point of shuffling (D7)
+        let identity = (0..8).collect::<Vec<_>>();
+        assert!((1..=10).any(|s| exercise_sequence(8, ExerciseOrder::Shuffled(s)) != identity));
+
+        // in-order is the authored sequence, untouched
+        assert_eq!(
+            exercise_sequence(8, ExerciseOrder::InOrder),
+            (0..8).collect::<Vec<_>>()
+        );
     }
 }
