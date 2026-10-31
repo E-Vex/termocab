@@ -30,20 +30,29 @@ Progress and review state live under `$XDG_CONFIG_HOME/termocab`
 ## Commands
 
 ```
-termocab start <lang> [stage]     run the next uncompleted stage (or a specific one)
+termocab start [--no-shuffle|--seed <n>] <lang> [stage]
+                              run the next uncompleted stage (or a specific one);
+                              exercises shuffle by default
 termocab review <lang>            review due vocabulary with spaced repetition
 termocab list-words <lang>        list all vocabulary in a language's stages
 termocab progress <lang>          show completed stages, streak and due reviews
 termocab streak <lang>            print the current streak in days
+termocab stats <lang>             words, Leitner boxes and 14-day charts as sparklines
 termocab add-lang [--force] <lang> <file>  install a stages.json file as a language
 termocab check <file>             validate a stages.json file without installing it
 termocab help                     show this help
 ```
 
-Exit codes follow git: 0 success, 1 runtime failure, 2 usage error.
+Exit codes follow git: 0 success, 1 runtime failure, 2 usage error —
+and a closed stdout (a broken pipe, `termocab list-words french |
+head`) ends quietly with 141, exactly like cat and git.
 Stages unlock in order (a completed stage can be replayed anytime).
 A stage is passed at ≥ 80% correct in one run; reviews use Leitner boxes
 with 1/2/4/8/16/32-day intervals.
+
+Feedback prints green for correct and red for not-quite when stdout is
+a terminal; pipes and files always stay plain, and `$NO_COLOR` disables
+color everywhere (no-color.org).
 
 ## Content format
 
@@ -58,6 +67,7 @@ full example and `HANDOFF.md` §5 for the rules. Quick sketch:
       "id": 1, "title": "Greetings and Basics", "level_hint": "beginner",
       "vocabulary": [
         { "word": "bonjour", "translation": "hello",
+          "accepted_translations": ["hi", "good morning"],
           "pos": "interjection", "example": "Bonjour, comment ça va ?" }
       ],
       "exercises": [
@@ -75,8 +85,10 @@ full example and `HANDOFF.md` §5 for the rules. Quick sketch:
 
 Grading forgives case, whitespace, edge punctuation and missing accents
 (an accent-only miss counts as correct and shows the accented form);
-`accepted_answers` lists alternative correct spellings. Validate a file
-before installing it:
+`accepted_answers` lists alternative correct spellings, and
+`accepted_translations` on a vocabulary entry lists alternative correct
+translations a review will accept — reviewing `salut` with "hello" is
+right, not wrong. Validate a file before installing it:
 
 ```
 termocab check my-language.json

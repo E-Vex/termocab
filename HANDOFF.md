@@ -1,6 +1,6 @@
 # HANDOFF — termocab
 
-> This document is written for an AI coding agent taking over full development of **termocab**. It consolidates every decision made during the planning/bootstrap phase (Aug 2026), the MVP implementation session (Oct 2026), and the review-fix session (Oct 2026) so no prior conversation context is needed to continue the project. **The repository itself is the source of truth** — if anything here conflicts with what you find in the actual code, trust the code, and update this file to match.
+> This document is written for an AI coding agent taking over full development of **termocab**. It consolidates every decision made during the planning/bootstrap phase (Aug 2026), the MVP implementation session (Oct 2026), the review-fix session (Oct 2026), and the usage-review session (Oct 2026) so no prior conversation context is needed to continue the project. **The repository itself is the source of truth** — if anything here conflicts with what you find in the actual code, trust the code, and update this file to match.
 
 ## 1. What this is
 
@@ -21,6 +21,8 @@ The MVP described in §8 is **implemented and verified**: engine grading, progre
 The **SRS layer (§8a) is implemented and verified** (Oct 2026): Leitner-box scheduling, plain-text persistence, a `review` verb, and a due-count line in `progress`.
 
 The **review-fix session (Oct 2026)** hardened everything: content validation at load time, the `LangId` newtype (no path traversal), exact CLI arities, XDG-based content installation, real local time from the system timezone, forgiving grading with `accepted_answers`, enforced stage ordering, `--force` for `add-lang`, a `check` verb, CI, MIT license, README — and replaced the sample fixture with a real five-stage French course (73 words, 177 exercises).
+
+The **usage-review session (Oct 2026)** closed the loop on real usage: broken pipes end quietly like cat and git (D6), reviews accept alternative translations via `accepted_translations` (D8), stage exercises shuffle by default with `--no-shuffle`/`--seed <n>` (D7), feedback turns green/red on a terminal behind `$NO_COLOR`, and a `stats` verb charts boxes, review load and activity as plain-text sparklines.
 
 ```
 termocab/
@@ -57,7 +59,7 @@ termocab/
     └── testenv.rs          # #[cfg(test)]-only: shared env lock + RAII temp dirs
 ```
 
-Verified: `cargo build` warning-free, `cargo clippy --all-targets -- -D warnings` clean, `cargo test` green (79 unit + 15 binary-level integration tests), and a scripted playthrough of the full French course passes end to end (5/5 stages, streak, replay, 73-card review). CI (§11) runs all of it on ubuntu and macOS.
+Verified: `cargo build` warning-free, `cargo clippy --all-targets -- -D warnings` clean, `cargo test` green (93 unit + 22 binary-level integration tests), and a scripted playthrough of the full French course passes end to end (5/5 stages, streak, replay, 73-card review). CI (§11) runs all of it on ubuntu and macOS.
 
 ## 3. Architecture — read this before writing any code
 
@@ -92,6 +94,10 @@ pub struct Stage {
 pub struct Vocabulary {
     pub word: String,
     pub translation: String,
+    /// Alternative correct translations for review — "salut" is "hi"
+    /// but "hello" must not be wrong (D8). Same pattern as
+    /// accepted_answers on exercises.
+    pub accepted_translations: Vec<String>,
     pub pos: String,
     pub example: String,
 }
@@ -127,7 +133,7 @@ Rules (classic Leitner, all in `srs/`, all pure):
 - `due_on(date)`: overdue plus due-today, alphabetical word order (deterministic sessions).
 - Dates arrive as opaque strings; `add_days`/`valid_date` (Hinnant civil-date math, owned, no time crate) live here for the same reason `prev_day` lives in `progress/`.
 
-Review grading reuses the engine: `session/` builds an `Exercise::Translation` per due card, so reviews share the exact normalization table (accent hint included) with stage exercises. A card whose word vanished from the loaded content is skipped untouched (see §9).
+Review grading reuses the engine: `session/` builds an `Exercise::Translation` per due card, passing the vocabulary entry's `accepted_translations` as the exercise's `accepted_answers` (D8), so reviews share the exact normalization table (accent hint included) with stage exercises. A card whose word vanished from the loaded content is skipped untouched (see §9).
 
 ## 5. `stages.json` content format
 
@@ -159,7 +165,7 @@ Rules:
 - `vocabulary` and `exercises` are **separate arrays**, never merged per-word.
 - `level_hint` exists now (always `"beginner"` today) to avoid restructuring the file when higher levels are added later.
 - `type` is the discriminator, exactly 3 values: `translation`, `multiple_choice`, `fill_blank`, handled by `#[serde(tag = "type", rename_all = "snake_case")]` in `content/mod.rs`.
-- `accepted_answers` is optional on `translation` and `fill_blank`; absent = only `answer` counts.
+- `accepted_answers` is optional on `translation` and `fill_blank`; absent = only `answer` counts. `accepted_translations` is the same field on vocabulary entries (D8): optional, absent = only `translation` counts; entries must be non-empty.
 - All stages for a language currently live in one JSON file.
 
 **Content validation** (settled in the review-fix session): `content::load_language` validates every file at load time and reports **all** violations at once. A file must have: at least one stage; stage ids unique and strictly ascending in file order; ≥ 1 exercise per stage (an empty stage can never be completed and would block the learner forever); multiple choice with 2–26 unique options and the answer among them; non-empty `prompt`/`answer`/`word`/`translation`; a `language` field that matches the name the file is loaded as; fill-blank prompts containing `___`; non-empty `accepted_answers` entries. `add-lang` prints the full violation list and installs nothing; `termocab check <file>` runs the same validator on any file without installing it.
@@ -181,7 +187,6 @@ Rules:
 - **A review session with at least one answered card records an active day** — the streak stays alive through reviews, not just new stages.
 - No `ncurses`/TUI in MVP — plain CLI text output only.
 - Exactly 3 exercise types for MVP: translation, multiple_choice, fill_blank.
-- CLI is git-style direct subcommands only, named **start**, **review**, **list-words**, **progress**, **streak**, **add-lang** (with `--force` to replace an existing language), **check**, **help**. No interactive/numbered-menu mode anywhere. Exit codes: 2 usage, 1 runtime, 0 success.
 - Stage completion rule: **≥ 80% of exercises correct in one run**. A stage with 6 exercises passes at 5 correct; 4/6 fails.
 - **Stages unlock in order** (review D4, the original spec's rule, now enforced): `start <lang> <n>` is allowed only when stage n is already completed (replay) or is the next uncompleted stage; anything else exits 1 with "complete stage X first".
 - Saving is change-driven: a failed or aborted run writes nothing, and a passed replay on an already-recorded day rewrites nothing. Reviews always save the srs state when a card was answered, but rewrite the progress file only when the day is new.
@@ -192,6 +197,11 @@ Rules:
 - Grading (review D1): the normalization + `accepted_answers` rules of §4, with the accent-only mismatch counted correct plus a hint. Multiple choice accepts a letter (`b`) or the word itself.
 - **Local time** (review D3): read from the system's own TZif file by `cli/time.rs` — no time crate, no libc; `$TZ` (name, absolute path, or empty = UTC) and `/etc/localtime` are honored, DST included, UTC on any parse failure. The old `TZHOURS` override is gone. Handlers take a `Clock`; tests inject fixed dates, never the wall clock.
 - License: **MIT** (review D5).
+- **Broken pipe** (usage-review D6): a closed stdout ends the run **silently with exit code 141** (128 + SIGPIPE), exactly what cat and git report — never a panic. Every stdout write is checked (`cli::say`, `Terminal::print -> io::Result`), an aborted session saves nothing, and EPIPE is distinguished from real write errors (which stay runtime failures, exit 1). Re-raising the actual signal would need unsafe libc calls, which §6 rules out; 141 is what the shell reports either way.
+- **Shuffled stage exercises** (usage-review D7): stages present their exercises in a seeded-shuffled order by default — memorizing positions is not vocabulary. `--no-shuffle` keeps the authored order; `--seed <n>` pins the order (reproducible runs, tests, comparisons). The permutation is a hand-written Fisher–Yates over SplitMix64 (no `rand`, §6); the seed defaults to OS entropy (nanos ^ pid) resolved at the CLI edge, like the clock. Reviews are deliberately **not** shuffled: due-date order is the documented deterministic order.
+- **Alternative translations in review** (usage-review D8): vocabulary entries take an optional `accepted_translations` array, the exact pattern of `accepted_answers` on exercises — a review of `salut` accepts both "hi" and "hello", through the same forgiving grading (case, accents, punctuation) as the primary translation. `list-words` shows the alternatives as `hi (also: hello)`.
+- **Color** (usage-review): session feedback is green (correct) / red (not quite) **only when stdout is a terminal** and `$NO_COLOR` is unset or empty (no-color.org, to the letter — empty does not count as set). Piped output never contains escape codes. Decided at the CLI edge (`std::io::IsTerminal`, no dependency), passed into the session as a value.
+- CLI is git-style direct subcommands only, named **start** (with `--no-shuffle`/`--seed <n>`, D7), **review**, **list-words**, **progress**, **streak**, **stats** (usage-review: boxes, 14-day review load and activity as plain-text Unicode sparklines, no color), **add-lang** (with `--force` to replace an existing language), **check**, **help**. No interactive/numbered-menu mode anywhere. Exit codes: 2 usage, 1 runtime, 0 success, 141 broken pipe (D6).
 
 ## 8. MVP scope — now implemented
 
@@ -203,8 +213,7 @@ Rules:
 
 **Explicitly out of scope for now** (don't build unless asked): audio, in-app AI, online accounts, achievements, SM-2/EF-style scheduling, ncurses TUI, SQLite.
 
-Known rough edges (fine to leave, fine to fix):
-- Broken pipe on `list-words | head` panics (Rust default SIGPIPE handling); cosmetic, noted in the Oct 2026 session.
+Known rough edges (fine to leave, fine to fix): none currently — the broken-pipe panic that used to live here is fixed (D6).
 
 ## 9. Remaining open questions
 
@@ -215,6 +224,8 @@ Known rough edges (fine to leave, fine to fix):
 - `cli/time.rs` covers `$TZ` names, absolute paths, empty-TZ and `/etc/localtime`; a POSIX TZ *string* (e.g. `EST5EDT,M3.2.0`) that has no zoneinfo file falls back to UTC. Fine until someone reports it.
 
 ## 10. Suggested next steps
+
+**Content is the product**: the engine, validator and installer are ready for far more than five stages — the usage review's standing priorities are (1) a second language to prove the engine is language-agnostic, and (2) growing French, since every new stage completion feeds the srs automatically. `check` + `add-lang` already make external authoring safe; a community "content packs" flow (a repo of stages.json files) is the natural evolution of those two verbs — decide the shape when a second author shows up.
 
 1. A second language to prove the engine is language-agnostic (`check` + `add-lang` make authoring easy).
 2. More French stages (each new completion feeds the srs automatically).
@@ -230,11 +241,14 @@ Every change should hold up against: Separation of Concerns, Single Responsibili
 
 ```
 cargo build          # warning-free
-cargo test           # 79 unit + 15 binary-level integration tests
+cargo test           # 93 unit + 22 binary-level integration tests
 cargo run            # prints usage
-cargo run -- start french       # play the next stage
+cargo run -- start french       # play the next stage (shuffled by default, D7)
+cargo run -- start --no-shuffle french 1   # authored exercise order
+cargo run -- start --seed 42 french 1      # reproducible order
 cargo run -- review french      # spaced-repetition review of due words
 cargo run -- progress french    # per-stage checkboxes + streak + due count
+cargo run -- stats french       # boxes + 14-day charts as sparklines
 cargo run -- list-words french
 cargo run -- streak french
 cargo run -- add-lang spanish ./spanish.json     # installs into the XDG data dir
