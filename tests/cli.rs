@@ -623,6 +623,54 @@ fn piped_output_stays_plain_even_with_color_available() {
     assert!(!stdout(&out).contains('\u{1b}'));
 }
 
+/// stats <lang>: the learner's numbers as plain-text sparklines. The
+/// fresh-learner shape (nothing scheduled) and the studied shape (one
+/// stage complete: 1 card in box 1, due today, active today).
+#[test]
+fn stats_reports_numbers_and_sparklines() {
+    let scratch = Scratch::new("stats");
+    install_course(&scratch);
+
+    // fresh learner: no cards yet, so the hint instead of charts
+    let out = termocab(&scratch).args(["stats", "test"]).output().unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("0/2 stage(s) complete, streak 0 day(s)"));
+    assert!(text.contains("words: 2 in content, 0 scheduled, 0 due today"));
+    assert!(text.contains("no cards scheduled yet"));
+
+    // study: stage 1 done schedules alpha at box 1, due today
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "test"]);
+    feed(&mut cmd, "a\n");
+
+    let out = termocab(&scratch).args(["stats", "test"]).output().unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(
+        text.contains("1/2 stage(s) complete, streak 1 day(s)"),
+        "{text}"
+    );
+    assert!(
+        text.contains("words: 2 in content, 1 scheduled, 1 due today"),
+        "{text}"
+    );
+    // one card in box 1: the chart is a full block then five flats
+    assert!(text.contains("boxes 1-6: █▁▁▁▁▁  (1 0 0 0 0 0)"), "{text}");
+    // 14-day review load starting today
+    assert!(
+        text.contains("reviews due, next 14 days (today first): █▁▁▁▁▁▁▁▁▁▁▁▁▁"),
+        "{text}"
+    );
+    // and the activity line, today at the right edge
+    assert!(
+        text.contains("active days, last 14 (oldest first): ▁▁▁▁▁▁▁▁▁▁▁▁▁█"),
+        "{text}"
+    );
+    // plain text all the way
+    assert!(!text.contains('\u{1b}'));
+}
+
 /// The reported crash: `termocab list-words french | head -2` used to
 /// panic with "failed printing to stdout: Broken pipe". It must end the
 /// way cat and git do — nothing on stderr, exit 141 (D6).

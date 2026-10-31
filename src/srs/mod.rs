@@ -115,7 +115,7 @@ impl SrsState {
         } else {
             1
         };
-        let due = add_days(date, interval_days(box_number))?;
+        let due = add_days(date, i64::from(interval_days(box_number)))?;
         let card = self.cards.get_mut(word)?;
         card.box_number = box_number;
         card.due = due.clone();
@@ -145,12 +145,14 @@ fn interval_days(box_number: u8) -> u32 {
 }
 
 /// Adds `n` days to a YYYY-MM-DD date, carrying across month and year
-/// boundaries. None when `date` is malformed or not a real calendar
-/// date ("2026-02-30" and "2026-13-01" are rejected). Same no-time-
-/// crate stance as `progress/`: the math is small and owned (§6).
-fn add_days(date: &str, n: u32) -> Option<String> {
+/// boundaries — and backwards when `n` is negative, which is how the
+/// CLI's look-back windows (last N days) are computed without a second
+/// function. None when `date` is malformed or not a real calendar date
+/// ("2026-02-30" and "2026-13-01" are rejected). Same no-time-crate
+/// stance as `progress/`: the math is small and owned (§6).
+pub fn add_days(date: &str, n: i64) -> Option<String> {
     let (y, m, d) = parse_date(date)?;
-    let days = days_from_civil(y, m, d) + n as i64;
+    let days = days_from_civil(y, m, d) + n;
     let (y, m, d) = civil_from_days(days);
     Some(format!("{y:04}-{m:02}-{d:02}"))
 }
@@ -346,6 +348,17 @@ mod tests {
         assert_eq!(add_days("garbage", 1), None);
         assert_eq!(add_days("2026-02-30", 1), None);
         assert_eq!(add_days("2026-13-01", 1), None);
+    }
+
+    #[test]
+    fn add_days_walks_backwards_for_look_back_windows() {
+        // negative n crosses the same boundaries in reverse
+        assert_eq!(add_days("2026-10-30", -1).as_deref(), Some("2026-10-29"));
+        assert_eq!(add_days("2026-11-01", -1).as_deref(), Some("2026-10-31"));
+        assert_eq!(add_days("2026-03-01", -1).as_deref(), Some("2026-02-28"));
+        assert_eq!(add_days("2024-03-01", -1).as_deref(), Some("2024-02-29"));
+        assert_eq!(add_days("2026-01-01", -1).as_deref(), Some("2025-12-31"));
+        assert_eq!(add_days("2026-10-30", -13).as_deref(), Some("2026-10-17"));
     }
 
     #[test]

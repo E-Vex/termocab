@@ -10,6 +10,7 @@
 //!   termocab list-words <lang>      all vocabulary in a language
 //!   termocab progress <lang>        completed stages + streak + due count
 //!   termocab streak <lang>          just the streak number
+//!   termocab stats <lang>           the learner's numbers + sparklines
 //!   termocab add-lang <lang> <file> install a stages.json as a language
 //!                                 (add --force to replace an existing one)
 //!   termocab check <file>           validate a stages.json without installing
@@ -30,6 +31,7 @@ use crate::engine::Vocabulary;
 use crate::lang::LangId;
 use crate::progress::LanguageProgress;
 use crate::session::{self, Color, ExerciseOrder, RunOptions, StdioTerminal};
+use crate::srs;
 use crate::storage;
 use std::io::{self, IsTerminal, Write};
 use std::path::{Path, PathBuf};
@@ -48,6 +50,7 @@ commands:
   list-words <lang>         list all vocabulary in a language's stages
   progress <lang>           show completed stages, streak and due reviews
   streak <lang>             print the current streak in days
+  stats <lang>              words, Leitner boxes and 14-day charts as sparklines
   add-lang [--force] <lang> <file>  install a stages.json file as a new language
   check <file>              validate a stages.json file without installing it
   help                      show this help";
@@ -327,6 +330,7 @@ fn run_with(args: &[String], clock: &dyn Clock) -> Result<(), CliError> {
         "list-words" => list_words(rest),
         "progress" => progress(rest, clock),
         "streak" => streak(rest, clock),
+        "stats" => stats(rest, clock),
         "add-lang" => add_lang(rest),
         "check" => check(rest),
         other => Err(CliError::Usage(format!("unknown command: {other}"))),
@@ -607,6 +611,101 @@ fn streak(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
     Ok(())
 }
 
+/// stats <lang> — the learner's numbers at a glance: progress, words,
+/// the Leitner box spread, the coming review load and the last two
+/// weeks of activity, each chart as a one-line Unicode sparkline.
+/// Plain text on purpose: `termocab stats french` stays cat-able and
+/// grep-able, no color.
+fn stats(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
+    let lang = expect_lang(rest, "stats")?;
+    let stages = load_lang(&lang)?;
+    let root = config_root()?;
+    let prog = storage::load(&root, &lang).map_err(|e| runtime(e.to_string()))?;
+    let today = clock.today();
+    let (srs, due_today) = due_reviews(&root, &lang, &stages, &prog, &today)?;
+
+    let done = prog.completed_stages();
+    say(&format!(
+        "{lang} — {}/{} stage(s) complete, streak {} day(s)",
+        done.len(),
+        stages.len(),
+        prog.streak_on(&today)
+    ))?;
+    let in_content: usize = stages.iter().map(|s| s.vocabulary.len()).sum();
+    let scheduled = srs.cards().len();
+    say(&format!(
+        "words: {in_content} in content, {scheduled} scheduled, {due_today} due today"
+    ))?;
+
+    if scheduled == 0 {
+        say("no cards scheduled yet — complete a stage to start scheduling reviews.")?;
+        return Ok(());
+    }
+
+    // box spread: how well the scheduled words are known, 1 (fresh)
+    // to 6 (settled). Counts after the chart, chart first.
+    let mut boxes = [0usize; srs::MAX_BOX as usize];
+    for (_, card) in srs.cards() {
+        boxes[(card.box_number - 1) as usize] += 1;
+    }
+    let counts: Vec<String> = boxes.iter().map(|n| n.to_string()).collect();
+    say(&format!(
+        "boxes 1-{}: {}  ({})",
+        srs::MAX_BOX,
+        sparkline(&boxes),
+        counts.join(" ")
+    ))?;
+
+    // review load: today (overdue included), then the next 13 days —
+    // when to come back
+    let mut due_next: Vec<usize> = vec![due_today];
+    for i in 1..14 {
+        let due = srs::add_days(&today, i)
+            .map(|d| srs.cards().iter().filter(|(_, c)| c.due == d).count())
+            .unwrap_or(0);
+        due_next.push(due);
+    }
+    say(&format!(
+        "reviews due, next 14 days (today first): {}",
+        sparkline(&due_next)
+    ))?;
+
+    // activity: the last 14 days, oldest first — the streak made
+    // visible. Only shown once there is anything to show.
+    if !prog.active_days().is_empty() {
+        let mut active: Vec<usize> = Vec::with_capacity(14);
+        for i in (0..14).rev() {
+            let active_day = srs::add_days(&today, -i)
+                .map(|d| prog.is_active_day(&d))
+                .unwrap_or(false);
+            active.push(usize::from(active_day));
+        }
+        say(&format!(
+            "active days, last 14 (oldest first): {}",
+            sparkline(&active)
+        ))?;
+    }
+    Ok(())
+}
+
+/// A one-line bar chart: each value becomes one of the eight Unicode
+/// eighth blocks, ▁ (zero) to █ (the maximum). Integer math only —
+/// `(v * 7) / max`, so the maximum is always a full block and an
+/// all-zero series is the flattest line, not a division by zero.
+fn sparkline(values: &[usize]) -> String {
+    const BLOCKS: [char; 8] = ['▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'];
+    let max = values.iter().copied().max().unwrap_or(0);
+    values
+        .iter()
+        .map(|v| {
+            // 0 when the series is all zeros (checked_div: no /0); the
+            // maximum value is always the full block
+            let level = (v * 7).checked_div(max).map_or(0, |q| q.min(7));
+            BLOCKS[level]
+        })
+        .collect()
+}
+
 /// add-lang [--force] <lang> <file> — validate and copy a stages.json
 /// into the content dir, so the next `start` can find it. An existing
 /// language is never silently replaced: recorded stage completions and
@@ -832,6 +931,21 @@ mod tests {
         // a pipe or a file never gets color, whatever the env says
         assert!(!color_for(false, None));
         assert!(!color_for(false, Some("")));
+    }
+
+    #[test]
+    fn sparkline_maps_values_onto_the_eighth_blocks() {
+        // zero is the lowest block, the maximum is a full block, and
+        // the steps in between are integer math: v * 7 / max
+        assert_eq!(sparkline(&[0, 1, 2, 3, 4]), "▁▂▄▆█");
+        // every value at the maximum
+        assert_eq!(sparkline(&[5, 5, 5]), "███");
+        // all zeros does not divide by zero
+        assert_eq!(sparkline(&[0, 0, 0, 0]), "▁▁▁▁");
+        // empty series, empty chart
+        assert_eq!(sparkline(&[]), "");
+        // one lonely card is a full block
+        assert_eq!(sparkline(&[1]), "█");
     }
 
     #[test]
