@@ -29,9 +29,9 @@ use crate::content;
 use crate::engine::Vocabulary;
 use crate::lang::LangId;
 use crate::progress::LanguageProgress;
-use crate::session::{self, ExerciseOrder, RunOptions, StdioTerminal};
+use crate::session::{self, Color, ExerciseOrder, RunOptions, StdioTerminal};
 use crate::storage;
-use std::io::{self, Write};
+use std::io::{self, IsTerminal, Write};
 use std::path::{Path, PathBuf};
 use std::time::{SystemTime, UNIX_EPOCH};
 
@@ -185,6 +185,29 @@ fn os_seed() -> u64 {
         .map(|d| d.as_nanos() as u64)
         .unwrap_or(0);
     nanos ^ (u64::from(std::process::id()) << 32)
+}
+
+/// Whether session feedback gets ANSI color: stdout must be a
+/// terminal (piping into a file or `grep` must stay plain — plain
+/// text is the product), and $NO_COLOR must be unset or empty
+/// (https://no-color.org, which termocab honors exactly).
+fn colors_enabled() -> Color {
+    if color_for(
+        io::stdout().is_terminal(),
+        std::env::var("NO_COLOR").ok().as_deref(),
+    ) {
+        Color::Ansi
+    } else {
+        Color::Plain
+    }
+}
+
+/// The decision behind [`colors_enabled`], split out so the rule is
+/// testable without a terminal: a tty wins unless NO_COLOR is set to
+/// a non-empty value; an empty NO_COLOR does not count as set, per
+/// the spec.
+fn color_for(is_terminal: bool, no_color: Option<&str>) -> bool {
+    is_terminal && !no_color.is_some_and(|v| !v.is_empty())
 }
 
 /// Candidate content directories, in lookup order — the first one that
@@ -415,7 +438,10 @@ fn start(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
     // A run that dies on a closed stdout is aborted the same way (D6).
     let stage_was_done = prog.is_stage_completed(stage.id);
     let day_was_recorded = prog.is_active_day(&today);
-    let opts = RunOptions { order };
+    let opts = RunOptions {
+        order,
+        color: colors_enabled(),
+    };
     let outcome = session::run_and_record(&mut term, stage, &mut prog, &today, &opts)
         .map_err(stdout_error)?;
     let changed = outcome.passed() && !(stage_was_done && day_was_recorded);
@@ -490,8 +516,8 @@ fn review(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
 
     let vocabulary = reviewable_words(&stages, &prog);
     let mut term = StdioTerminal;
-    let outcome =
-        session::run_review(&mut term, &mut srs, &vocabulary, &today).map_err(stdout_error)?;
+    let outcome = session::run_review(&mut term, &mut srs, &vocabulary, &today, colors_enabled())
+        .map_err(stdout_error)?;
 
     if outcome.answered > 0 {
         // Every answered card was rescheduled, so the srs state always
@@ -793,6 +819,19 @@ mod tests {
                 err.message()
             );
         }
+    }
+
+    #[test]
+    fn color_needs_a_terminal_and_a_missing_no_color() {
+        // no-color.org, to the letter: set AND non-empty disables;
+        // empty counts as unset.
+        assert!(color_for(true, None));
+        assert!(color_for(true, Some("")));
+        assert!(!color_for(true, Some("1")));
+        assert!(!color_for(true, Some("always")));
+        // a pipe or a file never gets color, whatever the env says
+        assert!(!color_for(false, None));
+        assert!(!color_for(false, Some("")));
     }
 
     #[test]

@@ -596,6 +596,33 @@ fn start_rejects_bad_order_flags_as_usage_errors() {
     }
 }
 
+/// Colors: a piped stdout is not a terminal, so feedback stays plain —
+/// `termocab start french | tee log` must not spray escape codes into
+/// the log. (The tty path and $NO_COLOR are covered by the unit test
+/// of the same rule; a subprocess pipe can only see this side.)
+#[test]
+fn piped_output_stays_plain_even_with_color_available() {
+    let scratch = Scratch::new("plainpipe");
+    install_course(&scratch);
+
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "test"]);
+    let out = feed(&mut cmd, "a\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("correct."), "{}", text);
+    assert!(
+        !text.contains('\u{1b}'),
+        "no ANSI escapes in a pipe: {text:?}"
+    );
+
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(&mut cmd, "a\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    assert!(!stdout(&out).contains('\u{1b}'));
+}
+
 /// The reported crash: `termocab list-words french | head -2` used to
 /// panic with "failed printing to stdout: Broken pipe". It must end the
 /// way cat and git do — nothing on stderr, exit 141 (D6).

@@ -50,19 +50,51 @@ pub enum ExerciseOrder {
     Shuffled(u64),
 }
 
-/// How a session presents a stage: the exercise order. Resolved at the
-/// CLI edge (flags, OS seed) and injected here, so the runner stays
-/// pure and testable against a fixed order.
+/// Whether session feedback carries ANSI color — green for correct,
+/// red for not-quite. Plain by default (what tests script against and
+/// what a piped or NO_COLOR run gets); the CLI decides at its edge,
+/// where stdout and the environment are visible.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Color {
+    /// Text only — for pipes, files and $NO_COLOR.
+    Plain,
+    /// \x1b[31m…\x1b[0m red / \x1b[32m…\x1b[0m green.
+    Ansi,
+}
+
+/// Green (Ansi) or the text unchanged (Plain).
+fn green(text: &str, color: Color) -> String {
+    paint("32", text, color)
+}
+
+/// Red (Ansi) or the text unchanged (Plain).
+fn red(text: &str, color: Color) -> String {
+    paint("31", text, color)
+}
+
+fn paint(code: &str, text: &str, color: Color) -> String {
+    match color {
+        Color::Plain => text.to_string(),
+        Color::Ansi => format!("\x1b[{code}m{text}\x1b[0m"),
+    }
+}
+
+/// How a session presents a stage: exercise order and feedback color.
+/// Both are presentation concerns resolved at the CLI edge (flags,
+/// stdout type, $NO_COLOR) and injected here, so the runner stays pure
+/// and testable against a fixed shape.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct RunOptions {
     pub order: ExerciseOrder,
+    pub color: Color,
 }
 
 impl Default for RunOptions {
-    /// The shape tests script against: authored order.
+    /// The shape tests script against: authored order, plain text.
     fn default() -> Self {
         Self {
             order: ExerciseOrder::InOrder,
+            color: Color::Plain,
         }
     }
 }
@@ -238,14 +270,18 @@ pub fn run_stage<T: Terminal>(
         if exercise.is_correct(&answer) {
             correct += 1;
             match exercise.grade(&answer) {
-                Grade::Correct => term.print("correct.")?,
-                Grade::CorrectWithHint(expected) => {
-                    term.print(&format!("correct — watch the accents: {expected}"))?
-                }
+                Grade::Correct => term.print(&green("correct.", opts.color))?,
+                Grade::CorrectWithHint(expected) => term.print(&green(
+                    &format!("correct — watch the accents: {expected}"),
+                    opts.color,
+                ))?,
                 Grade::Incorrect => unreachable!("is_correct said otherwise"),
             }
         } else {
-            term.print(&format!("not quite — expected: {}", exercise.answer()))?;
+            term.print(&red(
+                &format!("not quite — expected: {}", exercise.answer()),
+                opts.color,
+            ))?;
         }
     }
 
@@ -256,11 +292,13 @@ pub fn run_stage<T: Terminal>(
     };
     term.print("")?;
     match outcome {
-        Outcome::Passed { correct, total } => {
-            term.print(&format!("stage complete: {correct}/{total} correct. nice."))?
-        }
-        Outcome::Failed { correct, total } => term.print(&format!(
-            "{correct}/{total} correct — below the 80% bar. run it again when ready."
+        Outcome::Passed { correct, total } => term.print(&green(
+            &format!("stage complete: {correct}/{total} correct. nice."),
+            opts.color,
+        ))?,
+        Outcome::Failed { correct, total } => term.print(&red(
+            &format!("{correct}/{total} correct — below the 80% bar. run it again when ready."),
+            opts.color,
         ))?,
     }
     Ok(outcome)
@@ -298,6 +336,7 @@ pub fn run_review<T: Terminal>(
     srs: &mut crate::srs::SrsState,
     vocabulary: &[&crate::engine::Vocabulary],
     today: &str,
+    color: Color,
 ) -> Result<ReviewOutcome, io::Error> {
     let due: Vec<String> = srs
         .due_on(today)
@@ -354,16 +393,22 @@ pub fn run_review<T: Terminal>(
             _ => String::new(),
         };
         match srs.answer(word, right, today) {
-            Some(s) if right => term.print(&format!(
-                "correct{hint} — box {}, due {}.",
-                s.box_number, s.due
+            Some(s) if right => term.print(&green(
+                &format!("correct{hint} — box {}, due {}.", s.box_number, s.due),
+                color,
             ))?,
-            Some(s) => term.print(&format!(
-                "not quite — expected: {}. back to box {}, due {}.",
-                v.translation, s.box_number, s.due
+            Some(s) => term.print(&red(
+                &format!(
+                    "not quite — expected: {}. back to box {}, due {}.",
+                    v.translation, s.box_number, s.due
+                ),
+                color,
             ))?,
-            None if right => term.print(&format!("correct{hint}."))?,
-            None => term.print(&format!("not quite — expected: {}.", v.translation))?,
+            None if right => term.print(&green(&format!("correct{hint}."), color))?,
+            None => term.print(&red(
+                &format!("not quite — expected: {}.", v.translation),
+                color,
+            ))?,
         }
     }
 
@@ -597,7 +642,7 @@ mod tests {
         let vocabulary = [&v1, &v2];
 
         let mut t = Scripted::new(&["hello", "nope"]);
-        let out = run_review(&mut t, &mut srs, &vocabulary, "2026-10-30").unwrap();
+        let out = run_review(&mut t, &mut srs, &vocabulary, "2026-10-30", Color::Plain).unwrap();
 
         assert_eq!(
             out,
@@ -620,7 +665,7 @@ mod tests {
         let v = vocab("bonjour", "hello");
 
         let mut t = Scripted::new(&["  HeLLo "]);
-        let out = run_review(&mut t, &mut srs, &[&v], "2026-10-30").unwrap();
+        let out = run_review(&mut t, &mut srs, &[&v], "2026-10-30", Color::Plain).unwrap();
         assert_eq!(
             out,
             ReviewOutcome {
@@ -639,7 +684,7 @@ mod tests {
 
         // only one answer scripted: the second read hits EOF and stops
         let mut t = Scripted::new(&["hello"]);
-        let out = run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30").unwrap();
+        let out = run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30", Color::Plain).unwrap();
         assert_eq!(
             out,
             ReviewOutcome {
@@ -681,7 +726,7 @@ mod tests {
             Input::Line("hello".into()),
             Input::Unreadable("stream did not contain valid UTF-8".into()),
         ]);
-        let out = run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30").unwrap();
+        let out = run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30", Color::Plain).unwrap();
         assert_eq!(
             out,
             ReviewOutcome {
@@ -704,7 +749,7 @@ mod tests {
         v.accepted_translations = vec!["hello".into()];
 
         let mut t = Scripted::new(&["hello"]);
-        let out = run_review(&mut t, &mut srs, &[&v], "2026-10-30").unwrap();
+        let out = run_review(&mut t, &mut srs, &[&v], "2026-10-30", Color::Plain).unwrap();
         assert_eq!(
             out,
             ReviewOutcome {
@@ -721,7 +766,7 @@ mod tests {
         let mut srs = crate::srs::SrsState::new();
         srs.introduce(&["salut".into()], "2026-10-30");
         let mut t = Scripted::new(&["  HeLLo "]);
-        let out = run_review(&mut t, &mut srs, &[&v], "2026-10-30").unwrap();
+        let out = run_review(&mut t, &mut srs, &[&v], "2026-10-30", Color::Plain).unwrap();
         assert_eq!(out.correct, 1);
     }
 
@@ -731,7 +776,7 @@ mod tests {
         srs.introduce(&["orphelin".into()], "2026-10-30");
 
         let mut t = Scripted::new(&[]);
-        let out = run_review(&mut t, &mut srs, &[], "2026-10-30").unwrap();
+        let out = run_review(&mut t, &mut srs, &[], "2026-10-30", Color::Plain).unwrap();
         assert_eq!(out, ReviewOutcome::default());
         assert!(t.printed.iter().any(|l| l.contains("skipping 'orphelin'")));
     }
@@ -765,7 +810,8 @@ mod tests {
 
         // the pipe survives the header but dies on the first card
         let mut t = ClosedPipe { prints_left: 3 };
-        let err = run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30").unwrap_err();
+        let err =
+            run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30", Color::Plain).unwrap_err();
         assert_eq!(err.kind(), io::ErrorKind::BrokenPipe);
         // no card was answered, so the caller must not save the srs
         // state — the cards are still due today, untouched
@@ -797,6 +843,7 @@ mod tests {
         // multiset of prompts, just a different order (D7).
         let opts = RunOptions {
             order: ExerciseOrder::Shuffled(42),
+            ..RunOptions::default()
         };
         let mut t = Scripted::new(&["a", "a", "a", "a", "a", "a"]);
         let out = run_stage(&mut t, &uniform_stage(6), &opts).unwrap();
@@ -856,5 +903,79 @@ mod tests {
             exercise_sequence(8, ExerciseOrder::InOrder),
             (0..8).collect::<Vec<_>>()
         );
+    }
+
+    #[test]
+    fn ansi_color_wraps_feedback_and_plain_leaves_it_alone() {
+        // plain: byte-for-byte the old output
+        let mut t = Scripted::new(&["wrong", "b", "bonjour", "suis"]);
+        run_stage(
+            &mut t,
+            &fixture_stage(),
+            &RunOptions {
+                color: Color::Plain,
+                ..RunOptions::default()
+            },
+        )
+        .unwrap();
+        assert!(t
+            .printed
+            .iter()
+            .any(|l| l == "not quite — expected: I am a student"));
+        assert!(t.printed.iter().any(|l| l.contains("below the 80% bar")));
+        assert!(t.printed.iter().all(|l| !l.contains('\x1b')));
+
+        // ansi: correct green, not-quite red
+        let mut t = Scripted::new(&["wrong", "b", "bonjour", "suis"]);
+        run_stage(
+            &mut t,
+            &fixture_stage(),
+            &RunOptions {
+                color: Color::Ansi,
+                ..RunOptions::default()
+            },
+        )
+        .unwrap();
+        assert!(t
+            .printed
+            .iter()
+            .any(|l| *l == "\x1b[31mnot quite — expected: I am a student\x1b[0m"));
+        assert!(t
+            .printed
+            .iter()
+            .any(|l| l.contains("\x1b[31m") && l.contains("80% bar")));
+
+        // and a passing run is green
+        let mut t = Scripted::new(&["I am a student", "b", "bonjour", "suis"]);
+        run_stage(
+            &mut t,
+            &fixture_stage(),
+            &RunOptions {
+                color: Color::Ansi,
+                ..RunOptions::default()
+            },
+        )
+        .unwrap();
+        assert!(t.printed.iter().any(|l| *l == "\x1b[32mcorrect.\x1b[0m"));
+        assert!(t
+            .printed
+            .iter()
+            .any(|l| l.starts_with("\x1b[32mstage complete:")));
+    }
+
+    #[test]
+    fn ansi_color_wraps_review_feedback() {
+        let mut srs = crate::srs::SrsState::new();
+        srs.introduce(&["bonjour".into(), "merci".into()], "2026-10-30");
+        let v1 = vocab("bonjour", "hello");
+        let v2 = vocab("merci", "thank you");
+
+        let mut t = Scripted::new(&["hello", "nope"]);
+        run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30", Color::Ansi).unwrap();
+        assert!(t
+            .printed
+            .iter()
+            .any(|l| l.starts_with("\x1b[32mcorrect") && l.contains("box 2")));
+        assert!(t.printed.iter().any(|l| l.starts_with("\x1b[31mnot quite")));
     }
 }
