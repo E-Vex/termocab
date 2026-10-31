@@ -440,7 +440,17 @@ fn list_words(rest: &[String]) -> Result<(), CliError> {
             stage.id, stage.title, stage.level_hint
         ))?;
         for v in &stage.vocabulary {
-            say(&format!("  {} ({}) — {}", v.word, v.pos, v.translation))?;
+            // alternatives surface in the listing so the learner knows
+            // every accepted answer before a review grades them (D8)
+            let also = if v.accepted_translations.is_empty() {
+                String::new()
+            } else {
+                format!(" (also: {})", v.accepted_translations.join(", "))
+            };
+            say(&format!(
+                "  {} ({}) — {}{}",
+                v.word, v.pos, v.translation, also
+            ))?;
             say(&format!("    e.g. {}", v.example))?;
         }
     }
@@ -823,6 +833,7 @@ mod tests {
                 .map(|w| crate::engine::Vocabulary {
                     word: w.to_string(),
                     translation: format!("translation of {w}"),
+                    accepted_translations: vec![],
                     pos: "noun".into(),
                     example: format!("{w} example"),
                 })

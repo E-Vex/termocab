@@ -456,6 +456,53 @@ fn review_flows_end_to_end() {
     assert!(stdout(&out).contains("no cards due today"));
 }
 
+/// D8 end to end: a word whose translation is "hi" must accept the
+/// listed alternative "hello" in a review — the reported salut case.
+#[test]
+fn review_accepts_listed_alternative_translations() {
+    let scratch = Scratch::new("alt");
+    let course = r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Only", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "salut", "translation": "hi",
+                "accepted_translations": ["hello"],
+                "pos": "interjection", "example": "Salut !" }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "salut", "answer": "hi" }
+            ] }
+       ] }"#;
+    let file = scratch.stages_file("alt.json", course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    // the listing surfaces the alternative
+    let out = termocab(&scratch)
+        .args(["list-words", "test"])
+        .output()
+        .unwrap();
+    assert!(stdout(&out).contains("salut (interjection) — hi (also: hello)"));
+
+    // complete the stage, then review with the ALTERNATIVE translation
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "test"]);
+    feed(&mut cmd, "hi\n");
+
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(&mut cmd, "hello\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    assert!(stdout(&out).contains("correct"), "{}", stdout(&out));
+    assert!(!stdout(&out).contains("not quite"));
+    let srs = scratch.home().join(".config/termocab/srs/test.txt");
+    assert!(std::fs::read_to_string(&srs)
+        .expect("srs file")
+        .contains("word salut box 2"));
+}
+
 /// The reported crash: `termocab list-words french | head -2` used to
 /// panic with "failed printing to stdout: Broken pipe". It must end the
 /// way cat and git do — nothing on stderr, exit 141 (D6).

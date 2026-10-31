@@ -18,6 +18,11 @@ pub struct Stage {
 pub struct Vocabulary {
     pub word: String,
     pub translation: String,
+    /// Alternative translations that also count as correct in a
+    /// review: "salut" is "hi", but a learner who types "hello" is
+    /// right too. Same pattern as `accepted_answers` on exercises
+    /// (decision D8); absent in a file means "only the translation".
+    pub accepted_translations: Vec<String>,
     pub pos: String,
     pub example: String,
 }

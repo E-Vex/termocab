@@ -262,11 +262,13 @@ pub fn run_review<T: Terminal>(
         // a review card IS a translation exercise: this reuses the
         // engine's grading (the full normalization table, accent hint
         // included) instead of growing a second, slightly different
-        // rule here
+        // rule here. The vocabulary's accepted_translations ride along
+        // as accepted_answers, so "hello" counts for a word whose
+        // primary translation is "hi" (D8)
         let exercise = Exercise::Translation {
             prompt: v.word.clone(),
             answer: v.translation.clone(),
-            accepted_answers: vec![],
+            accepted_answers: v.accepted_translations.clone(),
         };
         outcome.answered += 1;
         let grade = exercise.grade(&attempt);
@@ -496,6 +498,7 @@ mod tests {
         crate::engine::Vocabulary {
             word: word.into(),
             translation: translation.into(),
+            accepted_translations: vec![],
             pos: "noun".into(),
             example: format!("{word}!"),
         }
@@ -609,6 +612,37 @@ mod tests {
         assert!(t.printed.iter().any(|l| l.contains("could not read input")));
         // the card never reached is untouched
         assert_eq!(card_of(&srs, "merci").due, "2026-10-30");
+    }
+
+    #[test]
+    fn review_accepts_alternative_translations() {
+        // The reported case: "salut" translates to "hi", but a learner
+        // who answers "hello" is right too (D8).
+        let mut srs = crate::srs::SrsState::new();
+        srs.introduce(&["salut".into()], "2026-10-30");
+        let mut v = vocab("salut", "hi");
+        v.accepted_translations = vec!["hello".into()];
+
+        let mut t = Scripted::new(&["hello"]);
+        let out = run_review(&mut t, &mut srs, &[&v], "2026-10-30").unwrap();
+        assert_eq!(
+            out,
+            ReviewOutcome {
+                answered: 1,
+                correct: 1
+            }
+        );
+        assert!(t.printed.iter().any(|l| l.contains("correct")));
+        assert!(!t.printed.iter().any(|l| l.contains("not quite")));
+
+        // and alternatives go through the same forgiving grading as the
+        // primary translation — case and accents included (fresh
+        // schedule: the card above is no longer due today)
+        let mut srs = crate::srs::SrsState::new();
+        srs.introduce(&["salut".into()], "2026-10-30");
+        let mut t = Scripted::new(&["  HeLLo "]);
+        let out = run_review(&mut t, &mut srs, &[&v], "2026-10-30").unwrap();
+        assert_eq!(out.correct, 1);
     }
 
     #[test]

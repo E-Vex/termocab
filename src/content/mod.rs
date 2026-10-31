@@ -40,6 +40,11 @@ struct JsonStage {
 struct JsonVocabulary {
     word: String,
     translation: String,
+    /// Optional alternative translations that also count as correct
+    /// in reviews (D8), mirroring `accepted_answers` on exercises.
+    /// Absent in existing files = none.
+    #[serde(default)]
+    accepted_translations: Vec<String>,
     pos: String,
     example: String,
 }
@@ -216,6 +221,17 @@ pub fn validate(
                     n + 1
                 ));
             }
+            for (m, alt) in v.accepted_translations.iter().enumerate() {
+                if alt.trim().is_empty() {
+                    errors.push(format!(
+                        "stage {}, vocabulary entry {}: accepted_translations entry {} \
+                         must not be empty",
+                        stage.id,
+                        n + 1,
+                        m + 1
+                    ));
+                }
+            }
         }
 
         for (n, exercise) in stage.exercises.iter().enumerate() {
@@ -336,6 +352,7 @@ impl JsonVocabulary {
         engine::Vocabulary {
             word: self.word,
             translation: self.translation,
+            accepted_translations: self.accepted_translations,
             pos: self.pos,
             example: self.example,
         }
@@ -569,6 +586,34 @@ mod tests {
         assert!(v
             .iter()
             .any(|e| e.contains("accepted_answers entry 1 must not be empty")));
+    }
+
+    #[test]
+    fn accepted_translations_load_and_validate_like_accepted_answers() {
+        // present and non-empty: loads, and rides along into the engine
+        let vocab = r#"{ "word": "salut", "translation": "hi", "accepted_translations": ["hello"], "pos": "x", "example": "Salut !" }"#;
+        let loaded = load_text(
+            &file_of("french", &stage_json(1, vocab, TR_OK)),
+            Some(&french()),
+        )
+        .unwrap();
+        assert_eq!(
+            loaded.stages[0].vocabulary[0].accepted_translations,
+            vec!["hello".to_string()]
+        );
+
+        // absent stays fine (backwards compatible, D8)
+        let loaded = load_text(&file_of("french", &good_stage(1)), Some(&french())).unwrap();
+        assert!(loaded.stages[0].vocabulary[0]
+            .accepted_translations
+            .is_empty());
+
+        // an empty entry is a violation, same rule as accepted_answers
+        let bad_vocab = r#"{ "word": "salut", "translation": "hi", "accepted_translations": [""], "pos": "x", "example": "Salut !" }"#;
+        let v = violations_of(&file_of("french", &stage_json(1, bad_vocab, TR_OK)), None);
+        assert!(v
+            .iter()
+            .any(|e| e.contains("accepted_translations entry 1 must not be empty")));
     }
 
     #[test]
