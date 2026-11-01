@@ -133,18 +133,20 @@ use std::iter::once;
 
 /// The accented letters of the Latin-1 Supplement — the Western
 /// European set (French, Spanish, German, Italian, Portuguese, …) —
-/// plus the decomposable Polish set from Latin Extended-A (D10),
-/// decomposed to base letter + combining mark. Decomposing (rather
+/// plus the decomposable Polish set from Latin Extended-A (D10) and
+/// the Romanian set (D11): ă (a + breve, Extended-A) and ș ț (s/t +
+/// comma below, Extended-B) decompose to base letter + combining mark
+/// like any accented letter, and the legacy cedilla spellings ş ţ
+/// ride along (s/t + cedilla — the same mark ç already carries), so
+/// both historical encodings grade the same way. Decomposing (rather
 /// than stripping) in the strict pass makes precomposed "é" equal to
 /// "e" + U+0301 typed on a macOS keyboard — same letter, same accent,
-/// different encoding. Hand-written on purpose: thirty-four entries
+/// different encoding. Hand-written on purpose: thirty-nine entries
 /// beat a Unicode-normalization crate, and §6 asks for justification
-/// before any dependency. The next language to need more is Romanian:
-/// ă joins here (a + breve, same pattern), while ș and ț have no
-/// decomposition at all and will follow ł in [`OPEN_LETTERS`] below;
-/// the Nordic letters stay closed — "smør" is not "smor". Lowercase
-/// only: [`normalize_strict`] lowercases before it looks here (D9).
-const ACCENTED: [(char, &str); 34] = [
+/// before any dependency. The Nordic letters stay closed — "smør" is
+/// not "smor". Lowercase only: [`normalize_strict`] lowercases before
+/// it looks here (D9).
+const ACCENTED: [(char, &str); 39] = [
     ('à', "a\u{0300}"),
     ('á', "a\u{0301}"),
     ('â', "a\u{0302}"),
@@ -182,6 +184,16 @@ const ACCENTED: [(char, &str); 34] = [
     ('ś', "s\u{0301}"),
     ('ź', "z\u{0301}"),
     ('ż', "z\u{0307}"),
+    // Romanian (D11): the breve and — contrary to the D10 prediction
+    // — the comma below turn out to be ordinary combining marks (ș ț
+    // decompose after all, Extended-B included), so the whole set
+    // lands here instead of [`OPEN_LETTERS`]; the cedilla pair ş ţ
+    // joins for the legacy spellings of the same two letters.
+    ('ă', "a\u{0306}"),
+    ('ș', "s\u{0326}"),
+    ('ț', "t\u{0326}"),
+    ('ş', "s\u{0327}"),
+    ('ţ', "t\u{0327}"),
 ];
 
 /// The ligatures open up only in the loose pass — "œuvre" and
@@ -198,7 +210,9 @@ const LIGATURES: [(char, &str); 3] = [('œ', "oe"), ('æ', "ae"), ('ß', "ss")];
 /// Polish keyboard types "lodz" for "łódź" the same way "strasse"
 /// stands in for "straße", so it counts, with the properly spelled
 /// form as the hint. ø, þ and ð stay closed (D9): "smør" is not
-/// "smor". Romanian ș and ț will join here when that course arrives.
+/// "smor". Romanian ș and ț were predicted to join here (D10) but
+/// decompose after all — see [`ACCENTED`] (D11); the table still
+/// holds just ł.
 const OPEN_LETTERS: [(char, &str); 1] = [('ł', "l")];
 
 /// Punctuation that may differ at the ends of an answer: a missing "?"
@@ -209,8 +223,8 @@ const EDGE_PUNCTUATION: [char; 7] = ['.', '?', '!', ',', ';', '¡', '¿'];
 /// The normalization both sides go through before comparing: trim,
 /// lowercase, collapse internal whitespace, strip leading and trailing
 /// punctuation, fold apostrophes, and fold Unicode composition for the
-/// accented Latin-1 and Polish (Extended-A) letters. Accents are still
-/// significant here — "etudiant" is NOT yet "étudiant".
+/// accented Latin-1, Polish (Extended-A) and Romanian letters. Accents
+/// are still significant here — "etudiant" is NOT yet "étudiant".
 pub fn normalize_strict(input: &str) -> String {
     let collapsed: String = input
         .trim()
@@ -516,6 +530,41 @@ mod tests {
         // decomposed input equals precomposed — no hint needed
         assert_eq!(exercise.grade("man\u{0303}ana"), Grade::Correct);
         assert!(!exercise.is_correct("mananaa"));
+    }
+
+    #[test]
+    fn the_romanian_letters_behave_like_the_polish_ones() {
+        // The sixth-language wave (D11) extended the table again: ă
+        // (a + breve) and — contrary to the D10 prediction — ș and ț
+        // (s/t + comma below: they decompose after all, Extended-B
+        // included) joined ACCENTED next to the Polish set, with the
+        // legacy cedilla spellings ş ţ riding along. The newcomers
+        // get the same three behaviors: fold with a hint, fold from
+        // uppercase, and stay distinct from actually different words.
+        let exercise = translation("mănâncă", &[]);
+        assert_eq!(
+            exercise.grade("mananca"),
+            Grade::CorrectWithHint("mănâncă".into())
+        );
+        // ă, â and ă again in one word — and from uppercase
+        assert!(exercise.is_correct("MĂNÂNCĂ"));
+        assert!(!exercise.is_correct("manancaa"));
+        // decomposed input equals precomposed — no hint needed
+        // (the mark rides right after its base letter, exactly how
+        // "e" + U+0301 equals "é")
+        let sarpe = translation("șarpe", &[]);
+        assert_eq!(sarpe.grade("s\u{0326}arpe"), Grade::Correct);
+        // the comma below folds like any combining mark…
+        assert_eq!(sarpe.grade("sarpe"), Grade::CorrectWithHint("șarpe".into()));
+        // …and the legacy cedilla spelling folds to the same word,
+        // with a hint — ş and ș are two encodings of one letter
+        assert_eq!(sarpe.grade("şarpe"), Grade::CorrectWithHint("șarpe".into()));
+        // ț: same story, comma below and legacy cedilla alike
+        let tara = translation("țară", &[]);
+        assert_eq!(tara.grade("tara"), Grade::CorrectWithHint("țară".into()));
+        assert_eq!(tara.grade("ţară"), Grade::CorrectWithHint("țară".into()));
+        assert!(tara.is_correct("ȚARĂ"));
+        assert!(!tara.is_correct("carte"));
     }
 
     #[test]
