@@ -728,15 +728,15 @@ fn broken_pipe_is_silent_and_exits_141_like_cat_and_git() {
     );
 }
 
-/// The shipped courses are the product: both must validate through the
+/// The shipped courses are the product: all must validate through the
 /// real `check` verb — the same gate an outside author's file passes
-/// before `add-lang` will install it. Spanish is the second language
-/// (D9); its ñ, á, í, ó, ü and the inverted ¿ ¡ flow through content
-/// validation like French's accents and ligatures always have.
+/// before `add-lang` will install it. Spanish was the second language
+/// (D9); German the third, its ß, ö, ü and capitalized nouns flowing
+/// through content validation like everything else.
 #[test]
 fn shipped_courses_validate() {
     let scratch = Scratch::new("shipped");
-    for lang in ["french", "spanish"] {
+    for lang in ["french", "spanish", "german"] {
         let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
             .join("languages")
             .join(lang)
@@ -812,4 +812,75 @@ fn spanish_accents_and_inverted_marks_grade_end_to_end() {
     let srs = std::fs::read_to_string(&srs).expect("srs file");
     assert!(srs.contains("word mañana box 2"), "{srs}");
     assert!(srs.contains("word sí box 2"), "{srs}");
+}
+
+/// The third language end to end, in a German course. D9's table never
+/// needed a change for it: a missing umlaut counts as correct with the
+/// accented form as the hint ("schon" for "schön", "tschuss" for
+/// "tschüss"), the sharp s opens exactly like a ligature ("gross" for
+/// "groß", "heiss" for "heiß" — the hint shows the real spelling), and
+/// the review accepts the listed alternative translation. The course is
+/// German through and through: the answer to a noun is the noun with
+/// its article, capitalization included, and grading is case-insensitive
+/// on top of the accent fold.
+#[test]
+fn german_umlauts_and_sharp_s_grade_end_to_end() {
+    let scratch = Scratch::new("german");
+    let course = r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Deutsch", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "schön", "translation": "beautiful",
+                "accepted_translations": ["pretty"],
+                "pos": "adjective", "example": "Was für ein schöner Tag!" },
+              { "word": "groß", "translation": "big",
+                "pos": "adjective", "example": "Mein Bruder ist sehr groß." },
+              { "word": "tschüss", "translation": "goodbye",
+                "accepted_translations": ["bye"],
+                "pos": "interjection", "example": "Tschüss, bis morgen!" }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "beautiful", "answer": "schön" },
+              { "type": "translation", "prompt": "big", "answer": "groß" },
+              { "type": "translation", "prompt": "goodbye", "answer": "tschüss" },
+              { "type": "fill_blank", "prompt": "Der Kaffee ist ___.", "answer": "heiß" },
+              { "type": "translation", "prompt": "Wie heißt du?", "answer": "What's your name?" }
+            ] }
+       ] }"#;
+    let file = scratch.stages_file("german.json", course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    // everything answered right, but with the umlauts and the sharp s
+    // stripped — all five must count toward the pass bar, each with the
+    // properly spelled form as the hint
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "--no-shuffle", "test"]);
+    let out = feed(&mut cmd, "schon\ngross\ntschuss\nheiss\nWhat's your name\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("watch the accents: schön"), "{text}");
+    assert!(text.contains("watch the accents: groß"), "{text}");
+    assert!(text.contains("watch the accents: tschüss"), "{text}");
+    assert!(text.contains("watch the accents: heiß"), "{text}");
+    assert!(text.contains("5/5"), "{text}");
+    assert!(text.contains("stage complete"), "{text}");
+
+    // review: due cards come alphabetical (groß, schön, tschüss), and
+    // the accepted alternative "pretty" counts for schön, "bye" for
+    // tschüss — the srs keys keep the accents and the sharp s verbatim
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(&mut cmd, "big\npretty\nbye\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("correct"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    let srs = scratch.home().join(".config/termocab/srs/test.txt");
+    let srs = std::fs::read_to_string(&srs).expect("srs file");
+    assert!(srs.contains("word groß box 2"), "{srs}");
+    assert!(srs.contains("word schön box 2"), "{srs}");
+    assert!(srs.contains("word tschüss box 2"), "{srs}");
 }
