@@ -737,11 +737,16 @@ fn broken_pipe_is_silent_and_exits_141_like_cat_and_git() {
 /// acute accents (perché, città, caffè) and its elision nouns; Polish
 /// the fifth, the first engine change a language has forced since D9
 /// (D10) — its whole Latin Extended-A set (ą ć ę ł ń ó ś ź ż) flowing
-/// through content validation like everything else.
+/// through content validation like everything else; Romanian the
+/// sixth, the second extension (D11) — its five letters (ă â î ș ț)
+/// and its enclitic-article and pot-infinitive drills flowing through
+/// content validation like everything else.
 #[test]
 fn shipped_courses_validate() {
     let scratch = Scratch::new("shipped");
-    for lang in ["french", "spanish", "german", "italian", "polish"] {
+    for lang in [
+        "french", "spanish", "german", "italian", "polish", "romanian",
+    ] {
         let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
             .join("languages")
             .join(lang)
@@ -1052,4 +1057,86 @@ fn polish_diacritics_and_the_stroke_grade_end_to_end() {
     assert!(srs.contains("word mały box 2"), "{srs}");
     assert!(srs.contains("word piątek box 2"), "{srs}");
     assert!(srs.contains("word żółty box 2"), "{srs}");
+}
+
+/// The sixth language end to end, in a Romanian course — the second
+/// engine change a language has forced (D11), and half of it upended
+/// the D10 prediction: ș and ț decompose after all (s/t + comma
+/// below), so they fold like any accent — "multumesc" for
+/// "mulțumesc", "maine" for "mâine", "batran" for "bătrân" — while the
+/// legacy cedilla spellings fold to the same words. The srs keys keep
+/// the diacritics verbatim. The drills are Romanian through and
+/// through: the enclitic definite article blanks at the END of the
+/// noun ("Băiat___ citește ziarul." wants "ul"), and the modal drill
+/// wants the bare infinitive after pot ("Putem ___ o pizza." →
+/// "mânca"), with the a-prefixed dictionary infinitive counting too.
+/// The review accepts the listed alternative translations — "thanks"
+/// for mulțumesc.
+#[test]
+fn romanian_diacritics_and_the_enclitic_article_grade_end_to_end() {
+    let scratch = Scratch::new("romanian");
+    let course = r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Română", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "mulțumesc", "translation": "thank you",
+                "accepted_translations": ["thanks"],
+                "pos": "interjection", "example": "Mulțumesc foarte mult!" },
+              { "word": "mâine", "translation": "tomorrow",
+                "pos": "adverb", "example": "Mâine merg la școală." },
+              { "word": "a mânca", "translation": "to eat",
+                "pos": "verb", "example": "Vreau să mănânc o pizza." },
+              { "word": "bătrân", "translation": "old",
+                "pos": "adjective", "example": "Omul este bătrân." }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "thank you", "answer": "mulțumesc" },
+              { "type": "translation", "prompt": "tomorrow", "answer": "mâine" },
+              { "type": "translation", "prompt": "to eat", "answer": "a mânca" },
+              { "type": "translation", "prompt": "old", "answer": "bătrân" },
+              { "type": "fill_blank", "prompt": "Băiat___ citește ziarul.", "answer": "ul" },
+              { "type": "fill_blank", "prompt": "Putem ___ o pizza.", "answer": "mânca",
+                "accepted_answers": ["a mânca"] }
+            ] }
+       ] }"#;
+    let file = scratch.stages_file("romanian.json", course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    // everything answered right, but with the diacritics stripped —
+    // all six must count toward the pass bar, each miss carrying the
+    // properly spelled form as the hint; the enclitic-article blank
+    // needs no fold and grades plain correct
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "--no-shuffle", "test"]);
+    let out = feed(&mut cmd, "multumesc\nmaine\na manca\nbatran\nul\nmanca\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("watch the accents: mulțumesc"), "{text}");
+    assert!(text.contains("watch the accents: mâine"), "{text}");
+    assert!(text.contains("watch the accents: a mânca"), "{text}");
+    assert!(text.contains("watch the accents: bătrân"), "{text}");
+    assert!(text.contains("watch the accents: mânca"), "{text}");
+    assert!(text.contains("6/6"), "{text}");
+    assert!(text.contains("stage complete"), "{text}");
+
+    // review: due cards come alphabetical (a mânca, bătrân,
+    // mulțumesc, mâine — byte order, so mulțumesc before mâine), the
+    // accepted alternative "thanks" counts for mulțumesc, and the srs
+    // keys keep the diacritics verbatim
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(&mut cmd, "to eat\nold\nthanks\ntomorrow\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("correct"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    let srs = scratch.home().join(".config/termocab/srs/test.txt");
+    let srs = std::fs::read_to_string(&srs).expect("srs file");
+    assert!(srs.contains("word a mânca box 2"), "{srs}");
+    assert!(srs.contains("word bătrân box 2"), "{srs}");
+    assert!(srs.contains("word mâine box 2"), "{srs}");
+    assert!(srs.contains("word mulțumesc box 2"), "{srs}");
 }
