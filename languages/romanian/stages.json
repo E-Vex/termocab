@@ -1,0 +1,1972 @@
+{
+  "language": "romanian",
+  "stages": [
+    {
+      "id": 1,
+      "title": "Greetings and Basics",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "salut",
+          "translation": "hello",
+          "accepted_translations": [
+            "hi"
+          ],
+          "pos": "interjection",
+          "example": "Salut, ce mai faci?"
+        },
+        {
+          "word": "bună ziua",
+          "translation": "good morning",
+          "accepted_translations": [
+            "good day"
+          ],
+          "pos": "phrase",
+          "example": "Bună ziua, domnule Popescu!"
+        },
+        {
+          "word": "bună seara",
+          "translation": "good evening",
+          "pos": "phrase",
+          "example": "Bună seara, aveți o masă liberă?"
+        },
+        {
+          "word": "la revedere",
+          "translation": "goodbye",
+          "accepted_translations": [
+            "bye"
+          ],
+          "pos": "phrase",
+          "example": "La revedere, până mâine!"
+        },
+        {
+          "word": "pa",
+          "translation": "bye",
+          "pos": "interjection",
+          "example": "Pa, ne vedem!"
+        },
+        {
+          "word": "mulțumesc",
+          "translation": "thank you",
+          "accepted_translations": [
+            "thanks"
+          ],
+          "pos": "interjection",
+          "example": "Mulțumesc foarte mult!"
+        },
+        {
+          "word": "te rog",
+          "translation": "please",
+          "pos": "interjection",
+          "example": "Un ceai, te rog."
+        },
+        {
+          "word": "da",
+          "translation": "yes",
+          "pos": "adverb",
+          "example": "Da, sigur."
+        },
+        {
+          "word": "nu",
+          "translation": "no",
+          "pos": "adverb",
+          "example": "Nu, mulțumesc."
+        },
+        {
+          "word": "îmi pare rău",
+          "translation": "sorry",
+          "accepted_translations": [
+            "excuse me",
+            "pardon"
+          ],
+          "pos": "interjection",
+          "example": "Îmi pare rău, unde este gara?"
+        },
+        {
+          "word": "încântat",
+          "translation": "nice to meet you",
+          "accepted_translations": [
+            "pleased to meet you"
+          ],
+          "pos": "interjection",
+          "example": "Încântat, sunt Andrei."
+        },
+        {
+          "word": "mă numesc",
+          "translation": "my name is",
+          "pos": "phrase",
+          "example": "Mă numesc Maria. Iar tu?"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "salut",
+          "answer": "hello",
+          "accepted_answers": [
+            "hi"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "bună ziua",
+          "answer": "good morning",
+          "accepted_answers": [
+            "good day"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "bună seara",
+          "answer": "good evening"
+        },
+        {
+          "type": "translation",
+          "prompt": "la revedere",
+          "answer": "goodbye",
+          "accepted_answers": [
+            "bye"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "pa",
+          "answer": "bye"
+        },
+        {
+          "type": "translation",
+          "prompt": "mulțumesc",
+          "answer": "thank you",
+          "accepted_answers": [
+            "thanks"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "te rog",
+          "answer": "please"
+        },
+        {
+          "type": "translation",
+          "prompt": "da",
+          "answer": "yes"
+        },
+        {
+          "type": "translation",
+          "prompt": "nu",
+          "answer": "no"
+        },
+        {
+          "type": "translation",
+          "prompt": "îmi pare rău",
+          "answer": "sorry",
+          "accepted_answers": [
+            "excuse me",
+            "pardon"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "încântat",
+          "answer": "nice to meet you",
+          "accepted_answers": [
+            "pleased to meet you"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "mă numesc",
+          "answer": "my name is"
+        },
+        {
+          "type": "translation",
+          "prompt": "hello",
+          "answer": "salut"
+        },
+        {
+          "type": "translation",
+          "prompt": "thank you",
+          "answer": "mulțumesc"
+        },
+        {
+          "type": "translation",
+          "prompt": "yes",
+          "answer": "da"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hello':",
+          "options": [
+            "salut",
+            "mulțumesc",
+            "la revedere",
+            "da"
+          ],
+          "answer": "salut"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'goodbye':",
+          "options": [
+            "la revedere",
+            "salut",
+            "bună ziua",
+            "te rog"
+          ],
+          "answer": "la revedere"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good morning':",
+          "options": [
+            "bună ziua",
+            "bună seara",
+            "mulțumesc",
+            "salut"
+          ],
+          "answer": "bună ziua"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good evening':",
+          "options": [
+            "bună seara",
+            "bună ziua",
+            "la revedere",
+            "încântat"
+          ],
+          "answer": "bună seara"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'please':",
+          "options": [
+            "te rog",
+            "mulțumesc",
+            "îmi pare rău",
+            "pa"
+          ],
+          "answer": "te rog"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'thank you':",
+          "options": [
+            "mulțumesc",
+            "te rog",
+            "încântat",
+            "da"
+          ],
+          "answer": "mulțumesc"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'yes':",
+          "options": [
+            "da",
+            "nu",
+            "salut",
+            "mulțumesc"
+          ],
+          "answer": "da"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sorry':",
+          "options": [
+            "îmi pare rău",
+            "mulțumesc",
+            "te rog",
+            "la revedere"
+          ],
+          "answer": "îmi pare rău"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, ce mai faci?",
+          "answer": "salut"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bună ___, domnule profesor!",
+          "answer": "ziua"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Un ceai, ___.",
+          "answer": "te rog"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, unde este gara?",
+          "answer": "îmi pare rău"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Încântat, ___ numesc Andrei.",
+          "answer": "mă"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La revedere, până ___!",
+          "answer": "mâine"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ce mai faci?",
+          "answer": "How are you?",
+          "accepted_answers": [
+            "How are you doing?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Sunt bine, mulțumesc.",
+          "answer": "I'm well, thank you.",
+          "accepted_answers": [
+            "I am well, thank you."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mă numesc Maria.",
+          "answer": "My name is Maria.",
+          "accepted_answers": [
+            "I'm Maria.",
+            "I am Maria."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Cum te numești?",
+          "answer": "What's your name?",
+          "accepted_answers": [
+            "What is your name?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mulțumesc, la revedere!",
+          "answer": "Thank you, goodbye!"
+        },
+        {
+          "type": "translation",
+          "prompt": "Încântat să te cunosc.",
+          "answer": "Nice to meet you."
+        },
+        {
+          "type": "translation",
+          "prompt": "Totul este în regulă.",
+          "answer": "Everything is fine.",
+          "accepted_answers": [
+            "All is well."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Îmi pare rău, sunt ocupat.",
+          "answer": "Sorry, I'm busy.",
+          "accepted_answers": [
+            "I am busy."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "People and Family",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "bărbat",
+          "translation": "man",
+          "pos": "noun",
+          "example": "Bărbatul citește un ziar."
+        },
+        {
+          "word": "femeie",
+          "translation": "woman",
+          "pos": "noun",
+          "example": "Femeia muncește în oraș."
+        },
+        {
+          "word": "băiat",
+          "translation": "boy",
+          "pos": "noun",
+          "example": "Băiatul joacă fotbal."
+        },
+        {
+          "word": "fată",
+          "translation": "girl",
+          "pos": "noun",
+          "example": "Fata desenează o casă."
+        },
+        {
+          "word": "prieten",
+          "translation": "friend",
+          "pos": "noun",
+          "example": "Prietenul meu vorbește românește."
+        },
+        {
+          "word": "familie",
+          "translation": "family",
+          "pos": "noun",
+          "example": "Iubesc familia mea."
+        },
+        {
+          "word": "mamă",
+          "translation": "mother",
+          "accepted_translations": [
+            "mom"
+          ],
+          "pos": "noun",
+          "example": "Mama mea gătește foarte bine."
+        },
+        {
+          "word": "tată",
+          "translation": "father",
+          "accepted_translations": [
+            "dad"
+          ],
+          "pos": "noun",
+          "example": "Tatăl meu lucrează mult."
+        },
+        {
+          "word": "frate",
+          "translation": "brother",
+          "pos": "noun",
+          "example": "Fratele meu are zece ani."
+        },
+        {
+          "word": "soră",
+          "translation": "sister",
+          "pos": "noun",
+          "example": "Sora mea locuiește în Cluj."
+        },
+        {
+          "word": "fiu",
+          "translation": "son",
+          "pos": "noun",
+          "example": "Fiul meu merge la școală."
+        },
+        {
+          "word": "fiică",
+          "translation": "daughter",
+          "pos": "noun",
+          "example": "Fiica mea iubește muzica."
+        },
+        {
+          "word": "copil",
+          "translation": "child",
+          "pos": "noun",
+          "example": "Copilul doarme acum."
+        },
+        {
+          "word": "oameni",
+          "translation": "people",
+          "pos": "noun",
+          "example": "Oamenii sunt prietenoși."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "bărbat",
+          "answer": "man"
+        },
+        {
+          "type": "translation",
+          "prompt": "femeie",
+          "answer": "woman"
+        },
+        {
+          "type": "translation",
+          "prompt": "băiat",
+          "answer": "boy"
+        },
+        {
+          "type": "translation",
+          "prompt": "fată",
+          "answer": "girl"
+        },
+        {
+          "type": "translation",
+          "prompt": "prieten",
+          "answer": "friend"
+        },
+        {
+          "type": "translation",
+          "prompt": "familie",
+          "answer": "family"
+        },
+        {
+          "type": "translation",
+          "prompt": "mamă",
+          "answer": "mother",
+          "accepted_answers": [
+            "mom"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "tată",
+          "answer": "father",
+          "accepted_answers": [
+            "dad"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "frate",
+          "answer": "brother"
+        },
+        {
+          "type": "translation",
+          "prompt": "soră",
+          "answer": "sister"
+        },
+        {
+          "type": "translation",
+          "prompt": "fiu",
+          "answer": "son"
+        },
+        {
+          "type": "translation",
+          "prompt": "fiică",
+          "answer": "daughter"
+        },
+        {
+          "type": "translation",
+          "prompt": "copil",
+          "answer": "child"
+        },
+        {
+          "type": "translation",
+          "prompt": "oameni",
+          "answer": "people"
+        },
+        {
+          "type": "translation",
+          "prompt": "family",
+          "answer": "familie"
+        },
+        {
+          "type": "translation",
+          "prompt": "boy",
+          "answer": "băiat"
+        },
+        {
+          "type": "translation",
+          "prompt": "friend",
+          "answer": "prieten"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'man':",
+          "options": [
+            "bărbat",
+            "femeie",
+            "băiat",
+            "prieten"
+          ],
+          "answer": "bărbat"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'woman':",
+          "options": [
+            "femeie",
+            "bărbat",
+            "fată",
+            "mamă"
+          ],
+          "answer": "femeie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'boy':",
+          "options": [
+            "băiat",
+            "fată",
+            "fiu",
+            "prieten"
+          ],
+          "answer": "băiat"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'girl':",
+          "options": [
+            "fată",
+            "băiat",
+            "femeie",
+            "fiică"
+          ],
+          "answer": "fată"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'family':",
+          "options": [
+            "familie",
+            "mamă",
+            "tată",
+            "frate"
+          ],
+          "answer": "familie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'brother':",
+          "options": [
+            "frate",
+            "soră",
+            "fiu",
+            "băiat"
+          ],
+          "answer": "frate"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'daughter':",
+          "options": [
+            "fiică",
+            "fiu",
+            "soră",
+            "fată"
+          ],
+          "answer": "fiică"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'friend':",
+          "options": [
+            "prieten",
+            "frate",
+            "tată",
+            "oameni"
+          ],
+          "answer": "prieten"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Băiat___ citește ziarul.",
+          "answer": "ul"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Fat___ joacă în parc.",
+          "answer": "a"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Copil___ doarme acum.",
+          "answer": "ul"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mam___ gătește cina.",
+          "answer": "a"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tat___ lucrează mult.",
+          "answer": "a"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Frate___ locuiește aici.",
+          "answer": "le"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sor___ mea locuiește aici.",
+          "answer": "a"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Prieten___ meu vorbește românește.",
+          "answer": "ul"
+        },
+        {
+          "type": "translation",
+          "prompt": "Aceasta este familia mea.",
+          "answer": "This is my family."
+        },
+        {
+          "type": "translation",
+          "prompt": "Sora mea se numește Maria.",
+          "answer": "My sister's name is Maria."
+        },
+        {
+          "type": "translation",
+          "prompt": "Am un frate și o soră.",
+          "answer": "I have a brother and a sister."
+        },
+        {
+          "type": "translation",
+          "prompt": "Cum se numește tatăl tău?",
+          "answer": "What's your father's name?",
+          "accepted_answers": [
+            "What is your father's name?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Familia mea este mare.",
+          "answer": "My family is big."
+        },
+        {
+          "type": "translation",
+          "prompt": "Băiatul citește o carte.",
+          "answer": "The boy is reading a book."
+        },
+        {
+          "type": "translation",
+          "prompt": "Prietenul meu locuiește în București.",
+          "answer": "My friend lives in Bucharest."
+        },
+        {
+          "type": "translation",
+          "prompt": "Copilul joacă în parc.",
+          "answer": "The child is playing in the park."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Numbers and Time",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "unu",
+          "translation": "one",
+          "pos": "numeral",
+          "example": "Unu, doi, trei!"
+        },
+        {
+          "word": "doi",
+          "translation": "two",
+          "pos": "numeral",
+          "example": "Am doi bilete."
+        },
+        {
+          "word": "trei",
+          "translation": "three",
+          "pos": "numeral",
+          "example": "Am trei întrebări."
+        },
+        {
+          "word": "patru",
+          "translation": "four",
+          "pos": "numeral",
+          "example": "Masa are patru picioare."
+        },
+        {
+          "word": "cinci",
+          "translation": "five",
+          "pos": "numeral",
+          "example": "Am cinci minute."
+        },
+        {
+          "word": "șase",
+          "translation": "six",
+          "pos": "numeral",
+          "example": "Casa are șase ferestre."
+        },
+        {
+          "word": "șapte",
+          "translation": "seven",
+          "pos": "numeral",
+          "example": "Săptămâna are șapte zile."
+        },
+        {
+          "word": "opt",
+          "translation": "eight",
+          "pos": "numeral",
+          "example": "Păianjenul are opt picioare."
+        },
+        {
+          "word": "nouă",
+          "translation": "nine",
+          "pos": "numeral",
+          "example": "Sora mea are nouă ani."
+        },
+        {
+          "word": "zece",
+          "translation": "ten",
+          "pos": "numeral",
+          "example": "Am zece degete."
+        },
+        {
+          "word": "zi",
+          "translation": "day",
+          "pos": "noun",
+          "example": "În fiecare zi învăț ceva nou."
+        },
+        {
+          "word": "oră",
+          "translation": "hour",
+          "pos": "noun",
+          "example": "Aștept de o oră."
+        },
+        {
+          "word": "vineri",
+          "translation": "Friday",
+          "pos": "noun",
+          "example": "Vineri mergem la cinema."
+        },
+        {
+          "word": "azi",
+          "translation": "today",
+          "pos": "adverb",
+          "example": "Azi este o zi frumoasă."
+        },
+        {
+          "word": "mâine",
+          "translation": "tomorrow",
+          "pos": "adverb",
+          "example": "Mâine este sâmbătă."
+        },
+        {
+          "word": "ieri",
+          "translation": "yesterday",
+          "pos": "adverb",
+          "example": "Ieri am fost acasă."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "unu",
+          "answer": "one"
+        },
+        {
+          "type": "translation",
+          "prompt": "doi",
+          "answer": "two"
+        },
+        {
+          "type": "translation",
+          "prompt": "trei",
+          "answer": "three"
+        },
+        {
+          "type": "translation",
+          "prompt": "patru",
+          "answer": "four"
+        },
+        {
+          "type": "translation",
+          "prompt": "cinci",
+          "answer": "five"
+        },
+        {
+          "type": "translation",
+          "prompt": "șase",
+          "answer": "six"
+        },
+        {
+          "type": "translation",
+          "prompt": "șapte",
+          "answer": "seven"
+        },
+        {
+          "type": "translation",
+          "prompt": "opt",
+          "answer": "eight"
+        },
+        {
+          "type": "translation",
+          "prompt": "nouă",
+          "answer": "nine"
+        },
+        {
+          "type": "translation",
+          "prompt": "zece",
+          "answer": "ten"
+        },
+        {
+          "type": "translation",
+          "prompt": "zi",
+          "answer": "day"
+        },
+        {
+          "type": "translation",
+          "prompt": "oră",
+          "answer": "hour"
+        },
+        {
+          "type": "translation",
+          "prompt": "vineri",
+          "answer": "Friday"
+        },
+        {
+          "type": "translation",
+          "prompt": "azi",
+          "answer": "today"
+        },
+        {
+          "type": "translation",
+          "prompt": "mâine",
+          "answer": "tomorrow"
+        },
+        {
+          "type": "translation",
+          "prompt": "ieri",
+          "answer": "yesterday"
+        },
+        {
+          "type": "translation",
+          "prompt": "seven",
+          "answer": "șapte"
+        },
+        {
+          "type": "translation",
+          "prompt": "today",
+          "answer": "azi"
+        },
+        {
+          "type": "translation",
+          "prompt": "tomorrow",
+          "answer": "mâine"
+        },
+        {
+          "type": "translation",
+          "prompt": "Friday",
+          "answer": "vineri"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'one':",
+          "options": [
+            "unu",
+            "doi",
+            "trei",
+            "zece"
+          ],
+          "answer": "unu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'two':",
+          "options": [
+            "doi",
+            "trei",
+            "patru",
+            "unu"
+          ],
+          "answer": "doi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'three':",
+          "options": [
+            "trei",
+            "doi",
+            "cinci",
+            "șapte"
+          ],
+          "answer": "trei"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'five':",
+          "options": [
+            "cinci",
+            "patru",
+            "șase",
+            "opt"
+          ],
+          "answer": "cinci"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'ten':",
+          "options": [
+            "zece",
+            "nouă",
+            "opt",
+            "șase"
+          ],
+          "answer": "zece"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'day':",
+          "options": [
+            "zi",
+            "oră",
+            "azi",
+            "vineri"
+          ],
+          "answer": "zi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hour':",
+          "options": [
+            "oră",
+            "zi",
+            "mâine",
+            "unu"
+          ],
+          "answer": "oră"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'yesterday':",
+          "options": [
+            "ieri",
+            "azi",
+            "mâine",
+            "zi"
+          ],
+          "answer": "ieri"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Număr: unu, doi, trei, patru, ___.",
+          "answer": "cinci"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ce ___ este?",
+          "answer": "oră"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Azi este ___.",
+          "answer": "vineri"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ merg la școală.",
+          "answer": "mâine"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ este luni.",
+          "answer": "azi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ am fost acasă.",
+          "answer": "ieri"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Unu, doi, ___.",
+          "answer": "trei"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sora mea are ___ ani.",
+          "answer": "zece"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ce zi este azi?",
+          "answer": "What day is it today?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Azi este luni.",
+          "answer": "Today is Monday."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mâine este marți.",
+          "answer": "Tomorrow is Tuesday."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ieri a fost duminică.",
+          "answer": "Yesterday was Sunday."
+        },
+        {
+          "type": "translation",
+          "prompt": "Este ora cinci.",
+          "answer": "It's five o'clock.",
+          "accepted_answers": [
+            "It is five o'clock."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ne vedem mâine!",
+          "answer": "See you tomorrow!"
+        },
+        {
+          "type": "translation",
+          "prompt": "Trenul pleacă acum.",
+          "answer": "The train is leaving now.",
+          "accepted_answers": [
+            "The train leaves now."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Fratele meu are nouă ani.",
+          "answer": "My brother is nine years old."
+        },
+        {
+          "type": "translation",
+          "prompt": "I have two brothers.",
+          "answer": "Am doi frați."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's five o'clock.",
+          "answer": "Este ora cinci."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Everyday Verbs",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "a fi",
+          "translation": "to be",
+          "pos": "verb",
+          "example": "A fi sau a nu fi."
+        },
+        {
+          "word": "a avea",
+          "translation": "to have",
+          "pos": "verb",
+          "example": "Am o familie mare."
+        },
+        {
+          "word": "a vrea",
+          "translation": "to want",
+          "pos": "verb",
+          "example": "Vreau o cafea, te rog."
+        },
+        {
+          "word": "a mânca",
+          "translation": "to eat",
+          "pos": "verb",
+          "example": "Vreau să mănânc o pizza."
+        },
+        {
+          "word": "a bea",
+          "translation": "to drink",
+          "pos": "verb",
+          "example": "Beau cafea dimineața."
+        },
+        {
+          "word": "a vorbi",
+          "translation": "to speak",
+          "pos": "verb",
+          "example": "Vorbesc puțin românește."
+        },
+        {
+          "word": "a citi",
+          "translation": "to read",
+          "pos": "verb",
+          "example": "Citesc o carte interesantă."
+        },
+        {
+          "word": "a scrie",
+          "translation": "to write",
+          "pos": "verb",
+          "example": "Scriu o scrisoare bunicii."
+        },
+        {
+          "word": "a merge",
+          "translation": "to go",
+          "accepted_translations": [
+            "to walk"
+          ],
+          "pos": "verb",
+          "example": "Mergem la teatru."
+        },
+        {
+          "word": "a dormi",
+          "translation": "to sleep",
+          "pos": "verb",
+          "example": "Bebe doarme liniștit."
+        },
+        {
+          "word": "a lucra",
+          "translation": "to work",
+          "pos": "verb",
+          "example": "Lucrez în București."
+        },
+        {
+          "word": "a învăța",
+          "translation": "to study",
+          "accepted_translations": [
+            "to learn"
+          ],
+          "pos": "verb",
+          "example": "Învăț pentru examen."
+        },
+        {
+          "word": "a cânta",
+          "translation": "to sing",
+          "pos": "verb",
+          "example": "Cânt la pian."
+        },
+        {
+          "word": "a juca",
+          "translation": "to play",
+          "pos": "verb",
+          "example": "Joc fotbal în weekend."
+        },
+        {
+          "word": "a vedea",
+          "translation": "to see",
+          "pos": "verb",
+          "example": "Te văd mâine."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "a fi",
+          "answer": "to be"
+        },
+        {
+          "type": "translation",
+          "prompt": "a avea",
+          "answer": "to have"
+        },
+        {
+          "type": "translation",
+          "prompt": "a vrea",
+          "answer": "to want"
+        },
+        {
+          "type": "translation",
+          "prompt": "a mânca",
+          "answer": "to eat"
+        },
+        {
+          "type": "translation",
+          "prompt": "a bea",
+          "answer": "to drink"
+        },
+        {
+          "type": "translation",
+          "prompt": "a vorbi",
+          "answer": "to speak"
+        },
+        {
+          "type": "translation",
+          "prompt": "a citi",
+          "answer": "to read"
+        },
+        {
+          "type": "translation",
+          "prompt": "a scrie",
+          "answer": "to write"
+        },
+        {
+          "type": "translation",
+          "prompt": "a merge",
+          "answer": "to go",
+          "accepted_answers": [
+            "to walk"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "a dormi",
+          "answer": "to sleep"
+        },
+        {
+          "type": "translation",
+          "prompt": "a lucra",
+          "answer": "to work"
+        },
+        {
+          "type": "translation",
+          "prompt": "a învăța",
+          "answer": "to study",
+          "accepted_answers": [
+            "to learn"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "a cânta",
+          "answer": "to sing"
+        },
+        {
+          "type": "translation",
+          "prompt": "a juca",
+          "answer": "to play"
+        },
+        {
+          "type": "translation",
+          "prompt": "a vedea",
+          "answer": "to see"
+        },
+        {
+          "type": "translation",
+          "prompt": "to speak",
+          "answer": "a vorbi"
+        },
+        {
+          "type": "translation",
+          "prompt": "to want",
+          "answer": "a vrea"
+        },
+        {
+          "type": "translation",
+          "prompt": "to drink",
+          "answer": "a bea"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to be':",
+          "options": [
+            "a fi",
+            "a avea",
+            "a merge",
+            "a dormi"
+          ],
+          "answer": "a fi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to eat':",
+          "options": [
+            "a mânca",
+            "a bea",
+            "a citi",
+            "a juca"
+          ],
+          "answer": "a mânca"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to read':",
+          "options": [
+            "a citi",
+            "a scrie",
+            "a vorbi",
+            "a vedea"
+          ],
+          "answer": "a citi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to write':",
+          "options": [
+            "a scrie",
+            "a citi",
+            "a mânca",
+            "a lucra"
+          ],
+          "answer": "a scrie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to sleep':",
+          "options": [
+            "a dormi",
+            "a fi",
+            "a bea",
+            "a merge"
+          ],
+          "answer": "a dormi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to work':",
+          "options": [
+            "a lucra",
+            "a citi",
+            "a dormi",
+            "a vrea"
+          ],
+          "answer": "a lucra"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to study':",
+          "options": [
+            "a învăța",
+            "a vorbi",
+            "a cânta",
+            "a juca"
+          ],
+          "answer": "a învăța"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to play':",
+          "options": [
+            "a juca",
+            "a vedea",
+            "a scrie",
+            "a fi"
+          ],
+          "answer": "a juca"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Pot ___ românește.",
+          "answer": "vorbi",
+          "accepted_answers": [
+            "a vorbi"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Pot ___ o carte.",
+          "answer": "citi",
+          "accepted_answers": [
+            "a citi"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Poți ___ o scrisoare?",
+          "answer": "scrie",
+          "accepted_answers": [
+            "a scrie"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Putem ___ o pizza.",
+          "answer": "mânca",
+          "accepted_answers": [
+            "a mânca"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Pot ___ apă.",
+          "answer": "bea",
+          "accepted_answers": [
+            "a bea"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nu pot ___ noaptea.",
+          "answer": "dormi",
+          "accepted_answers": [
+            "a dormi"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Poți ___ cu mine?",
+          "answer": "merge",
+          "accepted_answers": [
+            "a merge"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Copiii pot ___ în parc.",
+          "answer": "juca",
+          "accepted_answers": [
+            "a juca"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vorbiți engleza?",
+          "answer": "Do you speak English?"
+        },
+        {
+          "type": "translation",
+          "prompt": "De unde ești?",
+          "answer": "Where are you from?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Mâine merg la Cluj.",
+          "answer": "I'm going to Cluj tomorrow.",
+          "accepted_answers": [
+            "I am going to Cluj tomorrow."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Seara citesc o carte.",
+          "answer": "In the evening I read a book."
+        },
+        {
+          "type": "translation",
+          "prompt": "Azi lucrez mult.",
+          "answer": "I'm working a lot today.",
+          "accepted_answers": [
+            "I am working a lot today.",
+            "I work a lot today."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mergi și tu?",
+          "answer": "Are you going too?",
+          "accepted_answers": [
+            "Are you coming too?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Nu înțeleg.",
+          "answer": "I don't understand.",
+          "accepted_answers": [
+            "I do not understand."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ce vrei să bei?",
+          "answer": "What do you want to drink?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Învăț româna.",
+          "answer": "I'm learning Romanian.",
+          "accepted_answers": [
+            "I am learning Romanian."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vreau să mănânc o pizza.",
+          "answer": "I want to eat a pizza."
+        },
+        {
+          "type": "translation",
+          "prompt": "Dorm opt ore în fiecare noapte.",
+          "answer": "I sleep eight hours every night."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Describing and Asking",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "mare",
+          "translation": "big",
+          "accepted_translations": [
+            "large"
+          ],
+          "pos": "adjective",
+          "example": "Orașul este mare."
+        },
+        {
+          "word": "mic",
+          "translation": "small",
+          "accepted_translations": [
+            "little"
+          ],
+          "pos": "adjective",
+          "example": "Am o cameră mică."
+        },
+        {
+          "word": "lung",
+          "translation": "long",
+          "pos": "adjective",
+          "example": "Ziua este lungă în vară."
+        },
+        {
+          "word": "scurt",
+          "translation": "short",
+          "pos": "adjective",
+          "example": "Părul lui este scurt."
+        },
+        {
+          "word": "bun",
+          "translation": "good",
+          "accepted_translations": [
+            "nice"
+          ],
+          "pos": "adjective",
+          "example": "Supa este bună."
+        },
+        {
+          "word": "rău",
+          "translation": "bad",
+          "pos": "adjective",
+          "example": "Filmul este rău."
+        },
+        {
+          "word": "nou",
+          "translation": "new",
+          "pos": "adjective",
+          "example": "Am o bicicletă nouă."
+        },
+        {
+          "word": "bătrân",
+          "translation": "old",
+          "pos": "adjective",
+          "example": "Omul este bătrân."
+        },
+        {
+          "word": "fericit",
+          "translation": "happy",
+          "pos": "adjective",
+          "example": "Copiii sunt fericiti."
+        },
+        {
+          "word": "trist",
+          "translation": "sad",
+          "pos": "adjective",
+          "example": "Este o poveste tristă."
+        },
+        {
+          "word": "ce",
+          "translation": "what",
+          "pos": "question word",
+          "example": "Ce faci?"
+        },
+        {
+          "word": "cine",
+          "translation": "who",
+          "pos": "question word",
+          "example": "Cine este el?"
+        },
+        {
+          "word": "unde",
+          "translation": "where",
+          "pos": "question word",
+          "example": "Unde locuiești?"
+        },
+        {
+          "word": "când",
+          "translation": "when",
+          "pos": "question word",
+          "example": "Când începe filmul?"
+        },
+        {
+          "word": "de ce",
+          "translation": "why",
+          "pos": "question word",
+          "example": "De ce ești trist?"
+        },
+        {
+          "word": "cum",
+          "translation": "how",
+          "pos": "question word",
+          "example": "Cum este vremea?"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "mare",
+          "answer": "big",
+          "accepted_answers": [
+            "large"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "mic",
+          "answer": "small",
+          "accepted_answers": [
+            "little"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "lung",
+          "answer": "long"
+        },
+        {
+          "type": "translation",
+          "prompt": "scurt",
+          "answer": "short"
+        },
+        {
+          "type": "translation",
+          "prompt": "bun",
+          "answer": "good",
+          "accepted_answers": [
+            "nice"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "rău",
+          "answer": "bad"
+        },
+        {
+          "type": "translation",
+          "prompt": "nou",
+          "answer": "new"
+        },
+        {
+          "type": "translation",
+          "prompt": "bătrân",
+          "answer": "old"
+        },
+        {
+          "type": "translation",
+          "prompt": "fericit",
+          "answer": "happy"
+        },
+        {
+          "type": "translation",
+          "prompt": "trist",
+          "answer": "sad"
+        },
+        {
+          "type": "translation",
+          "prompt": "ce",
+          "answer": "what"
+        },
+        {
+          "type": "translation",
+          "prompt": "cine",
+          "answer": "who"
+        },
+        {
+          "type": "translation",
+          "prompt": "unde",
+          "answer": "where"
+        },
+        {
+          "type": "translation",
+          "prompt": "când",
+          "answer": "when"
+        },
+        {
+          "type": "translation",
+          "prompt": "de ce",
+          "answer": "why"
+        },
+        {
+          "type": "translation",
+          "prompt": "cum",
+          "answer": "how"
+        },
+        {
+          "type": "translation",
+          "prompt": "where",
+          "answer": "unde"
+        },
+        {
+          "type": "translation",
+          "prompt": "what",
+          "answer": "ce"
+        },
+        {
+          "type": "translation",
+          "prompt": "why",
+          "answer": "de ce"
+        },
+        {
+          "type": "translation",
+          "prompt": "how",
+          "answer": "cum"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'big':",
+          "options": [
+            "mare",
+            "mic",
+            "lung",
+            "nou"
+          ],
+          "answer": "mare"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'small':",
+          "options": [
+            "mic",
+            "mare",
+            "scurt",
+            "bun"
+          ],
+          "answer": "mic"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good':",
+          "options": [
+            "bun",
+            "rău",
+            "nou",
+            "trist"
+          ],
+          "answer": "bun"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'new':",
+          "options": [
+            "nou",
+            "bătrân",
+            "mare",
+            "mic"
+          ],
+          "answer": "nou"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'old':",
+          "options": [
+            "bătrân",
+            "nou",
+            "scurt",
+            "lung"
+          ],
+          "answer": "bătrân"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'happy':",
+          "options": [
+            "fericit",
+            "trist",
+            "bun",
+            "rău"
+          ],
+          "answer": "fericit"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'where':",
+          "options": [
+            "unde",
+            "când",
+            "ce",
+            "cum"
+          ],
+          "answer": "unde"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'when':",
+          "options": [
+            "când",
+            "unde",
+            "cine",
+            "ce"
+          ],
+          "answer": "când"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ locuiești?",
+          "answer": "unde"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ este asta?",
+          "answer": "ce"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ începe filmul?",
+          "answer": "când"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Casa este ___.",
+          "answer": "mare"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Filmul este ___.",
+          "answer": "lung"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Băiatul este ___.",
+          "answer": "trist"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bărbatul este ___.",
+          "answer": "bătrân"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ești trist?",
+          "answer": "de ce"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ce faci diseară?",
+          "answer": "What are you doing tonight?"
+        },
+        {
+          "type": "translation",
+          "prompt": "De ce înveți românește?",
+          "answer": "Why are you learning Romanian?",
+          "accepted_answers": [
+            "Why are you studying Romanian?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Pizza aceasta este bună.",
+          "answer": "This pizza is good."
+        },
+        {
+          "type": "translation",
+          "prompt": "Orașul acesta este mare.",
+          "answer": "This city is big."
+        },
+        {
+          "type": "translation",
+          "prompt": "Telefonul meu este nou.",
+          "answer": "My phone is new."
+        },
+        {
+          "type": "translation",
+          "prompt": "Sunt foarte fericit.",
+          "answer": "I'm very happy.",
+          "accepted_answers": [
+            "I am very happy."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Iarna în România este lungă.",
+          "answer": "Winter in Romania is long."
+        },
+        {
+          "type": "translation",
+          "prompt": "Aceasta este o poveste scurtă.",
+          "answer": "This is a short story."
+        },
+        {
+          "type": "translation",
+          "prompt": "Unde este toaleta?",
+          "answer": "Where is the bathroom?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Cine este acesta?",
+          "answer": "Who is this?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Unde ești?",
+          "answer": "Where are you?"
+        },
+        {
+          "type": "translation",
+          "prompt": "De ce ești trist?",
+          "answer": "Why are you sad?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Cafeaua este bună.",
+          "answer": "The coffee is good."
+        }
+      ]
+    }
+  ]
+}
