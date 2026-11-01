@@ -7,9 +7,11 @@ reviews, streaks — fully offline, fully local, no account, no network.
 Plain text everywhere: content is JSON, your progress is a file you can
 `cat`. UX modeled on git — direct subcommands, no menus.
 
-Two courses ship today: French (five stages, 73 words, 177
-exercises) and Spanish (five stages, 73 words, 197 exercises) — same
-engine, same rules, same forgiving grading for both.
+Three courses ship today: French (five stages, 73 words, 177
+exercises), Spanish (five stages, 73 words, 197 exercises) and German
+(five stages, 73 words, 216 exercises — nouns with their articles,
+modal-verb drills, umlauts and the sharp s) — same engine, same rules,
+same forgiving grading for all of them.
 
 ## Install & run
 
@@ -17,6 +19,8 @@ engine, same rules, same forgiving grading for both.
 cargo install --path .
 termocab start french
 ```
+
+(then try `termocab start german`)
 
 Content is looked up in this order (first hit wins):
 
@@ -58,9 +62,9 @@ color everywhere (no-color.org).
 
 ## Content format
 
-One `stages.json` per language — see `languages/french/stages.json` or
-`languages/spanish/stages.json` for full examples and `HANDOFF.md` §5 for
-the rules. Quick sketch:
+One `stages.json` per language — see `languages/german/stages.json`
+or `languages/spanish/stages.json` for full examples and `HANDOFF.md`
+§5 for the rules. Quick sketch:
 
 ```json
 {
@@ -87,8 +91,9 @@ the rules. Quick sketch:
 ```
 
 Grading forgives case, whitespace, edge punctuation (including
-Spanish's inverted ¿ ¡) and missing accents (an accent-only miss counts
-as correct and shows the accented form);
+Spanish's inverted ¿ ¡), missing accents (an accent-only miss counts
+as correct and shows the accented form — and German's `ß` opens like a
+ligature, so `strasse` counts with `Straße` as the hint);
 `accepted_answers` lists alternative correct spellings, and
 `accepted_translations` on a vocabulary entry lists alternative correct
 translations a review will accept — reviewing `salut` with "hello" is
