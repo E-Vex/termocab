@@ -7,7 +7,9 @@ reviews, streaks — fully offline, fully local, no account, no network.
 Plain text everywhere: content is JSON, your progress is a file you can
 `cat`. UX modeled on git — direct subcommands, no menus.
 
-The first course is French: five stages, 73 words, 177 exercises.
+Two courses ship today: French (five stages, 73 words, 177
+exercises) and Spanish (five stages, 73 words, 197 exercises) — same
+engine, same rules, same forgiving grading for both.
 
 ## Install & run
 
@@ -56,8 +58,9 @@ color everywhere (no-color.org).
 
 ## Content format
 
-One `stages.json` per language — see `languages/french/stages.json` for a
-full example and `HANDOFF.md` §5 for the rules. Quick sketch:
+One `stages.json` per language — see `languages/french/stages.json` or
+`languages/spanish/stages.json` for full examples and `HANDOFF.md` §5 for
+the rules. Quick sketch:
 
 ```json
 {
@@ -83,8 +86,9 @@ full example and `HANDOFF.md` §5 for the rules. Quick sketch:
 }
 ```
 
-Grading forgives case, whitespace, edge punctuation and missing accents
-(an accent-only miss counts as correct and shows the accented form);
+Grading forgives case, whitespace, edge punctuation (including
+Spanish's inverted ¿ ¡) and missing accents (an accent-only miss counts
+as correct and shows the accented form);
 `accepted_answers` lists alternative correct spellings, and
 `accepted_translations` on a vocabulary entry lists alternative correct
 translations a review will accept — reviewing `salut` with "hello" is

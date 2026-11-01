@@ -1,6 +1,6 @@
 # HANDOFF — termocab
 
-> This document is written for an AI coding agent taking over full development of **termocab**. It consolidates every decision made during the planning/bootstrap phase (Aug 2026), the MVP implementation session (Oct 2026), the review-fix session (Oct 2026), and the usage-review session (Oct 2026) so no prior conversation context is needed to continue the project. **The repository itself is the source of truth** — if anything here conflicts with what you find in the actual code, trust the code, and update this file to match.
+> This document is written for an AI coding agent taking over full development of **termocab**. It consolidates every decision made during the planning/bootstrap phase (Aug 2026), the MVP implementation session (Oct 2026), the review-fix session (Oct 2026), the usage-review session (Oct 2026), and the second-language session (Nov 2026) so no prior conversation context is needed to continue the project. **The repository itself is the source of truth** — if anything here conflicts with what you find in the actual code, trust the code, and update this file to match.
 
 ## 1. What this is
 
@@ -24,6 +24,8 @@ The **review-fix session (Oct 2026)** hardened everything: content validation at
 
 The **usage-review session (Oct 2026)** closed the loop on real usage: broken pipes end quietly like cat and git (D6), reviews accept alternative translations via `accepted_translations` (D8), stage exercises shuffle by default with `--no-shuffle`/`--seed <n>` (D7), feedback turns green/red on a terminal behind `$NO_COLOR`, and a `stats` verb charts boxes, review load and activity as plain-text sparklines.
 
+The **second-language session (Nov 2026)** shipped Spanish as the second course — the usage review's standing top priority — and proved the engine language-agnostic rather than French-agnostic: the accent table now covers the whole Latin-1 Supplement set (not 16 French letters), Spanish's inverted `¡` `¿` are edge punctuation, and `ß` opens like a ligature (D9). Both shipped courses are pinned by a binary-level `check` test in CI.
+
 ```
 termocab/
 ├── Cargo.toml              # deps: serde (derive), serde_json — nothing else
@@ -33,8 +35,10 @@ termocab/
 ├── LICENSE                 # MIT
 ├── README.md
 ├── languages/
-│   └── french/
-│       └── stages.json     # real course: 5 stages, 73 words, 177 exercises
+│   ├── french/
+│   │   └── stages.json     # first course: 5 stages, 73 words, 177 exercises
+│   └── spanish/
+│       └── stages.json     # second course (D9): 5 stages, 73 words, 197 exercises
 ├── tests/
 │   └── cli.rs              # binary-level integration tests (subprocess, hermetic env)
 └── src/
@@ -59,7 +63,7 @@ termocab/
     └── testenv.rs          # #[cfg(test)]-only: shared env lock + RAII temp dirs
 ```
 
-Verified: `cargo build` warning-free, `cargo clippy --all-targets -- -D warnings` clean, `cargo test` green (93 unit + 22 binary-level integration tests), and a scripted playthrough of the full French course passes end to end (5/5 stages, streak, replay, 73-card review). CI (§11) runs all of it on ubuntu and macOS.
+Verified: `cargo build` warning-free, `cargo clippy --all-targets -- -D warnings` clean, `cargo test` green (94 unit + 24 binary-level integration tests), a scripted playthrough of the full French course passes end to end (5/5 stages, streak, replay, 73-card review), and a scripted playthrough of the full Spanish course does the same with deliberately accent-stripped answers (5/5 stages, 73/73 review, every card promoted to box 2). CI (§11) runs all of it on ubuntu and macOS.
 
 ## 3. Architecture — read this before writing any code
 
@@ -113,7 +117,7 @@ pub enum Grade { Correct, CorrectWithHint(String), Incorrect }
 
 Engine API: `Exercise::prompt()`, `Exercise::answer()`, `Exercise::accepted_answers()`, `Exercise::grade(attempt) -> Grade` and `Exercise::is_correct(attempt)`; `Stage::is_completed_by(correct_count)` implementing the 80% rule with integer math via `STAGE_PASS_PERCENT`.
 
-Grading (settled in the review-fix session, decision D1): both sides go through `normalize_strict` — trim, lowercase, collapse internal whitespace, strip leading/trailing punctuation (`. ? ! , ;`), fold apostrophes (`’` → `'`), and fold Unicode composition via a hand-written 16-entry French accent table (àâäçéèêëîïôöùûüÿ decompose to base + combining mark, so precomposed `é` equals macOS's `e` + U+0301). A second, loose pass drops the combining marks and opens the œ/æ ligatures: an accent-only mismatch is **correct**, and `grade` returns `CorrectWithHint` carrying the properly accented form, which the session prints as `correct — watch the accents: étudiant`. `accepted_answers` (optional field on translation and fill_blank, absent in old files) lists alternative correct spellings — contractions ("I'm a student"), gendered forms ("Je suis étudiante").
+Grading (settled in the review-fix session, decision D1; generalized by D9): both sides go through `normalize_strict` — trim, lowercase, collapse internal whitespace, strip leading/trailing punctuation (`. ? ! , ;` and Spanish's inverted `¡ ¿`), fold apostrophes (`’` → `'`), and fold Unicode composition via a hand-written 27-entry Latin-1 Supplement accent table (à á â ã ä å ç é è ê ë ì í î ï ñ ò ó ô õ ö ù ú û ü ý ÿ decompose to base + combining mark, so precomposed `é` equals macOS's `e` + U+0301 — the whole Western European set, not a French dialect). A second, loose pass drops the combining marks and opens the œ/æ/ß ligatures: an accent-only mismatch is **correct**, and `grade` returns `CorrectWithHint` carrying the properly accented form, which the session prints as `correct — watch the accents: étudiant`. Letters that are letters in their own right (`ø`, `þ`, `ð`) deliberately do not fold — `smør` is not `smor`. `accepted_answers` (optional field on translation and fill_blank, absent in old files) lists alternative correct spellings — contractions ("I'm a student"), gendered forms ("Je suis étudiante").
 
 No `#[derive(Serialize/Deserialize)]` here, deliberately — that would leak storage-awareness into `engine/`. The JSON-shaped mirror types live in `content/mod.rs` and get converted into these via `.into_engine()`.
 
@@ -201,6 +205,7 @@ Rules:
 - **Shuffled stage exercises** (usage-review D7): stages present their exercises in a seeded-shuffled order by default — memorizing positions is not vocabulary. `--no-shuffle` keeps the authored order; `--seed <n>` pins the order (reproducible runs, tests, comparisons). The permutation is a hand-written Fisher–Yates over SplitMix64 (no `rand`, §6); the seed defaults to OS entropy (nanos ^ pid) resolved at the CLI edge, like the clock. Reviews are deliberately **not** shuffled: due-date order is the documented deterministic order.
 - **Alternative translations in review** (usage-review D8): vocabulary entries take an optional `accepted_translations` array, the exact pattern of `accepted_answers` on exercises — a review of `salut` accepts both "hi" and "hello", through the same forgiving grading (case, accents, punctuation) as the primary translation. `list-words` shows the alternatives as `hi (also: hello)`.
 - **Color** (usage-review): session feedback is green (correct) / red (not quite) **only when stdout is a terminal** and `$NO_COLOR` is unset or empty (no-color.org, to the letter — empty does not count as set). Piped output never contains escape codes. Decided at the CLI edge (`std::io::IsTerminal`, no dependency), passed into the session as a value.
+- **Language-agnostic normalization** (second-language session, D9): the accent table is the accented-letter set of the whole Latin-1 Supplement — 27 lowercase entries covering Western Europe (Spanish, German, Italian, Portuguese, Catalan, Icelandic…), not a French dialect; `¡` and `¿` join the edge-punctuation set (`hola` is `¡Hola!`); `ß` opens to `ss` in the loose pass exactly like `œ` → `oe`. Letters that are letters in their own right (`ø`, `þ`, `ð`) never fold. When a language outside the set arrives (Polish, Romanian, …), extend the table with Latin Extended-A entries — same pattern, still no Unicode-normalization dependency.
 - CLI is git-style direct subcommands only, named **start** (with `--no-shuffle`/`--seed <n>`, D7), **review**, **list-words**, **progress**, **streak**, **stats** (usage-review: boxes, 14-day review load and activity as plain-text Unicode sparklines, no color), **add-lang** (with `--force` to replace an existing language), **check**, **help**. No interactive/numbered-menu mode anywhere. Exit codes: 2 usage, 1 runtime, 0 success, 141 broken pipe (D6).
 
 ## 8. MVP scope — now implemented
@@ -225,13 +230,14 @@ Known rough edges (fine to leave, fine to fix): none currently — the broken-pi
 
 ## 10. Suggested next steps
 
-**Content is the product**: the engine, validator and installer are ready for far more than five stages — the usage review's standing priorities are (1) a second language to prove the engine is language-agnostic, and (2) growing French, since every new stage completion feeds the srs automatically. `check` + `add-lang` already make external authoring safe; a community "content packs" flow (a repo of stages.json files) is the natural evolution of those two verbs — decide the shape when a second author shows up.
+**Content is the product**: the second language (Spanish) is shipped and the engine is now provably language-agnostic (D9) — `check` + `add-lang` make outside authoring safe, and a community "content packs" flow (a repo of stages.json files) is the natural evolution of those two verbs. The standing priorities: (1) growing the two shipped courses, since every new stage completion feeds the srs automatically, and (2) a third language — German or Italian need **no engine change** (the Latin-1 set already covers them), while Polish or Romanian would force the Latin Extended-A extension of D9's table.
 
-1. A second language to prove the engine is language-agnostic (`check` + `add-lang` make authoring easy).
-2. More French stages (each new completion feeds the srs automatically).
+1. More French and Spanish stages (each new completion feeds the srs automatically).
+2. A third language: German or Italian are pure content; Polish/Romanian extend the accent table (§4).
 3. ncurses TUI as an additive alternative frontend over `session::Terminal`.
 4. SQLite storage layer replacing `storage/` (only that module changes).
 5. Review session caps / ordering once content is large enough to need it (see §9).
+6. Content packs — a repo of community stages.json files validated by `check`.
 
 ## 11. Code quality bar
 
@@ -241,9 +247,10 @@ Every change should hold up against: Separation of Concerns, Single Responsibili
 
 ```
 cargo build          # warning-free
-cargo test           # 93 unit + 22 binary-level integration tests
+cargo test           # 94 unit + 24 binary-level integration tests
 cargo run            # prints usage
 cargo run -- start french       # play the next stage (shuffled by default, D7)
+cargo run -- start spanish      # the second course, same engine (D9)
 cargo run -- start --no-shuffle french 1   # authored exercise order
 cargo run -- start --seed 42 french 1      # reproducible order
 cargo run -- review french      # spaced-repetition review of due words
@@ -254,4 +261,5 @@ cargo run -- streak french
 cargo run -- add-lang spanish ./spanish.json     # installs into the XDG data dir
 cargo run -- add-lang --force spanish ./new.json # replaces an installed language
 cargo run -- check ./spanish.json                # validate without installing
+cargo run -- check languages/spanish/stages.json # validate a shipped course
 ```
