@@ -727,3 +727,89 @@ fn broken_pipe_is_silent_and_exits_141_like_cat_and_git() {
         "a broken pipe is silent, stderr said: {err}"
     );
 }
+
+/// The shipped courses are the product: both must validate through the
+/// real `check` verb — the same gate an outside author's file passes
+/// before `add-lang` will install it. Spanish is the second language
+/// (D9); its ñ, á, í, ó, ü and the inverted ¿ ¡ flow through content
+/// validation like French's accents and ligatures always have.
+#[test]
+fn shipped_courses_validate() {
+    let scratch = Scratch::new("shipped");
+    for lang in ["french", "spanish"] {
+        let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("languages")
+            .join(lang)
+            .join("stages.json");
+        let out = termocab(&scratch)
+            .args(["check", path.to_str().unwrap()])
+            .output()
+            .unwrap();
+        assert!(out.status.success(), "{lang}: {}", stderr(&out));
+        assert!(
+            stdout(&out).contains("ok: 5 stage(s)"),
+            "{lang}: {}",
+            stdout(&out)
+        );
+    }
+}
+
+/// D9 end to end, in a Spanish course: a missing accent counts as
+/// correct with the accented form as the hint ("si" for "sí",
+/// "manana" for "mañana"), the inverted ¡ ¿ are edge punctuation
+/// ("hola" is "¡Hola!" with no hint — nothing about the marks is
+/// accent-like), and a review accepts the listed alternative
+/// translation. The engine is language-agnostic, not French-agnostic.
+#[test]
+fn spanish_accents_and_inverted_marks_grade_end_to_end() {
+    let scratch = Scratch::new("spanish");
+    let course = r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Español", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "mañana", "translation": "tomorrow",
+                "accepted_translations": ["morning"],
+                "pos": "adverb", "example": "Nos vemos mañana." },
+              { "word": "sí", "translation": "yes",
+                "pos": "adverb", "example": "Sí, claro." }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "mañana", "answer": "tomorrow" },
+              { "type": "translation", "prompt": "yes", "answer": "sí" },
+              { "type": "translation", "prompt": "hello", "answer": "¡Hola!" },
+              { "type": "translation", "prompt": "¿Cómo estás?", "answer": "How are you?" },
+              { "type": "fill_blank", "prompt": "Nos vemos ___.", "answer": "mañana" }
+            ] }
+       ] }"#;
+    let file = scratch.stages_file("spanish.json", course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    // everything answered right except the accents and the inverted
+    // marks — all five must count toward the pass bar
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "--no-shuffle", "test"]);
+    let out = feed(&mut cmd, "tomorrow\nsi\nhola\nHow are you\nmanana\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("watch the accents: sí"), "{text}");
+    assert!(text.contains("watch the accents: mañana"), "{text}");
+    assert!(text.contains("5/5"), "{text}");
+    assert!(text.contains("stage complete"), "{text}");
+
+    // review: due cards come alphabetical (mañana before sí), and the
+    // accepted alternative "morning" counts for mañana
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(&mut cmd, "morning\nyes\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("correct"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    let srs = scratch.home().join(".config/termocab/srs/test.txt");
+    let srs = std::fs::read_to_string(&srs).expect("srs file");
+    assert!(srs.contains("word mañana box 2"), "{srs}");
+    assert!(srs.contains("word sí box 2"), "{srs}");
+}
