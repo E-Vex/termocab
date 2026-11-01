@@ -740,12 +740,22 @@ fn broken_pipe_is_silent_and_exits_141_like_cat_and_git() {
 /// through content validation like everything else; Romanian the
 /// sixth, the second extension (D11) — its five letters (ă â î ș ț)
 /// and its enclitic-article and pot-infinitive drills flowing through
-/// content validation like everything else.
+/// content validation like everything else; Portuguese the seventh,
+/// the language D9 named when it widened the table — pure content,
+/// zero engine changes, the tildes ã õ, the cedilla ç, the acute and
+/// circumflex vowels and the crase à all flowing through content
+/// validation like everything else.
 #[test]
 fn shipped_courses_validate() {
     let scratch = Scratch::new("shipped");
     for lang in [
-        "french", "spanish", "german", "italian", "polish", "romanian",
+        "french",
+        "spanish",
+        "german",
+        "italian",
+        "polish",
+        "romanian",
+        "portuguese",
     ] {
         let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
             .join("languages")
@@ -1139,4 +1149,87 @@ fn romanian_diacritics_and_the_enclitic_article_grade_end_to_end() {
     assert!(srs.contains("word bătrân box 2"), "{srs}");
     assert!(srs.contains("word mâine box 2"), "{srs}");
     assert!(srs.contains("word mulțumesc box 2"), "{srs}");
+}
+
+/// The seventh language end to end, in a Portuguese course — the
+/// language D9 named as its reason for widening the accent table to
+/// the whole Latin-1 set, finally arriving, and the table needed
+/// exactly nothing: a missing tilde, cedilla or circumflex counts as
+/// correct with the accented form as the hint ("irmao" for "irmão",
+/// "maca" for "maçã", "voce" for "você"), and the crase — the
+/// preposition and the feminine article fused into one grave-accented
+/// letter — folds like any accent ("a" for "à"), with the fused form
+/// as the hint. The srs keys keep the diacritics verbatim. The want
+/// drill wants the bare infinitive after quero ("Quero ___ uma
+/// pizza." → "comer"), and the review accepts the listed alternative
+/// translation — "thanks" for obrigado.
+#[test]
+fn portuguese_tildes_and_the_crase_grade_end_to_end() {
+    let scratch = Scratch::new("portuguese");
+    let course = r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Português", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "obrigado", "translation": "thank you",
+                "accepted_translations": ["thanks"],
+                "pos": "interjection", "example": "Obrigado pelo café!" },
+              { "word": "irmão", "translation": "brother",
+                "pos": "noun", "example": "Meu irmão fala português." },
+              { "word": "maçã", "translation": "apple",
+                "pos": "noun", "example": "Como uma maçã todos os dias." },
+              { "word": "você", "translation": "you",
+                "pos": "pronoun", "example": "Você fala português?" },
+              { "word": "comer", "translation": "to eat",
+                "pos": "verb", "example": "Quero comer uma pizza." }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "thank you", "answer": "obrigado" },
+              { "type": "translation", "prompt": "brother", "answer": "irmão" },
+              { "type": "translation", "prompt": "apple", "answer": "maçã" },
+              { "type": "translation", "prompt": "you", "answer": "você" },
+              { "type": "translation", "prompt": "to eat", "answer": "comer" },
+              { "type": "fill_blank", "prompt": "Vou ___ escola.", "answer": "à" },
+              { "type": "fill_blank", "prompt": "Quero ___ uma pizza.", "answer": "comer" }
+            ] }
+       ] }"#;
+    let file = scratch.stages_file("portuguese.json", course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    // everything answered right, but with the tildes, the cedilla,
+    // the circumflex and the crase's grave stripped — all seven must
+    // count toward the pass bar, each miss carrying the properly
+    // spelled form as the hint
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "--no-shuffle", "test"]);
+    let out = feed(&mut cmd, "obrigado\nirmao\nmaca\nvoce\ncomer\na\ncomer\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("watch the accents: irmão"), "{text}");
+    assert!(text.contains("watch the accents: maçã"), "{text}");
+    assert!(text.contains("watch the accents: você"), "{text}");
+    assert!(text.contains("watch the accents: à"), "{text}");
+    assert!(text.contains("7/7"), "{text}");
+    assert!(text.contains("stage complete"), "{text}");
+
+    // review: due cards come alphabetical (comer, irmão, maçã,
+    // obrigado, você), the accepted alternative "thanks" counts for
+    // obrigado, and the srs keys keep the tildes, the cedilla and the
+    // circumflex verbatim
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(&mut cmd, "to eat\nbrother\napple\nthanks\nyou\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("correct"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    let srs = scratch.home().join(".config/termocab/srs/test.txt");
+    let srs = std::fs::read_to_string(&srs).expect("srs file");
+    assert!(srs.contains("word comer box 2"), "{srs}");
+    assert!(srs.contains("word irmão box 2"), "{srs}");
+    assert!(srs.contains("word maçã box 2"), "{srs}");
+    assert!(srs.contains("word obrigado box 2"), "{srs}");
+    assert!(srs.contains("word você box 2"), "{srs}");
 }
