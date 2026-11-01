@@ -132,18 +132,19 @@ impl Exercise {
 use std::iter::once;
 
 /// The accented letters of the Latin-1 Supplement — the Western
-/// European set (French, Spanish, German, Italian, Portuguese, …),
+/// European set (French, Spanish, German, Italian, Portuguese, …) —
+/// plus the decomposable Polish set from Latin Extended-A (D10),
 /// decomposed to base letter + combining mark. Decomposing (rather
 /// than stripping) in the strict pass makes precomposed "é" equal to
 /// "e" + U+0301 typed on a macOS keyboard — same letter, same accent,
-/// different encoding. Hand-written on purpose: twenty-seven entries
+/// different encoding. Hand-written on purpose: thirty-four entries
 /// beat a Unicode-normalization crate, and §6 asks for justification
-/// before any dependency. When a language outside this set arrives
-/// (Polish ł, Romanian ș, …) extend it with Latin Extended-A entries;
-/// letters that are letters in their own right (ø, þ, ð) never fold —
-/// "smør" is not "smor". Lowercase only: [`normalize_strict`]
-/// lowercases before it looks here (D9).
-const ACCENTED: [(char, &str); 27] = [
+/// before any dependency. The next language to need more is Romanian:
+/// ă joins here (a + breve, same pattern), while ș and ț have no
+/// decomposition at all and will follow ł in [`OPEN_LETTERS`] below;
+/// the Nordic letters stay closed — "smør" is not "smor". Lowercase
+/// only: [`normalize_strict`] lowercases before it looks here (D9).
+const ACCENTED: [(char, &str); 34] = [
     ('à', "a\u{0300}"),
     ('á', "a\u{0301}"),
     ('â', "a\u{0302}"),
@@ -171,6 +172,16 @@ const ACCENTED: [(char, &str); 27] = [
     ('ü', "u\u{0308}"),
     ('ý', "y\u{0301}"),
     ('ÿ', "y\u{0308}"),
+    // Latin Extended-A, the Polish set (D10): ogonek, acute and
+    // dot above are combining marks like any other, so the loose
+    // pass drops them with no further change.
+    ('ą', "a\u{0328}"),
+    ('ć', "c\u{0301}"),
+    ('ę', "e\u{0328}"),
+    ('ń', "n\u{0301}"),
+    ('ś', "s\u{0301}"),
+    ('ź', "z\u{0301}"),
+    ('ż', "z\u{0307}"),
 ];
 
 /// The ligatures open up only in the loose pass — "œuvre" and
@@ -178,6 +189,17 @@ const ACCENTED: [(char, &str); 27] = [
 /// learner should see the ligature (or the German sharp s) spelled
 /// out.
 const LIGATURES: [(char, &str); 3] = [('œ', "oe"), ('æ', "ae"), ('ß', "ss")];
+
+/// Single letters that open to a plain ASCII letter in the loose
+/// pass only, exactly like the ligatures above: they have no Unicode
+/// decomposition — they are letters in their own right — but the fold
+/// is a spelling convention of the same word, not two different
+/// words. Polish ł is the first entry (D10): a learner without a
+/// Polish keyboard types "lodz" for "łódź" the same way "strasse"
+/// stands in for "straße", so it counts, with the properly spelled
+/// form as the hint. ø, þ and ð stay closed (D9): "smør" is not
+/// "smor". Romanian ș and ț will join here when that course arrives.
+const OPEN_LETTERS: [(char, &str); 1] = [('ł', "l")];
 
 /// Punctuation that may differ at the ends of an answer: a missing "?"
 /// must not fail "How are you?", and Spanish's inverted marks must not
@@ -187,8 +209,8 @@ const EDGE_PUNCTUATION: [char; 7] = ['.', '?', '!', ',', ';', '¡', '¿'];
 /// The normalization both sides go through before comparing: trim,
 /// lowercase, collapse internal whitespace, strip leading and trailing
 /// punctuation, fold apostrophes, and fold Unicode composition for the
-/// accented Latin-1 letters. Accents are still significant here —
-/// "etudiant" is NOT yet "étudiant".
+/// accented Latin-1 and Polish (Extended-A) letters. Accents are still
+/// significant here — "etudiant" is NOT yet "étudiant".
 pub fn normalize_strict(input: &str) -> String {
     let collapsed: String = input
         .trim()
@@ -211,8 +233,9 @@ pub fn normalize_strict(input: &str) -> String {
 }
 
 /// Strict normalization plus the accent fold: combining marks drop
-/// ("étudiant" == "etudiant") and the ligatures open ("œuvre" ==
-/// "oeuvre"). A loose-only match is correct with a hint.
+/// ("étudiant" == "etudiant") and the ligatures and open letters
+/// unfold ("œuvre" == "oeuvre", "łódź" == "lodz" — D10). A loose-only
+/// match is correct with a hint.
 pub fn normalize_loose(input: &str) -> String {
     let strict = normalize_strict(input);
     let mut out = String::with_capacity(strict.len());
@@ -221,7 +244,11 @@ pub fn normalize_loose(input: &str) -> String {
         if ('\u{0300}'..='\u{036F}').contains(&c) {
             continue;
         }
-        match LIGATURES.iter().find(|(letter, _)| *letter == c) {
+        match LIGATURES
+            .iter()
+            .chain(OPEN_LETTERS.iter())
+            .find(|(letter, _)| *letter == c)
+        {
             Some((_, expansion)) => out.push_str(expansion),
             None => out.push(c),
         }
@@ -393,6 +420,25 @@ mod tests {
             // but ø is a letter in its own right, not an accented o —
             // the table deliberately stops at accent+base pairs
             ("smor", translation("smør", &[]), Grade::Incorrect),
+            // Polish (D10): the Latin Extended-A set folds exactly like
+            // the Latin-1 one — ogonek, acute and dot above are just
+            // combining marks — and ł, with no decomposition at all,
+            // opens in the loose pass like ß
+            (
+                "dziekuje",
+                translation("dziękuję", &[]),
+                Grade::CorrectWithHint("dziękuję".into()),
+            ),
+            (
+                "zolty",
+                translation("żółty", &[]),
+                Grade::CorrectWithHint("żółty".into()),
+            ),
+            (
+                "lodz",
+                translation("łódź", &[]),
+                Grade::CorrectWithHint("łódź".into()),
+            ),
             // accepted alternative spellings
             (
                 "I'm a student",
@@ -419,6 +465,40 @@ mod tests {
         assert!(exercise.is_correct("etudiant"));
         assert!(exercise.is_correct("ÉTUDIANT"));
         assert!(!exercise.is_correct("étudiante"));
+    }
+
+    #[test]
+    fn the_polish_extended_a_letters_behave_like_the_latin_1_ones() {
+        // The fifth-language wave (D10) extended the table past the
+        // Latin-1 Supplement into Extended-A: the decomposable Polish
+        // set (ą ć ę ń ś ź ż — ogonek, acute, dot above) joined
+        // ACCENTED, and ł, which has no decomposition, opens loose
+        // exactly like ß. The newcomers get the same three behaviors:
+        // fold with a hint, fold from uppercase, and stay distinct
+        // from actually different words.
+        let exercise = translation("żółty", &[]);
+        assert_eq!(
+            exercise.grade("zolty"),
+            Grade::CorrectWithHint("żółty".into())
+        );
+        // all three diacritics in one word: ż, ó and ł
+        assert!(exercise.is_correct("ŻÓŁTY"));
+        assert!(!exercise.is_correct("zoltyy"));
+        // decomposed input equals precomposed — no hint needed
+        let dzien = translation("dzień", &[]);
+        assert_eq!(dzien.grade("dzien\u{0301}"), Grade::Correct);
+        // the stroke opens loose only — the ß rule, not the ø rule
+        let lodz = translation("łódź", &[]);
+        assert_eq!(lodz.grade("lodz"), Grade::CorrectWithHint("łódź".into()));
+        assert!(lodz.is_correct("ŁÓDŹ"));
+        assert!(!lodz.is_correct("ldz"));
+        // ź and ż are distinct letters in strict but both fold to
+        // plain z in loose — and the fold never invents a match with
+        // an actually different word
+        let zle = translation("źle", &[]);
+        assert_eq!(zle.grade("zle"), Grade::CorrectWithHint("źle".into()));
+        assert_eq!(zle.grade("złe"), Grade::CorrectWithHint("źle".into()));
+        assert!(!zle.is_correct("dobrze"));
     }
 
     #[test]
