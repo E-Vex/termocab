@@ -732,11 +732,13 @@ fn broken_pipe_is_silent_and_exits_141_like_cat_and_git() {
 /// real `check` verb — the same gate an outside author's file passes
 /// before `add-lang` will install it. Spanish was the second language
 /// (D9); German the third, its ß, ö, ü and capitalized nouns flowing
-/// through content validation like everything else.
+/// through content validation like everything else; Italian the
+/// fourth, closing the big Western European set with its grave and
+/// acute accents (perché, città, caffè) and its elision nouns.
 #[test]
 fn shipped_courses_validate() {
     let scratch = Scratch::new("shipped");
-    for lang in ["french", "spanish", "german"] {
+    for lang in ["french", "spanish", "german", "italian"] {
         let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
             .join("languages")
             .join(lang)
@@ -883,4 +885,84 @@ fn german_umlauts_and_sharp_s_grade_end_to_end() {
     assert!(srs.contains("word groß box 2"), "{srs}");
     assert!(srs.contains("word schön box 2"), "{srs}");
     assert!(srs.contains("word tschüss box 2"), "{srs}");
+}
+
+/// The fourth language end to end, in an Italian course — the last of
+/// the big Western European languages the D9 table covers untouched.
+/// A missing accent counts as correct with the accented form as the
+/// hint ("si" for "sì", "perche" for "perché", "caffe" for "caffè" —
+/// both the grave and the acute fold), the elision noun keeps its
+/// article in the answer and in the srs key verbatim ("l'amico"), and
+/// the modal drill wants the bare infinitive ("Voglio ___ un caffè" →
+/// "bere"). The review accepts the listed alternative translations —
+/// including "because" for perché, one word covering both directions
+/// of the why/because duality.
+#[test]
+fn italian_accents_and_elisions_grade_end_to_end() {
+    let scratch = Scratch::new("italian");
+    let course = r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Italiano", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "ciao", "translation": "hello",
+                "accepted_translations": ["hi", "bye"],
+                "pos": "interjection", "example": "Ciao, come stai?" },
+              { "word": "sì", "translation": "yes",
+                "pos": "adverb", "example": "Sì, certo." },
+              { "word": "perché", "translation": "why",
+                "accepted_translations": ["because"],
+                "pos": "question word", "example": "Perché no?" },
+              { "word": "caffè", "translation": "coffee",
+                "pos": "noun (masculine)", "example": "Un caffè, per favore." },
+              { "word": "l'amico", "translation": "the friend",
+                "pos": "noun (masculine)",
+                "example": "Il mio amico si chiama Luca." }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "ciao", "answer": "hello" },
+              { "type": "translation", "prompt": "yes", "answer": "sì" },
+              { "type": "translation", "prompt": "why", "answer": "perché" },
+              { "type": "translation", "prompt": "the coffee", "answer": "caffè" },
+              { "type": "translation", "prompt": "the friend", "answer": "l'amico" },
+              { "type": "fill_blank", "prompt": "Voglio ___ un caffè.", "answer": "bere" }
+            ] }
+       ] }"#;
+    let file = scratch.stages_file("italian.json", course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    // everything answered right, but with the accents stripped — all
+    // six must count toward the pass bar, each accent miss carrying
+    // the properly spelled form as the hint
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "--no-shuffle", "test"]);
+    let out = feed(&mut cmd, "hello\nsi\nperche\ncaffe\nl'amico\nbere\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("watch the accents: sì"), "{text}");
+    assert!(text.contains("watch the accents: perché"), "{text}");
+    assert!(text.contains("watch the accents: caffè"), "{text}");
+    assert!(text.contains("6/6"), "{text}");
+    assert!(text.contains("stage complete"), "{text}");
+
+    // review: due cards come alphabetical (caffè, ciao, l'amico,
+    // perché, sì), the accepted alternatives count — "hi" for ciao,
+    // "because" for perché — and the srs keys keep the accents and
+    // the elided article verbatim
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(&mut cmd, "coffee\nhi\nthe friend\nbecause\nyes\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("correct"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    let srs = scratch.home().join(".config/termocab/srs/test.txt");
+    let srs = std::fs::read_to_string(&srs).expect("srs file");
+    assert!(srs.contains("word caffè box 2"), "{srs}");
+    assert!(srs.contains("word ciao box 2"), "{srs}");
+    assert!(srs.contains("word l'amico box 2"), "{srs}");
+    assert!(srs.contains("word perché box 2"), "{srs}");
+    assert!(srs.contains("word sì box 2"), "{srs}");
 }
