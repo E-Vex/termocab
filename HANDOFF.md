@@ -1,6 +1,6 @@
 # HANDOFF — termocab
 
-> This document is written for an AI coding agent taking over full development of **termocab**. It consolidates every decision made during the planning/bootstrap phase (Aug 2026), the MVP implementation session (Oct 2026), the review-fix session (Oct 2026), the usage-review session (Oct 2026), the second-language session (Nov 2026) and the third-language session (Nov 2026) so no prior conversation context is needed to continue the project. **The repository itself is the source of truth** — if anything here conflicts with what you find in the actual code, trust the code, and update this file to match.
+> This document is written for an AI coding agent taking over full development of **termocab**. It consolidates every decision made during the planning/bootstrap phase (Aug 2026), the MVP implementation session (Oct 2026), the review-fix session (Oct 2026), the usage-review session (Oct 2026), the second-language session (Nov 2026), the third-language session (Nov 2026) and the fourth-language session (Nov 2026) so no prior conversation context is needed to continue the project. **The repository itself is the source of truth** — if anything here conflicts with what you find in the actual code, trust the code, and update this file to match.
 
 ## 1. What this is
 
@@ -28,6 +28,8 @@ The **second-language session (Nov 2026)** shipped Spanish as the second course 
 
 The **third-language session (Nov 2026)** shipped German as the third course with **zero engine changes** — the D9 table already covered it, which was the point of choosing it: `groß` and `heiß` make it the first shipped course to exercise `ß` in real content, and umlauts fold like any other accent ("tschuss" counts with `tschüss` as the hint). German is also the first course whose nouns carry their article (`der Mann`, `die Frau`, `das Mädchen`): stage 2's fill-the-blank exercises blank the article itself and stage 4's blank the infinitive after a modal (`Ich möchte einen Hund ___`) — the German-specific drills — while the srs keys and reviews keep the full accented, article-carrying word verbatim. All three shipped courses are pinned by the same binary-level `check` test in CI.
 
+The **fourth-language session (Nov 2026)** shipped Italian as the fourth course with **zero engine changes** — the last pure-content candidate of the big Western European languages, so that set is now closed: every language the D9 table covers has a course, and the next language anyone adds will force the Latin Extended-A extension (§4). The table covered both of Italian's accent directions untouched — the grave (`sì`, `caffè`, `città`, `più`) and the acute (`perché`, `così`) — so "perche" and "caffe" grade correct with the properly spelled form as the hint. Italian takes German's articles-with-nouns convention and adds the elision (`l'uomo`, `l'amico` — either apostrophe grades, the srs key keeps the authored one verbatim): stage 2 blanks the article itself and shows one elision with the noun blanked (`L'___ legge il giornale`), stage 4 blanks the infinitive after a modal (`Voglio ___ un caffè`), and `perché` lists both directions of the why/because duality as accepted translations. All four shipped courses are pinned by the same binary-level `check` test in CI.
+
 ```
 termocab/
 ├── Cargo.toml              # deps: serde (derive), serde_json — nothing else
@@ -41,9 +43,13 @@ termocab/
 │   │   └── stages.json     # first course: 5 stages, 73 words, 177 exercises
 │   ├── spanish/
 │   │   └── stages.json     # second course (D9): 5 stages, 73 words, 197 exercises
-│   └── german/
-│       └── stages.json     # third course: 5 stages, 73 words, 216 exercises
-│                             #   (articles on nouns, modals + infinitive blanks)
+│   ├── german/
+│   │   └── stages.json     # third course: 5 stages, 73 words, 216 exercises
+│   │                       #   (articles on nouns, modals + infinitive blanks)
+│   └── italian/
+│       └── stages.json     # fourth course: 5 stages, 73 words, 218 exercises
+│                           #   (articles + elisions on nouns, modals +
+│                           #    infinitive blanks, grave and acute accents)
 ├── tests/
 │   └── cli.rs              # binary-level integration tests (subprocess, hermetic env)
 └── src/
@@ -68,7 +74,7 @@ termocab/
     └── testenv.rs          # #[cfg(test)]-only: shared env lock + RAII temp dirs
 ```
 
-Verified: `cargo build` warning-free, `cargo clippy --all-targets -- -D warnings` clean, `cargo test` green (94 unit + 25 binary-level integration tests), a scripted playthrough of the full French course passes end to end (5/5 stages, streak, replay, 73-card review), a scripted playthrough of the full Spanish course does the same with deliberately accent-stripped answers (5/5 stages, 73/73 review, every card promoted to box 2), and a scripted playthrough of the full German course passes with umlaut- and sharp-s-stripped answers (5/5 stages, 73/73 review, every card promoted to box 2, `Brüder` hinted after `Bruder`). CI (§11) runs all of it on ubuntu and macOS.
+Verified: `cargo build` warning-free, `cargo clippy --all-targets -- -D warnings` clean, `cargo test` green (94 unit + 26 binary-level integration tests), a scripted playthrough of the full French course passes end to end (5/5 stages, streak, replay, 73-card review), a scripted playthrough of the full Spanish course does the same with deliberately accent-stripped answers (5/5 stages, 73/73 review, every card promoted to box 2), a scripted playthrough of the full German course passes with umlaut- and sharp-s-stripped answers (5/5 stages, 73/73 review, every card promoted to box 2, `Brüder` hinted after `Bruder`), and a scripted playthrough of the full Italian course passes with accent-stripped answers (5/5 stages, 73/73 review, every card promoted to box 2, `sì` hinted after `si`). CI (§11) runs all of it on ubuntu and macOS.
 
 ## 3. Architecture — read this before writing any code
 
@@ -235,10 +241,10 @@ Known rough edges (fine to leave, fine to fix): none currently — the broken-pi
 
 ## 10. Suggested next steps
 
-**Content is the product**: three courses now ship (French, Spanish, German — 73 words each, the same five-stage skeleton) and the engine has survived two languages it was never written for without a single change — the D9 table plus `accepted_answers`/`accepted_translations` has been the whole story. `check` + `add-lang` make outside authoring safe, and a community "content packs" flow (a repo of stages.json files) is the natural evolution of those two verbs. The standing priorities: (1) growing the three shipped courses, since every new stage completion feeds the srs automatically, and (2) a fourth language — Italian is now the remaining pure-content candidate of the big Western European languages, while Polish or Romanian would force the Latin Extended-A extension of D9's table (the first real engine-content wave since D9).
+**Content is the product**: four courses now ship (French, Spanish, German, Italian — 73 words each, the same five-stage skeleton) and the engine has survived three languages it was never written for without a single change — the D9 table plus `accepted_answers`/`accepted_translations` has been the whole story. The big Western European set is closed: every language the Latin-1 table covers has a course, so the next language anyone adds will be the first real engine-content wave since D9. `check` + `add-lang` make outside authoring safe, and a community "content packs" flow (a repo of stages.json files) is the natural evolution of those two verbs. The standing priorities: (1) growing the four shipped courses, since every new stage completion feeds the srs automatically, and (2) a fifth language — Polish or Romanian are the natural candidates, and either would force the Latin Extended-A extension of D9's table, the live test of the extension path the table was designed for.
 
-1. More French, Spanish and German stages (each new completion feeds the srs automatically).
-2. A fourth language: Italian is pure content; Polish/Romanian extend the accent table (§4) and would prove the D9 extension path actually works.
+1. More French, Spanish, German and Italian stages (each new completion feeds the srs automatically).
+2. A fifth language: Polish/Romanian extend the accent table (§4) and would prove the D9 extension path actually works — the first engine change a language would force since D9.
 3. ncurses TUI as an additive alternative frontend over `session::Terminal`.
 4. SQLite storage layer replacing `storage/` (only that module changes).
 5. Review session caps / ordering once content is large enough to need it (see §9).
@@ -252,20 +258,21 @@ Every change should hold up against: Separation of Concerns, Single Responsibili
 
 ```
 cargo build          # warning-free
-cargo test           # 94 unit + 25 binary-level integration tests
+cargo test           # 94 unit + 26 binary-level integration tests
 cargo run            # prints usage
 cargo run -- start french       # play the next stage (shuffled by default, D7)
 cargo run -- start spanish      # the second course, same engine (D9)
 cargo run -- start german       # the third course: articles, umlauts, ß
+cargo run -- start italian      # the fourth course: elisions, grave + acute
 cargo run -- start --no-shuffle french 1   # authored exercise order
 cargo run -- start --seed 42 french 1      # reproducible order
-cargo run -- review german      # spaced-repetition review of due words
-cargo run -- progress german    # per-stage checkboxes + streak + due count
-cargo run -- stats german       # boxes + 14-day charts as sparklines
-cargo run -- list-words german
-cargo run -- streak german
-cargo run -- add-lang german ./german.json     # installs into the XDG data dir
-cargo run -- add-lang --force german ./new.json # replaces an installed language
-cargo run -- check ./german.json                # validate without installing
-cargo run -- check languages/german/stages.json # validate a shipped course
+cargo run -- review italian     # spaced-repetition review of due words
+cargo run -- progress italian   # per-stage checkboxes + streak + due count
+cargo run -- stats italian      # boxes + 14-day charts as sparklines
+cargo run -- list-words italian
+cargo run -- streak italian
+cargo run -- add-lang italian ./italian.json     # installs into the XDG data dir
+cargo run -- add-lang --force italian ./new.json # replaces an installed language
+cargo run -- check ./italian.json                # validate without installing
+cargo run -- check languages/italian/stages.json # validate a shipped course
 ```

@@ -7,10 +7,12 @@ reviews, streaks — fully offline, fully local, no account, no network.
 Plain text everywhere: content is JSON, your progress is a file you can
 `cat`. UX modeled on git — direct subcommands, no menus.
 
-Three courses ship today: French (five stages, 73 words, 177
-exercises), Spanish (five stages, 73 words, 197 exercises) and German
+Four courses ship today: French (five stages, 73 words, 177
+exercises), Spanish (five stages, 73 words, 197 exercises), German
 (five stages, 73 words, 216 exercises — nouns with their articles,
-modal-verb drills, umlauts and the sharp s) — same engine, same rules,
+modal-verb drills, umlauts and the sharp s) and Italian (five stages,
+73 words, 218 exercises — articles with their elisions, modal-verb
+drills, the grave and the acute accents) — same engine, same rules,
 same forgiving grading for all of them.
 
 ## Install & run
@@ -20,7 +22,7 @@ cargo install --path .
 termocab start french
 ```
 
-(then try `termocab start german`)
+(then try `termocab start italian`)
 
 Content is looked up in this order (first hit wins):
 
@@ -62,8 +64,8 @@ color everywhere (no-color.org).
 
 ## Content format
 
-One `stages.json` per language — see `languages/german/stages.json`
-or `languages/spanish/stages.json` for full examples and `HANDOFF.md`
+One `stages.json` per language — see `languages/italian/stages.json`
+or `languages/german/stages.json` for full examples and `HANDOFF.md`
 §5 for the rules. Quick sketch:
 
 ```json
@@ -92,8 +94,10 @@ or `languages/spanish/stages.json` for full examples and `HANDOFF.md`
 
 Grading forgives case, whitespace, edge punctuation (including
 Spanish's inverted ¿ ¡), missing accents (an accent-only miss counts
-as correct and shows the accented form — and German's `ß` opens like a
-ligature, so `strasse` counts with `Straße` as the hint);
+as correct and shows the accented form — Italian's grave and acute
+accents fold the same way, so `perche` counts with `perché` as the
+hint — and German's `ß` opens like a ligature, so `strasse` counts
+with `Straße` as the hint);
 `accepted_answers` lists alternative correct spellings, and
 `accepted_translations` on a vocabulary entry lists alternative correct
 translations a review will accept — reviewing `salut` with "hello" is
