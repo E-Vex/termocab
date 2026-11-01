@@ -734,11 +734,14 @@ fn broken_pipe_is_silent_and_exits_141_like_cat_and_git() {
 /// (D9); German the third, its ß, ö, ü and capitalized nouns flowing
 /// through content validation like everything else; Italian the
 /// fourth, closing the big Western European set with its grave and
-/// acute accents (perché, città, caffè) and its elision nouns.
+/// acute accents (perché, città, caffè) and its elision nouns; Polish
+/// the fifth, the first engine change a language has forced since D9
+/// (D10) — its whole Latin Extended-A set (ą ć ę ł ń ó ś ź ż) flowing
+/// through content validation like everything else.
 #[test]
 fn shipped_courses_validate() {
     let scratch = Scratch::new("shipped");
-    for lang in ["french", "spanish", "german", "italian"] {
+    for lang in ["french", "spanish", "german", "italian", "polish"] {
         let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
             .join("languages")
             .join(lang)
@@ -965,4 +968,88 @@ fn italian_accents_and_elisions_grade_end_to_end() {
     assert!(srs.contains("word l'amico box 2"), "{srs}");
     assert!(srs.contains("word perché box 2"), "{srs}");
     assert!(srs.contains("word sì box 2"), "{srs}");
+}
+
+/// The fifth language end to end, in a Polish course — the first
+/// engine change a language has forced since D9 (D10, the Latin
+/// Extended-A extension). A missing ogonek, acute or dot-above counts
+/// as correct with the accented form as the hint ("dziekuje" for
+/// "dziękuję", "piatek" for "piątek"), and the stroke opens exactly
+/// like the sharp s ("maly" for "mały", "zolty" for "żółty" — ż, ó
+/// and ł folding in one word), while the srs keys keep the accented,
+/// stroked forms verbatim. The want drill wants the bare infinitive
+/// ("Chcę ___ kawę" → "pić"), and the review accepts the listed
+/// alternative translations — "thanks" for dziękuję, "little" for
+/// mały.
+#[test]
+fn polish_diacritics_and_the_stroke_grade_end_to_end() {
+    let scratch = Scratch::new("polish");
+    let course = r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Polski", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "dziękuję", "translation": "thank you",
+                "accepted_translations": ["thanks"],
+                "pos": "interjection", "example": "Dziękuję bardzo!" },
+              { "word": "piątek", "translation": "Friday",
+                "pos": "noun", "example": "W piątek idę do kina." },
+              { "word": "żółty", "translation": "yellow",
+                "pos": "adjective", "example": "Autobus jest żółty." },
+              { "word": "mały", "translation": "small",
+                "accepted_translations": ["little"],
+                "pos": "adjective", "example": "Mieszkam w małym mieście." }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "thank you", "answer": "dziękuję" },
+              { "type": "translation", "prompt": "Friday", "answer": "piątek" },
+              { "type": "translation", "prompt": "yellow", "answer": "żółty" },
+              { "type": "translation", "prompt": "small", "answer": "mały" },
+              { "type": "fill_blank", "prompt": "Chcę ___ kawę.", "answer": "pić" },
+              { "type": "translation", "prompt": "Jak się nazywasz?",
+                "answer": "What's your name?",
+                "accepted_answers": ["What is your name?"] }
+            ] }
+       ] }"#;
+    let file = scratch.stages_file("polish.json", course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    // everything answered right, but with the diacritics and the
+    // stroke stripped — all six must count toward the pass bar, each
+    // miss carrying the properly spelled form as the hint
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "--no-shuffle", "test"]);
+    let out = feed(
+        &mut cmd,
+        "dziekuje\npiatek\nzolty\nmaly\npic\nWhat's your name\n",
+    );
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("watch the accents: dziękuję"), "{text}");
+    assert!(text.contains("watch the accents: piątek"), "{text}");
+    assert!(text.contains("watch the accents: żółty"), "{text}");
+    assert!(text.contains("watch the accents: mały"), "{text}");
+    assert!(text.contains("watch the accents: pić"), "{text}");
+    assert!(text.contains("6/6"), "{text}");
+    assert!(text.contains("stage complete"), "{text}");
+
+    // review: due cards come alphabetical (dziękuję, mały, piątek,
+    // żółty), the accepted alternatives count — "thanks" for
+    // dziękuję, "little" for mały — and the srs keys keep the
+    // diacritics and the stroke verbatim
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(&mut cmd, "thanks\nlittle\nFriday\nyellow\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("correct"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    let srs = scratch.home().join(".config/termocab/srs/test.txt");
+    let srs = std::fs::read_to_string(&srs).expect("srs file");
+    assert!(srs.contains("word dziękuję box 2"), "{srs}");
+    assert!(srs.contains("word mały box 2"), "{srs}");
+    assert!(srs.contains("word piątek box 2"), "{srs}");
+    assert!(srs.contains("word żółty box 2"), "{srs}");
 }
