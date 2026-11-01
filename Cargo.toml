@@ -1,6 +1,6 @@
 [package]
 name = "termocab"
-version = "0.7.0"
+version = "0.8.0"
 edition = "2021"
 description = "Language learning for terminal enthusiasts — staged lessons, spaced repetition, plain-text progress"
 license = "MIT"

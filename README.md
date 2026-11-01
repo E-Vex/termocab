@@ -7,7 +7,7 @@ reviews, streaks — fully offline, fully local, no account, no network.
 Plain text everywhere: content is JSON, your progress is a file you can
 `cat`. UX modeled on git — direct subcommands, no menus.
 
-Six courses ship today: French (five stages, 73 words, 177
+Seven courses ship today: French (five stages, 73 words, 177
 exercises), Spanish (five stages, 73 words, 197 exercises), German
 (five stages, 73 words, 216 exercises — nouns with their articles,
 modal-verb drills, umlauts and the sharp s), Italian (five stages,
@@ -15,11 +15,15 @@ modal-verb drills, umlauts and the sharp s), Italian (five stages,
 drills, the grave and the acute accents), Polish (five stages,
 73 words, 218 exercises — bare nouns, "to jest" drills, want/like +
 infinitive drills, every letter ą ć ę ł ń ó ś ź ż alive in real
-content) and Romanian (five stages, 73 words, 218 exercises — the
+content), Romanian (five stages, 73 words, 218 exercises — the
 enclitic definite article blanked where it lives, at the end of the
 noun, can + infinitive drills, every letter ă â î ș ț alive in real
-content) — same engine, same rules, same forgiving grading for all
-of them.
+content) and Portuguese (five stages, 73 words, 218 exercises —
+Brazilian Portuguese, nouns with their gendered articles, the crase
+à blanked where it lives, want/can + infinitive drills, the tildes
+ã õ, the cedilla ç, the acutes á é í ó ú, the circumflexes ê ô
+alive in real content) — same engine, same rules, same forgiving
+grading for all of them.
 
 ## Install & run
 
@@ -28,7 +32,7 @@ cargo install --path .
 termocab start french
 ```
 
-(then try `termocab start romanian`)
+(then try `termocab start portuguese`)
 
 Content is looked up in this order (first hit wins):
 
@@ -70,7 +74,7 @@ color everywhere (no-color.org).
 
 ## Content format
 
-One `stages.json` per language — see `languages/romanian/stages.json`
+One `stages.json` per language — see `languages/portuguese/stages.json`
 or `languages/italian/stages.json` for full examples and `HANDOFF.md`
 §5 for the rules. Quick sketch:
 
@@ -109,7 +113,11 @@ as the hint, and the stroked `ł` opens exactly like `ß`, so `lodz`
 counts with `łódź`; Romanian folds one step further still — `ă`,
 `ș` and `ț` decompose like any accent (so `multumesc` counts with
 `mulțumesc` as the hint) and the legacy cedilla spellings `ş` `ţ`
-count with the standard `ș` `ț` as the hint.
+count with the standard `ș` `ț` as the hint; and Portuguese needed
+no new rule at all — D9's Latin-1 set was widened for exactly these
+letters, so `irmao` counts with `irmão`, `maca` with `maçã`, `voce`
+with `você`, and even the crase forgives: `a` counts with `à` as
+the hint.
 `accepted_answers` lists alternative correct spellings, and
 `accepted_translations` on a vocabulary entry lists alternative correct
 translations a review will accept — reviewing `salut` with "hello" is
