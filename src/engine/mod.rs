@@ -131,44 +131,63 @@ impl Exercise {
 
 use std::iter::once;
 
-/// Accented French letters, decomposed to base letter + combining mark.
-/// Decomposing (rather than stripping) in the strict pass makes
-/// precomposed "é" equal to "e" + U+0301 typed on a macOS keyboard —
-/// same letter, same accent, different encoding. Hand-written on
-/// purpose: sixteen entries beat a Unicode-normalization crate for one
-/// language, and §6 asks for justification before any dependency.
-const ACCENTED: [(char, &str); 16] = [
+/// The accented letters of the Latin-1 Supplement — the Western
+/// European set (French, Spanish, German, Italian, Portuguese, …),
+/// decomposed to base letter + combining mark. Decomposing (rather
+/// than stripping) in the strict pass makes precomposed "é" equal to
+/// "e" + U+0301 typed on a macOS keyboard — same letter, same accent,
+/// different encoding. Hand-written on purpose: twenty-seven entries
+/// beat a Unicode-normalization crate, and §6 asks for justification
+/// before any dependency. When a language outside this set arrives
+/// (Polish ł, Romanian ș, …) extend it with Latin Extended-A entries;
+/// letters that are letters in their own right (ø, þ, ð) never fold —
+/// "smør" is not "smor". Lowercase only: [`normalize_strict`]
+/// lowercases before it looks here (D9).
+const ACCENTED: [(char, &str); 27] = [
     ('à', "a\u{0300}"),
+    ('á', "a\u{0301}"),
     ('â', "a\u{0302}"),
+    ('ã', "a\u{0303}"),
     ('ä', "a\u{0308}"),
+    ('å', "a\u{030A}"),
     ('ç', "c\u{0327}"),
     ('é', "e\u{0301}"),
     ('è', "e\u{0300}"),
     ('ê', "e\u{0302}"),
     ('ë', "e\u{0308}"),
+    ('ì', "i\u{0300}"),
+    ('í', "i\u{0301}"),
     ('î', "i\u{0302}"),
     ('ï', "i\u{0308}"),
+    ('ñ', "n\u{0303}"),
+    ('ò', "o\u{0300}"),
+    ('ó', "o\u{0301}"),
     ('ô', "o\u{0302}"),
+    ('õ', "o\u{0303}"),
     ('ö', "o\u{0308}"),
     ('ù', "u\u{0300}"),
+    ('ú', "u\u{0301}"),
     ('û', "u\u{0302}"),
     ('ü', "u\u{0308}"),
+    ('ý', "y\u{0301}"),
     ('ÿ', "y\u{0308}"),
 ];
 
-/// The two French ligatures open up only in the loose pass — "œuvre"
-/// and "oeuvre" are the same word, but the learner should see the
-/// ligature spelled out.
-const LIGATURES: [(char, &str); 2] = [('œ', "oe"), ('æ', "ae")];
+/// The ligatures open up only in the loose pass — "œuvre" and
+/// "oeuvre", "straße" and "strasse" are the same word, but the
+/// learner should see the ligature (or the German sharp s) spelled
+/// out.
+const LIGATURES: [(char, &str); 3] = [('œ', "oe"), ('æ', "ae"), ('ß', "ss")];
 
 /// Punctuation that may differ at the ends of an answer: a missing "?"
-/// must not fail "How are you?".
-const EDGE_PUNCTUATION: [char; 5] = ['.', '?', '!', ',', ';'];
+/// must not fail "How are you?", and Spanish's inverted marks must not
+/// fail "¡Hola!" — "hola" is right (D9).
+const EDGE_PUNCTUATION: [char; 7] = ['.', '?', '!', ',', ';', '¡', '¿'];
 
 /// The normalization both sides go through before comparing: trim,
 /// lowercase, collapse internal whitespace, strip leading and trailing
 /// punctuation, fold apostrophes, and fold Unicode composition for the
-/// accented French letters. Accents are still significant here —
+/// accented Latin-1 letters. Accents are still significant here —
 /// "etudiant" is NOT yet "étudiant".
 pub fn normalize_strict(input: &str) -> String {
     let collapsed: String = input
@@ -344,6 +363,36 @@ mod tests {
                 translation("œuvre", &[]),
                 Grade::CorrectWithHint("œuvre".into()),
             ),
+            // Spanish (D9): ñ and the acute vowels fold like any accent,
+            // and the inverted ¡ ¿ are edge punctuation — "hola" is
+            // "¡Hola!" without the decoration
+            (
+                "manana",
+                translation("mañana", &[]),
+                Grade::CorrectWithHint("mañana".into()),
+            ),
+            (
+                "como estas",
+                translation("¿Cómo estás?", &[]),
+                Grade::CorrectWithHint("¿Cómo estás?".into()),
+            ),
+            ("hola", translation("¡Hola!", &[]), Grade::Correct),
+            // German (D9): the sharp s opens like a ligature, with a hint
+            (
+                "strasse",
+                translation("straße", &[]),
+                Grade::CorrectWithHint("straße".into()),
+            ),
+            // Portuguese (D9): ã folds too — the table is the whole
+            // Latin-1 set, not a French dialect
+            (
+                "irmao",
+                translation("irmão", &[]),
+                Grade::CorrectWithHint("irmão".into()),
+            ),
+            // but ø is a letter in its own right, not an accented o —
+            // the table deliberately stops at accent+base pairs
+            ("smor", translation("smør", &[]), Grade::Incorrect),
             // accepted alternative spellings
             (
                 "I'm a student",
@@ -370,6 +419,23 @@ mod tests {
         assert!(exercise.is_correct("etudiant"));
         assert!(exercise.is_correct("ÉTUDIANT"));
         assert!(!exercise.is_correct("étudiante"));
+    }
+
+    #[test]
+    fn the_new_latin_letters_behave_like_the_french_ones() {
+        // The Spanish wave (D9) widened the table from 16 French
+        // letters to the Latin-1 Supplement set — the newcomers get
+        // the same three behaviors: fold with a hint, fold from
+        // uppercase, and stay distinct from actually different words.
+        let exercise = translation("mañana", &[]);
+        assert_eq!(
+            exercise.grade("manana"),
+            Grade::CorrectWithHint("mañana".into())
+        );
+        assert!(exercise.is_correct("MAÑANA"));
+        // decomposed input equals precomposed — no hint needed
+        assert_eq!(exercise.grade("man\u{0303}ana"), Grade::Correct);
+        assert!(!exercise.is_correct("mananaa"));
     }
 
     #[test]
