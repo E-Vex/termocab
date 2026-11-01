@@ -1,0 +1,1920 @@
+{
+  "language": "german",
+  "stages": [
+    {
+      "id": 1,
+      "title": "Greetings and Basics",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "hallo",
+          "translation": "hello",
+          "pos": "interjection",
+          "example": "Hallo, wie geht es dir?",
+          "accepted_translations": [
+            "hi"
+          ]
+        },
+        {
+          "word": "tschüss",
+          "translation": "goodbye",
+          "pos": "interjection",
+          "example": "Tschüss, bis morgen!",
+          "accepted_translations": [
+            "bye"
+          ]
+        },
+        {
+          "word": "Guten Morgen",
+          "translation": "good morning",
+          "pos": "phrase",
+          "example": "Guten Morgen, hast du gut geschlafen?"
+        },
+        {
+          "word": "Guten Abend",
+          "translation": "good evening",
+          "pos": "phrase",
+          "example": "Guten Abend, meine Damen und Herren."
+        },
+        {
+          "word": "Gute Nacht",
+          "translation": "good night",
+          "pos": "phrase",
+          "example": "Gute Nacht, schlaf gut."
+        },
+        {
+          "word": "danke",
+          "translation": "thank you",
+          "pos": "interjection",
+          "example": "Danke für deine Hilfe.",
+          "accepted_translations": [
+            "thanks"
+          ]
+        },
+        {
+          "word": "bitte",
+          "translation": "please",
+          "pos": "adverb",
+          "example": "Ein Wasser, bitte.",
+          "accepted_translations": [
+            "you're welcome"
+          ]
+        },
+        {
+          "word": "ja",
+          "translation": "yes",
+          "pos": "adverb",
+          "example": "Ja, sehr gern."
+        },
+        {
+          "word": "nein",
+          "translation": "no",
+          "pos": "adverb",
+          "example": "Nein, danke."
+        },
+        {
+          "word": "Entschuldigung",
+          "translation": "sorry",
+          "pos": "interjection",
+          "example": "Entschuldigung, wo ist der Bahnhof?",
+          "accepted_translations": [
+            "excuse me"
+          ]
+        },
+        {
+          "word": "Freut mich",
+          "translation": "nice to meet you",
+          "pos": "phrase",
+          "example": "Freut mich, ich heiße Anna.",
+          "accepted_translations": [
+            "pleased to meet you"
+          ]
+        },
+        {
+          "word": "Bis später",
+          "translation": "see you later",
+          "pos": "phrase",
+          "example": "Bis später, Freunde!",
+          "accepted_translations": [
+            "see you"
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "hallo",
+          "answer": "hello",
+          "accepted_answers": [
+            "hi"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "tschüss",
+          "answer": "goodbye",
+          "accepted_answers": [
+            "bye"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Guten Morgen",
+          "answer": "good morning"
+        },
+        {
+          "type": "translation",
+          "prompt": "Guten Abend",
+          "answer": "good evening"
+        },
+        {
+          "type": "translation",
+          "prompt": "Gute Nacht",
+          "answer": "good night"
+        },
+        {
+          "type": "translation",
+          "prompt": "danke",
+          "answer": "thank you",
+          "accepted_answers": [
+            "thanks"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "bitte",
+          "answer": "please",
+          "accepted_answers": [
+            "you're welcome"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "ja",
+          "answer": "yes"
+        },
+        {
+          "type": "translation",
+          "prompt": "nein",
+          "answer": "no"
+        },
+        {
+          "type": "translation",
+          "prompt": "Entschuldigung",
+          "answer": "sorry",
+          "accepted_answers": [
+            "excuse me"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Freut mich",
+          "answer": "nice to meet you",
+          "accepted_answers": [
+            "pleased to meet you"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bis später",
+          "answer": "see you later",
+          "accepted_answers": [
+            "see you"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "hello",
+          "answer": "hallo"
+        },
+        {
+          "type": "translation",
+          "prompt": "goodbye",
+          "answer": "tschüss"
+        },
+        {
+          "type": "translation",
+          "prompt": "thank you",
+          "answer": "danke"
+        },
+        {
+          "type": "translation",
+          "prompt": "please",
+          "answer": "bitte"
+        },
+        {
+          "type": "translation",
+          "prompt": "yes",
+          "answer": "ja"
+        },
+        {
+          "type": "translation",
+          "prompt": "sorry",
+          "answer": "Entschuldigung"
+        },
+        {
+          "type": "translation",
+          "prompt": "see you later",
+          "answer": "Bis später"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hello':",
+          "options": [
+            "hallo",
+            "danke",
+            "tschüss",
+            "ja"
+          ],
+          "answer": "hallo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'thank you':",
+          "options": [
+            "danke",
+            "bitte",
+            "hallo",
+            "nein"
+          ],
+          "answer": "danke"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'goodbye':",
+          "options": [
+            "tschüss",
+            "hallo",
+            "ja",
+            "Entschuldigung"
+          ],
+          "answer": "tschüss"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'please':",
+          "options": [
+            "bitte",
+            "danke",
+            "hallo",
+            "ja"
+          ],
+          "answer": "bitte"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'yes':",
+          "options": [
+            "ja",
+            "nein",
+            "tschüss",
+            "hallo"
+          ],
+          "answer": "ja"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good night':",
+          "options": [
+            "Gute Nacht",
+            "Guten Morgen",
+            "Bis später",
+            "hallo"
+          ],
+          "answer": "Gute Nacht"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'nice to meet you':",
+          "options": [
+            "Freut mich",
+            "Bis später",
+            "Guten Morgen",
+            "danke"
+          ],
+          "answer": "Freut mich"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the English for 'Entschuldigung':",
+          "options": [
+            "sorry",
+            "please",
+            "yes",
+            "goodbye"
+          ],
+          "answer": "sorry"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ Morgen, hast du gut geschlafen?",
+          "answer": "Guten"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vielen ___ für alles.",
+          "answer": "danke"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ein Wasser, ___.",
+          "answer": "bitte"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, wo ist der Bahnhof?",
+          "answer": "Entschuldigung"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ mich, ich heiße Anna.",
+          "answer": "Freut"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bis ___, Freunde!",
+          "answer": "später"
+        },
+        {
+          "type": "translation",
+          "prompt": "Wie geht es dir?",
+          "answer": "How are you?",
+          "accepted_answers": [
+            "How are you doing",
+            "How's it going?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vielen Dank!",
+          "answer": "Thank you very much.",
+          "accepted_answers": [
+            "Thanks a lot",
+            "Many thanks"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Good night.",
+          "answer": "Gute Nacht"
+        },
+        {
+          "type": "translation",
+          "prompt": "Nice to meet you.",
+          "answer": "Freut mich"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "People and Family",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "der Mann",
+          "translation": "the man",
+          "pos": "noun (masculine)",
+          "example": "Der Mann liest die Zeitung."
+        },
+        {
+          "word": "die Frau",
+          "translation": "the woman",
+          "pos": "noun (feminine)",
+          "example": "Die Frau arbeitet im Garten.",
+          "accepted_translations": [
+            "the wife"
+          ]
+        },
+        {
+          "word": "der Junge",
+          "translation": "the boy",
+          "pos": "noun (masculine)",
+          "example": "Der Junge spielt Fußball."
+        },
+        {
+          "word": "das Mädchen",
+          "translation": "the girl",
+          "pos": "noun (neuter)",
+          "example": "Das Mädchen singt ein Lied."
+        },
+        {
+          "word": "der Freund",
+          "translation": "the friend",
+          "pos": "noun (masculine)",
+          "example": "Mein Freund wohnt in Berlin."
+        },
+        {
+          "word": "die Familie",
+          "translation": "the family",
+          "pos": "noun (feminine)",
+          "example": "Die Familie isst zusammen."
+        },
+        {
+          "word": "die Mutter",
+          "translation": "the mother",
+          "pos": "noun (feminine)",
+          "example": "Meine Mutter kocht Suppe."
+        },
+        {
+          "word": "der Vater",
+          "translation": "the father",
+          "pos": "noun (masculine)",
+          "example": "Mein Vater fährt Fahrrad."
+        },
+        {
+          "word": "der Bruder",
+          "translation": "the brother",
+          "pos": "noun (masculine)",
+          "example": "Mein Bruder lernt Spanisch."
+        },
+        {
+          "word": "die Schwester",
+          "translation": "the sister",
+          "pos": "noun (feminine)",
+          "example": "Meine Schwester mag Musik."
+        },
+        {
+          "word": "der Sohn",
+          "translation": "the son",
+          "pos": "noun (masculine)",
+          "example": "Der Sohn hilft seinem Vater."
+        },
+        {
+          "word": "die Tochter",
+          "translation": "the daughter",
+          "pos": "noun (feminine)",
+          "example": "Die Tochter geht zur Schule."
+        },
+        {
+          "word": "der Name",
+          "translation": "the name",
+          "pos": "noun (masculine)",
+          "example": "Mein Name ist Max."
+        },
+        {
+          "word": "die Leute",
+          "translation": "the people",
+          "pos": "noun (plural)",
+          "example": "Die Leute warten auf den Bus."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "der Mann",
+          "answer": "the man"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Frau",
+          "answer": "the woman",
+          "accepted_answers": [
+            "the wife"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "der Junge",
+          "answer": "the boy"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Mädchen",
+          "answer": "the girl"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Freund",
+          "answer": "the friend"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Familie",
+          "answer": "the family"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Mutter",
+          "answer": "the mother"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Vater",
+          "answer": "the father"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Bruder",
+          "answer": "the brother"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Schwester",
+          "answer": "the sister"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Sohn",
+          "answer": "the son"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Tochter",
+          "answer": "the daughter"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Name",
+          "answer": "the name"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Leute",
+          "answer": "the people"
+        },
+        {
+          "type": "translation",
+          "prompt": "the man",
+          "answer": "der Mann"
+        },
+        {
+          "type": "translation",
+          "prompt": "the woman",
+          "answer": "die Frau"
+        },
+        {
+          "type": "translation",
+          "prompt": "the boy",
+          "answer": "der Junge"
+        },
+        {
+          "type": "translation",
+          "prompt": "the girl",
+          "answer": "das Mädchen"
+        },
+        {
+          "type": "translation",
+          "prompt": "the family",
+          "answer": "die Familie"
+        },
+        {
+          "type": "translation",
+          "prompt": "the brother",
+          "answer": "der Bruder"
+        },
+        {
+          "type": "translation",
+          "prompt": "the sister",
+          "answer": "die Schwester"
+        },
+        {
+          "type": "translation",
+          "prompt": "the son",
+          "answer": "der Sohn"
+        },
+        {
+          "type": "translation",
+          "prompt": "the daughter",
+          "answer": "die Tochter"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the man':",
+          "options": [
+            "der Mann",
+            "die Frau",
+            "der Freund",
+            "der Name"
+          ],
+          "answer": "der Mann"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the woman':",
+          "options": [
+            "die Frau",
+            "das Mädchen",
+            "die Mutter",
+            "die Leute"
+          ],
+          "answer": "die Frau"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the boy':",
+          "options": [
+            "der Junge",
+            "der Mann",
+            "der Sohn",
+            "der Vater"
+          ],
+          "answer": "der Junge"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the girl':",
+          "options": [
+            "das Mädchen",
+            "die Frau",
+            "die Tochter",
+            "die Schwester"
+          ],
+          "answer": "das Mädchen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the family':",
+          "options": [
+            "die Familie",
+            "die Leute",
+            "die Mutter",
+            "der Freund"
+          ],
+          "answer": "die Familie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the father':",
+          "options": [
+            "der Vater",
+            "die Mutter",
+            "der Bruder",
+            "der Sohn"
+          ],
+          "answer": "der Vater"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the English for 'die Leute':",
+          "options": [
+            "the people",
+            "the family",
+            "the name",
+            "the friend"
+          ],
+          "answer": "the people"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ Mann liest die Zeitung.",
+          "answer": "der"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ Frau arbeitet im Garten.",
+          "answer": "die"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ Mädchen singt ein Lied.",
+          "answer": "das"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Meine ___ kocht Suppe.",
+          "answer": "Mutter"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mein ___ fährt Fahrrad.",
+          "answer": "Vater"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Die ___ warten auf den Bus.",
+          "answer": "Leute"
+        },
+        {
+          "type": "translation",
+          "prompt": "Das ist meine Familie.",
+          "answer": "This is my family."
+        },
+        {
+          "type": "translation",
+          "prompt": "Die Familie isst zusammen.",
+          "answer": "The family eats together.",
+          "accepted_answers": [
+            "The family is eating together"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Meine Schwester mag Musik.",
+          "answer": "My sister likes music."
+        },
+        {
+          "type": "translation",
+          "prompt": "The people are nice.",
+          "answer": "Die Leute sind nett"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Numbers and Time",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "eins",
+          "translation": "one",
+          "pos": "numeral",
+          "example": "Eins, zwei, drei — los!"
+        },
+        {
+          "word": "zwei",
+          "translation": "two",
+          "pos": "numeral",
+          "example": "Ich habe zwei Geschwister."
+        },
+        {
+          "word": "drei",
+          "translation": "three",
+          "pos": "numeral",
+          "example": "Wir sind drei Freunde."
+        },
+        {
+          "word": "vier",
+          "translation": "four",
+          "pos": "numeral",
+          "example": "Das Auto hat vier Räder."
+        },
+        {
+          "word": "fünf",
+          "translation": "five",
+          "pos": "numeral",
+          "example": "Ich lerne fünf Wörter am Tag."
+        },
+        {
+          "word": "sechs",
+          "translation": "six",
+          "pos": "numeral",
+          "example": "Es ist sechs Uhr."
+        },
+        {
+          "word": "sieben",
+          "translation": "seven",
+          "pos": "numeral",
+          "example": "Eine Woche hat sieben Tage."
+        },
+        {
+          "word": "acht",
+          "translation": "eight",
+          "pos": "numeral",
+          "example": "Der Laden öffnet um acht Uhr."
+        },
+        {
+          "word": "neun",
+          "translation": "nine",
+          "pos": "numeral",
+          "example": "Sie kommt um neun Uhr."
+        },
+        {
+          "word": "zehn",
+          "translation": "ten",
+          "pos": "numeral",
+          "example": "Ich zähle bis zehn."
+        },
+        {
+          "word": "der Tag",
+          "translation": "the day",
+          "pos": "noun (masculine)",
+          "example": "Der Tag war lang."
+        },
+        {
+          "word": "die Woche",
+          "translation": "the week",
+          "pos": "noun (feminine)",
+          "example": "Bis nächste Woche!"
+        },
+        {
+          "word": "heute",
+          "translation": "today",
+          "pos": "adverb",
+          "example": "Heute bleibe ich zu Hause."
+        },
+        {
+          "word": "morgen",
+          "translation": "tomorrow",
+          "pos": "adverb",
+          "example": "Morgen habe ich Zeit."
+        },
+        {
+          "word": "gestern",
+          "translation": "yesterday",
+          "pos": "adverb",
+          "example": "Gestern hat es geregnet."
+        },
+        {
+          "word": "die Stunde",
+          "translation": "the hour",
+          "pos": "noun (feminine)",
+          "example": "Ich warte eine Stunde."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "eins",
+          "answer": "one"
+        },
+        {
+          "type": "translation",
+          "prompt": "zwei",
+          "answer": "two"
+        },
+        {
+          "type": "translation",
+          "prompt": "drei",
+          "answer": "three"
+        },
+        {
+          "type": "translation",
+          "prompt": "vier",
+          "answer": "four"
+        },
+        {
+          "type": "translation",
+          "prompt": "fünf",
+          "answer": "five"
+        },
+        {
+          "type": "translation",
+          "prompt": "sechs",
+          "answer": "six"
+        },
+        {
+          "type": "translation",
+          "prompt": "sieben",
+          "answer": "seven"
+        },
+        {
+          "type": "translation",
+          "prompt": "acht",
+          "answer": "eight"
+        },
+        {
+          "type": "translation",
+          "prompt": "neun",
+          "answer": "nine"
+        },
+        {
+          "type": "translation",
+          "prompt": "zehn",
+          "answer": "ten"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Tag",
+          "answer": "the day"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Woche",
+          "answer": "the week"
+        },
+        {
+          "type": "translation",
+          "prompt": "heute",
+          "answer": "today"
+        },
+        {
+          "type": "translation",
+          "prompt": "morgen",
+          "answer": "tomorrow"
+        },
+        {
+          "type": "translation",
+          "prompt": "gestern",
+          "answer": "yesterday"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Stunde",
+          "answer": "the hour"
+        },
+        {
+          "type": "translation",
+          "prompt": "one",
+          "answer": "eins"
+        },
+        {
+          "type": "translation",
+          "prompt": "two",
+          "answer": "zwei"
+        },
+        {
+          "type": "translation",
+          "prompt": "three",
+          "answer": "drei"
+        },
+        {
+          "type": "translation",
+          "prompt": "four",
+          "answer": "vier"
+        },
+        {
+          "type": "translation",
+          "prompt": "five",
+          "answer": "fünf"
+        },
+        {
+          "type": "translation",
+          "prompt": "six",
+          "answer": "sechs"
+        },
+        {
+          "type": "translation",
+          "prompt": "seven",
+          "answer": "sieben"
+        },
+        {
+          "type": "translation",
+          "prompt": "eight",
+          "answer": "acht"
+        },
+        {
+          "type": "translation",
+          "prompt": "nine",
+          "answer": "neun"
+        },
+        {
+          "type": "translation",
+          "prompt": "ten",
+          "answer": "zehn"
+        },
+        {
+          "type": "translation",
+          "prompt": "today",
+          "answer": "heute"
+        },
+        {
+          "type": "translation",
+          "prompt": "tomorrow",
+          "answer": "morgen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'one':",
+          "options": [
+            "eins",
+            "zwei",
+            "drei",
+            "vier"
+          ],
+          "answer": "eins"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'three':",
+          "options": [
+            "drei",
+            "zwei",
+            "eins",
+            "neun"
+          ],
+          "answer": "drei"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'five':",
+          "options": [
+            "fünf",
+            "vier",
+            "sechs",
+            "neun"
+          ],
+          "answer": "fünf"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'seven':",
+          "options": [
+            "sieben",
+            "sechs",
+            "acht",
+            "zehn"
+          ],
+          "answer": "sieben"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'ten':",
+          "options": [
+            "zehn",
+            "neun",
+            "acht",
+            "sieben"
+          ],
+          "answer": "zehn"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the English for 'heute':",
+          "options": [
+            "today",
+            "tomorrow",
+            "yesterday",
+            "now"
+          ],
+          "answer": "today"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Eine Woche hat ___ Tage.",
+          "answer": "sieben"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Der ___ war lang.",
+          "answer": "Tag"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ bleibe ich zu Hause.",
+          "answer": "heute"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ habe ich Zeit.",
+          "answer": "morgen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ hat es geregnet.",
+          "answer": "gestern"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich warte eine ___.",
+          "answer": "Stunde"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich zähle bis ___.",
+          "answer": "zehn"
+        },
+        {
+          "type": "translation",
+          "prompt": "Heute ist Montag.",
+          "answer": "Today is Monday."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich lerne fünf Wörter am Tag.",
+          "answer": "I learn five words a day.",
+          "accepted_answers": [
+            "I learn five words per day"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bis nächste Woche!",
+          "answer": "See you next week!",
+          "accepted_answers": [
+            "Until next week"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "I have two brothers.",
+          "answer": "Ich habe zwei Brüder"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Everyday Verbs",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "sein",
+          "translation": "to be",
+          "pos": "verb (infinitive)",
+          "example": "Ich möchte Lehrer sein."
+        },
+        {
+          "word": "haben",
+          "translation": "to have",
+          "pos": "verb (infinitive)",
+          "example": "Ich möchte einen Hund haben."
+        },
+        {
+          "word": "machen",
+          "translation": "to do",
+          "pos": "verb (infinitive)",
+          "example": "Was machst du heute?",
+          "accepted_translations": [
+            "to make"
+          ]
+        },
+        {
+          "word": "gehen",
+          "translation": "to go",
+          "pos": "verb (infinitive)",
+          "example": "Wir gehen ins Kino."
+        },
+        {
+          "word": "kommen",
+          "translation": "to come",
+          "pos": "verb (infinitive)",
+          "example": "Woher kommst du?"
+        },
+        {
+          "word": "wollen",
+          "translation": "to want",
+          "pos": "verb (infinitive)",
+          "example": "Ich will einen Kaffee."
+        },
+        {
+          "word": "können",
+          "translation": "to be able to",
+          "pos": "verb (infinitive)",
+          "example": "Kannst du Deutsch sprechen?",
+          "accepted_translations": [
+            "can"
+          ]
+        },
+        {
+          "word": "sprechen",
+          "translation": "to speak",
+          "pos": "verb (infinitive)",
+          "example": "Ich spreche ein wenig Deutsch.",
+          "accepted_translations": [
+            "to talk"
+          ]
+        },
+        {
+          "word": "essen",
+          "translation": "to eat",
+          "pos": "verb (infinitive)",
+          "example": "Wir essen um acht Uhr."
+        },
+        {
+          "word": "trinken",
+          "translation": "to drink",
+          "pos": "verb (infinitive)",
+          "example": "Ich trinke gern Tee."
+        },
+        {
+          "word": "lesen",
+          "translation": "to read",
+          "pos": "verb (infinitive)",
+          "example": "Sie liest ein Buch."
+        },
+        {
+          "word": "schreiben",
+          "translation": "to write",
+          "pos": "verb (infinitive)",
+          "example": "Er schreibt einen Brief."
+        },
+        {
+          "word": "verstehen",
+          "translation": "to understand",
+          "pos": "verb (infinitive)",
+          "example": "Ich verstehe das nicht."
+        },
+        {
+          "word": "lernen",
+          "translation": "to learn",
+          "pos": "verb (infinitive)",
+          "example": "Wir lernen Vokabeln."
+        },
+        {
+          "word": "arbeiten",
+          "translation": "to work",
+          "pos": "verb (infinitive)",
+          "example": "Sie arbeitet im Krankenhaus."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "sein",
+          "answer": "to be"
+        },
+        {
+          "type": "translation",
+          "prompt": "haben",
+          "answer": "to have"
+        },
+        {
+          "type": "translation",
+          "prompt": "machen",
+          "answer": "to do",
+          "accepted_answers": [
+            "to make"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "gehen",
+          "answer": "to go"
+        },
+        {
+          "type": "translation",
+          "prompt": "kommen",
+          "answer": "to come"
+        },
+        {
+          "type": "translation",
+          "prompt": "wollen",
+          "answer": "to want"
+        },
+        {
+          "type": "translation",
+          "prompt": "können",
+          "answer": "to be able to",
+          "accepted_answers": [
+            "can"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "sprechen",
+          "answer": "to speak",
+          "accepted_answers": [
+            "to talk"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "essen",
+          "answer": "to eat"
+        },
+        {
+          "type": "translation",
+          "prompt": "trinken",
+          "answer": "to drink"
+        },
+        {
+          "type": "translation",
+          "prompt": "lesen",
+          "answer": "to read"
+        },
+        {
+          "type": "translation",
+          "prompt": "schreiben",
+          "answer": "to write"
+        },
+        {
+          "type": "translation",
+          "prompt": "verstehen",
+          "answer": "to understand"
+        },
+        {
+          "type": "translation",
+          "prompt": "lernen",
+          "answer": "to learn"
+        },
+        {
+          "type": "translation",
+          "prompt": "arbeiten",
+          "answer": "to work"
+        },
+        {
+          "type": "translation",
+          "prompt": "to be",
+          "answer": "sein"
+        },
+        {
+          "type": "translation",
+          "prompt": "to have",
+          "answer": "haben"
+        },
+        {
+          "type": "translation",
+          "prompt": "to go",
+          "answer": "gehen"
+        },
+        {
+          "type": "translation",
+          "prompt": "to come",
+          "answer": "kommen"
+        },
+        {
+          "type": "translation",
+          "prompt": "to want",
+          "answer": "wollen"
+        },
+        {
+          "type": "translation",
+          "prompt": "to eat",
+          "answer": "essen"
+        },
+        {
+          "type": "translation",
+          "prompt": "to drink",
+          "answer": "trinken"
+        },
+        {
+          "type": "translation",
+          "prompt": "to read",
+          "answer": "lesen"
+        },
+        {
+          "type": "translation",
+          "prompt": "to write",
+          "answer": "schreiben"
+        },
+        {
+          "type": "translation",
+          "prompt": "to speak",
+          "answer": "sprechen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to be':",
+          "options": [
+            "sein",
+            "haben",
+            "machen",
+            "gehen"
+          ],
+          "answer": "sein"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to have':",
+          "options": [
+            "haben",
+            "sein",
+            "machen",
+            "wollen"
+          ],
+          "answer": "haben"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to eat':",
+          "options": [
+            "essen",
+            "trinken",
+            "lesen",
+            "lernen"
+          ],
+          "answer": "essen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to drink':",
+          "options": [
+            "trinken",
+            "essen",
+            "sprechen",
+            "kommen"
+          ],
+          "answer": "trinken"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to read':",
+          "options": [
+            "lesen",
+            "schreiben",
+            "verstehen",
+            "lernen"
+          ],
+          "answer": "lesen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to write':",
+          "options": [
+            "schreiben",
+            "lesen",
+            "machen",
+            "arbeiten"
+          ],
+          "answer": "schreiben"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the English for 'verstehen':",
+          "options": [
+            "to understand",
+            "to speak",
+            "to learn",
+            "to know"
+          ],
+          "answer": "to understand"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich möchte Lehrer ___.",
+          "answer": "sein"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich möchte einen Hund ___.",
+          "answer": "haben"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Was willst du heute ___?",
+          "answer": "machen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wir wollen ins Kino ___.",
+          "answer": "gehen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich will einen Kaffee ___.",
+          "answer": "trinken"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich möchte Pizza ___.",
+          "answer": "essen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich muss einen Brief ___.",
+          "answer": "schreiben"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich will Deutsch ___.",
+          "answer": "lernen"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich spreche Deutsch.",
+          "answer": "I speak German."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich lerne Spanisch.",
+          "answer": "I'm learning Spanish.",
+          "accepted_answers": [
+            "I learn Spanish"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich trinke Kaffee am Morgen.",
+          "answer": "I drink coffee in the morning.",
+          "accepted_answers": [
+            "I drink coffee in the mornings"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Sie arbeitet viel.",
+          "answer": "She works a lot.",
+          "accepted_answers": [
+            "She's working a lot",
+            "She is working a lot"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich verstehe das nicht.",
+          "answer": "I don't understand that.",
+          "accepted_answers": [
+            "I do not understand that"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Describing and Asking",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "gut",
+          "translation": "good",
+          "pos": "adjective",
+          "example": "Das ist eine gute Idee."
+        },
+        {
+          "word": "schlecht",
+          "translation": "bad",
+          "pos": "adjective",
+          "example": "Das Wetter ist schlecht."
+        },
+        {
+          "word": "groß",
+          "translation": "big",
+          "pos": "adjective",
+          "example": "Mein Bruder ist sehr groß.",
+          "accepted_translations": [
+            "tall",
+            "large"
+          ]
+        },
+        {
+          "word": "klein",
+          "translation": "small",
+          "pos": "adjective",
+          "example": "Die Wohnung ist klein.",
+          "accepted_translations": [
+            "little"
+          ]
+        },
+        {
+          "word": "neu",
+          "translation": "new",
+          "pos": "adjective",
+          "example": "Mein Handy ist neu."
+        },
+        {
+          "word": "alt",
+          "translation": "old",
+          "pos": "adjective",
+          "example": "Das Haus ist alt."
+        },
+        {
+          "word": "schön",
+          "translation": "beautiful",
+          "pos": "adjective",
+          "example": "Was für ein schöner Tag!",
+          "accepted_translations": [
+            "pretty",
+            "lovely"
+          ]
+        },
+        {
+          "word": "glücklich",
+          "translation": "happy",
+          "pos": "adjective",
+          "example": "Ich bin glücklich."
+        },
+        {
+          "word": "traurig",
+          "translation": "sad",
+          "pos": "adjective",
+          "example": "Der Film ist traurig."
+        },
+        {
+          "word": "einfach",
+          "translation": "easy",
+          "pos": "adjective",
+          "example": "Die Frage ist einfach."
+        },
+        {
+          "word": "schwierig",
+          "translation": "difficult",
+          "pos": "adjective",
+          "example": "Die Prüfung ist schwierig.",
+          "accepted_translations": [
+            "hard"
+          ]
+        },
+        {
+          "word": "heiß",
+          "translation": "hot",
+          "pos": "adjective",
+          "example": "Der Kaffee ist heiß."
+        },
+        {
+          "word": "wo",
+          "translation": "where",
+          "pos": "question word",
+          "example": "Wo wohnst du?"
+        },
+        {
+          "word": "was",
+          "translation": "what",
+          "pos": "question word",
+          "example": "Was ist das?"
+        },
+        {
+          "word": "wann",
+          "translation": "when",
+          "pos": "question word",
+          "example": "Wann kommst du?"
+        },
+        {
+          "word": "wie",
+          "translation": "how",
+          "pos": "question word",
+          "example": "Wie heißt du?"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "gut",
+          "answer": "good"
+        },
+        {
+          "type": "translation",
+          "prompt": "schlecht",
+          "answer": "bad"
+        },
+        {
+          "type": "translation",
+          "prompt": "groß",
+          "answer": "big",
+          "accepted_answers": [
+            "tall",
+            "large"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "klein",
+          "answer": "small",
+          "accepted_answers": [
+            "little"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "neu",
+          "answer": "new"
+        },
+        {
+          "type": "translation",
+          "prompt": "alt",
+          "answer": "old"
+        },
+        {
+          "type": "translation",
+          "prompt": "schön",
+          "answer": "beautiful",
+          "accepted_answers": [
+            "pretty",
+            "lovely"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "glücklich",
+          "answer": "happy"
+        },
+        {
+          "type": "translation",
+          "prompt": "traurig",
+          "answer": "sad"
+        },
+        {
+          "type": "translation",
+          "prompt": "einfach",
+          "answer": "easy"
+        },
+        {
+          "type": "translation",
+          "prompt": "schwierig",
+          "answer": "difficult",
+          "accepted_answers": [
+            "hard"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "heiß",
+          "answer": "hot"
+        },
+        {
+          "type": "translation",
+          "prompt": "wo",
+          "answer": "where"
+        },
+        {
+          "type": "translation",
+          "prompt": "was",
+          "answer": "what"
+        },
+        {
+          "type": "translation",
+          "prompt": "wann",
+          "answer": "when"
+        },
+        {
+          "type": "translation",
+          "prompt": "wie",
+          "answer": "how"
+        },
+        {
+          "type": "translation",
+          "prompt": "big",
+          "answer": "groß"
+        },
+        {
+          "type": "translation",
+          "prompt": "small",
+          "answer": "klein"
+        },
+        {
+          "type": "translation",
+          "prompt": "new",
+          "answer": "neu"
+        },
+        {
+          "type": "translation",
+          "prompt": "old",
+          "answer": "alt"
+        },
+        {
+          "type": "translation",
+          "prompt": "beautiful",
+          "answer": "schön"
+        },
+        {
+          "type": "translation",
+          "prompt": "happy",
+          "answer": "glücklich"
+        },
+        {
+          "type": "translation",
+          "prompt": "sad",
+          "answer": "traurig"
+        },
+        {
+          "type": "translation",
+          "prompt": "easy",
+          "answer": "einfach"
+        },
+        {
+          "type": "translation",
+          "prompt": "difficult",
+          "answer": "schwierig"
+        },
+        {
+          "type": "translation",
+          "prompt": "hot",
+          "answer": "heiß"
+        },
+        {
+          "type": "translation",
+          "prompt": "where",
+          "answer": "wo"
+        },
+        {
+          "type": "translation",
+          "prompt": "how",
+          "answer": "wie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good':",
+          "options": [
+            "gut",
+            "schlecht",
+            "neu",
+            "alt"
+          ],
+          "answer": "gut"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bad':",
+          "options": [
+            "schlecht",
+            "gut",
+            "groß",
+            "klein"
+          ],
+          "answer": "schlecht"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'big':",
+          "options": [
+            "groß",
+            "klein",
+            "neu",
+            "alt"
+          ],
+          "answer": "groß"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'small':",
+          "options": [
+            "klein",
+            "groß",
+            "gut",
+            "heiß"
+          ],
+          "answer": "klein"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'happy':",
+          "options": [
+            "glücklich",
+            "traurig",
+            "einfach",
+            "schön"
+          ],
+          "answer": "glücklich"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'difficult':",
+          "options": [
+            "schwierig",
+            "einfach",
+            "gut",
+            "neu"
+          ],
+          "answer": "schwierig"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'where':",
+          "options": [
+            "wo",
+            "was",
+            "wann",
+            "wie"
+          ],
+          "answer": "wo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the English for 'heiß':",
+          "options": [
+            "hot",
+            "new",
+            "small",
+            "bad"
+          ],
+          "answer": "hot"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ wohnst du?",
+          "answer": "wo"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ist das?",
+          "answer": "was"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ kommst du?",
+          "answer": "wann"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ heißt du?",
+          "answer": "wie"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Der Kaffee ist ___.",
+          "answer": "heiß"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Die Prüfung ist ___.",
+          "answer": "schwierig"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Der Park ist ___.",
+          "answer": "schön"
+        },
+        {
+          "type": "translation",
+          "prompt": "Das Wetter ist schlecht.",
+          "answer": "The weather is bad."
+        },
+        {
+          "type": "translation",
+          "prompt": "Das Haus ist groß.",
+          "answer": "The house is big.",
+          "accepted_answers": [
+            "The house is large"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich bin glücklich.",
+          "answer": "I'm happy.",
+          "accepted_answers": [
+            "I am happy"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Deutsch ist schwierig.",
+          "answer": "German is difficult.",
+          "accepted_answers": [
+            "German is hard"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Wo ist der Bahnhof?",
+          "answer": "Where is the station?",
+          "accepted_answers": [
+            "Where is the train station?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "My sister is sad.",
+          "answer": "Meine Schwester ist traurig"
+        }
+      ]
+    }
+  ]
+}
