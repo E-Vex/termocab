@@ -1,6 +1,6 @@
 # HANDOFF — termocab
 
-> This document is written for an AI coding agent taking over full development of **termocab**. It consolidates every decision made during the planning/bootstrap phase (Aug 2026), the MVP implementation session (Oct 2026), the review-fix session (Oct 2026), the usage-review session (Oct 2026), the second-language session (Nov 2026), the third-language session (Nov 2026) and the fourth-language session (Nov 2026) so no prior conversation context is needed to continue the project. **The repository itself is the source of truth** — if anything here conflicts with what you find in the actual code, trust the code, and update this file to match.
+> This document is written for an AI coding agent taking over full development of **termocab**. It consolidates every decision made during the planning/bootstrap phase (Aug 2026), the MVP implementation session (Oct 2026), the review-fix session (Oct 2026), the usage-review session (Oct 2026), the second-language session (Nov 2026), the third-language session (Nov 2026), the fourth-language session (Nov 2026) and the fifth-language session (Nov 2026) so no prior conversation context is needed to continue the project. **The repository itself is the source of truth** — if anything here conflicts with what you find in the actual code, trust the code, and update this file to match.
 
 ## 1. What this is
 
@@ -30,6 +30,8 @@ The **third-language session (Nov 2026)** shipped German as the third course wit
 
 The **fourth-language session (Nov 2026)** shipped Italian as the fourth course with **zero engine changes** — the last pure-content candidate of the big Western European languages, so that set is now closed: every language the D9 table covers has a course, and the next language anyone adds will force the Latin Extended-A extension (§4). The table covered both of Italian's accent directions untouched — the grave (`sì`, `caffè`, `città`, `più`) and the acute (`perché`, `così`) — so "perche" and "caffe" grade correct with the properly spelled form as the hint. Italian takes German's articles-with-nouns convention and adds the elision (`l'uomo`, `l'amico` — either apostrophe grades, the srs key keeps the authored one verbatim): stage 2 blanks the article itself and shows one elision with the noun blanked (`L'___ legge il giornale`), stage 4 blanks the infinitive after a modal (`Voglio ___ un caffè`), and `perché` lists both directions of the why/because duality as accepted translations. All four shipped courses are pinned by the same binary-level `check` test in CI.
 
+The **fifth-language session (Nov 2026)** shipped Polish as the fifth course and, with it, the **first engine change a language has forced since D9 (D10)** — the live test of the extension path the accent table was designed for. The seven decomposable Polish letters (ą ć ę ń ś ź ż — ogonek, acute, dot above) joined the `ACCENTED` table as base + combining mark, riding the existing strict/loose machinery unchanged; ł, which has no Unicode decomposition, opens in the loose pass to plain `l` exactly like `ß` opens to `ss` — same word, missing stroke, properly spelled form as the hint, in a new `OPEN_LETTERS` table beside the ligatures. The change is purely additive: none of the four shipped courses contains a new letter, so nothing shifted under them. Polish has no articles, so its nouns are bare and the stage-2 drill is the identification pattern instead ("___ jest mój brat" wants "to" — the German-article slot, Polish edition); stage 4 keeps the family drill, chcieć/lubię/muszę + blanked infinitive ("Chcę ___ kawę" wants "pić"); and all nine Polish letters are alive in real content (piątek, pięć, dzień, krótki, szczęśliwy, jeździć, książki). All five shipped courses are pinned by the same binary-level `check` test in CI.
+
 ```
 termocab/
 ├── Cargo.toml              # deps: serde (derive), serde_json — nothing else
@@ -46,10 +48,15 @@ termocab/
 │   ├── german/
 │   │   └── stages.json     # third course: 5 stages, 73 words, 216 exercises
 │   │                       #   (articles on nouns, modals + infinitive blanks)
-│   └── italian/
-│       └── stages.json     # fourth course: 5 stages, 73 words, 218 exercises
-│                           #   (articles + elisions on nouns, modals +
-│                           #    infinitive blanks, grave and acute accents)
+│   ├── italian/
+│   │   └── stages.json     # fourth course: 5 stages, 73 words, 218 exercises
+│   │                       #   (articles + elisions on nouns, modals +
+│   │                       #    infinitive blanks, grave and acute accents)
+│   └── polish/
+│       └── stages.json     # fifth course (D10): 5 stages, 73 words, 218 exercises
+│                           #   (bare nouns — no articles in Polish, "to jest"
+│                           #    blanks, chcieć/lubię + infinitive blanks, all
+│                           #    nine Polish letters in real content)
 ├── tests/
 │   └── cli.rs              # binary-level integration tests (subprocess, hermetic env)
 └── src/
@@ -74,7 +81,7 @@ termocab/
     └── testenv.rs          # #[cfg(test)]-only: shared env lock + RAII temp dirs
 ```
 
-Verified: `cargo build` warning-free, `cargo clippy --all-targets -- -D warnings` clean, `cargo test` green (94 unit + 26 binary-level integration tests), a scripted playthrough of the full French course passes end to end (5/5 stages, streak, replay, 73-card review), a scripted playthrough of the full Spanish course does the same with deliberately accent-stripped answers (5/5 stages, 73/73 review, every card promoted to box 2), a scripted playthrough of the full German course passes with umlaut- and sharp-s-stripped answers (5/5 stages, 73/73 review, every card promoted to box 2, `Brüder` hinted after `Bruder`), and a scripted playthrough of the full Italian course passes with accent-stripped answers (5/5 stages, 73/73 review, every card promoted to box 2, `sì` hinted after `si`). CI (§11) runs all of it on ubuntu and macOS.
+Verified: `cargo build` warning-free, `cargo clippy --all-targets -- -D warnings` clean, `cargo test` green (95 unit + 27 binary-level integration tests), a scripted playthrough of the full French course passes end to end (5/5 stages, streak, replay, 73-card review), a scripted playthrough of the full Spanish course does the same with deliberately accent-stripped answers (5/5 stages, 73/73 review, every card promoted to box 2), a scripted playthrough of the full German course passes with umlaut- and sharp-s-stripped answers (5/5 stages, 73/73 review, every card promoted to box 2, `Brüder` hinted after `Bruder`), a scripted playthrough of the full Italian course passes with accent-stripped answers (5/5 stages, 73/73 review, every card promoted to box 2, `sì` hinted after `si`), and a scripted playthrough of the full Polish course passes with diacritic- and stroke-stripped answers (5/5 stages, 63 accent hints, 73/73 review, every card promoted to box 2, `dziękuję` hinted after `dziekuje`, `żółty` after `zolty`). CI (§11) runs all of it on ubuntu and macOS.
 
 ## 3. Architecture — read this before writing any code
 
@@ -128,7 +135,7 @@ pub enum Grade { Correct, CorrectWithHint(String), Incorrect }
 
 Engine API: `Exercise::prompt()`, `Exercise::answer()`, `Exercise::accepted_answers()`, `Exercise::grade(attempt) -> Grade` and `Exercise::is_correct(attempt)`; `Stage::is_completed_by(correct_count)` implementing the 80% rule with integer math via `STAGE_PASS_PERCENT`.
 
-Grading (settled in the review-fix session, decision D1; generalized by D9): both sides go through `normalize_strict` — trim, lowercase, collapse internal whitespace, strip leading/trailing punctuation (`. ? ! , ;` and Spanish's inverted `¡ ¿`), fold apostrophes (`’` → `'`), and fold Unicode composition via a hand-written 27-entry Latin-1 Supplement accent table (à á â ã ä å ç é è ê ë ì í î ï ñ ò ó ô õ ö ù ú û ü ý ÿ decompose to base + combining mark, so precomposed `é` equals macOS's `e` + U+0301 — the whole Western European set, not a French dialect). A second, loose pass drops the combining marks and opens the œ/æ/ß ligatures: an accent-only mismatch is **correct**, and `grade` returns `CorrectWithHint` carrying the properly accented form, which the session prints as `correct — watch the accents: étudiant`. Letters that are letters in their own right (`ø`, `þ`, `ð`) deliberately do not fold — `smør` is not `smor`. `accepted_answers` (optional field on translation and fill_blank, absent in old files) lists alternative correct spellings — contractions ("I'm a student"), gendered forms ("Je suis étudiante").
+Grading (settled in the review-fix session, decision D1; generalized by D9): both sides go through `normalize_strict` — trim, lowercase, collapse internal whitespace, strip leading/trailing punctuation (`. ? ! , ;` and Spanish's inverted `¡ ¿`), fold apostrophes (`’` → `'`), and fold Unicode composition via a hand-written 34-entry accent table — the Latin-1 Supplement set (à á â ã ä å ç é è ê ë ì í î ï ñ ò ó ô õ ö ù ú û ü ý ÿ) plus the decomposable Polish letters of Latin Extended-A, ą ć ę ń ś ź ż (D10) — so precomposed `é` equals macOS's `e` + U+0301, and precomposed `ń` equals hand-typed `n` + U+0301: same letter, same accent, different encoding. A second, loose pass drops the combining marks and opens the œ/æ/ß ligatures and the stroked ł (D10): an accent-only or stroke-only mismatch is **correct**, and `grade` returns `CorrectWithHint` carrying the properly spelled form, which the session prints as `correct — watch the accents: étudiant` (or `łódź`). Letters that never fold (`ø`, `þ`, `ð`) deliberately stay closed — `smør` is not `smor`; ł does fold, because it is the same word missing a stroke — the ß rule. `accepted_answers` (optional field on translation and fill_blank, absent in old files) lists alternative correct spellings — contractions ("I'm a student"), gendered forms ("Je suis étudiante").
 
 No `#[derive(Serialize/Deserialize)]` here, deliberately — that would leak storage-awareness into `engine/`. The JSON-shaped mirror types live in `content/mod.rs` and get converted into these via `.into_engine()`.
 
@@ -217,6 +224,7 @@ Rules:
 - **Alternative translations in review** (usage-review D8): vocabulary entries take an optional `accepted_translations` array, the exact pattern of `accepted_answers` on exercises — a review of `salut` accepts both "hi" and "hello", through the same forgiving grading (case, accents, punctuation) as the primary translation. `list-words` shows the alternatives as `hi (also: hello)`.
 - **Color** (usage-review): session feedback is green (correct) / red (not quite) **only when stdout is a terminal** and `$NO_COLOR` is unset or empty (no-color.org, to the letter — empty does not count as set). Piped output never contains escape codes. Decided at the CLI edge (`std::io::IsTerminal`, no dependency), passed into the session as a value.
 - **Language-agnostic normalization** (second-language session, D9): the accent table is the accented-letter set of the whole Latin-1 Supplement — 27 lowercase entries covering Western Europe (Spanish, German, Italian, Portuguese, Catalan, Icelandic…), not a French dialect; `¡` and `¿` join the edge-punctuation set (`hola` is `¡Hola!`); `ß` opens to `ss` in the loose pass exactly like `œ` → `oe`. Letters that are letters in their own right (`ø`, `þ`, `ð`) never fold. When a language outside the set arrives (Polish, Romanian, …), extend the table with Latin Extended-A entries — same pattern, still no Unicode-normalization dependency.
+- **Latin Extended-A, the Polish set** (fifth-language session, D10): the D9 prediction, executed. The seven decomposable Polish letters (ą ć ę ń ś ź ż) joined `ACCENTED` as base + combining mark — ogonek U+0328, acute U+0301, dot above U+0307, all inside the loose pass's existing combining range, so the loose pass needed no change at all. ł, which has no Unicode decomposition, joined `ß`'s loose-only opening rule as a new `OPEN_LETTERS` table beside the ligatures: `łódź` counts with `lodz` as the hint, exactly like `straße` with `strasse`. ø þ ð stay closed (D9 stands). The next language to need more is Romanian: ă joins `ACCENTED` (a + breve, same pattern), while ș and ț have no decomposition and will follow ł into `OPEN_LETTERS`. Still no Unicode-normalization dependency.
 - CLI is git-style direct subcommands only, named **start** (with `--no-shuffle`/`--seed <n>`, D7), **review**, **list-words**, **progress**, **streak**, **stats** (usage-review: boxes, 14-day review load and activity as plain-text Unicode sparklines, no color), **add-lang** (with `--force` to replace an existing language), **check**, **help**. No interactive/numbered-menu mode anywhere. Exit codes: 2 usage, 1 runtime, 0 success, 141 broken pipe (D6).
 
 ## 8. MVP scope — now implemented
@@ -241,10 +249,10 @@ Known rough edges (fine to leave, fine to fix): none currently — the broken-pi
 
 ## 10. Suggested next steps
 
-**Content is the product**: four courses now ship (French, Spanish, German, Italian — 73 words each, the same five-stage skeleton) and the engine has survived three languages it was never written for without a single change — the D9 table plus `accepted_answers`/`accepted_translations` has been the whole story. The big Western European set is closed: every language the Latin-1 table covers has a course, so the next language anyone adds will be the first real engine-content wave since D9. `check` + `add-lang` make outside authoring safe, and a community "content packs" flow (a repo of stages.json files) is the natural evolution of those two verbs. The standing priorities: (1) growing the four shipped courses, since every new stage completion feeds the srs automatically, and (2) a fifth language — Polish or Romanian are the natural candidates, and either would force the Latin Extended-A extension of D9's table, the live test of the extension path the table was designed for.
+**Content is the product**: five courses now ship (French, Spanish, German, Italian, Polish — 73 words each, the same five-stage skeleton) and the engine needed exactly one table extension to absorb its fifth language (D10). The big Western European set is closed, and its first successor is closed too: every language the D9 table covers has a course, and the first language past that boundary forced the Latin Extended-A extension — which turned out to be seven ACCENTED entries and one OPEN_LETTERS entry, no machinery. `check` + `add-lang` make outside authoring safe, and a community "content packs" flow (a repo of stages.json files) is the natural evolution of those two verbs. The standing priorities: (1) growing the five shipped courses, since every new stage completion feeds the srs automatically, and (2) a sixth language — Romanian is the natural candidate: it exercises the rest of the extension path in one wave (ă decomposes into `ACCENTED`, while ș and ț are Extended-B with no decomposition, so they follow ł into `OPEN_LETTERS` — the first entries that are neither ligatures nor strokes).
 
-1. More French, Spanish, German and Italian stages (each new completion feeds the srs automatically).
-2. A fifth language: Polish/Romanian extend the accent table (§4) and would prove the D9 extension path actually works — the first engine change a language would force since D9.
+1. More French, Spanish, German, Italian and Polish stages (each new completion feeds the srs automatically).
+2. A sixth language: Romanian — ă joins the strict table (a + breve, same pattern as the Polish set), while ș and ț follow ł into `OPEN_LETTERS`; the second live test of the extension path.
 3. ncurses TUI as an additive alternative frontend over `session::Terminal`.
 4. SQLite storage layer replacing `storage/` (only that module changes).
 5. Review session caps / ordering once content is large enough to need it (see §9).
@@ -258,12 +266,13 @@ Every change should hold up against: Separation of Concerns, Single Responsibili
 
 ```
 cargo build          # warning-free
-cargo test           # 94 unit + 26 binary-level integration tests
+cargo test           # 95 unit + 27 binary-level integration tests
 cargo run            # prints usage
 cargo run -- start french       # play the next stage (shuffled by default, D7)
 cargo run -- start spanish      # the second course, same engine (D9)
 cargo run -- start german       # the third course: articles, umlauts, ß
 cargo run -- start italian      # the fourth course: elisions, grave + acute
+cargo run -- start polish       # the fifth course: the D10 wave, ogoneks + the stroke
 cargo run -- start --no-shuffle french 1   # authored exercise order
 cargo run -- start --seed 42 french 1      # reproducible order
 cargo run -- review italian     # spaced-repetition review of due words

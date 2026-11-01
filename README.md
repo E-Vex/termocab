@@ -7,13 +7,16 @@ reviews, streaks — fully offline, fully local, no account, no network.
 Plain text everywhere: content is JSON, your progress is a file you can
 `cat`. UX modeled on git — direct subcommands, no menus.
 
-Four courses ship today: French (five stages, 73 words, 177
+Five courses ship today: French (five stages, 73 words, 177
 exercises), Spanish (five stages, 73 words, 197 exercises), German
 (five stages, 73 words, 216 exercises — nouns with their articles,
-modal-verb drills, umlauts and the sharp s) and Italian (five stages,
+modal-verb drills, umlauts and the sharp s), Italian (five stages,
 73 words, 218 exercises — articles with their elisions, modal-verb
-drills, the grave and the acute accents) — same engine, same rules,
-same forgiving grading for all of them.
+drills, the grave and the acute accents) and Polish (five stages,
+73 words, 218 exercises — bare nouns, "to jest" drills, want/like +
+infinitive drills, every letter ą ć ę ł ń ó ś ź ż alive in real
+content) — same engine, same rules, same forgiving grading for all
+of them.
 
 ## Install & run
 
@@ -22,7 +25,7 @@ cargo install --path .
 termocab start french
 ```
 
-(then try `termocab start italian`)
+(then try `termocab start polish`)
 
 Content is looked up in this order (first hit wins):
 
@@ -64,8 +67,8 @@ color everywhere (no-color.org).
 
 ## Content format
 
-One `stages.json` per language — see `languages/italian/stages.json`
-or `languages/german/stages.json` for full examples and `HANDOFF.md`
+One `stages.json` per language — see `languages/polish/stages.json`
+or `languages/italian/stages.json` for full examples and `HANDOFF.md`
 §5 for the rules. Quick sketch:
 
 ```json
@@ -97,7 +100,10 @@ Spanish's inverted ¿ ¡), missing accents (an accent-only miss counts
 as correct and shows the accented form — Italian's grave and acute
 accents fold the same way, so `perche` counts with `perché` as the
 hint — and German's `ß` opens like a ligature, so `strasse` counts
-with `Straße` as the hint);
+with `Straße` as the hint); Polish folds the same way one table
+further out in Latin Extended-A: `dziekuje` counts with `dziękuję`
+as the hint, and the stroked `ł` opens exactly like `ß`, so `lodz`
+counts with `łódź`.
 `accepted_answers` lists alternative correct spellings, and
 `accepted_translations` on a vocabulary entry lists alternative correct
 translations a review will accept — reviewing `salut` with "hello" is
