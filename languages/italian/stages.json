@@ -1,0 +1,1977 @@
+{
+  "language": "italian",
+  "stages": [
+    {
+      "id": 1,
+      "title": "Greetings and Basics",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "ciao",
+          "translation": "hello",
+          "accepted_translations": [
+            "hi",
+            "bye",
+            "goodbye"
+          ],
+          "pos": "interjection",
+          "example": "Ciao, come stai?"
+        },
+        {
+          "word": "arrivederci",
+          "translation": "goodbye",
+          "accepted_translations": [
+            "bye"
+          ],
+          "pos": "interjection",
+          "example": "Arrivederci, a domani!"
+        },
+        {
+          "word": "buongiorno",
+          "translation": "good morning",
+          "accepted_translations": [
+            "good day"
+          ],
+          "pos": "phrase",
+          "example": "Buongiorno, signora Rossi!"
+        },
+        {
+          "word": "buonasera",
+          "translation": "good evening",
+          "pos": "phrase",
+          "example": "Buonasera, come va?"
+        },
+        {
+          "word": "grazie",
+          "translation": "thank you",
+          "accepted_translations": [
+            "thanks"
+          ],
+          "pos": "interjection",
+          "example": "Grazie mille per l'aiuto!"
+        },
+        {
+          "word": "per favore",
+          "translation": "please",
+          "pos": "phrase",
+          "example": "Un caffè, per favore."
+        },
+        {
+          "word": "prego",
+          "translation": "you're welcome",
+          "accepted_translations": [
+            "you are welcome"
+          ],
+          "pos": "interjection",
+          "example": "—Grazie! —Prego."
+        },
+        {
+          "word": "sì",
+          "translation": "yes",
+          "pos": "adverb",
+          "example": "Sì, certo."
+        },
+        {
+          "word": "no",
+          "translation": "no",
+          "pos": "adverb",
+          "example": "No, grazie."
+        },
+        {
+          "word": "scusi",
+          "translation": "sorry",
+          "accepted_translations": [
+            "excuse me",
+            "pardon"
+          ],
+          "pos": "interjection",
+          "example": "Scusi, dov'è la stazione?"
+        },
+        {
+          "word": "piacere",
+          "translation": "nice to meet you",
+          "accepted_translations": [
+            "pleased to meet you"
+          ],
+          "pos": "phrase",
+          "example": "Piacere, mi chiamo Anna."
+        },
+        {
+          "word": "a presto",
+          "translation": "see you soon",
+          "accepted_translations": [
+            "see you"
+          ],
+          "pos": "phrase",
+          "example": "A presto, Marco!"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ciao",
+          "answer": "hello",
+          "accepted_answers": [
+            "hi",
+            "bye",
+            "goodbye"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "arrivederci",
+          "answer": "goodbye",
+          "accepted_answers": [
+            "bye"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "buongiorno",
+          "answer": "good morning",
+          "accepted_answers": [
+            "good day"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "buonasera",
+          "answer": "good evening"
+        },
+        {
+          "type": "translation",
+          "prompt": "grazie",
+          "answer": "thank you",
+          "accepted_answers": [
+            "thanks"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "per favore",
+          "answer": "please"
+        },
+        {
+          "type": "translation",
+          "prompt": "prego",
+          "answer": "you're welcome",
+          "accepted_answers": [
+            "you are welcome"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "sì",
+          "answer": "yes"
+        },
+        {
+          "type": "translation",
+          "prompt": "no",
+          "answer": "no"
+        },
+        {
+          "type": "translation",
+          "prompt": "scusi",
+          "answer": "sorry",
+          "accepted_answers": [
+            "excuse me",
+            "pardon"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "piacere",
+          "answer": "nice to meet you",
+          "accepted_answers": [
+            "pleased to meet you"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "a presto",
+          "answer": "see you soon",
+          "accepted_answers": [
+            "see you"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "hello",
+          "answer": "ciao"
+        },
+        {
+          "type": "translation",
+          "prompt": "thank you",
+          "answer": "grazie"
+        },
+        {
+          "type": "translation",
+          "prompt": "yes",
+          "answer": "sì"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hello':",
+          "options": [
+            "ciao",
+            "grazie",
+            "arrivederci",
+            "sì"
+          ],
+          "answer": "ciao"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'goodbye':",
+          "options": [
+            "arrivederci",
+            "ciao",
+            "buongiorno",
+            "per favore"
+          ],
+          "answer": "arrivederci"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good morning':",
+          "options": [
+            "buongiorno",
+            "buonasera",
+            "grazie",
+            "ciao"
+          ],
+          "answer": "buongiorno"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'please':",
+          "options": [
+            "per favore",
+            "grazie",
+            "prego",
+            "scusi"
+          ],
+          "answer": "per favore"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'thank you':",
+          "options": [
+            "grazie",
+            "per favore",
+            "prego",
+            "sì"
+          ],
+          "answer": "grazie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'yes':",
+          "options": [
+            "sì",
+            "no",
+            "ciao",
+            "grazie"
+          ],
+          "answer": "sì"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sorry':",
+          "options": [
+            "scusi",
+            "grazie",
+            "prego",
+            "per favore"
+          ],
+          "answer": "scusi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'see you soon':",
+          "options": [
+            "a presto",
+            "arrivederci",
+            "buonasera",
+            "piacere"
+          ],
+          "answer": "a presto"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, come stai?",
+          "answer": "ciao"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Un caffè, ___.",
+          "answer": "per favore"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "—Grazie! —___.",
+          "answer": "prego"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, mi chiamo Anna.",
+          "answer": "piacere"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, signora Rossi!",
+          "answer": "buongiorno"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Arrivederci, a ___!",
+          "answer": "presto"
+        },
+        {
+          "type": "translation",
+          "prompt": "Come stai?",
+          "answer": "How are you?",
+          "accepted_answers": [
+            "How are you doing?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Sto bene, grazie.",
+          "answer": "I'm well, thank you.",
+          "accepted_answers": [
+            "I am well, thank you."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mi chiamo Marco.",
+          "answer": "My name is Marco.",
+          "accepted_answers": [
+            "I'm Marco.",
+            "I am Marco."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Come ti chiami?",
+          "answer": "What's your name?",
+          "accepted_answers": [
+            "What is your name?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Come va?",
+          "answer": "How's it going?",
+          "accepted_answers": [
+            "How is it going?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "A domani!",
+          "answer": "See you tomorrow!"
+        },
+        {
+          "type": "translation",
+          "prompt": "Piacere di conoscerti.",
+          "answer": "Nice to meet you."
+        },
+        {
+          "type": "translation",
+          "prompt": "Va tutto bene.",
+          "answer": "Everything is fine.",
+          "accepted_answers": [
+            "All is well."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "People and Family",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "l'uomo",
+          "translation": "the man",
+          "pos": "noun (masculine)",
+          "example": "L'uomo legge il giornale."
+        },
+        {
+          "word": "la donna",
+          "translation": "the woman",
+          "pos": "noun (feminine)",
+          "example": "La donna lavora in ufficio."
+        },
+        {
+          "word": "il bambino",
+          "translation": "the boy",
+          "accepted_translations": [
+            "the child"
+          ],
+          "pos": "noun (masculine)",
+          "example": "Il bambino gioca nel parco."
+        },
+        {
+          "word": "la bambina",
+          "translation": "the girl",
+          "pos": "noun (feminine)",
+          "example": "La bambina disegna un fiore."
+        },
+        {
+          "word": "l'amico",
+          "translation": "the friend",
+          "pos": "noun (masculine)",
+          "example": "Il mio amico si chiama Luca."
+        },
+        {
+          "word": "la famiglia",
+          "translation": "the family",
+          "pos": "noun (feminine)",
+          "example": "La famiglia è numerosa."
+        },
+        {
+          "word": "la madre",
+          "translation": "the mother",
+          "pos": "noun (feminine)",
+          "example": "Mia madre cucina molto bene."
+        },
+        {
+          "word": "il padre",
+          "translation": "the father",
+          "pos": "noun (masculine)",
+          "example": "Mio padre lavora a Roma."
+        },
+        {
+          "word": "il fratello",
+          "translation": "the brother",
+          "pos": "noun (masculine)",
+          "example": "Mio fratello ha dieci anni."
+        },
+        {
+          "word": "la sorella",
+          "translation": "the sister",
+          "pos": "noun (feminine)",
+          "example": "Mia sorella studia medicina."
+        },
+        {
+          "word": "il figlio",
+          "translation": "the son",
+          "pos": "noun (masculine)",
+          "example": "Il figlio di Marco è piccolo."
+        },
+        {
+          "word": "la figlia",
+          "translation": "the daughter",
+          "pos": "noun (feminine)",
+          "example": "La figlia di Anna è simpatica."
+        },
+        {
+          "word": "il nome",
+          "translation": "the name",
+          "pos": "noun (masculine)",
+          "example": "Il mio nome è Giulia."
+        },
+        {
+          "word": "la gente",
+          "translation": "the people",
+          "pos": "noun (feminine)",
+          "example": "La gente è molto gentile."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "l'uomo",
+          "answer": "the man"
+        },
+        {
+          "type": "translation",
+          "prompt": "la donna",
+          "answer": "the woman"
+        },
+        {
+          "type": "translation",
+          "prompt": "il bambino",
+          "answer": "the boy",
+          "accepted_answers": [
+            "the child"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "la bambina",
+          "answer": "the girl"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'amico",
+          "answer": "the friend"
+        },
+        {
+          "type": "translation",
+          "prompt": "la famiglia",
+          "answer": "the family"
+        },
+        {
+          "type": "translation",
+          "prompt": "la madre",
+          "answer": "the mother"
+        },
+        {
+          "type": "translation",
+          "prompt": "il padre",
+          "answer": "the father"
+        },
+        {
+          "type": "translation",
+          "prompt": "il fratello",
+          "answer": "the brother"
+        },
+        {
+          "type": "translation",
+          "prompt": "la sorella",
+          "answer": "the sister"
+        },
+        {
+          "type": "translation",
+          "prompt": "il figlio",
+          "answer": "the son"
+        },
+        {
+          "type": "translation",
+          "prompt": "la figlia",
+          "answer": "the daughter"
+        },
+        {
+          "type": "translation",
+          "prompt": "il nome",
+          "answer": "the name"
+        },
+        {
+          "type": "translation",
+          "prompt": "la gente",
+          "answer": "the people"
+        },
+        {
+          "type": "translation",
+          "prompt": "the man",
+          "answer": "l'uomo"
+        },
+        {
+          "type": "translation",
+          "prompt": "the woman",
+          "answer": "la donna"
+        },
+        {
+          "type": "translation",
+          "prompt": "the boy",
+          "answer": "il bambino"
+        },
+        {
+          "type": "translation",
+          "prompt": "the girl",
+          "answer": "la bambina"
+        },
+        {
+          "type": "translation",
+          "prompt": "the friend",
+          "answer": "l'amico"
+        },
+        {
+          "type": "translation",
+          "prompt": "the family",
+          "answer": "la famiglia"
+        },
+        {
+          "type": "translation",
+          "prompt": "the brother",
+          "answer": "il fratello"
+        },
+        {
+          "type": "translation",
+          "prompt": "the sister",
+          "answer": "la sorella"
+        },
+        {
+          "type": "translation",
+          "prompt": "the son",
+          "answer": "il figlio"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the man':",
+          "options": [
+            "l'uomo",
+            "la donna",
+            "il bambino",
+            "il nome"
+          ],
+          "answer": "l'uomo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the woman':",
+          "options": [
+            "la donna",
+            "l'uomo",
+            "la bambina",
+            "la gente"
+          ],
+          "answer": "la donna"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the brother':",
+          "options": [
+            "il fratello",
+            "la sorella",
+            "il figlio",
+            "il padre"
+          ],
+          "answer": "il fratello"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the family':",
+          "options": [
+            "la famiglia",
+            "la gente",
+            "il nome",
+            "l'amico"
+          ],
+          "answer": "la famiglia"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the daughter':",
+          "options": [
+            "la figlia",
+            "il figlio",
+            "la sorella",
+            "la madre"
+          ],
+          "answer": "la figlia"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the friend':",
+          "options": [
+            "l'amico",
+            "la famiglia",
+            "il nome",
+            "la gente"
+          ],
+          "answer": "l'amico"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the people':",
+          "options": [
+            "la gente",
+            "la famiglia",
+            "la madre",
+            "il padre"
+          ],
+          "answer": "la gente"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ donna lavora in ufficio.",
+          "answer": "la"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ bambino gioca nel parco.",
+          "answer": "il"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ mio nome è Giulia.",
+          "answer": "il"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "L'___ legge il giornale.",
+          "answer": "uomo"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mia ___ cucina molto bene.",
+          "answer": "madre"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mio ___ ha dieci anni.",
+          "answer": "fratello"
+        },
+        {
+          "type": "translation",
+          "prompt": "Questa è la mia famiglia.",
+          "answer": "This is my family."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mia sorella si chiama Giulia.",
+          "answer": "My sister's name is Giulia.",
+          "accepted_answers": [
+            "My sister is called Giulia."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ho un fratello e una sorella.",
+          "answer": "I have a brother and a sister."
+        },
+        {
+          "type": "translation",
+          "prompt": "Come si chiama tua madre?",
+          "answer": "What's your mother's name?",
+          "accepted_answers": [
+            "What is your mother's name?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "La mia famiglia è italiana.",
+          "answer": "My family is Italian."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Numbers and Time",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "uno",
+          "translation": "one",
+          "pos": "numeral",
+          "example": "Uno, due, tre, via!"
+        },
+        {
+          "word": "due",
+          "translation": "two",
+          "pos": "numeral",
+          "example": "Ho due fratelli."
+        },
+        {
+          "word": "tre",
+          "translation": "three",
+          "pos": "numeral",
+          "example": "Tre caffè, per favore."
+        },
+        {
+          "word": "quattro",
+          "translation": "four",
+          "pos": "numeral",
+          "example": "La stanza numero quattro."
+        },
+        {
+          "word": "cinque",
+          "translation": "five",
+          "pos": "numeral",
+          "example": "Sono le cinque."
+        },
+        {
+          "word": "sei",
+          "translation": "six",
+          "pos": "numeral",
+          "example": "Sei meno dieci."
+        },
+        {
+          "word": "sette",
+          "translation": "seven",
+          "pos": "numeral",
+          "example": "Sette giorni in una settimana."
+        },
+        {
+          "word": "otto",
+          "translation": "eight",
+          "pos": "numeral",
+          "example": "Otto persone a cena."
+        },
+        {
+          "word": "nove",
+          "translation": "nine",
+          "pos": "numeral",
+          "example": "Il numero nove."
+        },
+        {
+          "word": "dieci",
+          "translation": "ten",
+          "pos": "numeral",
+          "example": "Conto fino a dieci."
+        },
+        {
+          "word": "il giorno",
+          "translation": "the day",
+          "pos": "noun (masculine)",
+          "example": "Che giorno è oggi?"
+        },
+        {
+          "word": "la settimana",
+          "translation": "the week",
+          "pos": "noun (feminine)",
+          "example": "La settimana ha sette giorni."
+        },
+        {
+          "word": "oggi",
+          "translation": "today",
+          "pos": "adverb",
+          "example": "Oggi è lunedì."
+        },
+        {
+          "word": "domani",
+          "translation": "tomorrow",
+          "pos": "adverb",
+          "example": "Domani vado a scuola."
+        },
+        {
+          "word": "ieri",
+          "translation": "yesterday",
+          "pos": "adverb",
+          "example": "Ieri ho lavorato molto."
+        },
+        {
+          "word": "adesso",
+          "translation": "now",
+          "pos": "adverb",
+          "example": "Adesso devo andare."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "uno",
+          "answer": "one"
+        },
+        {
+          "type": "translation",
+          "prompt": "due",
+          "answer": "two"
+        },
+        {
+          "type": "translation",
+          "prompt": "tre",
+          "answer": "three"
+        },
+        {
+          "type": "translation",
+          "prompt": "quattro",
+          "answer": "four"
+        },
+        {
+          "type": "translation",
+          "prompt": "cinque",
+          "answer": "five"
+        },
+        {
+          "type": "translation",
+          "prompt": "sei",
+          "answer": "six"
+        },
+        {
+          "type": "translation",
+          "prompt": "sette",
+          "answer": "seven"
+        },
+        {
+          "type": "translation",
+          "prompt": "otto",
+          "answer": "eight"
+        },
+        {
+          "type": "translation",
+          "prompt": "nove",
+          "answer": "nine"
+        },
+        {
+          "type": "translation",
+          "prompt": "dieci",
+          "answer": "ten"
+        },
+        {
+          "type": "translation",
+          "prompt": "il giorno",
+          "answer": "the day"
+        },
+        {
+          "type": "translation",
+          "prompt": "la settimana",
+          "answer": "the week"
+        },
+        {
+          "type": "translation",
+          "prompt": "oggi",
+          "answer": "today"
+        },
+        {
+          "type": "translation",
+          "prompt": "domani",
+          "answer": "tomorrow"
+        },
+        {
+          "type": "translation",
+          "prompt": "ieri",
+          "answer": "yesterday"
+        },
+        {
+          "type": "translation",
+          "prompt": "adesso",
+          "answer": "now"
+        },
+        {
+          "type": "translation",
+          "prompt": "today",
+          "answer": "oggi"
+        },
+        {
+          "type": "translation",
+          "prompt": "tomorrow",
+          "answer": "domani"
+        },
+        {
+          "type": "translation",
+          "prompt": "now",
+          "answer": "adesso"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'one':",
+          "options": [
+            "uno",
+            "due",
+            "tre",
+            "quattro"
+          ],
+          "answer": "uno"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'five':",
+          "options": [
+            "cinque",
+            "quattro",
+            "sei",
+            "sette"
+          ],
+          "answer": "cinque"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'ten':",
+          "options": [
+            "dieci",
+            "otto",
+            "nove",
+            "sette"
+          ],
+          "answer": "dieci"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'today':",
+          "options": [
+            "oggi",
+            "domani",
+            "ieri",
+            "adesso"
+          ],
+          "answer": "oggi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tomorrow':",
+          "options": [
+            "domani",
+            "oggi",
+            "ieri",
+            "la settimana"
+          ],
+          "answer": "domani"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'now':",
+          "options": [
+            "adesso",
+            "oggi",
+            "domani",
+            "ieri"
+          ],
+          "answer": "adesso"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ho ___ fratelli.",
+          "answer": "due"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La settimana ha ___ giorni.",
+          "answer": "sette"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Conto fino a ___.",
+          "answer": "dieci"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Che ___ è oggi?",
+          "answer": "giorno"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ vado a scuola.",
+          "answer": "domani"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ è lunedì.",
+          "answer": "oggi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ devo andare.",
+          "answer": "adesso"
+        },
+        {
+          "type": "translation",
+          "prompt": "Che giorno è oggi?",
+          "answer": "What day is it today?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Oggi è lunedì.",
+          "answer": "Today is Monday."
+        },
+        {
+          "type": "translation",
+          "prompt": "Domani è martedì.",
+          "answer": "Tomorrow is Tuesday."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ieri era domenica.",
+          "answer": "Yesterday was Sunday."
+        },
+        {
+          "type": "translation",
+          "prompt": "Sono le cinque.",
+          "answer": "It's five o'clock.",
+          "accepted_answers": [
+            "It is five o'clock."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "È l'una.",
+          "answer": "It's one o'clock.",
+          "accepted_answers": [
+            "It is one o'clock."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ci vediamo domani.",
+          "answer": "See you tomorrow."
+        },
+        {
+          "type": "translation",
+          "prompt": "Che ore sono?",
+          "answer": "What time is it?",
+          "accepted_answers": [
+            "What's the time?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mia sorella ha dieci anni.",
+          "answer": "My sister is ten years old."
+        },
+        {
+          "type": "translation",
+          "prompt": "Il treno parte adesso.",
+          "answer": "The train leaves now."
+        },
+        {
+          "type": "translation",
+          "prompt": "Tre caffè, per favore.",
+          "answer": "Three coffees, please."
+        },
+        {
+          "type": "translation",
+          "prompt": "I have two brothers.",
+          "answer": "Ho due fratelli."
+        },
+        {
+          "type": "translation",
+          "prompt": "See you tomorrow!",
+          "answer": "A domani!",
+          "accepted_answers": [
+            "Ci vediamo domani."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "It's five o'clock.",
+          "answer": "Sono le cinque."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Everyday Verbs",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "essere",
+          "translation": "to be",
+          "pos": "verb (infinitive)",
+          "example": "Essere o non essere."
+        },
+        {
+          "word": "avere",
+          "translation": "to have",
+          "pos": "verb (infinitive)",
+          "example": "Voglio avere una casa grande."
+        },
+        {
+          "word": "fare",
+          "translation": "to do",
+          "accepted_translations": [
+            "to make"
+          ],
+          "pos": "verb (infinitive)",
+          "example": "Che fai stasera?"
+        },
+        {
+          "word": "andare",
+          "translation": "to go",
+          "pos": "verb (infinitive)",
+          "example": "Vado a casa."
+        },
+        {
+          "word": "venire",
+          "translation": "to come",
+          "pos": "verb (infinitive)",
+          "example": "Vieni con me?"
+        },
+        {
+          "word": "volere",
+          "translation": "to want",
+          "pos": "verb (infinitive)",
+          "example": "Voglio un gelato."
+        },
+        {
+          "word": "potere",
+          "translation": "can",
+          "accepted_translations": [
+            "to be able to"
+          ],
+          "pos": "verb (infinitive)",
+          "example": "Puoi aiutarmi?"
+        },
+        {
+          "word": "parlare",
+          "translation": "to speak",
+          "pos": "verb (infinitive)",
+          "example": "Parlo un po' d'italiano."
+        },
+        {
+          "word": "mangiare",
+          "translation": "to eat",
+          "pos": "verb (infinitive)",
+          "example": "Mangio la pasta."
+        },
+        {
+          "word": "bere",
+          "translation": "to drink",
+          "pos": "verb (infinitive)",
+          "example": "Bevo un caffè."
+        },
+        {
+          "word": "leggere",
+          "translation": "to read",
+          "pos": "verb (infinitive)",
+          "example": "Leggo un libro."
+        },
+        {
+          "word": "scrivere",
+          "translation": "to write",
+          "pos": "verb (infinitive)",
+          "example": "Scrivo una lettera."
+        },
+        {
+          "word": "capire",
+          "translation": "to understand",
+          "pos": "verb (infinitive)",
+          "example": "Capisci l'italiano?"
+        },
+        {
+          "word": "imparare",
+          "translation": "to learn",
+          "pos": "verb (infinitive)",
+          "example": "Imparo l'italiano."
+        },
+        {
+          "word": "lavorare",
+          "translation": "to work",
+          "pos": "verb (infinitive)",
+          "example": "Lavoro a Milano."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "essere",
+          "answer": "to be"
+        },
+        {
+          "type": "translation",
+          "prompt": "avere",
+          "answer": "to have"
+        },
+        {
+          "type": "translation",
+          "prompt": "fare",
+          "answer": "to do",
+          "accepted_answers": [
+            "to make"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "andare",
+          "answer": "to go"
+        },
+        {
+          "type": "translation",
+          "prompt": "venire",
+          "answer": "to come"
+        },
+        {
+          "type": "translation",
+          "prompt": "volere",
+          "answer": "to want"
+        },
+        {
+          "type": "translation",
+          "prompt": "potere",
+          "answer": "can",
+          "accepted_answers": [
+            "to be able to"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "parlare",
+          "answer": "to speak"
+        },
+        {
+          "type": "translation",
+          "prompt": "mangiare",
+          "answer": "to eat"
+        },
+        {
+          "type": "translation",
+          "prompt": "bere",
+          "answer": "to drink"
+        },
+        {
+          "type": "translation",
+          "prompt": "leggere",
+          "answer": "to read"
+        },
+        {
+          "type": "translation",
+          "prompt": "scrivere",
+          "answer": "to write"
+        },
+        {
+          "type": "translation",
+          "prompt": "capire",
+          "answer": "to understand"
+        },
+        {
+          "type": "translation",
+          "prompt": "imparare",
+          "answer": "to learn"
+        },
+        {
+          "type": "translation",
+          "prompt": "lavorare",
+          "answer": "to work"
+        },
+        {
+          "type": "translation",
+          "prompt": "to be",
+          "answer": "essere"
+        },
+        {
+          "type": "translation",
+          "prompt": "to have",
+          "answer": "avere"
+        },
+        {
+          "type": "translation",
+          "prompt": "to eat",
+          "answer": "mangiare"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to be':",
+          "options": [
+            "essere",
+            "avere",
+            "fare",
+            "venire"
+          ],
+          "answer": "essere"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to have':",
+          "options": [
+            "avere",
+            "essere",
+            "fare",
+            "andare"
+          ],
+          "answer": "avere"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to eat':",
+          "options": [
+            "mangiare",
+            "bere",
+            "leggere",
+            "scrivere"
+          ],
+          "answer": "mangiare"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to drink':",
+          "options": [
+            "bere",
+            "mangiare",
+            "parlare",
+            "capire"
+          ],
+          "answer": "bere"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to speak':",
+          "options": [
+            "parlare",
+            "capire",
+            "leggere",
+            "scrivere"
+          ],
+          "answer": "parlare"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to want':",
+          "options": [
+            "volere",
+            "potere",
+            "venire",
+            "andare"
+          ],
+          "answer": "volere"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to understand':",
+          "options": [
+            "capire",
+            "imparare",
+            "parlare",
+            "leggere"
+          ],
+          "answer": "capire"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Voglio ___ un caffè.",
+          "answer": "bere"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vuoi ___ una pizza?",
+          "answer": "mangiare"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Devo ___ a casa.",
+          "answer": "andare"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dobbiamo ___ una lettera.",
+          "answer": "scrivere"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Puoi ___ più piano?",
+          "answer": "parlare"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vogliamo ___ l'italiano.",
+          "answer": "imparare"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Chi vuole ___ con me?",
+          "answer": "venire"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cosa vuoi ___ stasera?",
+          "answer": "fare"
+        },
+        {
+          "type": "translation",
+          "prompt": "Parlo un po' d'italiano.",
+          "answer": "I speak a little Italian.",
+          "accepted_answers": [
+            "I speak a bit of Italian."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Da dove vieni?",
+          "answer": "Where do you come from?",
+          "accepted_answers": [
+            "Where are you from?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vado a Roma domani.",
+          "answer": "I'm going to Rome tomorrow.",
+          "accepted_answers": [
+            "I am going to Rome tomorrow.",
+            "I go to Rome tomorrow."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "La sera leggo un libro.",
+          "answer": "In the evening I read a book.",
+          "accepted_answers": [
+            "I read a book in the evening."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Capisco, grazie.",
+          "answer": "I understand, thank you."
+        },
+        {
+          "type": "translation",
+          "prompt": "Imparo l'italiano.",
+          "answer": "I'm learning Italian.",
+          "accepted_answers": [
+            "I am learning Italian."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Lavoro molto oggi.",
+          "answer": "I'm working a lot today.",
+          "accepted_answers": [
+            "I work a lot today."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vieni anche tu?",
+          "answer": "Are you coming too?",
+          "accepted_answers": [
+            "Are you coming as well?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "I want to eat a pizza.",
+          "answer": "Voglio mangiare una pizza."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't understand.",
+          "answer": "Non capisco."
+        },
+        {
+          "type": "translation",
+          "prompt": "What do you want to drink?",
+          "answer": "Cosa vuoi bere?"
+        },
+        {
+          "type": "translation",
+          "prompt": "I'm learning Italian.",
+          "answer": "Imparo l'italiano.",
+          "accepted_answers": [
+            "Sto imparando l'italiano."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Describing and Asking",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "buono",
+          "translation": "good",
+          "pos": "adjective",
+          "example": "Il gelato è buono."
+        },
+        {
+          "word": "cattivo",
+          "translation": "bad",
+          "pos": "adjective",
+          "example": "Il tempo è cattivo."
+        },
+        {
+          "word": "grande",
+          "translation": "big",
+          "accepted_translations": [
+            "large"
+          ],
+          "pos": "adjective",
+          "example": "Milano è una città grande."
+        },
+        {
+          "word": "piccolo",
+          "translation": "small",
+          "accepted_translations": [
+            "little"
+          ],
+          "pos": "adjective",
+          "example": "Un appartamento piccolo."
+        },
+        {
+          "word": "nuovo",
+          "translation": "new",
+          "pos": "adjective",
+          "example": "Ho un telefono nuovo."
+        },
+        {
+          "word": "vecchio",
+          "translation": "old",
+          "pos": "adjective",
+          "example": "La città vecchia è bellissima."
+        },
+        {
+          "word": "bello",
+          "translation": "beautiful",
+          "accepted_translations": [
+            "nice"
+          ],
+          "pos": "adjective",
+          "example": "Il mare è bello."
+        },
+        {
+          "word": "felice",
+          "translation": "happy",
+          "pos": "adjective",
+          "example": "Sono felice!"
+        },
+        {
+          "word": "triste",
+          "translation": "sad",
+          "pos": "adjective",
+          "example": "Perché sei triste?"
+        },
+        {
+          "word": "facile",
+          "translation": "easy",
+          "pos": "adjective",
+          "example": "L'italiano è facile."
+        },
+        {
+          "word": "difficile",
+          "translation": "difficult",
+          "accepted_translations": [
+            "hard"
+          ],
+          "pos": "adjective",
+          "example": "Il tedesco è difficile."
+        },
+        {
+          "word": "stanco",
+          "translation": "tired",
+          "pos": "adjective",
+          "example": "Sono stanco."
+        },
+        {
+          "word": "dove",
+          "translation": "where",
+          "pos": "question word",
+          "example": "Dove sei?"
+        },
+        {
+          "word": "cosa",
+          "translation": "what",
+          "pos": "question word",
+          "example": "Cosa fai?"
+        },
+        {
+          "word": "quando",
+          "translation": "when",
+          "pos": "question word",
+          "example": "Quando vieni?"
+        },
+        {
+          "word": "perché",
+          "translation": "why",
+          "accepted_translations": [
+            "because"
+          ],
+          "pos": "question word",
+          "example": "Perché no?"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "buono",
+          "answer": "good"
+        },
+        {
+          "type": "translation",
+          "prompt": "cattivo",
+          "answer": "bad"
+        },
+        {
+          "type": "translation",
+          "prompt": "grande",
+          "answer": "big",
+          "accepted_answers": [
+            "large"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "piccolo",
+          "answer": "small",
+          "accepted_answers": [
+            "little"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "nuovo",
+          "answer": "new"
+        },
+        {
+          "type": "translation",
+          "prompt": "vecchio",
+          "answer": "old"
+        },
+        {
+          "type": "translation",
+          "prompt": "bello",
+          "answer": "beautiful",
+          "accepted_answers": [
+            "nice"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "felice",
+          "answer": "happy"
+        },
+        {
+          "type": "translation",
+          "prompt": "triste",
+          "answer": "sad"
+        },
+        {
+          "type": "translation",
+          "prompt": "facile",
+          "answer": "easy"
+        },
+        {
+          "type": "translation",
+          "prompt": "difficile",
+          "answer": "difficult",
+          "accepted_answers": [
+            "hard"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "stanco",
+          "answer": "tired"
+        },
+        {
+          "type": "translation",
+          "prompt": "dove",
+          "answer": "where"
+        },
+        {
+          "type": "translation",
+          "prompt": "cosa",
+          "answer": "what"
+        },
+        {
+          "type": "translation",
+          "prompt": "quando",
+          "answer": "when"
+        },
+        {
+          "type": "translation",
+          "prompt": "perché",
+          "answer": "why",
+          "accepted_answers": [
+            "because"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "where",
+          "answer": "dove"
+        },
+        {
+          "type": "translation",
+          "prompt": "why",
+          "answer": "perché"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good':",
+          "options": [
+            "buono",
+            "cattivo",
+            "grande",
+            "nuovo"
+          ],
+          "answer": "buono"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bad':",
+          "options": [
+            "cattivo",
+            "buono",
+            "vecchio",
+            "triste"
+          ],
+          "answer": "cattivo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'big':",
+          "options": [
+            "grande",
+            "piccolo",
+            "nuovo",
+            "bello"
+          ],
+          "answer": "grande"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'small':",
+          "options": [
+            "piccolo",
+            "grande",
+            "nuovo",
+            "vecchio"
+          ],
+          "answer": "piccolo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'happy':",
+          "options": [
+            "felice",
+            "triste",
+            "stanco",
+            "buono"
+          ],
+          "answer": "felice"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'difficult':",
+          "options": [
+            "difficile",
+            "facile",
+            "buono",
+            "cattivo"
+          ],
+          "answer": "difficile"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'where':",
+          "options": [
+            "dove",
+            "quando",
+            "cosa",
+            "perché"
+          ],
+          "answer": "dove"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'why':",
+          "options": [
+            "perché",
+            "dove",
+            "quando",
+            "cosa"
+          ],
+          "answer": "perché"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Il gelato è ___.",
+          "answer": "buono"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La casa è molto ___.",
+          "answer": "grande"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Il tedesco è ___.",
+          "answer": "difficile"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sono ___ oggi.",
+          "answer": "stanco"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ sei?",
+          "answer": "dove"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ fai stasera?",
+          "answer": "cosa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ sei triste?",
+          "answer": "perché"
+        },
+        {
+          "type": "translation",
+          "prompt": "Dove abiti?",
+          "answer": "Where do you live?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Cosa mangi stasera?",
+          "answer": "What are you eating tonight?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Quando arrivi?",
+          "answer": "When do you arrive?",
+          "accepted_answers": [
+            "When are you arriving?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Perché studi l'italiano?",
+          "answer": "Why are you studying Italian?",
+          "accepted_answers": [
+            "Why do you study Italian?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Perché no?",
+          "answer": "Why not?"
+        },
+        {
+          "type": "translation",
+          "prompt": "La pizza è buona.",
+          "answer": "The pizza is good."
+        },
+        {
+          "type": "translation",
+          "prompt": "La città è grande.",
+          "answer": "The city is big.",
+          "accepted_answers": [
+            "The city is large."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Il mio telefono è nuovo.",
+          "answer": "My phone is new."
+        },
+        {
+          "type": "translation",
+          "prompt": "Sono molto stanco.",
+          "answer": "I'm very tired.",
+          "accepted_answers": [
+            "I am very tired."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "L'italiano è facile.",
+          "answer": "Italian is easy."
+        },
+        {
+          "type": "translation",
+          "prompt": "Che bello!",
+          "answer": "How beautiful!",
+          "accepted_answers": [
+            "How nice!",
+            "That's beautiful!"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "La vita è bella.",
+          "answer": "Life is beautiful."
+        },
+        {
+          "type": "translation",
+          "prompt": "Dov'è il bagno?",
+          "answer": "Where is the bathroom?",
+          "accepted_answers": [
+            "Where is the toilet?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Where are you?",
+          "answer": "Dove sei?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Why are you sad?",
+          "answer": "Perché sei triste?"
+        },
+        {
+          "type": "translation",
+          "prompt": "The coffee is good.",
+          "answer": "Il caffè è buono."
+        }
+      ]
+    }
+  ]
+}
