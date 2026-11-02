@@ -7,7 +7,7 @@ reviews, streaks — fully offline, fully local, no account, no network.
 Plain text everywhere: content is JSON, your progress is a file you can
 `cat`. UX modeled on git — direct subcommands, no menus.
 
-Nine courses ship today: French (five stages, 73 words, 177
+Ten courses ship today: French (five stages, 73 words, 177
 exercises), Spanish (five stages, 73 words, 197 exercises), German
 (five stages, 73 words, 216 exercises — nouns with their articles,
 modal-verb drills, umlauts and the sharp s), Italian (five stages,
@@ -32,8 +32,15 @@ accent, bare nouns, the a/az article alternation drill, the plural
 suffix blanked with its linking vowel — the vowel harmony made
 visible — want/like/can + infinitive drills, homonym translations on
 hét nap óra, every Hungarian letter á é í ó ö ő ú ü ű alive in real
-content) — same engine, same rules, same forgiving grading for all
-of them.
+content) and Turkish (five stages, 73 words, 218 exercises —
+the fourth engine extension, and the first to split in two: the
+soft ğ folds like any accent while dotless ı stays closed the way
+ø does — hayır is never hayir — bare nouns, the bir drill for the
+one word that is both "a" and "one", the plural suffix blanked
+where the vowel harmony lives, istemek + the -mek/-mak infinitive,
+homonym translations on yemek ay kız, every Turkish letter
+â ç ğ ı ö ş ü alive in real content) — same engine, same rules,
+same forgiving grading for all of them.
 
 ## Install & run
 
@@ -42,7 +49,7 @@ cargo install --path .
 termocab start french
 ```
 
-(then try `termocab start hungarian`)
+(then try `termocab start turkish`)
 
 Content is looked up in this order (first hit wins):
 
@@ -132,7 +139,13 @@ the D9 table from the start, so `atta` counts with `åtta`, `gar`
 with `går`, and `forsta` with `förstå` as the hint; and Hungarian
 took the third table extension — the double-acute letters ő ű
 decompose like any accent, so `no` counts with `nő`, `ketto` with
-`kettő`, and `konnyu` with `könnyű` as the hint.
+`kettő`, and `konnyu` with `könnyű` as the hint; and Turkish took
+the fourth, the first that split in two: the soft ğ folds like any
+accent (`soguk` counts with `soğuk`, and `kardes` with `kardeş`
+through an entry that was already on file for Romanian), while
+dotless ı stays closed the way ø does — `hayir` is wrong for
+`hayır`, never hinted: two different vowels, not one word spelled
+twice.
 `accepted_answers` lists alternative correct spellings, and
 `accepted_translations` on a vocabulary entry lists alternative correct
 translations a review will accept — reviewing `salut` with "hello" is
