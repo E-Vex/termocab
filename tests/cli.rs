@@ -759,6 +759,7 @@ fn shipped_courses_validate() {
         "romanian",
         "portuguese",
         "swedish",
+        "hungarian",
     ] {
         let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
             .join("languages")
@@ -1320,4 +1321,91 @@ fn swedish_umlauts_and_the_enclitic_article_grade_end_to_end() {
     assert!(srs.contains("word förstå box 2"), "{srs}");
     assert!(srs.contains("word går box 2"), "{srs}");
     assert!(srs.contains("word öga box 2"), "{srs}");
+}
+
+/// The ninth language end to end, in a Hungarian course. The third
+/// engine extension a language has forced (D14), and the gentlest
+/// one: the double-acute letters ő ű decompose like any accent, so
+/// "no" counts with "nő" as the hint, "konnyu" with "könnyű", and
+/// precomposed equals hand-decomposed with no hint at all. The course
+/// is Hungarian through and through: the article drill is the a/az
+/// alternation (a before consonants, az before vowels — fully
+/// predictable from the noun's first letter, so the drill is the
+/// alternation itself), the stage-3 signature is the plural suffix
+/// blanked with its linking vowel — the linking vowel IS the vowel
+/// harmony (ember___ wants ek, férfi___ wants ak, fiú___ wants bare
+/// k) — and the modal drill is akarni/szeretni/tudni + the
+/// infinitive, blanked at the end where Hungarian puts it. The review
+/// keeps the double acutes verbatim in the srs keys.
+#[test]
+fn hungarian_double_acutes_grade_end_to_end() {
+    let scratch = Scratch::new("hungarian");
+    let course = r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Magyar", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "nő", "translation": "woman",
+                "pos": "noun", "example": "A nő teát iszik." },
+              { "word": "könnyű", "translation": "easy",
+                "pos": "adjective", "example": "A gyakorlat könnyű." },
+              { "word": "fű", "translation": "grass",
+                "pos": "noun", "example": "A fű zöld." },
+              { "word": "kettő", "translation": "two",
+                "pos": "number", "example": "Egy, kettő, három!" },
+              { "word": "főzni", "translation": "to cook",
+                "accepted_translations": ["to make food"],
+                "pos": "verb", "example": "Szeretek főzni." }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "woman", "answer": "nő" },
+              { "type": "translation", "prompt": "easy", "answer": "könnyű" },
+              { "type": "translation", "prompt": "grass", "answer": "fű" },
+              { "type": "translation", "prompt": "two", "answer": "kettő" },
+              { "type": "translation", "prompt": "to cook", "answer": "főzni" },
+              { "type": "fill_blank", "prompt": "___ férfi olvas.", "answer": "a" },
+              { "type": "fill_blank", "prompt": "Az ember___ barátságosak.", "answer": "ek" },
+              { "type": "fill_blank", "prompt": "Szeretek vacsorát ___.", "answer": "főzni" }
+            ] }
+       ] }"#;
+    let file = scratch.stages_file("hungarian.json", course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    // everything answered right, but with the double acutes stripped
+    // — all eight must count toward the pass bar, each miss carrying
+    // the properly spelled form as the hint; the article and suffix
+    // blanks need no fold and grade plain correct
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "--no-shuffle", "test"]);
+    let out = feed(&mut cmd, "no\nkonnyu\nfu\nketto\nfozni\na\nek\nfozni\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("watch the accents: nő"), "{text}");
+    assert!(text.contains("watch the accents: könnyű"), "{text}");
+    assert!(text.contains("watch the accents: fű"), "{text}");
+    assert!(text.contains("watch the accents: kettő"), "{text}");
+    assert!(text.contains("watch the accents: főzni"), "{text}");
+    assert!(text.contains("8/8"), "{text}");
+    assert!(text.contains("stage complete"), "{text}");
+
+    // review: due cards come alphabetical (byte order: főzni, fű,
+    // kettő, könnyű, nő — ő U+0151 sorts before ű U+0171), the
+    // accepted alternative "to make food" counts for főzni, and the
+    // srs keys keep both double acutes verbatim
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(&mut cmd, "to cook\ngrass\ntwo\neasy\nwoman\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("correct"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    let srs = scratch.home().join(".config/termocab/srs/test.txt");
+    let srs = std::fs::read_to_string(&srs).expect("srs file");
+    assert!(srs.contains("word nő box 2"), "{srs}");
+    assert!(srs.contains("word kettő box 2"), "{srs}");
+    assert!(srs.contains("word könnyű box 2"), "{srs}");
+    assert!(srs.contains("word fű box 2"), "{srs}");
+    assert!(srs.contains("word főzni box 2"), "{srs}");
 }
