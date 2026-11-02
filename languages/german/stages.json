@@ -1915,6 +1915,1966 @@
           "answer": "Meine Schwester ist traurig"
         }
       ]
+    },
+    {
+      "id": 6,
+      "title": "Food and Drink",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "das Brot",
+          "translation": "bread",
+          "pos": "noun (neuter)",
+          "example": "Das Brot ist frisch."
+        },
+        {
+          "word": "der Käse",
+          "translation": "cheese",
+          "pos": "noun (masculine)",
+          "example": "Der Käse schmeckt gut."
+        },
+        {
+          "word": "der Apfel",
+          "translation": "apple",
+          "pos": "noun (masculine)",
+          "example": "Der Apfel ist rot."
+        },
+        {
+          "word": "das Wasser",
+          "translation": "water",
+          "pos": "noun (neuter)",
+          "example": "Ich trinke Wasser."
+        },
+        {
+          "word": "der Wein",
+          "translation": "wine",
+          "pos": "noun (masculine)",
+          "example": "Ein Glas Wein, bitte."
+        },
+        {
+          "word": "das Bier",
+          "translation": "beer",
+          "pos": "noun (neuter)",
+          "example": "Er trinkt ein Bier."
+        },
+        {
+          "word": "das Hähnchen",
+          "translation": "chicken",
+          "pos": "noun (neuter)",
+          "example": "Das Hähnchen ist lecker."
+        },
+        {
+          "word": "der Fisch",
+          "translation": "fish",
+          "pos": "noun (masculine)",
+          "example": "Wir essen Fisch."
+        },
+        {
+          "word": "der Kuchen",
+          "translation": "cake",
+          "pos": "noun (masculine)",
+          "example": "Der Kuchen ist süß."
+        },
+        {
+          "word": "das Frühstück",
+          "translation": "breakfast",
+          "pos": "noun (neuter)",
+          "example": "Das Frühstück ist um acht Uhr."
+        },
+        {
+          "word": "das Mittagessen",
+          "translation": "lunch",
+          "pos": "noun (neuter)",
+          "example": "Das Mittagessen ist um zwölf Uhr."
+        },
+        {
+          "word": "das Abendessen",
+          "translation": "dinner",
+          "pos": "noun (neuter)",
+          "example": "Das Abendessen ist um sieben Uhr."
+        },
+        {
+          "word": "der Hunger",
+          "translation": "hunger",
+          "pos": "noun (masculine)",
+          "example": "Ich habe Hunger."
+        },
+        {
+          "word": "der Durst",
+          "translation": "thirst",
+          "pos": "noun (masculine)",
+          "example": "Ich habe Durst."
+        },
+        {
+          "word": "das Restaurant",
+          "translation": "restaurant",
+          "pos": "noun (neuter)",
+          "example": "Wir essen im Restaurant."
+        },
+        {
+          "word": "die Tasse",
+          "translation": "cup",
+          "pos": "noun (feminine)",
+          "example": "Eine Tasse Kaffee, bitte."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "das Brot",
+          "answer": "bread"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Käse",
+          "answer": "cheese"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Apfel",
+          "answer": "apple"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Wasser",
+          "answer": "water"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Wein",
+          "answer": "wine"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Bier",
+          "answer": "beer"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Hähnchen",
+          "answer": "chicken"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Fisch",
+          "answer": "fish"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Kuchen",
+          "answer": "cake"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Frühstück",
+          "answer": "breakfast"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Mittagessen",
+          "answer": "lunch"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Abendessen",
+          "answer": "dinner"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Hunger",
+          "answer": "hunger"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Durst",
+          "answer": "thirst"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Restaurant",
+          "answer": "restaurant"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Tasse",
+          "answer": "cup"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich esse Brot mit Käse.",
+          "answer": "I'm eating bread with cheese.",
+          "accepted_answers": [
+            "I am eating bread with cheese."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich trinke Wasser.",
+          "answer": "I'm drinking water.",
+          "accepted_answers": [
+            "I drink water."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Wir essen Fisch im Restaurant.",
+          "answer": "We're eating fish at the restaurant.",
+          "accepted_answers": [
+            "We are eating fish at the restaurant."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich möchte einen Kaffee.",
+          "answer": "I'd like a coffee.",
+          "accepted_answers": [
+            "I would like a coffee."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Das Abendessen ist um sieben Uhr.",
+          "answer": "Dinner is at seven o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich habe Hunger.",
+          "answer": "I'm hungry.",
+          "accepted_answers": [
+            "I am hungry."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich habe Durst.",
+          "answer": "I'm thirsty.",
+          "accepted_answers": [
+            "I am thirsty."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "I'm eating an apple.",
+          "answer": "Ich esse einen Apfel."
+        },
+        {
+          "type": "translation",
+          "prompt": "The cake is sweet.",
+          "answer": "Der Kuchen ist süß."
+        },
+        {
+          "type": "translation",
+          "prompt": "Lunch is at twelve o'clock.",
+          "answer": "Das Mittagessen ist um zwölf Uhr."
+        },
+        {
+          "type": "translation",
+          "prompt": "I like cheese.",
+          "answer": "Ich mag Käse."
+        },
+        {
+          "type": "translation",
+          "prompt": "The chicken is delicious.",
+          "answer": "Das Hähnchen ist lecker."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bread':",
+          "options": [
+            "das Brot",
+            "der Käse",
+            "der Fisch",
+            "das Hähnchen"
+          ],
+          "answer": "das Brot"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'water':",
+          "options": [
+            "das Wasser",
+            "der Wein",
+            "das Bier",
+            "der Apfel"
+          ],
+          "answer": "das Wasser"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'wine':",
+          "options": [
+            "der Wein",
+            "das Bier",
+            "das Wasser",
+            "der Kuchen"
+          ],
+          "answer": "der Wein"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fish':",
+          "options": [
+            "der Fisch",
+            "das Hähnchen",
+            "das Brot",
+            "der Käse"
+          ],
+          "answer": "der Fisch"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cake':",
+          "options": [
+            "der Kuchen",
+            "der Apfel",
+            "das Brot",
+            "das Wasser"
+          ],
+          "answer": "der Kuchen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'breakfast':",
+          "options": [
+            "das Frühstück",
+            "das Mittagessen",
+            "das Abendessen",
+            "das Restaurant"
+          ],
+          "answer": "das Frühstück"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'I'm hungry':",
+          "options": [
+            "Ich habe Hunger",
+            "Ich habe Durst",
+            "Ich habe Zeit",
+            "Ich habe Glück"
+          ],
+          "answer": "Ich habe Hunger"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'dinner':",
+          "options": [
+            "das Abendessen",
+            "das Mittagessen",
+            "das Frühstück",
+            "das Restaurant"
+          ],
+          "answer": "das Abendessen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ Brot ist frisch.",
+          "answer": "das"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ Käse schmeckt gut.",
+          "answer": "der"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ Tasse Kaffee, bitte.",
+          "answer": "eine"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ Wasser ist kalt.",
+          "answer": "das"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ Kuchen ist süß.",
+          "answer": "der"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ Bier, bitte.",
+          "answer": "ein"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ Frühstück ist um acht Uhr.",
+          "answer": "das"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich habe ___ . Ich will essen.",
+          "answer": "Hunger"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Home and Places",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "das Haus",
+          "translation": "house",
+          "pos": "noun (neuter)",
+          "example": "Das Haus ist groß."
+        },
+        {
+          "word": "die Wohnung",
+          "translation": "apartment",
+          "pos": "noun (feminine)",
+          "example": "Wir leben in einer Wohnung."
+        },
+        {
+          "word": "die Küche",
+          "translation": "kitchen",
+          "pos": "noun (feminine)",
+          "example": "Die Küche ist klein."
+        },
+        {
+          "word": "das Schlafzimmer",
+          "translation": "bedroom",
+          "pos": "noun (neuter)",
+          "example": "Ich schlafe im Schlafzimmer."
+        },
+        {
+          "word": "das Wohnzimmer",
+          "translation": "living room",
+          "pos": "noun (neuter)",
+          "example": "Das Wohnzimmer ist hell."
+        },
+        {
+          "word": "das Badezimmer",
+          "translation": "bathroom",
+          "pos": "noun (neuter)",
+          "example": "Das Badezimmer ist rechts."
+        },
+        {
+          "word": "der Garten",
+          "translation": "garden",
+          "pos": "noun (masculine)",
+          "example": "Die Blumen sind im Garten."
+        },
+        {
+          "word": "die Straße",
+          "translation": "street",
+          "pos": "noun (feminine)",
+          "example": "Ich wohne in dieser Straße."
+        },
+        {
+          "word": "die Stadt",
+          "translation": "city",
+          "pos": "noun (feminine)",
+          "example": "Berlin ist eine große Stadt."
+        },
+        {
+          "word": "der Park",
+          "translation": "park",
+          "pos": "noun (masculine)",
+          "example": "Die Kinder spielen im Park."
+        },
+        {
+          "word": "der Markt",
+          "translation": "market",
+          "pos": "noun (masculine)",
+          "example": "Ich kaufe Obst auf dem Markt."
+        },
+        {
+          "word": "die Schule",
+          "translation": "school",
+          "pos": "noun (feminine)",
+          "example": "Die Schule ist in der Nähe."
+        },
+        {
+          "word": "das Krankenhaus",
+          "translation": "hospital",
+          "pos": "noun (neuter)",
+          "example": "Das Krankenhaus ist im Zentrum."
+        },
+        {
+          "word": "der Tisch",
+          "translation": "table",
+          "pos": "noun (masculine)",
+          "example": "Das Buch liegt auf dem Tisch."
+        },
+        {
+          "word": "das Bett",
+          "translation": "bed",
+          "pos": "noun (neuter)",
+          "example": "Die Katze schläft im Bett."
+        },
+        {
+          "word": "es gibt",
+          "translation": "there is",
+          "pos": "phrase",
+          "example": "Es gibt einen Garten.",
+          "accepted_translations": [
+            "there are",
+            "there's"
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "das Haus",
+          "answer": "house"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Wohnung",
+          "answer": "apartment"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Küche",
+          "answer": "kitchen"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Schlafzimmer",
+          "answer": "bedroom"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Wohnzimmer",
+          "answer": "living room"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Badezimmer",
+          "answer": "bathroom"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Garten",
+          "answer": "garden"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Straße",
+          "answer": "street"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Stadt",
+          "answer": "city"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Park",
+          "answer": "park"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Markt",
+          "answer": "market"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Schule",
+          "answer": "school"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Krankenhaus",
+          "answer": "hospital"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Tisch",
+          "answer": "table"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Bett",
+          "answer": "bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "es gibt",
+          "answer": "there is",
+          "accepted_answers": [
+            "there are",
+            "there's"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Wir leben in einer Wohnung.",
+          "answer": "We live in an apartment."
+        },
+        {
+          "type": "translation",
+          "prompt": "Die Küche ist klein.",
+          "answer": "The kitchen is small."
+        },
+        {
+          "type": "translation",
+          "prompt": "Die Katze schläft im Bett.",
+          "answer": "The cat is sleeping in the bed.",
+          "accepted_answers": [
+            "The cat sleeps in the bed."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Die Kinder spielen im Park.",
+          "answer": "The children are playing in the park.",
+          "accepted_answers": [
+            "The kids are playing in the park."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich wohne in dieser Straße.",
+          "answer": "I live in this street."
+        },
+        {
+          "type": "translation",
+          "prompt": "Berlin ist eine große Stadt.",
+          "answer": "Berlin is a big city."
+        },
+        {
+          "type": "translation",
+          "prompt": "Das Buch liegt auf dem Tisch.",
+          "answer": "The book is on the table."
+        },
+        {
+          "type": "translation",
+          "prompt": "Die Schule ist in der Nähe.",
+          "answer": "The school is nearby."
+        },
+        {
+          "type": "translation",
+          "prompt": "Es gibt einen Garten hinter dem Haus.",
+          "answer": "There's a garden behind the house.",
+          "accepted_answers": [
+            "There is a garden behind the house."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "I live in an apartment.",
+          "answer": "Ich wohne in einer Wohnung."
+        },
+        {
+          "type": "translation",
+          "prompt": "The bathroom is small.",
+          "answer": "Das Badezimmer ist klein."
+        },
+        {
+          "type": "translation",
+          "prompt": "The living room is bright.",
+          "answer": "Das Wohnzimmer ist hell."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'house':",
+          "options": [
+            "das Haus",
+            "die Wohnung",
+            "die Küche",
+            "der Garten"
+          ],
+          "answer": "das Haus"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'kitchen':",
+          "options": [
+            "die Küche",
+            "das Schlafzimmer",
+            "das Wohnzimmer",
+            "das Badezimmer"
+          ],
+          "answer": "die Küche"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bedroom':",
+          "options": [
+            "das Schlafzimmer",
+            "die Küche",
+            "das Wohnzimmer",
+            "der Garten"
+          ],
+          "answer": "das Schlafzimmer"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'garden':",
+          "options": [
+            "der Garten",
+            "der Park",
+            "das Haus",
+            "die Straße"
+          ],
+          "answer": "der Garten"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'city':",
+          "options": [
+            "die Stadt",
+            "die Straße",
+            "das Haus",
+            "die Schule"
+          ],
+          "answer": "die Stadt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'park':",
+          "options": [
+            "der Park",
+            "der Garten",
+            "der Markt",
+            "die Stadt"
+          ],
+          "answer": "der Park"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'school':",
+          "options": [
+            "die Schule",
+            "das Krankenhaus",
+            "der Markt",
+            "das Haus"
+          ],
+          "answer": "die Schule"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bed':",
+          "options": [
+            "das Bett",
+            "der Tisch",
+            "das Schlafzimmer",
+            "das Wohnzimmer"
+          ],
+          "answer": "das Bett"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Die Katze ist ___ der Küche.",
+          "answer": "in"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Das Buch liegt ___ dem Tisch.",
+          "answer": "auf"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wir leben ___ einer Wohnung.",
+          "answer": "in"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Die Kinder spielen ___ Park.",
+          "answer": "im"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Das Buch liegt auf ___ Tisch.",
+          "answer": "dem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich schlafe ___ Schlafzimmer.",
+          "answer": "im"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Der Park ist in der ___.",
+          "answer": "Nähe"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ Haus ist groß.",
+          "answer": "das"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Daily Routine and Weather",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "aufwachen",
+          "translation": "to wake up",
+          "pos": "verb",
+          "example": "Ich wache um sieben Uhr auf."
+        },
+        {
+          "word": "aufstehen",
+          "translation": "to get up",
+          "pos": "verb",
+          "example": "Sie steht früh auf."
+        },
+        {
+          "word": "sich duschen",
+          "translation": "to shower",
+          "pos": "verb",
+          "example": "Ich dusche mich am Morgen."
+        },
+        {
+          "word": "schlafen gehen",
+          "translation": "to go to bed",
+          "pos": "phrase",
+          "example": "Wir gehen um zehn Uhr schlafen."
+        },
+        {
+          "word": "die Arbeit",
+          "translation": "work",
+          "pos": "noun (feminine)",
+          "example": "Ich gehe um acht Uhr zur Arbeit."
+        },
+        {
+          "word": "immer",
+          "translation": "always",
+          "pos": "adverb",
+          "example": "Er kommt immer zu spät."
+        },
+        {
+          "word": "oft",
+          "translation": "often",
+          "pos": "adverb",
+          "example": "Oft lese ich am Abend."
+        },
+        {
+          "word": "manchmal",
+          "translation": "sometimes",
+          "pos": "adverb",
+          "example": "Manchmal esse ich im Restaurant."
+        },
+        {
+          "word": "die Sonne",
+          "translation": "sun",
+          "pos": "noun (feminine)",
+          "example": "Die Sonne scheint."
+        },
+        {
+          "word": "der Wind",
+          "translation": "wind",
+          "pos": "noun (masculine)",
+          "example": "Der Wind weht."
+        },
+        {
+          "word": "der Regen",
+          "translation": "rain",
+          "pos": "noun (masculine)",
+          "example": "Ich mag den Regen."
+        },
+        {
+          "word": "der Schnee",
+          "translation": "snow",
+          "pos": "noun (masculine)",
+          "example": "Der Schnee ist weiß."
+        },
+        {
+          "word": "die Wolke",
+          "translation": "cloud",
+          "pos": "noun (feminine)",
+          "example": "Es gibt Wolken."
+        },
+        {
+          "word": "das Wetter",
+          "translation": "weather",
+          "pos": "noun (neuter)",
+          "example": "Das Wetter ist schön heute."
+        },
+        {
+          "word": "es regnet",
+          "translation": "it's raining",
+          "pos": "phrase",
+          "example": "Es regnet viel heute.",
+          "accepted_translations": [
+            "it is raining"
+          ]
+        },
+        {
+          "word": "es schneit",
+          "translation": "it's snowing",
+          "pos": "phrase",
+          "example": "Es schneit im Winter.",
+          "accepted_translations": [
+            "it is snowing"
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "aufwachen",
+          "answer": "to wake up"
+        },
+        {
+          "type": "translation",
+          "prompt": "aufstehen",
+          "answer": "to get up"
+        },
+        {
+          "type": "translation",
+          "prompt": "sich duschen",
+          "answer": "to shower"
+        },
+        {
+          "type": "translation",
+          "prompt": "schlafen gehen",
+          "answer": "to go to bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Arbeit",
+          "answer": "work"
+        },
+        {
+          "type": "translation",
+          "prompt": "immer",
+          "answer": "always"
+        },
+        {
+          "type": "translation",
+          "prompt": "oft",
+          "answer": "often"
+        },
+        {
+          "type": "translation",
+          "prompt": "manchmal",
+          "answer": "sometimes"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Sonne",
+          "answer": "sun"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Wind",
+          "answer": "wind"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Regen",
+          "answer": "rain"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Schnee",
+          "answer": "snow"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Wolke",
+          "answer": "cloud"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Wetter",
+          "answer": "weather"
+        },
+        {
+          "type": "translation",
+          "prompt": "es regnet",
+          "answer": "it's raining",
+          "accepted_answers": [
+            "it is raining"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "es schneit",
+          "answer": "it's snowing",
+          "accepted_answers": [
+            "it is snowing"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich wache um sieben Uhr auf.",
+          "answer": "I wake up at seven o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Sie steht früh auf.",
+          "answer": "She gets up early."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich dusche mich am Morgen.",
+          "answer": "I shower in the morning.",
+          "accepted_answers": [
+            "I take a shower in the morning."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Wir gehen um zehn Uhr schlafen.",
+          "answer": "We go to bed at ten o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich gehe um acht Uhr zur Arbeit.",
+          "answer": "I go to work at eight o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Es regnet viel heute.",
+          "answer": "It's raining a lot today.",
+          "accepted_answers": [
+            "It is raining a lot today."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Es schneit im Winter.",
+          "answer": "It snows in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Die Sonne scheint.",
+          "answer": "The sun is shining."
+        },
+        {
+          "type": "translation",
+          "prompt": "Manchmal esse ich im Restaurant.",
+          "answer": "Sometimes I eat at a restaurant."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's raining.",
+          "answer": "Es regnet."
+        },
+        {
+          "type": "translation",
+          "prompt": "Er kommt immer zu spät.",
+          "answer": "He is always late.",
+          "accepted_answers": [
+            "He always arrives late."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Das Wetter ist schön heute.",
+          "answer": "The weather is nice today."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to wake up':",
+          "options": [
+            "aufwachen",
+            "aufstehen",
+            "sich duschen",
+            "schlafen gehen"
+          ],
+          "answer": "aufwachen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to get up':",
+          "options": [
+            "aufstehen",
+            "aufwachen",
+            "schlafen gehen",
+            "sich duschen"
+          ],
+          "answer": "aufstehen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'always':",
+          "options": [
+            "immer",
+            "oft",
+            "manchmal",
+            "heute"
+          ],
+          "answer": "immer"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'often':",
+          "options": [
+            "oft",
+            "immer",
+            "manchmal",
+            "heute"
+          ],
+          "answer": "oft"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sun':",
+          "options": [
+            "die Sonne",
+            "der Wind",
+            "der Regen",
+            "der Schnee"
+          ],
+          "answer": "die Sonne"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'rain':",
+          "options": [
+            "der Regen",
+            "der Schnee",
+            "der Wind",
+            "die Sonne"
+          ],
+          "answer": "der Regen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'it's raining':",
+          "options": [
+            "es regnet",
+            "es schneit",
+            "die Sonne",
+            "das Wetter"
+          ],
+          "answer": "es regnet"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'work':",
+          "options": [
+            "die Arbeit",
+            "das Haus",
+            "die Stadt",
+            "der Park"
+          ],
+          "answer": "die Arbeit"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich dusche ___.",
+          "answer": "mich"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Du duschst ___.",
+          "answer": "dich"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Er duscht ___.",
+          "answer": "sich"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wir duschen ___.",
+          "answer": "uns"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ regnet heute.",
+          "answer": "es"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ist kalt heute.",
+          "answer": "es"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Die Sonne ___.",
+          "answer": "scheint"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Das ___ ist schön heute.",
+          "answer": "Wetter"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Shopping and Travel",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "zwanzig",
+          "translation": "twenty",
+          "pos": "number",
+          "example": "Das Buch kostet zwanzig Euro."
+        },
+        {
+          "word": "dreißig",
+          "translation": "thirty",
+          "pos": "number",
+          "example": "Er ist dreißig Jahre alt."
+        },
+        {
+          "word": "vierzig",
+          "translation": "forty",
+          "pos": "number",
+          "example": "Der Koffer kostet vierzig Euro."
+        },
+        {
+          "word": "fünfzig",
+          "translation": "fifty",
+          "pos": "number",
+          "example": "Ich habe fünfzig Euro."
+        },
+        {
+          "word": "sechzig",
+          "translation": "sixty",
+          "pos": "number",
+          "example": "Der Zug kostet sechzig Euro."
+        },
+        {
+          "word": "hundert",
+          "translation": "hundred",
+          "pos": "number",
+          "example": "Hundert Euro ist teuer."
+        },
+        {
+          "word": "das Geld",
+          "translation": "money",
+          "pos": "noun (neuter)",
+          "example": "Ich habe kein Geld."
+        },
+        {
+          "word": "teuer",
+          "translation": "expensive",
+          "pos": "adjective",
+          "example": "Der Mantel ist teuer.",
+          "accepted_translations": [
+            "dear"
+          ]
+        },
+        {
+          "word": "billig",
+          "translation": "cheap",
+          "pos": "adjective",
+          "example": "Das Buch ist billig."
+        },
+        {
+          "word": "kaufen",
+          "translation": "to buy",
+          "pos": "verb",
+          "example": "Ich möchte einen Koffer kaufen."
+        },
+        {
+          "word": "der Laden",
+          "translation": "shop",
+          "pos": "noun (masculine)",
+          "example": "Der Laden ist geschlossen.",
+          "accepted_translations": [
+            "store"
+          ]
+        },
+        {
+          "word": "der Zug",
+          "translation": "train",
+          "pos": "noun (masculine)",
+          "example": "Der Zug kommt um acht Uhr."
+        },
+        {
+          "word": "der Bus",
+          "translation": "bus",
+          "pos": "noun (masculine)",
+          "example": "Ich nehme den Bus."
+        },
+        {
+          "word": "das Hotel",
+          "translation": "hotel",
+          "pos": "noun (neuter)",
+          "example": "Wir schlafen im Hotel."
+        },
+        {
+          "word": "der Koffer",
+          "translation": "suitcase",
+          "pos": "noun (masculine)",
+          "example": "Mein Koffer ist schwer."
+        },
+        {
+          "word": "die Fahrkarte",
+          "translation": "ticket",
+          "pos": "noun (feminine)",
+          "example": "Eine Fahrkarte nach Berlin, bitte."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "zwanzig",
+          "answer": "twenty"
+        },
+        {
+          "type": "translation",
+          "prompt": "dreißig",
+          "answer": "thirty"
+        },
+        {
+          "type": "translation",
+          "prompt": "vierzig",
+          "answer": "forty"
+        },
+        {
+          "type": "translation",
+          "prompt": "fünfzig",
+          "answer": "fifty"
+        },
+        {
+          "type": "translation",
+          "prompt": "sechzig",
+          "answer": "sixty"
+        },
+        {
+          "type": "translation",
+          "prompt": "hundert",
+          "answer": "hundred"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Geld",
+          "answer": "money"
+        },
+        {
+          "type": "translation",
+          "prompt": "teuer",
+          "answer": "expensive",
+          "accepted_answers": [
+            "dear"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "billig",
+          "answer": "cheap"
+        },
+        {
+          "type": "translation",
+          "prompt": "kaufen",
+          "answer": "to buy"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Laden",
+          "answer": "shop",
+          "accepted_answers": [
+            "store"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "der Zug",
+          "answer": "train"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Bus",
+          "answer": "bus"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Hotel",
+          "answer": "hotel"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Koffer",
+          "answer": "suitcase"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Fahrkarte",
+          "answer": "ticket"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich möchte einen Koffer kaufen.",
+          "answer": "I'd like to buy a suitcase.",
+          "accepted_answers": [
+            "I would like to buy a suitcase."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Das Buch kostet zwanzig Euro.",
+          "answer": "This book costs twenty euros."
+        },
+        {
+          "type": "translation",
+          "prompt": "Eine Fahrkarte nach Berlin, bitte.",
+          "answer": "A ticket to Berlin, please."
+        },
+        {
+          "type": "translation",
+          "prompt": "Der Zug kommt um acht Uhr an.",
+          "answer": "The train arrives at eight o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich nehme den Bus.",
+          "answer": "I'm taking the bus.",
+          "accepted_answers": [
+            "I take the bus."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Wir schlafen im Hotel.",
+          "answer": "We're sleeping at the hotel.",
+          "accepted_answers": [
+            "We are sleeping at the hotel."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Der Mantel ist zu teuer.",
+          "answer": "This coat is too expensive."
+        },
+        {
+          "type": "translation",
+          "prompt": "Der Laden öffnet um neun Uhr.",
+          "answer": "The shop opens at nine o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich habe fünfzig Euro.",
+          "answer": "I have fifty euros."
+        },
+        {
+          "type": "translation",
+          "prompt": "How much is the ticket?",
+          "answer": "Was kostet die Fahrkarte?"
+        },
+        {
+          "type": "translation",
+          "prompt": "The suitcase is cheap.",
+          "answer": "Der Koffer ist billig."
+        },
+        {
+          "type": "translation",
+          "prompt": "I have no money.",
+          "answer": "Ich habe kein Geld."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'twenty':",
+          "options": [
+            "zwanzig",
+            "dreißig",
+            "vierzig",
+            "fünfzig"
+          ],
+          "answer": "zwanzig"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'forty':",
+          "options": [
+            "vierzig",
+            "dreißig",
+            "zwanzig",
+            "sechzig"
+          ],
+          "answer": "vierzig"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sixty':",
+          "options": [
+            "sechzig",
+            "fünfzig",
+            "vierzig",
+            "hundert"
+          ],
+          "answer": "sechzig"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hundred':",
+          "options": [
+            "hundert",
+            "sechzig",
+            "fünfzig",
+            "zwanzig"
+          ],
+          "answer": "hundert"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'expensive':",
+          "options": [
+            "teuer",
+            "neu",
+            "alt",
+            "einfach"
+          ],
+          "answer": "teuer"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'shop':",
+          "options": [
+            "der Laden",
+            "das Hotel",
+            "der Markt",
+            "das Restaurant"
+          ],
+          "answer": "der Laden"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'suitcase':",
+          "options": [
+            "der Koffer",
+            "die Fahrkarte",
+            "der Bus",
+            "der Zug"
+          ],
+          "answer": "der Koffer"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hotel':",
+          "options": [
+            "das Hotel",
+            "der Laden",
+            "die Schule",
+            "das Haus"
+          ],
+          "answer": "das Hotel"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Was ___ das Buch?",
+          "answer": "kostet"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Was ___ die Schuhe?",
+          "answer": "kosten"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Die Fahrkarte ___ zehn Euro.",
+          "answer": "kostet"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Die Koffer ___ fünfzig Euro.",
+          "answer": "kosten"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich möchte einen Koffer ___.",
+          "answer": "kaufen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Zwanzig, ___, vierzig.",
+          "answer": "dreißig"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Zwanzig und dreißig machen ___.",
+          "answer": "fünfzig"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Fünfzig und fünfzig machen ___.",
+          "answer": "hundert"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Yesterday and Tomorrow",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "der Sommer",
+          "translation": "summer",
+          "pos": "noun (masculine)",
+          "example": "Im Sommer ist es heiß."
+        },
+        {
+          "word": "der Winter",
+          "translation": "winter",
+          "pos": "noun (masculine)",
+          "example": "Im Winter schneit es."
+        },
+        {
+          "word": "der Frühling",
+          "translation": "spring",
+          "pos": "noun (masculine)",
+          "example": "Im Frühling blühen die Blumen."
+        },
+        {
+          "word": "der Herbst",
+          "translation": "autumn",
+          "pos": "noun (masculine)",
+          "example": "Im Herbst regnet es oft.",
+          "accepted_translations": [
+            "fall"
+          ]
+        },
+        {
+          "word": "der Januar",
+          "translation": "January",
+          "pos": "noun (masculine)",
+          "example": "Der Januar ist der erste Monat."
+        },
+        {
+          "word": "der März",
+          "translation": "March",
+          "pos": "noun (masculine)",
+          "example": "Im März beginnt der Frühling."
+        },
+        {
+          "word": "der Juni",
+          "translation": "June",
+          "pos": "noun (masculine)",
+          "example": "Im Juni beginnt der Sommer."
+        },
+        {
+          "word": "der Juli",
+          "translation": "July",
+          "pos": "noun (masculine)",
+          "example": "Mein Geburtstag ist im Juli."
+        },
+        {
+          "word": "der September",
+          "translation": "September",
+          "pos": "noun (masculine)",
+          "example": "Die Schule beginnt im September."
+        },
+        {
+          "word": "der Dezember",
+          "translation": "December",
+          "pos": "noun (masculine)",
+          "example": "Weihnachten ist im Dezember."
+        },
+        {
+          "word": "letzte Woche",
+          "translation": "last week",
+          "pos": "phrase",
+          "example": "Letzte Woche habe ich viel gearbeitet."
+        },
+        {
+          "word": "nächste Woche",
+          "translation": "next week",
+          "pos": "phrase",
+          "example": "Nächste Woche reise ich."
+        },
+        {
+          "word": "letztes Jahr",
+          "translation": "last year",
+          "pos": "phrase",
+          "example": "Letztes Jahr waren wir in Rom."
+        },
+        {
+          "word": "nächstes Jahr",
+          "translation": "next year",
+          "pos": "phrase",
+          "example": "Nächstes Jahr kaufe ich ein Auto."
+        },
+        {
+          "word": "der Geburtstag",
+          "translation": "birthday",
+          "pos": "noun (masculine)",
+          "example": "Mein Geburtstag ist im Juli."
+        },
+        {
+          "word": "der Monat",
+          "translation": "month",
+          "pos": "noun (masculine)",
+          "example": "Das Jahr hat zwölf Monate."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "der Sommer",
+          "answer": "summer"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Winter",
+          "answer": "winter"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Frühling",
+          "answer": "spring"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Herbst",
+          "answer": "autumn",
+          "accepted_answers": [
+            "fall"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "der Januar",
+          "answer": "January"
+        },
+        {
+          "type": "translation",
+          "prompt": "der März",
+          "answer": "March"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Juni",
+          "answer": "June"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Juli",
+          "answer": "July"
+        },
+        {
+          "type": "translation",
+          "prompt": "der September",
+          "answer": "September"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Dezember",
+          "answer": "December"
+        },
+        {
+          "type": "translation",
+          "prompt": "letzte Woche",
+          "answer": "last week"
+        },
+        {
+          "type": "translation",
+          "prompt": "nächste Woche",
+          "answer": "next week"
+        },
+        {
+          "type": "translation",
+          "prompt": "letztes Jahr",
+          "answer": "last year"
+        },
+        {
+          "type": "translation",
+          "prompt": "nächstes Jahr",
+          "answer": "next year"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Geburtstag",
+          "answer": "birthday"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Monat",
+          "answer": "month"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich werde morgen arbeiten.",
+          "answer": "I'm going to work tomorrow.",
+          "accepted_answers": [
+            "I will work tomorrow."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Wir werden nächste Woche reisen.",
+          "answer": "We're going to travel next week.",
+          "accepted_answers": [
+            "We will travel next week."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Sie wird nächstes Jahr ein Auto kaufen.",
+          "answer": "She's going to buy a car next year.",
+          "accepted_answers": [
+            "She will buy a car next year."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Im Sommer ist es heiß.",
+          "answer": "In summer it's hot."
+        },
+        {
+          "type": "translation",
+          "prompt": "Im Winter schneit es.",
+          "answer": "It snows in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mein Geburtstag ist im Juli.",
+          "answer": "My birthday is in July."
+        },
+        {
+          "type": "translation",
+          "prompt": "Der Januar ist der erste Monat des Jahres.",
+          "answer": "January is the first month of the year."
+        },
+        {
+          "type": "translation",
+          "prompt": "We're going to watch a film.",
+          "answer": "Wir werden einen Film sehen."
+        },
+        {
+          "type": "translation",
+          "prompt": "Letztes Jahr waren wir in Rom.",
+          "answer": "Last year we were in Rome."
+        },
+        {
+          "type": "translation",
+          "prompt": "Weihnachten ist im Dezember.",
+          "answer": "Christmas is in December."
+        },
+        {
+          "type": "translation",
+          "prompt": "Im Herbst regnet es oft.",
+          "answer": "It often rains in autumn.",
+          "accepted_answers": [
+            "In autumn it rains often."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Die Schule beginnt im September.",
+          "answer": "School begins in September."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'summer':",
+          "options": [
+            "der Sommer",
+            "der Winter",
+            "der Frühling",
+            "der Herbst"
+          ],
+          "answer": "der Sommer"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'winter':",
+          "options": [
+            "der Winter",
+            "der Sommer",
+            "der Frühling",
+            "der Herbst"
+          ],
+          "answer": "der Winter"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'spring':",
+          "options": [
+            "der Frühling",
+            "der Herbst",
+            "der Sommer",
+            "der Winter"
+          ],
+          "answer": "der Frühling"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'autumn':",
+          "options": [
+            "der Herbst",
+            "der Frühling",
+            "der Sommer",
+            "der Winter"
+          ],
+          "answer": "der Herbst"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'July':",
+          "options": [
+            "der Juli",
+            "der Juni",
+            "der März",
+            "der Januar"
+          ],
+          "answer": "der Juli"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'December':",
+          "options": [
+            "der Dezember",
+            "der September",
+            "der Januar",
+            "der März"
+          ],
+          "answer": "der Dezember"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'next week':",
+          "options": [
+            "nächste Woche",
+            "letzte Woche",
+            "nächstes Jahr",
+            "letztes Jahr"
+          ],
+          "answer": "nächste Woche"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'last year':",
+          "options": [
+            "letztes Jahr",
+            "nächstes Jahr",
+            "letzte Woche",
+            "nächste Woche"
+          ],
+          "answer": "letztes Jahr"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich ___ morgen ein Buch lesen.",
+          "answer": "werde"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Du ___ morgen kommen.",
+          "answer": "wirst"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wir ___ nächste Woche reisen.",
+          "answer": "werden"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sie ___ nächstes Jahr ein Auto kaufen.",
+          "answer": "wird"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ihr ___ am Sonntag arbeiten.",
+          "answer": "werdet"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Die Kinder ___ im Park spielen.",
+          "answer": "werden"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Im ___ schneit es.",
+          "answer": "Winter"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Weihnachten ist im ___.",
+          "answer": "Dezember"
+        }
+      ]
     }
   ]
 }
