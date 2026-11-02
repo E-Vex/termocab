@@ -139,14 +139,24 @@ use std::iter::once;
 /// Extended-A, both decomposing to base letter + the double acute.
 /// The legacy cedilla spellings ş ţ ride along (s/t + cedilla — the
 /// same mark ç already carries), so both historical encodings grade
-/// the same way. Decomposing (rather than stripping) in the strict
+/// the same way — and that same cedilla entry is also how Turkish's
+/// own ş rides for free (D15). The Turkish soft ğ joins the same
+/// way (D15): g + breve, the very mark Romanian's ă carries, so
+/// "soguk" counts with "soğuk" as the hint. Dotless ı is the other
+/// half of the Turkish question and goes in NO table: ı and i are
+/// two different vowels, not one word spelled twice, so ı joins
+/// ø þ ð in the closed club (D9) — "hayır" is not "hayir" — and
+/// capital İ needs no entry either: to_lowercase leaves "i" +
+/// U+0307 behind and the loose pass drops the dot, so "istanbul"
+/// counts with "İstanbul" through the existing machinery.
+/// Decomposing (rather than stripping) in the strict
 /// pass makes precomposed "é" equal to "e" + U+0301 typed on a macOS
 /// keyboard — same letter, same accent, different encoding. Hand-
-/// written on purpose: forty-one entries beat a Unicode-normalization
+/// written on purpose: forty-two entries beat a Unicode-normalization
 /// crate, and §6 asks for justification before any dependency. The
 /// Nordic letters stay closed — "smør" is not "smor". Lowercase
 /// only: [`normalize_strict`] lowercases before it looks here (D9).
-const ACCENTED: [(char, &str); 41] = [
+const ACCENTED: [(char, &str); 42] = [
     ('à', "a\u{0300}"),
     ('á', "a\u{0301}"),
     ('â', "a\u{0302}"),
@@ -203,6 +213,21 @@ const ACCENTED: [(char, &str); 41] = [
     // first table letter that is a word in its own right — "he/she".
     ('ő', "o\u{030B}"),
     ('ű', "u\u{030B}"),
+    // Turkish (D15): the soft g — ğ, "yumuşak ge", which lengthens
+    // the vowel before it and (mostly) never sounds on its own —
+    // decomposes like any accented letter: g + breve U+0306, the
+    // very mark Romanian's ă carries (D11), so it joins ACCENTED
+    // beside the Polish, Romanian and Hungarian sets. The fourth
+    // extension a language has forced. The other half of the
+    // Turkish question goes the opposite way, in no table at all:
+    // dotless ı has no decomposition and does not open — ı and i are
+    // different vowels in their own right, exactly what ø þ ð are to
+    // their neighbors — so "hayır" is not "hayir", and D9's closed
+    // club takes a fourth member. Capital İ needs no entry either:
+    // to_lowercase turns it into "i" + U+0307 and the loose pass
+    // drops the dot, so "istanbul" counts with "İstanbul" as the
+    // hint through machinery that already exists.
+    ('ğ', "g\u{0306}"),
 ];
 
 /// The ligatures open up only in the loose pass — "œuvre" and
@@ -219,9 +244,12 @@ const LIGATURES: [(char, &str); 3] = [('œ', "oe"), ('æ', "ae"), ('ß', "ss")];
 /// Polish keyboard types "lodz" for "łódź" the same way "strasse"
 /// stands in for "straße", so it counts, with the properly spelled
 /// form as the hint. ø, þ and ð stay closed (D9): "smør" is not
-/// "smor". Romanian ș and ț were predicted to join here (D10) but
-/// decompose after all — see [`ACCENTED`] (D11); the table still
-/// holds just ł.
+/// "smor" — and Turkish dotless ı joins the closed club (D15): ı
+/// and i are different vowels in their own right, so "hayır" is
+/// not "hayir"; the roadmap's reopened letters-in-their-own-right
+/// question, answered the D9 way. Romanian ș and ț were predicted
+/// to join here (D10) but decompose after all — see [`ACCENTED`]
+/// (D11); the table still holds just ł.
 const OPEN_LETTERS: [(char, &str); 1] = [('ł', "l")];
 
 /// Punctuation that may differ at the ends of an answer: a missing "?"
@@ -616,6 +644,61 @@ mod tests {
         assert!(!fur.is_correct("fő"));
         assert!(!fur.is_correct("fo"));
         assert!(!fur.is_correct("kő"));
+    }
+
+    #[test]
+    fn the_turkish_letters_behave_like_the_polish_ones() {
+        // The tenth-language wave (D15) split its question in two, and
+        // each half got the answer the ø rule predicts. The soft ğ
+        // (g + breve U+0306 — the very mark Romanian's ă carries,
+        // D11) decomposes like any accented letter, so it joins
+        // ACCENTED: "soguk" counts with "soğuk" as the hint, and
+        // hand-decomposed equals precomposed with no hint at all.
+        let exercise = translation("soğuk", &[]);
+        assert_eq!(
+            exercise.grade("soguk"),
+            Grade::CorrectWithHint("soğuk".into())
+        );
+        // ğ from uppercase, one per word — and no invented matches
+        assert!(exercise.is_correct("SOĞUK"));
+        assert!(!exercise.is_correct("sogukk"));
+        // decomposed input equals precomposed — no hint needed (the
+        // breve rides right after its base letter, exactly how "a" +
+        // U+0306 equals "ă")
+        assert_eq!(exercise.grade("sog\u{0306}uk"), Grade::Correct);
+        // ş rides the D11 legacy entry — the cedilla spelling Romanian
+        // kept for its history is Turkish's own letter, so "kardes"
+        // counts with "kardeş" with no new entry anywhere
+        let kardes = translation("kardeş", &[]);
+        assert_eq!(
+            kardes.grade("kardes"),
+            Grade::CorrectWithHint("kardeş".into())
+        );
+        assert!(kardes.is_correct("KARDEŞ"));
+        // ı stays closed — the other half of the question: ı and i
+        // are different vowels in their own right, exactly what ø is
+        // to o, so the stripped spelling is wrong, not hinted
+        let hayir = translation("hayır", &[]);
+        assert_eq!(hayir.grade("hayir"), Grade::Incorrect);
+        assert_eq!(hayir.grade("hayır"), Grade::Correct);
+        assert!(!hayir.is_correct("hayirr"));
+        // …and the one asymmetry the Unicode default case mapping
+        // leaves: capital I lowercases to dotted i, so HAYIR (typed
+        // with an ASCII capital) does not round-trip to hayır — the
+        // classic Turkish-I problem. The engine is language-agnostic
+        // (normalize_strict does not know which language it holds),
+        // so D15 documents the edge instead of special-casing it.
+        assert!(!hayir.is_correct("HAYIR"));
+        // capital İ lowercases to "i" + U+0307, and the loose pass
+        // drops the dot — so the plain spelling counts with the hint,
+        // through machinery that needed no new entry
+        let istanbul = translation("İstanbul", &[]);
+        assert_eq!(
+            istanbul.grade("istanbul"),
+            Grade::CorrectWithHint("İstanbul".into())
+        );
+        assert!(istanbul.is_correct("İSTANBUL"));
+        assert!(!istanbul.is_correct("ankara"));
     }
 
     #[test]
