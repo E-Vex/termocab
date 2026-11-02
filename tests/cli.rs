@@ -744,7 +744,9 @@ fn broken_pipe_is_silent_and_exits_141_like_cat_and_git() {
 /// the language D9 named when it widened the table — pure content,
 /// zero engine changes, the tildes ã õ, the cedilla ç, the acute and
 /// circumflex vowels and the crase à all flowing through content
-/// validation like everything else.
+/// validation like everything else; Swedish the eighth, the last clean
+/// zero-change candidate inside the D9 table — its å ä ö flowing
+/// through content validation like everything else.
 #[test]
 fn shipped_courses_validate() {
     let scratch = Scratch::new("shipped");
@@ -756,6 +758,7 @@ fn shipped_courses_validate() {
         "polish",
         "romanian",
         "portuguese",
+        "swedish",
     ] {
         let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
             .join("languages")
@@ -1232,4 +1235,89 @@ fn portuguese_tildes_and_the_crase_grade_end_to_end() {
     assert!(srs.contains("word maçã box 2"), "{srs}");
     assert!(srs.contains("word obrigado box 2"), "{srs}");
     assert!(srs.contains("word você box 2"), "{srs}");
+}
+
+/// The eighth language end to end, in a Swedish course — the last clean
+/// zero-change candidate inside the D9 table, and the table needed
+/// exactly nothing for it: a missing ring or umlaut counts as correct
+/// with the accented form as the hint ("atta" for "åtta", "oga" for
+/// "öga", "forsta" for "förstå" — and "gar" for "går"), while the srs
+/// keys keep the diacritics verbatim. The drills are Swedish through and
+/// through: the gender drill wants the indefinite article, en for common
+/// nouns and ett for neuter ("___ barn sover." wants "ett"), the definite
+/// article is enclitic like Romanian's and rides at the end of the noun
+/// ("Flick___ läser boken." wants "an" — flicka → flickan), and the modal
+/// drill wants the bare infinitive after vilja ("Jag vill ___ kaffe."
+/// wants "dricka"). The review accepts the listed alternative translation
+/// — "walks" for går.
+#[test]
+fn swedish_umlauts_and_the_enclitic_article_grade_end_to_end() {
+    let scratch = Scratch::new("swedish");
+    let course = r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Svenska", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "åtta", "translation": "eight",
+                "pos": "number", "example": "Klockan är åtta." },
+              { "word": "öga", "translation": "eye",
+                "pos": "noun (neuter)", "example": "Hon har gröna ögon." },
+              { "word": "äpple", "translation": "apple",
+                "pos": "noun (neuter)", "example": "Jag äter ett äpple." },
+              { "word": "går", "translation": "goes",
+                "accepted_translations": ["walks"],
+                "pos": "verb", "example": "Hon går till skolan." },
+              { "word": "förstå", "translation": "understand",
+                "pos": "verb", "example": "Jag förstår svenska." }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "eight", "answer": "åtta" },
+              { "type": "translation", "prompt": "eye", "answer": "öga" },
+              { "type": "translation", "prompt": "apple", "answer": "äpple" },
+              { "type": "translation", "prompt": "goes", "answer": "går" },
+              { "type": "translation", "prompt": "understand", "answer": "förstå" },
+              { "type": "fill_blank", "prompt": "___ barn sover.", "answer": "ett" },
+              { "type": "fill_blank", "prompt": "Flick___ läser boken.", "answer": "an" },
+              { "type": "fill_blank", "prompt": "Jag vill ___ kaffe.", "answer": "dricka" }
+            ] }
+       ] }"#;
+    let file = scratch.stages_file("swedish.json", course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    // everything answered right, but with the rings and the umlauts
+    // stripped — all eight must count toward the pass bar, each miss
+    // carrying the properly spelled form as the hint; the article and
+    // suffix blanks need no fold and grade plain correct
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "--no-shuffle", "test"]);
+    let out = feed(&mut cmd, "atta\noga\napple\ngar\nforsta\nett\nan\ndricka\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("watch the accents: åtta"), "{text}");
+    assert!(text.contains("watch the accents: öga"), "{text}");
+    assert!(text.contains("watch the accents: äpple"), "{text}");
+    assert!(text.contains("watch the accents: går"), "{text}");
+    assert!(text.contains("watch the accents: förstå"), "{text}");
+    assert!(text.contains("8/8"), "{text}");
+    assert!(text.contains("stage complete"), "{text}");
+
+    // review: due cards come alphabetical (förstå, går, äpple, åtta,
+    // öga — byte order), the accepted alternative "walks" counts for
+    // går, and the srs keys keep the rings and the umlauts verbatim
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(&mut cmd, "understand\nwalks\napple\neight\neye\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("correct"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    let srs = scratch.home().join(".config/termocab/srs/test.txt");
+    let srs = std::fs::read_to_string(&srs).expect("srs file");
+    assert!(srs.contains("word åtta box 2"), "{srs}");
+    assert!(srs.contains("word äpple box 2"), "{srs}");
+    assert!(srs.contains("word förstå box 2"), "{srs}");
+    assert!(srs.contains("word går box 2"), "{srs}");
+    assert!(srs.contains("word öga box 2"), "{srs}");
 }
