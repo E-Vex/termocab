@@ -1942,6 +1942,1985 @@
           "answer": "Kawa jest dobra."
         }
       ]
+    },
+    {
+      "id": 6,
+      "title": "Food and Drink",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "chleb",
+          "translation": "bread",
+          "pos": "noun",
+          "example": "Chleb jest na stole."
+        },
+        {
+          "word": "ser",
+          "translation": "cheese",
+          "pos": "noun",
+          "example": "Lubię ser."
+        },
+        {
+          "word": "jabłko",
+          "translation": "apple",
+          "pos": "noun",
+          "example": "Jem jabłko."
+        },
+        {
+          "word": "woda",
+          "translation": "water",
+          "pos": "noun",
+          "example": "Piję wodę."
+        },
+        {
+          "word": "wino",
+          "translation": "wine",
+          "pos": "noun",
+          "example": "Kieliszek wina, proszę."
+        },
+        {
+          "word": "piwo",
+          "translation": "beer",
+          "pos": "noun",
+          "example": "On pije piwo."
+        },
+        {
+          "word": "kurczak",
+          "translation": "chicken",
+          "pos": "noun",
+          "example": "Kurczak jest pyszny."
+        },
+        {
+          "word": "ryba",
+          "translation": "fish",
+          "pos": "noun",
+          "example": "Jemy rybę."
+        },
+        {
+          "word": "ciasto",
+          "translation": "cake",
+          "pos": "noun",
+          "example": "Ciasto jest słodkie."
+        },
+        {
+          "word": "kawa",
+          "translation": "coffee",
+          "pos": "noun",
+          "example": "Kawa jest gorąca."
+        },
+        {
+          "word": "śniadanie",
+          "translation": "breakfast",
+          "pos": "noun",
+          "example": "Śniadanie jest o ósmej."
+        },
+        {
+          "word": "obiad",
+          "translation": "lunch",
+          "pos": "noun",
+          "example": "Obiad jest w południe."
+        },
+        {
+          "word": "kolacja",
+          "translation": "dinner",
+          "pos": "noun",
+          "example": "Kolacja jest o siódmej."
+        },
+        {
+          "word": "jestem głodny",
+          "translation": "I'm hungry",
+          "accepted_translations": [
+            "I am hungry"
+          ],
+          "pos": "phrase",
+          "example": "Jestem głodny!"
+        },
+        {
+          "word": "chce mi się pić",
+          "translation": "I'm thirsty",
+          "accepted_translations": [
+            "I am thirsty"
+          ],
+          "pos": "phrase",
+          "example": "Chce mi się pić."
+        },
+        {
+          "word": "słodki",
+          "translation": "sweet",
+          "pos": "adjective",
+          "example": "Ciasto jest słodkie."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "chleb",
+          "answer": "bread"
+        },
+        {
+          "type": "translation",
+          "prompt": "ser",
+          "answer": "cheese"
+        },
+        {
+          "type": "translation",
+          "prompt": "jabłko",
+          "answer": "apple"
+        },
+        {
+          "type": "translation",
+          "prompt": "woda",
+          "answer": "water"
+        },
+        {
+          "type": "translation",
+          "prompt": "wino",
+          "answer": "wine"
+        },
+        {
+          "type": "translation",
+          "prompt": "piwo",
+          "answer": "beer"
+        },
+        {
+          "type": "translation",
+          "prompt": "kurczak",
+          "answer": "chicken"
+        },
+        {
+          "type": "translation",
+          "prompt": "ryba",
+          "answer": "fish"
+        },
+        {
+          "type": "translation",
+          "prompt": "ciasto",
+          "answer": "cake"
+        },
+        {
+          "type": "translation",
+          "prompt": "kawa",
+          "answer": "coffee"
+        },
+        {
+          "type": "translation",
+          "prompt": "śniadanie",
+          "answer": "breakfast"
+        },
+        {
+          "type": "translation",
+          "prompt": "obiad",
+          "answer": "lunch"
+        },
+        {
+          "type": "translation",
+          "prompt": "kolacja",
+          "answer": "dinner"
+        },
+        {
+          "type": "translation",
+          "prompt": "jestem głodny",
+          "answer": "I'm hungry",
+          "accepted_answers": [
+            "I am hungry"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "chce mi się pić",
+          "answer": "I'm thirsty",
+          "accepted_answers": [
+            "I am thirsty"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "słodki",
+          "answer": "sweet"
+        },
+        {
+          "type": "translation",
+          "prompt": "Jem chleb z serem.",
+          "answer": "I'm eating bread with cheese.",
+          "accepted_answers": [
+            "I am eating bread with cheese."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Piję wodę.",
+          "answer": "I'm drinking water.",
+          "accepted_answers": [
+            "I drink water."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jemy rybę w restauracji.",
+          "answer": "We're eating fish at the restaurant.",
+          "accepted_answers": [
+            "We are eating fish at the restaurant."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Poproszę kawę.",
+          "answer": "A coffee, please.",
+          "accepted_answers": [
+            "I'll have a coffee."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Kolacja jest o siódmej.",
+          "answer": "Dinner is at seven o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jestem głodny!",
+          "answer": "I'm hungry!",
+          "accepted_answers": [
+            "I am hungry!"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Chce mi się pić.",
+          "answer": "I'm thirsty.",
+          "accepted_answers": [
+            "I am thirsty."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "I'm eating an apple.",
+          "answer": "Jem jabłko."
+        },
+        {
+          "type": "translation",
+          "prompt": "The cake is sweet.",
+          "answer": "Ciasto jest słodkie."
+        },
+        {
+          "type": "translation",
+          "prompt": "Lunch is at noon.",
+          "answer": "Obiad jest w południe."
+        },
+        {
+          "type": "translation",
+          "prompt": "I like cheese.",
+          "answer": "Lubię ser."
+        },
+        {
+          "type": "translation",
+          "prompt": "He drinks beer.",
+          "answer": "On pije piwo."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bread':",
+          "options": [
+            "chleb",
+            "ser",
+            "ryba",
+            "kurczak"
+          ],
+          "answer": "chleb"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'water':",
+          "options": [
+            "woda",
+            "wino",
+            "piwo",
+            "kawa"
+          ],
+          "answer": "woda"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'wine':",
+          "options": [
+            "wino",
+            "piwo",
+            "woda",
+            "ciasto"
+          ],
+          "answer": "wino"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fish':",
+          "options": [
+            "ryba",
+            "kurczak",
+            "chleb",
+            "ser"
+          ],
+          "answer": "ryba"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cake':",
+          "options": [
+            "ciasto",
+            "jabłko",
+            "chleb",
+            "woda"
+          ],
+          "answer": "ciasto"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'breakfast':",
+          "options": [
+            "śniadanie",
+            "obiad",
+            "kolacja",
+            "kawa"
+          ],
+          "answer": "śniadanie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'I'm hungry':",
+          "options": [
+            "jestem głodny",
+            "chce mi się pić",
+            "jem chleb",
+            "piję wodę"
+          ],
+          "answer": "jestem głodny"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'dinner':",
+          "options": [
+            "kolacja",
+            "obiad",
+            "śniadanie",
+            "kawa"
+          ],
+          "answer": "kolacja"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Rano jem ___.",
+          "answer": "śniadanie"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "W południe jem ___.",
+          "answer": "obiad"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wieczorem jem ___.",
+          "answer": "kolacja"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jestem ___ . Chcę jeść.",
+          "answer": "głodny"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ mi się pić.",
+          "answer": "chce"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ciasto jest ___.",
+          "answer": "słodkie"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ jest jabłko.",
+          "answer": "to"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ jest kurczak.",
+          "answer": "to"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Home and Places",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "dom",
+          "translation": "house",
+          "pos": "noun",
+          "example": "Mój dom jest duży."
+        },
+        {
+          "word": "mieszkanie",
+          "translation": "apartment",
+          "pos": "noun",
+          "example": "Mieszkamy w mieszkaniu."
+        },
+        {
+          "word": "kuchnia",
+          "translation": "kitchen",
+          "pos": "noun",
+          "example": "Kuchnia jest mała."
+        },
+        {
+          "word": "sypialnia",
+          "translation": "bedroom",
+          "pos": "noun",
+          "example": "Śpię w sypialni."
+        },
+        {
+          "word": "salon",
+          "translation": "living room",
+          "pos": "noun",
+          "example": "Salon jest jasny."
+        },
+        {
+          "word": "łazienka",
+          "translation": "bathroom",
+          "pos": "noun",
+          "example": "Łazienka jest po prawej."
+        },
+        {
+          "word": "ogród",
+          "translation": "garden",
+          "pos": "noun",
+          "example": "Kwiaty są w ogrodzie."
+        },
+        {
+          "word": "ulica",
+          "translation": "street",
+          "pos": "noun",
+          "example": "Mieszkam na tej ulicy."
+        },
+        {
+          "word": "miasto",
+          "translation": "city",
+          "pos": "noun",
+          "example": "Kraków to piękne miasto."
+        },
+        {
+          "word": "park",
+          "translation": "park",
+          "pos": "noun",
+          "example": "Dzieci bawią się w parku."
+        },
+        {
+          "word": "rynek",
+          "translation": "market",
+          "pos": "noun",
+          "example": "Kupuję owoce na rynku."
+        },
+        {
+          "word": "szkoła",
+          "translation": "school",
+          "pos": "noun",
+          "example": "Szkoła jest blisko domu."
+        },
+        {
+          "word": "szpital",
+          "translation": "hospital",
+          "pos": "noun",
+          "example": "Szpital jest w centrum."
+        },
+        {
+          "word": "stół",
+          "translation": "table",
+          "pos": "noun",
+          "example": "Książka jest na stole."
+        },
+        {
+          "word": "łóżko",
+          "translation": "bed",
+          "pos": "noun",
+          "example": "Kot śpi na łóżku."
+        },
+        {
+          "word": "blisko",
+          "translation": "near",
+          "accepted_translations": [
+            "close"
+          ],
+          "pos": "adverb",
+          "example": "Mieszkam blisko parku."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "dom",
+          "answer": "house"
+        },
+        {
+          "type": "translation",
+          "prompt": "mieszkanie",
+          "answer": "apartment"
+        },
+        {
+          "type": "translation",
+          "prompt": "kuchnia",
+          "answer": "kitchen"
+        },
+        {
+          "type": "translation",
+          "prompt": "sypialnia",
+          "answer": "bedroom"
+        },
+        {
+          "type": "translation",
+          "prompt": "salon",
+          "answer": "living room"
+        },
+        {
+          "type": "translation",
+          "prompt": "łazienka",
+          "answer": "bathroom"
+        },
+        {
+          "type": "translation",
+          "prompt": "ogród",
+          "answer": "garden"
+        },
+        {
+          "type": "translation",
+          "prompt": "ulica",
+          "answer": "street"
+        },
+        {
+          "type": "translation",
+          "prompt": "miasto",
+          "answer": "city"
+        },
+        {
+          "type": "translation",
+          "prompt": "park",
+          "answer": "park"
+        },
+        {
+          "type": "translation",
+          "prompt": "rynek",
+          "answer": "market"
+        },
+        {
+          "type": "translation",
+          "prompt": "szkoła",
+          "answer": "school"
+        },
+        {
+          "type": "translation",
+          "prompt": "szpital",
+          "answer": "hospital"
+        },
+        {
+          "type": "translation",
+          "prompt": "stół",
+          "answer": "table"
+        },
+        {
+          "type": "translation",
+          "prompt": "łóżko",
+          "answer": "bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "blisko",
+          "answer": "near",
+          "accepted_answers": [
+            "close"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mieszkamy w mieszkaniu.",
+          "answer": "We live in an apartment."
+        },
+        {
+          "type": "translation",
+          "prompt": "Kuchnia jest mała.",
+          "answer": "The kitchen is small."
+        },
+        {
+          "type": "translation",
+          "prompt": "Kot śpi na łóżku.",
+          "answer": "The cat sleeps on the bed."
+        },
+        {
+          "type": "translation",
+          "prompt": "Dzieci bawią się w parku.",
+          "answer": "The children are playing in the park.",
+          "accepted_answers": [
+            "The kids are playing in the park."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Kupuję owoce na rynku.",
+          "answer": "I'm buying fruit at the market.",
+          "accepted_answers": [
+            "I buy fruit at the market."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Kwiaty są w ogrodzie.",
+          "answer": "The flowers are in the garden."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mieszkam na tej ulicy.",
+          "answer": "I live on this street."
+        },
+        {
+          "type": "translation",
+          "prompt": "Kraków to piękne miasto.",
+          "answer": "Krakow is a beautiful city."
+        },
+        {
+          "type": "translation",
+          "prompt": "The book is on the table.",
+          "answer": "Książka jest na stole."
+        },
+        {
+          "type": "translation",
+          "prompt": "The bathroom is small.",
+          "answer": "Łazienka jest mała."
+        },
+        {
+          "type": "translation",
+          "prompt": "The school is near the house.",
+          "answer": "Szkoła jest blisko domu."
+        },
+        {
+          "type": "translation",
+          "prompt": "I'm at home.",
+          "answer": "Jestem w domu.",
+          "accepted_answers": [
+            "I am at home."
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'house':",
+          "options": [
+            "dom",
+            "mieszkanie",
+            "kuchnia",
+            "ogród"
+          ],
+          "answer": "dom"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'kitchen':",
+          "options": [
+            "kuchnia",
+            "sypialnia",
+            "salon",
+            "łazienka"
+          ],
+          "answer": "kuchnia"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bedroom':",
+          "options": [
+            "sypialnia",
+            "kuchnia",
+            "salon",
+            "ogród"
+          ],
+          "answer": "sypialnia"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'garden':",
+          "options": [
+            "ogród",
+            "park",
+            "dom",
+            "ulica"
+          ],
+          "answer": "ogród"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'city':",
+          "options": [
+            "miasto",
+            "ulica",
+            "dom",
+            "szkoła"
+          ],
+          "answer": "miasto"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'park':",
+          "options": [
+            "park",
+            "ogród",
+            "rynek",
+            "miasto"
+          ],
+          "answer": "park"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'school':",
+          "options": [
+            "szkoła",
+            "szpital",
+            "rynek",
+            "dom"
+          ],
+          "answer": "szkoła"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bed':",
+          "options": [
+            "łóżko",
+            "stół",
+            "sypialnia",
+            "salon"
+          ],
+          "answer": "łóżko"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mieszkam ___ Warszawie.",
+          "answer": "w"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Książka jest ___ stole.",
+          "answer": "na"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kot śpi ___ łóżku.",
+          "answer": "na"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jestem ___ domu.",
+          "answer": "w"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Szkoła jest ___ centrum.",
+          "answer": "w"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kupuję owoce ___ rynku.",
+          "answer": "na"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dzieci bawią się ___ parku.",
+          "answer": "w"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mieszkam ___ tej ulicy.",
+          "answer": "na"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Daily Routine and Weather",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "budzić się",
+          "translation": "to wake up",
+          "pos": "verb",
+          "example": "Budzę się o siódmej."
+        },
+        {
+          "word": "wstawać",
+          "translation": "to get up",
+          "pos": "verb",
+          "example": "Ona wstaje wcześnie."
+        },
+        {
+          "word": "myć się",
+          "translation": "to wash",
+          "pos": "verb",
+          "example": "Myję się rano."
+        },
+        {
+          "word": "iść spać",
+          "translation": "to go to bed",
+          "pos": "phrase",
+          "example": "Idę spać o dwudziestej."
+        },
+        {
+          "word": "praca",
+          "translation": "work",
+          "pos": "noun",
+          "example": "Idę do pracy o ósmej."
+        },
+        {
+          "word": "zawsze",
+          "translation": "always",
+          "pos": "adverb",
+          "example": "Zawsze się spóźnia."
+        },
+        {
+          "word": "często",
+          "translation": "often",
+          "pos": "adverb",
+          "example": "Często czytam wieczorem."
+        },
+        {
+          "word": "czasami",
+          "translation": "sometimes",
+          "pos": "adverb",
+          "example": "Czasami jem w restauracji."
+        },
+        {
+          "word": "słońce",
+          "translation": "sun",
+          "pos": "noun",
+          "example": "Słońce świeci."
+        },
+        {
+          "word": "wiatr",
+          "translation": "wind",
+          "pos": "noun",
+          "example": "Wiatr wieje."
+        },
+        {
+          "word": "deszcz",
+          "translation": "rain",
+          "pos": "noun",
+          "example": "Lubię deszcz."
+        },
+        {
+          "word": "śnieg",
+          "translation": "snow",
+          "pos": "noun",
+          "example": "Śnieg jest biały."
+        },
+        {
+          "word": "chmura",
+          "translation": "cloud",
+          "pos": "noun",
+          "example": "Są chmury."
+        },
+        {
+          "word": "pada deszcz",
+          "translation": "it's raining",
+          "accepted_translations": [
+            "it is raining"
+          ],
+          "pos": "phrase",
+          "example": "Pada deszcz cały dzień."
+        },
+        {
+          "word": "pada śnieg",
+          "translation": "it's snowing",
+          "accepted_translations": [
+            "it is snowing"
+          ],
+          "pos": "phrase",
+          "example": "Zimą pada śnieg."
+        },
+        {
+          "word": "pogoda",
+          "translation": "weather",
+          "pos": "noun",
+          "example": "Pogoda jest dziś piękna."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "budzić się",
+          "answer": "to wake up"
+        },
+        {
+          "type": "translation",
+          "prompt": "wstawać",
+          "answer": "to get up"
+        },
+        {
+          "type": "translation",
+          "prompt": "myć się",
+          "answer": "to wash"
+        },
+        {
+          "type": "translation",
+          "prompt": "iść spać",
+          "answer": "to go to bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "praca",
+          "answer": "work"
+        },
+        {
+          "type": "translation",
+          "prompt": "zawsze",
+          "answer": "always"
+        },
+        {
+          "type": "translation",
+          "prompt": "często",
+          "answer": "often"
+        },
+        {
+          "type": "translation",
+          "prompt": "czasami",
+          "answer": "sometimes"
+        },
+        {
+          "type": "translation",
+          "prompt": "słońce",
+          "answer": "sun"
+        },
+        {
+          "type": "translation",
+          "prompt": "wiatr",
+          "answer": "wind"
+        },
+        {
+          "type": "translation",
+          "prompt": "deszcz",
+          "answer": "rain"
+        },
+        {
+          "type": "translation",
+          "prompt": "śnieg",
+          "answer": "snow"
+        },
+        {
+          "type": "translation",
+          "prompt": "chmura",
+          "answer": "cloud"
+        },
+        {
+          "type": "translation",
+          "prompt": "pada deszcz",
+          "answer": "it's raining",
+          "accepted_answers": [
+            "it is raining"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "pada śnieg",
+          "answer": "it's snowing",
+          "accepted_answers": [
+            "it is snowing"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "pogoda",
+          "answer": "weather"
+        },
+        {
+          "type": "translation",
+          "prompt": "Budzę się o siódmej.",
+          "answer": "I wake up at seven o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ona wstaje wcześnie.",
+          "answer": "She gets up early."
+        },
+        {
+          "type": "translation",
+          "prompt": "Idziemy spać o dwudziestej.",
+          "answer": "We go to bed at eight in the evening."
+        },
+        {
+          "type": "translation",
+          "prompt": "Idę do pracy o ósmej.",
+          "answer": "I go to work at eight o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Pada deszcz cały dzień.",
+          "answer": "It's raining all day.",
+          "accepted_answers": [
+            "It is raining all day."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Zimą pada śnieg.",
+          "answer": "It snows in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Słońce świeci.",
+          "answer": "The sun is shining."
+        },
+        {
+          "type": "translation",
+          "prompt": "Czasami jem w restauracji.",
+          "answer": "Sometimes I eat at a restaurant."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's raining.",
+          "answer": "Pada deszcz."
+        },
+        {
+          "type": "translation",
+          "prompt": "Zawsze piję kawę.",
+          "answer": "I always drink coffee."
+        },
+        {
+          "type": "translation",
+          "prompt": "Wiatr wieje mocno.",
+          "answer": "The wind is blowing hard."
+        },
+        {
+          "type": "translation",
+          "prompt": "Deszcz jest zimny.",
+          "answer": "The rain is cold."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to wake up':",
+          "options": [
+            "budzić się",
+            "wstawać",
+            "myć się",
+            "iść spać"
+          ],
+          "answer": "budzić się"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to get up':",
+          "options": [
+            "wstawać",
+            "budzić się",
+            "iść spać",
+            "myć się"
+          ],
+          "answer": "wstawać"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'always':",
+          "options": [
+            "zawsze",
+            "często",
+            "czasami",
+            "dziś"
+          ],
+          "answer": "zawsze"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'often':",
+          "options": [
+            "często",
+            "zawsze",
+            "czasami",
+            "dziś"
+          ],
+          "answer": "często"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sun':",
+          "options": [
+            "słońce",
+            "wiatr",
+            "deszcz",
+            "śnieg"
+          ],
+          "answer": "słońce"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'rain':",
+          "options": [
+            "deszcz",
+            "śnieg",
+            "wiatr",
+            "słońce"
+          ],
+          "answer": "deszcz"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'it's raining':",
+          "options": [
+            "pada deszcz",
+            "pada śnieg",
+            "słońce",
+            "pogoda"
+          ],
+          "answer": "pada deszcz"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'work':",
+          "options": [
+            "praca",
+            "dom",
+            "miasto",
+            "park"
+          ],
+          "answer": "praca"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Budzę ___ o siódmej.",
+          "answer": "się"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Myję ___ rano.",
+          "answer": "się"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Pada ___ . Weź parasol.",
+          "answer": "deszcz"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Zimą pada ___.",
+          "answer": "śnieg"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ świeci.",
+          "answer": "słońce"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wiatr ___.",
+          "answer": "wieje"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Idę do ___ o ósmej.",
+          "answer": "pracy"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ jem w restauracji.",
+          "answer": "czasami"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Shopping and Travel",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "dwadzieścia",
+          "translation": "twenty",
+          "pos": "number",
+          "example": "Książka kosztuje dwadzieścia złotych."
+        },
+        {
+          "word": "trzydzieści",
+          "translation": "thirty",
+          "pos": "number",
+          "example": "On ma trzydzieści lat."
+        },
+        {
+          "word": "czterdzieści",
+          "translation": "forty",
+          "pos": "number",
+          "example": "Walizka kosztuje czterdzieści złotych."
+        },
+        {
+          "word": "pięćdziesiąt",
+          "translation": "fifty",
+          "pos": "number",
+          "example": "Mam pięćdziesiąt złotych."
+        },
+        {
+          "word": "sześćdziesiąt",
+          "translation": "sixty",
+          "pos": "number",
+          "example": "Bilet kosztuje sześćdziesiąt złotych."
+        },
+        {
+          "word": "sto",
+          "translation": "hundred",
+          "pos": "number",
+          "example": "Sto złotych to dużo."
+        },
+        {
+          "word": "pieniądze",
+          "translation": "money",
+          "pos": "noun",
+          "example": "Nie mam pieniędzy."
+        },
+        {
+          "word": "drogi",
+          "translation": "expensive",
+          "accepted_translations": [
+            "dear"
+          ],
+          "pos": "adjective",
+          "example": "Ten płaszcz jest drogi."
+        },
+        {
+          "word": "tani",
+          "translation": "cheap",
+          "pos": "adjective",
+          "example": "Ta książka jest tania."
+        },
+        {
+          "word": "kupić",
+          "translation": "to buy",
+          "pos": "verb",
+          "example": "Chcę kupić walizkę."
+        },
+        {
+          "word": "sklep",
+          "translation": "shop",
+          "accepted_translations": [
+            "store"
+          ],
+          "pos": "noun",
+          "example": "Sklep jest zamknięty."
+        },
+        {
+          "word": "pociąg",
+          "translation": "train",
+          "pos": "noun",
+          "example": "Pociąg przyjeżdża o ósmej."
+        },
+        {
+          "word": "autobus",
+          "translation": "bus",
+          "pos": "noun",
+          "example": "Jadę autobusem."
+        },
+        {
+          "word": "hotel",
+          "translation": "hotel",
+          "pos": "noun",
+          "example": "Śpimy w hotelu."
+        },
+        {
+          "word": "walizka",
+          "translation": "suitcase",
+          "pos": "noun",
+          "example": "Moja walizka jest ciężka."
+        },
+        {
+          "word": "bilet",
+          "translation": "ticket",
+          "pos": "noun",
+          "example": "Bilet do Warszawy, proszę."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "dwadzieścia",
+          "answer": "twenty"
+        },
+        {
+          "type": "translation",
+          "prompt": "trzydzieści",
+          "answer": "thirty"
+        },
+        {
+          "type": "translation",
+          "prompt": "czterdzieści",
+          "answer": "forty"
+        },
+        {
+          "type": "translation",
+          "prompt": "pięćdziesiąt",
+          "answer": "fifty"
+        },
+        {
+          "type": "translation",
+          "prompt": "sześćdziesiąt",
+          "answer": "sixty"
+        },
+        {
+          "type": "translation",
+          "prompt": "sto",
+          "answer": "hundred"
+        },
+        {
+          "type": "translation",
+          "prompt": "pieniądze",
+          "answer": "money"
+        },
+        {
+          "type": "translation",
+          "prompt": "drogi",
+          "answer": "expensive",
+          "accepted_answers": [
+            "dear"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "tani",
+          "answer": "cheap"
+        },
+        {
+          "type": "translation",
+          "prompt": "kupić",
+          "answer": "to buy"
+        },
+        {
+          "type": "translation",
+          "prompt": "sklep",
+          "answer": "shop",
+          "accepted_answers": [
+            "store"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "pociąg",
+          "answer": "train"
+        },
+        {
+          "type": "translation",
+          "prompt": "autobus",
+          "answer": "bus"
+        },
+        {
+          "type": "translation",
+          "prompt": "hotel",
+          "answer": "hotel"
+        },
+        {
+          "type": "translation",
+          "prompt": "walizka",
+          "answer": "suitcase"
+        },
+        {
+          "type": "translation",
+          "prompt": "bilet",
+          "answer": "ticket"
+        },
+        {
+          "type": "translation",
+          "prompt": "Chcę kupić walizkę.",
+          "answer": "I want to buy a suitcase."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ta książka kosztuje dwadzieścia złotych.",
+          "answer": "This book costs twenty zloty."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bilet do Warszawy, proszę.",
+          "answer": "A ticket to Warsaw, please."
+        },
+        {
+          "type": "translation",
+          "prompt": "Pociąg przyjeżdża o ósmej.",
+          "answer": "The train arrives at eight o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jadę autobusem.",
+          "answer": "I'm taking the bus.",
+          "accepted_answers": [
+            "I take the bus."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Śpimy w hotelu.",
+          "answer": "We're sleeping at the hotel.",
+          "accepted_answers": [
+            "We are sleeping at the hotel."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ten płaszcz jest za drogi.",
+          "answer": "This coat is too expensive."
+        },
+        {
+          "type": "translation",
+          "prompt": "Sklep otwiera się o dziewiątej.",
+          "answer": "The shop opens at nine o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mam pięćdziesiąt złotych.",
+          "answer": "I have fifty zloty."
+        },
+        {
+          "type": "translation",
+          "prompt": "How much is the ticket?",
+          "answer": "Ile kosztuje bilet?"
+        },
+        {
+          "type": "translation",
+          "prompt": "The suitcase is cheap.",
+          "answer": "Walizka jest tania."
+        },
+        {
+          "type": "translation",
+          "prompt": "I have no money.",
+          "answer": "Nie mam pieniędzy."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'twenty':",
+          "options": [
+            "dwadzieścia",
+            "trzydzieści",
+            "czterdzieści",
+            "pięćdziesiąt"
+          ],
+          "answer": "dwadzieścia"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'forty':",
+          "options": [
+            "czterdzieści",
+            "trzydzieści",
+            "dwadzieścia",
+            "sześćdziesiąt"
+          ],
+          "answer": "czterdzieści"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sixty':",
+          "options": [
+            "sześćdziesiąt",
+            "pięćdziesiąt",
+            "czterdzieści",
+            "sto"
+          ],
+          "answer": "sześćdziesiąt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hundred':",
+          "options": [
+            "sto",
+            "sześćdziesiąt",
+            "pięćdziesiąt",
+            "dwadzieścia"
+          ],
+          "answer": "sto"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'expensive':",
+          "options": [
+            "drogi",
+            "nowy",
+            "stary",
+            "łatwy"
+          ],
+          "answer": "drogi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'shop':",
+          "options": [
+            "sklep",
+            "hotel",
+            "rynek",
+            "restauracja"
+          ],
+          "answer": "sklep"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'suitcase':",
+          "options": [
+            "walizka",
+            "bilet",
+            "autobus",
+            "pociąg"
+          ],
+          "answer": "walizka"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hotel':",
+          "options": [
+            "hotel",
+            "sklep",
+            "szkoła",
+            "dom"
+          ],
+          "answer": "hotel"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ile ___ ta książka?",
+          "answer": "kosztuje"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ile ___ te buty?",
+          "answer": "kosztują"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bilet ___ dziesięć złotych.",
+          "answer": "kosztuje"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Buty ___ pięćdziesiąt złotych.",
+          "answer": "kosztują"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Chcę ___ walizkę.",
+          "answer": "kupić"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dziesięć, dwadzieścia, ___, czterdzieści.",
+          "answer": "trzydzieści"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dwadzieścia i dwadzieścia to ___.",
+          "answer": "czterdzieści"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Pięćdziesiąt i pięćdziesiąt to ___.",
+          "answer": "sto"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Yesterday and Tomorrow",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "lato",
+          "translation": "summer",
+          "pos": "noun",
+          "example": "Latem jest gorąco."
+        },
+        {
+          "word": "zima",
+          "translation": "winter",
+          "pos": "noun",
+          "example": "Zimą pada śnieg."
+        },
+        {
+          "word": "wiosna",
+          "translation": "spring",
+          "pos": "noun",
+          "example": "Wiosną kwitną kwiaty."
+        },
+        {
+          "word": "jesień",
+          "translation": "autumn",
+          "accepted_translations": [
+            "fall"
+          ],
+          "pos": "noun",
+          "example": "Jesienią często pada deszcz."
+        },
+        {
+          "word": "gorąco",
+          "translation": "it's hot",
+          "accepted_translations": [
+            "it is hot"
+          ],
+          "pos": "phrase",
+          "example": "Latem jest gorąco."
+        },
+        {
+          "word": "styczeń",
+          "translation": "January",
+          "pos": "noun",
+          "example": "Styczeń jest pierwszym miesiącem."
+        },
+        {
+          "word": "marzec",
+          "translation": "March",
+          "pos": "noun",
+          "example": "W marcu zaczyna się wiosna."
+        },
+        {
+          "word": "lipiec",
+          "translation": "July",
+          "pos": "noun",
+          "example": "Moje urodziny są w lipcu."
+        },
+        {
+          "word": "wrzesień",
+          "translation": "September",
+          "pos": "noun",
+          "example": "Szkoła zaczyna się we wrześniu."
+        },
+        {
+          "word": "grudzień",
+          "translation": "December",
+          "pos": "noun",
+          "example": "Święta są w grudniu."
+        },
+        {
+          "word": "zeszły tydzień",
+          "translation": "last week",
+          "pos": "phrase",
+          "example": "W zeszłym tygodniu dużo pracowałem."
+        },
+        {
+          "word": "przyszły tydzień",
+          "translation": "next week",
+          "pos": "phrase",
+          "example": "W przyszłym tygodniu podróżuję."
+        },
+        {
+          "word": "zeszły rok",
+          "translation": "last year",
+          "pos": "phrase",
+          "example": "W zeszłym roku byliśmy w Rzymie."
+        },
+        {
+          "word": "przyszły rok",
+          "translation": "next year",
+          "pos": "phrase",
+          "example": "W przyszłym roku kupię samochód."
+        },
+        {
+          "word": "urodziny",
+          "translation": "birthday",
+          "pos": "noun",
+          "example": "Moje urodziny są w lipcu."
+        },
+        {
+          "word": "miesiąc",
+          "translation": "month",
+          "pos": "noun",
+          "example": "Rok ma dwanaście miesięcy."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "lato",
+          "answer": "summer"
+        },
+        {
+          "type": "translation",
+          "prompt": "zima",
+          "answer": "winter"
+        },
+        {
+          "type": "translation",
+          "prompt": "wiosna",
+          "answer": "spring"
+        },
+        {
+          "type": "translation",
+          "prompt": "jesień",
+          "answer": "autumn",
+          "accepted_answers": [
+            "fall"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "gorąco",
+          "answer": "it's hot",
+          "accepted_answers": [
+            "it is hot"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "styczeń",
+          "answer": "January"
+        },
+        {
+          "type": "translation",
+          "prompt": "marzec",
+          "answer": "March"
+        },
+        {
+          "type": "translation",
+          "prompt": "lipiec",
+          "answer": "July"
+        },
+        {
+          "type": "translation",
+          "prompt": "wrzesień",
+          "answer": "September"
+        },
+        {
+          "type": "translation",
+          "prompt": "grudzień",
+          "answer": "December"
+        },
+        {
+          "type": "translation",
+          "prompt": "zeszły tydzień",
+          "answer": "last week"
+        },
+        {
+          "type": "translation",
+          "prompt": "przyszły tydzień",
+          "answer": "next week"
+        },
+        {
+          "type": "translation",
+          "prompt": "zeszły rok",
+          "answer": "last year"
+        },
+        {
+          "type": "translation",
+          "prompt": "przyszły rok",
+          "answer": "next year"
+        },
+        {
+          "type": "translation",
+          "prompt": "urodziny",
+          "answer": "birthday"
+        },
+        {
+          "type": "translation",
+          "prompt": "miesiąc",
+          "answer": "month"
+        },
+        {
+          "type": "translation",
+          "prompt": "Wczoraj kupiłem książkę.",
+          "answer": "Yesterday I bought a book.",
+          "accepted_answers": [
+            "I bought a book yesterday."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Wczoraj czytałem książkę.",
+          "answer": "Yesterday I read a book."
+        },
+        {
+          "type": "translation",
+          "prompt": "W zeszłym roku byliśmy w Rzymie.",
+          "answer": "Last year we were in Rome."
+        },
+        {
+          "type": "translation",
+          "prompt": "W przyszłym tygodniu podróżuję.",
+          "answer": "I'm traveling next week.",
+          "accepted_answers": [
+            "I am traveling next week."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "W przyszłym roku kupię samochód.",
+          "answer": "Next year I'm buying a car.",
+          "accepted_answers": [
+            "Next year I am buying a car."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Latem jest gorąco.",
+          "answer": "In summer it's hot."
+        },
+        {
+          "type": "translation",
+          "prompt": "Zimą pada śnieg.",
+          "answer": "It snows in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Moje urodziny są w lipcu.",
+          "answer": "My birthday is in July."
+        },
+        {
+          "type": "translation",
+          "prompt": "Styczeń jest pierwszym miesiącem roku.",
+          "answer": "January is the first month of the year."
+        },
+        {
+          "type": "translation",
+          "prompt": "Święta są w grudniu.",
+          "answer": "The holidays are in December."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jesienią często pada deszcz.",
+          "answer": "It often rains in autumn.",
+          "accepted_answers": [
+            "In autumn it often rains."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Szkoła zaczyna się we wrześniu.",
+          "answer": "School starts in September."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'summer':",
+          "options": [
+            "lato",
+            "zima",
+            "wiosna",
+            "jesień"
+          ],
+          "answer": "lato"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'winter':",
+          "options": [
+            "zima",
+            "lato",
+            "wiosna",
+            "jesień"
+          ],
+          "answer": "zima"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'spring':",
+          "options": [
+            "wiosna",
+            "jesień",
+            "lato",
+            "zima"
+          ],
+          "answer": "wiosna"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'autumn':",
+          "options": [
+            "jesień",
+            "wiosna",
+            "lato",
+            "zima"
+          ],
+          "answer": "jesień"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'July':",
+          "options": [
+            "lipiec",
+            "marzec",
+            "styczeń",
+            "wrzesień"
+          ],
+          "answer": "lipiec"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'December':",
+          "options": [
+            "grudzień",
+            "wrzesień",
+            "styczeń",
+            "marzec"
+          ],
+          "answer": "grudzień"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'next week':",
+          "options": [
+            "przyszły tydzień",
+            "zeszły tydzień",
+            "przyszły rok",
+            "zeszły rok"
+          ],
+          "answer": "przyszły tydzień"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'last year':",
+          "options": [
+            "zeszły rok",
+            "przyszły rok",
+            "zeszły tydzień",
+            "przyszły tydzień"
+          ],
+          "answer": "zeszły rok"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wczoraj kupi___ książkę.",
+          "answer": "łem",
+          "accepted_answers": [
+            "łam"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wczoraj czyta___ książkę.",
+          "answer": "łem",
+          "accepted_answers": [
+            "łam"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "W zeszłym roku by___ w Rzymie.",
+          "answer": "łem",
+          "accepted_answers": [
+            "łam"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "W zeszłym tygodniu dużo pracowa___.",
+          "answer": "łem",
+          "accepted_answers": [
+            "łam"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Latem jest ___.",
+          "answer": "gorąco"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Zimą pada ___.",
+          "answer": "śnieg"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Moje urodziny są w ___.",
+          "answer": "lipcu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ma dwanaście miesięcy.",
+          "answer": "rok"
+        }
+      ]
     }
   ]
 }
