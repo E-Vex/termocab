@@ -2051,6 +2051,1973 @@
           "answer": "kim"
         }
       ]
+    },
+    {
+      "id": 6,
+      "title": "Food and Drink",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "ekmek",
+          "translation": "bread",
+          "pos": "noun",
+          "example": "Ekmek taze."
+        },
+        {
+          "word": "peynir",
+          "translation": "cheese",
+          "pos": "noun",
+          "example": "Peynir severim."
+        },
+        {
+          "word": "elma",
+          "translation": "apple",
+          "pos": "noun",
+          "example": "Elma yerim."
+        },
+        {
+          "word": "su",
+          "translation": "water",
+          "pos": "noun",
+          "example": "Su içerim."
+        },
+        {
+          "word": "şarap",
+          "translation": "wine",
+          "pos": "noun",
+          "example": "Bir bardak şarap, lütfen."
+        },
+        {
+          "word": "bira",
+          "translation": "beer",
+          "pos": "noun",
+          "example": "O bir bira içiyor."
+        },
+        {
+          "word": "tavuk",
+          "translation": "chicken",
+          "pos": "noun",
+          "example": "Tavuk lezzetli."
+        },
+        {
+          "word": "balık",
+          "translation": "fish",
+          "pos": "noun",
+          "example": "Balık yeriz."
+        },
+        {
+          "word": "kek",
+          "translation": "cake",
+          "pos": "noun",
+          "example": "Kek tatlı."
+        },
+        {
+          "word": "kahvaltı",
+          "translation": "breakfast",
+          "pos": "noun",
+          "example": "Kahvaltı saat sekizde."
+        },
+        {
+          "word": "öğle yemeği",
+          "translation": "lunch",
+          "pos": "noun",
+          "example": "Öğle yemeği on ikide."
+        },
+        {
+          "word": "akşam yemeği",
+          "translation": "dinner",
+          "pos": "noun",
+          "example": "Akşam yemeği saat yedide."
+        },
+        {
+          "word": "açım",
+          "translation": "I'm hungry",
+          "pos": "phrase",
+          "example": "Açım!",
+          "accepted_translations": [
+            "I am hungry"
+          ]
+        },
+        {
+          "word": "susadım",
+          "translation": "I'm thirsty",
+          "pos": "phrase",
+          "example": "Susadım.",
+          "accepted_translations": [
+            "I am thirsty"
+          ]
+        },
+        {
+          "word": "lokanta",
+          "translation": "restaurant",
+          "pos": "noun",
+          "example": "Lokantada yiyoruz."
+        },
+        {
+          "word": "lezzetli",
+          "translation": "delicious",
+          "pos": "adjective",
+          "example": "Çorba lezzetli."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ekmek",
+          "answer": "bread"
+        },
+        {
+          "type": "translation",
+          "prompt": "peynir",
+          "answer": "cheese"
+        },
+        {
+          "type": "translation",
+          "prompt": "elma",
+          "answer": "apple"
+        },
+        {
+          "type": "translation",
+          "prompt": "su",
+          "answer": "water"
+        },
+        {
+          "type": "translation",
+          "prompt": "şarap",
+          "answer": "wine"
+        },
+        {
+          "type": "translation",
+          "prompt": "bira",
+          "answer": "beer"
+        },
+        {
+          "type": "translation",
+          "prompt": "tavuk",
+          "answer": "chicken"
+        },
+        {
+          "type": "translation",
+          "prompt": "balık",
+          "answer": "fish"
+        },
+        {
+          "type": "translation",
+          "prompt": "kek",
+          "answer": "cake"
+        },
+        {
+          "type": "translation",
+          "prompt": "kahvaltı",
+          "answer": "breakfast"
+        },
+        {
+          "type": "translation",
+          "prompt": "öğle yemeği",
+          "answer": "lunch"
+        },
+        {
+          "type": "translation",
+          "prompt": "akşam yemeği",
+          "answer": "dinner"
+        },
+        {
+          "type": "translation",
+          "prompt": "açım",
+          "answer": "I'm hungry",
+          "accepted_answers": [
+            "I am hungry"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "susadım",
+          "answer": "I'm thirsty",
+          "accepted_answers": [
+            "I am thirsty"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "lokanta",
+          "answer": "restaurant"
+        },
+        {
+          "type": "translation",
+          "prompt": "lezzetli",
+          "answer": "delicious"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ekmek ve peynir yiyorum.",
+          "answer": "I'm eating bread and cheese.",
+          "accepted_answers": [
+            "I am eating bread and cheese."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Su içiyorum.",
+          "answer": "I'm drinking water.",
+          "accepted_answers": [
+            "I drink water."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Lokantada balık yiyoruz.",
+          "answer": "We're eating fish at the restaurant.",
+          "accepted_answers": [
+            "We are eating fish at the restaurant."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bir kahve alayım.",
+          "answer": "I'd like a coffee.",
+          "accepted_answers": [
+            "I'll have a coffee."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Akşam yemeği saat yedide.",
+          "answer": "Dinner is at seven o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Açım!",
+          "answer": "I'm hungry!",
+          "accepted_answers": [
+            "I am hungry!"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Susadım.",
+          "answer": "I'm thirsty.",
+          "accepted_answers": [
+            "I am thirsty."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "I'm eating an apple.",
+          "answer": "Elma yiyorum."
+        },
+        {
+          "type": "translation",
+          "prompt": "The cake is sweet.",
+          "answer": "Kek tatlı."
+        },
+        {
+          "type": "translation",
+          "prompt": "Lunch is at noon.",
+          "answer": "Öğle yemeği on ikide."
+        },
+        {
+          "type": "translation",
+          "prompt": "I like cheese.",
+          "answer": "Peynir severim."
+        },
+        {
+          "type": "translation",
+          "prompt": "He drinks beer.",
+          "answer": "O bira içer."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bread':",
+          "options": [
+            "ekmek",
+            "peynir",
+            "balık",
+            "tavuk"
+          ],
+          "answer": "ekmek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'water':",
+          "options": [
+            "su",
+            "şarap",
+            "bira",
+            "elma"
+          ],
+          "answer": "su"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'wine':",
+          "options": [
+            "şarap",
+            "bira",
+            "su",
+            "kek"
+          ],
+          "answer": "şarap"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fish':",
+          "options": [
+            "balık",
+            "tavuk",
+            "ekmek",
+            "peynir"
+          ],
+          "answer": "balık"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cake':",
+          "options": [
+            "kek",
+            "elma",
+            "ekmek",
+            "su"
+          ],
+          "answer": "kek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'breakfast':",
+          "options": [
+            "kahvaltı",
+            "öğle yemeği",
+            "akşam yemeği",
+            "lokanta"
+          ],
+          "answer": "kahvaltı"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'I'm hungry':",
+          "options": [
+            "açım",
+            "susadım",
+            "tokum",
+            "yorgunum"
+          ],
+          "answer": "açım"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'dinner':",
+          "options": [
+            "akşam yemeği",
+            "öğle yemeği",
+            "kahvaltı",
+            "lokanta"
+          ],
+          "answer": "akşam yemeği"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Çay var mı? — Evet, ___.",
+          "answer": "var"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Süt var mı? — Hayır, ___.",
+          "answer": "yok"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ekmek ___ mı?",
+          "answer": "var"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kahve ___ mı? — Hayır.",
+          "answer": "yok"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Aç___.",
+          "answer": "ım"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bir ___ kahve, lütfen.",
+          "answer": "fincan"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kahvaltı ___ sekizde.",
+          "answer": "saat"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ yemeği saat yedide.",
+          "answer": "akşam"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Home and Places",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "ev",
+          "translation": "house",
+          "pos": "noun",
+          "example": "Ev büyük."
+        },
+        {
+          "word": "apartman",
+          "translation": "apartment",
+          "pos": "noun",
+          "example": "Bir apartmanda yaşıyoruz."
+        },
+        {
+          "word": "mutfak",
+          "translation": "kitchen",
+          "pos": "noun",
+          "example": "Mutfak küçük."
+        },
+        {
+          "word": "yatak odası",
+          "translation": "bedroom",
+          "pos": "noun",
+          "example": "Yatak odasında uyuyorum."
+        },
+        {
+          "word": "salon",
+          "translation": "living room",
+          "pos": "noun",
+          "example": "Salon aydınlık."
+        },
+        {
+          "word": "banyo",
+          "translation": "bathroom",
+          "pos": "noun",
+          "example": "Banyo sağda."
+        },
+        {
+          "word": "bahçe",
+          "translation": "garden",
+          "pos": "noun",
+          "example": "Çiçekler bahçede."
+        },
+        {
+          "word": "sokak",
+          "translation": "street",
+          "pos": "noun",
+          "example": "Bu sokakta yaşıyorum."
+        },
+        {
+          "word": "şehir",
+          "translation": "city",
+          "pos": "noun",
+          "example": "Ankara büyük bir şehir."
+        },
+        {
+          "word": "park",
+          "translation": "park",
+          "pos": "noun",
+          "example": "Çocuklar parkta oynuyor."
+        },
+        {
+          "word": "pazar",
+          "translation": "market",
+          "pos": "noun",
+          "example": "Pazarda meyve alıyorum."
+        },
+        {
+          "word": "okul",
+          "translation": "school",
+          "pos": "noun",
+          "example": "Okul eve yakın."
+        },
+        {
+          "word": "hastane",
+          "translation": "hospital",
+          "pos": "noun",
+          "example": "Hastane şehir merkezinde."
+        },
+        {
+          "word": "masa",
+          "translation": "table",
+          "pos": "noun",
+          "example": "Kitap masada."
+        },
+        {
+          "word": "yatak",
+          "translation": "bed",
+          "pos": "noun",
+          "example": "Kedi yatakta uyuyor."
+        },
+        {
+          "word": "yakın",
+          "translation": "near",
+          "pos": "adjective",
+          "example": "Park yakın.",
+          "accepted_translations": [
+            "close"
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ev",
+          "answer": "house"
+        },
+        {
+          "type": "translation",
+          "prompt": "apartman",
+          "answer": "apartment"
+        },
+        {
+          "type": "translation",
+          "prompt": "mutfak",
+          "answer": "kitchen"
+        },
+        {
+          "type": "translation",
+          "prompt": "yatak odası",
+          "answer": "bedroom"
+        },
+        {
+          "type": "translation",
+          "prompt": "salon",
+          "answer": "living room"
+        },
+        {
+          "type": "translation",
+          "prompt": "banyo",
+          "answer": "bathroom"
+        },
+        {
+          "type": "translation",
+          "prompt": "bahçe",
+          "answer": "garden"
+        },
+        {
+          "type": "translation",
+          "prompt": "sokak",
+          "answer": "street"
+        },
+        {
+          "type": "translation",
+          "prompt": "şehir",
+          "answer": "city"
+        },
+        {
+          "type": "translation",
+          "prompt": "park",
+          "answer": "park"
+        },
+        {
+          "type": "translation",
+          "prompt": "pazar",
+          "answer": "market"
+        },
+        {
+          "type": "translation",
+          "prompt": "okul",
+          "answer": "school"
+        },
+        {
+          "type": "translation",
+          "prompt": "hastane",
+          "answer": "hospital"
+        },
+        {
+          "type": "translation",
+          "prompt": "masa",
+          "answer": "table"
+        },
+        {
+          "type": "translation",
+          "prompt": "yatak",
+          "answer": "bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "yakın",
+          "answer": "near",
+          "accepted_answers": [
+            "close"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bir apartmanda yaşıyoruz.",
+          "answer": "We live in an apartment."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mutfak küçük.",
+          "answer": "The kitchen is small."
+        },
+        {
+          "type": "translation",
+          "prompt": "Kedi yatakta uyuyor.",
+          "answer": "The cat sleeps on the bed."
+        },
+        {
+          "type": "translation",
+          "prompt": "Çocuklar parkta oynuyor.",
+          "answer": "The children are playing in the park.",
+          "accepted_answers": [
+            "The kids are playing in the park."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Pazarda meyve alıyorum.",
+          "answer": "I'm buying fruit at the market.",
+          "accepted_answers": [
+            "I buy fruit at the market."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bahçede çiçekler var.",
+          "answer": "There are flowers in the garden.",
+          "accepted_answers": [
+            "There're flowers in the garden."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu sokakta yaşıyorum.",
+          "answer": "I live on this street."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ankara büyük bir şehir.",
+          "answer": "Ankara is a big city."
+        },
+        {
+          "type": "translation",
+          "prompt": "The book is on the table.",
+          "answer": "Kitap masada."
+        },
+        {
+          "type": "translation",
+          "prompt": "The bathroom is small.",
+          "answer": "Banyo küçük."
+        },
+        {
+          "type": "translation",
+          "prompt": "The school is near the house.",
+          "answer": "Okul eve yakın."
+        },
+        {
+          "type": "translation",
+          "prompt": "I'm at home.",
+          "answer": "Evdeyim.",
+          "accepted_answers": [
+            "I am at home."
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'house':",
+          "options": [
+            "ev",
+            "apartman",
+            "mutfak",
+            "bahçe"
+          ],
+          "answer": "ev"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'kitchen':",
+          "options": [
+            "mutfak",
+            "yatak odası",
+            "salon",
+            "banyo"
+          ],
+          "answer": "mutfak"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bedroom':",
+          "options": [
+            "yatak odası",
+            "mutfak",
+            "salon",
+            "bahçe"
+          ],
+          "answer": "yatak odası"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'garden':",
+          "options": [
+            "bahçe",
+            "park",
+            "ev",
+            "sokak"
+          ],
+          "answer": "bahçe"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'city':",
+          "options": [
+            "şehir",
+            "sokak",
+            "ev",
+            "okul"
+          ],
+          "answer": "şehir"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'park':",
+          "options": [
+            "park",
+            "bahçe",
+            "pazar",
+            "şehir"
+          ],
+          "answer": "park"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'school':",
+          "options": [
+            "okul",
+            "hastane",
+            "pazar",
+            "ev"
+          ],
+          "answer": "okul"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bed':",
+          "options": [
+            "yatak",
+            "masa",
+            "yatak odası",
+            "salon"
+          ],
+          "answer": "yatak"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mutfak___ çay içiyorum.",
+          "answer": "ta"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bahçe___ çiçekler var.",
+          "answer": "de"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Okul___ ders yapıyoruz.",
+          "answer": "da"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ev___ yaşıyorum.",
+          "answer": "de"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Park___ oynuyoruz.",
+          "answer": "ta"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Salon___ oturuyorum.",
+          "answer": "da"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Okul ev___ yakın.",
+          "answer": "e"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kitap masa___.",
+          "answer": "da"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Daily Routine and Weather",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "uyanmak",
+          "translation": "to wake up",
+          "pos": "verb",
+          "example": "Saat yedide uyanıyorum."
+        },
+        {
+          "word": "kalkmak",
+          "translation": "to get up",
+          "pos": "verb",
+          "example": "Erken kalkıyorum."
+        },
+        {
+          "word": "duş almak",
+          "translation": "to take a shower",
+          "pos": "phrase",
+          "example": "Sabah duş alıyorum."
+        },
+        {
+          "word": "yatmak",
+          "translation": "to go to bed",
+          "pos": "verb",
+          "example": "Saat onda yatıyorum."
+        },
+        {
+          "word": "iş",
+          "translation": "work",
+          "pos": "noun",
+          "example": "Saat sekizde işe gidiyorum."
+        },
+        {
+          "word": "hep",
+          "translation": "always",
+          "pos": "adverb",
+          "example": "Hep geç kalıyor."
+        },
+        {
+          "word": "sık sık",
+          "translation": "often",
+          "pos": "phrase",
+          "example": "Sık sık akşam kitap okuyorum."
+        },
+        {
+          "word": "bazen",
+          "translation": "sometimes",
+          "pos": "adverb",
+          "example": "Bazen lokantada yiyorum."
+        },
+        {
+          "word": "güneş",
+          "translation": "sun",
+          "pos": "noun",
+          "example": "Güneş parlıyor."
+        },
+        {
+          "word": "rüzgâr",
+          "translation": "wind",
+          "pos": "noun",
+          "example": "Rüzgâr esiyor."
+        },
+        {
+          "word": "yağmur",
+          "translation": "rain",
+          "pos": "noun",
+          "example": "Yağmuru severim."
+        },
+        {
+          "word": "kar",
+          "translation": "snow",
+          "pos": "noun",
+          "example": "Kar beyaz."
+        },
+        {
+          "word": "bulut",
+          "translation": "cloud",
+          "pos": "noun",
+          "example": "Bulutlar var."
+        },
+        {
+          "word": "yağmur yağıyor",
+          "translation": "it's raining",
+          "pos": "phrase",
+          "example": "Yağmur yağıyor.",
+          "accepted_translations": [
+            "it is raining"
+          ]
+        },
+        {
+          "word": "kar yağıyor",
+          "translation": "it's snowing",
+          "pos": "phrase",
+          "example": "Kar yağıyor.",
+          "accepted_translations": [
+            "it is snowing"
+          ]
+        },
+        {
+          "word": "hava",
+          "translation": "weather",
+          "pos": "noun",
+          "example": "Hava bugün güzel."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "uyanmak",
+          "answer": "to wake up"
+        },
+        {
+          "type": "translation",
+          "prompt": "kalkmak",
+          "answer": "to get up"
+        },
+        {
+          "type": "translation",
+          "prompt": "duş almak",
+          "answer": "to take a shower"
+        },
+        {
+          "type": "translation",
+          "prompt": "yatmak",
+          "answer": "to go to bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "iş",
+          "answer": "work"
+        },
+        {
+          "type": "translation",
+          "prompt": "hep",
+          "answer": "always"
+        },
+        {
+          "type": "translation",
+          "prompt": "sık sık",
+          "answer": "often"
+        },
+        {
+          "type": "translation",
+          "prompt": "bazen",
+          "answer": "sometimes"
+        },
+        {
+          "type": "translation",
+          "prompt": "güneş",
+          "answer": "sun"
+        },
+        {
+          "type": "translation",
+          "prompt": "rüzgâr",
+          "answer": "wind"
+        },
+        {
+          "type": "translation",
+          "prompt": "yağmur",
+          "answer": "rain"
+        },
+        {
+          "type": "translation",
+          "prompt": "kar",
+          "answer": "snow"
+        },
+        {
+          "type": "translation",
+          "prompt": "bulut",
+          "answer": "cloud"
+        },
+        {
+          "type": "translation",
+          "prompt": "yağmur yağıyor",
+          "answer": "it's raining",
+          "accepted_answers": [
+            "it is raining"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "kar yağıyor",
+          "answer": "it's snowing",
+          "accepted_answers": [
+            "it is snowing"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "hava",
+          "answer": "weather"
+        },
+        {
+          "type": "translation",
+          "prompt": "Saat yedide uyanıyorum.",
+          "answer": "I wake up at seven o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Erken kalkıyorum.",
+          "answer": "I get up early."
+        },
+        {
+          "type": "translation",
+          "prompt": "Sabah duş alıyorum.",
+          "answer": "I take a shower in the morning.",
+          "accepted_answers": [
+            "I shower in the morning."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Saat onda yatıyorum.",
+          "answer": "I go to bed at ten o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Saat sekizde işe gidiyorum.",
+          "answer": "I go to work at eight o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Yağmur yağıyor.",
+          "answer": "It's raining.",
+          "accepted_answers": [
+            "It is raining."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Kar yağıyor.",
+          "answer": "It's snowing.",
+          "accepted_answers": [
+            "It is snowing."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Güneş parlıyor.",
+          "answer": "The sun is shining."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bazen lokantada yiyorum.",
+          "answer": "Sometimes I eat at a restaurant."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's raining.",
+          "answer": "Yağmur yağıyor."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hep kahve içerim.",
+          "answer": "I always drink coffee."
+        },
+        {
+          "type": "translation",
+          "prompt": "Rüzgâr esiyor.",
+          "answer": "The wind is blowing."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to wake up':",
+          "options": [
+            "uyanmak",
+            "kalkmak",
+            "duş almak",
+            "yatmak"
+          ],
+          "answer": "uyanmak"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to get up':",
+          "options": [
+            "kalkmak",
+            "uyanmak",
+            "yatmak",
+            "duş almak"
+          ],
+          "answer": "kalkmak"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'always':",
+          "options": [
+            "hep",
+            "sık sık",
+            "bazen",
+            "bugün"
+          ],
+          "answer": "hep"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'often':",
+          "options": [
+            "sık sık",
+            "hep",
+            "bazen",
+            "bugün"
+          ],
+          "answer": "sık sık"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sun':",
+          "options": [
+            "güneş",
+            "rüzgâr",
+            "yağmur",
+            "kar"
+          ],
+          "answer": "güneş"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'rain':",
+          "options": [
+            "yağmur",
+            "kar",
+            "rüzgâr",
+            "güneş"
+          ],
+          "answer": "yağmur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'it's raining':",
+          "options": [
+            "yağmur yağıyor",
+            "kar yağıyor",
+            "güneş",
+            "hava"
+          ],
+          "answer": "yağmur yağıyor"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'work':",
+          "options": [
+            "iş",
+            "ev",
+            "şehir",
+            "park"
+          ],
+          "answer": "iş"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ali gel___.",
+          "answer": "iyor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ali bak___.",
+          "answer": "ıyor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ali oku___.",
+          "answer": "yor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ali gül___.",
+          "answer": "üyor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ali koş___.",
+          "answer": "uyor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Yağmur ___.",
+          "answer": "yağıyor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Güneş ___.",
+          "answer": "parlıyor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hava bugün çok ___.",
+          "answer": "sıcak"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Shopping and Travel",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "yirmi",
+          "translation": "twenty",
+          "pos": "number",
+          "example": "Kitap yirmi lira."
+        },
+        {
+          "word": "otuz",
+          "translation": "thirty",
+          "pos": "number",
+          "example": "Gömlek otuz lira."
+        },
+        {
+          "word": "kırk",
+          "translation": "forty",
+          "pos": "number",
+          "example": "Bavul kırk lira."
+        },
+        {
+          "word": "elli",
+          "translation": "fifty",
+          "pos": "number",
+          "example": "Elli liram var."
+        },
+        {
+          "word": "altmış",
+          "translation": "sixty",
+          "pos": "number",
+          "example": "Bilet altmış lira."
+        },
+        {
+          "word": "yüz",
+          "translation": "hundred",
+          "pos": "number",
+          "example": "Yüz lira pahalı."
+        },
+        {
+          "word": "para",
+          "translation": "money",
+          "pos": "noun",
+          "example": "Param yok."
+        },
+        {
+          "word": "pahalı",
+          "translation": "expensive",
+          "pos": "adjective",
+          "example": "Bu mont pahalı.",
+          "accepted_translations": [
+            "dear"
+          ]
+        },
+        {
+          "word": "ucuz",
+          "translation": "cheap",
+          "pos": "adjective",
+          "example": "Bu kitap ucuz."
+        },
+        {
+          "word": "satın almak",
+          "translation": "to buy",
+          "pos": "verb",
+          "example": "Bir bavul satın almak istiyorum."
+        },
+        {
+          "word": "dükkân",
+          "translation": "shop",
+          "pos": "noun",
+          "example": "Dükkân kapalı.",
+          "accepted_translations": [
+            "store"
+          ]
+        },
+        {
+          "word": "tren",
+          "translation": "train",
+          "pos": "noun",
+          "example": "Tren saat sekizde geliyor."
+        },
+        {
+          "word": "otobüs",
+          "translation": "bus",
+          "pos": "noun",
+          "example": "Otobüsle gidiyorum."
+        },
+        {
+          "word": "otel",
+          "translation": "hotel",
+          "pos": "noun",
+          "example": "Otelde kalıyoruz."
+        },
+        {
+          "word": "bavul",
+          "translation": "suitcase",
+          "pos": "noun",
+          "example": "Bavulum ağır."
+        },
+        {
+          "word": "bilet",
+          "translation": "ticket",
+          "pos": "noun",
+          "example": "İzmir'e bir bilet, lütfen."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "yirmi",
+          "answer": "twenty"
+        },
+        {
+          "type": "translation",
+          "prompt": "otuz",
+          "answer": "thirty"
+        },
+        {
+          "type": "translation",
+          "prompt": "kırk",
+          "answer": "forty"
+        },
+        {
+          "type": "translation",
+          "prompt": "elli",
+          "answer": "fifty"
+        },
+        {
+          "type": "translation",
+          "prompt": "altmış",
+          "answer": "sixty"
+        },
+        {
+          "type": "translation",
+          "prompt": "yüz",
+          "answer": "hundred"
+        },
+        {
+          "type": "translation",
+          "prompt": "para",
+          "answer": "money"
+        },
+        {
+          "type": "translation",
+          "prompt": "pahalı",
+          "answer": "expensive",
+          "accepted_answers": [
+            "dear"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "ucuz",
+          "answer": "cheap"
+        },
+        {
+          "type": "translation",
+          "prompt": "satın almak",
+          "answer": "to buy"
+        },
+        {
+          "type": "translation",
+          "prompt": "dükkân",
+          "answer": "shop",
+          "accepted_answers": [
+            "store"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "tren",
+          "answer": "train"
+        },
+        {
+          "type": "translation",
+          "prompt": "otobüs",
+          "answer": "bus"
+        },
+        {
+          "type": "translation",
+          "prompt": "otel",
+          "answer": "hotel"
+        },
+        {
+          "type": "translation",
+          "prompt": "bavul",
+          "answer": "suitcase"
+        },
+        {
+          "type": "translation",
+          "prompt": "bilet",
+          "answer": "ticket"
+        },
+        {
+          "type": "translation",
+          "prompt": "Bir bavul satın almak istiyorum.",
+          "answer": "I want to buy a suitcase."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu kitap yirmi lira.",
+          "answer": "This book costs twenty lira."
+        },
+        {
+          "type": "translation",
+          "prompt": "İzmir'e bir bilet, lütfen.",
+          "answer": "A ticket to Izmir, please."
+        },
+        {
+          "type": "translation",
+          "prompt": "Tren saat sekizde geliyor.",
+          "answer": "The train arrives at eight o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Otobüsle gidiyorum.",
+          "answer": "I'm taking the bus.",
+          "accepted_answers": [
+            "I take the bus."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Otelde kalıyoruz.",
+          "answer": "We're staying at the hotel.",
+          "accepted_answers": [
+            "We are staying at the hotel."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu mont çok pahalı.",
+          "answer": "This coat is too expensive."
+        },
+        {
+          "type": "translation",
+          "prompt": "Dükkân saat dokuzda açılıyor.",
+          "answer": "The shop opens at nine o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Elli liram var.",
+          "answer": "I have fifty lira."
+        },
+        {
+          "type": "translation",
+          "prompt": "How much is the ticket?",
+          "answer": "Bilet kaç lira?"
+        },
+        {
+          "type": "translation",
+          "prompt": "The suitcase is cheap.",
+          "answer": "Bavul ucuz."
+        },
+        {
+          "type": "translation",
+          "prompt": "I have no money.",
+          "answer": "Param yok."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'twenty':",
+          "options": [
+            "yirmi",
+            "otuz",
+            "kırk",
+            "elli"
+          ],
+          "answer": "yirmi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'forty':",
+          "options": [
+            "kırk",
+            "otuz",
+            "yirmi",
+            "altmış"
+          ],
+          "answer": "kırk"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sixty':",
+          "options": [
+            "altmış",
+            "elli",
+            "kırk",
+            "yüz"
+          ],
+          "answer": "altmış"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hundred':",
+          "options": [
+            "yüz",
+            "altmış",
+            "elli",
+            "yirmi"
+          ],
+          "answer": "yüz"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'expensive':",
+          "options": [
+            "pahalı",
+            "yeni",
+            "eski",
+            "kolay"
+          ],
+          "answer": "pahalı"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'shop':",
+          "options": [
+            "dükkân",
+            "otel",
+            "pazar",
+            "lokanta"
+          ],
+          "answer": "dükkân"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'suitcase':",
+          "options": [
+            "bavul",
+            "bilet",
+            "otobüs",
+            "tren"
+          ],
+          "answer": "bavul"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hotel':",
+          "options": [
+            "otel",
+            "dükkân",
+            "okul",
+            "ev"
+          ],
+          "answer": "otel"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bu gömlek ___ lira?",
+          "answer": "kaç"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "On, yirmi, ___, kırk.",
+          "answer": "otuz"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Yirmi artı yirmi: ___.",
+          "answer": "kırk"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Elli ve elli: ___.",
+          "answer": "yüz"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Otobüs___ gidiyorum.",
+          "answer": "le"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bir bavul satın ___ istiyorum.",
+          "answer": "almak"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Param ___.",
+          "answer": "yok"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bu mont çok ___.",
+          "answer": "pahalı"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Yesterday and Tomorrow",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "yaz",
+          "translation": "summer",
+          "pos": "noun",
+          "example": "Yazın hava sıcak."
+        },
+        {
+          "word": "kış",
+          "translation": "winter",
+          "pos": "noun",
+          "example": "Kışın kar yağıyor."
+        },
+        {
+          "word": "ilkbahar",
+          "translation": "spring",
+          "pos": "noun",
+          "example": "İlkbaharda çiçekler açar."
+        },
+        {
+          "word": "sonbahar",
+          "translation": "autumn",
+          "pos": "noun",
+          "example": "Sonbaharda yağmur yağar.",
+          "accepted_translations": [
+            "fall"
+          ]
+        },
+        {
+          "word": "ocak",
+          "translation": "January",
+          "pos": "noun",
+          "example": "Ocak yılın ilk ayı."
+        },
+        {
+          "word": "mart",
+          "translation": "March",
+          "pos": "noun",
+          "example": "Martta ilkbahar başlar."
+        },
+        {
+          "word": "haziran",
+          "translation": "June",
+          "pos": "noun",
+          "example": "Haziranda yaz başlar."
+        },
+        {
+          "word": "temmuz",
+          "translation": "July",
+          "pos": "noun",
+          "example": "Doğum günüm temmuzda."
+        },
+        {
+          "word": "eylül",
+          "translation": "September",
+          "pos": "noun",
+          "example": "Okul eylülde başlıyor."
+        },
+        {
+          "word": "aralık",
+          "translation": "December",
+          "pos": "noun",
+          "example": "Noel aralıkta."
+        },
+        {
+          "word": "geçen hafta",
+          "translation": "last week",
+          "pos": "phrase",
+          "example": "Geçen hafta çok çalıştım."
+        },
+        {
+          "word": "gelecek hafta",
+          "translation": "next week",
+          "pos": "phrase",
+          "example": "Gelecek hafta seyahat ediyorum."
+        },
+        {
+          "word": "geçen yıl",
+          "translation": "last year",
+          "pos": "phrase",
+          "example": "Geçen yıl Roma'daydık."
+        },
+        {
+          "word": "gelecek yıl",
+          "translation": "next year",
+          "pos": "phrase",
+          "example": "Gelecek yıl araba alacağım."
+        },
+        {
+          "word": "doğum günü",
+          "translation": "birthday",
+          "pos": "noun",
+          "example": "Doğum günüm temmuzda."
+        },
+        {
+          "word": "mevsim",
+          "translation": "season",
+          "pos": "noun",
+          "example": "Yılın dört mevsimi var."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "yaz",
+          "answer": "summer"
+        },
+        {
+          "type": "translation",
+          "prompt": "kış",
+          "answer": "winter"
+        },
+        {
+          "type": "translation",
+          "prompt": "ilkbahar",
+          "answer": "spring"
+        },
+        {
+          "type": "translation",
+          "prompt": "sonbahar",
+          "answer": "autumn",
+          "accepted_answers": [
+            "fall"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "ocak",
+          "answer": "January"
+        },
+        {
+          "type": "translation",
+          "prompt": "mart",
+          "answer": "March"
+        },
+        {
+          "type": "translation",
+          "prompt": "haziran",
+          "answer": "June"
+        },
+        {
+          "type": "translation",
+          "prompt": "temmuz",
+          "answer": "July"
+        },
+        {
+          "type": "translation",
+          "prompt": "eylül",
+          "answer": "September"
+        },
+        {
+          "type": "translation",
+          "prompt": "aralık",
+          "answer": "December"
+        },
+        {
+          "type": "translation",
+          "prompt": "geçen hafta",
+          "answer": "last week"
+        },
+        {
+          "type": "translation",
+          "prompt": "gelecek hafta",
+          "answer": "next week"
+        },
+        {
+          "type": "translation",
+          "prompt": "geçen yıl",
+          "answer": "last year"
+        },
+        {
+          "type": "translation",
+          "prompt": "gelecek yıl",
+          "answer": "next year"
+        },
+        {
+          "type": "translation",
+          "prompt": "doğum günü",
+          "answer": "birthday"
+        },
+        {
+          "type": "translation",
+          "prompt": "mevsim",
+          "answer": "season"
+        },
+        {
+          "type": "translation",
+          "prompt": "Dün pizza yedim.",
+          "answer": "Yesterday I ate pizza.",
+          "accepted_answers": [
+            "I ate pizza yesterday."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Dün kitap okudum.",
+          "answer": "Yesterday I read a book."
+        },
+        {
+          "type": "translation",
+          "prompt": "Geçen hafta çok çalıştım.",
+          "answer": "I worked a lot last week."
+        },
+        {
+          "type": "translation",
+          "prompt": "Gelecek hafta seyahat ediyorum.",
+          "answer": "I'm traveling next week.",
+          "accepted_answers": [
+            "I am traveling next week."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Gelecek yıl araba alacağım.",
+          "answer": "Next year I'm buying a car.",
+          "accepted_answers": [
+            "Next year I am buying a car."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Yazın hava sıcak.",
+          "answer": "In summer it's hot."
+        },
+        {
+          "type": "translation",
+          "prompt": "Kışın kar yağıyor.",
+          "answer": "It snows in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Doğum günüm temmuzda.",
+          "answer": "My birthday is in July."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ocak yılın ilk ayı.",
+          "answer": "January is the first month of the year."
+        },
+        {
+          "type": "translation",
+          "prompt": "Noel aralıkta.",
+          "answer": "Christmas is in December."
+        },
+        {
+          "type": "translation",
+          "prompt": "Geçen yıl Roma'daydık.",
+          "answer": "Last year we were in Rome."
+        },
+        {
+          "type": "translation",
+          "prompt": "Dün alışveriş yaptım.",
+          "answer": "I went shopping yesterday."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'summer':",
+          "options": [
+            "yaz",
+            "kış",
+            "ilkbahar",
+            "sonbahar"
+          ],
+          "answer": "yaz"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'winter':",
+          "options": [
+            "kış",
+            "yaz",
+            "ilkbahar",
+            "sonbahar"
+          ],
+          "answer": "kış"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'spring':",
+          "options": [
+            "ilkbahar",
+            "sonbahar",
+            "yaz",
+            "kış"
+          ],
+          "answer": "ilkbahar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'autumn':",
+          "options": [
+            "sonbahar",
+            "ilkbahar",
+            "yaz",
+            "kış"
+          ],
+          "answer": "sonbahar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'July':",
+          "options": [
+            "temmuz",
+            "haziran",
+            "mart",
+            "ocak"
+          ],
+          "answer": "temmuz"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'December':",
+          "options": [
+            "aralık",
+            "eylül",
+            "ocak",
+            "mart"
+          ],
+          "answer": "aralık"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'next week':",
+          "options": [
+            "gelecek hafta",
+            "geçen hafta",
+            "gelecek yıl",
+            "geçen yıl"
+          ],
+          "answer": "gelecek hafta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'last year':",
+          "options": [
+            "geçen yıl",
+            "gelecek yıl",
+            "geçen hafta",
+            "gelecek hafta"
+          ],
+          "answer": "geçen yıl"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dün yağmur yağ___.",
+          "answer": "dı"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ali gel___.",
+          "answer": "di"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ali oku___.",
+          "answer": "du"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ali gül___.",
+          "answer": "dü"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ali çalış___.",
+          "answer": "tı"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ali git___.",
+          "answer": "ti"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Noel aralık___.",
+          "answer": "ta"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Doğum günüm temmuz___.",
+          "answer": "da"
+        }
+      ]
     }
   ]
 }
