@@ -7,7 +7,7 @@ reviews, streaks — fully offline, fully local, no account, no network.
 Plain text everywhere: content is JSON, your progress is a file you can
 `cat`. UX modeled on git — direct subcommands, no menus.
 
-Eight courses ship today: French (five stages, 73 words, 177
+Nine courses ship today: French (five stages, 73 words, 177
 exercises), Spanish (five stages, 73 words, 197 exercises), German
 (five stages, 73 words, 216 exercises — nouns with their articles,
 modal-verb drills, umlauts and the sharp s), Italian (five stages,
@@ -22,12 +22,18 @@ content), Portuguese (five stages, 73 words, 218 exercises —
 Brazilian Portuguese, nouns with their gendered articles, the crase
 à blanked where it lives, want/can + infinitive drills, the tildes
 ã õ, the cedilla ç, the acutes á é í ó ú, the circumflexes ê ô
-alive in real content) and Swedish (five stages, 73 words, 218
+alive in real content), Swedish (five stages, 73 words, 218
 exercises — nouns with their en/ett articles, the gender drill and
 the enclitic definite article blanked where it lives, at the end of
 the noun, want/can + infinitive drills, every letter å ä ö alive in
-real content) — same engine, same rules, same forgiving grading for
-all of them.
+real content) and Hungarian (five stages, 73 words, 218 exercises —
+the third engine extension: the double acute ő ű fold like any
+accent, bare nouns, the a/az article alternation drill, the plural
+suffix blanked with its linking vowel — the vowel harmony made
+visible — want/like/can + infinitive drills, homonym translations on
+hét nap óra, every Hungarian letter á é í ó ö ő ú ü ű alive in real
+content) — same engine, same rules, same forgiving grading for all
+of them.
 
 ## Install & run
 
@@ -36,7 +42,7 @@ cargo install --path .
 termocab start french
 ```
 
-(then try `termocab start swedish`)
+(then try `termocab start hungarian`)
 
 Content is looked up in this order (first hit wins):
 
@@ -123,7 +129,10 @@ letters, so `irmao` counts with `irmão`, `maca` with `maçã`, `voce`
 with `você`, and even the crase forgives: `a` counts with `à` as
 the hint; and Swedish collected the last free wave — å ä ö were in
 the D9 table from the start, so `atta` counts with `åtta`, `gar`
-with `går`, and `forsta` with `förstå` as the hint.
+with `går`, and `forsta` with `förstå` as the hint; and Hungarian
+took the third table extension — the double-acute letters ő ű
+decompose like any accent, so `no` counts with `nő`, `ketto` with
+`kettő`, and `konnyu` with `könnyű` as the hint.
 `accepted_answers` lists alternative correct spellings, and
 `accepted_translations` on a vocabulary entry lists alternative correct
 translations a review will accept — reviewing `salut` with "hello" is
