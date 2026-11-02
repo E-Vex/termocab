@@ -2047,6 +2047,1973 @@
           ]
         }
       ]
+    },
+    {
+      "id": 6,
+      "title": "Food and Drink",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "kenyér",
+          "translation": "bread",
+          "pos": "noun",
+          "example": "A kenyér friss."
+        },
+        {
+          "word": "sajt",
+          "translation": "cheese",
+          "pos": "noun",
+          "example": "Szeretem a sajtot."
+        },
+        {
+          "word": "alma",
+          "translation": "apple",
+          "pos": "noun",
+          "example": "Az alma piros."
+        },
+        {
+          "word": "víz",
+          "translation": "water",
+          "pos": "noun",
+          "example": "A víz tiszta."
+        },
+        {
+          "word": "bor",
+          "translation": "wine",
+          "pos": "noun",
+          "example": "A bor jó."
+        },
+        {
+          "word": "sör",
+          "translation": "beer",
+          "pos": "noun",
+          "example": "A sör hideg."
+        },
+        {
+          "word": "csirke",
+          "translation": "chicken",
+          "pos": "noun",
+          "example": "A csirke finom."
+        },
+        {
+          "word": "hal",
+          "translation": "fish",
+          "pos": "noun",
+          "example": "A hal friss."
+        },
+        {
+          "word": "torta",
+          "translation": "cake",
+          "pos": "noun",
+          "example": "A torta édes."
+        },
+        {
+          "word": "reggeli",
+          "translation": "breakfast",
+          "pos": "noun",
+          "example": "A reggeli nyolckor van."
+        },
+        {
+          "word": "ebéd",
+          "translation": "lunch",
+          "pos": "noun",
+          "example": "Az ebéd délben van."
+        },
+        {
+          "word": "vacsora",
+          "translation": "dinner",
+          "pos": "noun",
+          "example": "A vacsora hétkor van."
+        },
+        {
+          "word": "éhes vagyok",
+          "translation": "I'm hungry",
+          "accepted_translations": [
+            "I am hungry"
+          ],
+          "pos": "phrase",
+          "example": "Éhes vagyok!"
+        },
+        {
+          "word": "szomjas vagyok",
+          "translation": "I'm thirsty",
+          "accepted_translations": [
+            "I am thirsty"
+          ],
+          "pos": "phrase",
+          "example": "Szomjas vagyok."
+        },
+        {
+          "word": "étterem",
+          "translation": "restaurant",
+          "pos": "noun",
+          "example": "Eszünk az étteremben."
+        },
+        {
+          "word": "finom",
+          "translation": "delicious",
+          "pos": "adjective",
+          "example": "A leves finom."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "kenyér",
+          "answer": "bread"
+        },
+        {
+          "type": "translation",
+          "prompt": "sajt",
+          "answer": "cheese"
+        },
+        {
+          "type": "translation",
+          "prompt": "alma",
+          "answer": "apple"
+        },
+        {
+          "type": "translation",
+          "prompt": "víz",
+          "answer": "water"
+        },
+        {
+          "type": "translation",
+          "prompt": "bor",
+          "answer": "wine"
+        },
+        {
+          "type": "translation",
+          "prompt": "sör",
+          "answer": "beer"
+        },
+        {
+          "type": "translation",
+          "prompt": "csirke",
+          "answer": "chicken"
+        },
+        {
+          "type": "translation",
+          "prompt": "hal",
+          "answer": "fish"
+        },
+        {
+          "type": "translation",
+          "prompt": "torta",
+          "answer": "cake"
+        },
+        {
+          "type": "translation",
+          "prompt": "reggeli",
+          "answer": "breakfast"
+        },
+        {
+          "type": "translation",
+          "prompt": "ebéd",
+          "answer": "lunch"
+        },
+        {
+          "type": "translation",
+          "prompt": "vacsora",
+          "answer": "dinner"
+        },
+        {
+          "type": "translation",
+          "prompt": "éhes vagyok",
+          "answer": "I'm hungry",
+          "accepted_answers": [
+            "I am hungry"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "szomjas vagyok",
+          "answer": "I'm thirsty",
+          "accepted_answers": [
+            "I am thirsty"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "étterem",
+          "answer": "restaurant"
+        },
+        {
+          "type": "translation",
+          "prompt": "finom",
+          "answer": "delicious"
+        },
+        {
+          "type": "translation",
+          "prompt": "Kenyeret eszek sajttal.",
+          "answer": "I'm eating bread with cheese.",
+          "accepted_answers": [
+            "I am eating bread with cheese."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vizet iszom.",
+          "answer": "I'm drinking water.",
+          "accepted_answers": [
+            "I drink water."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Halat eszünk az étteremben.",
+          "answer": "We're eating fish at the restaurant.",
+          "accepted_answers": [
+            "We are eating fish at the restaurant."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Kávét kérek.",
+          "answer": "A coffee, please.",
+          "accepted_answers": [
+            "I'd like a coffee."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "A vacsora hétkor van.",
+          "answer": "Dinner is at seven o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Éhes vagyok!",
+          "answer": "I'm hungry!",
+          "accepted_answers": [
+            "I am hungry!"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Szomjas vagyok.",
+          "answer": "I'm thirsty.",
+          "accepted_answers": [
+            "I am thirsty."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "I'm eating an apple.",
+          "answer": "Almát eszem."
+        },
+        {
+          "type": "translation",
+          "prompt": "The cake is sweet.",
+          "answer": "A torta édes."
+        },
+        {
+          "type": "translation",
+          "prompt": "Lunch is at noon.",
+          "answer": "Az ebéd délben van."
+        },
+        {
+          "type": "translation",
+          "prompt": "I like cheese.",
+          "answer": "Szeretem a sajtot."
+        },
+        {
+          "type": "translation",
+          "prompt": "He drinks beer.",
+          "answer": "Sört iszik."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bread':",
+          "options": [
+            "kenyér",
+            "sajt",
+            "hal",
+            "csirke"
+          ],
+          "answer": "kenyér"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'water':",
+          "options": [
+            "víz",
+            "bor",
+            "sör",
+            "alma"
+          ],
+          "answer": "víz"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'wine':",
+          "options": [
+            "bor",
+            "sör",
+            "víz",
+            "torta"
+          ],
+          "answer": "bor"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fish':",
+          "options": [
+            "hal",
+            "csirke",
+            "kenyér",
+            "sajt"
+          ],
+          "answer": "hal"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cake':",
+          "options": [
+            "torta",
+            "alma",
+            "kenyér",
+            "víz"
+          ],
+          "answer": "torta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'breakfast':",
+          "options": [
+            "reggeli",
+            "ebéd",
+            "vacsora",
+            "étterem"
+          ],
+          "answer": "reggeli"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'I'm hungry':",
+          "options": [
+            "éhes vagyok",
+            "szomjas vagyok",
+            "nagy vagyok",
+            "jó vagyok"
+          ],
+          "answer": "éhes vagyok"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'dinner':",
+          "options": [
+            "vacsora",
+            "ebéd",
+            "reggeli",
+            "étterem"
+          ],
+          "answer": "vacsora"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A reggeli nyolckor ___.",
+          "answer": "van"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az ebéd délben ___.",
+          "answer": "van"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ kávé? — Nem.",
+          "answer": "nincs"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Éhes ___.",
+          "answer": "vagyok"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A torta ___.",
+          "answer": "édes"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az ___ piros.",
+          "answer": "alma"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A csirke ___.",
+          "answer": "finom"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nincs ___ a konyhában. Éhes vagyok!",
+          "answer": "kenyér"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Home and Places",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "ház",
+          "translation": "house",
+          "pos": "noun",
+          "example": "A ház nagy."
+        },
+        {
+          "word": "lakás",
+          "translation": "apartment",
+          "pos": "noun",
+          "example": "Egy lakásban élünk."
+        },
+        {
+          "word": "konyha",
+          "translation": "kitchen",
+          "pos": "noun",
+          "example": "A konyha kicsi."
+        },
+        {
+          "word": "hálószoba",
+          "translation": "bedroom",
+          "pos": "noun",
+          "example": "A hálószobában alszom."
+        },
+        {
+          "word": "nappali",
+          "translation": "living room",
+          "pos": "noun",
+          "example": "A nappali világos."
+        },
+        {
+          "word": "fürdőszoba",
+          "translation": "bathroom",
+          "pos": "noun",
+          "example": "A fürdőszoba jobb oldalon."
+        },
+        {
+          "word": "kert",
+          "translation": "garden",
+          "pos": "noun",
+          "example": "A virágok a kertben vannak."
+        },
+        {
+          "word": "utca",
+          "translation": "street",
+          "pos": "noun",
+          "example": "Ebben az utcában lakom."
+        },
+        {
+          "word": "város",
+          "translation": "city",
+          "pos": "noun",
+          "example": "Budapest egy nagy város."
+        },
+        {
+          "word": "park",
+          "translation": "park",
+          "pos": "noun",
+          "example": "A gyerekek a parkban játszanak."
+        },
+        {
+          "word": "piac",
+          "translation": "market",
+          "pos": "noun",
+          "example": "Gyümölcsöt veszek a piacon."
+        },
+        {
+          "word": "iskola",
+          "translation": "school",
+          "pos": "noun",
+          "example": "Az iskola a ház közelében van."
+        },
+        {
+          "word": "kórház",
+          "translation": "hospital",
+          "pos": "noun",
+          "example": "A kórház a központban van."
+        },
+        {
+          "word": "asztal",
+          "translation": "table",
+          "pos": "noun",
+          "example": "A könyv az asztalon van."
+        },
+        {
+          "word": "ágy",
+          "translation": "bed",
+          "pos": "noun",
+          "example": "A macska az ágyban alszik."
+        },
+        {
+          "word": "közel",
+          "translation": "near",
+          "accepted_translations": [
+            "close"
+          ],
+          "pos": "adverb",
+          "example": "A park közel van."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ház",
+          "answer": "house"
+        },
+        {
+          "type": "translation",
+          "prompt": "lakás",
+          "answer": "apartment"
+        },
+        {
+          "type": "translation",
+          "prompt": "konyha",
+          "answer": "kitchen"
+        },
+        {
+          "type": "translation",
+          "prompt": "hálószoba",
+          "answer": "bedroom"
+        },
+        {
+          "type": "translation",
+          "prompt": "nappali",
+          "answer": "living room"
+        },
+        {
+          "type": "translation",
+          "prompt": "fürdőszoba",
+          "answer": "bathroom"
+        },
+        {
+          "type": "translation",
+          "prompt": "kert",
+          "answer": "garden"
+        },
+        {
+          "type": "translation",
+          "prompt": "utca",
+          "answer": "street"
+        },
+        {
+          "type": "translation",
+          "prompt": "város",
+          "answer": "city"
+        },
+        {
+          "type": "translation",
+          "prompt": "park",
+          "answer": "park"
+        },
+        {
+          "type": "translation",
+          "prompt": "piac",
+          "answer": "market"
+        },
+        {
+          "type": "translation",
+          "prompt": "iskola",
+          "answer": "school"
+        },
+        {
+          "type": "translation",
+          "prompt": "kórház",
+          "answer": "hospital"
+        },
+        {
+          "type": "translation",
+          "prompt": "asztal",
+          "answer": "table"
+        },
+        {
+          "type": "translation",
+          "prompt": "ágy",
+          "answer": "bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "közel",
+          "answer": "near",
+          "accepted_answers": [
+            "close"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Egy lakásban élünk.",
+          "answer": "We live in an apartment."
+        },
+        {
+          "type": "translation",
+          "prompt": "A konyha kicsi.",
+          "answer": "The kitchen is small."
+        },
+        {
+          "type": "translation",
+          "prompt": "A macska az ágyban alszik.",
+          "answer": "The cat sleeps in the bed."
+        },
+        {
+          "type": "translation",
+          "prompt": "A gyerekek a parkban játszanak.",
+          "answer": "The children are playing in the park.",
+          "accepted_answers": [
+            "The kids are playing in the park."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Gyümölcsöt veszek a piacon.",
+          "answer": "I'm buying fruit at the market.",
+          "accepted_answers": [
+            "I buy fruit at the market."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "A virágok a kertben vannak.",
+          "answer": "The flowers are in the garden."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ebben az utcában lakom.",
+          "answer": "I live on this street."
+        },
+        {
+          "type": "translation",
+          "prompt": "Budapest egy nagy város.",
+          "answer": "Budapest is a big city."
+        },
+        {
+          "type": "translation",
+          "prompt": "The book is on the table.",
+          "answer": "A könyv az asztalon van."
+        },
+        {
+          "type": "translation",
+          "prompt": "The bathroom is small.",
+          "answer": "A fürdőszoba kicsi."
+        },
+        {
+          "type": "translation",
+          "prompt": "The school is near the house.",
+          "answer": "Az iskola a ház közelében van."
+        },
+        {
+          "type": "translation",
+          "prompt": "I'm at home.",
+          "answer": "Otthon vagyok.",
+          "accepted_answers": [
+            "I am at home."
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'house':",
+          "options": [
+            "ház",
+            "lakás",
+            "konyha",
+            "kert"
+          ],
+          "answer": "ház"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'kitchen':",
+          "options": [
+            "konyha",
+            "hálószoba",
+            "nappali",
+            "fürdőszoba"
+          ],
+          "answer": "konyha"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bedroom':",
+          "options": [
+            "hálószoba",
+            "konyha",
+            "nappali",
+            "kert"
+          ],
+          "answer": "hálószoba"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'garden':",
+          "options": [
+            "kert",
+            "park",
+            "ház",
+            "utca"
+          ],
+          "answer": "kert"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'city':",
+          "options": [
+            "város",
+            "utca",
+            "ház",
+            "iskola"
+          ],
+          "answer": "város"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'park':",
+          "options": [
+            "park",
+            "kert",
+            "piac",
+            "város"
+          ],
+          "answer": "park"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'school':",
+          "options": [
+            "iskola",
+            "kórház",
+            "piac",
+            "ház"
+          ],
+          "answer": "iskola"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bed':",
+          "options": [
+            "ágy",
+            "asztal",
+            "hálószoba",
+            "nappali"
+          ],
+          "answer": "ágy"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A konyhá___ vagyok.",
+          "answer": "ban"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A kert___ vannak a virágok.",
+          "answer": "ben"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Egy lakás___ élünk.",
+          "answer": "ban"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az étterem___ eszünk.",
+          "answer": "ben"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ebben az utc___ lakom.",
+          "answer": "ban"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az ágy___ alszik a macska.",
+          "answer": "ban"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A park ___ van.",
+          "answer": "közel"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A könyv az asztal___ van.",
+          "answer": "on"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Daily Routine and Weather",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "ébredni",
+          "translation": "to wake up",
+          "pos": "verb",
+          "example": "Hét órakor ébredek."
+        },
+        {
+          "word": "kelni",
+          "translation": "to get up",
+          "pos": "verb",
+          "example": "Korán kelek."
+        },
+        {
+          "word": "mosakodni",
+          "translation": "to wash",
+          "pos": "verb",
+          "example": "Reggel mosakodom, fogat mosok."
+        },
+        {
+          "word": "lefeküdni",
+          "translation": "to go to bed",
+          "pos": "verb",
+          "example": "Tíz órakor fekszem le."
+        },
+        {
+          "word": "munka",
+          "translation": "work",
+          "pos": "noun",
+          "example": "Nyolckor megyek a munkába."
+        },
+        {
+          "word": "mindig",
+          "translation": "always",
+          "pos": "adverb",
+          "example": "Mindig késik."
+        },
+        {
+          "word": "gyakran",
+          "translation": "often",
+          "pos": "adverb",
+          "example": "Gyakran olvasok este."
+        },
+        {
+          "word": "néha",
+          "translation": "sometimes",
+          "pos": "adverb",
+          "example": "Néha étteremben eszem."
+        },
+        {
+          "word": "szél",
+          "translation": "wind",
+          "pos": "noun",
+          "example": "Fúj a szél."
+        },
+        {
+          "word": "eső",
+          "translation": "rain",
+          "pos": "noun",
+          "example": "Szeretem az esőt."
+        },
+        {
+          "word": "hó",
+          "translation": "snow",
+          "pos": "noun",
+          "example": "A hó fehér."
+        },
+        {
+          "word": "felhő",
+          "translation": "cloud",
+          "pos": "noun",
+          "example": "Felhők vannak."
+        },
+        {
+          "word": "meleg van",
+          "translation": "it's hot",
+          "accepted_translations": [
+            "it is hot"
+          ],
+          "pos": "phrase",
+          "example": "Meleg van ma."
+        },
+        {
+          "word": "esik",
+          "translation": "it's raining",
+          "accepted_translations": [
+            "it is raining"
+          ],
+          "pos": "phrase",
+          "example": "Esik az eső."
+        },
+        {
+          "word": "havazik",
+          "translation": "it's snowing",
+          "accepted_translations": [
+            "it is snowing"
+          ],
+          "pos": "phrase",
+          "example": "Havazik télen."
+        },
+        {
+          "word": "időjárás",
+          "translation": "weather",
+          "pos": "noun",
+          "example": "Ma szép az időjárás."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ébredni",
+          "answer": "to wake up"
+        },
+        {
+          "type": "translation",
+          "prompt": "kelni",
+          "answer": "to get up"
+        },
+        {
+          "type": "translation",
+          "prompt": "mosakodni",
+          "answer": "to wash"
+        },
+        {
+          "type": "translation",
+          "prompt": "lefeküdni",
+          "answer": "to go to bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "munka",
+          "answer": "work"
+        },
+        {
+          "type": "translation",
+          "prompt": "mindig",
+          "answer": "always"
+        },
+        {
+          "type": "translation",
+          "prompt": "gyakran",
+          "answer": "often"
+        },
+        {
+          "type": "translation",
+          "prompt": "néha",
+          "answer": "sometimes"
+        },
+        {
+          "type": "translation",
+          "prompt": "szél",
+          "answer": "wind"
+        },
+        {
+          "type": "translation",
+          "prompt": "eső",
+          "answer": "rain"
+        },
+        {
+          "type": "translation",
+          "prompt": "hó",
+          "answer": "snow"
+        },
+        {
+          "type": "translation",
+          "prompt": "felhő",
+          "answer": "cloud"
+        },
+        {
+          "type": "translation",
+          "prompt": "meleg van",
+          "answer": "it's hot",
+          "accepted_answers": [
+            "it is hot"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "esik",
+          "answer": "it's raining",
+          "accepted_answers": [
+            "it is raining"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "havazik",
+          "answer": "it's snowing",
+          "accepted_answers": [
+            "it is snowing"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "időjárás",
+          "answer": "weather"
+        },
+        {
+          "type": "translation",
+          "prompt": "Hét órakor kelek.",
+          "answer": "I get up at seven o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Korán kelek.",
+          "answer": "I get up early."
+        },
+        {
+          "type": "translation",
+          "prompt": "Tíz órakor fekszem le.",
+          "answer": "I go to bed at ten o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Nyolckor megyek a munkába.",
+          "answer": "I go to work at eight o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Meleg van ma.",
+          "answer": "It's hot today.",
+          "accepted_answers": [
+            "It is hot today."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Esik az eső.",
+          "answer": "It's raining.",
+          "accepted_answers": [
+            "It is raining."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Havazik télen.",
+          "answer": "It snows in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Fúj a szél.",
+          "answer": "The wind is blowing."
+        },
+        {
+          "type": "translation",
+          "prompt": "Néha étteremben eszem.",
+          "answer": "Sometimes I eat at a restaurant."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's raining.",
+          "answer": "Esik az eső."
+        },
+        {
+          "type": "translation",
+          "prompt": "Gyakran iszom kávét.",
+          "answer": "I often drink coffee."
+        },
+        {
+          "type": "translation",
+          "prompt": "A hó fehér.",
+          "answer": "The snow is white."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to wake up':",
+          "options": [
+            "ébredni",
+            "kelni",
+            "mosakodni",
+            "lefeküdni"
+          ],
+          "answer": "ébredni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to get up':",
+          "options": [
+            "kelni",
+            "ébredni",
+            "lefeküdni",
+            "mosakodni"
+          ],
+          "answer": "kelni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'always':",
+          "options": [
+            "mindig",
+            "gyakran",
+            "néha",
+            "ma"
+          ],
+          "answer": "mindig"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'often':",
+          "options": [
+            "gyakran",
+            "mindig",
+            "néha",
+            "ma"
+          ],
+          "answer": "gyakran"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'wind':",
+          "options": [
+            "szél",
+            "eső",
+            "hó",
+            "felhő"
+          ],
+          "answer": "szél"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'rain':",
+          "options": [
+            "eső",
+            "hó",
+            "szél",
+            "felhő"
+          ],
+          "answer": "eső"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'it's raining':",
+          "options": [
+            "esik",
+            "havazik",
+            "meleg van",
+            "eső"
+          ],
+          "answer": "esik"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'work':",
+          "options": [
+            "munka",
+            "ház",
+            "város",
+            "park"
+          ],
+          "answer": "munka"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hét ór___ kelek.",
+          "answer": "kor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tíz ór___ fekszem le.",
+          "answer": "kor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nyolc ór___ megyek a munkába.",
+          "answer": "kor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Reggel fogat ___.",
+          "answer": "mosok"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Meleg ___ ma.",
+          "answer": "van"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Esik az ___.",
+          "answer": "eső"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Fúj a ___.",
+          "answer": "szél"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Néha étterem___ eszem.",
+          "answer": "ben"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Shopping and Travel",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "harminc",
+          "translation": "thirty",
+          "pos": "number",
+          "example": "A könyv harminc forint."
+        },
+        {
+          "word": "negyven",
+          "translation": "forty",
+          "pos": "number",
+          "example": "A bőrönd negyven forint."
+        },
+        {
+          "word": "ötven",
+          "translation": "fifty",
+          "pos": "number",
+          "example": "Van ötven forintom."
+        },
+        {
+          "word": "hatvan",
+          "translation": "sixty",
+          "pos": "number",
+          "example": "A vonat hatvan forint."
+        },
+        {
+          "word": "száz",
+          "translation": "hundred",
+          "pos": "number",
+          "example": "Száz forint sok."
+        },
+        {
+          "word": "pénz",
+          "translation": "money",
+          "pos": "noun",
+          "example": "Nincs pénzem."
+        },
+        {
+          "word": "drága",
+          "translation": "expensive",
+          "accepted_translations": [
+            "dear"
+          ],
+          "pos": "adjective",
+          "example": "Ez a kabát drága."
+        },
+        {
+          "word": "olcsó",
+          "translation": "cheap",
+          "pos": "adjective",
+          "example": "Ez a könyv olcsó."
+        },
+        {
+          "word": "venni",
+          "translation": "to buy",
+          "pos": "verb",
+          "example": "Venni akarok egy bőröndöt."
+        },
+        {
+          "word": "bolt",
+          "translation": "shop",
+          "accepted_translations": [
+            "store"
+          ],
+          "pos": "noun",
+          "example": "A bolt zárva."
+        },
+        {
+          "word": "vonat",
+          "translation": "train",
+          "pos": "noun",
+          "example": "A vonat nyolckor érkezik."
+        },
+        {
+          "word": "busz",
+          "translation": "bus",
+          "pos": "noun",
+          "example": "Busszal megyek."
+        },
+        {
+          "word": "szálloda",
+          "translation": "hotel",
+          "pos": "noun",
+          "example": "A szállodában alszunk."
+        },
+        {
+          "word": "bőrönd",
+          "translation": "suitcase",
+          "pos": "noun",
+          "example": "A bőröndöm nehéz."
+        },
+        {
+          "word": "jegy",
+          "translation": "ticket",
+          "pos": "noun",
+          "example": "Egy jegyet Párizsba, kérem."
+        },
+        {
+          "word": "mennyibe kerül",
+          "translation": "how much does it cost",
+          "pos": "phrase",
+          "example": "Mennyibe kerül a jegy?"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "harminc",
+          "answer": "thirty"
+        },
+        {
+          "type": "translation",
+          "prompt": "negyven",
+          "answer": "forty"
+        },
+        {
+          "type": "translation",
+          "prompt": "ötven",
+          "answer": "fifty"
+        },
+        {
+          "type": "translation",
+          "prompt": "hatvan",
+          "answer": "sixty"
+        },
+        {
+          "type": "translation",
+          "prompt": "száz",
+          "answer": "hundred"
+        },
+        {
+          "type": "translation",
+          "prompt": "pénz",
+          "answer": "money"
+        },
+        {
+          "type": "translation",
+          "prompt": "drága",
+          "answer": "expensive",
+          "accepted_answers": [
+            "dear"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "olcsó",
+          "answer": "cheap"
+        },
+        {
+          "type": "translation",
+          "prompt": "venni",
+          "answer": "to buy"
+        },
+        {
+          "type": "translation",
+          "prompt": "bolt",
+          "answer": "shop",
+          "accepted_answers": [
+            "store"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "vonat",
+          "answer": "train"
+        },
+        {
+          "type": "translation",
+          "prompt": "busz",
+          "answer": "bus"
+        },
+        {
+          "type": "translation",
+          "prompt": "szálloda",
+          "answer": "hotel"
+        },
+        {
+          "type": "translation",
+          "prompt": "bőrönd",
+          "answer": "suitcase"
+        },
+        {
+          "type": "translation",
+          "prompt": "jegy",
+          "answer": "ticket"
+        },
+        {
+          "type": "translation",
+          "prompt": "mennyibe kerül",
+          "answer": "how much does it cost"
+        },
+        {
+          "type": "translation",
+          "prompt": "Venni akarok egy bőröndöt.",
+          "answer": "I want to buy a suitcase."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ez a könyv harminc forint.",
+          "answer": "This book costs thirty forint."
+        },
+        {
+          "type": "translation",
+          "prompt": "Egy jegyet Párizsba, kérem.",
+          "answer": "A ticket to Paris, please."
+        },
+        {
+          "type": "translation",
+          "prompt": "A vonat nyolckor érkezik.",
+          "answer": "The train arrives at eight o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Busszal megyek.",
+          "answer": "I'm taking the bus.",
+          "accepted_answers": [
+            "I take the bus."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "A szállodában alszunk.",
+          "answer": "We're sleeping at the hotel.",
+          "accepted_answers": [
+            "We are sleeping at the hotel."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ez a kabát túl drága.",
+          "answer": "This coat is too expensive."
+        },
+        {
+          "type": "translation",
+          "prompt": "A bolt kilenckor nyit.",
+          "answer": "The shop opens at nine o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Van ötven forintom.",
+          "answer": "I have fifty forint."
+        },
+        {
+          "type": "translation",
+          "prompt": "How much is the ticket?",
+          "answer": "Mennyibe kerül a jegy?"
+        },
+        {
+          "type": "translation",
+          "prompt": "The suitcase is cheap.",
+          "answer": "A bőrönd olcsó."
+        },
+        {
+          "type": "translation",
+          "prompt": "I have no money.",
+          "answer": "Nincs pénzem."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'thirty':",
+          "options": [
+            "harminc",
+            "negyven",
+            "ötven",
+            "hatvan"
+          ],
+          "answer": "harminc"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'forty':",
+          "options": [
+            "negyven",
+            "harminc",
+            "ötven",
+            "száz"
+          ],
+          "answer": "negyven"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sixty':",
+          "options": [
+            "hatvan",
+            "ötven",
+            "negyven",
+            "száz"
+          ],
+          "answer": "hatvan"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hundred':",
+          "options": [
+            "száz",
+            "hatvan",
+            "ötven",
+            "harminc"
+          ],
+          "answer": "száz"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'expensive':",
+          "options": [
+            "drága",
+            "új",
+            "régi",
+            "könnyű"
+          ],
+          "answer": "drága"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'shop':",
+          "options": [
+            "bolt",
+            "szálloda",
+            "piac",
+            "étterem"
+          ],
+          "answer": "bolt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'suitcase':",
+          "options": [
+            "bőrönd",
+            "jegy",
+            "busz",
+            "vonat"
+          ],
+          "answer": "bőrönd"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hotel':",
+          "options": [
+            "szálloda",
+            "bolt",
+            "iskola",
+            "ház"
+          ],
+          "answer": "szálloda"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ kerül a jegy?",
+          "answer": "mennyibe"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mennyibe ___ a bőrönd?",
+          "answer": "kerül"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tíz, húsz, ___, negyven.",
+          "answer": "harminc"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Húsz plusz húsz: ___.",
+          "answer": "negyven"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ötven és ötven: ___.",
+          "answer": "száz"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Venni ___ egy bőröndöt.",
+          "answer": "akarok"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bussz___ megyek.",
+          "answer": "al"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nincs ___.",
+          "answer": "pénz"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Yesterday and Tomorrow",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "nyár",
+          "translation": "summer",
+          "pos": "noun",
+          "example": "Nyáron meleg van."
+        },
+        {
+          "word": "tél",
+          "translation": "winter",
+          "pos": "noun",
+          "example": "Télen havazik."
+        },
+        {
+          "word": "tavasz",
+          "translation": "spring",
+          "pos": "noun",
+          "example": "Tavasszal nyílnak a virágok."
+        },
+        {
+          "word": "ősz",
+          "translation": "autumn",
+          "accepted_translations": [
+            "fall"
+          ],
+          "pos": "noun",
+          "example": "Ősszel gyakran esik."
+        },
+        {
+          "word": "január",
+          "translation": "January",
+          "pos": "noun",
+          "example": "Január az év első hónapja."
+        },
+        {
+          "word": "március",
+          "translation": "March",
+          "pos": "noun",
+          "example": "Márciusban kezdődik a tavasz."
+        },
+        {
+          "word": "június",
+          "translation": "June",
+          "pos": "noun",
+          "example": "Júniusban kezdődik a nyár."
+        },
+        {
+          "word": "július",
+          "translation": "July",
+          "pos": "noun",
+          "example": "A születésnapom júliusban van."
+        },
+        {
+          "word": "szeptember",
+          "translation": "September",
+          "pos": "noun",
+          "example": "Szeptemberben kezdődik az iskola."
+        },
+        {
+          "word": "december",
+          "translation": "December",
+          "pos": "noun",
+          "example": "Karácsony decemberben van."
+        },
+        {
+          "word": "múlt héten",
+          "translation": "last week",
+          "pos": "phrase",
+          "example": "Múlt héten sokat dolgoztam."
+        },
+        {
+          "word": "jövő héten",
+          "translation": "next week",
+          "pos": "phrase",
+          "example": "Jövő héten utazom."
+        },
+        {
+          "word": "tavaly",
+          "translation": "last year",
+          "pos": "adverb",
+          "example": "Tavaly Rómában voltunk."
+        },
+        {
+          "word": "jövőre",
+          "translation": "next year",
+          "pos": "adverb",
+          "example": "Jövőre veszek egy autót."
+        },
+        {
+          "word": "születésnap",
+          "translation": "birthday",
+          "pos": "noun",
+          "example": "A születésnapom júliusban van."
+        },
+        {
+          "word": "hónap",
+          "translation": "month",
+          "pos": "noun",
+          "example": "Tizenkét hónap van egy évben."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "nyár",
+          "answer": "summer"
+        },
+        {
+          "type": "translation",
+          "prompt": "tél",
+          "answer": "winter"
+        },
+        {
+          "type": "translation",
+          "prompt": "tavasz",
+          "answer": "spring"
+        },
+        {
+          "type": "translation",
+          "prompt": "ősz",
+          "answer": "autumn",
+          "accepted_answers": [
+            "fall"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "január",
+          "answer": "January"
+        },
+        {
+          "type": "translation",
+          "prompt": "március",
+          "answer": "March"
+        },
+        {
+          "type": "translation",
+          "prompt": "június",
+          "answer": "June"
+        },
+        {
+          "type": "translation",
+          "prompt": "július",
+          "answer": "July"
+        },
+        {
+          "type": "translation",
+          "prompt": "szeptember",
+          "answer": "September"
+        },
+        {
+          "type": "translation",
+          "prompt": "december",
+          "answer": "December"
+        },
+        {
+          "type": "translation",
+          "prompt": "múlt héten",
+          "answer": "last week"
+        },
+        {
+          "type": "translation",
+          "prompt": "jövő héten",
+          "answer": "next week"
+        },
+        {
+          "type": "translation",
+          "prompt": "tavaly",
+          "answer": "last year"
+        },
+        {
+          "type": "translation",
+          "prompt": "jövőre",
+          "answer": "next year"
+        },
+        {
+          "type": "translation",
+          "prompt": "születésnap",
+          "answer": "birthday"
+        },
+        {
+          "type": "translation",
+          "prompt": "hónap",
+          "answer": "month"
+        },
+        {
+          "type": "translation",
+          "prompt": "Tegnap tanultam.",
+          "answer": "Yesterday I studied."
+        },
+        {
+          "type": "translation",
+          "prompt": "Tegnap pizzát ettem.",
+          "answer": "Yesterday I ate pizza.",
+          "accepted_answers": [
+            "I ate pizza yesterday."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Tegnap olvastam egy könyvet.",
+          "answer": "Yesterday I read a book."
+        },
+        {
+          "type": "translation",
+          "prompt": "Múlt héten sokat dolgoztam.",
+          "answer": "I worked a lot last week."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jövő héten utazom.",
+          "answer": "I'm traveling next week.",
+          "accepted_answers": [
+            "I am traveling next week."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jövőre veszek egy autót.",
+          "answer": "Next year I'm buying a car.",
+          "accepted_answers": [
+            "Next year I am buying a car."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Nyáron meleg van.",
+          "answer": "In summer it's hot."
+        },
+        {
+          "type": "translation",
+          "prompt": "Télen havazik.",
+          "answer": "It snows in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "A születésnapom júliusban van.",
+          "answer": "My birthday is in July."
+        },
+        {
+          "type": "translation",
+          "prompt": "Január az év első hónapja.",
+          "answer": "January is the first month of the year."
+        },
+        {
+          "type": "translation",
+          "prompt": "Karácsony decemberben van.",
+          "answer": "Christmas is in December."
+        },
+        {
+          "type": "translation",
+          "prompt": "Tavaly Rómában voltunk.",
+          "answer": "Last year we were in Rome."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'summer':",
+          "options": [
+            "nyár",
+            "tél",
+            "tavasz",
+            "ősz"
+          ],
+          "answer": "nyár"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'winter':",
+          "options": [
+            "tél",
+            "nyár",
+            "tavasz",
+            "ősz"
+          ],
+          "answer": "tél"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'spring':",
+          "options": [
+            "tavasz",
+            "ősz",
+            "nyár",
+            "tél"
+          ],
+          "answer": "tavasz"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'autumn':",
+          "options": [
+            "ősz",
+            "tavasz",
+            "nyár",
+            "tél"
+          ],
+          "answer": "ősz"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'July':",
+          "options": [
+            "július",
+            "június",
+            "március",
+            "január"
+          ],
+          "answer": "július"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'December':",
+          "options": [
+            "december",
+            "szeptember",
+            "január",
+            "március"
+          ],
+          "answer": "december"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'next week':",
+          "options": [
+            "jövő héten",
+            "múlt héten",
+            "jövőre",
+            "tavaly"
+          ],
+          "answer": "jövő héten"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'last year':",
+          "options": [
+            "tavaly",
+            "jövőre",
+            "múlt héten",
+            "jövő héten"
+          ],
+          "answer": "tavaly"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tegnap tanul___.",
+          "answer": "tam"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tegnap dolgoz___.",
+          "answer": "tam"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tegnap főz___.",
+          "answer": "tem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tegnap könyvet olvas___.",
+          "answer": "tam"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tegnap fociz___.",
+          "answer": "tam"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tegnap ír___.",
+          "answer": "tam"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tavaly Rómában vol___.",
+          "answer": "tunk"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Karácsony december___ van.",
+          "answer": "ben"
+        }
+      ]
     }
   ]
 }
