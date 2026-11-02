@@ -54,19 +54,38 @@ Romanian, the Brazilian tem in Portuguese, ska in Swedish, the
 ## Install & run
 
 ```
-cargo install --path .
-termocab start french
+cargo install --path .     # or: cargo install --git https://github.com/E-Vex/termocab
+termocab start french      # the ten shipped courses are built into the binary
+termocab list-langs        # every language available on this machine
 ```
 
-(then try `termocab start turkish`)
+`cargo install` puts the binary in `~/.cargo/bin` — if you then get
+`termocab: command not found`, that directory is not on your `$PATH`
+(rustup normally adds it; `ls ~/.cargo/bin` shows what is there).
 
-Content is looked up in this order (first hit wins):
+To try it without installing:
+
+```
+cargo run -- start french                              # from a checkout
+cargo build --release && ./target/release/termocab start french
+                                                        # works from any directory
+```
+
+The ten shipped courses are compiled into the binary, so a fresh
+install works with zero setup, from any directory. Content is looked
+up in this order (first hit wins):
 
 1. `$TERMOCAB_CONTENT_DIR` — a directory containing `<lang>/stages.json`
 2. `$XDG_DATA_HOME/termocab/languages`, or `~/.local/share/termocab/languages`
-   (this is where `add-lang` installs)
+   (this is where `add-lang` installs — installing a language that also
+   ships built-in, e.g. `add-lang french my-french.json`, replaces the
+   built-in copy for that name)
 3. `./languages` — development convenience, so `cargo run` works from a
    checkout
+4. the courses built into the binary
+
+`termocab list-langs` shows every available language, its size and where
+each one comes from.
 
 Progress and review state live under `$XDG_CONFIG_HOME/termocab`
 (fallback `~/.config/termocab`), one plain-text file per language.
@@ -79,11 +98,13 @@ termocab start [--no-shuffle|--seed <n>] <lang> [stage]
                               exercises shuffle by default
 termocab review <lang>            review due vocabulary with spaced repetition
 termocab list-words <lang>        list all vocabulary in a language's stages
+termocab list-langs               list available languages and where each comes from
 termocab progress <lang>          show completed stages, streak and due reviews
 termocab streak <lang>            print the current streak in days
 termocab stats <lang>             words, Leitner boxes and 14-day charts as sparklines
 termocab add-lang [--force] <lang> <file>  install a stages.json file as a language
 termocab check <file>             validate a stages.json file without installing it
+termocab --version                print the version
 termocab help                     show this help
 ```
 
