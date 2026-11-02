@@ -1967,6 +1967,1977 @@
           "answer": "The coffee is good."
         }
       ]
+    },
+    {
+      "id": 6,
+      "title": "Food and Drink",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "pâine",
+          "translation": "bread",
+          "pos": "noun",
+          "example": "Pâinea este proaspătă."
+        },
+        {
+          "word": "brânză",
+          "translation": "cheese",
+          "pos": "noun",
+          "example": "Brânza este bună."
+        },
+        {
+          "word": "măr",
+          "translation": "apple",
+          "pos": "noun",
+          "example": "Mănânc un măr."
+        },
+        {
+          "word": "apă",
+          "translation": "water",
+          "pos": "noun",
+          "example": "Beau apă."
+        },
+        {
+          "word": "vin",
+          "translation": "wine",
+          "pos": "noun",
+          "example": "Un pahar de vin, te rog."
+        },
+        {
+          "word": "bere",
+          "translation": "beer",
+          "pos": "noun",
+          "example": "El bea o bere."
+        },
+        {
+          "word": "pui",
+          "translation": "chicken",
+          "pos": "noun",
+          "example": "Puiul este delicios."
+        },
+        {
+          "word": "pește",
+          "translation": "fish",
+          "pos": "noun",
+          "example": "Mâncăm pește."
+        },
+        {
+          "word": "tort",
+          "translation": "cake",
+          "pos": "noun",
+          "example": "Tortul este dulce."
+        },
+        {
+          "word": "mic dejun",
+          "translation": "breakfast",
+          "pos": "noun",
+          "example": "Micul dejun este la ora opt."
+        },
+        {
+          "word": "prânz",
+          "translation": "lunch",
+          "pos": "noun",
+          "example": "Prânzul este la amiază."
+        },
+        {
+          "word": "cină",
+          "translation": "dinner",
+          "pos": "noun",
+          "example": "Cina este la ora șapte."
+        },
+        {
+          "word": "mi-e foame",
+          "translation": "I'm hungry",
+          "accepted_translations": [
+            "I am hungry"
+          ],
+          "pos": "phrase",
+          "example": "Mi-e foame!"
+        },
+        {
+          "word": "mi-e sete",
+          "translation": "I'm thirsty",
+          "accepted_translations": [
+            "I am thirsty"
+          ],
+          "pos": "phrase",
+          "example": "Mi-e sete."
+        },
+        {
+          "word": "restaurant",
+          "translation": "restaurant",
+          "pos": "noun",
+          "example": "Cinăm la restaurant."
+        },
+        {
+          "word": "ceașcă",
+          "translation": "cup",
+          "pos": "noun",
+          "example": "O ceașcă de cafea, te rog."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "pâine",
+          "answer": "bread"
+        },
+        {
+          "type": "translation",
+          "prompt": "brânză",
+          "answer": "cheese"
+        },
+        {
+          "type": "translation",
+          "prompt": "măr",
+          "answer": "apple"
+        },
+        {
+          "type": "translation",
+          "prompt": "apă",
+          "answer": "water"
+        },
+        {
+          "type": "translation",
+          "prompt": "vin",
+          "answer": "wine"
+        },
+        {
+          "type": "translation",
+          "prompt": "bere",
+          "answer": "beer"
+        },
+        {
+          "type": "translation",
+          "prompt": "pui",
+          "answer": "chicken"
+        },
+        {
+          "type": "translation",
+          "prompt": "pește",
+          "answer": "fish"
+        },
+        {
+          "type": "translation",
+          "prompt": "tort",
+          "answer": "cake"
+        },
+        {
+          "type": "translation",
+          "prompt": "mic dejun",
+          "answer": "breakfast"
+        },
+        {
+          "type": "translation",
+          "prompt": "prânz",
+          "answer": "lunch"
+        },
+        {
+          "type": "translation",
+          "prompt": "cină",
+          "answer": "dinner"
+        },
+        {
+          "type": "translation",
+          "prompt": "mi-e foame",
+          "answer": "I'm hungry",
+          "accepted_answers": [
+            "I am hungry"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "mi-e sete",
+          "answer": "I'm thirsty",
+          "accepted_answers": [
+            "I am thirsty"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "restaurant",
+          "answer": "restaurant"
+        },
+        {
+          "type": "translation",
+          "prompt": "ceașcă",
+          "answer": "cup"
+        },
+        {
+          "type": "translation",
+          "prompt": "Mănânc pâine cu brânză.",
+          "answer": "I'm eating bread with cheese.",
+          "accepted_answers": [
+            "I am eating bread with cheese."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Beau apă.",
+          "answer": "I'm drinking water.",
+          "accepted_answers": [
+            "I drink water."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mâncăm pește la restaurant.",
+          "answer": "We're eating fish at the restaurant.",
+          "accepted_answers": [
+            "We are eating fish at the restaurant."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Aș vrea o cafea.",
+          "answer": "I'd like a coffee.",
+          "accepted_answers": [
+            "I would like a coffee."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Cina este la ora șapte.",
+          "answer": "Dinner is at seven o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mi-e foame!",
+          "answer": "I'm hungry!",
+          "accepted_answers": [
+            "I am hungry!"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mi-e sete.",
+          "answer": "I'm thirsty.",
+          "accepted_answers": [
+            "I am thirsty."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "I'm eating an apple.",
+          "answer": "Mănânc un măr."
+        },
+        {
+          "type": "translation",
+          "prompt": "The cake is sweet.",
+          "answer": "Tortul este dulce."
+        },
+        {
+          "type": "translation",
+          "prompt": "Lunch is at noon.",
+          "answer": "Prânzul este la amiază."
+        },
+        {
+          "type": "translation",
+          "prompt": "I like cheese.",
+          "answer": "Îmi place brânza."
+        },
+        {
+          "type": "translation",
+          "prompt": "He drinks beer.",
+          "answer": "El bea bere."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bread':",
+          "options": [
+            "pâine",
+            "brânză",
+            "pește",
+            "pui"
+          ],
+          "answer": "pâine"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'water':",
+          "options": [
+            "apă",
+            "vin",
+            "bere",
+            "măr"
+          ],
+          "answer": "apă"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'wine':",
+          "options": [
+            "vin",
+            "bere",
+            "apă",
+            "tort"
+          ],
+          "answer": "vin"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fish':",
+          "options": [
+            "pește",
+            "pui",
+            "pâine",
+            "brânză"
+          ],
+          "answer": "pește"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cake':",
+          "options": [
+            "tort",
+            "măr",
+            "pâine",
+            "apă"
+          ],
+          "answer": "tort"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'breakfast':",
+          "options": [
+            "mic dejun",
+            "prânz",
+            "cină",
+            "restaurant"
+          ],
+          "answer": "mic dejun"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'I'm hungry':",
+          "options": [
+            "mi-e foame",
+            "mi-e sete",
+            "mi-e frig",
+            "mi-e cald"
+          ],
+          "answer": "mi-e foame"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'dinner':",
+          "options": [
+            "cină",
+            "prânz",
+            "mic dejun",
+            "restaurant"
+          ],
+          "answer": "cină"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Pâin___ este proaspătă.",
+          "answer": "ea"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Brânz___ este bună.",
+          "answer": "a"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tort___ este dulce.",
+          "answer": "ul"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Pu___ este delicios.",
+          "answer": "iul"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Prânz___ este la amiază.",
+          "answer": "ul"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cin___ este la ora șapte.",
+          "answer": "a"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Peșt___ este bun.",
+          "answer": "ele"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mi-___ foame.",
+          "answer": "e"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Home and Places",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "casă",
+          "translation": "house",
+          "pos": "noun",
+          "example": "Casa mea este mare."
+        },
+        {
+          "word": "apartament",
+          "translation": "apartment",
+          "pos": "noun",
+          "example": "Locuim într-un apartament."
+        },
+        {
+          "word": "bucătărie",
+          "translation": "kitchen",
+          "pos": "noun",
+          "example": "Bucătăria este mică."
+        },
+        {
+          "word": "dormitor",
+          "translation": "bedroom",
+          "pos": "noun",
+          "example": "Dorm în dormitor."
+        },
+        {
+          "word": "sufragerie",
+          "translation": "living room",
+          "pos": "noun",
+          "example": "Sufrageria este luminoasă."
+        },
+        {
+          "word": "baie",
+          "translation": "bathroom",
+          "pos": "noun",
+          "example": "Baia este la dreapta."
+        },
+        {
+          "word": "grădină",
+          "translation": "garden",
+          "pos": "noun",
+          "example": "Florile sunt în grădină."
+        },
+        {
+          "word": "stradă",
+          "translation": "street",
+          "pos": "noun",
+          "example": "Locuiesc pe această stradă."
+        },
+        {
+          "word": "oraș",
+          "translation": "city",
+          "pos": "noun",
+          "example": "București este un oraș mare."
+        },
+        {
+          "word": "parc",
+          "translation": "park",
+          "pos": "noun",
+          "example": "Copiii se joacă în parc."
+        },
+        {
+          "word": "piață",
+          "translation": "market",
+          "pos": "noun",
+          "example": "Cumpăr fructe de la piață."
+        },
+        {
+          "word": "școală",
+          "translation": "school",
+          "pos": "noun",
+          "example": "Școala este aproape de casă."
+        },
+        {
+          "word": "spital",
+          "translation": "hospital",
+          "pos": "noun",
+          "example": "Spitalul este în centru."
+        },
+        {
+          "word": "masă",
+          "translation": "table",
+          "pos": "noun",
+          "example": "Cartea este pe masă."
+        },
+        {
+          "word": "pat",
+          "translation": "bed",
+          "pos": "noun",
+          "example": "Pisica doarme în pat."
+        },
+        {
+          "word": "aproape de",
+          "translation": "near",
+          "accepted_translations": [
+            "close to"
+          ],
+          "pos": "phrase",
+          "example": "Sunt aproape de gară."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "casă",
+          "answer": "house"
+        },
+        {
+          "type": "translation",
+          "prompt": "apartament",
+          "answer": "apartment"
+        },
+        {
+          "type": "translation",
+          "prompt": "bucătărie",
+          "answer": "kitchen"
+        },
+        {
+          "type": "translation",
+          "prompt": "dormitor",
+          "answer": "bedroom"
+        },
+        {
+          "type": "translation",
+          "prompt": "sufragerie",
+          "answer": "living room"
+        },
+        {
+          "type": "translation",
+          "prompt": "baie",
+          "answer": "bathroom"
+        },
+        {
+          "type": "translation",
+          "prompt": "grădină",
+          "answer": "garden"
+        },
+        {
+          "type": "translation",
+          "prompt": "stradă",
+          "answer": "street"
+        },
+        {
+          "type": "translation",
+          "prompt": "oraș",
+          "answer": "city"
+        },
+        {
+          "type": "translation",
+          "prompt": "parc",
+          "answer": "park"
+        },
+        {
+          "type": "translation",
+          "prompt": "piață",
+          "answer": "market"
+        },
+        {
+          "type": "translation",
+          "prompt": "școală",
+          "answer": "school"
+        },
+        {
+          "type": "translation",
+          "prompt": "spital",
+          "answer": "hospital"
+        },
+        {
+          "type": "translation",
+          "prompt": "masă",
+          "answer": "table"
+        },
+        {
+          "type": "translation",
+          "prompt": "pat",
+          "answer": "bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "aproape de",
+          "answer": "near",
+          "accepted_answers": [
+            "close to"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Locuim într-un apartament.",
+          "answer": "We live in an apartment."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bucătăria este mică.",
+          "answer": "The kitchen is small."
+        },
+        {
+          "type": "translation",
+          "prompt": "Pisica doarme în pat.",
+          "answer": "The cat sleeps in the bed."
+        },
+        {
+          "type": "translation",
+          "prompt": "Copiii se joacă în parc.",
+          "answer": "The children are playing in the park.",
+          "accepted_answers": [
+            "The kids are playing in the park."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Cumpăr fructe de la piață.",
+          "answer": "I'm buying fruit at the market.",
+          "accepted_answers": [
+            "I buy fruit at the market."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Este o grădină în spatele casei.",
+          "answer": "There's a garden behind the house.",
+          "accepted_answers": [
+            "There is a garden behind the house."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Locuiesc pe această stradă.",
+          "answer": "I live on this street."
+        },
+        {
+          "type": "translation",
+          "prompt": "București este un oraș mare.",
+          "answer": "Bucharest is a big city."
+        },
+        {
+          "type": "translation",
+          "prompt": "The book is on the table.",
+          "answer": "Cartea este pe masă."
+        },
+        {
+          "type": "translation",
+          "prompt": "The bathroom is small.",
+          "answer": "Baia este mică."
+        },
+        {
+          "type": "translation",
+          "prompt": "The school is near the house.",
+          "answer": "Școala este aproape de casă."
+        },
+        {
+          "type": "translation",
+          "prompt": "I'm at home.",
+          "answer": "Sunt în casă.",
+          "accepted_answers": [
+            "I am at home."
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'house':",
+          "options": [
+            "casă",
+            "apartament",
+            "bucătărie",
+            "grădină"
+          ],
+          "answer": "casă"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'kitchen':",
+          "options": [
+            "bucătărie",
+            "dormitor",
+            "sufragerie",
+            "baie"
+          ],
+          "answer": "bucătărie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bedroom':",
+          "options": [
+            "dormitor",
+            "bucătărie",
+            "sufragerie",
+            "grădină"
+          ],
+          "answer": "dormitor"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'garden':",
+          "options": [
+            "grădină",
+            "parc",
+            "casă",
+            "stradă"
+          ],
+          "answer": "grădină"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'city':",
+          "options": [
+            "oraș",
+            "stradă",
+            "casă",
+            "școală"
+          ],
+          "answer": "oraș"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'park':",
+          "options": [
+            "parc",
+            "grădină",
+            "piață",
+            "oraș"
+          ],
+          "answer": "parc"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'school':",
+          "options": [
+            "școală",
+            "spital",
+            "piață",
+            "casă"
+          ],
+          "answer": "școală"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bed':",
+          "options": [
+            "pat",
+            "masă",
+            "dormitor",
+            "sufragerie"
+          ],
+          "answer": "pat"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sunt ___ casă.",
+          "answer": "în"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cartea este ___ masă.",
+          "answer": "pe"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Pisica doarme ___ pat.",
+          "answer": "în"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Copiii se joacă ___ parc.",
+          "answer": "în"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cumpăr fructe de la ___.",
+          "answer": "piață"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Locuiesc ___ această stradă.",
+          "answer": "pe"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Școala este ___ de casă.",
+          "answer": "aproape"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Spitalul este în ___.",
+          "answer": "centru"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Daily Routine and Weather",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "a se trezi",
+          "translation": "to wake up",
+          "pos": "verb",
+          "example": "Mă trezesc la ora șapte."
+        },
+        {
+          "word": "a se scula",
+          "translation": "to get up",
+          "pos": "verb",
+          "example": "Ea se scoală devreme."
+        },
+        {
+          "word": "a se spăla",
+          "translation": "to wash",
+          "pos": "verb",
+          "example": "Mă spăl pe mâini."
+        },
+        {
+          "word": "a se culca",
+          "translation": "to go to bed",
+          "pos": "verb",
+          "example": "Ne culcăm la ora zece."
+        },
+        {
+          "word": "munca",
+          "translation": "work",
+          "pos": "noun",
+          "example": "Merg la muncă la ora opt."
+        },
+        {
+          "word": "mereu",
+          "translation": "always",
+          "pos": "adverb",
+          "example": "El întârzie mereu."
+        },
+        {
+          "word": "adesea",
+          "translation": "often",
+          "pos": "adverb",
+          "example": "Adesea citesc seara."
+        },
+        {
+          "word": "uneori",
+          "translation": "sometimes",
+          "pos": "adverb",
+          "example": "Uneori mănânc la restaurant."
+        },
+        {
+          "word": "soare",
+          "translation": "sun",
+          "pos": "noun",
+          "example": "Soarele strălucește."
+        },
+        {
+          "word": "vânt",
+          "translation": "wind",
+          "pos": "noun",
+          "example": "Vântul bate."
+        },
+        {
+          "word": "ploaie",
+          "translation": "rain",
+          "pos": "noun",
+          "example": "Îmi place ploaia."
+        },
+        {
+          "word": "zăpadă",
+          "translation": "snow",
+          "pos": "noun",
+          "example": "Zăpada este albă."
+        },
+        {
+          "word": "nor",
+          "translation": "cloud",
+          "pos": "noun",
+          "example": "Sunt nori."
+        },
+        {
+          "word": "plouă",
+          "translation": "it's raining",
+          "accepted_translations": [
+            "it is raining"
+          ],
+          "pos": "phrase",
+          "example": "Plouă mult azi."
+        },
+        {
+          "word": "ninge",
+          "translation": "it's snowing",
+          "accepted_translations": [
+            "it is snowing"
+          ],
+          "pos": "phrase",
+          "example": "Ninge iarna."
+        },
+        {
+          "word": "vreme",
+          "translation": "weather",
+          "pos": "noun",
+          "example": "Vremea este frumoasă azi."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "a se trezi",
+          "answer": "to wake up"
+        },
+        {
+          "type": "translation",
+          "prompt": "a se scula",
+          "answer": "to get up"
+        },
+        {
+          "type": "translation",
+          "prompt": "a se spăla",
+          "answer": "to wash"
+        },
+        {
+          "type": "translation",
+          "prompt": "a se culca",
+          "answer": "to go to bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "munca",
+          "answer": "work"
+        },
+        {
+          "type": "translation",
+          "prompt": "mereu",
+          "answer": "always"
+        },
+        {
+          "type": "translation",
+          "prompt": "adesea",
+          "answer": "often"
+        },
+        {
+          "type": "translation",
+          "prompt": "uneori",
+          "answer": "sometimes"
+        },
+        {
+          "type": "translation",
+          "prompt": "soare",
+          "answer": "sun"
+        },
+        {
+          "type": "translation",
+          "prompt": "vânt",
+          "answer": "wind"
+        },
+        {
+          "type": "translation",
+          "prompt": "ploaie",
+          "answer": "rain"
+        },
+        {
+          "type": "translation",
+          "prompt": "zăpadă",
+          "answer": "snow"
+        },
+        {
+          "type": "translation",
+          "prompt": "nor",
+          "answer": "cloud"
+        },
+        {
+          "type": "translation",
+          "prompt": "plouă",
+          "answer": "it's raining",
+          "accepted_answers": [
+            "it is raining"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "ninge",
+          "answer": "it's snowing",
+          "accepted_answers": [
+            "it is snowing"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "vreme",
+          "answer": "weather"
+        },
+        {
+          "type": "translation",
+          "prompt": "Mă trezesc la ora șapte.",
+          "answer": "I wake up at seven o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ea se scoală devreme.",
+          "answer": "She gets up early."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ne culcăm la ora zece.",
+          "answer": "We go to bed at ten o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mă spăl pe mâini.",
+          "answer": "I'm washing my hands.",
+          "accepted_answers": [
+            "I am washing my hands."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Merg la muncă la ora opt.",
+          "answer": "I go to work at eight o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Plouă mult azi.",
+          "answer": "It's raining a lot today.",
+          "accepted_answers": [
+            "It is raining a lot today."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ninge iarna.",
+          "answer": "It snows in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Soarele strălucește.",
+          "answer": "The sun is shining."
+        },
+        {
+          "type": "translation",
+          "prompt": "Uneori mănânc la restaurant.",
+          "answer": "Sometimes I eat at a restaurant."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's raining.",
+          "answer": "Plouă."
+        },
+        {
+          "type": "translation",
+          "prompt": "Îmi place ploaia.",
+          "answer": "I like the rain."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vremea este frumoasă azi.",
+          "answer": "The weather is nice today."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to wake up':",
+          "options": [
+            "a se trezi",
+            "a se scula",
+            "a se spăla",
+            "a se culca"
+          ],
+          "answer": "a se trezi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to get up':",
+          "options": [
+            "a se scula",
+            "a se trezi",
+            "a se culca",
+            "a se spăla"
+          ],
+          "answer": "a se scula"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'always':",
+          "options": [
+            "mereu",
+            "adesea",
+            "uneori",
+            "azi"
+          ],
+          "answer": "mereu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'often':",
+          "options": [
+            "adesea",
+            "mereu",
+            "uneori",
+            "azi"
+          ],
+          "answer": "adesea"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sun':",
+          "options": [
+            "soare",
+            "vânt",
+            "ploaie",
+            "zăpadă"
+          ],
+          "answer": "soare"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'rain':",
+          "options": [
+            "ploaie",
+            "zăpadă",
+            "vânt",
+            "soare"
+          ],
+          "answer": "ploaie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'it's raining':",
+          "options": [
+            "plouă",
+            "ninge",
+            "soare",
+            "vreme"
+          ],
+          "answer": "plouă"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'work':",
+          "options": [
+            "munca",
+            "casa",
+            "orașul",
+            "parcul"
+          ],
+          "answer": "munca"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ trezesc la ora șapte.",
+          "answer": "mă"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ea ___ scoală devreme.",
+          "answer": "se"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ culcăm la ora zece.",
+          "answer": "ne"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tu ___ speli pe mâini.",
+          "answer": "te"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ei ___ culcă târziu.",
+          "answer": "se"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Plouă mult ___.",
+          "answer": "azi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Iarna ___.",
+          "answer": "ninge"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vremea este ___ azi.",
+          "answer": "frumoasă"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Shopping and Travel",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "douăzeci",
+          "translation": "twenty",
+          "pos": "number",
+          "example": "Cartea costă douăzeci de lei."
+        },
+        {
+          "word": "treizeci",
+          "translation": "thirty",
+          "pos": "number",
+          "example": "El are treizeci de ani."
+        },
+        {
+          "word": "patruzeci",
+          "translation": "forty",
+          "pos": "number",
+          "example": "Valiza costă patruzeci de lei."
+        },
+        {
+          "word": "cincizeci",
+          "translation": "fifty",
+          "pos": "number",
+          "example": "Am cincizeci de lei."
+        },
+        {
+          "word": "șaizeci",
+          "translation": "sixty",
+          "pos": "number",
+          "example": "Trenul costă șaizeci de lei."
+        },
+        {
+          "word": "o sută",
+          "translation": "hundred",
+          "pos": "number",
+          "example": "O sută de lei este scump."
+        },
+        {
+          "word": "bani",
+          "translation": "money",
+          "pos": "noun",
+          "example": "Nu am bani."
+        },
+        {
+          "word": "scump",
+          "translation": "expensive",
+          "accepted_translations": [
+            "dear"
+          ],
+          "pos": "adjective",
+          "example": "Această haină este scumpă."
+        },
+        {
+          "word": "ieftin",
+          "translation": "cheap",
+          "pos": "adjective",
+          "example": "Această carte este ieftină."
+        },
+        {
+          "word": "a cumpăra",
+          "translation": "to buy",
+          "pos": "verb",
+          "example": "Vreau să cumpăr o valiză."
+        },
+        {
+          "word": "magazin",
+          "translation": "shop",
+          "accepted_translations": [
+            "store"
+          ],
+          "pos": "noun",
+          "example": "Magazinul este închis."
+        },
+        {
+          "word": "tren",
+          "translation": "train",
+          "pos": "noun",
+          "example": "Trenul sosește la ora opt."
+        },
+        {
+          "word": "autobuz",
+          "translation": "bus",
+          "pos": "noun",
+          "example": "Iau autobuzul."
+        },
+        {
+          "word": "hotel",
+          "translation": "hotel",
+          "pos": "noun",
+          "example": "Dormim la hotel."
+        },
+        {
+          "word": "valiză",
+          "translation": "suitcase",
+          "pos": "noun",
+          "example": "Valiza mea este grea."
+        },
+        {
+          "word": "bilet",
+          "translation": "ticket",
+          "pos": "noun",
+          "example": "Un bilet pentru București, te rog."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "douăzeci",
+          "answer": "twenty"
+        },
+        {
+          "type": "translation",
+          "prompt": "treizeci",
+          "answer": "thirty"
+        },
+        {
+          "type": "translation",
+          "prompt": "patruzeci",
+          "answer": "forty"
+        },
+        {
+          "type": "translation",
+          "prompt": "cincizeci",
+          "answer": "fifty"
+        },
+        {
+          "type": "translation",
+          "prompt": "șaizeci",
+          "answer": "sixty"
+        },
+        {
+          "type": "translation",
+          "prompt": "o sută",
+          "answer": "hundred"
+        },
+        {
+          "type": "translation",
+          "prompt": "bani",
+          "answer": "money"
+        },
+        {
+          "type": "translation",
+          "prompt": "scump",
+          "answer": "expensive",
+          "accepted_answers": [
+            "dear"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "ieftin",
+          "answer": "cheap"
+        },
+        {
+          "type": "translation",
+          "prompt": "a cumpăra",
+          "answer": "to buy"
+        },
+        {
+          "type": "translation",
+          "prompt": "magazin",
+          "answer": "shop",
+          "accepted_answers": [
+            "store"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "tren",
+          "answer": "train"
+        },
+        {
+          "type": "translation",
+          "prompt": "autobuz",
+          "answer": "bus"
+        },
+        {
+          "type": "translation",
+          "prompt": "hotel",
+          "answer": "hotel"
+        },
+        {
+          "type": "translation",
+          "prompt": "valiză",
+          "answer": "suitcase"
+        },
+        {
+          "type": "translation",
+          "prompt": "bilet",
+          "answer": "ticket"
+        },
+        {
+          "type": "translation",
+          "prompt": "Vreau să cumpăr o valiză.",
+          "answer": "I want to buy a suitcase."
+        },
+        {
+          "type": "translation",
+          "prompt": "Cartea costă douăzeci de lei.",
+          "answer": "The book costs twenty lei."
+        },
+        {
+          "type": "translation",
+          "prompt": "Un bilet pentru București, te rog.",
+          "answer": "A ticket to Bucharest, please."
+        },
+        {
+          "type": "translation",
+          "prompt": "Trenul sosește la ora opt.",
+          "answer": "The train arrives at eight o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Iau autobuzul.",
+          "answer": "I'm taking the bus.",
+          "accepted_answers": [
+            "I take the bus."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Dormim la hotel.",
+          "answer": "We're sleeping at the hotel.",
+          "accepted_answers": [
+            "We are sleeping at the hotel."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Această haină este prea scumpă.",
+          "answer": "This coat is too expensive."
+        },
+        {
+          "type": "translation",
+          "prompt": "Magazinul se deschide la ora nouă.",
+          "answer": "The shop opens at nine o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Am cincizeci de lei.",
+          "answer": "I have fifty lei."
+        },
+        {
+          "type": "translation",
+          "prompt": "How much is the ticket?",
+          "answer": "Cât costă biletul?"
+        },
+        {
+          "type": "translation",
+          "prompt": "The suitcase is cheap.",
+          "answer": "Valiza este ieftină."
+        },
+        {
+          "type": "translation",
+          "prompt": "I have no money.",
+          "answer": "Nu am bani."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'twenty':",
+          "options": [
+            "douăzeci",
+            "treizeci",
+            "patruzeci",
+            "cincizeci"
+          ],
+          "answer": "douăzeci"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'forty':",
+          "options": [
+            "patruzeci",
+            "treizeci",
+            "douăzeci",
+            "șaizeci"
+          ],
+          "answer": "patruzeci"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sixty':",
+          "options": [
+            "șaizeci",
+            "cincizeci",
+            "patruzeci",
+            "o sută"
+          ],
+          "answer": "șaizeci"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hundred':",
+          "options": [
+            "o sută",
+            "șaizeci",
+            "cincizeci",
+            "douăzeci"
+          ],
+          "answer": "o sută"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'expensive':",
+          "options": [
+            "scump",
+            "nou",
+            "bătrân",
+            "ușor"
+          ],
+          "answer": "scump"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'shop':",
+          "options": [
+            "magazin",
+            "hotel",
+            "piața",
+            "restaurantul"
+          ],
+          "answer": "magazin"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'suitcase':",
+          "options": [
+            "valiză",
+            "bilet",
+            "autobuz",
+            "tren"
+          ],
+          "answer": "valiză"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hotel':",
+          "options": [
+            "hotel",
+            "magazin",
+            "școala",
+            "casa"
+          ],
+          "answer": "hotel"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cât ___ cartea?",
+          "answer": "costă"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vreau să ___ o valiză.",
+          "answer": "cumpăr"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Zece, douăzeci, ___, patruzeci.",
+          "answer": "treizeci"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Douăzeci și douăzeci fac ___.",
+          "answer": "patruzeci"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Douăzeci și treizeci fac ___.",
+          "answer": "cincizeci"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cincizeci și cincizeci fac ___.",
+          "answer": "o sută"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ am bani.",
+          "answer": "Nu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Trenul ___ la ora opt.",
+          "answer": "sosește"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Yesterday and Tomorrow",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "vară",
+          "translation": "summer",
+          "pos": "noun",
+          "example": "Vara este cald."
+        },
+        {
+          "word": "iarnă",
+          "translation": "winter",
+          "pos": "noun",
+          "example": "Iarna ninge."
+        },
+        {
+          "word": "primăvară",
+          "translation": "spring",
+          "pos": "noun",
+          "example": "Primăvara înfloresc florile."
+        },
+        {
+          "word": "toamnă",
+          "translation": "autumn",
+          "accepted_translations": [
+            "fall"
+          ],
+          "pos": "noun",
+          "example": "Toamna plouă des."
+        },
+        {
+          "word": "ianuarie",
+          "translation": "January",
+          "pos": "noun",
+          "example": "Ianuarie este prima lună."
+        },
+        {
+          "word": "martie",
+          "translation": "March",
+          "pos": "noun",
+          "example": "În martie începe primăvara."
+        },
+        {
+          "word": "iunie",
+          "translation": "June",
+          "pos": "noun",
+          "example": "În iunie începe vara."
+        },
+        {
+          "word": "iulie",
+          "translation": "July",
+          "pos": "noun",
+          "example": "Ziua mea este în iulie."
+        },
+        {
+          "word": "septembrie",
+          "translation": "September",
+          "pos": "noun",
+          "example": "Școala începe în septembrie."
+        },
+        {
+          "word": "decembrie",
+          "translation": "December",
+          "pos": "noun",
+          "example": "Crăciunul este în decembrie."
+        },
+        {
+          "word": "săptămâna trecută",
+          "translation": "last week",
+          "pos": "phrase",
+          "example": "Săptămâna trecută am muncit mult."
+        },
+        {
+          "word": "săptămâna viitoare",
+          "translation": "next week",
+          "pos": "phrase",
+          "example": "Săptămâna viitoare călătoresc."
+        },
+        {
+          "word": "anul trecut",
+          "translation": "last year",
+          "pos": "phrase",
+          "example": "Anul trecut am fost la Roma."
+        },
+        {
+          "word": "anul viitor",
+          "translation": "next year",
+          "pos": "phrase",
+          "example": "Anul viitor cumpăr o mașină."
+        },
+        {
+          "word": "ziua de naștere",
+          "translation": "birthday",
+          "pos": "phrase",
+          "example": "Ziua mea de naștere este în iulie."
+        },
+        {
+          "word": "lună",
+          "translation": "month",
+          "pos": "noun",
+          "example": "Anul are douăsprezece luni."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "vară",
+          "answer": "summer"
+        },
+        {
+          "type": "translation",
+          "prompt": "iarnă",
+          "answer": "winter"
+        },
+        {
+          "type": "translation",
+          "prompt": "primăvară",
+          "answer": "spring"
+        },
+        {
+          "type": "translation",
+          "prompt": "toamnă",
+          "answer": "autumn",
+          "accepted_answers": [
+            "fall"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "ianuarie",
+          "answer": "January"
+        },
+        {
+          "type": "translation",
+          "prompt": "martie",
+          "answer": "March"
+        },
+        {
+          "type": "translation",
+          "prompt": "iunie",
+          "answer": "June"
+        },
+        {
+          "type": "translation",
+          "prompt": "iulie",
+          "answer": "July"
+        },
+        {
+          "type": "translation",
+          "prompt": "septembrie",
+          "answer": "September"
+        },
+        {
+          "type": "translation",
+          "prompt": "decembrie",
+          "answer": "December"
+        },
+        {
+          "type": "translation",
+          "prompt": "săptămâna trecută",
+          "answer": "last week"
+        },
+        {
+          "type": "translation",
+          "prompt": "săptămâna viitoare",
+          "answer": "next week"
+        },
+        {
+          "type": "translation",
+          "prompt": "anul trecut",
+          "answer": "last year"
+        },
+        {
+          "type": "translation",
+          "prompt": "anul viitor",
+          "answer": "next year"
+        },
+        {
+          "type": "translation",
+          "prompt": "ziua de naștere",
+          "answer": "birthday"
+        },
+        {
+          "type": "translation",
+          "prompt": "lună",
+          "answer": "month"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ieri am mâncat o pizza.",
+          "answer": "Yesterday I ate a pizza.",
+          "accepted_answers": [
+            "I ate a pizza yesterday."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Am citit o carte.",
+          "answer": "I read a book.",
+          "accepted_answers": [
+            "I've read a book.",
+            "I have read a book."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Am muncit mult săptămâna trecută.",
+          "answer": "I worked a lot last week."
+        },
+        {
+          "type": "translation",
+          "prompt": "Săptămâna viitoare călătoresc.",
+          "answer": "I'm traveling next week.",
+          "accepted_answers": [
+            "I am traveling next week."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Anul viitor cumpăr o mașină.",
+          "answer": "Next year I'm buying a car.",
+          "accepted_answers": [
+            "Next year I am buying a car."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vara este cald.",
+          "answer": "In summer it's hot."
+        },
+        {
+          "type": "translation",
+          "prompt": "Iarna ninge.",
+          "answer": "It snows in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ziua mea de naștere este în iulie.",
+          "answer": "My birthday is in July."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ianuarie este prima lună a anului.",
+          "answer": "January is the first month of the year."
+        },
+        {
+          "type": "translation",
+          "prompt": "Crăciunul este în decembrie.",
+          "answer": "Christmas is in December."
+        },
+        {
+          "type": "translation",
+          "prompt": "Anul trecut am fost la Roma.",
+          "answer": "Last year I was in Rome."
+        },
+        {
+          "type": "translation",
+          "prompt": "Toamna plouă des.",
+          "answer": "It often rains in autumn.",
+          "accepted_answers": [
+            "In autumn it often rains."
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'summer':",
+          "options": [
+            "vară",
+            "iarnă",
+            "primăvară",
+            "toamnă"
+          ],
+          "answer": "vară"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'winter':",
+          "options": [
+            "iarnă",
+            "vară",
+            "primăvară",
+            "toamnă"
+          ],
+          "answer": "iarnă"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'spring':",
+          "options": [
+            "primăvară",
+            "toamnă",
+            "vară",
+            "iarnă"
+          ],
+          "answer": "primăvară"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'autumn':",
+          "options": [
+            "toamnă",
+            "primăvară",
+            "vară",
+            "iarnă"
+          ],
+          "answer": "toamnă"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'July':",
+          "options": [
+            "iulie",
+            "iunie",
+            "martie",
+            "ianuarie"
+          ],
+          "answer": "iulie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'December':",
+          "options": [
+            "decembrie",
+            "septembrie",
+            "ianuarie",
+            "martie"
+          ],
+          "answer": "decembrie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'next week':",
+          "options": [
+            "săptămâna viitoare",
+            "săptămâna trecută",
+            "anul viitor",
+            "anul trecut"
+          ],
+          "answer": "săptămâna viitoare"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'last year':",
+          "options": [
+            "anul trecut",
+            "anul viitor",
+            "săptămâna trecută",
+            "săptămâna viitoare"
+          ],
+          "answer": "anul trecut"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ieri ___ mâncat o pizza.",
+          "answer": "am"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tu ___ mâncat o pizza?",
+          "answer": "ai"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ieri am ___ o pizza.",
+          "answer": "mâncat"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Am ___ o carte.",
+          "answer": "citit"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El ___ muncit mult.",
+          "answer": "a"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Săptămâna trecută am ___ mult.",
+          "answer": "muncit"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Crăciunul este în ___.",
+          "answer": "decembrie"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Iarna ___.",
+          "answer": "ninge"
+        }
+      ]
     }
   ]
 }
