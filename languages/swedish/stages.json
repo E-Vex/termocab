@@ -1976,6 +1976,1982 @@
           ]
         }
       ]
+    },
+    {
+      "id": 6,
+      "title": "Food and Drink",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "ett bröd",
+          "translation": "bread",
+          "pos": "noun",
+          "example": "Brödet är färskt."
+        },
+        {
+          "word": "en ost",
+          "translation": "cheese",
+          "pos": "noun",
+          "example": "Jag gillar ost."
+        },
+        {
+          "word": "ett äpple",
+          "translation": "apple",
+          "pos": "noun",
+          "example": "Jag äter ett äpple."
+        },
+        {
+          "word": "vatten",
+          "translation": "water",
+          "pos": "noun",
+          "example": "Jag dricker vatten."
+        },
+        {
+          "word": "ett vin",
+          "translation": "wine",
+          "pos": "noun",
+          "example": "Ett glas vin, tack."
+        },
+        {
+          "word": "en öl",
+          "translation": "beer",
+          "pos": "noun",
+          "example": "Han dricker en öl."
+        },
+        {
+          "word": "en kyckling",
+          "translation": "chicken",
+          "pos": "noun",
+          "example": "Kycklingen är god."
+        },
+        {
+          "word": "en fisk",
+          "translation": "fish",
+          "pos": "noun",
+          "example": "Vi äter fisk."
+        },
+        {
+          "word": "en tårta",
+          "translation": "cake",
+          "pos": "noun",
+          "example": "Tårtan är söt."
+        },
+        {
+          "word": "frukost",
+          "translation": "breakfast",
+          "pos": "noun",
+          "example": "Frukosten är klockan åtta."
+        },
+        {
+          "word": "lunch",
+          "translation": "lunch",
+          "pos": "noun",
+          "example": "Lunchen är klockan tolv."
+        },
+        {
+          "word": "middag",
+          "translation": "dinner",
+          "pos": "noun",
+          "example": "Middagen är klockan sju."
+        },
+        {
+          "word": "jag är hungrig",
+          "translation": "I'm hungry",
+          "accepted_translations": [
+            "I am hungry"
+          ],
+          "pos": "phrase",
+          "example": "Jag är hungrig!"
+        },
+        {
+          "word": "jag är törstig",
+          "translation": "I'm thirsty",
+          "accepted_translations": [
+            "I am thirsty"
+          ],
+          "pos": "phrase",
+          "example": "Jag är törstig."
+        },
+        {
+          "word": "en restaurang",
+          "translation": "restaurant",
+          "pos": "noun",
+          "example": "Vi äter på restaurang."
+        },
+        {
+          "word": "en kopp",
+          "translation": "cup",
+          "pos": "noun",
+          "example": "En kopp kaffe, tack."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ett bröd",
+          "answer": "bread"
+        },
+        {
+          "type": "translation",
+          "prompt": "en ost",
+          "answer": "cheese"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett äpple",
+          "answer": "apple"
+        },
+        {
+          "type": "translation",
+          "prompt": "vatten",
+          "answer": "water"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett vin",
+          "answer": "wine"
+        },
+        {
+          "type": "translation",
+          "prompt": "en öl",
+          "answer": "beer"
+        },
+        {
+          "type": "translation",
+          "prompt": "en kyckling",
+          "answer": "chicken"
+        },
+        {
+          "type": "translation",
+          "prompt": "en fisk",
+          "answer": "fish"
+        },
+        {
+          "type": "translation",
+          "prompt": "en tårta",
+          "answer": "cake"
+        },
+        {
+          "type": "translation",
+          "prompt": "frukost",
+          "answer": "breakfast"
+        },
+        {
+          "type": "translation",
+          "prompt": "lunch",
+          "answer": "lunch"
+        },
+        {
+          "type": "translation",
+          "prompt": "middag",
+          "answer": "dinner"
+        },
+        {
+          "type": "translation",
+          "prompt": "jag är hungrig",
+          "answer": "I'm hungry",
+          "accepted_answers": [
+            "I am hungry"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "jag är törstig",
+          "answer": "I'm thirsty",
+          "accepted_answers": [
+            "I am thirsty"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "en restaurang",
+          "answer": "restaurant"
+        },
+        {
+          "type": "translation",
+          "prompt": "en kopp",
+          "answer": "cup"
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag äter bröd med ost.",
+          "answer": "I'm eating bread with cheese.",
+          "accepted_answers": [
+            "I am eating bread with cheese."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag dricker vatten.",
+          "answer": "I'm drinking water.",
+          "accepted_answers": [
+            "I drink water."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vi äter fisk på restaurang.",
+          "answer": "We're eating fish at the restaurant.",
+          "accepted_answers": [
+            "We are eating fish at the restaurant."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag vill ha en kaffe.",
+          "answer": "I'd like a coffee.",
+          "accepted_answers": [
+            "I would like a coffee.",
+            "I want a coffee."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Middagen är klockan sju.",
+          "answer": "Dinner is at seven o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag är hungrig!",
+          "answer": "I'm hungry!",
+          "accepted_answers": [
+            "I am hungry!"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag är törstig.",
+          "answer": "I'm thirsty.",
+          "accepted_answers": [
+            "I am thirsty."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "I'm eating an apple.",
+          "answer": "Jag äter ett äpple."
+        },
+        {
+          "type": "translation",
+          "prompt": "The cake is sweet.",
+          "answer": "Tårtan är söt."
+        },
+        {
+          "type": "translation",
+          "prompt": "Lunch is at noon.",
+          "answer": "Lunchen är klockan tolv."
+        },
+        {
+          "type": "translation",
+          "prompt": "I like cheese.",
+          "answer": "Jag gillar ost."
+        },
+        {
+          "type": "translation",
+          "prompt": "He drinks beer.",
+          "answer": "Han dricker öl."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bread':",
+          "options": [
+            "ett bröd",
+            "en ost",
+            "en fisk",
+            "en kyckling"
+          ],
+          "answer": "ett bröd"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'water':",
+          "options": [
+            "vatten",
+            "ett vin",
+            "en öl",
+            "ett äpple"
+          ],
+          "answer": "vatten"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'wine':",
+          "options": [
+            "ett vin",
+            "en öl",
+            "vatten",
+            "en tårta"
+          ],
+          "answer": "ett vin"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fish':",
+          "options": [
+            "en fisk",
+            "en kyckling",
+            "ett bröd",
+            "en ost"
+          ],
+          "answer": "en fisk"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cake':",
+          "options": [
+            "en tårta",
+            "ett äpple",
+            "ett bröd",
+            "vatten"
+          ],
+          "answer": "en tårta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'breakfast':",
+          "options": [
+            "frukost",
+            "lunch",
+            "middag",
+            "en restaurang"
+          ],
+          "answer": "frukost"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'I'm hungry':",
+          "options": [
+            "jag är hungrig",
+            "jag är törstig",
+            "jag är trött",
+            "jag är glad"
+          ],
+          "answer": "jag är hungrig"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'dinner':",
+          "options": [
+            "middag",
+            "lunch",
+            "frukost",
+            "en restaurang"
+          ],
+          "answer": "middag"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bröd___ är färskt.",
+          "answer": "et"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Äppl___ är rött.",
+          "answer": "et"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tårt___ är söt.",
+          "answer": "an"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Öl___ är kall.",
+          "answer": "en"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Middag___ är klockan sju.",
+          "answer": "en"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Frukost___ är klockan åtta.",
+          "answer": "en"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag ___ ha en kaffe.",
+          "answer": "vill"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag är ___ . Jag vill äta.",
+          "answer": "hungrig"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Home and Places",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "ett hus",
+          "translation": "house",
+          "pos": "noun",
+          "example": "Huset är stort."
+        },
+        {
+          "word": "en lägenhet",
+          "translation": "apartment",
+          "pos": "noun",
+          "example": "Vi bor i en lägenhet."
+        },
+        {
+          "word": "ett kök",
+          "translation": "kitchen",
+          "pos": "noun",
+          "example": "Köket är litet."
+        },
+        {
+          "word": "ett sovrum",
+          "translation": "bedroom",
+          "pos": "noun",
+          "example": "Jag sover i mitt sovrum."
+        },
+        {
+          "word": "ett vardagsrum",
+          "translation": "living room",
+          "pos": "noun",
+          "example": "Vardagsrummet är ljust."
+        },
+        {
+          "word": "ett badrum",
+          "translation": "bathroom",
+          "pos": "noun",
+          "example": "Badrummet är till höger."
+        },
+        {
+          "word": "en trädgård",
+          "translation": "garden",
+          "pos": "noun",
+          "example": "Blommorna är i trädgården."
+        },
+        {
+          "word": "en gata",
+          "translation": "street",
+          "pos": "noun",
+          "example": "Jag bor på denna gata."
+        },
+        {
+          "word": "en stad",
+          "translation": "city",
+          "pos": "noun",
+          "example": "Stockholm är en stor stad."
+        },
+        {
+          "word": "en park",
+          "translation": "park",
+          "pos": "noun",
+          "example": "Barnen leker i parken."
+        },
+        {
+          "word": "en marknad",
+          "translation": "market",
+          "pos": "noun",
+          "example": "Jag köper frukt på marknaden."
+        },
+        {
+          "word": "en skola",
+          "translation": "school",
+          "pos": "noun",
+          "example": "Skolan ligger nära huset."
+        },
+        {
+          "word": "ett sjukhus",
+          "translation": "hospital",
+          "pos": "noun",
+          "example": "Sjukhuset ligger i centrum."
+        },
+        {
+          "word": "ett bord",
+          "translation": "table",
+          "pos": "noun",
+          "example": "Boken ligger på bordet."
+        },
+        {
+          "word": "en säng",
+          "translation": "bed",
+          "pos": "noun",
+          "example": "Katten sover i sängen."
+        },
+        {
+          "word": "det finns",
+          "translation": "there is",
+          "accepted_translations": [
+            "there are",
+            "there's"
+          ],
+          "pos": "phrase",
+          "example": "Det finns en park här nära."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ett hus",
+          "answer": "house"
+        },
+        {
+          "type": "translation",
+          "prompt": "en lägenhet",
+          "answer": "apartment"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett kök",
+          "answer": "kitchen"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett sovrum",
+          "answer": "bedroom"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett vardagsrum",
+          "answer": "living room"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett badrum",
+          "answer": "bathroom"
+        },
+        {
+          "type": "translation",
+          "prompt": "en trädgård",
+          "answer": "garden"
+        },
+        {
+          "type": "translation",
+          "prompt": "en gata",
+          "answer": "street"
+        },
+        {
+          "type": "translation",
+          "prompt": "en stad",
+          "answer": "city"
+        },
+        {
+          "type": "translation",
+          "prompt": "en park",
+          "answer": "park"
+        },
+        {
+          "type": "translation",
+          "prompt": "en marknad",
+          "answer": "market"
+        },
+        {
+          "type": "translation",
+          "prompt": "en skola",
+          "answer": "school"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett sjukhus",
+          "answer": "hospital"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett bord",
+          "answer": "table"
+        },
+        {
+          "type": "translation",
+          "prompt": "en säng",
+          "answer": "bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "det finns",
+          "answer": "there is",
+          "accepted_answers": [
+            "there are",
+            "there's"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vi bor i en lägenhet.",
+          "answer": "We live in an apartment."
+        },
+        {
+          "type": "translation",
+          "prompt": "Köket är litet.",
+          "answer": "The kitchen is small."
+        },
+        {
+          "type": "translation",
+          "prompt": "Katten sover i sängen.",
+          "answer": "The cat sleeps in the bed."
+        },
+        {
+          "type": "translation",
+          "prompt": "Barnen leker i parken.",
+          "answer": "The children are playing in the park.",
+          "accepted_answers": [
+            "The kids are playing in the park."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag köper frukt på marknaden.",
+          "answer": "I'm buying fruit at the market.",
+          "accepted_answers": [
+            "I buy fruit at the market."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Det finns en trädgård bakom huset.",
+          "answer": "There's a garden behind the house.",
+          "accepted_answers": [
+            "There is a garden behind the house."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag bor på denna gata.",
+          "answer": "I live on this street."
+        },
+        {
+          "type": "translation",
+          "prompt": "Stockholm är en stor stad.",
+          "answer": "Stockholm is a big city."
+        },
+        {
+          "type": "translation",
+          "prompt": "The book is on the table.",
+          "answer": "Boken ligger på bordet."
+        },
+        {
+          "type": "translation",
+          "prompt": "The bathroom is small.",
+          "answer": "Badrummet är litet."
+        },
+        {
+          "type": "translation",
+          "prompt": "The school is near the house.",
+          "answer": "Skolan ligger nära huset."
+        },
+        {
+          "type": "translation",
+          "prompt": "I'm at home.",
+          "answer": "Jag är hemma.",
+          "accepted_answers": [
+            "I am at home."
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'house':",
+          "options": [
+            "ett hus",
+            "en lägenhet",
+            "ett kök",
+            "en trädgård"
+          ],
+          "answer": "ett hus"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'kitchen':",
+          "options": [
+            "ett kök",
+            "ett sovrum",
+            "ett vardagsrum",
+            "ett badrum"
+          ],
+          "answer": "ett kök"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bedroom':",
+          "options": [
+            "ett sovrum",
+            "ett kök",
+            "ett vardagsrum",
+            "en trädgård"
+          ],
+          "answer": "ett sovrum"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'garden':",
+          "options": [
+            "en trädgård",
+            "en park",
+            "ett hus",
+            "en gata"
+          ],
+          "answer": "en trädgård"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'city':",
+          "options": [
+            "en stad",
+            "en gata",
+            "ett hus",
+            "en skola"
+          ],
+          "answer": "en stad"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'park':",
+          "options": [
+            "en park",
+            "en trädgård",
+            "en marknad",
+            "en stad"
+          ],
+          "answer": "en park"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'school':",
+          "options": [
+            "en skola",
+            "ett sjukhus",
+            "en marknad",
+            "ett hus"
+          ],
+          "answer": "en skola"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bed':",
+          "options": [
+            "en säng",
+            "ett bord",
+            "ett sovrum",
+            "ett vardagsrum"
+          ],
+          "answer": "en säng"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Katten är ___ köket.",
+          "answer": "i"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Boken ligger ___ bordet.",
+          "answer": "på"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vi bor ___ en lägenhet.",
+          "answer": "i"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Barnen leker ___ parken.",
+          "answer": "i"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag köper frukt ___ marknaden.",
+          "answer": "på"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag bor ___ denna gata.",
+          "answer": "på"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Katten sover ___ sängen.",
+          "answer": "i"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ en park här nära.",
+          "answer": "det finns"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Daily Routine and Weather",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "vakna",
+          "translation": "to wake up",
+          "pos": "verb",
+          "example": "Jag vaknar klockan sju."
+        },
+        {
+          "word": "gå upp",
+          "translation": "to get up",
+          "pos": "phrase",
+          "example": "Hon går upp tidigt."
+        },
+        {
+          "word": "duscha",
+          "translation": "to shower",
+          "pos": "verb",
+          "example": "Jag duschar på morgonen."
+        },
+        {
+          "word": "gå och lägga sig",
+          "translation": "to go to bed",
+          "pos": "phrase",
+          "example": "Vi går och lägger oss klockan tio."
+        },
+        {
+          "word": "ett jobb",
+          "translation": "job",
+          "accepted_translations": [
+            "work"
+          ],
+          "pos": "noun",
+          "example": "Jag går till jobbet klockan åtta."
+        },
+        {
+          "word": "alltid",
+          "translation": "always",
+          "pos": "adverb",
+          "example": "Han kommer alltid för sent."
+        },
+        {
+          "word": "ofta",
+          "translation": "often",
+          "pos": "adverb",
+          "example": "Ofta läser jag på kvällen."
+        },
+        {
+          "word": "ibland",
+          "translation": "sometimes",
+          "pos": "adverb",
+          "example": "Ibland äter jag på restaurang."
+        },
+        {
+          "word": "en sol",
+          "translation": "sun",
+          "pos": "noun",
+          "example": "Solen skiner."
+        },
+        {
+          "word": "en vind",
+          "translation": "wind",
+          "pos": "noun",
+          "example": "Vinden blåser."
+        },
+        {
+          "word": "regn",
+          "translation": "rain",
+          "pos": "noun",
+          "example": "Jag gillar regn."
+        },
+        {
+          "word": "snö",
+          "translation": "snow",
+          "pos": "noun",
+          "example": "Snön är vit."
+        },
+        {
+          "word": "ett moln",
+          "translation": "cloud",
+          "pos": "noun",
+          "example": "Det finns moln."
+        },
+        {
+          "word": "ett väder",
+          "translation": "weather",
+          "pos": "noun",
+          "example": "Vädret är fint idag."
+        },
+        {
+          "word": "det regnar",
+          "translation": "it's raining",
+          "accepted_translations": [
+            "it is raining"
+          ],
+          "pos": "phrase",
+          "example": "Det regnar mycket idag."
+        },
+        {
+          "word": "det snöar",
+          "translation": "it's snowing",
+          "accepted_translations": [
+            "it is snowing"
+          ],
+          "pos": "phrase",
+          "example": "Det snöar på vintern."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "vakna",
+          "answer": "to wake up"
+        },
+        {
+          "type": "translation",
+          "prompt": "gå upp",
+          "answer": "to get up"
+        },
+        {
+          "type": "translation",
+          "prompt": "duscha",
+          "answer": "to shower"
+        },
+        {
+          "type": "translation",
+          "prompt": "gå och lägga sig",
+          "answer": "to go to bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett jobb",
+          "answer": "job",
+          "accepted_answers": [
+            "work"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "alltid",
+          "answer": "always"
+        },
+        {
+          "type": "translation",
+          "prompt": "ofta",
+          "answer": "often"
+        },
+        {
+          "type": "translation",
+          "prompt": "ibland",
+          "answer": "sometimes"
+        },
+        {
+          "type": "translation",
+          "prompt": "en sol",
+          "answer": "sun"
+        },
+        {
+          "type": "translation",
+          "prompt": "en vind",
+          "answer": "wind"
+        },
+        {
+          "type": "translation",
+          "prompt": "regn",
+          "answer": "rain"
+        },
+        {
+          "type": "translation",
+          "prompt": "snö",
+          "answer": "snow"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett moln",
+          "answer": "cloud"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett väder",
+          "answer": "weather"
+        },
+        {
+          "type": "translation",
+          "prompt": "det regnar",
+          "answer": "it's raining",
+          "accepted_answers": [
+            "it is raining"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "det snöar",
+          "answer": "it's snowing",
+          "accepted_answers": [
+            "it is snowing"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag vaknar klockan sju.",
+          "answer": "I wake up at seven o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hon går upp tidigt.",
+          "answer": "She gets up early."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag duschar på morgonen.",
+          "answer": "I shower in the morning.",
+          "accepted_answers": [
+            "I take a shower in the morning."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vi går och lägger oss klockan tio.",
+          "answer": "We go to bed at ten o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag går till jobbet klockan åtta.",
+          "answer": "I go to work at eight o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Det regnar mycket idag.",
+          "answer": "It's raining a lot today.",
+          "accepted_answers": [
+            "It is raining a lot today."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Det snöar på vintern.",
+          "answer": "It snows in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Solen skiner.",
+          "answer": "The sun is shining."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ibland äter jag på restaurang.",
+          "answer": "Sometimes I eat at a restaurant."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's raining.",
+          "answer": "Det regnar."
+        },
+        {
+          "type": "translation",
+          "prompt": "Han kommer alltid för sent.",
+          "answer": "He is always late.",
+          "accepted_answers": [
+            "He always arrives late."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vinden blåser hårt.",
+          "answer": "The wind is blowing hard."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to wake up':",
+          "options": [
+            "vakna",
+            "gå upp",
+            "duscha",
+            "gå och lägga sig"
+          ],
+          "answer": "vakna"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'to get up':",
+          "options": [
+            "gå upp",
+            "vakna",
+            "gå och lägga sig",
+            "duscha"
+          ],
+          "answer": "gå upp"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'always':",
+          "options": [
+            "alltid",
+            "ofta",
+            "ibland",
+            "idag"
+          ],
+          "answer": "alltid"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'often':",
+          "options": [
+            "ofta",
+            "alltid",
+            "ibland",
+            "idag"
+          ],
+          "answer": "ofta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sun':",
+          "options": [
+            "en sol",
+            "en vind",
+            "regn",
+            "snö"
+          ],
+          "answer": "en sol"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'rain':",
+          "options": [
+            "regn",
+            "snö",
+            "en vind",
+            "en sol"
+          ],
+          "answer": "regn"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'it's raining':",
+          "options": [
+            "det regnar",
+            "det snöar",
+            "en sol",
+            "ett väder"
+          ],
+          "answer": "det regnar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'job':",
+          "options": [
+            "ett jobb",
+            "ett hus",
+            "en stad",
+            "en park"
+          ],
+          "answer": "ett jobb"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag går och lägger ___.",
+          "answer": "mig"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hon lägger ___ tidigt.",
+          "answer": "sig"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vi lägger ___ klockan tio.",
+          "answer": "oss"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De lägger ___ sent.",
+          "answer": "sig"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Det ___ mycket idag.",
+          "answer": "regnar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Det ___ på vintern.",
+          "answer": "snöar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vädret är ___ idag.",
+          "answer": "bra"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag ___ klockan sju.",
+          "answer": "vaknar"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Shopping and Travel",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "tjugo",
+          "translation": "twenty",
+          "pos": "number",
+          "example": "Boken kostar tjugo kronor."
+        },
+        {
+          "word": "trettio",
+          "translation": "thirty",
+          "pos": "number",
+          "example": "Han är trettio år."
+        },
+        {
+          "word": "fyrtio",
+          "translation": "forty",
+          "pos": "number",
+          "example": "Resväskan kostar fyrtio kronor."
+        },
+        {
+          "word": "femtio",
+          "translation": "fifty",
+          "pos": "number",
+          "example": "Jag har femtio kronor."
+        },
+        {
+          "word": "sextio",
+          "translation": "sixty",
+          "pos": "number",
+          "example": "Tåget kostar sextio kronor."
+        },
+        {
+          "word": "hundra",
+          "translation": "hundred",
+          "pos": "number",
+          "example": "Hundra kronor är dyrt."
+        },
+        {
+          "word": "pengar",
+          "translation": "money",
+          "pos": "noun",
+          "example": "Jag har inga pengar."
+        },
+        {
+          "word": "dyr",
+          "translation": "expensive",
+          "accepted_translations": [
+            "dear"
+          ],
+          "pos": "adjective",
+          "example": "Denna rock är dyr."
+        },
+        {
+          "word": "billig",
+          "translation": "cheap",
+          "pos": "adjective",
+          "example": "Denna bok är billig."
+        },
+        {
+          "word": "köpa",
+          "translation": "to buy",
+          "pos": "verb",
+          "example": "Jag vill köpa en resväska."
+        },
+        {
+          "word": "en butik",
+          "translation": "shop",
+          "accepted_translations": [
+            "store"
+          ],
+          "pos": "noun",
+          "example": "Butiken är stängd."
+        },
+        {
+          "word": "ett tåg",
+          "translation": "train",
+          "pos": "noun",
+          "example": "Tåget kommer klockan åtta."
+        },
+        {
+          "word": "en buss",
+          "translation": "bus",
+          "pos": "noun",
+          "example": "Jag tar bussen."
+        },
+        {
+          "word": "ett hotell",
+          "translation": "hotel",
+          "pos": "noun",
+          "example": "Vi sover på hotellet."
+        },
+        {
+          "word": "en resväska",
+          "translation": "suitcase",
+          "pos": "noun",
+          "example": "Min resväska är tung."
+        },
+        {
+          "word": "en biljett",
+          "translation": "ticket",
+          "pos": "noun",
+          "example": "En biljett till Stockholm, tack."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "tjugo",
+          "answer": "twenty"
+        },
+        {
+          "type": "translation",
+          "prompt": "trettio",
+          "answer": "thirty"
+        },
+        {
+          "type": "translation",
+          "prompt": "fyrtio",
+          "answer": "forty"
+        },
+        {
+          "type": "translation",
+          "prompt": "femtio",
+          "answer": "fifty"
+        },
+        {
+          "type": "translation",
+          "prompt": "sextio",
+          "answer": "sixty"
+        },
+        {
+          "type": "translation",
+          "prompt": "hundra",
+          "answer": "hundred"
+        },
+        {
+          "type": "translation",
+          "prompt": "pengar",
+          "answer": "money"
+        },
+        {
+          "type": "translation",
+          "prompt": "dyr",
+          "answer": "expensive",
+          "accepted_answers": [
+            "dear"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "billig",
+          "answer": "cheap"
+        },
+        {
+          "type": "translation",
+          "prompt": "köpa",
+          "answer": "to buy"
+        },
+        {
+          "type": "translation",
+          "prompt": "en butik",
+          "answer": "shop",
+          "accepted_answers": [
+            "store"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "ett tåg",
+          "answer": "train"
+        },
+        {
+          "type": "translation",
+          "prompt": "en buss",
+          "answer": "bus"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett hotell",
+          "answer": "hotel"
+        },
+        {
+          "type": "translation",
+          "prompt": "en resväska",
+          "answer": "suitcase"
+        },
+        {
+          "type": "translation",
+          "prompt": "en biljett",
+          "answer": "ticket"
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag vill köpa en resväska.",
+          "answer": "I want to buy a suitcase."
+        },
+        {
+          "type": "translation",
+          "prompt": "Denna bok kostar tjugo kronor.",
+          "answer": "This book costs twenty kronor."
+        },
+        {
+          "type": "translation",
+          "prompt": "En biljett till Stockholm, tack.",
+          "answer": "A ticket to Stockholm, please."
+        },
+        {
+          "type": "translation",
+          "prompt": "Tåget kommer klockan åtta.",
+          "answer": "The train arrives at eight o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag tar bussen.",
+          "answer": "I'm taking the bus.",
+          "accepted_answers": [
+            "I take the bus."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vi sover på hotellet.",
+          "answer": "We're sleeping at the hotel.",
+          "accepted_answers": [
+            "We are sleeping at the hotel."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Denna rock är för dyr.",
+          "answer": "This coat is too expensive."
+        },
+        {
+          "type": "translation",
+          "prompt": "Butiken öppnar klockan nio.",
+          "answer": "The shop opens at nine o'clock."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag har femtio kronor.",
+          "answer": "I have fifty kronor."
+        },
+        {
+          "type": "translation",
+          "prompt": "How much is the ticket?",
+          "answer": "Vad kostar biljetten?"
+        },
+        {
+          "type": "translation",
+          "prompt": "The suitcase is cheap.",
+          "answer": "Resväskan är billig."
+        },
+        {
+          "type": "translation",
+          "prompt": "I have no money.",
+          "answer": "Jag har inga pengar."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'twenty':",
+          "options": [
+            "tjugo",
+            "trettio",
+            "fyrtio",
+            "femtio"
+          ],
+          "answer": "tjugo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'forty':",
+          "options": [
+            "fyrtio",
+            "trettio",
+            "tjugo",
+            "sextio"
+          ],
+          "answer": "fyrtio"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sixty':",
+          "options": [
+            "sextio",
+            "femtio",
+            "fyrtio",
+            "hundra"
+          ],
+          "answer": "sextio"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hundred':",
+          "options": [
+            "hundra",
+            "sextio",
+            "femtio",
+            "tjugo"
+          ],
+          "answer": "hundra"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'expensive':",
+          "options": [
+            "dyr",
+            "ny",
+            "gammal",
+            "lätt"
+          ],
+          "answer": "dyr"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'shop':",
+          "options": [
+            "en butik",
+            "ett hotell",
+            "en marknad",
+            "en restaurang"
+          ],
+          "answer": "en butik"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'suitcase':",
+          "options": [
+            "en resväska",
+            "en biljett",
+            "en buss",
+            "ett tåg"
+          ],
+          "answer": "en resväska"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hotel':",
+          "options": [
+            "ett hotell",
+            "en butik",
+            "en skola",
+            "ett hus"
+          ],
+          "answer": "ett hotell"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vad ___ boken?",
+          "answer": "kostar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag vill ___ en resväska.",
+          "answer": "köpa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tio, tjugo, trettio, ___.",
+          "answer": "fyrtio"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tjugo och trettio blir ___.",
+          "answer": "femtio"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Femtio och femtio blir ___.",
+          "answer": "hundra"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tjugo, ___, fyrtio.",
+          "answer": "trettio"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag har inga ___.",
+          "answer": "pengar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tåget kommer klockan ___.",
+          "answer": "åtta"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Yesterday and Tomorrow",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "en sommar",
+          "translation": "summer",
+          "pos": "noun",
+          "example": "På sommaren är det varmt."
+        },
+        {
+          "word": "en vinter",
+          "translation": "winter",
+          "pos": "noun",
+          "example": "På vintern snöar det."
+        },
+        {
+          "word": "en vår",
+          "translation": "spring",
+          "pos": "noun",
+          "example": "På våren blommar blommorna."
+        },
+        {
+          "word": "en höst",
+          "translation": "autumn",
+          "accepted_translations": [
+            "fall"
+          ],
+          "pos": "noun",
+          "example": "På hösten regnar det ofta."
+        },
+        {
+          "word": "januari",
+          "translation": "January",
+          "pos": "noun",
+          "example": "Januari är den första månaden."
+        },
+        {
+          "word": "mars",
+          "translation": "March",
+          "pos": "noun",
+          "example": "I mars börjar våren."
+        },
+        {
+          "word": "juni",
+          "translation": "June",
+          "pos": "noun",
+          "example": "I juni börjar sommaren."
+        },
+        {
+          "word": "juli",
+          "translation": "July",
+          "pos": "noun",
+          "example": "Min födelsedag är i juli."
+        },
+        {
+          "word": "september",
+          "translation": "September",
+          "pos": "noun",
+          "example": "Skolan börjar i september."
+        },
+        {
+          "word": "december",
+          "translation": "December",
+          "pos": "noun",
+          "example": "Julen är i december."
+        },
+        {
+          "word": "förra veckan",
+          "translation": "last week",
+          "pos": "phrase",
+          "example": "Förra veckan arbetade jag mycket."
+        },
+        {
+          "word": "nästa vecka",
+          "translation": "next week",
+          "pos": "phrase",
+          "example": "Nästa vecka reser jag."
+        },
+        {
+          "word": "förra året",
+          "translation": "last year",
+          "pos": "phrase",
+          "example": "Förra året var vi i Rom."
+        },
+        {
+          "word": "nästa år",
+          "translation": "next year",
+          "pos": "phrase",
+          "example": "Nästa år köper jag en bil."
+        },
+        {
+          "word": "en födelsedag",
+          "translation": "birthday",
+          "pos": "noun",
+          "example": "Min födelsedag är i juli."
+        },
+        {
+          "word": "en månad",
+          "translation": "month",
+          "pos": "noun",
+          "example": "Året har tolv månader."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "en sommar",
+          "answer": "summer"
+        },
+        {
+          "type": "translation",
+          "prompt": "en vinter",
+          "answer": "winter"
+        },
+        {
+          "type": "translation",
+          "prompt": "en vår",
+          "answer": "spring"
+        },
+        {
+          "type": "translation",
+          "prompt": "en höst",
+          "answer": "autumn",
+          "accepted_answers": [
+            "fall"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "januari",
+          "answer": "January"
+        },
+        {
+          "type": "translation",
+          "prompt": "mars",
+          "answer": "March"
+        },
+        {
+          "type": "translation",
+          "prompt": "juni",
+          "answer": "June"
+        },
+        {
+          "type": "translation",
+          "prompt": "juli",
+          "answer": "July"
+        },
+        {
+          "type": "translation",
+          "prompt": "september",
+          "answer": "September"
+        },
+        {
+          "type": "translation",
+          "prompt": "december",
+          "answer": "December"
+        },
+        {
+          "type": "translation",
+          "prompt": "förra veckan",
+          "answer": "last week"
+        },
+        {
+          "type": "translation",
+          "prompt": "nästa vecka",
+          "answer": "next week"
+        },
+        {
+          "type": "translation",
+          "prompt": "förra året",
+          "answer": "last year"
+        },
+        {
+          "type": "translation",
+          "prompt": "nästa år",
+          "answer": "next year"
+        },
+        {
+          "type": "translation",
+          "prompt": "en födelsedag",
+          "answer": "birthday"
+        },
+        {
+          "type": "translation",
+          "prompt": "en månad",
+          "answer": "month"
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag ska äta pizza ikväll.",
+          "answer": "I'm going to eat pizza tonight.",
+          "accepted_answers": [
+            "I am going to eat pizza tonight."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vi ska resa nästa vecka.",
+          "answer": "We're going to travel next week.",
+          "accepted_answers": [
+            "We are going to travel next week."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hon ska köpa en bil nästa år.",
+          "answer": "She's going to buy a car next year.",
+          "accepted_answers": [
+            "She is going to buy a car next year."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "På sommaren är det varmt.",
+          "answer": "In summer it's warm."
+        },
+        {
+          "type": "translation",
+          "prompt": "På vintern snöar det.",
+          "answer": "It snows in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Min födelsedag är i juli.",
+          "answer": "My birthday is in July."
+        },
+        {
+          "type": "translation",
+          "prompt": "Januari är den första månaden på året.",
+          "answer": "January is the first month of the year."
+        },
+        {
+          "type": "translation",
+          "prompt": "We're going to watch a film.",
+          "answer": "Vi ska se en film."
+        },
+        {
+          "type": "translation",
+          "prompt": "I'm going to work tomorrow.",
+          "answer": "Jag ska arbeta imorgon."
+        },
+        {
+          "type": "translation",
+          "prompt": "Förra året var vi i Rom.",
+          "answer": "Last year we were in Rome."
+        },
+        {
+          "type": "translation",
+          "prompt": "Julen är i december.",
+          "answer": "Christmas is in December."
+        },
+        {
+          "type": "translation",
+          "prompt": "Förra veckan arbetade jag mycket.",
+          "answer": "I worked a lot last week."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'summer':",
+          "options": [
+            "en sommar",
+            "en vinter",
+            "en vår",
+            "en höst"
+          ],
+          "answer": "en sommar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'winter':",
+          "options": [
+            "en vinter",
+            "en sommar",
+            "en vår",
+            "en höst"
+          ],
+          "answer": "en vinter"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'spring':",
+          "options": [
+            "en vår",
+            "en höst",
+            "en sommar",
+            "en vinter"
+          ],
+          "answer": "en vår"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'autumn':",
+          "options": [
+            "en höst",
+            "en vår",
+            "en sommar",
+            "en vinter"
+          ],
+          "answer": "en höst"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'July':",
+          "options": [
+            "juli",
+            "juni",
+            "mars",
+            "januari"
+          ],
+          "answer": "juli"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'December':",
+          "options": [
+            "december",
+            "september",
+            "januari",
+            "mars"
+          ],
+          "answer": "december"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'next week':",
+          "options": [
+            "nästa vecka",
+            "förra veckan",
+            "nästa år",
+            "förra året"
+          ],
+          "answer": "nästa vecka"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'last year':",
+          "options": [
+            "förra året",
+            "nästa år",
+            "förra veckan",
+            "nästa vecka"
+          ],
+          "answer": "förra året"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag ___ resa nästa vecka.",
+          "answer": "ska"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vi ___ se en film.",
+          "answer": "ska"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag ska ___ en bok.",
+          "answer": "läsa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hon ska ___ en bil.",
+          "answer": "köpa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "På vintern ___ det.",
+          "answer": "snöar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "På hösten ___ det ofta.",
+          "answer": "regnar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Julen är i ___.",
+          "answer": "december"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Förra ___ var vi i Rom.",
+          "answer": "året"
+        }
+      ]
     }
   ]
 }
