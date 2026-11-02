@@ -766,13 +766,20 @@ fn shipped_courses_validate() {
             .join("languages")
             .join(lang)
             .join("stages.json");
+        // the course files grow over time (the stages 6-10 wave, and
+        // whatever comes after it), so the expected stage count is
+        // read from the file itself: `check` must report exactly what
+        // is on disk, and every shipped course must still validate
+        let stages = std::fs::read_to_string(&path).expect("read course file");
+        let parsed: serde_json::Value = serde_json::from_str(&stages).expect("parse course file");
+        let expected = parsed["stages"].as_array().expect("stages array").len();
         let out = termocab(&scratch)
             .args(["check", path.to_str().unwrap()])
             .output()
             .unwrap();
         assert!(out.status.success(), "{lang}: {}", stderr(&out));
         assert!(
-            stdout(&out).contains("ok: 5 stage(s)"),
+            stdout(&out).contains(&format!("ok: {expected} stage(s)")),
             "{lang}: {}",
             stdout(&out)
         );
