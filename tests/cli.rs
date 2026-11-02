@@ -421,6 +421,244 @@ fn content_dir_override_beats_the_installed_location() {
     assert!(stdout(&out).contains("0/1 stage(s) complete"));
 }
 
+/// D16, the reported fresh-install failure: a built binary run from a
+/// directory that holds no content — not the repo, not the data dir,
+/// nothing installed — must still find the shipped courses compiled
+/// into it. `termocab start french` was the README's first command and
+/// it failed exactly here.
+#[test]
+fn builtin_courses_work_with_zero_setup() {
+    let scratch = Scratch::new("builtin");
+    // stage counts come from the course files themselves — the wave
+    // convention (the count-agnostic rule of shipped_courses_validate)
+    let course_stages = |lang: &str| -> usize {
+        let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("languages")
+            .join(lang)
+            .join("stages.json");
+        let text = std::fs::read_to_string(&path).expect("course file");
+        let parsed: serde_json::Value = serde_json::from_str(&text).expect("parse course");
+        parsed["stages"].as_array().expect("stages").len()
+    };
+    // no add-lang, no TERMOCAB_CONTENT_DIR, empty cwd: only the binary
+    for lang in [
+        "french",
+        "spanish",
+        "german",
+        "italian",
+        "polish",
+        "romanian",
+        "portuguese",
+        "swedish",
+        "hungarian",
+        "turkish",
+    ] {
+        let out = termocab(&scratch)
+            .args(["progress", lang])
+            .output()
+            .unwrap();
+        assert!(out.status.success(), "{lang}: {}", stderr(&out));
+        let text = stdout(&out);
+        assert!(
+            text.contains(&format!("0/{} stage(s) complete", course_stages(lang))),
+            "{lang}: {text}"
+        );
+        assert!(text.contains("[ ] Stage 1"), "{lang}: {text}");
+        assert!(text.contains("next up: stage 1"), "{lang}: {text}");
+    }
+}
+
+/// The exact command from the fresh-install report: `start french` from
+/// an empty directory. The stage must open (content found via the
+/// built-in), the closed stdin must abort the run, and the aborted run
+/// must save nothing — the same EOF rules as any stage.
+#[test]
+fn start_on_a_builtin_course_runs_from_any_directory() {
+    let scratch = Scratch::new("builtin-start");
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "french"]);
+    let out = feed(&mut cmd, ""); // immediate EOF, like </dev/null
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("— Stage 1: Greetings and Basics —"), "{text}");
+    assert!(
+        text.contains("input closed — stopping this stage."),
+        "{text}"
+    );
+    // aborted run, nothing written
+    assert!(!scratch
+        .home()
+        .join(".config/termocab/progress/french.txt")
+        .exists());
+}
+
+/// list-langs — the discovery verb: every available language, its size,
+/// and the source it resolves from. Built-ins say so; installed files
+/// show where they live; an installed file shadows the built-in course
+/// of the same name (the D16 override story, end to end).
+#[test]
+fn list_langs_shows_builtins_installed_and_overrides() {
+    let scratch = Scratch::new("listlangs");
+    let row_for = |text: &str, lang: &str| -> String {
+        text.lines()
+            .find(|l| l.starts_with(lang))
+            .unwrap_or_else(|| panic!("no {lang} row in:\n{text}"))
+            .to_string()
+    };
+
+    // fresh: the ten shipped courses, all built-in, with real sizes
+    // read from the same files `check` pins (count-agnostic)
+    let out = termocab(&scratch).args(["list-langs"]).output().unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    for lang in [
+        "french",
+        "spanish",
+        "german",
+        "italian",
+        "polish",
+        "romanian",
+        "portuguese",
+        "swedish",
+        "hungarian",
+        "turkish",
+    ] {
+        let stages = std::fs::read_to_string(
+            PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+                .join("languages")
+                .join(lang)
+                .join("stages.json"),
+        )
+        .expect("course file");
+        let parsed: serde_json::Value = serde_json::from_str(&stages).expect("parse course");
+        let stage_count = parsed["stages"].as_array().expect("stages").len();
+        let word_count: usize = parsed["stages"]
+            .as_array()
+            .expect("stages")
+            .iter()
+            .map(|s| s["vocabulary"].as_array().map_or(0, Vec::len))
+            .sum();
+        let row = row_for(&text, lang);
+        assert!(row.ends_with("built-in"), "{lang}: {row}");
+        assert!(
+            row.contains(&format!("{stage_count} stage(s), {word_count} word(s)")),
+            "{lang}: {row}"
+        );
+    }
+    assert!(
+        !text.contains("termocab/languages"),
+        "nothing installed yet, no directory should show: {text}"
+    );
+
+    // an installed custom language shows its directory
+    install_course(&scratch);
+    let out = termocab(&scratch).args(["list-langs"]).output().unwrap();
+    let text = stdout(&out);
+    let installed_path = scratch
+        .home()
+        .join(".local/share/termocab/languages/test")
+        .display()
+        .to_string();
+    let row = row_for(&text, "test");
+    assert!(row.contains("2 stage(s), 2 word(s)"), "{row}");
+    assert!(row.ends_with(&installed_path), "{row}");
+
+    // installing a course over a built-in name: the note says so, the
+    // listing flips to the installed copy, and the loader follows it
+    let course = r#"{ "language": "french", "stages": [
+         { "id": 1, "title": "Mini", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "bonjour", "translation": "hello", "pos": "x", "example": "Bonjour !" }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "bonjour", "answer": "hello" }
+            ] }
+       ] }"#;
+    let file = scratch.stages_file("mini-french.json", course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "french", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+    assert!(
+        stdout(&out).contains("takes precedence over the built-in 'french' course"),
+        "{}",
+        stdout(&out)
+    );
+
+    let out = termocab(&scratch).args(["list-langs"]).output().unwrap();
+    let text = stdout(&out);
+    let row = row_for(&text, "french");
+    assert!(row.contains("1 stage(s), 1 word(s)"), "{row}");
+    assert!(
+        row.ends_with(
+            &scratch
+                .home()
+                .join(".local/share/termocab/languages/french")
+                .display()
+                .to_string()
+        ),
+        "{row}"
+    );
+
+    let out = termocab(&scratch)
+        .args(["progress", "french"])
+        .output()
+        .unwrap();
+    assert!(
+        stdout(&out).contains("0/1 stage(s) complete"),
+        "the installed copy wins over the built-in: {}",
+        stdout(&out)
+    );
+}
+
+/// The missing-language error is a directory of what to run instead:
+/// the directories searched, everything available, and a suggestion
+/// for the near-miss (D16's friendlier face).
+#[test]
+fn missing_language_error_lists_available_and_suggests() {
+    let scratch = Scratch::new("missing");
+    let out = termocab(&scratch)
+        .args(["progress", "klingon"])
+        .output()
+        .unwrap();
+    assert_eq!(out.status.code(), Some(1));
+    let err = stderr(&out);
+    assert!(err.contains("no content for language 'klingon'"), "{err}");
+    assert!(err.contains("available languages:"), "{err}");
+    assert!(err.contains("french"), "{err}");
+    assert!(err.contains("termocab list-langs"), "{err}");
+    assert!(!err.contains("did you mean"), "{err}");
+
+    // the typo case suggests the fix, runnable as printed
+    let out = termocab(&scratch)
+        .args(["progress", "frensh"])
+        .output()
+        .unwrap();
+    assert_eq!(out.status.code(), Some(1));
+    let err = stderr(&out);
+    assert!(err.contains("did you mean 'french'?"), "{err}");
+    assert!(err.contains("termocab start french"), "{err}");
+}
+
+/// --version / -V print the package version; extra arguments are a
+/// usage error, the same arity rule as `help`.
+#[test]
+fn version_flag_prints_the_package_version() {
+    let scratch = Scratch::new("version");
+    for flag in ["--version", "-V"] {
+        let out = termocab(&scratch).args([flag]).output().unwrap();
+        assert!(out.status.success(), "{flag}: {}", stderr(&out));
+        assert_eq!(
+            stdout(&out),
+            format!("termocab {}\n", env!("CARGO_PKG_VERSION")),
+            "{flag}"
+        );
+        let out = termocab(&scratch).args([flag, "junk"]).output().unwrap();
+        assert_eq!(out.status.code(), Some(2), "{flag} takes no arguments");
+    }
+}
+
 #[test]
 fn review_flows_end_to_end() {
     let scratch = Scratch::new("review");

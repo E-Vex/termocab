@@ -1,6 +1,6 @@
 //! CLI — git-style direct subcommands, hand-rolled from std::env::args().
 //!
-//! No CLI-parsing crate: with eight verbs and one optional flag, a match
+//! No CLI-parsing crate: with nine verbs and two flags, a match
 //! over the argument list is clearer than a dependency (§6 of the
 //! handoff). Verbs:
 //!   termocab start [--no-shuffle|--seed <n>] <lang> [stage]
@@ -8,6 +8,8 @@
 //!                                 exercises shuffle by default (D7)
 //!   termocab review <lang>          spaced-repetition review of due words
 //!   termocab list-words <lang>      all vocabulary in a language
+//!   termocab list-langs             every available language and where
+//!                                 each one comes from (D16)
 //!   termocab progress <lang>        completed stages + streak + due count
 //!   termocab streak <lang>          just the streak number
 //!   termocab stats <lang>           the learner's numbers + sparklines
@@ -45,15 +47,34 @@ usage: termocab <command> [args]
 commands:
   start [--no-shuffle|--seed <n>] <lang> [stage]
                             run the next uncompleted stage (or a specific one);
-                            exercises shuffle by default (D7)
+                            exercises shuffle by default
   review <lang>            review due vocabulary with spaced repetition
   list-words <lang>         list all vocabulary in a language's stages
+  list-langs                list available languages and where each comes from
   progress <lang>           show completed stages, streak and due reviews
   streak <lang>             print the current streak in days
   stats <lang>              words, Leitner boxes and 14-day charts as sparklines
   add-lang [--force] <lang> <file>  install a stages.json file as a new language
   check <file>              validate a stages.json file without installing it
-  help                      show this help";
+  help                      show this help
+
+options:
+  --version                 print the version";
+
+/// The usage text plus the built-in courses line, generated from the
+/// embedded course list so it can never drift from what actually ships
+/// (D16) — an eleventh language updates this line by existing.
+fn usage_text() -> String {
+    let names: Vec<&str> = content::builtin_languages()
+        .iter()
+        .map(|(name, _)| *name)
+        .collect();
+    format!(
+        "{USAGE}\n\ncourses built into this binary: {} — 'termocab list-langs' \
+         shows every language available on this machine, including your own.",
+        names.join(", ")
+    )
+}
 
 /// Everything that can end a termocab run early. Carries the exit code,
 /// so `main` decides once how to report and exit — no `process::exit`
@@ -316,18 +337,24 @@ pub fn run(args: &[String]) -> Result<(), CliError> {
 /// [`run`] with the clock injected — the seam tests use.
 fn run_with(args: &[String], clock: &dyn Clock) -> Result<(), CliError> {
     let Some((cmd, rest)) = args.split_first() else {
-        say(USAGE)?;
+        say(&usage_text())?;
         return Ok(());
     };
     match cmd.as_str() {
         "help" | "--help" | "-h" => {
             expect_no_args(rest, "help")?;
-            say(USAGE)?;
+            say(&usage_text())?;
+            Ok(())
+        }
+        "--version" | "-V" => {
+            expect_no_args(rest, "--version")?;
+            say(&format!("termocab {}", env!("CARGO_PKG_VERSION")))?;
             Ok(())
         }
         "start" => start(rest, clock),
         "review" => review(rest, clock),
         "list-words" => list_words(rest),
+        "list-langs" => list_langs(rest),
         "progress" => progress(rest, clock),
         "streak" => streak(rest, clock),
         "stats" => stats(rest, clock),
@@ -566,6 +593,162 @@ fn list_words(rest: &[String]) -> Result<(), CliError> {
     Ok(())
 }
 
+/// Where a listed language's content comes from — the last column of
+/// `list-langs`, and the honest answer to "why does my edit do
+/// nothing": the winning source is shown, not every candidate.
+#[derive(Debug, Clone, PartialEq, Eq)]
+enum LanguageSource {
+    /// A stages.json in one of the candidate directories (D2) — the
+    /// override dir, the XDG data location, or a checkout's ./languages.
+    Dir(PathBuf),
+    /// Compiled into the binary (D16).
+    Builtin,
+}
+
+/// One row of `list-langs`: a language name, the source it resolves
+/// from, and — when the content actually loads — its size.
+#[derive(Debug, Clone)]
+struct LanguageListing {
+    name: String,
+    source: LanguageSource,
+    /// `(stages, words)` once loaded; `None` when the content is broken
+    /// or the directory name is not even a valid language id — the row
+    /// still lists, with the reason instead of the counts.
+    size: Option<(usize, usize)>,
+    /// The reason `size` is `None`, shown instead of counts.
+    problem: Option<String>,
+}
+
+/// Every language this run can see, alphabetically, one entry per name:
+/// the candidate directories (D2) in lookup order — first hit wins, the
+/// same rule `start` follows — then the built-in courses (D16) for any
+/// name not already found on disk. Unreadable or missing directories
+/// contribute nothing; a directory whose name could never be a language
+/// id still lists, flagged, because that is exactly the install nobody
+/// can find.
+fn available_languages() -> Vec<LanguageListing> {
+    let mut found: std::collections::BTreeMap<String, LanguageSource> =
+        std::collections::BTreeMap::new();
+    for dir in content_dirs() {
+        let Ok(entries) = std::fs::read_dir(&dir) else {
+            continue; // not there or not readable — nothing to list
+        };
+        for entry in entries.flatten() {
+            let has_stages = entry.path().join("stages.json").is_file();
+            if !has_stages {
+                continue;
+            }
+            let Some(name) = entry.file_name().into_string().ok() else {
+                continue; // not UTF-8 — cannot be typed as a language anyway
+            };
+            found
+                .entry(name)
+                .or_insert_with(|| LanguageSource::Dir(entry.path()));
+        }
+    }
+    for (name, _) in content::builtin_languages() {
+        found
+            .entry((*name).to_string())
+            .or_insert(LanguageSource::Builtin);
+    }
+    found
+        .into_iter()
+        .map(|(name, source)| {
+            // Load each listing so `list-langs` reports real sizes —
+            // and flags broken content instead of hiding it.
+            let listing = LanguageListing {
+                size: None,
+                problem: None,
+                name: name.clone(),
+                source,
+            };
+            let Ok(lang) = LangId::parse(&name) else {
+                return LanguageListing {
+                    problem: Some("unusable name (needs a-z, 0-9, '-' or '_')".into()),
+                    ..listing
+                };
+            };
+            let loaded = match &listing.source {
+                LanguageSource::Dir(dir) => {
+                    content::load_language(dir.join("stages.json"), Some(&lang))
+                }
+                LanguageSource::Builtin => {
+                    content::load_builtin(&lang).expect("a built-in source always has the course")
+                }
+            };
+            match loaded {
+                Ok(content) => {
+                    let words = content.stages.iter().map(|s| s.vocabulary.len()).sum();
+                    LanguageListing {
+                        size: Some((content.stages.len(), words)),
+                        ..listing
+                    }
+                }
+                // The violations are multi-line; the row stays one line
+                // and the trailing note says how to see them.
+                Err(_) => LanguageListing {
+                    problem: Some("invalid content".into()),
+                    ..listing
+                },
+            }
+        })
+        .collect()
+}
+
+/// list-langs — the discovery verb: every available language, its size,
+/// and where it resolves from. The answer to the fresh-install question
+/// "what can I even start?", in plain text.
+fn list_langs(rest: &[String]) -> Result<(), CliError> {
+    expect_no_args(rest, "list-langs")?;
+    let listings = available_languages();
+    if listings.is_empty() {
+        // Unreachable while any course ships built-in (D16) — kept for
+        // the day the list is empty on purpose.
+        say("no languages available — add one with: termocab add-lang <lang> <stages.json>")?;
+        return Ok(());
+    }
+    let name_width = listings.iter().map(|l| l.name.len()).max().unwrap_or(0);
+    let detail_width = listings
+        .iter()
+        .map(|l| size_text(l).len())
+        .max()
+        .unwrap_or(0);
+    for listing in &listings {
+        say(&format!(
+            "{:<name_width$}  {:<detail_width$}  {}",
+            listing.name,
+            size_text(listing),
+            source_text(&listing.source),
+        ))?;
+    }
+    if listings.iter().any(|l| l.problem.is_some()) {
+        say("a language with a problem cannot be started — \
+             'termocab check <file>' on its stages.json explains why.")?;
+    }
+    Ok(())
+}
+
+/// The size column: counts when the content loads, the problem when it
+/// does not.
+fn size_text(listing: &LanguageListing) -> String {
+    if let Some(problem) = &listing.problem {
+        return problem.clone();
+    }
+    let (stages, words) = listing
+        .size
+        .expect("a listing without a problem has a size");
+    format!("{stages} stage(s), {words} word(s)")
+}
+
+/// The source column: the built-ins say so; a directory shows its path,
+/// exactly where the content is being read from.
+fn source_text(source: &LanguageSource) -> String {
+    match source {
+        LanguageSource::Builtin => "built-in".to_string(),
+        LanguageSource::Dir(dir) => dir.display().to_string(),
+    }
+}
+
 /// progress <lang> — completed stages, current streak, due reviews.
 fn progress(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
     let lang = expect_lang(rest, "progress")?;
@@ -742,8 +925,19 @@ fn add_lang(rest: &[String]) -> Result<(), CliError> {
     std::fs::copy(src, &dest)
         .map_err(|e| runtime(format!("could not install language file: {e}")))?;
     let verb = if replacing { "replaced" } else { "added" };
+    // Installing over a shipped course is legal and intended (D16: the
+    // installed copy takes precedence) — but it deserves a note, so
+    // nobody wonders later why their french no longer matches the docs.
+    let over_builtin = if content::builtin_text(&lang).is_some() {
+        format!(
+            " — this installed copy now takes precedence over the \
+             built-in '{lang}' course"
+        )
+    } else {
+        String::new()
+    };
     say(&format!(
-        "{verb} language '{lang}' — {} stage(s) installed at {}",
+        "{verb} language '{lang}' — {} stage(s) installed at {}{over_builtin}",
         loaded.stages.len(),
         dest.display()
     ))?;
@@ -751,21 +945,98 @@ fn add_lang(rest: &[String]) -> Result<(), CliError> {
 }
 
 fn load_lang(lang: &LangId) -> Result<Vec<crate::engine::Stage>, CliError> {
-    let Some(path) = stages_path(lang) else {
-        let searched = content_dirs()
-            .into_iter()
-            .map(|dir| dir.display().to_string())
-            .collect::<Vec<_>>()
-            .join(", ");
-        return Err(runtime(format!(
-            "no content for language '{lang}' (searched: {searched}). \
-             add one with: termocab add-lang {lang} <stages.json>"
-        )));
-    };
-    match content::load_language(&path, Some(lang)) {
-        Ok(loaded) => Ok(loaded.stages),
-        Err(e) => Err(runtime(format!("{lang}: {e}"))),
+    // The lookup chain, first hit wins: candidate dirs (D2), then the
+    // courses compiled into the binary (D16). Built-ins are the last
+    // resort so an installed binary works from any directory with zero
+    // setup — and so an installed file, an override dir or a dev
+    // checkout still takes precedence over what ships.
+    if let Some(path) = stages_path(lang) {
+        return match content::load_language(&path, Some(lang)) {
+            Ok(loaded) => Ok(loaded.stages),
+            Err(e) => Err(runtime(format!("{lang}: {e}"))),
+        };
     }
+    match content::load_builtin(lang) {
+        Some(Ok(loaded)) => Ok(loaded.stages),
+        Some(Err(e)) => Err(runtime(format!("{lang}: {e}"))),
+        None => Err(missing_language_error(lang)),
+    }
+}
+
+/// The no-content error, written for the learner who just wants to
+/// start something: where termocab looked, everything that IS
+/// available, a suggestion for the near-miss, and how to add your own.
+fn missing_language_error(lang: &LangId) -> CliError {
+    let searched = content_dirs()
+        .into_iter()
+        .map(|dir| dir.display().to_string())
+        .collect::<Vec<_>>()
+        .join(", ");
+    let available: Vec<String> = available_languages().into_iter().map(|l| l.name).collect();
+    let mut lines = vec![format!(
+        "no content for language '{lang}' — searched: {searched}"
+    )];
+    if !available.is_empty() {
+        lines.push(format!(
+            "available languages: {} ('termocab list-langs' shows where each comes from)",
+            available.join(", ")
+        ));
+    }
+    if let Some(suggestion) = did_you_mean(lang.as_str(), &available) {
+        lines.push(format!(
+            "did you mean '{suggestion}'? start it with: termocab start {suggestion}"
+        ));
+    }
+    lines.push(format!(
+        "add your own with: termocab add-lang {lang} <stages.json>"
+    ));
+    runtime(lines.join("\n"))
+}
+
+/// The closest available language to a name that matched nothing — the
+/// typo rescue. A name within two edits of one candidate, or a prefix
+/// of exactly one candidate, suggests that candidate; ties go to the
+/// alphabetically first. `None` when nothing is close enough to guess.
+fn did_you_mean(typed: &str, available: &[String]) -> Option<String> {
+    let mut best: Option<(usize, &String)> = None;
+    for candidate in available {
+        let distance = edit_distance(typed, candidate.as_str());
+        if distance > 2 {
+            continue;
+        }
+        if best.map_or(true, |(d, _)| distance < d) {
+            best = Some((distance, candidate));
+        }
+    }
+    if let Some((_, candidate)) = best {
+        return Some(candidate.clone());
+    }
+    // no near match — a prefix of exactly one candidate still points
+    // somewhere useful: "fre" -> "french"
+    let prefixed: Vec<&String> = available.iter().filter(|c| c.starts_with(typed)).collect();
+    match prefixed.as_slice() {
+        [only] => Some((*only).clone()),
+        _ => None,
+    }
+}
+
+/// Levenshtein distance over characters, the classic two-row form.
+/// Names are at most 32 characters ([`crate::lang::LangId`]), so the
+/// quadratic cost is trivial and no dependency is needed (§6).
+fn edit_distance(a: &str, b: &str) -> usize {
+    let a: Vec<char> = a.chars().collect();
+    let b: Vec<char> = b.chars().collect();
+    let mut previous: Vec<usize> = (0..=b.len()).collect();
+    let mut current = vec![0usize; b.len() + 1];
+    for (i, ca) in a.iter().enumerate() {
+        current[0] = i + 1;
+        for (j, cb) in b.iter().enumerate() {
+            let substitution = previous[j] + usize::from(ca != cb);
+            current[j + 1] = (current[j] + 1).min(previous[j + 1] + 1).min(substitution);
+        }
+        std::mem::swap(&mut previous, &mut current);
+    }
+    previous[b.len()]
 }
 
 /// check <file> — run the content validator on a stages.json file
@@ -830,6 +1101,7 @@ mod tests {
                 vec!["list-words", "french", "junk"],
                 "termocab list-words <lang>",
             ),
+            (vec!["list-langs", "french"], "termocab list-langs"),
             (
                 vec!["add-lang", "french"],
                 "termocab add-lang [--force] <lang> <file>",
@@ -1131,5 +1403,192 @@ mod tests {
             .map(|v| v.word.as_str())
             .collect();
         assert_eq!(words, vec!["bonjour", "merci"]);
+    }
+
+    #[test]
+    fn usage_text_lists_the_builtin_courses() {
+        // The trailing line is generated from the embedded list, so it
+        // names exactly what ships — an eleventh language updates it by
+        // existing (D16).
+        let text = usage_text();
+        assert!(text.contains("usage: termocab <command>"), "{text}");
+        assert!(text.contains("courses built into this binary:"), "{text}");
+        for (name, _) in content::builtin_languages() {
+            assert!(text.contains(name), "{name} missing from the usage text");
+        }
+    }
+
+    #[test]
+    fn version_takes_no_arguments() {
+        // The output itself is pinned by the binary-level test (a unit
+        // test cannot capture its own stdout); here only the arity.
+        let err = run(&args(&["--version", "extra"])).unwrap_err();
+        assert_eq!(err.exit_code(), 2);
+        assert!(err.message().contains("takes no arguments"));
+        let err = run(&args(&["-V", "extra"])).unwrap_err();
+        assert_eq!(err.exit_code(), 2);
+    }
+
+    #[test]
+    fn did_you_mean_suggests_near_misses_and_unique_prefixes() {
+        let available =
+            |langs: &[&str]| -> Vec<String> { langs.iter().map(|s| s.to_string()).collect() };
+        let langs = available(&["french", "german", "italian"]);
+        // one substitution away
+        assert_eq!(
+            did_you_mean("frensh", &langs).as_deref(),
+            Some("french"),
+            "the reported typo"
+        );
+        // two edits away still suggests
+        assert_eq!(did_you_mean("gemran", &langs).as_deref(), Some("german"));
+        // a prefix of exactly one candidate points at it
+        assert_eq!(did_you_mean("fre", &langs).as_deref(), Some("french"));
+        // nothing close, nothing prefixed
+        assert_eq!(did_you_mean("klingon", &langs), None);
+        // an ambiguous prefix is not a guess
+        let langs = available(&["spanish", "swedish"]);
+        assert_eq!(did_you_mean("s", &langs), None);
+        assert_eq!(did_you_mean("span", &langs).as_deref(), Some("spanish"));
+    }
+
+    #[test]
+    fn edit_distance_counts_the_classic_cases() {
+        assert_eq!(edit_distance("", ""), 0);
+        assert_eq!(edit_distance("french", "french"), 0);
+        assert_eq!(edit_distance("frensh", "french"), 1);
+        assert_eq!(edit_distance("kitten", "sitting"), 3);
+        assert_eq!(edit_distance("german", "germany"), 1);
+    }
+
+    #[test]
+    fn missing_language_error_names_what_is_available() {
+        // Under the env lock, from the crate root: ./languages holds the
+        // ten shipped courses, so the error must offer them — the exact
+        // fresh-install confusion D16 answers.
+        let _env = crate::testenv::env_lock();
+        let data = crate::testenv::TempDir::new("missing-data");
+        std::env::set_var("TERMOCAB_CONTENT_DIR", data.path());
+        let home = crate::testenv::TempDir::new("missing-home");
+        std::env::set_var("HOME", home.path());
+
+        let err = missing_language_error(&LangId::parse("klingon").unwrap());
+        assert_eq!(err.exit_code(), 1);
+        let msg = err.message();
+        assert!(msg.contains("no content for language 'klingon'"), "{msg}");
+        assert!(msg.contains("searched:"), "{msg}");
+        assert!(msg.contains("available languages:"), "{msg}");
+        assert!(msg.contains("french"), "{msg}");
+        assert!(!msg.contains("did you mean"), "{msg}");
+
+        // the typo case points at the fix
+        let err = missing_language_error(&LangId::parse("frensh").unwrap());
+        let msg = err.message();
+        assert!(msg.contains("did you mean 'french'?"), "{msg}");
+        assert!(
+            msg.contains("termocab start french"),
+            "the suggestion is runnable as-is: {msg}"
+        );
+    }
+
+    #[test]
+    fn listing_rows_show_sizes_problems_and_sources() {
+        let sized = LanguageListing {
+            name: "test".into(),
+            source: LanguageSource::Builtin,
+            size: Some((2, 5)),
+            problem: None,
+        };
+        assert_eq!(size_text(&sized), "2 stage(s), 5 word(s)");
+        assert_eq!(source_text(&sized.source), "built-in");
+
+        let broken = LanguageListing {
+            size: None,
+            problem: Some("invalid content".into()),
+            ..sized.clone()
+        };
+        assert_eq!(size_text(&broken), "invalid content");
+
+        let installed = LanguageListing {
+            source: LanguageSource::Dir(PathBuf::from("/x/termocab/languages/test")),
+            ..broken
+        };
+        assert_eq!(source_text(&installed.source), "/x/termocab/languages/test");
+    }
+
+    #[test]
+    fn available_languages_prefers_earlier_dirs_and_falls_back_to_builtins() {
+        // The listing rule mirrors the loader's (D2 then D16): a
+        // language found in an earlier candidate directory never shows
+        // its later duplicates, and a built-in appears only when no
+        // directory holds the language. Needs the env lock because the
+        // candidate list comes from the environment.
+        let _env = crate::testenv::env_lock();
+        let override_dir = crate::testenv::TempDir::new("list-override");
+        let data_dir = crate::testenv::TempDir::new("list-data");
+        std::env::set_var("TERMOCAB_CONTENT_DIR", override_dir.path());
+        std::env::set_var("XDG_DATA_HOME", data_dir.path());
+        // neutralize ./languages — but cwd cannot change under the test
+        // process safely, so assert on names that exist nowhere on disk
+        // plus one that exists in the override dir only, and on french,
+        // which the checkout's ./languages DOES hold: the rule to check
+        // is that the override wins over every later candidate,
+        // including ./languages, for a language they all carry.
+        let custom = override_dir.path().join("zulu");
+        std::fs::create_dir_all(&custom).unwrap();
+        std::fs::write(custom.join("stages.json"), one_word_course("zulu")).unwrap();
+        let shadow_french = override_dir.path().join("french");
+        std::fs::create_dir_all(&shadow_french).unwrap();
+        std::fs::write(shadow_french.join("stages.json"), one_word_course("french")).unwrap();
+
+        let listings = available_languages();
+        let by_name = |n: &str| listings.iter().find(|l| l.name == n);
+
+        let zulu = by_name("zulu").expect("zulu listed");
+        assert_eq!(
+            zulu.source,
+            LanguageSource::Dir(custom.clone()),
+            "the only holder wins"
+        );
+        assert_eq!(zulu.size, Some((1, 1)), "zulu's size is real: {zulu:?}");
+
+        // french: the override beats ./languages (same dir earlier in
+        // the chain) and the built-in — one row, the override's
+        let french = by_name("french").expect("french listed");
+        assert_eq!(
+            french.source,
+            LanguageSource::Dir(shadow_french.clone()),
+            "earlier directory wins over ./languages and the built-in"
+        );
+
+        // klingon ships nowhere: the built-ins fill only real names, and
+        // klingon is not among them
+        assert!(by_name("klingon").is_none());
+
+        // and a built-in-only language is listed from the binary —
+        // spanish is in ./languages here (crate root), so use the fact
+        // that the listing includes every builtin name somewhere
+        for (name, _) in content::builtin_languages() {
+            assert!(by_name(name).is_some(), "{name} must be listed");
+        }
+    }
+
+    /// A one-stage, one-word course for a given language name —
+    /// for listing tests that need real, loadable content.
+    fn one_word_course(lang: &str) -> String {
+        format!(
+            r#"{{
+        "language": "{lang}",
+        "stages": [
+          {{ "id": 1, "title": "One", "level_hint": "beginner",
+            "vocabulary": [
+              {{ "word": "sawubona", "translation": "hello", "pos": "x", "example": "Sawubona!" }}
+            ],
+            "exercises": [
+              {{ "type": "translation", "prompt": "sawubona", "answer": "hello" }}
+            ] }}
+        ]
+      }}"#
+        )
     }
 }
