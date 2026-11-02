@@ -7,6 +7,14 @@
 //! separation principle. When SQLite replaces JSON later, only this module
 //! changes.
 //!
+//! This is also where the shipped courses live: the same ten
+//! `languages/<lang>/stages.json` files a checkout holds are embedded into
+//! the binary at compile time ([`builtin_languages`]), so an installed
+//! `termocab` works from any directory with zero setup (D16). Embedding is
+//! compile-time storage, so it belongs in this module beside the file
+//! reader — and it rides the exact same parse-and-validate path as a file
+//! on disk: a built-in course is never trusted more than an installed one.
+//!
 //! Deserializing is not enough: a file can parse and still be unplayable
 //! (a stage with no exercises can never be completed and blocks the
 //! learner forever; a multiple-choice answer that is not an option can
@@ -138,7 +146,18 @@ pub fn load_language<P: AsRef<Path>>(
     expected_language: Option<&LangId>,
 ) -> Result<LanguageContent, LoadError> {
     let text = fs::read_to_string(path)?;
-    let parsed: JsonLanguageFile = serde_json::from_str(&text)?;
+    parse_language(&text, expected_language)
+}
+
+/// Parses and validates `stages.json` text — the shared core of every
+/// load, whether the bytes came from a file on disk or from the courses
+/// compiled into the binary ([`load_builtin`]). Same rules, same errors:
+/// there is exactly one content gate.
+pub fn parse_language(
+    text: &str,
+    expected_language: Option<&LangId>,
+) -> Result<LanguageContent, LoadError> {
+    let parsed: JsonLanguageFile = serde_json::from_str(text)?;
     let stages: Vec<engine::Stage> = parsed
         .stages
         .into_iter()
@@ -153,6 +172,76 @@ pub fn load_language<P: AsRef<Path>>(
     } else {
         Err(LoadError::Invalid(violations))
     }
+}
+
+/// The courses that ship inside the binary: `(name, stages.json text)`
+/// per language, embedded at compile time straight from the checkout's
+/// `languages/` directory — the two can never drift within one build.
+///
+/// These are the last resort of the content lookup (D16): an installed
+/// binary has no checkout next to it and nothing in its data dir on a
+/// fresh machine, and before D16 that meant `termocab start french` —
+/// the first command in the README — failed out of the box. Built-ins
+/// close that gap while leaving every earlier source in charge: an
+/// installed file, an override dir or a dev checkout still wins, so
+/// contributors and custom-content authors are unaffected.
+pub fn builtin_languages() -> &'static [(&'static str, &'static str)] {
+    // The ten shipped courses (Nov 2026): french, spanish, german,
+    // italian, polish, romanian, portuguese, swedish, hungarian,
+    // turkish — same engine, same rules, each ten stages, 153 words.
+    &[
+        ("french", include_str!("../../languages/french/stages.json")),
+        (
+            "spanish",
+            include_str!("../../languages/spanish/stages.json"),
+        ),
+        ("german", include_str!("../../languages/german/stages.json")),
+        (
+            "italian",
+            include_str!("../../languages/italian/stages.json"),
+        ),
+        ("polish", include_str!("../../languages/polish/stages.json")),
+        (
+            "romanian",
+            include_str!("../../languages/romanian/stages.json"),
+        ),
+        (
+            "portuguese",
+            include_str!("../../languages/portuguese/stages.json"),
+        ),
+        (
+            "swedish",
+            include_str!("../../languages/swedish/stages.json"),
+        ),
+        (
+            "hungarian",
+            include_str!("../../languages/hungarian/stages.json"),
+        ),
+        (
+            "turkish",
+            include_str!("../../languages/turkish/stages.json"),
+        ),
+    ]
+}
+
+/// The built-in course text for `lang`, if it ships one.
+pub fn builtin_text(lang: &LangId) -> Option<&'static str> {
+    builtin_languages()
+        .iter()
+        .find(|(name, _)| *name == lang.as_str())
+        .map(|(_, text)| *text)
+}
+
+/// Loads a built-in course, validating it exactly like a file on disk —
+/// `None` only when the language ships no course; a built-in that failed
+/// validation is an `Err`, the same as any other content.
+///
+/// In practice validation cannot fail: CI pins every shipped course
+/// through `check`, and the embedded bytes are the very files `check`
+/// read. The `Err` arm exists because content gets one gate, not two
+/// trust levels.
+pub fn load_builtin(lang: &LangId) -> Option<Result<LanguageContent, LoadError>> {
+    builtin_text(lang).map(|text| parse_language(text, Some(lang)))
 }
 
 /// Every content rule, checked in one pass. Returns one human-readable
@@ -647,5 +736,50 @@ mod tests {
         let bad = r#"{ "type": "translation", "prompt": "bonjour" }"#; // no answer
         let result = load_text(&file_of("french", &stage_json(1, VOCAB_OK, bad)), None);
         assert!(matches!(result, Err(LoadError::Json(_))));
+    }
+
+    #[test]
+    fn parse_language_is_the_shared_core_of_every_load() {
+        // The text path and the file path agree: same input, same output.
+        let text = file_of("french", &good_stage(1));
+        let from_text = parse_language(&text, Some(&french())).unwrap();
+        let from_file = load_text(&text, Some(&french())).unwrap();
+        assert_eq!(from_text.language, from_file.language);
+        assert_eq!(from_text.stages.len(), from_file.stages.len());
+    }
+
+    #[test]
+    fn builtin_courses_parse_and_validate_under_their_own_names() {
+        // Every embedded course must clear the one content gate — the
+        // same gate an outside author's file passes. A broken built-in
+        // would make `termocab start <lang>` fail on a fresh install,
+        // the exact failure D16 exists to prevent.
+        for (name, _) in builtin_languages() {
+            let lang = LangId::parse(name).unwrap_or_else(|e| panic!("{name}: {e}"));
+            let loaded = load_builtin(&lang)
+                .unwrap_or_else(|| panic!("{name} should have a built-in"))
+                .unwrap_or_else(|e| panic!("built-in {name} is invalid: {e}"));
+            assert_eq!(loaded.language, *name);
+            assert!(!loaded.stages.is_empty(), "{name} has no stages");
+        }
+    }
+
+    #[test]
+    fn builtin_lookup_misses_languages_that_do_not_ship() {
+        assert!(builtin_text(&LangId::parse("klingon").unwrap()).is_none());
+        assert!(load_builtin(&LangId::parse("klingon").unwrap()).is_none());
+        // and a hit returns the course, not just a Some
+        let french_loaded = load_builtin(&french()).expect("french ships built-in");
+        assert!(french_loaded.is_ok());
+    }
+
+    #[test]
+    fn builtin_names_are_unique() {
+        let langs = builtin_languages();
+        let mut names: Vec<&str> = langs.iter().map(|(n, _)| *n).collect();
+        let count = names.len();
+        names.sort_unstable();
+        names.dedup();
+        assert_eq!(names.len(), count, "a language name appears twice");
     }
 }
