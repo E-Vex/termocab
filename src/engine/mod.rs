@@ -133,20 +133,20 @@ use std::iter::once;
 
 /// The accented letters of the Latin-1 Supplement — the Western
 /// European set (French, Spanish, German, Italian, Portuguese, …) —
-/// plus the decomposable Polish set from Latin Extended-A (D10) and
-/// the Romanian set (D11): ă (a + breve, Extended-A) and ș ț (s/t +
-/// comma below, Extended-B) decompose to base letter + combining mark
-/// like any accented letter, and the legacy cedilla spellings ş ţ
-/// ride along (s/t + cedilla — the same mark ç already carries), so
-/// both historical encodings grade the same way. Decomposing (rather
-/// than stripping) in the strict pass makes precomposed "é" equal to
-/// "e" + U+0301 typed on a macOS keyboard — same letter, same accent,
-/// different encoding. Hand-written on purpose: thirty-nine entries
-/// beat a Unicode-normalization crate, and §6 asks for justification
-/// before any dependency. The Nordic letters stay closed — "smør" is
-/// not "smor". Lowercase only: [`normalize_strict`] lowercases before
-/// it looks here (D9).
-const ACCENTED: [(char, &str); 39] = [
+/// plus the decomposable Polish set from Latin Extended-A (D10), the
+/// Romanian set (D11) — ă (a + breve, Extended-A) and ș ț (s/t +
+/// comma below, Extended-B) — and the Hungarian pair ő ű (D14), both
+/// Extended-A, both decomposing to base letter + the double acute.
+/// The legacy cedilla spellings ş ţ ride along (s/t + cedilla — the
+/// same mark ç already carries), so both historical encodings grade
+/// the same way. Decomposing (rather than stripping) in the strict
+/// pass makes precomposed "é" equal to "e" + U+0301 typed on a macOS
+/// keyboard — same letter, same accent, different encoding. Hand-
+/// written on purpose: forty-one entries beat a Unicode-normalization
+/// crate, and §6 asks for justification before any dependency. The
+/// Nordic letters stay closed — "smør" is not "smor". Lowercase
+/// only: [`normalize_strict`] lowercases before it looks here (D9).
+const ACCENTED: [(char, &str); 41] = [
     ('à', "a\u{0300}"),
     ('á', "a\u{0301}"),
     ('â', "a\u{0302}"),
@@ -194,6 +194,15 @@ const ACCENTED: [(char, &str); 39] = [
     ('ț', "t\u{0326}"),
     ('ş', "s\u{0327}"),
     ('ţ', "t\u{0327}"),
+    // Hungarian (D14): the double acute — two strokes standing on one
+    // letter, the widest accent in the table — decomposes like any
+    // other, so ő and ű (both Extended-A) land beside the Polish and
+    // Romanian sets rather than in OPEN_LETTERS. The third extension
+    // a language has forced, and the smallest: two entries, exactly
+    // the D10-shaped addition the roadmap predicted. ő is also the
+    // first table letter that is a word in its own right — "he/she".
+    ('ő', "o\u{030B}"),
+    ('ű', "u\u{030B}"),
 ];
 
 /// The ligatures open up only in the loose pass — "œuvre" and
@@ -565,6 +574,48 @@ mod tests {
         assert_eq!(tara.grade("ţară"), Grade::CorrectWithHint("țară".into()));
         assert!(tara.is_correct("ȚARĂ"));
         assert!(!tara.is_correct("carte"));
+    }
+
+    #[test]
+    fn the_hungarian_letters_behave_like_the_polish_ones() {
+        // The ninth-language wave (D14) extended the table a third
+        // time, and by exactly the predicted amount: ő and ű (o/u +
+        // double acute, U+030B — Extended-A) decompose like any
+        // accented letter, so they join ACCENTED beside the Polish and
+        // Romanian sets; OPEN_LETTERS still holds just ł. The
+        // newcomers get the same three behaviors: fold with a hint,
+        // fold from uppercase, and stay distinct from actually
+        // different words.
+        let exercise = translation("könnyű", &[]);
+        assert_eq!(
+            exercise.grade("konnyu"),
+            Grade::CorrectWithHint("könnyű".into())
+        );
+        // both double acutes in one word — and from uppercase
+        assert!(exercise.is_correct("KÖNNYŰ"));
+        assert!(!exercise.is_correct("konnyuu"));
+        // ő: same story — and the first table letter that is a word in
+        // its own right (he/she), so the fold must not reach past it
+        let no = translation("nő", &[]);
+        assert_eq!(no.grade("no"), Grade::CorrectWithHint("nő".into()));
+        assert!(no.is_correct("NŐ"));
+        // "nők" is a different word (the plural) — the fold never
+        // invents a match with it
+        assert!(!no.is_correct("nok"));
+        // decomposed input equals precomposed — no hint needed (the
+        // double acute rides right after its base letter, exactly how
+        // "e" + U+0301 equals "é")
+        let ketto = translation("kettő", &[]);
+        assert_eq!(ketto.grade("ketto\u{030B}"), Grade::Correct);
+        // the double acute folds like any combining mark…
+        assert_eq!(ketto.grade("ketto"), Grade::CorrectWithHint("kettő".into()));
+        // …and ő ö stay distinct letters: fű (grass) is neither fő
+        // (main) nor fo — the fold never crosses vowels
+        let fur = translation("fű", &[]);
+        assert_eq!(fur.grade("fu"), Grade::CorrectWithHint("fű".into()));
+        assert!(!fur.is_correct("fő"));
+        assert!(!fur.is_correct("fo"));
+        assert!(!fur.is_correct("kő"));
     }
 
     #[test]
