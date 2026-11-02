@@ -1,0 +1,2052 @@
+{
+  "language": "hungarian",
+  "stages": [
+    {
+      "id": 1,
+      "title": "Greetings and Basics",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "szia",
+          "translation": "hi",
+          "accepted_translations": [
+            "hello",
+            "bye"
+          ],
+          "pos": "interjection",
+          "example": "Szia, hogy vagy?"
+        },
+        {
+          "word": "viszontlátásra",
+          "translation": "goodbye",
+          "pos": "phrase",
+          "example": "Köszönöm, viszontlátásra!"
+        },
+        {
+          "word": "jó reggelt",
+          "translation": "good morning",
+          "pos": "phrase",
+          "example": "Jó reggelt, Anna!"
+        },
+        {
+          "word": "jó napot",
+          "translation": "good day",
+          "accepted_translations": [
+            "hello"
+          ],
+          "pos": "phrase",
+          "example": "Jó napot kívánok!"
+        },
+        {
+          "word": "jó estét",
+          "translation": "good evening",
+          "pos": "phrase",
+          "example": "Jó estét, uram!"
+        },
+        {
+          "word": "jó éjszakát",
+          "translation": "good night",
+          "accepted_translations": [
+            "goodnight"
+          ],
+          "pos": "phrase",
+          "example": "Jó éjszakát, aludj jól!"
+        },
+        {
+          "word": "köszönöm",
+          "translation": "thank you",
+          "accepted_translations": [
+            "thanks"
+          ],
+          "pos": "interjection",
+          "example": "Köszönöm szépen!"
+        },
+        {
+          "word": "szívesen",
+          "translation": "you're welcome",
+          "pos": "interjection",
+          "example": "Szívesen, nincs mit!"
+        },
+        {
+          "word": "igen",
+          "translation": "yes",
+          "pos": "adverb",
+          "example": "Igen, pontosan."
+        },
+        {
+          "word": "nem",
+          "translation": "no",
+          "pos": "adverb",
+          "example": "Nem, köszönöm."
+        },
+        {
+          "word": "elnézést",
+          "translation": "excuse me",
+          "accepted_translations": [
+            "sorry"
+          ],
+          "pos": "interjection",
+          "example": "Elnézést, hol az állomás?"
+        },
+        {
+          "word": "viszlát",
+          "translation": "bye",
+          "accepted_translations": [
+            "see you"
+          ],
+          "pos": "interjection",
+          "example": "Viszlát, holnap!"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "szia",
+          "answer": "hi",
+          "accepted_answers": [
+            "hello",
+            "bye"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "viszontlátásra",
+          "answer": "goodbye"
+        },
+        {
+          "type": "translation",
+          "prompt": "jó reggelt",
+          "answer": "good morning"
+        },
+        {
+          "type": "translation",
+          "prompt": "jó napot",
+          "answer": "good day",
+          "accepted_answers": [
+            "hello"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "jó estét",
+          "answer": "good evening"
+        },
+        {
+          "type": "translation",
+          "prompt": "jó éjszakát",
+          "answer": "good night",
+          "accepted_answers": [
+            "goodnight"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "köszönöm",
+          "answer": "thank you",
+          "accepted_answers": [
+            "thanks"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "szívesen",
+          "answer": "you're welcome"
+        },
+        {
+          "type": "translation",
+          "prompt": "igen",
+          "answer": "yes"
+        },
+        {
+          "type": "translation",
+          "prompt": "nem",
+          "answer": "no"
+        },
+        {
+          "type": "translation",
+          "prompt": "elnézést",
+          "answer": "excuse me",
+          "accepted_answers": [
+            "sorry"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "viszlát",
+          "answer": "bye",
+          "accepted_answers": [
+            "see you"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "hi",
+          "answer": "szia"
+        },
+        {
+          "type": "translation",
+          "prompt": "thank you",
+          "answer": "köszönöm",
+          "accepted_answers": [
+            "thanks"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "no",
+          "answer": "nem"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hi':",
+          "options": [
+            "szia",
+            "köszönöm",
+            "viszontlátásra",
+            "igen"
+          ],
+          "answer": "szia"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'goodbye':",
+          "options": [
+            "viszontlátásra",
+            "szia",
+            "jó reggelt",
+            "köszönöm"
+          ],
+          "answer": "viszontlátásra"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good morning':",
+          "options": [
+            "jó reggelt",
+            "jó estét",
+            "jó éjszakát",
+            "köszönöm"
+          ],
+          "answer": "jó reggelt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good evening':",
+          "options": [
+            "jó estét",
+            "jó éjszakát",
+            "jó reggelt",
+            "szia"
+          ],
+          "answer": "jó estét"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'thank you':",
+          "options": [
+            "köszönöm",
+            "szívesen",
+            "szia",
+            "igen"
+          ],
+          "answer": "köszönöm"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'yes':",
+          "options": [
+            "igen",
+            "nem",
+            "szia",
+            "köszönöm"
+          ],
+          "answer": "igen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'excuse me':",
+          "options": [
+            "elnézést",
+            "köszönöm",
+            "szívesen",
+            "viszontlátásra"
+          ],
+          "answer": "elnézést"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bye':",
+          "options": [
+            "viszlát",
+            "viszontlátásra",
+            "jó éjszakát",
+            "igen"
+          ],
+          "answer": "viszlát"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, hogy vagy?",
+          "answer": "szia"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jó ___, Anna!",
+          "answer": "reggelt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, hol az állomás?",
+          "answer": "elnézést"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jó ___ kívánok!",
+          "answer": "éjszakát"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, viszontlátásra!",
+          "answer": "köszönöm"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Szia, ___ holnap!",
+          "answer": "viszlát"
+        },
+        {
+          "type": "translation",
+          "prompt": "Hogy vagy?",
+          "answer": "How are you?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Jól, köszönöm!",
+          "answer": "I'm fine, thank you.",
+          "accepted_answers": [
+            "I am fine, thank you.",
+            "Fine, thanks."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mi a neved?",
+          "answer": "What's your name?",
+          "accepted_answers": [
+            "What is your name?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Köszönöm, viszontlátásra!",
+          "answer": "Thank you, goodbye!"
+        },
+        {
+          "type": "translation",
+          "prompt": "Szia, viszlát holnap!",
+          "answer": "Bye, see you tomorrow!"
+        },
+        {
+          "type": "translation",
+          "prompt": "Elnézést, késő vagyok.",
+          "answer": "Sorry, I'm late.",
+          "accepted_answers": [
+            "I'm sorry, I'm late."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Minden rendben.",
+          "answer": "Everything is fine.",
+          "accepted_answers": [
+            "All is fine.",
+            "Everything is OK."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Nem, köszönöm.",
+          "answer": "No, thank you.",
+          "accepted_answers": [
+            "No, thanks."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "People and Family",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "ember",
+          "translation": "person",
+          "pos": "noun",
+          "example": "Az ember barátságos."
+        },
+        {
+          "word": "férfi",
+          "translation": "man",
+          "pos": "noun",
+          "example": "A férfi újságot olvas."
+        },
+        {
+          "word": "nő",
+          "translation": "woman",
+          "pos": "noun",
+          "example": "A nő teát iszik."
+        },
+        {
+          "word": "gyerek",
+          "translation": "child",
+          "accepted_translations": [
+            "kid"
+          ],
+          "pos": "noun",
+          "example": "A gyerek a parkban játszik."
+        },
+        {
+          "word": "fiú",
+          "translation": "boy",
+          "pos": "noun",
+          "example": "A fiú focizik."
+        },
+        {
+          "word": "lány",
+          "translation": "girl",
+          "pos": "noun",
+          "example": "A lány énekel."
+        },
+        {
+          "word": "barát",
+          "translation": "friend",
+          "pos": "noun",
+          "example": "Ő a barátom."
+        },
+        {
+          "word": "család",
+          "translation": "family",
+          "pos": "noun",
+          "example": "A család nagy."
+        },
+        {
+          "word": "anya",
+          "translation": "mother",
+          "accepted_translations": [
+            "mom"
+          ],
+          "pos": "noun",
+          "example": "Az anya finom levest főz."
+        },
+        {
+          "word": "apa",
+          "translation": "father",
+          "accepted_translations": [
+            "dad"
+          ],
+          "pos": "noun",
+          "example": "Az apa dolgozik."
+        },
+        {
+          "word": "öcs",
+          "translation": "younger brother",
+          "accepted_translations": [
+            "little brother"
+          ],
+          "pos": "noun",
+          "example": "Az öcs hat éves."
+        },
+        {
+          "word": "nővér",
+          "translation": "older sister",
+          "accepted_translations": [
+            "big sister"
+          ],
+          "pos": "noun",
+          "example": "A nővérem tanár."
+        },
+        {
+          "word": "nagymama",
+          "translation": "grandmother",
+          "accepted_translations": [
+            "grandma"
+          ],
+          "pos": "noun",
+          "example": "A nagymama süteményt süt."
+        },
+        {
+          "word": "nagypapa",
+          "translation": "grandfather",
+          "accepted_translations": [
+            "grandpa"
+          ],
+          "pos": "noun",
+          "example": "A nagypapa újságot olvas."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ember",
+          "answer": "person"
+        },
+        {
+          "type": "translation",
+          "prompt": "férfi",
+          "answer": "man"
+        },
+        {
+          "type": "translation",
+          "prompt": "nő",
+          "answer": "woman"
+        },
+        {
+          "type": "translation",
+          "prompt": "gyerek",
+          "answer": "child",
+          "accepted_answers": [
+            "kid"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "fiú",
+          "answer": "boy"
+        },
+        {
+          "type": "translation",
+          "prompt": "lány",
+          "answer": "girl"
+        },
+        {
+          "type": "translation",
+          "prompt": "barát",
+          "answer": "friend"
+        },
+        {
+          "type": "translation",
+          "prompt": "család",
+          "answer": "family"
+        },
+        {
+          "type": "translation",
+          "prompt": "anya",
+          "answer": "mother",
+          "accepted_answers": [
+            "mom"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "apa",
+          "answer": "father",
+          "accepted_answers": [
+            "dad"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "öcs",
+          "answer": "younger brother",
+          "accepted_answers": [
+            "little brother"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "nővér",
+          "answer": "older sister",
+          "accepted_answers": [
+            "big sister"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "nagymama",
+          "answer": "grandmother",
+          "accepted_answers": [
+            "grandma"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "nagypapa",
+          "answer": "grandfather",
+          "accepted_answers": [
+            "grandpa"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "a family",
+          "answer": "család"
+        },
+        {
+          "type": "translation",
+          "prompt": "a boy",
+          "answer": "fiú"
+        },
+        {
+          "type": "translation",
+          "prompt": "a friend",
+          "answer": "barát"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'man':",
+          "options": [
+            "férfi",
+            "nő",
+            "gyerek",
+            "barát"
+          ],
+          "answer": "férfi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'woman':",
+          "options": [
+            "nő",
+            "férfi",
+            "lány",
+            "anya"
+          ],
+          "answer": "nő"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'boy':",
+          "options": [
+            "fiú",
+            "lány",
+            "gyerek",
+            "barát"
+          ],
+          "answer": "fiú"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'girl':",
+          "options": [
+            "lány",
+            "fiú",
+            "férfi",
+            "nagymama"
+          ],
+          "answer": "lány"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'mother':",
+          "options": [
+            "anya",
+            "apa",
+            "nővér",
+            "család"
+          ],
+          "answer": "anya"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'father':",
+          "options": [
+            "apa",
+            "anya",
+            "öcs",
+            "barát"
+          ],
+          "answer": "apa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'child':",
+          "options": [
+            "gyerek",
+            "férfi",
+            "nagypapa",
+            "lány"
+          ],
+          "answer": "gyerek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'grandmother':",
+          "options": [
+            "nagymama",
+            "nagypapa",
+            "anya",
+            "nő"
+          ],
+          "answer": "nagymama"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ férfi újságot olvas.",
+          "answer": "a"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ lány énekel.",
+          "answer": "a"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ gyerek játszik.",
+          "answer": "a"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ anya főz.",
+          "answer": "az"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ apa dolgozik.",
+          "answer": "az"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ember barátságos.",
+          "answer": "az"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az ___ reggel fut.",
+          "answer": "apa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A ___ zongorázik.",
+          "answer": "lány"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ki ő?",
+          "answer": "Who is he?",
+          "accepted_answers": [
+            "Who is she?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ő a barátom.",
+          "answer": "He is my friend.",
+          "accepted_answers": [
+            "She is my friend.",
+            "This is my friend."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ő a nővérem.",
+          "answer": "She is my older sister.",
+          "accepted_answers": [
+            "She's my big sister."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Az anyám finom levest főz.",
+          "answer": "My mother cooks delicious soup.",
+          "accepted_answers": [
+            "My mom cooks delicious soup."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Az apám sokat dolgozik.",
+          "answer": "My father works a lot.",
+          "accepted_answers": [
+            "My dad works a lot."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "A családom nagy.",
+          "answer": "My family is big."
+        },
+        {
+          "type": "translation",
+          "prompt": "A nagymama és a nagypapa táncolnak.",
+          "answer": "Grandma and grandpa are dancing.",
+          "accepted_answers": [
+            "Grandma and grandpa dance."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Az emberek itt barátságosak.",
+          "answer": "The people here are friendly."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Numbers and Time",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "egy",
+          "translation": "one",
+          "pos": "number",
+          "example": "Egy alma van az asztalon."
+        },
+        {
+          "word": "kettő",
+          "translation": "two",
+          "pos": "number",
+          "example": "Egy, kettő, három!"
+        },
+        {
+          "word": "három",
+          "translation": "three",
+          "pos": "number",
+          "example": "Egy, kettő, három!"
+        },
+        {
+          "word": "négy",
+          "translation": "four",
+          "pos": "number",
+          "example": "Négy évszak van."
+        },
+        {
+          "word": "öt",
+          "translation": "five",
+          "pos": "number",
+          "example": "Öt perc múlva jövök."
+        },
+        {
+          "word": "hat",
+          "translation": "six",
+          "pos": "number",
+          "example": "Hat óra van."
+        },
+        {
+          "word": "hét",
+          "translation": "seven",
+          "accepted_translations": [
+            "week"
+          ],
+          "pos": "number",
+          "example": "Hét nap van egy héten."
+        },
+        {
+          "word": "nyolc",
+          "translation": "eight",
+          "pos": "number",
+          "example": "Nyolc óra van."
+        },
+        {
+          "word": "kilenc",
+          "translation": "nine",
+          "pos": "number",
+          "example": "A film kilenckor kezdődik."
+        },
+        {
+          "word": "tíz",
+          "translation": "ten",
+          "pos": "number",
+          "example": "Tíz fok van kint."
+        },
+        {
+          "word": "húsz",
+          "translation": "twenty",
+          "pos": "number",
+          "example": "Húsz perc múlva megérkezik."
+        },
+        {
+          "word": "nap",
+          "translation": "day",
+          "accepted_translations": [
+            "sun"
+          ],
+          "pos": "noun",
+          "example": "A hét hét napból áll."
+        },
+        {
+          "word": "óra",
+          "translation": "hour",
+          "accepted_translations": [
+            "clock",
+            "o'clock"
+          ],
+          "pos": "noun",
+          "example": "Egy óra van hátra."
+        },
+        {
+          "word": "ma",
+          "translation": "today",
+          "pos": "adverb",
+          "example": "Ma megyek a piacra."
+        },
+        {
+          "word": "holnap",
+          "translation": "tomorrow",
+          "pos": "adverb",
+          "example": "Holnap találkozunk!"
+        },
+        {
+          "word": "tegnap",
+          "translation": "yesterday",
+          "pos": "adverb",
+          "example": "Tegnap esett az eső."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "egy",
+          "answer": "one"
+        },
+        {
+          "type": "translation",
+          "prompt": "kettő",
+          "answer": "two"
+        },
+        {
+          "type": "translation",
+          "prompt": "három",
+          "answer": "three"
+        },
+        {
+          "type": "translation",
+          "prompt": "négy",
+          "answer": "four"
+        },
+        {
+          "type": "translation",
+          "prompt": "öt",
+          "answer": "five"
+        },
+        {
+          "type": "translation",
+          "prompt": "hat",
+          "answer": "six"
+        },
+        {
+          "type": "translation",
+          "prompt": "hét",
+          "answer": "seven",
+          "accepted_answers": [
+            "week"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "nyolc",
+          "answer": "eight"
+        },
+        {
+          "type": "translation",
+          "prompt": "kilenc",
+          "answer": "nine"
+        },
+        {
+          "type": "translation",
+          "prompt": "tíz",
+          "answer": "ten"
+        },
+        {
+          "type": "translation",
+          "prompt": "húsz",
+          "answer": "twenty"
+        },
+        {
+          "type": "translation",
+          "prompt": "nap",
+          "answer": "day",
+          "accepted_answers": [
+            "sun"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "óra",
+          "answer": "hour",
+          "accepted_answers": [
+            "clock",
+            "o'clock"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "ma",
+          "answer": "today"
+        },
+        {
+          "type": "translation",
+          "prompt": "holnap",
+          "answer": "tomorrow"
+        },
+        {
+          "type": "translation",
+          "prompt": "tegnap",
+          "answer": "yesterday"
+        },
+        {
+          "type": "translation",
+          "prompt": "one",
+          "answer": "egy"
+        },
+        {
+          "type": "translation",
+          "prompt": "tomorrow",
+          "answer": "holnap"
+        },
+        {
+          "type": "translation",
+          "prompt": "yesterday",
+          "answer": "tegnap"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'two':",
+          "options": [
+            "kettő",
+            "három",
+            "négy",
+            "tíz"
+          ],
+          "answer": "kettő"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'four':",
+          "options": [
+            "négy",
+            "öt",
+            "három",
+            "hat"
+          ],
+          "answer": "négy"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'eight':",
+          "options": [
+            "nyolc",
+            "kilenc",
+            "tíz",
+            "hat"
+          ],
+          "answer": "nyolc"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a day':",
+          "options": [
+            "nap",
+            "óra",
+            "hét",
+            "ma"
+          ],
+          "answer": "nap"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tomorrow':",
+          "options": [
+            "holnap",
+            "ma",
+            "tegnap",
+            "nap"
+          ],
+          "answer": "holnap"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'an hour':",
+          "options": [
+            "óra",
+            "nap",
+            "ma",
+            "tegnap"
+          ],
+          "answer": "óra"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'six':",
+          "options": [
+            "hat",
+            "hét",
+            "öt",
+            "kilenc"
+          ],
+          "answer": "hat"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'today':",
+          "options": [
+            "ma",
+            "holnap",
+            "tegnap",
+            "óra"
+          ],
+          "answer": "ma"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az ember___ barátságosak.",
+          "answer": "ek"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A férfi___ fociznak.",
+          "answer": "ak"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A lány___ énekelnek.",
+          "answer": "ok"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A gyerek___ játszanak.",
+          "answer": "ek"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A barát___ nevetnek.",
+          "answer": "ok"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A fiú___ úsznak.",
+          "answer": "k"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Egy héten ___ nap van.",
+          "answer": "hét"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mennyi az ___?",
+          "answer": "óra"
+        },
+        {
+          "type": "translation",
+          "prompt": "Mennyi az óra?",
+          "answer": "What time is it?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Három óra van.",
+          "answer": "It's three o'clock.",
+          "accepted_answers": [
+            "It is three o'clock."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Nyolc óra van.",
+          "answer": "It's eight o'clock.",
+          "accepted_answers": [
+            "It is eight o'clock."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ma kedd van.",
+          "answer": "Today is Tuesday."
+        },
+        {
+          "type": "translation",
+          "prompt": "Holnap a strandra megyek.",
+          "answer": "Tomorrow I'm going to the beach.",
+          "accepted_answers": [
+            "I'm going to the beach tomorrow.",
+            "I am going to the beach tomorrow."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "A film nyolckor kezdődik.",
+          "answer": "The movie starts at eight."
+        },
+        {
+          "type": "translation",
+          "prompt": "Az öcsém tíz éves.",
+          "answer": "My little brother is ten years old.",
+          "accepted_answers": [
+            "My younger brother is ten years old."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jövő héten találkozunk!",
+          "answer": "See you next week!",
+          "accepted_answers": [
+            "We'll meet next week!"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Most elfoglalt vagyok.",
+          "answer": "I'm busy now.",
+          "accepted_answers": [
+            "I am busy now."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ma nagyon meleg van.",
+          "answer": "It's very hot today.",
+          "accepted_answers": [
+            "It is very hot today."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Most a piacra megyek.",
+          "answer": "I'm going to the market now.",
+          "accepted_answers": [
+            "I am going to the market now."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Everyday Verbs",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "lenni",
+          "translation": "to be",
+          "pos": "verb",
+          "example": "Otthon akarok lenni."
+        },
+        {
+          "word": "enni",
+          "translation": "to eat",
+          "pos": "verb",
+          "example": "Szeretek enni."
+        },
+        {
+          "word": "inni",
+          "translation": "to drink",
+          "pos": "verb",
+          "example": "Inni akarok valamit."
+        },
+        {
+          "word": "menni",
+          "translation": "to go",
+          "pos": "verb",
+          "example": "Haza akarok menni."
+        },
+        {
+          "word": "jönni",
+          "translation": "to come",
+          "pos": "verb",
+          "example": "A barátaim ma jönnek."
+        },
+        {
+          "word": "akarni",
+          "translation": "to want",
+          "pos": "verb",
+          "example": "Akarok egy kávét."
+        },
+        {
+          "word": "szeretni",
+          "translation": "to love",
+          "accepted_translations": [
+            "to like"
+          ],
+          "pos": "verb",
+          "example": "Szeretem a kávét."
+        },
+        {
+          "word": "tudni",
+          "translation": "to know",
+          "accepted_translations": [
+            "can",
+            "to be able to"
+          ],
+          "pos": "verb",
+          "example": "Tudok úszni."
+        },
+        {
+          "word": "beszélni",
+          "translation": "to speak",
+          "pos": "verb",
+          "example": "Beszélek magyarul."
+        },
+        {
+          "word": "olvasni",
+          "translation": "to read",
+          "pos": "verb",
+          "example": "Szeretek olvasni."
+        },
+        {
+          "word": "írni",
+          "translation": "to write",
+          "pos": "verb",
+          "example": "Levelet írok."
+        },
+        {
+          "word": "érteni",
+          "translation": "to understand",
+          "pos": "verb",
+          "example": "Nem értem."
+        },
+        {
+          "word": "főzni",
+          "translation": "to cook",
+          "pos": "verb",
+          "example": "Szeretek főzni."
+        },
+        {
+          "word": "tanulni",
+          "translation": "to learn",
+          "accepted_translations": [
+            "to study"
+          ],
+          "pos": "verb",
+          "example": "Magyarul tanulok."
+        },
+        {
+          "word": "dolgozni",
+          "translation": "to work",
+          "pos": "verb",
+          "example": "Sokat dolgozom."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "lenni",
+          "answer": "to be"
+        },
+        {
+          "type": "translation",
+          "prompt": "enni",
+          "answer": "to eat"
+        },
+        {
+          "type": "translation",
+          "prompt": "inni",
+          "answer": "to drink"
+        },
+        {
+          "type": "translation",
+          "prompt": "menni",
+          "answer": "to go"
+        },
+        {
+          "type": "translation",
+          "prompt": "jönni",
+          "answer": "to come"
+        },
+        {
+          "type": "translation",
+          "prompt": "akarni",
+          "answer": "to want"
+        },
+        {
+          "type": "translation",
+          "prompt": "szeretni",
+          "answer": "to love",
+          "accepted_answers": [
+            "to like"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "tudni",
+          "answer": "to know",
+          "accepted_answers": [
+            "can",
+            "to be able to"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "beszélni",
+          "answer": "to speak"
+        },
+        {
+          "type": "translation",
+          "prompt": "olvasni",
+          "answer": "to read"
+        },
+        {
+          "type": "translation",
+          "prompt": "írni",
+          "answer": "to write"
+        },
+        {
+          "type": "translation",
+          "prompt": "érteni",
+          "answer": "to understand"
+        },
+        {
+          "type": "translation",
+          "prompt": "főzni",
+          "answer": "to cook"
+        },
+        {
+          "type": "translation",
+          "prompt": "tanulni",
+          "answer": "to learn",
+          "accepted_answers": [
+            "to study"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "dolgozni",
+          "answer": "to work"
+        },
+        {
+          "type": "translation",
+          "prompt": "to eat",
+          "answer": "enni"
+        },
+        {
+          "type": "translation",
+          "prompt": "to speak",
+          "answer": "beszélni"
+        },
+        {
+          "type": "translation",
+          "prompt": "to understand",
+          "answer": "érteni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to speak':",
+          "options": [
+            "beszélni",
+            "enni",
+            "inni",
+            "érteni"
+          ],
+          "answer": "beszélni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to eat':",
+          "options": [
+            "enni",
+            "inni",
+            "beszélni",
+            "menni"
+          ],
+          "answer": "enni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to drink':",
+          "options": [
+            "inni",
+            "enni",
+            "írni",
+            "akarni"
+          ],
+          "answer": "inni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to understand':",
+          "options": [
+            "érteni",
+            "írni",
+            "lenni",
+            "tudni"
+          ],
+          "answer": "érteni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to learn':",
+          "options": [
+            "tanulni",
+            "dolgozni",
+            "lenni",
+            "szeretni"
+          ],
+          "answer": "tanulni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to want':",
+          "options": [
+            "akarni",
+            "tudni",
+            "lenni",
+            "menni"
+          ],
+          "answer": "akarni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to work':",
+          "options": [
+            "dolgozni",
+            "lenni",
+            "enni",
+            "menni"
+          ],
+          "answer": "dolgozni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to know':",
+          "options": [
+            "tudni",
+            "akarni",
+            "lenni",
+            "enni"
+          ],
+          "answer": "tudni"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Akarok egy almát ___.",
+          "answer": "enni"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Egy kávét akarok ___.",
+          "answer": "inni"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Szeretek reggel ___.",
+          "answer": "olvasni"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tudsz magyarul ___?",
+          "answer": "beszélni"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Szeretek e-maileket ___.",
+          "answer": "írni"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Szeretek vacsorát ___.",
+          "answer": "főzni"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nem értem, de akarok ___.",
+          "answer": "tanulni"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hol akarsz ___?",
+          "answer": "dolgozni"
+        },
+        {
+          "type": "translation",
+          "prompt": "Beszélek magyarul.",
+          "answer": "I speak Hungarian."
+        },
+        {
+          "type": "translation",
+          "prompt": "Cukrot tesz a kávéba.",
+          "answer": "He puts sugar in the coffee."
+        },
+        {
+          "type": "translation",
+          "prompt": "Reggel kávét iszom.",
+          "answer": "I drink coffee in the morning.",
+          "accepted_answers": [
+            "I drink coffee in the mornings."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "I want a coffee, please.",
+          "answer": "Egy kávét kérek.",
+          "accepted_answers": [
+            "Kávét kérek."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Magyarországról jöttem.",
+          "answer": "I'm from Hungary.",
+          "accepted_answers": [
+            "I am from Hungary."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Most otthon vagyok.",
+          "answer": "I'm at home now.",
+          "accepted_answers": [
+            "I am at home now."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Beszélsz angolul?",
+          "answer": "Do you speak English?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Nem tudom.",
+          "answer": "I don't know.",
+          "accepted_answers": [
+            "I do not know."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Holnap találkozunk!",
+          "answer": "See you tomorrow!"
+        },
+        {
+          "type": "translation",
+          "prompt": "Boldog vagyok.",
+          "answer": "I'm happy.",
+          "accepted_answers": [
+            "I am happy."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Fáradt vagyok most.",
+          "answer": "I'm tired now.",
+          "accepted_answers": [
+            "I am tired now."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Describing and Asking",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "nagy",
+          "translation": "big",
+          "pos": "adjective",
+          "example": "A ház nagy."
+        },
+        {
+          "word": "kicsi",
+          "translation": "small",
+          "accepted_translations": [
+            "little"
+          ],
+          "pos": "adjective",
+          "example": "A kert kicsi."
+        },
+        {
+          "word": "jó",
+          "translation": "good",
+          "pos": "adjective",
+          "example": "A kávé itt jó."
+        },
+        {
+          "word": "rossz",
+          "translation": "bad",
+          "pos": "adjective",
+          "example": "A film rossz."
+        },
+        {
+          "word": "új",
+          "translation": "new",
+          "pos": "adjective",
+          "example": "Az autó új."
+        },
+        {
+          "word": "régi",
+          "translation": "old",
+          "pos": "adjective",
+          "example": "A ház régi."
+        },
+        {
+          "word": "boldog",
+          "translation": "happy",
+          "pos": "adjective",
+          "example": "A család boldog."
+        },
+        {
+          "word": "szomorú",
+          "translation": "sad",
+          "pos": "adjective",
+          "example": "A fiú szomorú."
+        },
+        {
+          "word": "könnyű",
+          "translation": "easy",
+          "pos": "adjective",
+          "example": "A gyakorlat könnyű."
+        },
+        {
+          "word": "nehéz",
+          "translation": "difficult",
+          "accepted_translations": [
+            "hard",
+            "heavy"
+          ],
+          "pos": "adjective",
+          "example": "A kérdés nehéz."
+        },
+        {
+          "word": "hol",
+          "translation": "where",
+          "pos": "adverb",
+          "example": "Hol laksz?"
+        },
+        {
+          "word": "mi",
+          "translation": "what",
+          "pos": "pronoun",
+          "example": "Mi ez?"
+        },
+        {
+          "word": "ki",
+          "translation": "who",
+          "pos": "pronoun",
+          "example": "Ki az?"
+        },
+        {
+          "word": "mikor",
+          "translation": "when",
+          "pos": "adverb",
+          "example": "Mikor jössz?"
+        },
+        {
+          "word": "hogyan",
+          "translation": "how",
+          "pos": "adverb",
+          "example": "Hogyan vagy?"
+        },
+        {
+          "word": "miért",
+          "translation": "why",
+          "pos": "adverb",
+          "example": "Miért vagy szomorú?"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "nagy",
+          "answer": "big"
+        },
+        {
+          "type": "translation",
+          "prompt": "kicsi",
+          "answer": "small",
+          "accepted_answers": [
+            "little"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "jó",
+          "answer": "good"
+        },
+        {
+          "type": "translation",
+          "prompt": "rossz",
+          "answer": "bad"
+        },
+        {
+          "type": "translation",
+          "prompt": "új",
+          "answer": "new"
+        },
+        {
+          "type": "translation",
+          "prompt": "régi",
+          "answer": "old"
+        },
+        {
+          "type": "translation",
+          "prompt": "boldog",
+          "answer": "happy"
+        },
+        {
+          "type": "translation",
+          "prompt": "szomorú",
+          "answer": "sad"
+        },
+        {
+          "type": "translation",
+          "prompt": "könnyű",
+          "answer": "easy"
+        },
+        {
+          "type": "translation",
+          "prompt": "nehéz",
+          "answer": "difficult",
+          "accepted_answers": [
+            "hard",
+            "heavy"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "hol",
+          "answer": "where"
+        },
+        {
+          "type": "translation",
+          "prompt": "mi",
+          "answer": "what"
+        },
+        {
+          "type": "translation",
+          "prompt": "ki",
+          "answer": "who"
+        },
+        {
+          "type": "translation",
+          "prompt": "mikor",
+          "answer": "when"
+        },
+        {
+          "type": "translation",
+          "prompt": "hogyan",
+          "answer": "how"
+        },
+        {
+          "type": "translation",
+          "prompt": "miért",
+          "answer": "why"
+        },
+        {
+          "type": "translation",
+          "prompt": "big",
+          "answer": "nagy"
+        },
+        {
+          "type": "translation",
+          "prompt": "easy",
+          "answer": "könnyű"
+        },
+        {
+          "type": "translation",
+          "prompt": "why",
+          "answer": "miért"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'big':",
+          "options": [
+            "nagy",
+            "kicsi",
+            "új",
+            "régi"
+          ],
+          "answer": "nagy"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'small':",
+          "options": [
+            "kicsi",
+            "nagy",
+            "új",
+            "jó"
+          ],
+          "answer": "kicsi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good':",
+          "options": [
+            "jó",
+            "rossz",
+            "régi",
+            "könnyű"
+          ],
+          "answer": "jó"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'new':",
+          "options": [
+            "új",
+            "régi",
+            "jó",
+            "nagy"
+          ],
+          "answer": "új"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'happy':",
+          "options": [
+            "boldog",
+            "szomorú",
+            "jó",
+            "könnyű"
+          ],
+          "answer": "boldog"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'where':",
+          "options": [
+            "hol",
+            "mikor",
+            "hogyan",
+            "mi"
+          ],
+          "answer": "hol"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'who':",
+          "options": [
+            "ki",
+            "mi",
+            "hogyan",
+            "hol"
+          ],
+          "answer": "ki"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'why':",
+          "options": [
+            "miért",
+            "hogyan",
+            "mikor",
+            "ki"
+          ],
+          "answer": "miért"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ laksz?",
+          "answer": "hol"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ez?",
+          "answer": "mi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ kezdődik a film?",
+          "answer": "mikor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ vagy szomorú?",
+          "answer": "miért"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az autó ___.",
+          "answer": "új"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A film ___.",
+          "answer": "rossz"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A fiú ___.",
+          "answer": "szomorú"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A ház ___.",
+          "answer": "régi"
+        },
+        {
+          "type": "translation",
+          "prompt": "Hogyan vagy?",
+          "answer": "How are you?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Hol laksz?",
+          "answer": "Where do you live?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ki ez a nő?",
+          "answer": "Who is this woman?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Mikor jössz?",
+          "answer": "When are you coming?",
+          "accepted_answers": [
+            "When do you come?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Miért vagy szomorú?",
+          "answer": "Why are you sad?"
+        },
+        {
+          "type": "translation",
+          "prompt": "A város nagy.",
+          "answer": "The city is big."
+        },
+        {
+          "type": "translation",
+          "prompt": "A kávé itt nagyon jó.",
+          "answer": "The coffee here is very good."
+        },
+        {
+          "type": "translation",
+          "prompt": "A gyakorlat könnyű.",
+          "answer": "The exercise is easy."
+        },
+        {
+          "type": "translation",
+          "prompt": "A kérdés nehéz.",
+          "answer": "The question is difficult.",
+          "accepted_answers": [
+            "The question is hard."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ma nagyon boldog vagyok.",
+          "answer": "I'm very happy today.",
+          "accepted_answers": [
+            "I am very happy today."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ez egy szomorú történet.",
+          "answer": "It's a sad story.",
+          "accepted_answers": [
+            "It is a sad story."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "My apartment is small.",
+          "answer": "A lakásom kicsi."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hogyan mondják ezt magyarul?",
+          "answer": "How do you say this in Hungarian?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Nem tudom, miért.",
+          "answer": "I don't know why.",
+          "accepted_answers": [
+            "I do not know why."
+          ]
+        }
+      ]
+    }
+  ]
+}
