@@ -1,0 +1,1981 @@
+{
+  "language": "swedish",
+  "stages": [
+    {
+      "id": 1,
+      "title": "Greetings and Basics",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "hej",
+          "translation": "hi",
+          "accepted_translations": [
+            "hello"
+          ],
+          "pos": "interjection",
+          "example": "Hej, hur mår du?"
+        },
+        {
+          "word": "hej då",
+          "translation": "goodbye",
+          "accepted_translations": [
+            "bye"
+          ],
+          "pos": "phrase",
+          "example": "Hej då, vi ses!"
+        },
+        {
+          "word": "god morgon",
+          "translation": "good morning",
+          "pos": "phrase",
+          "example": "God morgon, frun Andersson!"
+        },
+        {
+          "word": "god kväll",
+          "translation": "good evening",
+          "pos": "phrase",
+          "example": "God kväll, vad trevligt!"
+        },
+        {
+          "word": "god natt",
+          "translation": "good night",
+          "accepted_translations": [
+            "goodnight"
+          ],
+          "pos": "phrase",
+          "example": "God natt, sov gott!"
+        },
+        {
+          "word": "tack",
+          "translation": "thank you",
+          "accepted_translations": [
+            "thanks"
+          ],
+          "pos": "interjection",
+          "example": "Tack för hjälpen!"
+        },
+        {
+          "word": "varsågod",
+          "translation": "you're welcome",
+          "pos": "interjection",
+          "example": "Varsågod, ta en kaka!"
+        },
+        {
+          "word": "ja",
+          "translation": "yes",
+          "pos": "adverb",
+          "example": "Ja, det stämmer."
+        },
+        {
+          "word": "nej",
+          "translation": "no",
+          "pos": "adverb",
+          "example": "Nej, tack."
+        },
+        {
+          "word": "ursäkta",
+          "translation": "excuse me",
+          "accepted_translations": [
+            "sorry"
+          ],
+          "pos": "interjection",
+          "example": "Ursäkta, var ligger stationen?"
+        },
+        {
+          "word": "trevligt att träffas",
+          "translation": "nice to meet you",
+          "accepted_translations": [
+            "pleased to meet you"
+          ],
+          "pos": "phrase",
+          "example": "Trevligt att träffas!"
+        },
+        {
+          "word": "vi ses",
+          "translation": "see you",
+          "accepted_translations": [
+            "see you later",
+            "see you soon"
+          ],
+          "pos": "phrase",
+          "example": "Vi ses imorgon!"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "hej",
+          "answer": "hi",
+          "accepted_answers": [
+            "hello"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "hej då",
+          "answer": "goodbye",
+          "accepted_answers": [
+            "bye"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "god morgon",
+          "answer": "good morning"
+        },
+        {
+          "type": "translation",
+          "prompt": "god kväll",
+          "answer": "good evening"
+        },
+        {
+          "type": "translation",
+          "prompt": "god natt",
+          "answer": "good night",
+          "accepted_answers": [
+            "goodnight"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "tack",
+          "answer": "thank you",
+          "accepted_answers": [
+            "thanks"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "varsågod",
+          "answer": "you're welcome"
+        },
+        {
+          "type": "translation",
+          "prompt": "ja",
+          "answer": "yes"
+        },
+        {
+          "type": "translation",
+          "prompt": "nej",
+          "answer": "no"
+        },
+        {
+          "type": "translation",
+          "prompt": "ursäkta",
+          "answer": "excuse me",
+          "accepted_answers": [
+            "sorry"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "trevligt att träffas",
+          "answer": "nice to meet you",
+          "accepted_answers": [
+            "pleased to meet you"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "vi ses",
+          "answer": "see you"
+        },
+        {
+          "type": "translation",
+          "prompt": "hi",
+          "answer": "hej"
+        },
+        {
+          "type": "translation",
+          "prompt": "thank you",
+          "answer": "tack",
+          "accepted_answers": [
+            "thanks"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "no",
+          "answer": "nej"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hi':",
+          "options": [
+            "hej",
+            "tack",
+            "hej då",
+            "ja"
+          ],
+          "answer": "hej"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'goodbye':",
+          "options": [
+            "hej då",
+            "hej",
+            "god morgon",
+            "tack"
+          ],
+          "answer": "hej då"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good morning':",
+          "options": [
+            "god morgon",
+            "god kväll",
+            "god natt",
+            "tack"
+          ],
+          "answer": "god morgon"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good evening':",
+          "options": [
+            "god kväll",
+            "god natt",
+            "god morgon",
+            "hej"
+          ],
+          "answer": "god kväll"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'thank you':",
+          "options": [
+            "tack",
+            "varsågod",
+            "hej",
+            "ja"
+          ],
+          "answer": "tack"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'yes':",
+          "options": [
+            "ja",
+            "nej",
+            "hej",
+            "tack"
+          ],
+          "answer": "ja"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'excuse me':",
+          "options": [
+            "ursäkta",
+            "tack",
+            "varsågod",
+            "hej då"
+          ],
+          "answer": "ursäkta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'see you':",
+          "options": [
+            "vi ses",
+            "hej då",
+            "god natt",
+            "ja"
+          ],
+          "answer": "vi ses"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, hur mår du?",
+          "answer": "hej"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "God ___, frun Andersson!",
+          "answer": "morgon"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "En kaffe, ___.",
+          "answer": "tack"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, var ligger stationen?",
+          "answer": "ursäkta"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mitt ___ är Lucas.",
+          "answer": "namn"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "God natt, vi ___ imorgon!",
+          "answer": "ses"
+        },
+        {
+          "type": "translation",
+          "prompt": "Hur mår du?",
+          "answer": "How are you?",
+          "accepted_answers": [
+            "How are you doing?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bra, tack!",
+          "answer": "I'm fine, thank you.",
+          "accepted_answers": [
+            "I am fine, thank you."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag heter Maria.",
+          "answer": "My name is Maria.",
+          "accepted_answers": [
+            "I'm Maria.",
+            "I am Maria."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vad heter du?",
+          "answer": "What's your name?",
+          "accepted_answers": [
+            "What is your name?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Tack och hej då!",
+          "answer": "Thank you, bye!"
+        },
+        {
+          "type": "translation",
+          "prompt": "Trevligt att träffas!",
+          "answer": "Nice to meet you!",
+          "accepted_answers": [
+            "Pleased to meet you!"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Allt är bra.",
+          "answer": "Everything is fine.",
+          "accepted_answers": [
+            "All is fine.",
+            "Everything is good."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ursäkta, jag är sen.",
+          "answer": "Sorry, I'm late.",
+          "accepted_answers": [
+            "I am late."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "People and Family",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "en man",
+          "translation": "a man",
+          "pos": "noun (common)",
+          "example": "En man läser tidningen."
+        },
+        {
+          "word": "en kvinna",
+          "translation": "a woman",
+          "pos": "noun (common)",
+          "example": "En kvinna arbetar i staden."
+        },
+        {
+          "word": "en pojke",
+          "translation": "a boy",
+          "pos": "noun (common)",
+          "example": "Pojken spelar fotboll."
+        },
+        {
+          "word": "en flicka",
+          "translation": "a girl",
+          "pos": "noun (common)",
+          "example": "Flickan sjunger en sång."
+        },
+        {
+          "word": "en vän",
+          "translation": "a friend",
+          "pos": "noun (common)",
+          "example": "Min vän talar svenska."
+        },
+        {
+          "word": "en familj",
+          "translation": "a family",
+          "pos": "noun (common)",
+          "example": "Familjen äter middag tillsammans."
+        },
+        {
+          "word": "en mamma",
+          "translation": "a mother",
+          "accepted_translations": [
+            "mom"
+          ],
+          "pos": "noun (common)",
+          "example": "Mamma lagar mat."
+        },
+        {
+          "word": "en pappa",
+          "translation": "a father",
+          "accepted_translations": [
+            "dad"
+          ],
+          "pos": "noun (common)",
+          "example": "Pappa läser en bok."
+        },
+        {
+          "word": "en bror",
+          "translation": "a brother",
+          "pos": "noun (common)",
+          "example": "Min bror bor i Stockholm."
+        },
+        {
+          "word": "en syster",
+          "translation": "a sister",
+          "pos": "noun (common)",
+          "example": "Min syster spelar piano."
+        },
+        {
+          "word": "en son",
+          "translation": "a son",
+          "pos": "noun (common)",
+          "example": "Sonen heter Erik."
+        },
+        {
+          "word": "en dotter",
+          "translation": "a daughter",
+          "pos": "noun (common)",
+          "example": "Dottern heter Anna."
+        },
+        {
+          "word": "ett namn",
+          "translation": "a name",
+          "pos": "noun (neuter)",
+          "example": "Vad är ditt namn?"
+        },
+        {
+          "word": "människor",
+          "translation": "people",
+          "pos": "noun (plural)",
+          "example": "Människor är olika."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "en man",
+          "answer": "a man"
+        },
+        {
+          "type": "translation",
+          "prompt": "en kvinna",
+          "answer": "a woman"
+        },
+        {
+          "type": "translation",
+          "prompt": "en pojke",
+          "answer": "a boy"
+        },
+        {
+          "type": "translation",
+          "prompt": "en flicka",
+          "answer": "a girl"
+        },
+        {
+          "type": "translation",
+          "prompt": "en vän",
+          "answer": "a friend"
+        },
+        {
+          "type": "translation",
+          "prompt": "en familj",
+          "answer": "a family"
+        },
+        {
+          "type": "translation",
+          "prompt": "en mamma",
+          "answer": "a mother",
+          "accepted_answers": [
+            "mom"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "en pappa",
+          "answer": "a father",
+          "accepted_answers": [
+            "dad"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "en bror",
+          "answer": "a brother"
+        },
+        {
+          "type": "translation",
+          "prompt": "en syster",
+          "answer": "a sister"
+        },
+        {
+          "type": "translation",
+          "prompt": "en son",
+          "answer": "a son"
+        },
+        {
+          "type": "translation",
+          "prompt": "en dotter",
+          "answer": "a daughter"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett namn",
+          "answer": "a name"
+        },
+        {
+          "type": "translation",
+          "prompt": "människor",
+          "answer": "people"
+        },
+        {
+          "type": "translation",
+          "prompt": "a family",
+          "answer": "en familj"
+        },
+        {
+          "type": "translation",
+          "prompt": "a boy",
+          "answer": "en pojke"
+        },
+        {
+          "type": "translation",
+          "prompt": "a friend",
+          "answer": "en vän"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a man':",
+          "options": [
+            "en man",
+            "en kvinna",
+            "en pojke",
+            "en vän"
+          ],
+          "answer": "en man"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a woman':",
+          "options": [
+            "en kvinna",
+            "en man",
+            "en flicka",
+            "en mamma"
+          ],
+          "answer": "en kvinna"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a boy':",
+          "options": [
+            "en pojke",
+            "en flicka",
+            "en son",
+            "en vän"
+          ],
+          "answer": "en pojke"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a girl':",
+          "options": [
+            "en flicka",
+            "en pojke",
+            "en dotter",
+            "en syster"
+          ],
+          "answer": "en flicka"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a mother':",
+          "options": [
+            "en mamma",
+            "en pappa",
+            "en syster",
+            "en familj"
+          ],
+          "answer": "en mamma"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a father':",
+          "options": [
+            "en pappa",
+            "en mamma",
+            "en bror",
+            "en vän"
+          ],
+          "answer": "en pappa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a brother':",
+          "options": [
+            "en bror",
+            "en syster",
+            "en son",
+            "en pappa"
+          ],
+          "answer": "en bror"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'people':",
+          "options": [
+            "människor",
+            "en familj",
+            "en vän",
+            "ett namn"
+          ],
+          "answer": "människor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ man läser tidningen.",
+          "answer": "en"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ kvinna arbetar i staden.",
+          "answer": "en"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ barn sover nu.",
+          "answer": "ett"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Min ___ lagar mat.",
+          "answer": "mamma"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Min ___ arbetar mycket.",
+          "answer": "pappa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Min ___ bor i Stockholm.",
+          "answer": "syster"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hennes ___ är Elsa.",
+          "answer": "namn"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ är snälla.",
+          "answer": "människor"
+        },
+        {
+          "type": "translation",
+          "prompt": "Vem är han?",
+          "answer": "Who is he?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Det här är min vän.",
+          "answer": "This is my friend."
+        },
+        {
+          "type": "translation",
+          "prompt": "Det är min syster.",
+          "answer": "This is my sister."
+        },
+        {
+          "type": "translation",
+          "prompt": "Min mamma lagar mat.",
+          "answer": "My mother cooks food.",
+          "accepted_answers": [
+            "My mom cooks food."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Min pappa arbetar mycket.",
+          "answer": "My father works a lot.",
+          "accepted_answers": [
+            "My dad works a lot."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Min familj är stor.",
+          "answer": "My family is big."
+        },
+        {
+          "type": "translation",
+          "prompt": "Morfar och mormor dansar.",
+          "answer": "Grandpa and grandma dance."
+        },
+        {
+          "type": "translation",
+          "prompt": "Människorna på torget är snälla.",
+          "answer": "The people at the square are friendly."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Numbers and Time",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "ett",
+          "translation": "one",
+          "pos": "number",
+          "example": "Jag har ett äpple."
+        },
+        {
+          "word": "två",
+          "translation": "two",
+          "pos": "number",
+          "example": "Vi är två personer."
+        },
+        {
+          "word": "tre",
+          "translation": "three",
+          "pos": "number",
+          "example": "Klockan är tre."
+        },
+        {
+          "word": "fyra",
+          "translation": "four",
+          "pos": "number",
+          "example": "Huset har fyra rum."
+        },
+        {
+          "word": "fem",
+          "translation": "five",
+          "pos": "number",
+          "example": "Vi väntar i fem minuter."
+        },
+        {
+          "word": "sex",
+          "translation": "six",
+          "pos": "number",
+          "example": "Klockan är sex."
+        },
+        {
+          "word": "sju",
+          "translation": "seven",
+          "pos": "number",
+          "example": "En vecka har sju dagar."
+        },
+        {
+          "word": "åtta",
+          "translation": "eight",
+          "pos": "number",
+          "example": "Bussen lämnar klockan åtta."
+        },
+        {
+          "word": "nio",
+          "translation": "nine",
+          "pos": "number",
+          "example": "Hon är nio år."
+        },
+        {
+          "word": "tio",
+          "translation": "ten",
+          "pos": "number",
+          "example": "Jag räknar till tio."
+        },
+        {
+          "word": "en dag",
+          "translation": "a day",
+          "pos": "noun (common)",
+          "example": "Dagen är lång."
+        },
+        {
+          "word": "en vecka",
+          "translation": "a week",
+          "pos": "noun (common)",
+          "example": "Vi ses nästa vecka!"
+        },
+        {
+          "word": "en timme",
+          "translation": "an hour",
+          "pos": "noun (common)",
+          "example": "Timmen har sextio minuter."
+        },
+        {
+          "word": "idag",
+          "translation": "today",
+          "pos": "adverb",
+          "example": "Idag är det tisdag."
+        },
+        {
+          "word": "imorgon",
+          "translation": "tomorrow",
+          "pos": "adverb",
+          "example": "Imorgon åker jag till stranden."
+        },
+        {
+          "word": "igår",
+          "translation": "yesterday",
+          "pos": "adverb",
+          "example": "Igår regnade det."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ett",
+          "answer": "one"
+        },
+        {
+          "type": "translation",
+          "prompt": "två",
+          "answer": "two"
+        },
+        {
+          "type": "translation",
+          "prompt": "tre",
+          "answer": "three"
+        },
+        {
+          "type": "translation",
+          "prompt": "fyra",
+          "answer": "four"
+        },
+        {
+          "type": "translation",
+          "prompt": "fem",
+          "answer": "five"
+        },
+        {
+          "type": "translation",
+          "prompt": "sex",
+          "answer": "six"
+        },
+        {
+          "type": "translation",
+          "prompt": "sju",
+          "answer": "seven"
+        },
+        {
+          "type": "translation",
+          "prompt": "åtta",
+          "answer": "eight"
+        },
+        {
+          "type": "translation",
+          "prompt": "nio",
+          "answer": "nine"
+        },
+        {
+          "type": "translation",
+          "prompt": "tio",
+          "answer": "ten"
+        },
+        {
+          "type": "translation",
+          "prompt": "en dag",
+          "answer": "a day"
+        },
+        {
+          "type": "translation",
+          "prompt": "en vecka",
+          "answer": "a week"
+        },
+        {
+          "type": "translation",
+          "prompt": "en timme",
+          "answer": "an hour"
+        },
+        {
+          "type": "translation",
+          "prompt": "idag",
+          "answer": "today"
+        },
+        {
+          "type": "translation",
+          "prompt": "imorgon",
+          "answer": "tomorrow"
+        },
+        {
+          "type": "translation",
+          "prompt": "igår",
+          "answer": "yesterday"
+        },
+        {
+          "type": "translation",
+          "prompt": "one",
+          "answer": "ett"
+        },
+        {
+          "type": "translation",
+          "prompt": "tomorrow",
+          "answer": "imorgon"
+        },
+        {
+          "type": "translation",
+          "prompt": "yesterday",
+          "answer": "igår"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'two':",
+          "options": [
+            "två",
+            "tre",
+            "fyra",
+            "tio"
+          ],
+          "answer": "två"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'four':",
+          "options": [
+            "fyra",
+            "fem",
+            "tre",
+            "sju"
+          ],
+          "answer": "fyra"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'eight':",
+          "options": [
+            "åtta",
+            "nio",
+            "tio",
+            "sju"
+          ],
+          "answer": "åtta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a week':",
+          "options": [
+            "en vecka",
+            "en dag",
+            "en timme",
+            "idag"
+          ],
+          "answer": "en vecka"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tomorrow':",
+          "options": [
+            "imorgon",
+            "idag",
+            "igår",
+            "en vecka"
+          ],
+          "answer": "imorgon"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'an hour':",
+          "options": [
+            "en timme",
+            "en dag",
+            "en vecka",
+            "igår"
+          ],
+          "answer": "en timme"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'six':",
+          "options": [
+            "sex",
+            "sju",
+            "fem",
+            "nio"
+          ],
+          "answer": "sex"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'today':",
+          "options": [
+            "idag",
+            "imorgon",
+            "igår",
+            "en dag"
+          ],
+          "answer": "idag"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag har ___ syskon.",
+          "answer": "två"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "En vecka har ___ dagar.",
+          "answer": "sju"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vilken ___ är det idag?",
+          "answer": "dag"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Klockan är ___.",
+          "answer": "åtta"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Veck___ har sju dagar.",
+          "answer": "an"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dag___ är lång idag.",
+          "answer": "en"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Timm___ har sextio minuter.",
+          "answer": "en"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vi ses ___!",
+          "answer": "imorgon"
+        },
+        {
+          "type": "translation",
+          "prompt": "Vad är klockan?",
+          "answer": "What time is it?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Klockan är tre.",
+          "answer": "It's three o'clock.",
+          "accepted_answers": [
+            "It is three o'clock."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Klockan är ett.",
+          "answer": "It's one o'clock.",
+          "accepted_answers": [
+            "It is one o'clock."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Idag är det tisdag.",
+          "answer": "Today is Tuesday."
+        },
+        {
+          "type": "translation",
+          "prompt": "Imorgon åker jag till stranden.",
+          "answer": "Tomorrow I'm going to the beach.",
+          "accepted_answers": [
+            "I'm going to the beach tomorrow.",
+            "I am going to the beach tomorrow."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Filmen börjar klockan åtta.",
+          "answer": "The movie starts at eight."
+        },
+        {
+          "type": "translation",
+          "prompt": "Min bror är tio år.",
+          "answer": "My brother is ten years old."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vi ses nästa vecka!",
+          "answer": "See you next week!"
+        },
+        {
+          "type": "translation",
+          "prompt": "Nu är jag upptagen.",
+          "answer": "I'm busy now.",
+          "accepted_answers": [
+            "I am busy now."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Idag är det mycket varmt.",
+          "answer": "It's very hot today.",
+          "accepted_answers": [
+            "It is very hot today."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag går till marknaden nu.",
+          "answer": "I'm going to the market now.",
+          "accepted_answers": [
+            "I am going to the market now."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Everyday Verbs",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "vara",
+          "translation": "to be",
+          "pos": "verb",
+          "example": "Jag vill vara hemma."
+        },
+        {
+          "word": "ha",
+          "translation": "to have",
+          "pos": "verb",
+          "example": "Vill du ha kaffe?"
+        },
+        {
+          "word": "göra",
+          "translation": "to do",
+          "accepted_translations": [
+            "to make"
+          ],
+          "pos": "verb",
+          "example": "Vad vill du göra?"
+        },
+        {
+          "word": "gå",
+          "translation": "to go",
+          "pos": "verb",
+          "example": "Jag går till jobbet."
+        },
+        {
+          "word": "vilja",
+          "translation": "to want",
+          "pos": "verb",
+          "example": "Jag vill ha en kaffe."
+        },
+        {
+          "word": "kunna",
+          "translation": "to be able to",
+          "accepted_translations": [
+            "can"
+          ],
+          "pos": "verb",
+          "example": "Kan du tala svenska?"
+        },
+        {
+          "word": "tala",
+          "translation": "to speak",
+          "pos": "verb",
+          "example": "Jag talar lite svenska."
+        },
+        {
+          "word": "äta",
+          "translation": "to eat",
+          "pos": "verb",
+          "example": "Hunden vill äta."
+        },
+        {
+          "word": "dricka",
+          "translation": "to drink",
+          "pos": "verb",
+          "example": "Vill du dricka te?"
+        },
+        {
+          "word": "läsa",
+          "translation": "to read",
+          "pos": "verb",
+          "example": "Jag läser en bok."
+        },
+        {
+          "word": "skriva",
+          "translation": "to write",
+          "pos": "verb",
+          "example": "Kan du skriva ditt namn?"
+        },
+        {
+          "word": "förstå",
+          "translation": "to understand",
+          "pos": "verb",
+          "example": "Jag förstår inte."
+        },
+        {
+          "word": "lära sig",
+          "translation": "to learn",
+          "pos": "verb",
+          "example": "Vi lär oss svenska."
+        },
+        {
+          "word": "spela",
+          "translation": "to play",
+          "pos": "verb",
+          "example": "Barnen spelar i parken."
+        },
+        {
+          "word": "arbeta",
+          "translation": "to work",
+          "pos": "verb",
+          "example": "Jag arbetar i Stockholm."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "vara",
+          "answer": "to be"
+        },
+        {
+          "type": "translation",
+          "prompt": "ha",
+          "answer": "to have"
+        },
+        {
+          "type": "translation",
+          "prompt": "göra",
+          "answer": "to do",
+          "accepted_answers": [
+            "to make"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "gå",
+          "answer": "to go"
+        },
+        {
+          "type": "translation",
+          "prompt": "vilja",
+          "answer": "to want"
+        },
+        {
+          "type": "translation",
+          "prompt": "kunna",
+          "answer": "to be able to",
+          "accepted_answers": [
+            "can"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "tala",
+          "answer": "to speak"
+        },
+        {
+          "type": "translation",
+          "prompt": "äta",
+          "answer": "to eat"
+        },
+        {
+          "type": "translation",
+          "prompt": "dricka",
+          "answer": "to drink"
+        },
+        {
+          "type": "translation",
+          "prompt": "läsa",
+          "answer": "to read"
+        },
+        {
+          "type": "translation",
+          "prompt": "skriva",
+          "answer": "to write"
+        },
+        {
+          "type": "translation",
+          "prompt": "förstå",
+          "answer": "to understand"
+        },
+        {
+          "type": "translation",
+          "prompt": "lära sig",
+          "answer": "to learn"
+        },
+        {
+          "type": "translation",
+          "prompt": "spela",
+          "answer": "to play"
+        },
+        {
+          "type": "translation",
+          "prompt": "arbeta",
+          "answer": "to work"
+        },
+        {
+          "type": "translation",
+          "prompt": "to have",
+          "answer": "ha"
+        },
+        {
+          "type": "translation",
+          "prompt": "to eat",
+          "answer": "äta"
+        },
+        {
+          "type": "translation",
+          "prompt": "to speak",
+          "answer": "tala"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to speak':",
+          "options": [
+            "tala",
+            "äta",
+            "dricka",
+            "förstå"
+          ],
+          "answer": "tala"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to eat':",
+          "options": [
+            "äta",
+            "dricka",
+            "tala",
+            "gå"
+          ],
+          "answer": "äta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to drink':",
+          "options": [
+            "dricka",
+            "äta",
+            "skriva",
+            "vilja"
+          ],
+          "answer": "dricka"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to understand':",
+          "options": [
+            "förstå",
+            "skriva",
+            "göra",
+            "kunna"
+          ],
+          "answer": "förstå"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to learn':",
+          "options": [
+            "lära sig",
+            "arbeta",
+            "göra",
+            "ha"
+          ],
+          "answer": "lära sig"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to want':",
+          "options": [
+            "vilja",
+            "kunna",
+            "ha",
+            "vara"
+          ],
+          "answer": "vilja"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to work':",
+          "options": [
+            "arbeta",
+            "vara",
+            "ha",
+            "gå"
+          ],
+          "answer": "arbeta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to be able to':",
+          "options": [
+            "kunna",
+            "vilja",
+            "göra",
+            "ha"
+          ],
+          "answer": "kunna"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag vill ___ en kaffe.",
+          "answer": "dricka"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kan du ___ svenska?",
+          "answer": "tala",
+          "accepted_answers": [
+            "prata"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag kan ___ i Stockholm.",
+          "answer": "arbeta"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag vill ___ boken.",
+          "answer": "läsa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag vill ___ ett brev.",
+          "answer": "skriva"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vill du ___ med mig?",
+          "answer": "spela"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vad vill du ___?",
+          "answer": "göra"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag vill ___ svaret.",
+          "answer": "förstå"
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag talar svenska.",
+          "answer": "I speak Swedish."
+        },
+        {
+          "type": "translation",
+          "prompt": "Han tar socker i kaffet.",
+          "answer": "He puts sugar in the coffee."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag dricker kaffe på morgonen.",
+          "answer": "I drink coffee in the morning.",
+          "accepted_answers": [
+            "I drink coffee in the mornings."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "I want a coffee, please.",
+          "answer": "Jag vill ha en kaffe, tack."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag kommer från Sverige.",
+          "answer": "I'm from Sweden.",
+          "accepted_answers": [
+            "I am from Sweden."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag är hemma nu.",
+          "answer": "I'm at home now.",
+          "accepted_answers": [
+            "I am at home now."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Talar du engelska?",
+          "answer": "Do you speak English?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag vet inte.",
+          "answer": "I don't know.",
+          "accepted_answers": [
+            "I do not know."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vi ses imorgon!",
+          "answer": "See you tomorrow!"
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag är lycklig.",
+          "answer": "I'm happy.",
+          "accepted_answers": [
+            "I am happy."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag är trött nu.",
+          "answer": "I'm tired now.",
+          "accepted_answers": [
+            "I am tired now."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Describing and Asking",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "stor",
+          "translation": "big",
+          "pos": "adjective",
+          "example": "Elefanten är stor."
+        },
+        {
+          "word": "liten",
+          "translation": "small",
+          "accepted_translations": [
+            "little"
+          ],
+          "pos": "adjective",
+          "example": "Musen är liten."
+        },
+        {
+          "word": "bra",
+          "translation": "good",
+          "pos": "adjective",
+          "example": "Filmen är bra."
+        },
+        {
+          "word": "dålig",
+          "translation": "bad",
+          "pos": "adjective",
+          "example": "Maten är dålig."
+        },
+        {
+          "word": "ny",
+          "translation": "new",
+          "pos": "adjective",
+          "example": "Bilen är ny."
+        },
+        {
+          "word": "gammal",
+          "translation": "old",
+          "pos": "adjective",
+          "example": "Mannen är gammal."
+        },
+        {
+          "word": "lycklig",
+          "translation": "happy",
+          "pos": "adjective",
+          "example": "Jag är lycklig."
+        },
+        {
+          "word": "ledsen",
+          "translation": "sad",
+          "pos": "adjective",
+          "example": "Pojken är ledsen."
+        },
+        {
+          "word": "lätt",
+          "translation": "easy",
+          "pos": "adjective",
+          "example": "Provet är lätt."
+        },
+        {
+          "word": "svår",
+          "translation": "difficult",
+          "accepted_translations": [
+            "hard"
+          ],
+          "pos": "adjective",
+          "example": "Frågan är svår."
+        },
+        {
+          "word": "var",
+          "translation": "where",
+          "pos": "question word",
+          "example": "Var bor du?"
+        },
+        {
+          "word": "vad",
+          "translation": "what",
+          "pos": "question word",
+          "example": "Vad heter du?"
+        },
+        {
+          "word": "vem",
+          "translation": "who",
+          "pos": "question word",
+          "example": "Vem är hon?"
+        },
+        {
+          "word": "när",
+          "translation": "when",
+          "pos": "question word",
+          "example": "När kommer du?"
+        },
+        {
+          "word": "hur",
+          "translation": "how",
+          "pos": "question word",
+          "example": "Hur mår du?"
+        },
+        {
+          "word": "varför",
+          "translation": "why",
+          "pos": "question word",
+          "example": "Varför inte?"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "stor",
+          "answer": "big"
+        },
+        {
+          "type": "translation",
+          "prompt": "liten",
+          "answer": "small",
+          "accepted_answers": [
+            "little"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "bra",
+          "answer": "good"
+        },
+        {
+          "type": "translation",
+          "prompt": "dålig",
+          "answer": "bad"
+        },
+        {
+          "type": "translation",
+          "prompt": "ny",
+          "answer": "new"
+        },
+        {
+          "type": "translation",
+          "prompt": "gammal",
+          "answer": "old"
+        },
+        {
+          "type": "translation",
+          "prompt": "lycklig",
+          "answer": "happy"
+        },
+        {
+          "type": "translation",
+          "prompt": "ledsen",
+          "answer": "sad"
+        },
+        {
+          "type": "translation",
+          "prompt": "lätt",
+          "answer": "easy"
+        },
+        {
+          "type": "translation",
+          "prompt": "svår",
+          "answer": "difficult",
+          "accepted_answers": [
+            "hard"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "var",
+          "answer": "where"
+        },
+        {
+          "type": "translation",
+          "prompt": "vad",
+          "answer": "what"
+        },
+        {
+          "type": "translation",
+          "prompt": "vem",
+          "answer": "who"
+        },
+        {
+          "type": "translation",
+          "prompt": "när",
+          "answer": "when"
+        },
+        {
+          "type": "translation",
+          "prompt": "hur",
+          "answer": "how"
+        },
+        {
+          "type": "translation",
+          "prompt": "varför",
+          "answer": "why"
+        },
+        {
+          "type": "translation",
+          "prompt": "big",
+          "answer": "stor"
+        },
+        {
+          "type": "translation",
+          "prompt": "easy",
+          "answer": "lätt"
+        },
+        {
+          "type": "translation",
+          "prompt": "why",
+          "answer": "varför"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'big':",
+          "options": [
+            "stor",
+            "liten",
+            "ny",
+            "gammal"
+          ],
+          "answer": "stor"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'small':",
+          "options": [
+            "liten",
+            "stor",
+            "ny",
+            "bra"
+          ],
+          "answer": "liten"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good':",
+          "options": [
+            "bra",
+            "dålig",
+            "gammal",
+            "lätt"
+          ],
+          "answer": "bra"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'new':",
+          "options": [
+            "ny",
+            "gammal",
+            "bra",
+            "stor"
+          ],
+          "answer": "ny"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'happy':",
+          "options": [
+            "lycklig",
+            "ledsen",
+            "bra",
+            "lätt"
+          ],
+          "answer": "lycklig"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'where':",
+          "options": [
+            "var",
+            "när",
+            "hur",
+            "vad"
+          ],
+          "answer": "var"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'who':",
+          "options": [
+            "vem",
+            "vad",
+            "hur",
+            "var"
+          ],
+          "answer": "vem"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'why':",
+          "options": [
+            "varför",
+            "hur",
+            "när",
+            "vem"
+          ],
+          "answer": "varför"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ bor du?",
+          "answer": "var"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ är hon?",
+          "answer": "vem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ börjar filmen?",
+          "answer": "när"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ är du ledsen?",
+          "answer": "varför"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bilen är ___.",
+          "answer": "ny"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Filmen är ___.",
+          "answer": "dålig"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Pojken är ___.",
+          "answer": "ledsen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mannen är ___.",
+          "answer": "gammal"
+        },
+        {
+          "type": "translation",
+          "prompt": "Hur mår du?",
+          "answer": "How are you?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Var bor du?",
+          "answer": "Where do you live?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Vem är hon?",
+          "answer": "Who is she?"
+        },
+        {
+          "type": "translation",
+          "prompt": "När kommer du?",
+          "answer": "When are you coming?",
+          "accepted_answers": [
+            "When do you come?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Varför är du ledsen?",
+          "answer": "Why are you sad?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Staden är stor.",
+          "answer": "The city is big."
+        },
+        {
+          "type": "translation",
+          "prompt": "Kaffet här är mycket bra.",
+          "answer": "The coffee here is very good."
+        },
+        {
+          "type": "translation",
+          "prompt": "Övningen är lätt.",
+          "answer": "The exercise is easy."
+        },
+        {
+          "type": "translation",
+          "prompt": "Frågan är svår.",
+          "answer": "The question is difficult.",
+          "accepted_answers": [
+            "The question is hard."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag är mycket lycklig idag.",
+          "answer": "I'm very happy today.",
+          "accepted_answers": [
+            "I am very happy today."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Det är en sorglig historia.",
+          "answer": "It's a sad story.",
+          "accepted_answers": [
+            "It is a sad story."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "My apartment is small.",
+          "answer": "Min lägenhet är liten."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hur säger man det här på svenska?",
+          "answer": "How do you say this in Swedish?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag vet inte varför.",
+          "answer": "I don't know why.",
+          "accepted_answers": [
+            "I do not know why."
+          ]
+        }
+      ]
+    }
+  ]
+}
