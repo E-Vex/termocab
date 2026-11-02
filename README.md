@@ -7,32 +7,32 @@ reviews, streaks — fully offline, fully local, no account, no network.
 Plain text everywhere: content is JSON, your progress is a file you can
 `cat`. UX modeled on git — direct subcommands, no menus.
 
-Ten courses ship today: French (five stages, 73 words, 177
-exercises), Spanish (five stages, 73 words, 197 exercises), German
-(five stages, 73 words, 216 exercises — nouns with their articles,
-modal-verb drills, umlauts and the sharp s), Italian (five stages,
-73 words, 218 exercises — articles with their elisions, modal-verb
-drills, the grave and the acute accents), Polish (five stages,
-73 words, 218 exercises — bare nouns, "to jest" drills, want/like +
+Ten courses ship today: French (ten stages, 153 words, 397
+exercises), Spanish (ten stages, 153 words, 417 exercises), German
+(ten stages, 153 words, 436 exercises — nouns with their articles,
+modal-verb drills, umlauts and the sharp s), Italian (ten stages,
+153 words, 438 exercises — articles with their elisions, modal-verb
+drills, the grave and the acute accents), Polish (ten stages,
+153 words, 438 exercises — bare nouns, "to jest" drills, want/like +
 infinitive drills, every letter ą ć ę ł ń ó ś ź ż alive in real
-content), Romanian (five stages, 73 words, 218 exercises — the
+content), Romanian (ten stages, 153 words, 438 exercises — the
 enclitic definite article blanked where it lives, at the end of the
 noun, can + infinitive drills, every letter ă â î ș ț alive in real
-content), Portuguese (five stages, 73 words, 218 exercises —
+content), Portuguese (ten stages, 153 words, 438 exercises —
 Brazilian Portuguese, nouns with their gendered articles, the crase
 à blanked where it lives, want/can + infinitive drills, the tildes
 ã õ, the cedilla ç, the acutes á é í ó ú, the circumflexes ê ô
-alive in real content), Swedish (five stages, 73 words, 218
+alive in real content), Swedish (ten stages, 153 words, 438
 exercises — nouns with their en/ett articles, the gender drill and
 the enclitic definite article blanked where it lives, at the end of
 the noun, want/can + infinitive drills, every letter å ä ö alive in
-real content) and Hungarian (five stages, 73 words, 218 exercises —
+real content) and Hungarian (ten stages, 153 words, 438 exercises —
 the third engine extension: the double acute ő ű fold like any
 accent, bare nouns, the a/az article alternation drill, the plural
 suffix blanked with its linking vowel — the vowel harmony made
 visible — want/like/can + infinitive drills, homonym translations on
 hét nap óra, every Hungarian letter á é í ó ö ő ú ü ű alive in real
-content) and Turkish (five stages, 73 words, 218 exercises —
+content) and Turkish (ten stages, 153 words, 438 exercises —
 the fourth engine extension, and the first to split in two: the
 soft ğ folds like any accent while dotless ı stays closed the way
 ø does — hayır is never hayir — bare nouns, the bir drill for the
@@ -40,7 +40,16 @@ one word that is both "a" and "one", the plural suffix blanked
 where the vowel harmony lives, istemek + the -mek/-mak infinitive,
 homonym translations on yemek ay kız, every Turkish letter
 â ç ğ ı ö ş ü alive in real content) — same engine, same rules,
-same forgiving grading for all of them.
+same forgiving grading for all of them. Stages 6–10 (the elementary
+wave) share one skeleton across the ten courses — food, home,
+routine and weather, shopping and travel, yesterday and tomorrow —
+while each course keeps its own signature drills: the partitive in
+French, hay in Spanish, the future bracket werden … lesen in German,
+the passato prossimo in Italian, the w/na locative split and the
+gendered past -łem/-łam in Polish, the enclitic article again in
+Romanian, the Brazilian tem in Portuguese, ska in Swedish, the
+-ban/-ben harmony in Hungarian, and var/yok plus the four-way
+-iyor and -dı harmonies in Turkish.
 
 ## Install & run
 
