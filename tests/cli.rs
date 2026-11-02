@@ -760,6 +760,7 @@ fn shipped_courses_validate() {
         "portuguese",
         "swedish",
         "hungarian",
+        "turkish",
     ] {
         let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
             .join("languages")
@@ -1408,4 +1409,100 @@ fn hungarian_double_acutes_grade_end_to_end() {
     assert!(srs.contains("word könnyű box 2"), "{srs}");
     assert!(srs.contains("word fű box 2"), "{srs}");
     assert!(srs.contains("word főzni box 2"), "{srs}");
+}
+
+/// The tenth language end to end, in a Turkish course. The fourth
+/// engine extension a language has forced (D15), and the first to
+/// split in two: the soft ğ decomposes like any accent (g + breve,
+/// the very mark Romanian's ă carries), so "soguk" counts with
+/// "soğuk" as the hint and "kardes" with "kardeş" through the D11
+/// cedilla entry that turns out to be Turkish's own letter — while
+/// dotless ı stays closed like ø: two different vowels, not one
+/// word spelled twice, so "hayir" is wrong, never hinted, and the
+/// stage still completes at 7/8 because a hinted fold counts toward
+/// the bar and a closed miss does not. The course is Turkish
+/// through and through: the stage-2 drill is bir (the invariant
+/// indefinite article that doubles as the number one), the
+/// harmony drill is the plural suffix itself (Kız___ wants lar,
+/// the back vowels picking their own suffix), and the modal drill
+/// is istemek + infinitive with -mek/-mak blanked mid-sentence
+/// where SOV puts it (Kahve iç___ istiyorum wants mek). The
+/// review keeps the Turkish letters verbatim in the srs keys.
+#[test]
+fn turkish_closed_letters_and_harmony_grade_end_to_end() {
+    let scratch = Scratch::new("turkish");
+    let course = r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Türkçe", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "soğuk", "translation": "cold",
+                "pos": "adjective", "example": "Su soğuk." },
+              { "word": "kardeş", "translation": "sibling",
+                "accepted_translations": ["brother", "sister"],
+                "pos": "noun", "example": "Kardeşim okulda." },
+              { "word": "üç", "translation": "three",
+                "pos": "number", "example": "Üç çocuk oynuyor." },
+              { "word": "küçük", "translation": "small",
+                "accepted_translations": ["little"],
+                "pos": "adjective", "example": "Evim küçük." },
+              { "word": "hayır", "translation": "no",
+                "pos": "adverb", "example": "Hayır, istemiyorum." }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "cold", "answer": "soğuk" },
+              { "type": "translation", "prompt": "sibling", "answer": "kardeş",
+                "accepted_answers": ["brother", "sister"] },
+              { "type": "translation", "prompt": "three", "answer": "üç" },
+              { "type": "translation", "prompt": "small", "answer": "küçük",
+                "accepted_answers": ["little"] },
+              { "type": "translation", "prompt": "no", "answer": "hayır" },
+              { "type": "fill_blank", "prompt": "Bu ___ kız.", "answer": "bir" },
+              { "type": "fill_blank", "prompt": "Kız___ oynuyor.", "answer": "lar" },
+              { "type": "fill_blank", "prompt": "Kahve iç___ istiyorum.", "answer": "mek" }
+            ] }
+       ] }"#;
+    let file = scratch.stages_file("turkish.json", course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    // everything answered with the accents stripped — the foldable
+    // letters count with the properly spelled form as the hint, and
+    // the one closed ı does not: "hayir" is wrong, never hinted,
+    // so the run lands at 7/8 — still past the 80% bar, the stage
+    // completes, and the hint counts toward it while the closed
+    // miss does not. Both halves of D15 in one run.
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "--no-shuffle", "test"]);
+    let out = feed(&mut cmd, "soguk\nkardes\nuc\nkucuk\nhayir\nbir\nlar\nmek\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("watch the accents: soğuk"), "{text}");
+    assert!(text.contains("watch the accents: kardeş"), "{text}");
+    assert!(text.contains("watch the accents: üç"), "{text}");
+    assert!(text.contains("watch the accents: küçük"), "{text}");
+    assert!(text.contains("not quite — expected: hayır"), "{text}");
+    assert!(!text.contains("watch the accents: hayır"), "{text}");
+    assert!(text.contains("7/8"), "{text}");
+    assert!(text.contains("stage complete"), "{text}");
+
+    // review: due cards come alphabetical (byte order: hayır,
+    // kardeş, küçük, soğuk, üç), the accepted alternatives count
+    // ("brother" for kardeş, "little" for küçük), and the srs keys
+    // keep every Turkish letter verbatim
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(&mut cmd, "no\nbrother\nlittle\ncold\nthree\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("correct"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    let srs = scratch.home().join(".config/termocab/srs/test.txt");
+    let srs = std::fs::read_to_string(&srs).expect("srs file");
+    assert!(srs.contains("word hayır box 2"), "{srs}");
+    assert!(srs.contains("word kardeş box 2"), "{srs}");
+    assert!(srs.contains("word küçük box 2"), "{srs}");
+    assert!(srs.contains("word soğuk box 2"), "{srs}");
+    assert!(srs.contains("word üç box 2"), "{srs}");
 }
