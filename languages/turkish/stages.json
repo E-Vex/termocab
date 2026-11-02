@@ -1,0 +1,2056 @@
+{
+  "language": "turkish",
+  "stages": [
+    {
+      "id": 1,
+      "title": "Greetings and Basics",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "merhaba",
+          "translation": "hello",
+          "pos": "interjection",
+          "example": "Merhaba, nasılsın?",
+          "accepted_translations": [
+            "hi"
+          ]
+        },
+        {
+          "word": "günaydın",
+          "translation": "good morning",
+          "pos": "interjection",
+          "example": "Günaydın, anne!"
+        },
+        {
+          "word": "iyi akşamlar",
+          "translation": "good evening",
+          "pos": "phrase",
+          "example": "İyi akşamlar, hoş geldiniz!"
+        },
+        {
+          "word": "iyi geceler",
+          "translation": "good night",
+          "pos": "phrase",
+          "example": "İyi geceler, yarın görüşürüz."
+        },
+        {
+          "word": "hoşça kal",
+          "translation": "goodbye",
+          "pos": "phrase",
+          "example": "Hoşça kal, arkadaşım.",
+          "accepted_translations": [
+            "bye"
+          ]
+        },
+        {
+          "word": "evet",
+          "translation": "yes",
+          "pos": "adverb",
+          "example": "Evet, istiyorum."
+        },
+        {
+          "word": "hayır",
+          "translation": "no",
+          "pos": "adverb",
+          "example": "Hayır, istemiyorum."
+        },
+        {
+          "word": "lütfen",
+          "translation": "please",
+          "pos": "adverb",
+          "example": "Bir çay, lütfen."
+        },
+        {
+          "word": "teşekkür ederim",
+          "translation": "thank you",
+          "pos": "phrase",
+          "example": "Çok güzel, teşekkür ederim!",
+          "accepted_translations": [
+            "thanks"
+          ]
+        },
+        {
+          "word": "rica ederim",
+          "translation": "you're welcome",
+          "pos": "phrase",
+          "example": "Ne demek, rica ederim!",
+          "accepted_translations": [
+            "don't mention it"
+          ]
+        },
+        {
+          "word": "özür dilerim",
+          "translation": "I'm sorry",
+          "pos": "phrase",
+          "example": "Çok özür dilerim.",
+          "accepted_translations": [
+            "sorry"
+          ]
+        },
+        {
+          "word": "ben",
+          "translation": "I",
+          "pos": "pronoun",
+          "example": "Ben öğrenciyim."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "merhaba",
+          "answer": "hello",
+          "accepted_answers": [
+            "hi"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "günaydın",
+          "answer": "good morning"
+        },
+        {
+          "type": "translation",
+          "prompt": "iyi akşamlar",
+          "answer": "good evening"
+        },
+        {
+          "type": "translation",
+          "prompt": "iyi geceler",
+          "answer": "good night"
+        },
+        {
+          "type": "translation",
+          "prompt": "hoşça kal",
+          "answer": "goodbye",
+          "accepted_answers": [
+            "bye"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "evet",
+          "answer": "yes"
+        },
+        {
+          "type": "translation",
+          "prompt": "hayır",
+          "answer": "no"
+        },
+        {
+          "type": "translation",
+          "prompt": "lütfen",
+          "answer": "please"
+        },
+        {
+          "type": "translation",
+          "prompt": "teşekkür ederim",
+          "answer": "thank you",
+          "accepted_answers": [
+            "thanks"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "rica ederim",
+          "answer": "you're welcome",
+          "accepted_answers": [
+            "don't mention it"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "özür dilerim",
+          "answer": "I'm sorry",
+          "accepted_answers": [
+            "sorry"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "ben",
+          "answer": "I"
+        },
+        {
+          "type": "translation",
+          "prompt": "Merhaba, benim adım Ali.",
+          "answer": "Hello, my name is Ali.",
+          "accepted_answers": [
+            "Hi, my name is Ali.",
+            "Hello, I'm Ali."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Nasılsın?",
+          "answer": "How are you?"
+        },
+        {
+          "type": "translation",
+          "prompt": "İyiyim, teşekkür ederim.",
+          "answer": "I'm fine, thank you.",
+          "accepted_answers": [
+            "I am fine, thank you.",
+            "Fine, thanks."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Evet, lütfen.",
+          "answer": "Yes, please."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hayır, teşekkür ederim.",
+          "answer": "No, thank you.",
+          "accepted_answers": [
+            "No, thanks."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Çay, lütfen.",
+          "answer": "A tea, please.",
+          "accepted_answers": [
+            "Tea, please."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Çok teşekkür ederim!",
+          "answer": "Thank you very much!",
+          "accepted_answers": [
+            "Thanks a lot!"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Özür dilerim, geç kaldım.",
+          "answer": "I'm sorry, I'm late.",
+          "accepted_answers": [
+            "I am sorry, I am late.",
+            "Sorry, I'm late."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Görüşürüz, hoşça kal!",
+          "answer": "See you, goodbye!",
+          "accepted_answers": [
+            "See you, bye!"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hoş geldiniz!",
+          "answer": "Welcome!"
+        },
+        {
+          "type": "translation",
+          "prompt": "No, thank you.",
+          "answer": "Hayır, teşekkür ederim."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hello':",
+          "options": [
+            "merhaba",
+            "evet",
+            "hayır",
+            "lütfen"
+          ],
+          "answer": "merhaba"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'no':",
+          "options": [
+            "hayır",
+            "evet",
+            "merhaba",
+            "lütfen"
+          ],
+          "answer": "hayır"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'please':",
+          "options": [
+            "lütfen",
+            "evet",
+            "merhaba",
+            "hayır"
+          ],
+          "answer": "lütfen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'thank you':",
+          "options": [
+            "teşekkür ederim",
+            "günaydın",
+            "hoşça kal",
+            "evet"
+          ],
+          "answer": "teşekkür ederim"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good morning':",
+          "options": [
+            "günaydın",
+            "iyi geceler",
+            "hoşça kal",
+            "rica ederim"
+          ],
+          "answer": "günaydın"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good night':",
+          "options": [
+            "iyi geceler",
+            "günaydın",
+            "iyi akşamlar",
+            "merhaba"
+          ],
+          "answer": "iyi geceler"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'goodbye':",
+          "options": [
+            "hoşça kal",
+            "merhaba",
+            "evet",
+            "teşekkür ederim"
+          ],
+          "answer": "hoşça kal"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'yes':",
+          "options": [
+            "evet",
+            "hayır",
+            "lütfen",
+            "ben"
+          ],
+          "answer": "evet"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, benim adım Ali.",
+          "answer": "merhaba"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "İyi ___!",
+          "answer": "akşamlar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "İyi ___, yarın görüşürüz.",
+          "answer": "geceler"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bir çay, ___.",
+          "answer": "lütfen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Çok ___ ederim!",
+          "answer": "teşekkür"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Görüşürüz, ___!",
+          "answer": "hoşça kal"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "People and Family",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "aile",
+          "translation": "family",
+          "pos": "noun",
+          "example": "Benim ailem küçük."
+        },
+        {
+          "word": "anne",
+          "translation": "mother",
+          "pos": "noun",
+          "example": "Annem öğretmen.",
+          "accepted_translations": [
+            "mom"
+          ]
+        },
+        {
+          "word": "baba",
+          "translation": "father",
+          "pos": "noun",
+          "example": "Babam gazete okuyor.",
+          "accepted_translations": [
+            "dad"
+          ]
+        },
+        {
+          "word": "kardeş",
+          "translation": "sibling",
+          "pos": "noun",
+          "example": "Kardeşim okulda.",
+          "accepted_translations": [
+            "brother",
+            "sister"
+          ]
+        },
+        {
+          "word": "abla",
+          "translation": "older sister",
+          "pos": "noun",
+          "example": "Ablam öğretmen.",
+          "accepted_translations": [
+            "big sister"
+          ]
+        },
+        {
+          "word": "ağabey",
+          "translation": "older brother",
+          "pos": "noun",
+          "example": "Ağabeyim öğrenci.",
+          "accepted_translations": [
+            "big brother"
+          ]
+        },
+        {
+          "word": "kız",
+          "translation": "girl",
+          "pos": "noun",
+          "example": "Kız kitap okuyor.",
+          "accepted_translations": [
+            "daughter"
+          ]
+        },
+        {
+          "word": "oğul",
+          "translation": "son",
+          "pos": "noun",
+          "example": "Oğlum bebek."
+        },
+        {
+          "word": "kadın",
+          "translation": "woman",
+          "pos": "noun",
+          "example": "Kadın gazete okuyor."
+        },
+        {
+          "word": "adam",
+          "translation": "man",
+          "pos": "noun",
+          "example": "Adam çay içiyor."
+        },
+        {
+          "word": "arkadaş",
+          "translation": "friend",
+          "pos": "noun",
+          "example": "Arkadaşım Ali."
+        },
+        {
+          "word": "çocuk",
+          "translation": "child",
+          "pos": "noun",
+          "example": "Küçük çocuk oynuyor.",
+          "accepted_translations": [
+            "kid"
+          ]
+        },
+        {
+          "word": "bebek",
+          "translation": "baby",
+          "pos": "noun",
+          "example": "Bebek süt içiyor."
+        },
+        {
+          "word": "kim",
+          "translation": "who",
+          "pos": "pronoun",
+          "example": "Kim geldi?"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "aile",
+          "answer": "family"
+        },
+        {
+          "type": "translation",
+          "prompt": "anne",
+          "answer": "mother",
+          "accepted_answers": [
+            "mom"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "baba",
+          "answer": "father",
+          "accepted_answers": [
+            "dad"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "kardeş",
+          "answer": "sibling",
+          "accepted_answers": [
+            "brother",
+            "sister"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "abla",
+          "answer": "older sister",
+          "accepted_answers": [
+            "big sister"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "ağabey",
+          "answer": "older brother",
+          "accepted_answers": [
+            "big brother"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "kız",
+          "answer": "girl",
+          "accepted_answers": [
+            "daughter"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "oğul",
+          "answer": "son"
+        },
+        {
+          "type": "translation",
+          "prompt": "kadın",
+          "answer": "woman"
+        },
+        {
+          "type": "translation",
+          "prompt": "adam",
+          "answer": "man"
+        },
+        {
+          "type": "translation",
+          "prompt": "arkadaş",
+          "answer": "friend"
+        },
+        {
+          "type": "translation",
+          "prompt": "çocuk",
+          "answer": "child",
+          "accepted_answers": [
+            "kid"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "bebek",
+          "answer": "baby"
+        },
+        {
+          "type": "translation",
+          "prompt": "kim",
+          "answer": "who"
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu benim ailem.",
+          "answer": "This is my family."
+        },
+        {
+          "type": "translation",
+          "prompt": "Annem ve babam iyi.",
+          "answer": "My mother and father are fine.",
+          "accepted_answers": [
+            "My mom and dad are fine."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ablam İstanbul'da yaşıyor.",
+          "answer": "My older sister lives in Istanbul.",
+          "accepted_answers": [
+            "My big sister lives in Istanbul."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ağabeyim doktor.",
+          "answer": "My older brother is a doctor.",
+          "accepted_answers": [
+            "My big brother is a doctor."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Oğlum okulda.",
+          "answer": "My son is at school."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu kız kim?",
+          "answer": "Who is this girl?"
+        },
+        {
+          "type": "translation",
+          "prompt": "O kadın annem.",
+          "answer": "That woman is my mother.",
+          "accepted_answers": [
+            "That woman is my mom."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Adam benim arkadaşım.",
+          "answer": "The man is my friend."
+        },
+        {
+          "type": "translation",
+          "prompt": "Çocuk futbol oynuyor.",
+          "answer": "The child is playing football.",
+          "accepted_answers": [
+            "The child is playing soccer.",
+            "The kid is playing football."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Kardeşim öğrenci.",
+          "answer": "My sibling is a student.",
+          "accepted_answers": [
+            "My brother is a student.",
+            "My sister is a student."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "The baby is sleeping.",
+          "answer": "Bebek uyuyor."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'family':",
+          "options": [
+            "aile",
+            "anne",
+            "baba",
+            "çocuk"
+          ],
+          "answer": "aile"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'mother':",
+          "options": [
+            "anne",
+            "baba",
+            "aile",
+            "kadın"
+          ],
+          "answer": "anne"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'father':",
+          "options": [
+            "baba",
+            "anne",
+            "adam",
+            "kardeş"
+          ],
+          "answer": "baba"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'friend':",
+          "options": [
+            "arkadaş",
+            "aile",
+            "kim",
+            "bebek"
+          ],
+          "answer": "arkadaş"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'child':",
+          "options": [
+            "çocuk",
+            "bebek",
+            "adam",
+            "kadın"
+          ],
+          "answer": "çocuk"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'baby':",
+          "options": [
+            "bebek",
+            "çocuk",
+            "kız",
+            "oğul"
+          ],
+          "answer": "bebek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'older brother':",
+          "options": [
+            "ağabey",
+            "abla",
+            "kardeş",
+            "anne"
+          ],
+          "answer": "ağabey"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'older sister':",
+          "options": [
+            "abla",
+            "ağabey",
+            "kadın",
+            "kız"
+          ],
+          "answer": "abla"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bu ___ kız.",
+          "answer": "bir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "O ___ adam.",
+          "answer": "bir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ kadın geliyor.",
+          "answer": "bir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ali ___ öğrenci.",
+          "answer": "bir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ çay, lütfen.",
+          "answer": "bir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ali ___ çocuk.",
+          "answer": "bir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ve çocuk parkta.",
+          "answer": "kadın"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ çay istiyor, kahve değil.",
+          "answer": "baba"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Numbers and Time",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "bir",
+          "translation": "one",
+          "pos": "number",
+          "example": "Bir çay, lütfen."
+        },
+        {
+          "word": "iki",
+          "translation": "two",
+          "pos": "number",
+          "example": "İki çay, lütfen."
+        },
+        {
+          "word": "üç",
+          "translation": "three",
+          "pos": "number",
+          "example": "Üç çocuk oynuyor."
+        },
+        {
+          "word": "dört",
+          "translation": "four",
+          "pos": "number",
+          "example": "Dört kitap masada."
+        },
+        {
+          "word": "beş",
+          "translation": "five",
+          "pos": "number",
+          "example": "Beş kişi geliyor."
+        },
+        {
+          "word": "altı",
+          "translation": "six",
+          "pos": "number",
+          "example": "Altı ay yarım yıl."
+        },
+        {
+          "word": "yedi",
+          "translation": "seven",
+          "pos": "number",
+          "example": "Yedi, altıdan büyüktür."
+        },
+        {
+          "word": "sekiz",
+          "translation": "eight",
+          "pos": "number",
+          "example": "Sekiz saat uyuyorum."
+        },
+        {
+          "word": "dokuz",
+          "translation": "nine",
+          "pos": "number",
+          "example": "Dokuz kitap okudum."
+        },
+        {
+          "word": "on",
+          "translation": "ten",
+          "pos": "number",
+          "example": "On parmak."
+        },
+        {
+          "word": "gün",
+          "translation": "day",
+          "pos": "noun",
+          "example": "İyi günler!"
+        },
+        {
+          "word": "hafta",
+          "translation": "week",
+          "pos": "noun",
+          "example": "İki hafta, on dört gün."
+        },
+        {
+          "word": "ay",
+          "translation": "month",
+          "pos": "noun",
+          "example": "Bu ay hava sıcak.",
+          "accepted_translations": [
+            "moon"
+          ]
+        },
+        {
+          "word": "yıl",
+          "translation": "year",
+          "pos": "noun",
+          "example": "Bir yıl dört mevsimdir."
+        },
+        {
+          "word": "bugün",
+          "translation": "today",
+          "pos": "adverb",
+          "example": "Bugün hava güzel."
+        },
+        {
+          "word": "yarın",
+          "translation": "tomorrow",
+          "pos": "adverb",
+          "example": "Yarın görüşürüz!"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "bir",
+          "answer": "one"
+        },
+        {
+          "type": "translation",
+          "prompt": "iki",
+          "answer": "two"
+        },
+        {
+          "type": "translation",
+          "prompt": "üç",
+          "answer": "three"
+        },
+        {
+          "type": "translation",
+          "prompt": "dört",
+          "answer": "four"
+        },
+        {
+          "type": "translation",
+          "prompt": "beş",
+          "answer": "five"
+        },
+        {
+          "type": "translation",
+          "prompt": "altı",
+          "answer": "six"
+        },
+        {
+          "type": "translation",
+          "prompt": "yedi",
+          "answer": "seven"
+        },
+        {
+          "type": "translation",
+          "prompt": "sekiz",
+          "answer": "eight"
+        },
+        {
+          "type": "translation",
+          "prompt": "dokuz",
+          "answer": "nine"
+        },
+        {
+          "type": "translation",
+          "prompt": "on",
+          "answer": "ten"
+        },
+        {
+          "type": "translation",
+          "prompt": "gün",
+          "answer": "day"
+        },
+        {
+          "type": "translation",
+          "prompt": "hafta",
+          "answer": "week"
+        },
+        {
+          "type": "translation",
+          "prompt": "ay",
+          "answer": "month",
+          "accepted_answers": [
+            "moon"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "yıl",
+          "answer": "year"
+        },
+        {
+          "type": "translation",
+          "prompt": "bugün",
+          "answer": "today"
+        },
+        {
+          "type": "translation",
+          "prompt": "yarın",
+          "answer": "tomorrow"
+        },
+        {
+          "type": "translation",
+          "prompt": "Bir hafta yedi gündür.",
+          "answer": "A week is seven days."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bugün cumartesi.",
+          "answer": "Today is Saturday."
+        },
+        {
+          "type": "translation",
+          "prompt": "Yarın pazar.",
+          "answer": "Tomorrow is Sunday."
+        },
+        {
+          "type": "translation",
+          "prompt": "Saat sekiz.",
+          "answer": "It's eight o'clock.",
+          "accepted_answers": [
+            "It is eight o'clock."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "İki çay, lütfen.",
+          "answer": "Two teas, please."
+        },
+        {
+          "type": "translation",
+          "prompt": "Üç çocuk oynuyor.",
+          "answer": "Three children are playing.",
+          "accepted_answers": [
+            "Three kids are playing."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "On iki ay, bir yıl.",
+          "answer": "Twelve months, one year."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bugün hava sıcak.",
+          "answer": "The weather is hot today.",
+          "accepted_answers": [
+            "It's hot today."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Yarın geliyorum.",
+          "answer": "I'm coming tomorrow.",
+          "accepted_answers": [
+            "I am coming tomorrow."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Dört kitap masada.",
+          "answer": "Four books are on the table."
+        },
+        {
+          "type": "translation",
+          "prompt": "Beş gün çalışıyorum.",
+          "answer": "I work five days."
+        },
+        {
+          "type": "translation",
+          "prompt": "Dokuz yaşındayım.",
+          "answer": "I'm nine years old.",
+          "accepted_answers": [
+            "I am nine years old."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "A year is twelve months.",
+          "answer": "Bir yıl on iki aydır."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bugün ne gün?",
+          "answer": "What day is it today?"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'three':",
+          "options": [
+            "üç",
+            "iki",
+            "dört",
+            "beş"
+          ],
+          "answer": "üç"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'six':",
+          "options": [
+            "altı",
+            "yedi",
+            "sekiz",
+            "beş"
+          ],
+          "answer": "altı"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'ten':",
+          "options": [
+            "on",
+            "dokuz",
+            "sekiz",
+            "altı"
+          ],
+          "answer": "on"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'week':",
+          "options": [
+            "hafta",
+            "gün",
+            "ay",
+            "yıl"
+          ],
+          "answer": "hafta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'month':",
+          "options": [
+            "ay",
+            "gün",
+            "yıl",
+            "hafta"
+          ],
+          "answer": "ay"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'today':",
+          "options": [
+            "bugün",
+            "yarın",
+            "gün",
+            "yıl"
+          ],
+          "answer": "bugün"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tomorrow':",
+          "options": [
+            "yarın",
+            "bugün",
+            "hafta",
+            "ay"
+          ],
+          "answer": "yarın"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'year':",
+          "options": [
+            "yıl",
+            "ay",
+            "hafta",
+            "gün"
+          ],
+          "answer": "yıl"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kız___ oynuyor.",
+          "answer": "lar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Çocuk___ geliyor.",
+          "answer": "lar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Adam___ uyuyor.",
+          "answer": "lar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Aile___ büyük.",
+          "answer": "ler"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Anne___ çay içiyor.",
+          "answer": "ler"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bebek___ küçük.",
+          "answer": "ler"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bir hafta yedi ___.",
+          "answer": "gün"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bugün cumartesi, ___ pazar.",
+          "answer": "yarın"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Everyday Verbs",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "gelmek",
+          "translation": "to come",
+          "pos": "verb",
+          "example": "Ali geliyor."
+        },
+        {
+          "word": "gitmek",
+          "translation": "to go",
+          "pos": "verb",
+          "example": "Okula gidiyorum."
+        },
+        {
+          "word": "yemek",
+          "translation": "to eat",
+          "pos": "verb",
+          "example": "Yemek istiyorum.",
+          "accepted_translations": [
+            "food",
+            "a meal"
+          ]
+        },
+        {
+          "word": "içmek",
+          "translation": "to drink",
+          "pos": "verb",
+          "example": "Çay içiyorum."
+        },
+        {
+          "word": "okumak",
+          "translation": "to read",
+          "pos": "verb",
+          "example": "Gazete okuyorum."
+        },
+        {
+          "word": "yazmak",
+          "translation": "to write",
+          "pos": "verb",
+          "example": "Mektup yazıyorum."
+        },
+        {
+          "word": "konuşmak",
+          "translation": "to speak",
+          "pos": "verb",
+          "example": "Arkadaşımla konuşuyorum."
+        },
+        {
+          "word": "dinlemek",
+          "translation": "to listen",
+          "pos": "verb",
+          "example": "Radyo dinliyorum."
+        },
+        {
+          "word": "sevmek",
+          "translation": "to like",
+          "pos": "verb",
+          "example": "Kahveyi seviyorum."
+        },
+        {
+          "word": "görmek",
+          "translation": "to see",
+          "pos": "verb",
+          "example": "Denizi görmek istiyorum."
+        },
+        {
+          "word": "almak",
+          "translation": "to take",
+          "pos": "verb",
+          "example": "Ekmek alıyorum.",
+          "accepted_translations": [
+            "to buy",
+            "to get"
+          ]
+        },
+        {
+          "word": "vermek",
+          "translation": "to give",
+          "pos": "verb",
+          "example": "Kitap veriyorum."
+        },
+        {
+          "word": "yapmak",
+          "translation": "to do",
+          "pos": "verb",
+          "example": "Yemek yapıyorum.",
+          "accepted_translations": [
+            "to make"
+          ]
+        },
+        {
+          "word": "istemek",
+          "translation": "to want",
+          "pos": "verb",
+          "example": "Kahve istiyorum."
+        },
+        {
+          "word": "öğrenmek",
+          "translation": "to learn",
+          "pos": "verb",
+          "example": "Yeni bir dil öğrenmek güzel."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "gelmek",
+          "answer": "to come"
+        },
+        {
+          "type": "translation",
+          "prompt": "gitmek",
+          "answer": "to go"
+        },
+        {
+          "type": "translation",
+          "prompt": "yemek",
+          "answer": "to eat",
+          "accepted_answers": [
+            "food",
+            "a meal"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "içmek",
+          "answer": "to drink"
+        },
+        {
+          "type": "translation",
+          "prompt": "okumak",
+          "answer": "to read"
+        },
+        {
+          "type": "translation",
+          "prompt": "yazmak",
+          "answer": "to write"
+        },
+        {
+          "type": "translation",
+          "prompt": "konuşmak",
+          "answer": "to speak"
+        },
+        {
+          "type": "translation",
+          "prompt": "dinlemek",
+          "answer": "to listen"
+        },
+        {
+          "type": "translation",
+          "prompt": "sevmek",
+          "answer": "to like"
+        },
+        {
+          "type": "translation",
+          "prompt": "görmek",
+          "answer": "to see"
+        },
+        {
+          "type": "translation",
+          "prompt": "almak",
+          "answer": "to take",
+          "accepted_answers": [
+            "to buy",
+            "to get"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "vermek",
+          "answer": "to give"
+        },
+        {
+          "type": "translation",
+          "prompt": "yapmak",
+          "answer": "to do",
+          "accepted_answers": [
+            "to make"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "istemek",
+          "answer": "to want"
+        },
+        {
+          "type": "translation",
+          "prompt": "öğrenmek",
+          "answer": "to learn"
+        },
+        {
+          "type": "translation",
+          "prompt": "Türkçe öğreniyorum.",
+          "answer": "I'm learning Turkish.",
+          "accepted_answers": [
+            "I am learning Turkish."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Türkçe konuşuyorum.",
+          "answer": "I speak Turkish.",
+          "accepted_answers": [
+            "I'm speaking Turkish.",
+            "I am speaking Turkish."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ne yapıyorsun?",
+          "answer": "What are you doing?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Kitap okuyorum.",
+          "answer": "I'm reading a book.",
+          "accepted_answers": [
+            "I read a book."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Müzik dinliyorum.",
+          "answer": "I'm listening to music.",
+          "accepted_answers": [
+            "I listen to music."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Çay istiyorum.",
+          "answer": "I want tea."
+        },
+        {
+          "type": "translation",
+          "prompt": "Kahve içmek istiyorum.",
+          "answer": "I want to drink coffee.",
+          "accepted_answers": [
+            "I want a coffee.",
+            "I'd like a coffee.",
+            "I would like a coffee."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ekmek almak istiyorum.",
+          "answer": "I want to buy bread.",
+          "accepted_answers": [
+            "I want to take bread.",
+            "I want to get bread."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Sinemaya gitmek istiyorum.",
+          "answer": "I want to go to the cinema.",
+          "accepted_answers": [
+            "I want to go to the movies."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Filmi görmek istiyorum.",
+          "answer": "I want to see the film.",
+          "accepted_answers": [
+            "I want to see the movie."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Yarın annem geliyor.",
+          "answer": "My mother is coming tomorrow.",
+          "accepted_answers": [
+            "My mom is coming tomorrow."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Yemek yiyorum.",
+          "answer": "I'm eating.",
+          "accepted_answers": [
+            "I am eating.",
+            "I'm eating food."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "I want to learn Turkish.",
+          "answer": "Türkçe öğrenmek istiyorum."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hediye veriyorum.",
+          "answer": "I'm giving a gift.",
+          "accepted_answers": [
+            "I give a gift."
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to drink':",
+          "options": [
+            "içmek",
+            "yemek",
+            "gelmek",
+            "gitmek"
+          ],
+          "answer": "içmek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to eat':",
+          "options": [
+            "yemek",
+            "içmek",
+            "almak",
+            "vermek"
+          ],
+          "answer": "yemek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to speak':",
+          "options": [
+            "konuşmak",
+            "dinlemek",
+            "okumak",
+            "yazmak"
+          ],
+          "answer": "konuşmak"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to listen':",
+          "options": [
+            "dinlemek",
+            "konuşmak",
+            "sevmek",
+            "görmek"
+          ],
+          "answer": "dinlemek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to read':",
+          "options": [
+            "okumak",
+            "yazmak",
+            "dinlemek",
+            "görmek"
+          ],
+          "answer": "okumak"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to write':",
+          "options": [
+            "yazmak",
+            "okumak",
+            "vermek",
+            "almak"
+          ],
+          "answer": "yazmak"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to want':",
+          "options": [
+            "istemek",
+            "sevmek",
+            "vermek",
+            "almak"
+          ],
+          "answer": "istemek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to learn':",
+          "options": [
+            "öğrenmek",
+            "görmek",
+            "gelmek",
+            "yapmak"
+          ],
+          "answer": "öğrenmek"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kahve iç___ istiyorum.",
+          "answer": "mek"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ekmek al___ istiyorum.",
+          "answer": "mak"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sinemaya git___ istiyorum.",
+          "answer": "mek"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kitap oku___ istiyorum.",
+          "answer": "mak"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Müzik dinle___ istiyorum.",
+          "answer": "mek"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Türkçe öğren___ istiyorum.",
+          "answer": "mek"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Yarın gel___ istiyorum.",
+          "answer": "mek"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kek yap___ istiyorum.",
+          "answer": "mak"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Describing and Asking",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "güzel",
+          "translation": "beautiful",
+          "pos": "adjective",
+          "example": "Bu ev çok güzel.",
+          "accepted_translations": [
+            "nice",
+            "pretty"
+          ]
+        },
+        {
+          "word": "iyi",
+          "translation": "good",
+          "pos": "adjective",
+          "example": "Çok iyiyim."
+        },
+        {
+          "word": "büyük",
+          "translation": "big",
+          "pos": "adjective",
+          "example": "Evim büyük.",
+          "accepted_translations": [
+            "large"
+          ]
+        },
+        {
+          "word": "küçük",
+          "translation": "small",
+          "pos": "adjective",
+          "example": "Evim küçük.",
+          "accepted_translations": [
+            "little"
+          ]
+        },
+        {
+          "word": "yeni",
+          "translation": "new",
+          "pos": "adjective",
+          "example": "Arabam yeni."
+        },
+        {
+          "word": "eski",
+          "translation": "old",
+          "pos": "adjective",
+          "example": "Arabam eski."
+        },
+        {
+          "word": "sıcak",
+          "translation": "hot",
+          "pos": "adjective",
+          "example": "Bu çay sıcak."
+        },
+        {
+          "word": "soğuk",
+          "translation": "cold",
+          "pos": "adjective",
+          "example": "Su soğuk."
+        },
+        {
+          "word": "uzun",
+          "translation": "long",
+          "pos": "adjective",
+          "example": "Uzun yol."
+        },
+        {
+          "word": "kısa",
+          "translation": "short",
+          "pos": "adjective",
+          "example": "Bu kitap kısa."
+        },
+        {
+          "word": "kırmızı",
+          "translation": "red",
+          "pos": "adjective",
+          "example": "Kırmızı elma."
+        },
+        {
+          "word": "mavi",
+          "translation": "blue",
+          "pos": "adjective",
+          "example": "Mavi gömlek."
+        },
+        {
+          "word": "yeşil",
+          "translation": "green",
+          "pos": "adjective",
+          "example": "Yeşil elma."
+        },
+        {
+          "word": "beyaz",
+          "translation": "white",
+          "pos": "adjective",
+          "example": "Beyaz kedi."
+        },
+        {
+          "word": "nerede",
+          "translation": "where",
+          "pos": "adverb",
+          "example": "Okul nerede?"
+        },
+        {
+          "word": "ne",
+          "translation": "what",
+          "pos": "pronoun",
+          "example": "Ne oldu?"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "güzel",
+          "answer": "beautiful",
+          "accepted_answers": [
+            "nice",
+            "pretty"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "iyi",
+          "answer": "good"
+        },
+        {
+          "type": "translation",
+          "prompt": "büyük",
+          "answer": "big",
+          "accepted_answers": [
+            "large"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "küçük",
+          "answer": "small",
+          "accepted_answers": [
+            "little"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "yeni",
+          "answer": "new"
+        },
+        {
+          "type": "translation",
+          "prompt": "eski",
+          "answer": "old"
+        },
+        {
+          "type": "translation",
+          "prompt": "sıcak",
+          "answer": "hot"
+        },
+        {
+          "type": "translation",
+          "prompt": "soğuk",
+          "answer": "cold"
+        },
+        {
+          "type": "translation",
+          "prompt": "uzun",
+          "answer": "long"
+        },
+        {
+          "type": "translation",
+          "prompt": "kısa",
+          "answer": "short"
+        },
+        {
+          "type": "translation",
+          "prompt": "kırmızı",
+          "answer": "red"
+        },
+        {
+          "type": "translation",
+          "prompt": "mavi",
+          "answer": "blue"
+        },
+        {
+          "type": "translation",
+          "prompt": "yeşil",
+          "answer": "green"
+        },
+        {
+          "type": "translation",
+          "prompt": "beyaz",
+          "answer": "white"
+        },
+        {
+          "type": "translation",
+          "prompt": "nerede",
+          "answer": "where"
+        },
+        {
+          "type": "translation",
+          "prompt": "ne",
+          "answer": "what"
+        },
+        {
+          "type": "translation",
+          "prompt": "Hava bugün çok sıcak.",
+          "answer": "The weather is very hot today.",
+          "accepted_answers": [
+            "It's very hot today."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hava soğuk.",
+          "answer": "The weather is cold.",
+          "accepted_answers": [
+            "It's cold."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu kitap eski.",
+          "answer": "This book is old."
+        },
+        {
+          "type": "translation",
+          "prompt": "Arabam yeni.",
+          "answer": "My car is new."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu sokak çok uzun.",
+          "answer": "This street is very long."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu hikâye kısa.",
+          "answer": "This story is short."
+        },
+        {
+          "type": "translation",
+          "prompt": "Kırmızı kalem güzel.",
+          "answer": "The red pencil is nice.",
+          "accepted_answers": [
+            "The red pencil is beautiful."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Gökyüzü mavi.",
+          "answer": "The sky is blue."
+        },
+        {
+          "type": "translation",
+          "prompt": "Yeşil çay içiyorum.",
+          "answer": "I'm drinking green tea.",
+          "accepted_answers": [
+            "I drink green tea."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Kar beyaz.",
+          "answer": "Snow is white."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu ne?",
+          "answer": "What is this?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Tuvalet nerede?",
+          "answer": "Where is the bathroom?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ali nerede?",
+          "answer": "Where is Ali?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu çok güzel!",
+          "answer": "This is very nice!",
+          "accepted_answers": [
+            "This is very beautiful!",
+            "This is beautiful!"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Çocuk çok küçük.",
+          "answer": "The child is very small.",
+          "accepted_answers": [
+            "The kid is very small."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ailem büyük.",
+          "answer": "My family is big."
+        },
+        {
+          "type": "translation",
+          "prompt": "The tea is hot.",
+          "answer": "Çay sıcak."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'big':",
+          "options": [
+            "büyük",
+            "küçük",
+            "güzel",
+            "eski"
+          ],
+          "answer": "büyük"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'small':",
+          "options": [
+            "küçük",
+            "büyük",
+            "kısa",
+            "yeni"
+          ],
+          "answer": "küçük"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hot':",
+          "options": [
+            "sıcak",
+            "soğuk",
+            "uzun",
+            "beyaz"
+          ],
+          "answer": "sıcak"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cold':",
+          "options": [
+            "soğuk",
+            "sıcak",
+            "kısa",
+            "mavi"
+          ],
+          "answer": "soğuk"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'red':",
+          "options": [
+            "kırmızı",
+            "mavi",
+            "yeşil",
+            "beyaz"
+          ],
+          "answer": "kırmızı"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'green':",
+          "options": [
+            "yeşil",
+            "mavi",
+            "kırmızı",
+            "beyaz"
+          ],
+          "answer": "yeşil"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'where':",
+          "options": [
+            "nerede",
+            "ne",
+            "kim",
+            "bugün"
+          ],
+          "answer": "nerede"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'new':",
+          "options": [
+            "yeni",
+            "eski",
+            "uzun",
+            "kısa"
+          ],
+          "answer": "yeni"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hava bugün çok ___.",
+          "answer": "sıcak"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kışın hava ___.",
+          "answer": "soğuk"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bu araba ___.",
+          "answer": "yeni"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bu film ___.",
+          "answer": "uzun"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kız kardeşim ___.",
+          "answer": "küçük"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "O ___?",
+          "answer": "ne"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ali ___?",
+          "answer": "nerede"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ geldi?",
+          "answer": "kim"
+        }
+      ]
+    }
+  ]
+}
