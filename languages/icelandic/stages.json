@@ -1,0 +1,3888 @@
+{
+  "language": "icelandic",
+  "stages": [
+    {
+      "id": 1,
+      "title": "Greetings and Basics",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "halló",
+          "translation": "hello",
+          "pos": "interjection",
+          "example": "Halló, hvernig gengur?",
+          "accepted_translations": [
+            "hi"
+          ]
+        },
+        {
+          "word": "hæ",
+          "translation": "hi",
+          "pos": "interjection",
+          "example": "Hæ, hvað segirðu?",
+          "accepted_translations": [
+            "hello",
+            "bye"
+          ]
+        },
+        {
+          "word": "góðan daginn",
+          "translation": "good day",
+          "pos": "phrase",
+          "example": "Góðan daginn, herra Jón!",
+          "accepted_translations": [
+            "good morning"
+          ]
+        },
+        {
+          "word": "gott kvöld",
+          "translation": "good evening",
+          "pos": "phrase",
+          "example": "Gott kvöld, kæri vinur!"
+        },
+        {
+          "word": "góða nótt",
+          "translation": "good night",
+          "pos": "phrase",
+          "example": "Góða nótt og sofðu vel!"
+        },
+        {
+          "word": "bless",
+          "translation": "goodbye",
+          "pos": "interjection",
+          "example": "Bless, sjáumst á morgun!",
+          "accepted_translations": [
+            "bye"
+          ]
+        },
+        {
+          "word": "já",
+          "translation": "yes",
+          "pos": "adverb",
+          "example": "Já, takk."
+        },
+        {
+          "word": "nei",
+          "translation": "no",
+          "pos": "adverb",
+          "example": "Nei, ég vil ekki."
+        },
+        {
+          "word": "takk fyrir",
+          "translation": "thank you",
+          "pos": "phrase",
+          "example": "Takk fyrir kvöldið!",
+          "accepted_translations": [
+            "thanks"
+          ]
+        },
+        {
+          "word": "gjörðu vel",
+          "translation": "you're welcome",
+          "pos": "phrase",
+          "example": "Gjörðu vel, engin þörf!"
+        },
+        {
+          "word": "afsakið",
+          "translation": "sorry",
+          "pos": "interjection",
+          "example": "Afsakið, hvar er verslunin?",
+          "accepted_translations": [
+            "excuse me"
+          ]
+        },
+        {
+          "word": "ég",
+          "translation": "I",
+          "pos": "pronoun",
+          "example": "Ég heiti Anna."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "halló",
+          "answer": "hello",
+          "accepted_answers": [
+            "hi"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "hæ",
+          "answer": "hi",
+          "accepted_answers": [
+            "hello",
+            "bye"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "góðan daginn",
+          "answer": "good day",
+          "accepted_answers": [
+            "good morning"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "gott kvöld",
+          "answer": "good evening"
+        },
+        {
+          "type": "translation",
+          "prompt": "góða nótt",
+          "answer": "good night"
+        },
+        {
+          "type": "translation",
+          "prompt": "bless",
+          "answer": "goodbye",
+          "accepted_answers": [
+            "bye"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "já",
+          "answer": "yes"
+        },
+        {
+          "type": "translation",
+          "prompt": "nei",
+          "answer": "no"
+        },
+        {
+          "type": "translation",
+          "prompt": "takk fyrir",
+          "answer": "thank you",
+          "accepted_answers": [
+            "thanks"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "gjörðu vel",
+          "answer": "you're welcome"
+        },
+        {
+          "type": "translation",
+          "prompt": "afsakið",
+          "answer": "sorry",
+          "accepted_answers": [
+            "excuse me"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "ég",
+          "answer": "I"
+        },
+        {
+          "type": "translation",
+          "prompt": "hello",
+          "answer": "halló"
+        },
+        {
+          "type": "translation",
+          "prompt": "hi",
+          "answer": "hæ"
+        },
+        {
+          "type": "translation",
+          "prompt": "good day",
+          "answer": "góðan daginn",
+          "accepted_answers": [
+            "good morning"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "good night",
+          "answer": "góða nótt"
+        },
+        {
+          "type": "translation",
+          "prompt": "goodbye",
+          "answer": "bless",
+          "accepted_answers": [
+            "bye"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "yes",
+          "answer": "já"
+        },
+        {
+          "type": "translation",
+          "prompt": "no",
+          "answer": "nei"
+        },
+        {
+          "type": "translation",
+          "prompt": "thank you",
+          "answer": "takk fyrir",
+          "accepted_answers": [
+            "thanks"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Halló, ég heiti Anna.",
+          "answer": "Hello, my name is Anna.",
+          "accepted_answers": [
+            "Hi, my name is Anna."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hvernig gengur?",
+          "answer": "How are you?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Nei, takk.",
+          "answer": "No, thank you.",
+          "accepted_answers": [
+            "No, thanks."
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hello':",
+          "options": [
+            "halló",
+            "já",
+            "nei",
+            "bless"
+          ],
+          "answer": "halló"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'no':",
+          "options": [
+            "nei",
+            "já",
+            "halló",
+            "takk fyrir"
+          ],
+          "answer": "nei"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'thank you':",
+          "options": [
+            "takk fyrir",
+            "góða nótt",
+            "bless",
+            "já"
+          ],
+          "answer": "takk fyrir"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good day':",
+          "options": [
+            "góðan daginn",
+            "gott kvöld",
+            "góða nótt",
+            "bless"
+          ],
+          "answer": "góðan daginn"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good night':",
+          "options": [
+            "góða nótt",
+            "góðan daginn",
+            "gott kvöld",
+            "halló"
+          ],
+          "answer": "góða nótt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'goodbye':",
+          "options": [
+            "bless",
+            "halló",
+            "takk fyrir",
+            "nei"
+          ],
+          "answer": "bless"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'yes':",
+          "options": [
+            "já",
+            "nei",
+            "halló",
+            "bless"
+          ],
+          "answer": "já"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hi':",
+          "options": [
+            "hæ",
+            "halló",
+            "já",
+            "nei"
+          ],
+          "answer": "hæ"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, ég heiti Anna.",
+          "answer": "halló"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Góðan ___!",
+          "answer": "daginn"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Góða ___ og sofðu vel.",
+          "answer": "nótt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nei, ___.",
+          "answer": "takk"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, sjáumst!",
+          "answer": "bless"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ heiti Jón.",
+          "answer": "ég"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "People and Family",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "maður",
+          "translation": "man",
+          "pos": "noun",
+          "example": "Maðurinn er kennari."
+        },
+        {
+          "word": "kona",
+          "translation": "woman",
+          "pos": "noun",
+          "example": "Konan er læknir."
+        },
+        {
+          "word": "barn",
+          "translation": "child",
+          "pos": "noun",
+          "example": "Barnið leikar sér."
+        },
+        {
+          "word": "stúlka",
+          "translation": "girl",
+          "pos": "noun",
+          "example": "Stúlkan er vinur minn."
+        },
+        {
+          "word": "móðir",
+          "translation": "mother",
+          "pos": "noun",
+          "example": "Móðir mín er kennari."
+        },
+        {
+          "word": "faðir",
+          "translation": "father",
+          "pos": "noun",
+          "example": "Faðir minn les bók."
+        },
+        {
+          "word": "bróðir",
+          "translation": "brother",
+          "pos": "noun",
+          "example": "Bróðir minn heitir Jón."
+        },
+        {
+          "word": "systir",
+          "translation": "sister",
+          "pos": "noun",
+          "example": "Systir mín er góð."
+        },
+        {
+          "word": "vinur",
+          "translation": "friend",
+          "pos": "noun",
+          "example": "Vinur minn kemur í dag."
+        },
+        {
+          "word": "fjölskylda",
+          "translation": "family",
+          "pos": "noun",
+          "example": "Fjölskyldan mín er stór."
+        },
+        {
+          "word": "þú",
+          "translation": "you",
+          "pos": "pronoun",
+          "example": "Þú ert vinur minn."
+        },
+        {
+          "word": "hann",
+          "translation": "he",
+          "pos": "pronoun",
+          "example": "Hann er kennari."
+        },
+        {
+          "word": "hún",
+          "translation": "she",
+          "pos": "pronoun",
+          "example": "Hún er læknir."
+        },
+        {
+          "word": "það",
+          "translation": "it",
+          "pos": "pronoun",
+          "example": "Það er barn."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "maður",
+          "answer": "man"
+        },
+        {
+          "type": "translation",
+          "prompt": "kona",
+          "answer": "woman"
+        },
+        {
+          "type": "translation",
+          "prompt": "barn",
+          "answer": "child"
+        },
+        {
+          "type": "translation",
+          "prompt": "stúlka",
+          "answer": "girl"
+        },
+        {
+          "type": "translation",
+          "prompt": "móðir",
+          "answer": "mother"
+        },
+        {
+          "type": "translation",
+          "prompt": "faðir",
+          "answer": "father"
+        },
+        {
+          "type": "translation",
+          "prompt": "bróðir",
+          "answer": "brother"
+        },
+        {
+          "type": "translation",
+          "prompt": "systir",
+          "answer": "sister"
+        },
+        {
+          "type": "translation",
+          "prompt": "vinur",
+          "answer": "friend"
+        },
+        {
+          "type": "translation",
+          "prompt": "fjölskylda",
+          "answer": "family"
+        },
+        {
+          "type": "translation",
+          "prompt": "þú",
+          "answer": "you"
+        },
+        {
+          "type": "translation",
+          "prompt": "hann",
+          "answer": "he"
+        },
+        {
+          "type": "translation",
+          "prompt": "hún",
+          "answer": "she"
+        },
+        {
+          "type": "translation",
+          "prompt": "það",
+          "answer": "it"
+        },
+        {
+          "type": "translation",
+          "prompt": "man",
+          "answer": "maður"
+        },
+        {
+          "type": "translation",
+          "prompt": "woman",
+          "answer": "kona"
+        },
+        {
+          "type": "translation",
+          "prompt": "child",
+          "answer": "barn"
+        },
+        {
+          "type": "translation",
+          "prompt": "mother",
+          "answer": "móðir"
+        },
+        {
+          "type": "translation",
+          "prompt": "father",
+          "answer": "faðir"
+        },
+        {
+          "type": "translation",
+          "prompt": "brother",
+          "answer": "bróðir"
+        },
+        {
+          "type": "translation",
+          "prompt": "sister",
+          "answer": "systir"
+        },
+        {
+          "type": "translation",
+          "prompt": "family",
+          "answer": "fjölskylda"
+        },
+        {
+          "type": "translation",
+          "prompt": "Þetta er vinur minn.",
+          "answer": "This is my friend."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hún er læknir.",
+          "answer": "She is a doctor."
+        },
+        {
+          "type": "translation",
+          "prompt": "Barnið leikar sér.",
+          "answer": "The child is playing.",
+          "accepted_answers": [
+            "The child plays."
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'man':",
+          "options": [
+            "maður",
+            "kona",
+            "barn",
+            "vinur"
+          ],
+          "answer": "maður"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'woman':",
+          "options": [
+            "kona",
+            "maður",
+            "stúlka",
+            "systir"
+          ],
+          "answer": "kona"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'child':",
+          "options": [
+            "barn",
+            "maður",
+            "kona",
+            "vinur"
+          ],
+          "answer": "barn"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'mother':",
+          "options": [
+            "móðir",
+            "faðir",
+            "systir",
+            "kona"
+          ],
+          "answer": "móðir"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'father':",
+          "options": [
+            "faðir",
+            "móðir",
+            "bróðir",
+            "maður"
+          ],
+          "answer": "faðir"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sister':",
+          "options": [
+            "systir",
+            "bróðir",
+            "móðir",
+            "stúlka"
+          ],
+          "answer": "systir"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'family':",
+          "options": [
+            "fjölskylda",
+            "vinur",
+            "barn",
+            "kona"
+          ],
+          "answer": "fjölskylda"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'he':",
+          "options": [
+            "hann",
+            "hún",
+            "það",
+            "þú"
+          ],
+          "answer": "hann"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Maðurinn er kennari. ___ er góður.",
+          "answer": "Hann",
+          "accepted_answers": [
+            "hann"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Konan er læknir. ___ er góð.",
+          "answer": "Hún",
+          "accepted_answers": [
+            "hún"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Barnið er ung. ___ leikar sér.",
+          "answer": "Það",
+          "accepted_answers": [
+            "það"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Stúlkan er ung. ___ er vinur minn.",
+          "answer": "Hún",
+          "accepted_answers": [
+            "hún"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Faðir minn vinnur mikið. ___ er sterkur.",
+          "answer": "Hann",
+          "accepted_answers": [
+            "hann"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Fjölskyldan mín er stór. ___ býr í Reykjavík.",
+          "answer": "Hún",
+          "accepted_answers": [
+            "hún"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vinur minn heitir Jón. ___ er góður.",
+          "answer": "Hann",
+          "accepted_answers": [
+            "hann"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þetta er barn. ___ er ung.",
+          "answer": "Það",
+          "accepted_answers": [
+            "það"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Numbers and Time",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "einn",
+          "translation": "one",
+          "pos": "number",
+          "example": "Einn maður."
+        },
+        {
+          "word": "tveir",
+          "translation": "two",
+          "pos": "number",
+          "example": "Tveir menn."
+        },
+        {
+          "word": "þrír",
+          "translation": "three",
+          "pos": "number",
+          "example": "Þrír vinir."
+        },
+        {
+          "word": "fjórir",
+          "translation": "four",
+          "pos": "number",
+          "example": "Fjórir dagar."
+        },
+        {
+          "word": "fimm",
+          "translation": "five",
+          "pos": "number",
+          "example": "Fimm ár."
+        },
+        {
+          "word": "sex",
+          "translation": "six",
+          "pos": "number",
+          "example": "Klukkan er sex."
+        },
+        {
+          "word": "sjö",
+          "translation": "seven",
+          "pos": "number",
+          "example": "Vikan hefur sjö daga."
+        },
+        {
+          "word": "átta",
+          "translation": "eight",
+          "pos": "number",
+          "example": "Klukkan er átta."
+        },
+        {
+          "word": "níu",
+          "translation": "nine",
+          "pos": "number",
+          "example": "Níu dagar."
+        },
+        {
+          "word": "tíu",
+          "translation": "ten",
+          "pos": "number",
+          "example": "Klukkan er tíu."
+        },
+        {
+          "word": "hestur",
+          "translation": "horse",
+          "pos": "noun",
+          "example": "Hesturinn er fljótur."
+        },
+        {
+          "word": "bók",
+          "translation": "book",
+          "pos": "noun",
+          "example": "Bókin er góð."
+        },
+        {
+          "word": "hús",
+          "translation": "house",
+          "pos": "noun",
+          "example": "Húsið er stórt."
+        },
+        {
+          "word": "dagur",
+          "translation": "day",
+          "pos": "noun",
+          "example": "Dagurinn er langur."
+        },
+        {
+          "word": "vika",
+          "translation": "week",
+          "pos": "noun",
+          "example": "Vikan hefur sjö daga."
+        },
+        {
+          "word": "ár",
+          "translation": "year",
+          "pos": "noun",
+          "example": "Árið hefur tólf mánuði."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "einn",
+          "answer": "one"
+        },
+        {
+          "type": "translation",
+          "prompt": "tveir",
+          "answer": "two"
+        },
+        {
+          "type": "translation",
+          "prompt": "þrír",
+          "answer": "three"
+        },
+        {
+          "type": "translation",
+          "prompt": "fjórir",
+          "answer": "four"
+        },
+        {
+          "type": "translation",
+          "prompt": "fimm",
+          "answer": "five"
+        },
+        {
+          "type": "translation",
+          "prompt": "sex",
+          "answer": "six"
+        },
+        {
+          "type": "translation",
+          "prompt": "sjö",
+          "answer": "seven"
+        },
+        {
+          "type": "translation",
+          "prompt": "átta",
+          "answer": "eight"
+        },
+        {
+          "type": "translation",
+          "prompt": "níu",
+          "answer": "nine"
+        },
+        {
+          "type": "translation",
+          "prompt": "tíu",
+          "answer": "ten"
+        },
+        {
+          "type": "translation",
+          "prompt": "hestur",
+          "answer": "horse"
+        },
+        {
+          "type": "translation",
+          "prompt": "bók",
+          "answer": "book"
+        },
+        {
+          "type": "translation",
+          "prompt": "hús",
+          "answer": "house"
+        },
+        {
+          "type": "translation",
+          "prompt": "dagur",
+          "answer": "day"
+        },
+        {
+          "type": "translation",
+          "prompt": "vika",
+          "answer": "week"
+        },
+        {
+          "type": "translation",
+          "prompt": "ár",
+          "answer": "year"
+        },
+        {
+          "type": "translation",
+          "prompt": "one",
+          "answer": "einn"
+        },
+        {
+          "type": "translation",
+          "prompt": "two",
+          "answer": "tveir"
+        },
+        {
+          "type": "translation",
+          "prompt": "three",
+          "answer": "þrír"
+        },
+        {
+          "type": "translation",
+          "prompt": "seven",
+          "answer": "sjö"
+        },
+        {
+          "type": "translation",
+          "prompt": "ten",
+          "answer": "tíu"
+        },
+        {
+          "type": "translation",
+          "prompt": "Hvað er klukkan?",
+          "answer": "What time is it?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Klukkan er átta.",
+          "answer": "It's eight o'clock.",
+          "accepted_answers": [
+            "It is eight o'clock."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vikan hefur sjö daga.",
+          "answer": "A week has seven days."
+        },
+        {
+          "type": "translation",
+          "prompt": "Árið hefur tólf mánuði.",
+          "answer": "A year has twelve months."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hesturinn er fljótur.",
+          "answer": "The horse is fast."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bókin er góð.",
+          "answer": "The book is good."
+        },
+        {
+          "type": "translation",
+          "prompt": "Húsið er stórt.",
+          "answer": "The house is big."
+        },
+        {
+          "type": "translation",
+          "prompt": "Einn og einn eru tveir.",
+          "answer": "One and one are two."
+        },
+        {
+          "type": "translation",
+          "prompt": "Fimm og fimm eru tíu.",
+          "answer": "Five and five are ten."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'one':",
+          "options": [
+            "einn",
+            "tveir",
+            "þrír",
+            "fimm"
+          ],
+          "answer": "einn"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'three':",
+          "options": [
+            "þrír",
+            "tveir",
+            "einn",
+            "fjórir"
+          ],
+          "answer": "þrír"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'five':",
+          "options": [
+            "fimm",
+            "sex",
+            "sjö",
+            "átta"
+          ],
+          "answer": "fimm"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'eight':",
+          "options": [
+            "átta",
+            "níu",
+            "tíu",
+            "sjö"
+          ],
+          "answer": "átta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'ten':",
+          "options": [
+            "tíu",
+            "átta",
+            "níu",
+            "sex"
+          ],
+          "answer": "tíu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'horse':",
+          "options": [
+            "hestur",
+            "bók",
+            "hús",
+            "dagur"
+          ],
+          "answer": "hestur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'book':",
+          "options": [
+            "bók",
+            "hestur",
+            "hús",
+            "vika"
+          ],
+          "answer": "bók"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'week':",
+          "options": [
+            "vika",
+            "ár",
+            "dagur",
+            "bók"
+          ],
+          "answer": "vika"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hest___ er fljótur.",
+          "answer": "urinn"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bók___ er góð.",
+          "answer": "in"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hús___ er stórt.",
+          "answer": "ið"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dag___ er langur.",
+          "answer": "urinn"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Einn og einn eru ___.",
+          "answer": "tveir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þrír og fjórir eru ___.",
+          "answer": "sjö"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Fimm og fimm eru ___.",
+          "answer": "tíu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Klukkan er ___.",
+          "answer": "átta"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Everyday Verbs",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "að vera",
+          "translation": "to be",
+          "pos": "verb",
+          "example": "Ég er stúdent."
+        },
+        {
+          "word": "að hafa",
+          "translation": "to have",
+          "pos": "verb",
+          "example": "Ég hef bók."
+        },
+        {
+          "word": "að tala",
+          "translation": "to speak",
+          "pos": "verb",
+          "example": "Ég tala íslensku."
+        },
+        {
+          "word": "að læra",
+          "translation": "to learn",
+          "pos": "verb",
+          "example": "Ég læri íslensku.",
+          "accepted_translations": [
+            "to study"
+          ]
+        },
+        {
+          "word": "að borða",
+          "translation": "to eat",
+          "pos": "verb",
+          "example": "Við borðum fisk."
+        },
+        {
+          "word": "að drekka",
+          "translation": "to drink",
+          "pos": "verb",
+          "example": "Ég drekk kaffi."
+        },
+        {
+          "word": "að lesa",
+          "translation": "to read",
+          "pos": "verb",
+          "example": "Ég les bók."
+        },
+        {
+          "word": "að skrifa",
+          "translation": "to write",
+          "pos": "verb",
+          "example": "Ég skrifa bréf."
+        },
+        {
+          "word": "að fara",
+          "translation": "to go",
+          "pos": "verb",
+          "example": "Ég fer heim."
+        },
+        {
+          "word": "að sofa",
+          "translation": "to sleep",
+          "pos": "verb",
+          "example": "Barnið sefur."
+        },
+        {
+          "word": "að vinna",
+          "translation": "to work",
+          "pos": "verb",
+          "example": "Faðir minn vinnur."
+        },
+        {
+          "word": "að vilja",
+          "translation": "to want",
+          "pos": "verb",
+          "example": "Ég vil kaffi."
+        },
+        {
+          "word": "að þurfa",
+          "translation": "to need",
+          "pos": "verb",
+          "example": "Ég þarf að sofa."
+        },
+        {
+          "word": "að kaupa",
+          "translation": "to buy",
+          "pos": "verb",
+          "example": "Ég kaupi bók."
+        },
+        {
+          "word": "að þýða",
+          "translation": "to translate",
+          "pos": "verb",
+          "example": "Hún þýðir bækur."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "að vera",
+          "answer": "to be"
+        },
+        {
+          "type": "translation",
+          "prompt": "að hafa",
+          "answer": "to have"
+        },
+        {
+          "type": "translation",
+          "prompt": "að tala",
+          "answer": "to speak"
+        },
+        {
+          "type": "translation",
+          "prompt": "að læra",
+          "answer": "to learn",
+          "accepted_answers": [
+            "to study"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "að borða",
+          "answer": "to eat"
+        },
+        {
+          "type": "translation",
+          "prompt": "að drekka",
+          "answer": "to drink"
+        },
+        {
+          "type": "translation",
+          "prompt": "að lesa",
+          "answer": "to read"
+        },
+        {
+          "type": "translation",
+          "prompt": "að skrifa",
+          "answer": "to write"
+        },
+        {
+          "type": "translation",
+          "prompt": "að fara",
+          "answer": "to go"
+        },
+        {
+          "type": "translation",
+          "prompt": "að sofa",
+          "answer": "to sleep"
+        },
+        {
+          "type": "translation",
+          "prompt": "að vinna",
+          "answer": "to work"
+        },
+        {
+          "type": "translation",
+          "prompt": "að vilja",
+          "answer": "to want"
+        },
+        {
+          "type": "translation",
+          "prompt": "að þurfa",
+          "answer": "to need"
+        },
+        {
+          "type": "translation",
+          "prompt": "að kaupa",
+          "answer": "to buy"
+        },
+        {
+          "type": "translation",
+          "prompt": "að þýða",
+          "answer": "to translate"
+        },
+        {
+          "type": "translation",
+          "prompt": "to be",
+          "answer": "að vera"
+        },
+        {
+          "type": "translation",
+          "prompt": "to have",
+          "answer": "að hafa"
+        },
+        {
+          "type": "translation",
+          "prompt": "to speak",
+          "answer": "að tala"
+        },
+        {
+          "type": "translation",
+          "prompt": "to eat",
+          "answer": "að borða"
+        },
+        {
+          "type": "translation",
+          "prompt": "to read",
+          "answer": "að lesa"
+        },
+        {
+          "type": "translation",
+          "prompt": "to sleep",
+          "answer": "að sofa"
+        },
+        {
+          "type": "translation",
+          "prompt": "to want",
+          "answer": "að vilja"
+        },
+        {
+          "type": "translation",
+          "prompt": "to buy",
+          "answer": "að kaupa"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég tala íslensku.",
+          "answer": "I speak Icelandic."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vilt þú drekka kaffi?",
+          "answer": "Do you want to drink coffee?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég þarf að sofa.",
+          "answer": "I need to sleep."
+        },
+        {
+          "type": "translation",
+          "prompt": "Barnið sefur.",
+          "answer": "The child is sleeping.",
+          "accepted_answers": [
+            "The child sleeps."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hún þýðir bækur.",
+          "answer": "She translates books."
+        },
+        {
+          "type": "translation",
+          "prompt": "Við borðum fisk.",
+          "answer": "We eat fish.",
+          "accepted_answers": [
+            "We are eating fish."
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to speak':",
+          "options": [
+            "að tala",
+            "að lesa",
+            "að borða",
+            "að fara"
+          ],
+          "answer": "að tala"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to eat':",
+          "options": [
+            "að borða",
+            "að drekka",
+            "að lesa",
+            "að skrifa"
+          ],
+          "answer": "að borða"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to read':",
+          "options": [
+            "að lesa",
+            "að skrifa",
+            "að tala",
+            "að sofa"
+          ],
+          "answer": "að lesa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to sleep':",
+          "options": [
+            "að sofa",
+            "að vinna",
+            "að fara",
+            "að lesa"
+          ],
+          "answer": "að sofa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to buy':",
+          "options": [
+            "að kaupa",
+            "að selja",
+            "að þýða",
+            "að hafa"
+          ],
+          "answer": "að kaupa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to work':",
+          "options": [
+            "að vinna",
+            "að sofa",
+            "að tala",
+            "að lesa"
+          ],
+          "answer": "að vinna"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to want':",
+          "options": [
+            "að vilja",
+            "að þurfa",
+            "að vera",
+            "að hafa"
+          ],
+          "answer": "að vilja"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to have':",
+          "options": [
+            "að hafa",
+            "að vera",
+            "að vilja",
+            "að þurfa"
+          ],
+          "answer": "að hafa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég vil ___ íslensku.",
+          "answer": "tala",
+          "accepted_answers": [
+            "að tala"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vilt þú ___ kaffi?",
+          "answer": "drekka",
+          "accepted_answers": [
+            "að drekka"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Við viljum ___ fisk.",
+          "answer": "borða",
+          "accepted_answers": [
+            "að borða"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég vil ___ bók.",
+          "answer": "kaupa",
+          "accepted_answers": [
+            "að kaupa"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vilt þú ___ bók?",
+          "answer": "lesa",
+          "accepted_answers": [
+            "að lesa"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég þarf ___ sofa núna.",
+          "answer": "að"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hún þarf ___ lesa bókina.",
+          "answer": "að"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hann vil ___ heim.",
+          "answer": "fara",
+          "accepted_answers": [
+            "að fara"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Describing and Asking",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "stór",
+          "translation": "big",
+          "pos": "adjective",
+          "example": "Húsið er stórt."
+        },
+        {
+          "word": "lítill",
+          "translation": "small",
+          "pos": "adjective",
+          "example": "Barnið er lítið."
+        },
+        {
+          "word": "góður",
+          "translation": "good",
+          "pos": "adjective",
+          "example": "Hann er góður."
+        },
+        {
+          "word": "vondur",
+          "translation": "bad",
+          "pos": "adjective",
+          "example": "Maturinn er vondur."
+        },
+        {
+          "word": "nýr",
+          "translation": "new",
+          "pos": "adjective",
+          "example": "Bókin er ný."
+        },
+        {
+          "word": "gamall",
+          "translation": "old",
+          "pos": "adjective",
+          "example": "Maðurinn er gamall."
+        },
+        {
+          "word": "ungur",
+          "translation": "young",
+          "pos": "adjective",
+          "example": "Hesturinn er ungur."
+        },
+        {
+          "word": "fallegur",
+          "translation": "beautiful",
+          "pos": "adjective",
+          "example": "Konan er falleg."
+        },
+        {
+          "word": "fljótur",
+          "translation": "fast",
+          "pos": "adjective",
+          "example": "Hesturinn er fljótur.",
+          "accepted_translations": [
+            "quick"
+          ]
+        },
+        {
+          "word": "langur",
+          "translation": "long",
+          "pos": "adjective",
+          "example": "Dagurinn er langur."
+        },
+        {
+          "word": "sætur",
+          "translation": "sweet",
+          "pos": "adjective",
+          "example": "Hundurinn er sætur.",
+          "accepted_translations": [
+            "cute"
+          ]
+        },
+        {
+          "word": "hvernig",
+          "translation": "how",
+          "pos": "adverb",
+          "example": "Hvernig heitir þú?"
+        },
+        {
+          "word": "hvar",
+          "translation": "where",
+          "pos": "adverb",
+          "example": "Hvar býr þú?"
+        },
+        {
+          "word": "hvenær",
+          "translation": "when",
+          "pos": "adverb",
+          "example": "Hvenær kemur þú?"
+        },
+        {
+          "word": "hvað",
+          "translation": "what",
+          "pos": "pronoun",
+          "example": "Hvað segirðu?"
+        },
+        {
+          "word": "hver",
+          "translation": "who",
+          "pos": "pronoun",
+          "example": "Hver er þetta?"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "stór",
+          "answer": "big"
+        },
+        {
+          "type": "translation",
+          "prompt": "lítill",
+          "answer": "small"
+        },
+        {
+          "type": "translation",
+          "prompt": "góður",
+          "answer": "good"
+        },
+        {
+          "type": "translation",
+          "prompt": "vondur",
+          "answer": "bad"
+        },
+        {
+          "type": "translation",
+          "prompt": "nýr",
+          "answer": "new"
+        },
+        {
+          "type": "translation",
+          "prompt": "gamall",
+          "answer": "old"
+        },
+        {
+          "type": "translation",
+          "prompt": "ungur",
+          "answer": "young"
+        },
+        {
+          "type": "translation",
+          "prompt": "fallegur",
+          "answer": "beautiful"
+        },
+        {
+          "type": "translation",
+          "prompt": "fljótur",
+          "answer": "fast",
+          "accepted_answers": [
+            "quick"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "langur",
+          "answer": "long"
+        },
+        {
+          "type": "translation",
+          "prompt": "sætur",
+          "answer": "sweet",
+          "accepted_answers": [
+            "cute"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "hvernig",
+          "answer": "how"
+        },
+        {
+          "type": "translation",
+          "prompt": "hvar",
+          "answer": "where"
+        },
+        {
+          "type": "translation",
+          "prompt": "hvenær",
+          "answer": "when"
+        },
+        {
+          "type": "translation",
+          "prompt": "hvað",
+          "answer": "what"
+        },
+        {
+          "type": "translation",
+          "prompt": "hver",
+          "answer": "who"
+        },
+        {
+          "type": "translation",
+          "prompt": "good",
+          "answer": "góður"
+        },
+        {
+          "type": "translation",
+          "prompt": "new",
+          "answer": "nýr"
+        },
+        {
+          "type": "translation",
+          "prompt": "old",
+          "answer": "gamall"
+        },
+        {
+          "type": "translation",
+          "prompt": "beautiful",
+          "answer": "fallegur"
+        },
+        {
+          "type": "translation",
+          "prompt": "fast",
+          "answer": "fljótur",
+          "accepted_answers": [
+            "quick"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "sweet",
+          "answer": "sætur",
+          "accepted_answers": [
+            "cute"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "how",
+          "answer": "hvernig"
+        },
+        {
+          "type": "translation",
+          "prompt": "where",
+          "answer": "hvar"
+        },
+        {
+          "type": "translation",
+          "prompt": "when",
+          "answer": "hvenær"
+        },
+        {
+          "type": "translation",
+          "prompt": "what",
+          "answer": "hvað"
+        },
+        {
+          "type": "translation",
+          "prompt": "who",
+          "answer": "hver"
+        },
+        {
+          "type": "translation",
+          "prompt": "Hvernig heitir þú?",
+          "answer": "What is your name?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Hvar býr þú?",
+          "answer": "Where do you live?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Hvenær kemur þú?",
+          "answer": "When are you coming?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Konan er falleg.",
+          "answer": "The woman is beautiful."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bókin er ný.",
+          "answer": "The book is new."
+        },
+        {
+          "type": "translation",
+          "prompt": "Maðurinn er gamall.",
+          "answer": "The man is old."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'big':",
+          "options": [
+            "stór",
+            "lítill",
+            "góður",
+            "langur"
+          ],
+          "answer": "stór"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'small':",
+          "options": [
+            "lítill",
+            "stór",
+            "nýr",
+            "ungur"
+          ],
+          "answer": "lítill"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good':",
+          "options": [
+            "góður",
+            "vondur",
+            "stór",
+            "gamall"
+          ],
+          "answer": "góður"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'new':",
+          "options": [
+            "nýr",
+            "gamall",
+            "ungur",
+            "góður"
+          ],
+          "answer": "nýr"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'old':",
+          "options": [
+            "gamall",
+            "nýr",
+            "ungur",
+            "lítill"
+          ],
+          "answer": "gamall"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'where':",
+          "options": [
+            "hvar",
+            "hvenær",
+            "hvernig",
+            "hvað"
+          ],
+          "answer": "hvar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'when':",
+          "options": [
+            "hvenær",
+            "hvar",
+            "hvernig",
+            "hver"
+          ],
+          "answer": "hvenær"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'who':",
+          "options": [
+            "hver",
+            "hvað",
+            "hvar",
+            "hvenær"
+          ],
+          "answer": "hver"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ heitir þú?",
+          "answer": "Hvernig",
+          "accepted_answers": [
+            "hvernig"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ býr þú?",
+          "answer": "Hvar",
+          "accepted_answers": [
+            "hvar"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ kemur þú?",
+          "answer": "Hvenær",
+          "accepted_answers": [
+            "hvenær"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ er þetta?",
+          "answer": "Hver",
+          "accepted_answers": [
+            "hver"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ segirðu?",
+          "answer": "Hvað",
+          "accepted_answers": [
+            "hvað"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bókin er ekki gömul — hún er ___.",
+          "answer": "nýr"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hesturinn er ekki ungur — hann er ___.",
+          "answer": "gamall"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hann er ekki vondur — hann er ___.",
+          "answer": "góður"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Food and Drink",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "matur",
+          "translation": "food",
+          "pos": "noun",
+          "example": "Maturinn hér er góður."
+        },
+        {
+          "word": "brauð",
+          "translation": "bread",
+          "pos": "noun",
+          "example": "Brauðið er ferskt."
+        },
+        {
+          "word": "fiskur",
+          "translation": "fish",
+          "pos": "noun",
+          "example": "Fiskurinn er ferskur."
+        },
+        {
+          "word": "kjöt",
+          "translation": "meat",
+          "pos": "noun",
+          "example": "Kjötið er dýrt."
+        },
+        {
+          "word": "ostur",
+          "translation": "cheese",
+          "pos": "noun",
+          "example": "Osturinn er góður."
+        },
+        {
+          "word": "egg",
+          "translation": "egg",
+          "pos": "noun",
+          "example": "Ég borða egg til morgunverðar."
+        },
+        {
+          "word": "kaffi",
+          "translation": "coffee",
+          "pos": "noun",
+          "example": "Kaffið er sterkt."
+        },
+        {
+          "word": "mjólk",
+          "translation": "milk",
+          "pos": "noun",
+          "example": "Mjólkin er köld."
+        },
+        {
+          "word": "vatn",
+          "translation": "water",
+          "pos": "noun",
+          "example": "Vatnið er kalt."
+        },
+        {
+          "word": "te",
+          "translation": "tea",
+          "pos": "noun",
+          "example": "Teið er heitt."
+        },
+        {
+          "word": "epli",
+          "translation": "apple",
+          "pos": "noun",
+          "example": "Eplið er rautt."
+        },
+        {
+          "word": "banani",
+          "translation": "banana",
+          "pos": "noun",
+          "example": "Bananinn er gulur."
+        },
+        {
+          "word": "sykur",
+          "translation": "sugar",
+          "pos": "noun",
+          "example": "Sykurinn er sætur."
+        },
+        {
+          "word": "salt",
+          "translation": "salt",
+          "pos": "noun",
+          "example": "Saltið er hvítt."
+        },
+        {
+          "word": "súpa",
+          "translation": "soup",
+          "pos": "noun",
+          "example": "Súpan er heit."
+        },
+        {
+          "word": "vín",
+          "translation": "wine",
+          "pos": "noun",
+          "example": "Vínið er rautt."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "matur",
+          "answer": "food"
+        },
+        {
+          "type": "translation",
+          "prompt": "brauð",
+          "answer": "bread"
+        },
+        {
+          "type": "translation",
+          "prompt": "fiskur",
+          "answer": "fish"
+        },
+        {
+          "type": "translation",
+          "prompt": "kjöt",
+          "answer": "meat"
+        },
+        {
+          "type": "translation",
+          "prompt": "ostur",
+          "answer": "cheese"
+        },
+        {
+          "type": "translation",
+          "prompt": "egg",
+          "answer": "egg"
+        },
+        {
+          "type": "translation",
+          "prompt": "kaffi",
+          "answer": "coffee"
+        },
+        {
+          "type": "translation",
+          "prompt": "mjólk",
+          "answer": "milk"
+        },
+        {
+          "type": "translation",
+          "prompt": "vatn",
+          "answer": "water"
+        },
+        {
+          "type": "translation",
+          "prompt": "te",
+          "answer": "tea"
+        },
+        {
+          "type": "translation",
+          "prompt": "epli",
+          "answer": "apple"
+        },
+        {
+          "type": "translation",
+          "prompt": "banani",
+          "answer": "banana"
+        },
+        {
+          "type": "translation",
+          "prompt": "sykur",
+          "answer": "sugar"
+        },
+        {
+          "type": "translation",
+          "prompt": "salt",
+          "answer": "salt"
+        },
+        {
+          "type": "translation",
+          "prompt": "súpa",
+          "answer": "soup"
+        },
+        {
+          "type": "translation",
+          "prompt": "vín",
+          "answer": "wine"
+        },
+        {
+          "type": "translation",
+          "prompt": "The bread is fresh.",
+          "answer": "Brauðið er ferskt."
+        },
+        {
+          "type": "translation",
+          "prompt": "The fish is expensive.",
+          "answer": "Fiskurinn er dýr."
+        },
+        {
+          "type": "translation",
+          "prompt": "The coffee is strong.",
+          "answer": "Kaffið er sterkt."
+        },
+        {
+          "type": "translation",
+          "prompt": "The milk is cold.",
+          "answer": "Mjólkin er köld."
+        },
+        {
+          "type": "translation",
+          "prompt": "The water is cold.",
+          "answer": "Vatnið er kalt."
+        },
+        {
+          "type": "translation",
+          "prompt": "I want to drink coffee.",
+          "answer": "Ég vil drekka kaffi."
+        },
+        {
+          "type": "translation",
+          "prompt": "Do you want to eat fish?",
+          "answer": "Vilt þú borða fisk?"
+        },
+        {
+          "type": "translation",
+          "prompt": "I eat bread with cheese.",
+          "answer": "Ég borða brauð með osti."
+        },
+        {
+          "type": "translation",
+          "prompt": "The soup is hot.",
+          "answer": "Súpan er heit."
+        },
+        {
+          "type": "translation",
+          "prompt": "The apple is red.",
+          "answer": "Eplið er rautt."
+        },
+        {
+          "type": "translation",
+          "prompt": "The banana is yellow.",
+          "answer": "Bananinn er gulur."
+        },
+        {
+          "type": "translation",
+          "prompt": "The food here is good.",
+          "answer": "Maturinn hér er góður."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bread':",
+          "options": [
+            "brauð",
+            "fiskur",
+            "ostur",
+            "kaffi"
+          ],
+          "answer": "brauð"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fish':",
+          "options": [
+            "fiskur",
+            "kjöt",
+            "brauð",
+            "egg"
+          ],
+          "answer": "fiskur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cheese':",
+          "options": [
+            "ostur",
+            "brauð",
+            "fiskur",
+            "mjólk"
+          ],
+          "answer": "ostur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'coffee':",
+          "options": [
+            "kaffi",
+            "te",
+            "vatn",
+            "mjólk"
+          ],
+          "answer": "kaffi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'water':",
+          "options": [
+            "vatn",
+            "kaffi",
+            "mjólk",
+            "te"
+          ],
+          "answer": "vatn"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'apple':",
+          "options": [
+            "epli",
+            "banani",
+            "egg",
+            "brauð"
+          ],
+          "answer": "epli"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'soup':",
+          "options": [
+            "súpa",
+            "vín",
+            "kaffi",
+            "te"
+          ],
+          "answer": "súpa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'egg':",
+          "options": [
+            "egg",
+            "epli",
+            "banani",
+            "ostur"
+          ],
+          "answer": "egg"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Fisk___ er dýr.",
+          "answer": "urinn"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kaff___ er sterkt.",
+          "answer": "ið"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Súp___ er heit.",
+          "answer": "an"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Epl___ er rautt.",
+          "answer": "ið"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ost___ er góður.",
+          "answer": "urinn"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Brauð___ er ferskt.",
+          "answer": "ið"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég borða ___ með osti.",
+          "answer": "brauð"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Banana___ er gulur.",
+          "answer": "ninn"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Home and Places",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "íbúð",
+          "translation": "apartment",
+          "pos": "noun",
+          "example": "Íbúðin mín er lítil."
+        },
+        {
+          "word": "herbergi",
+          "translation": "room",
+          "pos": "noun",
+          "example": "Herbergið er stórt."
+        },
+        {
+          "word": "eldhús",
+          "translation": "kitchen",
+          "pos": "noun",
+          "example": "Eldhúsið er lítið."
+        },
+        {
+          "word": "stofa",
+          "translation": "living room",
+          "pos": "noun",
+          "example": "Stofan er hlý."
+        },
+        {
+          "word": "skápur",
+          "translation": "cupboard",
+          "pos": "noun",
+          "example": "Skápurinn er stór."
+        },
+        {
+          "word": "borð",
+          "translation": "table",
+          "pos": "noun",
+          "example": "Bókin er á borðinu."
+        },
+        {
+          "word": "stóll",
+          "translation": "chair",
+          "pos": "noun",
+          "example": "Stóllinn er nýr."
+        },
+        {
+          "word": "rúm",
+          "translation": "bed",
+          "pos": "noun",
+          "example": "Rúmið er hlýtt."
+        },
+        {
+          "word": "skóli",
+          "translation": "school",
+          "pos": "noun",
+          "example": "Skólinn er stór."
+        },
+        {
+          "word": "bær",
+          "translation": "town",
+          "pos": "noun",
+          "example": "Bærinn er fallegur."
+        },
+        {
+          "word": "land",
+          "translation": "land",
+          "pos": "noun",
+          "example": "Landið er stórt.",
+          "accepted_translations": [
+            "country"
+          ]
+        },
+        {
+          "word": "vegur",
+          "translation": "road",
+          "pos": "noun",
+          "example": "Vegurinn er langur.",
+          "accepted_translations": [
+            "street"
+          ]
+        },
+        {
+          "word": "verslun",
+          "translation": "shop",
+          "pos": "noun",
+          "example": "Verslunin er opin."
+        },
+        {
+          "word": "kirkja",
+          "translation": "church",
+          "pos": "noun",
+          "example": "Kirkjan er gömul."
+        },
+        {
+          "word": "sundlaug",
+          "translation": "swimming pool",
+          "pos": "noun",
+          "example": "Sundlaugin er stór."
+        },
+        {
+          "word": "tölva",
+          "translation": "computer",
+          "pos": "noun",
+          "example": "Tölvan er í herberginu."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "íbúð",
+          "answer": "apartment"
+        },
+        {
+          "type": "translation",
+          "prompt": "herbergi",
+          "answer": "room"
+        },
+        {
+          "type": "translation",
+          "prompt": "eldhús",
+          "answer": "kitchen"
+        },
+        {
+          "type": "translation",
+          "prompt": "stofa",
+          "answer": "living room"
+        },
+        {
+          "type": "translation",
+          "prompt": "skápur",
+          "answer": "cupboard"
+        },
+        {
+          "type": "translation",
+          "prompt": "borð",
+          "answer": "table"
+        },
+        {
+          "type": "translation",
+          "prompt": "stóll",
+          "answer": "chair"
+        },
+        {
+          "type": "translation",
+          "prompt": "rúm",
+          "answer": "bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "skóli",
+          "answer": "school"
+        },
+        {
+          "type": "translation",
+          "prompt": "bær",
+          "answer": "town"
+        },
+        {
+          "type": "translation",
+          "prompt": "land",
+          "answer": "land",
+          "accepted_answers": [
+            "country"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "vegur",
+          "answer": "road",
+          "accepted_answers": [
+            "street"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "verslun",
+          "answer": "shop"
+        },
+        {
+          "type": "translation",
+          "prompt": "kirkja",
+          "answer": "church"
+        },
+        {
+          "type": "translation",
+          "prompt": "sundlaug",
+          "answer": "swimming pool"
+        },
+        {
+          "type": "translation",
+          "prompt": "tölva",
+          "answer": "computer"
+        },
+        {
+          "type": "translation",
+          "prompt": "The book is on the table.",
+          "answer": "Bókin er á borðinu."
+        },
+        {
+          "type": "translation",
+          "prompt": "The book is in the cupboard.",
+          "answer": "Bókin er í skápnum."
+        },
+        {
+          "type": "translation",
+          "prompt": "He is in school.",
+          "answer": "Hann er í skólanum."
+        },
+        {
+          "type": "translation",
+          "prompt": "She is in the shop.",
+          "answer": "Hún er í versluninni."
+        },
+        {
+          "type": "translation",
+          "prompt": "They are in the swimming pool.",
+          "answer": "Þeir eru í sundlauginni."
+        },
+        {
+          "type": "translation",
+          "prompt": "The church is old.",
+          "answer": "Kirkjan er gömul."
+        },
+        {
+          "type": "translation",
+          "prompt": "The town is beautiful.",
+          "answer": "Bærinn er fallegur."
+        },
+        {
+          "type": "translation",
+          "prompt": "The living room is warm.",
+          "answer": "Stofan er hlý."
+        },
+        {
+          "type": "translation",
+          "prompt": "The apartment is small.",
+          "answer": "Íbúðin er lítil."
+        },
+        {
+          "type": "translation",
+          "prompt": "The computer is in the room.",
+          "answer": "Tölvan er í herberginu."
+        },
+        {
+          "type": "translation",
+          "prompt": "The chair is new.",
+          "answer": "Stóllinn er nýr."
+        },
+        {
+          "type": "translation",
+          "prompt": "The road is long.",
+          "answer": "Vegurinn er langur."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'apartment':",
+          "options": [
+            "íbúð",
+            "herbergi",
+            "eldhús",
+            "bær"
+          ],
+          "answer": "íbúð"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'kitchen':",
+          "options": [
+            "eldhús",
+            "stofa",
+            "herbergi",
+            "íbúð"
+          ],
+          "answer": "eldhús"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'school':",
+          "options": [
+            "skóli",
+            "verslun",
+            "kirkja",
+            "bær"
+          ],
+          "answer": "skóli"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'town':",
+          "options": [
+            "bær",
+            "land",
+            "vegur",
+            "skóli"
+          ],
+          "answer": "bær"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'shop':",
+          "options": [
+            "verslun",
+            "kirkja",
+            "skóli",
+            "bær"
+          ],
+          "answer": "verslun"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'church':",
+          "options": [
+            "kirkja",
+            "verslun",
+            "bær",
+            "skóli"
+          ],
+          "answer": "kirkja"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'computer':",
+          "options": [
+            "tölva",
+            "borð",
+            "stóll",
+            "rúm"
+          ],
+          "answer": "tölva"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'swimming pool':",
+          "options": [
+            "sundlaug",
+            "verslun",
+            "kirkja",
+            "íbúð"
+          ],
+          "answer": "sundlaug"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bókin er ___ skápnum.",
+          "answer": "í"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bókin er ___ borðinu.",
+          "answer": "á"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hann er ___ skólanum.",
+          "answer": "í"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tölvan er ___ herberginu.",
+          "answer": "í"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hún er ___ versluninni.",
+          "answer": "í"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Barnið er ___ sundlauginni.",
+          "answer": "í"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kaffið er ___ borðinu.",
+          "answer": "á"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vatnið er ___ borðinu.",
+          "answer": "á"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Daily Routine and Weather",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "morgunn",
+          "translation": "morning",
+          "pos": "noun",
+          "example": "Góðan morgun!"
+        },
+        {
+          "word": "kvöld",
+          "translation": "evening",
+          "pos": "noun",
+          "example": "Á kvöldin les ég."
+        },
+        {
+          "word": "nótt",
+          "translation": "night",
+          "pos": "noun",
+          "example": "Nóttin er löng."
+        },
+        {
+          "word": "tími",
+          "translation": "time",
+          "pos": "noun",
+          "example": "Ég hef ekki tíma."
+        },
+        {
+          "word": "veður",
+          "translation": "weather",
+          "pos": "noun",
+          "example": "Veðrið er gott."
+        },
+        {
+          "word": "sól",
+          "translation": "sun",
+          "pos": "noun",
+          "example": "Sólin skín."
+        },
+        {
+          "word": "rigning",
+          "translation": "rain",
+          "pos": "noun",
+          "example": "Það er rigning í dag."
+        },
+        {
+          "word": "snjór",
+          "translation": "snow",
+          "pos": "noun",
+          "example": "Úti fellur snjór."
+        },
+        {
+          "word": "vindur",
+          "translation": "wind",
+          "pos": "noun",
+          "example": "Vindurinn er kaldur."
+        },
+        {
+          "word": "heitur",
+          "translation": "hot",
+          "pos": "adjective",
+          "example": "Það er heitt í dag."
+        },
+        {
+          "word": "kaldur",
+          "translation": "cold",
+          "pos": "adjective",
+          "example": "Það er kalt í vetur."
+        },
+        {
+          "word": "að vakna",
+          "translation": "to wake up",
+          "pos": "verb",
+          "example": "Ég vakna klukkan sjö."
+        },
+        {
+          "word": "að klæða sig",
+          "translation": "to get dressed",
+          "pos": "verb",
+          "example": "Ég klæði mig á morgnana."
+        },
+        {
+          "word": "að leggjast",
+          "translation": "to go to bed",
+          "pos": "verb",
+          "example": "Ég leggst klukkan ellefu."
+        },
+        {
+          "word": "að horfa",
+          "translation": "to watch",
+          "pos": "verb",
+          "example": "Við horfum á sjónvarpið.",
+          "accepted_translations": [
+            "to look"
+          ]
+        },
+        {
+          "word": "að hlusta",
+          "translation": "to listen",
+          "pos": "verb",
+          "example": "Ég hlusta á tónlist."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "morgunn",
+          "answer": "morning"
+        },
+        {
+          "type": "translation",
+          "prompt": "kvöld",
+          "answer": "evening"
+        },
+        {
+          "type": "translation",
+          "prompt": "nótt",
+          "answer": "night"
+        },
+        {
+          "type": "translation",
+          "prompt": "tími",
+          "answer": "time"
+        },
+        {
+          "type": "translation",
+          "prompt": "veður",
+          "answer": "weather"
+        },
+        {
+          "type": "translation",
+          "prompt": "sól",
+          "answer": "sun"
+        },
+        {
+          "type": "translation",
+          "prompt": "rigning",
+          "answer": "rain"
+        },
+        {
+          "type": "translation",
+          "prompt": "snjór",
+          "answer": "snow"
+        },
+        {
+          "type": "translation",
+          "prompt": "vindur",
+          "answer": "wind"
+        },
+        {
+          "type": "translation",
+          "prompt": "heitur",
+          "answer": "hot"
+        },
+        {
+          "type": "translation",
+          "prompt": "kaldur",
+          "answer": "cold"
+        },
+        {
+          "type": "translation",
+          "prompt": "að vakna",
+          "answer": "to wake up"
+        },
+        {
+          "type": "translation",
+          "prompt": "að klæða sig",
+          "answer": "to get dressed"
+        },
+        {
+          "type": "translation",
+          "prompt": "að leggjast",
+          "answer": "to go to bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "að horfa",
+          "answer": "to watch",
+          "accepted_answers": [
+            "to look"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "að hlusta",
+          "answer": "to listen"
+        },
+        {
+          "type": "translation",
+          "prompt": "I wake up at seven.",
+          "answer": "Ég vakna klukkan sjö."
+        },
+        {
+          "type": "translation",
+          "prompt": "I get dressed in the morning.",
+          "answer": "Ég klæði mig á morgnana."
+        },
+        {
+          "type": "translation",
+          "prompt": "I go to bed at eleven.",
+          "answer": "Ég leggst klukkan ellefu."
+        },
+        {
+          "type": "translation",
+          "prompt": "We watch TV in the evening.",
+          "answer": "Við horfum á sjónvarpið á kvöldin."
+        },
+        {
+          "type": "translation",
+          "prompt": "I listen to music.",
+          "answer": "Ég hlusta á tónlist."
+        },
+        {
+          "type": "translation",
+          "prompt": "The sun is shining.",
+          "answer": "Sólin skín."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's raining today.",
+          "answer": "Það rignir í dag.",
+          "accepted_answers": [
+            "It is raining today."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "It's snowing outside.",
+          "answer": "Það snjóar úti.",
+          "accepted_answers": [
+            "It is snowing outside."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "The weather is good today.",
+          "answer": "Veðrið er gott í dag."
+        },
+        {
+          "type": "translation",
+          "prompt": "The night is long.",
+          "answer": "Nóttin er löng."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's hot today.",
+          "answer": "Það er heitt í dag.",
+          "accepted_answers": [
+            "It is hot today."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't have time.",
+          "answer": "Ég hef ekki tíma.",
+          "accepted_answers": [
+            "I do not have time."
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'morning':",
+          "options": [
+            "morgunn",
+            "kvöld",
+            "nótt",
+            "tími"
+          ],
+          "answer": "morgunn"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'evening':",
+          "options": [
+            "kvöld",
+            "morgunn",
+            "nótt",
+            "veður"
+          ],
+          "answer": "kvöld"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'night':",
+          "options": [
+            "nótt",
+            "morgunn",
+            "kvöld",
+            "sól"
+          ],
+          "answer": "nótt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'weather':",
+          "options": [
+            "veður",
+            "vindur",
+            "rigning",
+            "snjór"
+          ],
+          "answer": "veður"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sun':",
+          "options": [
+            "sól",
+            "snjór",
+            "vindur",
+            "rigning"
+          ],
+          "answer": "sól"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'rain':",
+          "options": [
+            "rigning",
+            "snjór",
+            "sól",
+            "vindur"
+          ],
+          "answer": "rigning"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'snow':",
+          "options": [
+            "snjór",
+            "rigning",
+            "sól",
+            "veður"
+          ],
+          "answer": "snjór"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'wind':",
+          "options": [
+            "vindur",
+            "veður",
+            "sól",
+            "rigning"
+          ],
+          "answer": "vindur"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég klæði ___ á morgnana.",
+          "answer": "mig"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Barnið klæðir ___.",
+          "answer": "sig"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég hlusta ___ tónlist.",
+          "answer": "á"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Við horfum ___ sjónvarpið.",
+          "answer": "á"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Úti fellur ___.",
+          "answer": "snjór"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Í dag skín ___.",
+          "answer": "sól"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Það er ___ í dag — vertu með regnhlíf.",
+          "answer": "rigning"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Barnið sefur alla ___.",
+          "answer": "nótt"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Shopping and Travel",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "tuttugu",
+          "translation": "twenty",
+          "pos": "number",
+          "example": "Bókin kostar tuttugu krónur."
+        },
+        {
+          "word": "þrjátíu",
+          "translation": "thirty",
+          "pos": "number",
+          "example": "Þrjátíu dagar."
+        },
+        {
+          "word": "fjörutíu",
+          "translation": "forty",
+          "pos": "number",
+          "example": "Fjörutíu krónur."
+        },
+        {
+          "word": "fimmtíu",
+          "translation": "fifty",
+          "pos": "number",
+          "example": "Fimmtíu krónur."
+        },
+        {
+          "word": "hundrað",
+          "translation": "hundred",
+          "pos": "number",
+          "example": "Hundrað krónur."
+        },
+        {
+          "word": "þúsund",
+          "translation": "thousand",
+          "pos": "number",
+          "example": "Þúsund krónur."
+        },
+        {
+          "word": "peningar",
+          "translation": "money",
+          "pos": "noun",
+          "example": "Ég hef ekki peninga."
+        },
+        {
+          "word": "dýr",
+          "translation": "expensive",
+          "pos": "adjective",
+          "example": "Hótelið er dýrt.",
+          "accepted_translations": [
+            "dear",
+            "animal"
+          ]
+        },
+        {
+          "word": "ódýr",
+          "translation": "cheap",
+          "pos": "adjective",
+          "example": "Miðinn er ódýr."
+        },
+        {
+          "word": "að borga",
+          "translation": "to pay",
+          "pos": "verb",
+          "example": "Ég borga með korti."
+        },
+        {
+          "word": "banki",
+          "translation": "bank",
+          "pos": "noun",
+          "example": "Bankinn er opinn til fimm.",
+          "accepted_translations": [
+            "bench"
+          ]
+        },
+        {
+          "word": "flugvél",
+          "translation": "airplane",
+          "pos": "noun",
+          "example": "Flugvélin flýgur á morgun."
+        },
+        {
+          "word": "lest",
+          "translation": "train",
+          "pos": "noun",
+          "example": "Lestin kemur klukkan átta."
+        },
+        {
+          "word": "hótel",
+          "translation": "hotel",
+          "pos": "noun",
+          "example": "Hótelið er dýrt."
+        },
+        {
+          "word": "miði",
+          "translation": "ticket",
+          "pos": "noun",
+          "example": "Miðinn er ódýr."
+        },
+        {
+          "word": "ferðataska",
+          "translation": "suitcase",
+          "pos": "noun",
+          "example": "Ferðataskan er þung."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "tuttugu",
+          "answer": "twenty"
+        },
+        {
+          "type": "translation",
+          "prompt": "þrjátíu",
+          "answer": "thirty"
+        },
+        {
+          "type": "translation",
+          "prompt": "fjörutíu",
+          "answer": "forty"
+        },
+        {
+          "type": "translation",
+          "prompt": "fimmtíu",
+          "answer": "fifty"
+        },
+        {
+          "type": "translation",
+          "prompt": "hundrað",
+          "answer": "hundred"
+        },
+        {
+          "type": "translation",
+          "prompt": "þúsund",
+          "answer": "thousand"
+        },
+        {
+          "type": "translation",
+          "prompt": "peningar",
+          "answer": "money"
+        },
+        {
+          "type": "translation",
+          "prompt": "dýr",
+          "answer": "expensive",
+          "accepted_answers": [
+            "dear",
+            "animal"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "ódýr",
+          "answer": "cheap"
+        },
+        {
+          "type": "translation",
+          "prompt": "að borga",
+          "answer": "to pay"
+        },
+        {
+          "type": "translation",
+          "prompt": "banki",
+          "answer": "bank",
+          "accepted_answers": [
+            "bench"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "flugvél",
+          "answer": "airplane"
+        },
+        {
+          "type": "translation",
+          "prompt": "lest",
+          "answer": "train"
+        },
+        {
+          "type": "translation",
+          "prompt": "hótel",
+          "answer": "hotel"
+        },
+        {
+          "type": "translation",
+          "prompt": "miði",
+          "answer": "ticket"
+        },
+        {
+          "type": "translation",
+          "prompt": "ferðataska",
+          "answer": "suitcase"
+        },
+        {
+          "type": "translation",
+          "prompt": "The book costs twenty krónur.",
+          "answer": "Bókin kostar tuttugu krónur."
+        },
+        {
+          "type": "translation",
+          "prompt": "The hotel is expensive.",
+          "answer": "Hótelið er dýrt."
+        },
+        {
+          "type": "translation",
+          "prompt": "The ticket is cheap.",
+          "answer": "Miðinn er ódýr."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't have money.",
+          "answer": "Ég hef ekki peninga.",
+          "accepted_answers": [
+            "I do not have money."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "I pay with a card.",
+          "answer": "Ég borga með korti."
+        },
+        {
+          "type": "translation",
+          "prompt": "The bank is open until five.",
+          "answer": "Bankinn er opinn til fimm."
+        },
+        {
+          "type": "translation",
+          "prompt": "The train arrives at eight o'clock.",
+          "answer": "Lestin kemur klukkan átta."
+        },
+        {
+          "type": "translation",
+          "prompt": "The airplane flies tomorrow.",
+          "answer": "Flugvélin flýgur á morgun."
+        },
+        {
+          "type": "translation",
+          "prompt": "The suitcase is heavy.",
+          "answer": "Ferðataskan er þung."
+        },
+        {
+          "type": "translation",
+          "prompt": "How much does the book cost?",
+          "answer": "Hvað kostar bókin?"
+        },
+        {
+          "type": "translation",
+          "prompt": "A ticket to Reykjavík, please.",
+          "answer": "Miða til Reykjavíkur, takk."
+        },
+        {
+          "type": "translation",
+          "prompt": "The book costs a thousand krónur.",
+          "answer": "Bókin kostar þúsund krónur."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'twenty':",
+          "options": [
+            "tuttugu",
+            "þrjátíu",
+            "fjörutíu",
+            "fimmtíu"
+          ],
+          "answer": "tuttugu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'forty':",
+          "options": [
+            "fjörutíu",
+            "tuttugu",
+            "þrjátíu",
+            "hundrað"
+          ],
+          "answer": "fjörutíu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hundred':",
+          "options": [
+            "hundrað",
+            "fimmtíu",
+            "þúsund",
+            "tuttugu"
+          ],
+          "answer": "hundrað"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'thousand':",
+          "options": [
+            "þúsund",
+            "hundrað",
+            "fimmtíu",
+            "þrjátíu"
+          ],
+          "answer": "þúsund"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'expensive':",
+          "options": [
+            "dýr",
+            "ódýr",
+            "langur",
+            "sætur"
+          ],
+          "answer": "dýr"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cheap':",
+          "options": [
+            "ódýr",
+            "dýr",
+            "stór",
+            "vondur"
+          ],
+          "answer": "ódýr"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'train':",
+          "options": [
+            "lest",
+            "flugvél",
+            "hótel",
+            "banki"
+          ],
+          "answer": "lest"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'airplane':",
+          "options": [
+            "flugvél",
+            "lest",
+            "miði",
+            "ferðataska"
+          ],
+          "answer": "flugvél"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tuttugu og þrjátíu eru ___.",
+          "answer": "fimmtíu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Fimmtíu og fimmtíu eru ___.",
+          "answer": "hundrað"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þrjátíu, ___, fimmtíu.",
+          "answer": "fjörutíu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tuttugu, ___, fjörutíu.",
+          "answer": "þrjátíu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tíu hundruð eru eitt ___.",
+          "answer": "þúsund"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hvað ___ bókin?",
+          "answer": "kostar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég ___ með korti.",
+          "answer": "borga"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Lest___ kemur klukkan átta.",
+          "answer": "in"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Yesterday and Tomorrow",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "í gær",
+          "translation": "yesterday",
+          "pos": "adverb",
+          "example": "Ég las bók í gær."
+        },
+        {
+          "word": "í dag",
+          "translation": "today",
+          "pos": "adverb",
+          "example": "Í dag er þriðjudagur."
+        },
+        {
+          "word": "á morgun",
+          "translation": "tomorrow",
+          "pos": "adverb",
+          "example": "Á morgun fer ég í skólann."
+        },
+        {
+          "word": "í fyrra",
+          "translation": "last year",
+          "pos": "adverb",
+          "example": "Í fyrra var ég á Íslandi."
+        },
+        {
+          "word": "á næsta ári",
+          "translation": "next year",
+          "pos": "adverb",
+          "example": "Á næsta ári læri ég íslensku."
+        },
+        {
+          "word": "í síðustu viku",
+          "translation": "last week",
+          "pos": "phrase",
+          "example": "Í síðustu viku las ég bækur."
+        },
+        {
+          "word": "í næstu viku",
+          "translation": "next week",
+          "pos": "phrase",
+          "example": "Í næstu viku fer ég í bíó."
+        },
+        {
+          "word": "vetur",
+          "translation": "winter",
+          "pos": "noun",
+          "example": "Veturinn er kaldur."
+        },
+        {
+          "word": "vor",
+          "translation": "spring",
+          "pos": "noun",
+          "example": "Vorið er fallegt."
+        },
+        {
+          "word": "sumar",
+          "translation": "summer",
+          "pos": "noun",
+          "example": "Sumarið er heitt."
+        },
+        {
+          "word": "haust",
+          "translation": "autumn",
+          "pos": "noun",
+          "example": "Haustið er kalt.",
+          "accepted_translations": [
+            "fall"
+          ]
+        },
+        {
+          "word": "mánuður",
+          "translation": "month",
+          "pos": "noun",
+          "example": "Árið hefur tólf mánuði."
+        },
+        {
+          "word": "júní",
+          "translation": "June",
+          "pos": "noun",
+          "example": "Afmælið mitt er í júní."
+        },
+        {
+          "word": "desember",
+          "translation": "December",
+          "pos": "noun",
+          "example": "Jólin eru í desember."
+        },
+        {
+          "word": "afmæli",
+          "translation": "birthday",
+          "pos": "noun",
+          "example": "Hvenær er afmælið þitt?"
+        },
+        {
+          "word": "sumarfrí",
+          "translation": "summer vacation",
+          "pos": "noun",
+          "example": "Sumarfríið er langt."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "í gær",
+          "answer": "yesterday"
+        },
+        {
+          "type": "translation",
+          "prompt": "í dag",
+          "answer": "today"
+        },
+        {
+          "type": "translation",
+          "prompt": "á morgun",
+          "answer": "tomorrow"
+        },
+        {
+          "type": "translation",
+          "prompt": "í fyrra",
+          "answer": "last year"
+        },
+        {
+          "type": "translation",
+          "prompt": "á næsta ári",
+          "answer": "next year"
+        },
+        {
+          "type": "translation",
+          "prompt": "í síðustu viku",
+          "answer": "last week"
+        },
+        {
+          "type": "translation",
+          "prompt": "í næstu viku",
+          "answer": "next week"
+        },
+        {
+          "type": "translation",
+          "prompt": "vetur",
+          "answer": "winter"
+        },
+        {
+          "type": "translation",
+          "prompt": "vor",
+          "answer": "spring"
+        },
+        {
+          "type": "translation",
+          "prompt": "sumar",
+          "answer": "summer"
+        },
+        {
+          "type": "translation",
+          "prompt": "haust",
+          "answer": "autumn",
+          "accepted_answers": [
+            "fall"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "mánuður",
+          "answer": "month"
+        },
+        {
+          "type": "translation",
+          "prompt": "júní",
+          "answer": "June"
+        },
+        {
+          "type": "translation",
+          "prompt": "desember",
+          "answer": "December"
+        },
+        {
+          "type": "translation",
+          "prompt": "afmæli",
+          "answer": "birthday"
+        },
+        {
+          "type": "translation",
+          "prompt": "sumarfrí",
+          "answer": "summer vacation"
+        },
+        {
+          "type": "translation",
+          "prompt": "I read a book yesterday.",
+          "answer": "Ég las bók í gær."
+        },
+        {
+          "type": "translation",
+          "prompt": "She was at home yesterday.",
+          "answer": "Hún var heima í gær."
+        },
+        {
+          "type": "translation",
+          "prompt": "I talked to my mother yesterday.",
+          "answer": "Ég talaði við mömmu mína í gær."
+        },
+        {
+          "type": "translation",
+          "prompt": "We went to Reykjavík last year.",
+          "answer": "Við fórum til Reykjavíkur í fyrra."
+        },
+        {
+          "type": "translation",
+          "prompt": "Tomorrow I'm going to buy a book.",
+          "answer": "Ég ætla að kaupa bók á morgun.",
+          "accepted_answers": [
+            "Tomorrow I am going to buy a book."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Next year I'm going to learn Icelandic.",
+          "answer": "Á næsta ári ætla ég að læra íslensku.",
+          "accepted_answers": [
+            "Next year I am going to learn Icelandic."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "The winter is cold.",
+          "answer": "Veturinn er kaldur."
+        },
+        {
+          "type": "translation",
+          "prompt": "The summer is hot.",
+          "answer": "Sumarið er heitt."
+        },
+        {
+          "type": "translation",
+          "prompt": "The spring is beautiful.",
+          "answer": "Vorið er fallegt."
+        },
+        {
+          "type": "translation",
+          "prompt": "Christmas is in December.",
+          "answer": "Jólin eru í desember."
+        },
+        {
+          "type": "translation",
+          "prompt": "My birthday is in June.",
+          "answer": "Afmælið mitt er í júní."
+        },
+        {
+          "type": "translation",
+          "prompt": "The summer vacation is long.",
+          "answer": "Sumarfríið er langt."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'yesterday':",
+          "options": [
+            "í gær",
+            "í dag",
+            "á morgun",
+            "í fyrra"
+          ],
+          "answer": "í gær"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'today':",
+          "options": [
+            "í dag",
+            "í gær",
+            "á morgun",
+            "í næstu viku"
+          ],
+          "answer": "í dag"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tomorrow':",
+          "options": [
+            "á morgun",
+            "í dag",
+            "í gær",
+            "í síðustu viku"
+          ],
+          "answer": "á morgun"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'winter':",
+          "options": [
+            "vetur",
+            "vor",
+            "sumar",
+            "haust"
+          ],
+          "answer": "vetur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'summer':",
+          "options": [
+            "sumar",
+            "vetur",
+            "vor",
+            "haust"
+          ],
+          "answer": "sumar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'spring':",
+          "options": [
+            "vor",
+            "sumar",
+            "vetur",
+            "haust"
+          ],
+          "answer": "vor"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'month':",
+          "options": [
+            "mánuður",
+            "júní",
+            "desember",
+            "afmæli"
+          ],
+          "answer": "mánuður"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'birthday':",
+          "options": [
+            "afmæli",
+            "mánuður",
+            "sumarfrí",
+            "júní"
+          ],
+          "answer": "afmæli"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég tala___ við hana í gær.",
+          "answer": "ði"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hún keypt___ bók í gær.",
+          "answer": "i"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hún ___ bókina í gær.",
+          "answer": "las"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég ___ heima í gær.",
+          "answer": "var"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég ætla ___ kaupa bók á morgun.",
+          "answer": "að"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég ætla að ___ bók á morgun.",
+          "answer": "kaupa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hún ætlar að ___ íslensku.",
+          "answer": "læra"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jólin eru í ___.",
+          "answer": "desember"
+        }
+      ]
+    }
+  ]
+}
