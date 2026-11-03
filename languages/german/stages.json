@@ -3875,6 +3875,1951 @@
           "answer": "Dezember"
         }
       ]
+    },
+    {
+      "id": 11,
+      "title": "Work and School",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "das Büro",
+          "translation": "office",
+          "pos": "noun (neuter)",
+          "example": "Ich fahre um acht Uhr ins Büro."
+        },
+        {
+          "word": "die Firma",
+          "translation": "company",
+          "pos": "noun (feminine)",
+          "example": "Er arbeitet in einer großen Firma."
+        },
+        {
+          "word": "der Chef",
+          "translation": "boss",
+          "pos": "noun (masculine)",
+          "example": "Der Chef ist in seinem Büro."
+        },
+        {
+          "word": "der Kollege",
+          "translation": "colleague",
+          "pos": "noun (masculine)",
+          "example": "Meine Kollegin wohnt nahe am Park."
+        },
+        {
+          "word": "die Besprechung",
+          "translation": "meeting",
+          "pos": "noun (feminine)",
+          "example": "Die Besprechung beginnt um neun Uhr."
+        },
+        {
+          "word": "das Gehalt",
+          "translation": "salary",
+          "pos": "noun (neuter)",
+          "example": "Mein Gehalt ist gut."
+        },
+        {
+          "word": "der Beruf",
+          "translation": "profession",
+          "accepted_translations": ["job"],
+          "pos": "noun (masculine)",
+          "example": "Was ist dein Beruf?"
+        },
+        {
+          "word": "die Pause",
+          "translation": "break",
+          "pos": "noun (feminine)",
+          "example": "Ich mache um elf Uhr Pause."
+        },
+        {
+          "word": "die Klasse",
+          "translation": "class",
+          "pos": "noun (feminine)",
+          "example": "Wir sprechen Deutsch in der Klasse."
+        },
+        {
+          "word": "das Fach",
+          "translation": "subject",
+          "pos": "noun (neuter)",
+          "example": "Mein Lieblingsfach ist Geschichte."
+        },
+        {
+          "word": "die Hausaufgaben",
+          "translation": "homework",
+          "pos": "noun (plural)",
+          "example": "Ich mache meine Hausaufgaben am Abend."
+        },
+        {
+          "word": "die Prüfung",
+          "translation": "exam",
+          "accepted_translations": ["test"],
+          "pos": "noun (feminine)",
+          "example": "Die Deutschprüfung ist morgen."
+        },
+        {
+          "word": "der Computer",
+          "translation": "computer",
+          "pos": "noun (masculine)",
+          "example": "Mein Computer ist neu."
+        },
+        {
+          "word": "beschäftigt",
+          "translation": "busy",
+          "pos": "adjective",
+          "example": "Mein Vater ist immer beschäftigt."
+        },
+        {
+          "word": "der Termin",
+          "translation": "appointment",
+          "pos": "noun (masculine)",
+          "example": "Ich habe einen Termin beim Arzt."
+        },
+        {
+          "word": "der Schreibtisch",
+          "translation": "desk",
+          "pos": "noun (masculine)",
+          "example": "Der Computer steht auf dem Schreibtisch."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "das Büro",
+          "answer": "office"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Firma",
+          "answer": "company"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Chef",
+          "answer": "boss"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Kollege",
+          "answer": "colleague"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Besprechung",
+          "answer": "meeting"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Gehalt",
+          "answer": "salary"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Beruf",
+          "answer": "profession",
+          "accepted_answers": ["job"]
+        },
+        {
+          "type": "translation",
+          "prompt": "die Pause",
+          "answer": "break"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Klasse",
+          "answer": "class"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Fach",
+          "answer": "subject"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Hausaufgaben",
+          "answer": "homework"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Prüfung",
+          "answer": "exam",
+          "accepted_answers": ["test"]
+        },
+        {
+          "type": "translation",
+          "prompt": "der Computer",
+          "answer": "computer"
+        },
+        {
+          "type": "translation",
+          "prompt": "beschäftigt",
+          "answer": "busy"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Termin",
+          "answer": "appointment"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Schreibtisch",
+          "answer": "desk"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich fahre um acht Uhr ins Büro.",
+          "answer": "I go to the office at eight.",
+          "accepted_answers": ["I drive to the office at eight", "I go to the office at eight o'clock"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich habe eine Besprechung mit dem Chef.",
+          "answer": "I have a meeting with the boss."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mein Kollege spricht drei Sprachen.",
+          "answer": "My colleague speaks three languages."
+        },
+        {
+          "type": "translation",
+          "prompt": "Wir haben diese Woche viel Arbeit.",
+          "answer": "We have a lot of work this week."
+        },
+        {
+          "type": "translation",
+          "prompt": "Die Hausaufgaben sind schwierig.",
+          "answer": "The homework is difficult.",
+          "accepted_answers": ["The homework is hard"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich habe eine E-Mail an den Chef geschrieben.",
+          "answer": "I wrote an e-mail to the boss.",
+          "accepted_answers": ["I wrote an email to the boss"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Die Prüfung ist nächste Woche.",
+          "answer": "The exam is next week."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich bin heute sehr beschäftigt.",
+          "answer": "I'm very busy today.",
+          "accepted_answers": ["I am very busy today."]
+        },
+        {
+          "type": "translation",
+          "prompt": "My salary is good.",
+          "answer": "Mein Gehalt ist gut."
+        },
+        {
+          "type": "translation",
+          "prompt": "The class starts at nine.",
+          "answer": "Die Klasse beginnt um neun Uhr."
+        },
+        {
+          "type": "translation",
+          "prompt": "I want a break.",
+          "answer": "Ich mache Pause."
+        },
+        {
+          "type": "translation",
+          "prompt": "My computer is new.",
+          "answer": "Mein Computer ist neu."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'office':",
+          "options": [
+            "das Büro",
+            "die Firma",
+            "der Chef",
+            "der Kollege"
+          ],
+          "answer": "das Büro"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'company':",
+          "options": [
+            "die Firma",
+            "der Chef",
+            "der Kollege",
+            "die Besprechung"
+          ],
+          "answer": "die Firma"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'boss':",
+          "options": [
+            "der Chef",
+            "der Kollege",
+            "die Besprechung",
+            "das Gehalt"
+          ],
+          "answer": "der Chef"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'colleague':",
+          "options": [
+            "der Kollege",
+            "die Besprechung",
+            "das Gehalt",
+            "der Beruf"
+          ],
+          "answer": "der Kollege"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'meeting':",
+          "options": [
+            "die Besprechung",
+            "das Gehalt",
+            "der Beruf",
+            "die Pause"
+          ],
+          "answer": "die Besprechung"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'salary':",
+          "options": [
+            "das Gehalt",
+            "der Beruf",
+            "die Pause",
+            "die Klasse"
+          ],
+          "answer": "das Gehalt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'profession':",
+          "options": [
+            "der Beruf",
+            "die Pause",
+            "die Klasse",
+            "das Fach"
+          ],
+          "answer": "der Beruf"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'break':",
+          "options": [
+            "die Pause",
+            "die Klasse",
+            "das Fach",
+            "die Hausaufgaben"
+          ],
+          "answer": "die Pause"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich ___ gestern viel gearbeitet.",
+          "answer": "habe"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Du hast die E-Mail ___.",
+          "answer": "geschrieben"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wir ___ Pizza gegessen.",
+          "answer": "haben"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich habe Deutsch ___.",
+          "answer": "gelernt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Was hast du heute ___?",
+          "answer": "gemacht"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ihr ___ viel gelernt.",
+          "answer": "habt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sie hat einen Kaffee ___.",
+          "answer": "getrunken"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich arbeite in einem großen ___.",
+          "answer": "Büro"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Health and the Body",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "der Kopf",
+          "translation": "head",
+          "pos": "noun (masculine)",
+          "example": "Mein Kopf tut weh."
+        },
+        {
+          "word": "der Bauch",
+          "translation": "stomach",
+          "pos": "noun (masculine)",
+          "example": "Ich habe zu viel gegessen, mein Bauch tut weh."
+        },
+        {
+          "word": "der Rücken",
+          "translation": "back",
+          "pos": "noun (masculine)",
+          "example": "Meine Mutter hat Rückenschmerzen."
+        },
+        {
+          "word": "der Zahn",
+          "translation": "tooth",
+          "accepted_translations": ["teeth"],
+          "pos": "noun (masculine)",
+          "example": "Der Zahn tut weh."
+        },
+        {
+          "word": "der Körper",
+          "translation": "body",
+          "pos": "noun (neuter)",
+          "example": "Mein Körper ist müde."
+        },
+        {
+          "word": "krank",
+          "translation": "sick",
+          "accepted_translations": ["ill"],
+          "pos": "adjective",
+          "example": "Ich bin krank und gehe zum Arzt."
+        },
+        {
+          "word": "das Fieber",
+          "translation": "fever",
+          "pos": "noun (neuter)",
+          "example": "Sie hat Fieber."
+        },
+        {
+          "word": "die Grippe",
+          "translation": "flu",
+          "pos": "noun (feminine)",
+          "example": "Er hat die Grippe und schläft."
+        },
+        {
+          "word": "der Schnupfen",
+          "translation": "cold",
+          "pos": "noun (masculine)",
+          "example": "Ich habe einen Schnupfen im Winter."
+        },
+        {
+          "word": "die Medizin",
+          "translation": "medicine",
+          "accepted_translations": ["medication"],
+          "pos": "noun (feminine)",
+          "example": "Ich nehme meine Medizin am Morgen."
+        },
+        {
+          "word": "das Rezept",
+          "translation": "prescription",
+          "accepted_translations": ["recipe"],
+          "pos": "noun (neuter)",
+          "example": "Der Arzt schreibt ein Rezept."
+        },
+        {
+          "word": "die Apotheke",
+          "translation": "pharmacy",
+          "pos": "noun (feminine)",
+          "example": "Die Apotheke ist nahe beim Krankenhaus."
+        },
+        {
+          "word": "der Arzt",
+          "translation": "doctor",
+          "accepted_translations": ["physician"],
+          "pos": "noun (masculine)",
+          "example": "Ich gehe heute zum Arzt."
+        },
+        {
+          "word": "weh tun",
+          "translation": "to hurt",
+          "pos": "phrase",
+          "example": "Tut dein Kopf weh?"
+        },
+        {
+          "word": "besser",
+          "translation": "better",
+          "pos": "adverb",
+          "example": "Heute geht es mir besser."
+        },
+        {
+          "word": "die Ruhe",
+          "translation": "rest",
+          "accepted_translations": ["quiet"],
+          "pos": "noun (feminine)",
+          "example": "Ich möchte Ruhe."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "der Kopf",
+          "answer": "head"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Bauch",
+          "answer": "stomach"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Rücken",
+          "answer": "back"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Zahn",
+          "answer": "tooth",
+          "accepted_answers": ["teeth"]
+        },
+        {
+          "type": "translation",
+          "prompt": "der Körper",
+          "answer": "body"
+        },
+        {
+          "type": "translation",
+          "prompt": "krank",
+          "answer": "sick",
+          "accepted_answers": ["ill"]
+        },
+        {
+          "type": "translation",
+          "prompt": "das Fieber",
+          "answer": "fever"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Grippe",
+          "answer": "flu"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Schnupfen",
+          "answer": "cold"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Medizin",
+          "answer": "medicine",
+          "accepted_answers": ["medication"]
+        },
+        {
+          "type": "translation",
+          "prompt": "das Rezept",
+          "answer": "prescription",
+          "accepted_answers": ["recipe"]
+        },
+        {
+          "type": "translation",
+          "prompt": "die Apotheke",
+          "answer": "pharmacy"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Arzt",
+          "answer": "doctor",
+          "accepted_answers": ["physician"]
+        },
+        {
+          "type": "translation",
+          "prompt": "weh tun",
+          "answer": "to hurt"
+        },
+        {
+          "type": "translation",
+          "prompt": "besser",
+          "answer": "better"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Ruhe",
+          "answer": "rest",
+          "accepted_answers": ["quiet"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mein Kopf tut weh.",
+          "answer": "My head hurts.",
+          "accepted_answers": ["I have a headache", "I have a pain in my head"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Sein Bauch tut weh.",
+          "answer": "His stomach hurts.",
+          "accepted_answers": ["He has a stomach ache", "He has a stomachache"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich bin krank und bleibe im Bett.",
+          "answer": "I'm sick, I'm staying in bed.",
+          "accepted_answers": ["I am sick, I'm staying in bed."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Sie hat Fieber.",
+          "answer": "She has a fever."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich gehe zum Arzt.",
+          "answer": "I'm going to the doctor.",
+          "accepted_answers": ["I am going to the doctor."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Nimmst du deine Medizin am Morgen?",
+          "answer": "Do you take your medicine in the morning?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Die Apotheke ist nahe beim Krankenhaus.",
+          "answer": "The pharmacy is near the hospital."
+        },
+        {
+          "type": "translation",
+          "prompt": "Sie hat die Grippe.",
+          "answer": "She has the flu."
+        },
+        {
+          "type": "translation",
+          "prompt": "My back hurts.",
+          "answer": "Mein Rücken tut weh."
+        },
+        {
+          "type": "translation",
+          "prompt": "I have a toothache.",
+          "answer": "Meine Zähne tun weh."
+        },
+        {
+          "type": "translation",
+          "prompt": "I am sick today.",
+          "answer": "Ich bin heute krank."
+        },
+        {
+          "type": "translation",
+          "prompt": "I am better, thanks.",
+          "answer": "Mir geht es besser, danke."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'head':",
+          "options": [
+            "der Kopf",
+            "der Bauch",
+            "der Rücken",
+            "der Zahn"
+          ],
+          "answer": "der Kopf"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'stomach':",
+          "options": [
+            "der Bauch",
+            "der Rücken",
+            "der Zahn",
+            "der Körper"
+          ],
+          "answer": "der Bauch"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'back':",
+          "options": [
+            "der Rücken",
+            "der Zahn",
+            "der Körper",
+            "krank"
+          ],
+          "answer": "der Rücken"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tooth':",
+          "options": [
+            "der Zahn",
+            "der Körper",
+            "krank",
+            "das Fieber"
+          ],
+          "answer": "der Zahn"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'body':",
+          "options": [
+            "der Körper",
+            "krank",
+            "das Fieber",
+            "die Grippe"
+          ],
+          "answer": "der Körper"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sick':",
+          "options": [
+            "krank",
+            "das Fieber",
+            "die Grippe",
+            "der Schnupfen"
+          ],
+          "answer": "krank"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fever':",
+          "options": [
+            "das Fieber",
+            "die Grippe",
+            "der Schnupfen",
+            "die Medizin"
+          ],
+          "answer": "das Fieber"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'flu':",
+          "options": [
+            "die Grippe",
+            "der Schnupfen",
+            "die Medizin",
+            "das Rezept"
+          ],
+          "answer": "die Grippe"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mein Kopf ___ weh.",
+          "answer": "tut"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich bin ___, ich gehe zum Arzt.",
+          "answer": "krank"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Der Arzt schreibt ein ___.",
+          "answer": "Rezept"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich kaufe die Medizin in der ___.",
+          "answer": "Apotheke"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich habe ___.",
+          "answer": "Fieber"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Meine Zähne ___ weh.",
+          "answer": "tun"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Heute gehe ich zum ___.",
+          "answer": "Arzt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich möchte ___.",
+          "answer": "Ruhe"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Free Time and Hobbies",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "das Hobby",
+          "translation": "hobby",
+          "accepted_translations": ["pastime"],
+          "pos": "noun (neuter)",
+          "example": "Was sind deine Hobbys?"
+        },
+        {
+          "word": "der Sport",
+          "translation": "sport",
+          "pos": "noun (masculine)",
+          "example": "Sport ist gesund."
+        },
+        {
+          "word": "das Radfahren",
+          "translation": "cycling",
+          "accepted_translations": ["bike riding"],
+          "pos": "noun (neuter)",
+          "example": "Radfahren macht Spaß."
+        },
+        {
+          "word": "das Schwimmen",
+          "translation": "swimming",
+          "pos": "noun (neuter)",
+          "example": "Das Schwimmen ist mein Lieblingssport."
+        },
+        {
+          "word": "der Fußball",
+          "translation": "soccer",
+          "accepted_translations": ["football"],
+          "pos": "noun (masculine)",
+          "example": "Mein Bruder spielt Fußball."
+        },
+        {
+          "word": "das Tennis",
+          "translation": "tennis",
+          "pos": "noun (neuter)",
+          "example": "Ich spiele Tennis am Wochenende."
+        },
+        {
+          "word": "die Gitarre",
+          "translation": "guitar",
+          "pos": "noun (feminine)",
+          "example": "Meine Schwester spielt Gitarre."
+        },
+        {
+          "word": "das Klavier",
+          "translation": "piano",
+          "pos": "noun (neuter)",
+          "example": "Das Klavier ist im Wohnzimmer."
+        },
+        {
+          "word": "die Musik",
+          "translation": "music",
+          "pos": "noun (feminine)",
+          "example": "Die Musik ist schön."
+        },
+        {
+          "word": "das Lied",
+          "translation": "song",
+          "pos": "noun (neuter)",
+          "example": "Das Lied ist schön."
+        },
+        {
+          "word": "tanzen",
+          "translation": "to dance",
+          "pos": "verb",
+          "example": "Sie tanzt gern."
+        },
+        {
+          "word": "singen",
+          "translation": "to sing",
+          "pos": "verb",
+          "example": "Die Kinder singen in der Schule."
+        },
+        {
+          "word": "die Wanderung",
+          "translation": "hike",
+          "accepted_translations": ["hiking trip"],
+          "pos": "noun (feminine)",
+          "example": "Im Sommer machen wir eine Wanderung."
+        },
+        {
+          "word": "das Lesen",
+          "translation": "reading",
+          "pos": "noun (neuter)",
+          "example": "Ich liebe das Lesen am Abend."
+        },
+        {
+          "word": "das Wochenende",
+          "translation": "weekend",
+          "pos": "noun (neuter)",
+          "example": "Schönes Wochenende!"
+        },
+        {
+          "word": "gern",
+          "translation": "gladly",
+          "accepted_translations": ["with pleasure"],
+          "pos": "adverb",
+          "example": "Ich spiele gern Fußball."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "das Hobby",
+          "answer": "hobby",
+          "accepted_answers": ["pastime"]
+        },
+        {
+          "type": "translation",
+          "prompt": "der Sport",
+          "answer": "sport"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Radfahren",
+          "answer": "cycling",
+          "accepted_answers": ["bike riding"]
+        },
+        {
+          "type": "translation",
+          "prompt": "das Schwimmen",
+          "answer": "swimming"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Fußball",
+          "answer": "soccer",
+          "accepted_answers": ["football"]
+        },
+        {
+          "type": "translation",
+          "prompt": "das Tennis",
+          "answer": "tennis"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Gitarre",
+          "answer": "guitar"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Klavier",
+          "answer": "piano"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Musik",
+          "answer": "music"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Lied",
+          "answer": "song"
+        },
+        {
+          "type": "translation",
+          "prompt": "tanzen",
+          "answer": "to dance"
+        },
+        {
+          "type": "translation",
+          "prompt": "singen",
+          "answer": "to sing"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Wanderung",
+          "answer": "hike",
+          "accepted_answers": ["hiking trip"]
+        },
+        {
+          "type": "translation",
+          "prompt": "das Lesen",
+          "answer": "reading"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Wochenende",
+          "answer": "weekend"
+        },
+        {
+          "type": "translation",
+          "prompt": "gern",
+          "answer": "gladly",
+          "accepted_answers": ["with pleasure"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich fahre gern Rad am Wochenende.",
+          "answer": "I like riding my bike on weekends.",
+          "accepted_answers": ["I like to ride my bike on weekends", "I enjoy riding my bike at weekends"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Sie macht gern Schwimmen im See.",
+          "answer": "She likes swimming in the lake.",
+          "accepted_answers": ["She likes to swim in the lake"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mein Bruder spielt Fußball.",
+          "answer": "My brother plays soccer.",
+          "accepted_answers": ["My brother plays football"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich mag dieses Lied.",
+          "answer": "I like this song."
+        },
+        {
+          "type": "translation",
+          "prompt": "Meine Schwester spielt Klavier.",
+          "answer": "My sister plays the piano."
+        },
+        {
+          "type": "translation",
+          "prompt": "Was sind deine Hobbys?",
+          "answer": "What are your hobbies?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Wir machen im Sommer eine Wanderung im Wald.",
+          "answer": "We go hiking in the woods in summer.",
+          "accepted_answers": ["We hike in the woods in summer"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Am Wochenende lese ich gern.",
+          "answer": "On weekends, I like to read.",
+          "accepted_answers": ["At the weekend, I like to read", "On the weekend, I like to read"]
+        },
+        {
+          "type": "translation",
+          "prompt": "I play tennis.",
+          "answer": "Ich spiele Tennis."
+        },
+        {
+          "type": "translation",
+          "prompt": "She sings a song.",
+          "answer": "Sie singt ein Lied."
+        },
+        {
+          "type": "translation",
+          "prompt": "He plays the guitar.",
+          "answer": "Er spielt Gitarre."
+        },
+        {
+          "type": "translation",
+          "prompt": "Reading is my favorite hobby.",
+          "answer": "Das Lesen ist mein Lieblingshobby."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hobby':",
+          "options": [
+            "das Hobby",
+            "der Sport",
+            "das Radfahren",
+            "das Schwimmen"
+          ],
+          "answer": "das Hobby"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sport':",
+          "options": [
+            "der Sport",
+            "das Radfahren",
+            "das Schwimmen",
+            "der Fußball"
+          ],
+          "answer": "der Sport"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cycling':",
+          "options": [
+            "das Radfahren",
+            "das Schwimmen",
+            "der Fußball",
+            "das Tennis"
+          ],
+          "answer": "das Radfahren"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'swimming':",
+          "options": [
+            "das Schwimmen",
+            "der Fußball",
+            "das Tennis",
+            "die Gitarre"
+          ],
+          "answer": "das Schwimmen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'soccer':",
+          "options": [
+            "der Fußball",
+            "das Tennis",
+            "die Gitarre",
+            "das Klavier"
+          ],
+          "answer": "der Fußball"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tennis':",
+          "options": [
+            "das Tennis",
+            "die Gitarre",
+            "das Klavier",
+            "die Musik"
+          ],
+          "answer": "das Tennis"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'guitar':",
+          "options": [
+            "die Gitarre",
+            "das Klavier",
+            "die Musik",
+            "das Lied"
+          ],
+          "answer": "die Gitarre"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'piano':",
+          "options": [
+            "das Klavier",
+            "die Musik",
+            "das Lied",
+            "tanzen"
+          ],
+          "answer": "das Klavier"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich spiele ___ Fußball.",
+          "answer": "gern"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Was machst du ___?",
+          "answer": "gern"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich fahre gern ___.",
+          "answer": "Rad"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Er spielt ___.",
+          "answer": "Klavier"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wir singen ein ___.",
+          "answer": "Lied"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Im Sommer machen wir eine ___ im Wald.",
+          "answer": "Wanderung"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Am ___ spiele ich Tennis.",
+          "answer": "Wochenende"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Das ___ ist im Wohnzimmer.",
+          "answer": "Klavier"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Calls and Messages",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "das Telefon",
+          "translation": "phone",
+          "accepted_translations": ["telephone"],
+          "pos": "noun (neuter)",
+          "example": "Mein Telefon ist neu."
+        },
+        {
+          "word": "die Nummer",
+          "translation": "number",
+          "pos": "noun (feminine)",
+          "example": "Wie ist deine Telefonnummer?"
+        },
+        {
+          "word": "anrufen",
+          "translation": "to call",
+          "accepted_translations": ["to phone"],
+          "pos": "verb",
+          "example": "Ich will meine Mutter anrufen."
+        },
+        {
+          "word": "antworten",
+          "translation": "to answer",
+          "accepted_translations": ["to reply"],
+          "pos": "verb",
+          "example": "Er antwortet nicht."
+        },
+        {
+          "word": "die Nachricht",
+          "translation": "message",
+          "accepted_translations": ["text message"],
+          "pos": "noun (feminine)",
+          "example": "Ich schicke dir eine Nachricht."
+        },
+        {
+          "word": "die E-Mail",
+          "translation": "e-mail",
+          "accepted_translations": ["email"],
+          "pos": "noun (feminine)",
+          "example": "Hast du meine E-Mail bekommen?"
+        },
+        {
+          "word": "das Foto",
+          "translation": "photo",
+          "accepted_translations": ["picture"],
+          "pos": "noun (neuter)",
+          "example": "Das Foto ist schön."
+        },
+        {
+          "word": "das Video",
+          "translation": "video",
+          "pos": "noun (neuter)",
+          "example": "Ich sehe ein Video."
+        },
+        {
+          "word": "das Internet",
+          "translation": "internet",
+          "pos": "noun (neuter)",
+          "example": "Ich bin im Internet."
+        },
+        {
+          "word": "die Leitung",
+          "translation": "line",
+          "pos": "noun (feminine)",
+          "example": "Die Leitung ist besetzt."
+        },
+        {
+          "word": "die Nachrichten",
+          "translation": "news",
+          "pos": "noun (plural)",
+          "example": "Ich sehe die Nachrichten am Abend."
+        },
+        {
+          "word": "die Frage",
+          "translation": "question",
+          "pos": "noun (feminine)",
+          "example": "Ich habe eine Frage."
+        },
+        {
+          "word": "die Antwort",
+          "translation": "answer",
+          "accepted_translations": ["reply"],
+          "pos": "noun (feminine)",
+          "example": "Ihre Antwort ist nein."
+        },
+        {
+          "word": "der Anruf",
+          "translation": "call",
+          "accepted_translations": ["phone call"],
+          "pos": "noun (masculine)",
+          "example": "Ich bekomme einen Anruf."
+        },
+        {
+          "word": "online",
+          "translation": "online",
+          "pos": "adverb",
+          "example": "Mein Bruder ist immer online."
+        },
+        {
+          "word": "schicken",
+          "translation": "to send",
+          "pos": "verb",
+          "example": "Sie schickt eine Nachricht an ihren Bruder."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "das Telefon",
+          "answer": "phone",
+          "accepted_answers": ["telephone"]
+        },
+        {
+          "type": "translation",
+          "prompt": "die Nummer",
+          "answer": "number"
+        },
+        {
+          "type": "translation",
+          "prompt": "anrufen",
+          "answer": "to call",
+          "accepted_answers": ["to phone"]
+        },
+        {
+          "type": "translation",
+          "prompt": "antworten",
+          "answer": "to answer",
+          "accepted_answers": ["to reply"]
+        },
+        {
+          "type": "translation",
+          "prompt": "die Nachricht",
+          "answer": "message",
+          "accepted_answers": ["text message"]
+        },
+        {
+          "type": "translation",
+          "prompt": "die E-Mail",
+          "answer": "e-mail",
+          "accepted_answers": ["email"]
+        },
+        {
+          "type": "translation",
+          "prompt": "das Foto",
+          "answer": "photo",
+          "accepted_answers": ["picture"]
+        },
+        {
+          "type": "translation",
+          "prompt": "das Video",
+          "answer": "video"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Internet",
+          "answer": "internet"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Leitung",
+          "answer": "line"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Nachrichten",
+          "answer": "news"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Frage",
+          "answer": "question"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Antwort",
+          "answer": "answer",
+          "accepted_answers": ["reply"]
+        },
+        {
+          "type": "translation",
+          "prompt": "der Anruf",
+          "answer": "call",
+          "accepted_answers": ["phone call"]
+        },
+        {
+          "type": "translation",
+          "prompt": "online",
+          "answer": "online"
+        },
+        {
+          "type": "translation",
+          "prompt": "schicken",
+          "answer": "to send"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich rufe dich heute Abend an.",
+          "answer": "I'll call you tonight.",
+          "accepted_answers": ["I am calling you tonight", "I call you tonight"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Kannst du mir antworten?",
+          "answer": "Can you answer me?",
+          "accepted_answers": ["Can you reply to me?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Er schickt seiner Mutter eine Nachricht.",
+          "answer": "He sends his mother a message.",
+          "accepted_answers": ["He sends a message to his mother"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich habe deine E-Mail nicht bekommen.",
+          "answer": "I didn't get your e-mail.",
+          "accepted_answers": ["I did not get your e-mail", "I didn't receive your e-mail", "I did not receive your e-mail"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Wie ist deine Telefonnummer?",
+          "answer": "What is your phone number?",
+          "accepted_answers": ["What's your phone number?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Die Leitung ist besetzt.",
+          "answer": "The line is busy."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich sehe Fotos im Internet.",
+          "answer": "I look at photos on the internet.",
+          "accepted_answers": ["I look at photos on the Internet", "I look at pictures on the internet"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Sie ist immer online.",
+          "answer": "She is always online."
+        },
+        {
+          "type": "translation",
+          "prompt": "I send you a photo.",
+          "answer": "Ich schicke dir ein Foto."
+        },
+        {
+          "type": "translation",
+          "prompt": "Can you call me tomorrow?",
+          "answer": "Kannst du mich morgen anrufen?"
+        },
+        {
+          "type": "translation",
+          "prompt": "My phone number is new.",
+          "answer": "Meine Telefonnummer ist neu."
+        },
+        {
+          "type": "translation",
+          "prompt": "Will you play with me?",
+          "answer": "Spielst du mit mir?"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'phone':",
+          "options": [
+            "das Telefon",
+            "die Nummer",
+            "anrufen",
+            "antworten"
+          ],
+          "answer": "das Telefon"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'number':",
+          "options": [
+            "die Nummer",
+            "anrufen",
+            "antworten",
+            "die Nachricht"
+          ],
+          "answer": "die Nummer"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to call':",
+          "options": [
+            "anrufen",
+            "antworten",
+            "die Nachricht",
+            "die E-Mail"
+          ],
+          "answer": "anrufen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to answer':",
+          "options": [
+            "antworten",
+            "die Nachricht",
+            "die E-Mail",
+            "das Foto"
+          ],
+          "answer": "antworten"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'message':",
+          "options": [
+            "die Nachricht",
+            "die E-Mail",
+            "das Foto",
+            "das Video"
+          ],
+          "answer": "die Nachricht"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'e-mail':",
+          "options": [
+            "die E-Mail",
+            "das Foto",
+            "das Video",
+            "das Internet"
+          ],
+          "answer": "die E-Mail"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'photo':",
+          "options": [
+            "das Foto",
+            "das Video",
+            "das Internet",
+            "die Leitung"
+          ],
+          "answer": "das Foto"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'video':",
+          "options": [
+            "das Video",
+            "das Internet",
+            "die Leitung",
+            "die Nachrichten"
+          ],
+          "answer": "das Video"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ruf mich ___ !",
+          "answer": "an"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Rufst du mich morgen ___?",
+          "answer": "an"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ mir eine Nachricht !",
+          "answer": "Schreib"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kannst du mich ___?",
+          "answer": "anrufen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich habe deine E-Mail ___.",
+          "answer": "gelesen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Die ___ ist besetzt.",
+          "answer": "Leitung"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich bin wieder ___.",
+          "answer": "online"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Die ___ auf die Frage ist einfach.",
+          "answer": "Antwort"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Stories and Experiences",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "die Geschichte",
+          "translation": "story",
+          "accepted_translations": ["tale"],
+          "pos": "noun (feminine)",
+          "example": "Meine Oma erzählt schöne Geschichten."
+        },
+        {
+          "word": "das Abenteuer",
+          "translation": "adventure",
+          "pos": "noun (neuter)",
+          "example": "Das Buch erzählt von einem großen Abenteuer."
+        },
+        {
+          "word": "die Erinnerung",
+          "translation": "memory",
+          "pos": "noun (feminine)",
+          "example": "Das ist eine schöne Erinnerung."
+        },
+        {
+          "word": "die Kindheit",
+          "translation": "childhood",
+          "pos": "noun (feminine)",
+          "example": "Er spricht über seine Kindheit."
+        },
+        {
+          "word": "der Urlaub",
+          "translation": "vacation",
+          "accepted_translations": ["holiday"],
+          "pos": "noun (masculine)",
+          "example": "Der Urlaub beginnt im Juli."
+        },
+        {
+          "word": "die Reise",
+          "translation": "trip",
+          "accepted_translations": ["journey", "travel"],
+          "pos": "noun (feminine)",
+          "example": "Es war eine schöne Reise."
+        },
+        {
+          "word": "das Meer",
+          "translation": "sea",
+          "pos": "noun (neuter)",
+          "example": "Im Sommer fahren wir ans Meer."
+        },
+        {
+          "word": "der Strand",
+          "translation": "beach",
+          "pos": "noun (masculine)",
+          "example": "Die Kinder spielen am Strand."
+        },
+        {
+          "word": "der Berg",
+          "translation": "mountain",
+          "pos": "noun (masculine)",
+          "example": "Der Berg ist im Winter schön."
+        },
+        {
+          "word": "das Geschenk",
+          "translation": "gift",
+          "accepted_translations": ["present"],
+          "pos": "noun (neuter)",
+          "example": "Das Geschenk ist auf dem Tisch."
+        },
+        {
+          "word": "einmal",
+          "translation": "once",
+          "accepted_translations": ["one time"],
+          "pos": "adverb",
+          "example": "Ich fahre einmal pro Woche zu meinem Freund."
+        },
+        {
+          "word": "früher",
+          "translation": "earlier",
+          "accepted_translations": ["in the past"],
+          "pos": "adverb",
+          "example": "Früher habe ich in Berlin gewohnt."
+        },
+        {
+          "word": "damals",
+          "translation": "back then",
+          "pos": "adverb",
+          "example": "Damals war ich klein."
+        },
+        {
+          "word": "die Wahrheit",
+          "translation": "truth",
+          "pos": "noun (feminine)",
+          "example": "Ist das die Wahrheit?"
+        },
+        {
+          "word": "erzählen",
+          "translation": "to tell",
+          "pos": "verb",
+          "example": "Er erzählt seiner Mutter eine Geschichte."
+        },
+        {
+          "word": "denken",
+          "translation": "to think",
+          "pos": "verb",
+          "example": "Ich denke an meine Familie."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "die Geschichte",
+          "answer": "story",
+          "accepted_answers": ["tale"]
+        },
+        {
+          "type": "translation",
+          "prompt": "das Abenteuer",
+          "answer": "adventure"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Erinnerung",
+          "answer": "memory"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Kindheit",
+          "answer": "childhood"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Urlaub",
+          "answer": "vacation",
+          "accepted_answers": ["holiday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "die Reise",
+          "answer": "trip",
+          "accepted_answers": ["journey", "travel"]
+        },
+        {
+          "type": "translation",
+          "prompt": "das Meer",
+          "answer": "sea"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Strand",
+          "answer": "beach"
+        },
+        {
+          "type": "translation",
+          "prompt": "der Berg",
+          "answer": "mountain"
+        },
+        {
+          "type": "translation",
+          "prompt": "das Geschenk",
+          "answer": "gift",
+          "accepted_answers": ["present"]
+        },
+        {
+          "type": "translation",
+          "prompt": "einmal",
+          "answer": "once",
+          "accepted_answers": ["one time"]
+        },
+        {
+          "type": "translation",
+          "prompt": "früher",
+          "answer": "earlier",
+          "accepted_answers": ["in the past"]
+        },
+        {
+          "type": "translation",
+          "prompt": "damals",
+          "answer": "back then"
+        },
+        {
+          "type": "translation",
+          "prompt": "die Wahrheit",
+          "answer": "truth"
+        },
+        {
+          "type": "translation",
+          "prompt": "erzählen",
+          "answer": "to tell"
+        },
+        {
+          "type": "translation",
+          "prompt": "denken",
+          "answer": "to think"
+        },
+        {
+          "type": "translation",
+          "prompt": "Als ich klein war, habe ich in München gewohnt.",
+          "answer": "When I was little, I lived in Munich.",
+          "accepted_answers": ["When I was small, I lived in Munich", "When I was a child, I lived in Munich"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Wir haben jeden Sonntag Fußball gespielt.",
+          "answer": "We played soccer every Sunday.",
+          "accepted_answers": ["We used to play soccer every Sunday", "We played football every Sunday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Meine Oma hat Geschichten erzählt.",
+          "answer": "My grandmother told stories."
+        },
+        {
+          "type": "translation",
+          "prompt": "Letzten Sommer sind wir ans Meer gefahren.",
+          "answer": "Last summer, we went to the sea.",
+          "accepted_answers": ["Last summer we went to the sea"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Es hat an meinem Geburtstag geschneit.",
+          "answer": "It was snowing on my birthday.",
+          "accepted_answers": ["It snowed on my birthday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Was für ein schönes Abenteuer!",
+          "answer": "What a beautiful adventure!",
+          "accepted_answers": ["What a great adventure"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Es war meine erste Reise in Deutschland.",
+          "answer": "It was my first trip to Germany.",
+          "accepted_answers": ["It was my first trip within Germany"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ich habe oft an meine Oma gedacht.",
+          "answer": "I often thought about my grandmother.",
+          "accepted_answers": ["I used to think often about my grandmother"]
+        },
+        {
+          "type": "translation",
+          "prompt": "We were happy.",
+          "answer": "Wir waren glücklich."
+        },
+        {
+          "type": "translation",
+          "prompt": "It was a beautiful memory.",
+          "answer": "Es war eine schöne Erinnerung."
+        },
+        {
+          "type": "translation",
+          "prompt": "I never drink coffee.",
+          "answer": "Ich trinke nie Kaffee."
+        },
+        {
+          "type": "translation",
+          "prompt": "My grandfather told a story.",
+          "answer": "Mein Opa hat eine Geschichte erzählt."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'story':",
+          "options": [
+            "die Geschichte",
+            "das Abenteuer",
+            "die Erinnerung",
+            "die Kindheit"
+          ],
+          "answer": "die Geschichte"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'adventure':",
+          "options": [
+            "das Abenteuer",
+            "die Erinnerung",
+            "die Kindheit",
+            "der Urlaub"
+          ],
+          "answer": "das Abenteuer"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'memory':",
+          "options": [
+            "die Erinnerung",
+            "die Kindheit",
+            "der Urlaub",
+            "die Reise"
+          ],
+          "answer": "die Erinnerung"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'childhood':",
+          "options": [
+            "die Kindheit",
+            "der Urlaub",
+            "die Reise",
+            "das Meer"
+          ],
+          "answer": "die Kindheit"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'vacation':",
+          "options": [
+            "der Urlaub",
+            "die Reise",
+            "das Meer",
+            "der Strand"
+          ],
+          "answer": "der Urlaub"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'trip':",
+          "options": [
+            "die Reise",
+            "das Meer",
+            "der Strand",
+            "der Berg"
+          ],
+          "answer": "die Reise"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sea':",
+          "options": [
+            "das Meer",
+            "der Strand",
+            "der Berg",
+            "das Geschenk"
+          ],
+          "answer": "das Meer"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'beach':",
+          "options": [
+            "der Strand",
+            "der Berg",
+            "das Geschenk",
+            "einmal"
+          ],
+          "answer": "der Strand"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich ___ ins Kino gegangen.",
+          "answer": "bin"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wir ___ nach Berlin gefahren.",
+          "answer": "sind"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Er ___ einen Film gesehen.",
+          "answer": "hat"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ihr ___ Pizza gegessen.",
+          "answer": "habt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Meine Oma ___ mir eine Geschichte erzählt.",
+          "answer": "hat"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ich ___ gestern Fußball gespielt.",
+          "answer": "habe"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Im Sommer fahre ich ans ___.",
+          "answer": "Meer"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Das Geschenk ___ sehr schön.",
+          "answer": "war"
+        }
+      ]
     }
   ]
 }
