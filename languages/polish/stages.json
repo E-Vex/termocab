@@ -3921,6 +3921,1957 @@
           "answer": "rok"
         }
       ]
+    },
+    {
+      "id": 11,
+      "title": "Work and School",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "biuro",
+          "translation": "office",
+          "pos": "noun",
+          "example": "Idę do biura o ósmej."
+        },
+        {
+          "word": "firma",
+          "translation": "company",
+          "pos": "noun",
+          "example": "Pracuję w dużej firmie."
+        },
+        {
+          "word": "szef",
+          "translation": "boss",
+          "pos": "noun",
+          "example": "Szef jest w biurze."
+        },
+        {
+          "word": "kolega",
+          "translation": "colleague",
+          "pos": "noun",
+          "example": "Moja koleżanka mieszka blisko parku."
+        },
+        {
+          "word": "spotkanie",
+          "translation": "meeting",
+          "pos": "noun",
+          "example": "Spotkanie zaczyna się o dziewiątej."
+        },
+        {
+          "word": "pensja",
+          "translation": "salary",
+          "pos": "noun",
+          "example": "Moja pensja jest dobra."
+        },
+        {
+          "word": "zawód",
+          "translation": "profession",
+          "accepted_translations": ["job"],
+          "pos": "noun",
+          "example": "Jaki jest twój zawód?"
+        },
+        {
+          "word": "przerwa",
+          "translation": "break",
+          "pos": "noun",
+          "example": "Robię przerwę o jedenastej."
+        },
+        {
+          "word": "klasa",
+          "translation": "class",
+          "pos": "noun",
+          "example": "Mówimy po polsku w klasie."
+        },
+        {
+          "word": "przedmiot",
+          "translation": "subject",
+          "pos": "noun",
+          "example": "Mój ulubiony przedmiot to historia."
+        },
+        {
+          "word": "zadanie domowe",
+          "translation": "homework",
+          "pos": "noun",
+          "example": "Robię zadanie domowe wieczorem."
+        },
+        {
+          "word": "egzamin",
+          "translation": "exam",
+          "accepted_translations": ["test"],
+          "pos": "noun",
+          "example": "Egzamin z polskiego jest jutro."
+        },
+        {
+          "word": "komputer",
+          "translation": "computer",
+          "pos": "noun",
+          "example": "Mój komputer jest nowy."
+        },
+        {
+          "word": "zajęty",
+          "translation": "busy",
+          "pos": "adjective",
+          "example": "Mój ojciec jest zawsze zajęty."
+        },
+        {
+          "word": "wizyta",
+          "translation": "appointment",
+          "accepted_translations": ["visit"],
+          "pos": "noun",
+          "example": "Mam wizytę u lekarza."
+        },
+        {
+          "word": "biurko",
+          "translation": "desk",
+          "pos": "noun",
+          "example": "Komputer jest na biurku."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "biuro",
+          "answer": "office"
+        },
+        {
+          "type": "translation",
+          "prompt": "firma",
+          "answer": "company"
+        },
+        {
+          "type": "translation",
+          "prompt": "szef",
+          "answer": "boss"
+        },
+        {
+          "type": "translation",
+          "prompt": "kolega",
+          "answer": "colleague"
+        },
+        {
+          "type": "translation",
+          "prompt": "spotkanie",
+          "answer": "meeting"
+        },
+        {
+          "type": "translation",
+          "prompt": "pensja",
+          "answer": "salary"
+        },
+        {
+          "type": "translation",
+          "prompt": "zawód",
+          "answer": "profession",
+          "accepted_answers": ["job"]
+        },
+        {
+          "type": "translation",
+          "prompt": "przerwa",
+          "answer": "break"
+        },
+        {
+          "type": "translation",
+          "prompt": "klasa",
+          "answer": "class"
+        },
+        {
+          "type": "translation",
+          "prompt": "przedmiot",
+          "answer": "subject"
+        },
+        {
+          "type": "translation",
+          "prompt": "zadanie domowe",
+          "answer": "homework"
+        },
+        {
+          "type": "translation",
+          "prompt": "egzamin",
+          "answer": "exam",
+          "accepted_answers": ["test"]
+        },
+        {
+          "type": "translation",
+          "prompt": "komputer",
+          "answer": "computer"
+        },
+        {
+          "type": "translation",
+          "prompt": "zajęty",
+          "answer": "busy"
+        },
+        {
+          "type": "translation",
+          "prompt": "wizyta",
+          "answer": "appointment",
+          "accepted_answers": ["visit"]
+        },
+        {
+          "type": "translation",
+          "prompt": "biurko",
+          "answer": "desk"
+        },
+        {
+          "type": "translation",
+          "prompt": "Idę do biura o ósmej.",
+          "answer": "I go to the office at eight.",
+          "accepted_answers": ["I go to the office at eight o'clock"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mam spotkanie z szefem.",
+          "answer": "I have a meeting with the boss."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mój kolega mówi trzema językami.",
+          "answer": "My colleague speaks three languages."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mamy dużo pracy w tym tygodniu.",
+          "answer": "We have a lot of work this week."
+        },
+        {
+          "type": "translation",
+          "prompt": "Zadanie domowe jest trudne.",
+          "answer": "The homework is difficult.",
+          "accepted_answers": ["The homework is hard"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Napisałem e-mail do szefa.",
+          "answer": "I wrote an e-mail to the boss.",
+          "accepted_answers": ["I wrote an email to the boss"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Egzamin jest w przyszłym tygodniu.",
+          "answer": "The exam is next week."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jestem dziś bardzo zajęty.",
+          "answer": "I'm very busy today.",
+          "accepted_answers": ["I am very busy today."]
+        },
+        {
+          "type": "translation",
+          "prompt": "My salary is good.",
+          "answer": "Moja pensja jest dobra."
+        },
+        {
+          "type": "translation",
+          "prompt": "The class starts at nine.",
+          "answer": "Klasa zaczyna się o dziewiątej."
+        },
+        {
+          "type": "translation",
+          "prompt": "I want a break.",
+          "answer": "Chcę przerwy."
+        },
+        {
+          "type": "translation",
+          "prompt": "My computer is new.",
+          "answer": "Mój komputer jest nowy."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'office':",
+          "options": [
+            "biuro",
+            "firma",
+            "szef",
+            "kolega"
+          ],
+          "answer": "biuro"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'company':",
+          "options": [
+            "firma",
+            "szef",
+            "kolega",
+            "spotkanie"
+          ],
+          "answer": "firma"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'boss':",
+          "options": [
+            "szef",
+            "kolega",
+            "spotkanie",
+            "pensja"
+          ],
+          "answer": "szef"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'colleague':",
+          "options": [
+            "kolega",
+            "spotkanie",
+            "pensja",
+            "zawód"
+          ],
+          "answer": "kolega"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'meeting':",
+          "options": [
+            "spotkanie",
+            "pensja",
+            "zawód",
+            "przerwa"
+          ],
+          "answer": "spotkanie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'salary':",
+          "options": [
+            "pensja",
+            "zawód",
+            "przerwa",
+            "klasa"
+          ],
+          "answer": "pensja"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'profession':",
+          "options": [
+            "zawód",
+            "przerwa",
+            "klasa",
+            "przedmiot"
+          ],
+          "answer": "zawód"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'break':",
+          "options": [
+            "przerwa",
+            "klasa",
+            "przedmiot",
+            "zadanie domowe"
+          ],
+          "answer": "przerwa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mam dużo ___ dziś.",
+          "answer": "pracy"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Pracuję w ___.",
+          "answer": "biurze"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mój ___ jest zajęty.",
+          "answer": "szef"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mam ___ z szefem o dziesiątej.",
+          "answer": "spotkanie"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Egzamin ___ trudny.",
+          "answer": "jest"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dziś piszę ___ domowe.",
+          "answer": "zadanie"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mój ___ jest na biurku.",
+          "answer": "komputer"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cały dzień mam spotkania, jestem ___.",
+          "answer": "zajęty"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Health and the Body",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "głowa",
+          "translation": "head",
+          "pos": "noun",
+          "example": "Boli mnie głowa."
+        },
+        {
+          "word": "brzuch",
+          "translation": "stomach",
+          "pos": "noun",
+          "example": "Zjadłem za dużo i boli mnie brzuch."
+        },
+        {
+          "word": "plecy",
+          "translation": "back",
+          "pos": "noun",
+          "example": "Moja mama ma ból pleców."
+        },
+        {
+          "word": "ząb",
+          "translation": "tooth",
+          "accepted_translations": ["teeth"],
+          "pos": "noun",
+          "example": "Ząb boli."
+        },
+        {
+          "word": "ciało",
+          "translation": "body",
+          "pos": "noun",
+          "example": "Moje ciało jest zmęczone."
+        },
+        {
+          "word": "chory",
+          "translation": "sick",
+          "accepted_translations": ["ill"],
+          "pos": "adjective",
+          "example": "Jestem chory i idę do lekarza."
+        },
+        {
+          "word": "gorączka",
+          "translation": "fever",
+          "pos": "noun",
+          "example": "Ona ma gorączkę."
+        },
+        {
+          "word": "grypa",
+          "translation": "flu",
+          "pos": "noun",
+          "example": "On ma grypę i śpi."
+        },
+        {
+          "word": "katar",
+          "translation": "cold",
+          "accepted_translations": ["runny nose"],
+          "pos": "noun",
+          "example": "Mam katar zimą."
+        },
+        {
+          "word": "lekarstwo",
+          "translation": "medicine",
+          "accepted_translations": ["medication"],
+          "pos": "noun",
+          "example": "Biorę lekarstwa rano."
+        },
+        {
+          "word": "recepta",
+          "translation": "prescription",
+          "pos": "noun",
+          "example": "Lekarz pisze receptę."
+        },
+        {
+          "word": "apteka",
+          "translation": "pharmacy",
+          "pos": "noun",
+          "example": "Apteka jest blisko szpitala."
+        },
+        {
+          "word": "lekarz",
+          "translation": "doctor",
+          "accepted_translations": ["physician"],
+          "pos": "noun",
+          "example": "Idę do lekarza dzisiaj."
+        },
+        {
+          "word": "boleć",
+          "translation": "to hurt",
+          "pos": "verb",
+          "example": "Co ci boli?"
+        },
+        {
+          "word": "lepiej",
+          "translation": "better",
+          "pos": "adverb",
+          "example": "Dzisiaj czuję się lepiej."
+        },
+        {
+          "word": "odpoczynek",
+          "translation": "rest",
+          "pos": "noun",
+          "example": "Potrzebujesz odpoczynku."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "głowa",
+          "answer": "head"
+        },
+        {
+          "type": "translation",
+          "prompt": "brzuch",
+          "answer": "stomach"
+        },
+        {
+          "type": "translation",
+          "prompt": "plecy",
+          "answer": "back"
+        },
+        {
+          "type": "translation",
+          "prompt": "ząb",
+          "answer": "tooth",
+          "accepted_answers": ["teeth"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ciało",
+          "answer": "body"
+        },
+        {
+          "type": "translation",
+          "prompt": "chory",
+          "answer": "sick",
+          "accepted_answers": ["ill"]
+        },
+        {
+          "type": "translation",
+          "prompt": "gorączka",
+          "answer": "fever"
+        },
+        {
+          "type": "translation",
+          "prompt": "grypa",
+          "answer": "flu"
+        },
+        {
+          "type": "translation",
+          "prompt": "katar",
+          "answer": "cold",
+          "accepted_answers": ["runny nose"]
+        },
+        {
+          "type": "translation",
+          "prompt": "lekarstwo",
+          "answer": "medicine",
+          "accepted_answers": ["medication"]
+        },
+        {
+          "type": "translation",
+          "prompt": "recepta",
+          "answer": "prescription"
+        },
+        {
+          "type": "translation",
+          "prompt": "apteka",
+          "answer": "pharmacy"
+        },
+        {
+          "type": "translation",
+          "prompt": "lekarz",
+          "answer": "doctor",
+          "accepted_answers": ["physician"]
+        },
+        {
+          "type": "translation",
+          "prompt": "boleć",
+          "answer": "to hurt"
+        },
+        {
+          "type": "translation",
+          "prompt": "lepiej",
+          "answer": "better"
+        },
+        {
+          "type": "translation",
+          "prompt": "odpoczynek",
+          "answer": "rest"
+        },
+        {
+          "type": "translation",
+          "prompt": "Boli mnie głowa.",
+          "answer": "My head hurts.",
+          "accepted_answers": ["I have a headache", "I have a pain in my head"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Boli go brzuch.",
+          "answer": "His stomach hurts.",
+          "accepted_answers": ["He has a stomach ache", "He has a stomachache"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jestem chory i zostaję w łóżku.",
+          "answer": "I'm sick, I'm staying in bed.",
+          "accepted_answers": ["I am sick, I'm staying in bed."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ona ma gorączkę.",
+          "answer": "She has a fever."
+        },
+        {
+          "type": "translation",
+          "prompt": "Idę do lekarza.",
+          "answer": "I'm going to the doctor.",
+          "accepted_answers": ["I am going to the doctor."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bierzesz lekarstwa rano?",
+          "answer": "Do you take your medicine in the morning?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Apteka jest blisko szpitala.",
+          "answer": "The pharmacy is near the hospital."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ona ma grypę.",
+          "answer": "She has the flu."
+        },
+        {
+          "type": "translation",
+          "prompt": "My back hurts.",
+          "answer": "Boli mnie plecy."
+        },
+        {
+          "type": "translation",
+          "prompt": "I have a toothache.",
+          "answer": "Boli mnie ząb."
+        },
+        {
+          "type": "translation",
+          "prompt": "I am sick today.",
+          "answer": "Jestem dziś chory."
+        },
+        {
+          "type": "translation",
+          "prompt": "I am better, thanks.",
+          "answer": "Czuję się lepiej, dziękuję."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'head':",
+          "options": [
+            "głowa",
+            "brzuch",
+            "plecy",
+            "ząb"
+          ],
+          "answer": "głowa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'stomach':",
+          "options": [
+            "brzuch",
+            "plecy",
+            "ząb",
+            "ciało"
+          ],
+          "answer": "brzuch"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'back':",
+          "options": [
+            "plecy",
+            "ząb",
+            "ciało",
+            "chory"
+          ],
+          "answer": "plecy"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tooth':",
+          "options": [
+            "ząb",
+            "ciało",
+            "chory",
+            "gorączka"
+          ],
+          "answer": "ząb"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'body':",
+          "options": [
+            "ciało",
+            "chory",
+            "gorączka",
+            "grypa"
+          ],
+          "answer": "ciało"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sick':",
+          "options": [
+            "chory",
+            "gorączka",
+            "grypa",
+            "katar"
+          ],
+          "answer": "chory"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fever':",
+          "options": [
+            "gorączka",
+            "grypa",
+            "katar",
+            "lekarstwo"
+          ],
+          "answer": "gorączka"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'flu':",
+          "options": [
+            "grypa",
+            "katar",
+            "lekarstwo",
+            "recepta"
+          ],
+          "answer": "grypa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ mnie głowa.",
+          "answer": "Boli"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Głowa mnie ___.",
+          "answer": "boli"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Lekarz pisze ___.",
+          "answer": "receptę"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kupuję lekarstwa w ___.",
+          "answer": "aptece"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Czuję się źle, mam ___.",
+          "answer": "gorączkę"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jestem ___, nie idę do pracy.",
+          "answer": "chory"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mam ___.",
+          "answer": "katar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dziś czuję się ___.",
+          "answer": "lepiej"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Free Time and Hobbies",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "hobby",
+          "translation": "hobby",
+          "accepted_translations": ["pastime"],
+          "pos": "noun",
+          "example": "Jakie są twoje hobby?"
+        },
+        {
+          "word": "rower",
+          "translation": "bike",
+          "accepted_translations": ["bicycle"],
+          "pos": "noun",
+          "example": "Jeżdżę na rowerze w parku."
+        },
+        {
+          "word": "pływanie",
+          "translation": "swimming",
+          "pos": "noun",
+          "example": "Pływanie to mój ulubiony sport."
+        },
+        {
+          "word": "piłka nożna",
+          "translation": "soccer",
+          "accepted_translations": ["football"],
+          "pos": "noun",
+          "example": "Mój brat gra w piłkę nożną."
+        },
+        {
+          "word": "tenis",
+          "translation": "tennis",
+          "pos": "noun",
+          "example": "Gram w tenis w weekend."
+        },
+        {
+          "word": "koszykówka",
+          "translation": "basketball",
+          "pos": "noun",
+          "example": "Dzieci grają w koszykówkę."
+        },
+        {
+          "word": "gitara",
+          "translation": "guitar",
+          "pos": "noun",
+          "example": "Moja siostra gra na gitarze."
+        },
+        {
+          "word": "pianino",
+          "translation": "piano",
+          "pos": "noun",
+          "example": "Pianino jest w salonie."
+        },
+        {
+          "word": "piosenka",
+          "translation": "song",
+          "pos": "noun",
+          "example": "Piosenka jest ładna."
+        },
+        {
+          "word": "tańczyć",
+          "translation": "to dance",
+          "pos": "verb",
+          "example": "Ona lubi tańczyć."
+        },
+        {
+          "word": "śpiewać",
+          "translation": "to sing",
+          "pos": "verb",
+          "example": "Dzieci śpiewają w szkole."
+        },
+        {
+          "word": "biegać",
+          "translation": "to run",
+          "accepted_translations": ["to jog"],
+          "pos": "verb",
+          "example": "Biegam w parku rano."
+        },
+        {
+          "word": "weekend",
+          "translation": "weekend",
+          "pos": "noun",
+          "example": "Udany weekend!"
+        },
+        {
+          "word": "wędrówka",
+          "translation": "hike",
+          "accepted_translations": ["hiking trip"],
+          "pos": "noun",
+          "example": "Latem idziemy na wędrówkę w górach."
+        },
+        {
+          "word": "czytanie",
+          "translation": "reading",
+          "pos": "noun",
+          "example": "Lubię czytanie wieczorem."
+        },
+        {
+          "word": "ulubiony",
+          "translation": "favorite",
+          "accepted_translations": ["favourite"],
+          "pos": "adjective",
+          "example": "Mój ulubiony sport to piłka nożna."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "hobby",
+          "answer": "hobby",
+          "accepted_answers": ["pastime"]
+        },
+        {
+          "type": "translation",
+          "prompt": "rower",
+          "answer": "bike",
+          "accepted_answers": ["bicycle"]
+        },
+        {
+          "type": "translation",
+          "prompt": "pływanie",
+          "answer": "swimming"
+        },
+        {
+          "type": "translation",
+          "prompt": "piłka nożna",
+          "answer": "soccer",
+          "accepted_answers": ["football"]
+        },
+        {
+          "type": "translation",
+          "prompt": "tenis",
+          "answer": "tennis"
+        },
+        {
+          "type": "translation",
+          "prompt": "koszykówka",
+          "answer": "basketball"
+        },
+        {
+          "type": "translation",
+          "prompt": "gitara",
+          "answer": "guitar"
+        },
+        {
+          "type": "translation",
+          "prompt": "pianino",
+          "answer": "piano"
+        },
+        {
+          "type": "translation",
+          "prompt": "piosenka",
+          "answer": "song"
+        },
+        {
+          "type": "translation",
+          "prompt": "tańczyć",
+          "answer": "to dance"
+        },
+        {
+          "type": "translation",
+          "prompt": "śpiewać",
+          "answer": "to sing"
+        },
+        {
+          "type": "translation",
+          "prompt": "biegać",
+          "answer": "to run",
+          "accepted_answers": ["to jog"]
+        },
+        {
+          "type": "translation",
+          "prompt": "weekend",
+          "answer": "weekend"
+        },
+        {
+          "type": "translation",
+          "prompt": "wędrówka",
+          "answer": "hike",
+          "accepted_answers": ["hiking trip"]
+        },
+        {
+          "type": "translation",
+          "prompt": "czytanie",
+          "answer": "reading"
+        },
+        {
+          "type": "translation",
+          "prompt": "ulubiony",
+          "answer": "favorite",
+          "accepted_answers": ["favourite"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jeżdżę na rowerze w weekend.",
+          "answer": "I ride my bike on weekends.",
+          "accepted_answers": ["I ride my bike at weekends."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ona pływa w poniedziałki.",
+          "answer": "She swims on Mondays.",
+          "accepted_answers": ["She does swimming on Mondays"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mój brat gra w piłkę nożną.",
+          "answer": "My brother plays soccer.",
+          "accepted_answers": ["My brother plays football"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Lubię tę piosenkę.",
+          "answer": "I like this song."
+        },
+        {
+          "type": "translation",
+          "prompt": "Moja siostra gra na pianinie.",
+          "answer": "My sister plays the piano."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jakie są twoje hobby?",
+          "answer": "What are your hobbies?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Chodzimy na wędrówki w górach.",
+          "answer": "We go hiking in the mountains.",
+          "accepted_answers": ["We hike in the mountains"]
+        },
+        {
+          "type": "translation",
+          "prompt": "W weekend wolę czytać.",
+          "answer": "On weekends, I prefer to read.",
+          "accepted_answers": ["At the weekend, I prefer to read", "On the weekend, I prefer to read"]
+        },
+        {
+          "type": "translation",
+          "prompt": "I play tennis.",
+          "answer": "Gram w tenis."
+        },
+        {
+          "type": "translation",
+          "prompt": "She sings a song.",
+          "answer": "Ona śpiewa piosenkę."
+        },
+        {
+          "type": "translation",
+          "prompt": "He plays the guitar.",
+          "answer": "On gra na gitarze."
+        },
+        {
+          "type": "translation",
+          "prompt": "Reading is my favorite hobby.",
+          "answer": "Czytanie to moje ulubione hobby."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hobby':",
+          "options": [
+            "hobby",
+            "rower",
+            "pływanie",
+            "piłka nożna"
+          ],
+          "answer": "hobby"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bike':",
+          "options": [
+            "rower",
+            "pływanie",
+            "piłka nożna",
+            "tenis"
+          ],
+          "answer": "rower"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'swimming':",
+          "options": [
+            "pływanie",
+            "piłka nożna",
+            "tenis",
+            "koszykówka"
+          ],
+          "answer": "pływanie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'soccer':",
+          "options": [
+            "piłka nożna",
+            "tenis",
+            "koszykówka",
+            "gitara"
+          ],
+          "answer": "piłka nożna"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tennis':",
+          "options": [
+            "tenis",
+            "koszykówka",
+            "gitara",
+            "pianino"
+          ],
+          "answer": "tenis"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'basketball':",
+          "options": [
+            "koszykówka",
+            "gitara",
+            "pianino",
+            "piosenka"
+          ],
+          "answer": "koszykówka"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'guitar':",
+          "options": [
+            "gitara",
+            "pianino",
+            "piosenka",
+            "tańczyć"
+          ],
+          "answer": "gitara"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'piano':",
+          "options": [
+            "pianino",
+            "piosenka",
+            "tańczyć",
+            "śpiewać"
+          ],
+          "answer": "pianino"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Lubię grać w ___.",
+          "answer": "piłkę nożną"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Lubię jeździć na ___.",
+          "answer": "rowerze"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Pływanie to mój ___.",
+          "answer": "hobby"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Siostra gra na ___.",
+          "answer": "pianinie"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Śpiewam ___.",
+          "answer": "piosenki"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Lubię ___ i śpiewać.",
+          "answer": "tańczyć"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ książki to moje hobby.",
+          "answer": "Czytanie"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gram w ___ z kolegą.",
+          "answer": "koszykówkę"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Calls and Messages",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "telefon",
+          "translation": "phone",
+          "accepted_translations": ["telephone"],
+          "pos": "noun",
+          "example": "Mój telefon jest nowy."
+        },
+        {
+          "word": "numer",
+          "translation": "number",
+          "pos": "noun",
+          "example": "Jaki jest twój numer telefonu?"
+        },
+        {
+          "word": "dzwonić",
+          "translation": "to call",
+          "accepted_translations": ["to phone"],
+          "pos": "verb",
+          "example": "Chcę zadzwonić do mamy."
+        },
+        {
+          "word": "rozmawiać",
+          "translation": "to talk",
+          "accepted_translations": ["to speak"],
+          "pos": "verb",
+          "example": "On nie rozmawia."
+        },
+        {
+          "word": "wiadomość",
+          "translation": "message",
+          "accepted_translations": ["text message"],
+          "pos": "noun",
+          "example": "Wysyłam ci wiadomość."
+        },
+        {
+          "word": "wysyłać",
+          "translation": "to send",
+          "pos": "verb",
+          "example": "Ona wysyła wiadomość do brata."
+        },
+        {
+          "word": "otrzymywać",
+          "translation": "to receive",
+          "accepted_translations": ["to get"],
+          "pos": "verb",
+          "example": "Otrzymuję dużo wiadomości."
+        },
+        {
+          "word": "odpowiedź",
+          "translation": "answer",
+          "accepted_translations": ["reply"],
+          "pos": "noun",
+          "example": "Jego odpowiedź to nie."
+        },
+        {
+          "word": "pytanie",
+          "translation": "question",
+          "pos": "noun",
+          "example": "Mam pytanie."
+        },
+        {
+          "word": "e-mail",
+          "translation": "e-mail",
+          "accepted_translations": ["email"],
+          "pos": "noun",
+          "example": "Otrzymałeś mój e-mail?"
+        },
+        {
+          "word": "zdjęcie",
+          "translation": "photo",
+          "accepted_translations": ["picture"],
+          "pos": "noun",
+          "example": "Zdjęcie jest ładne."
+        },
+        {
+          "word": "wideo",
+          "translation": "video",
+          "pos": "noun",
+          "example": "Oglądam wideo."
+        },
+        {
+          "word": "internet",
+          "translation": "internet",
+          "pos": "noun",
+          "example": "Jestem w internecie."
+        },
+        {
+          "word": "online",
+          "translation": "online",
+          "pos": "adverb",
+          "example": "Mój brat jest zawsze online."
+        },
+        {
+          "word": "wiadomości",
+          "translation": "news",
+          "pos": "noun",
+          "example": "Oglądam wiadomości wieczorem."
+        },
+        {
+          "word": "łącze",
+          "translation": "line",
+          "accepted_translations": ["connection"],
+          "pos": "noun",
+          "example": "Łącze jest zajęte."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "telefon",
+          "answer": "phone",
+          "accepted_answers": ["telephone"]
+        },
+        {
+          "type": "translation",
+          "prompt": "numer",
+          "answer": "number"
+        },
+        {
+          "type": "translation",
+          "prompt": "dzwonić",
+          "answer": "to call",
+          "accepted_answers": ["to phone"]
+        },
+        {
+          "type": "translation",
+          "prompt": "rozmawiać",
+          "answer": "to talk",
+          "accepted_answers": ["to speak"]
+        },
+        {
+          "type": "translation",
+          "prompt": "wiadomość",
+          "answer": "message",
+          "accepted_answers": ["text message"]
+        },
+        {
+          "type": "translation",
+          "prompt": "wysyłać",
+          "answer": "to send"
+        },
+        {
+          "type": "translation",
+          "prompt": "otrzymywać",
+          "answer": "to receive",
+          "accepted_answers": ["to get"]
+        },
+        {
+          "type": "translation",
+          "prompt": "odpowiedź",
+          "answer": "answer",
+          "accepted_answers": ["reply"]
+        },
+        {
+          "type": "translation",
+          "prompt": "pytanie",
+          "answer": "question"
+        },
+        {
+          "type": "translation",
+          "prompt": "e-mail",
+          "answer": "e-mail",
+          "accepted_answers": ["email"]
+        },
+        {
+          "type": "translation",
+          "prompt": "zdjęcie",
+          "answer": "photo",
+          "accepted_answers": ["picture"]
+        },
+        {
+          "type": "translation",
+          "prompt": "wideo",
+          "answer": "video"
+        },
+        {
+          "type": "translation",
+          "prompt": "internet",
+          "answer": "internet"
+        },
+        {
+          "type": "translation",
+          "prompt": "online",
+          "answer": "online"
+        },
+        {
+          "type": "translation",
+          "prompt": "wiadomości",
+          "answer": "news"
+        },
+        {
+          "type": "translation",
+          "prompt": "łącze",
+          "answer": "line",
+          "accepted_answers": ["connection"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Dzwonię do ciebie wieczorem.",
+          "answer": "I'll call you tonight.",
+          "accepted_answers": ["I am calling you tonight", "I call you tonight"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Możesz mi odpowiedzieć?",
+          "answer": "Can you answer me?",
+          "accepted_answers": ["Can you reply to me?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "On wysyła wiadomość do swojej mamy.",
+          "answer": "He sends his mother a message.",
+          "accepted_answers": ["He sends a message to his mother"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Nie otrzymałem twojego e-maila.",
+          "answer": "I didn't get your e-mail.",
+          "accepted_answers": ["I did not get your e-mail", "I didn't receive your e-mail", "I did not receive your e-mail"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jaki jest twój numer telefonu?",
+          "answer": "What is your phone number?",
+          "accepted_answers": ["What's your phone number?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Łącze jest zajęte.",
+          "answer": "The line is busy."
+        },
+        {
+          "type": "translation",
+          "prompt": "Oglądam zdjęcia w internecie.",
+          "answer": "I look at photos on the internet.",
+          "accepted_answers": ["I look at photos on the Internet", "I look at pictures on the internet"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ona jest zawsze online.",
+          "answer": "She is always online."
+        },
+        {
+          "type": "translation",
+          "prompt": "I send you a photo.",
+          "answer": "Wysyłam ci zdjęcie."
+        },
+        {
+          "type": "translation",
+          "prompt": "Can you call me tomorrow?",
+          "answer": "Możesz do mnie zadzwonić jutro?"
+        },
+        {
+          "type": "translation",
+          "prompt": "My phone number is new.",
+          "answer": "Mój numer telefonu jest nowy."
+        },
+        {
+          "type": "translation",
+          "prompt": "Will you play with me?",
+          "answer": "Zagrasz ze mną?"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'phone':",
+          "options": [
+            "telefon",
+            "numer",
+            "dzwonić",
+            "rozmawiać"
+          ],
+          "answer": "telefon"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'number':",
+          "options": [
+            "numer",
+            "dzwonić",
+            "rozmawiać",
+            "wiadomość"
+          ],
+          "answer": "numer"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to call':",
+          "options": [
+            "dzwonić",
+            "rozmawiać",
+            "wiadomość",
+            "wysyłać"
+          ],
+          "answer": "dzwonić"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to talk':",
+          "options": [
+            "rozmawiać",
+            "wiadomość",
+            "wysyłać",
+            "otrzymywać"
+          ],
+          "answer": "rozmawiać"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'message':",
+          "options": [
+            "wiadomość",
+            "wysyłać",
+            "otrzymywać",
+            "odpowiedź"
+          ],
+          "answer": "wiadomość"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to send':",
+          "options": [
+            "wysyłać",
+            "otrzymywać",
+            "odpowiedź",
+            "pytanie"
+          ],
+          "answer": "wysyłać"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to receive':",
+          "options": [
+            "otrzymywać",
+            "odpowiedź",
+            "pytanie",
+            "e-mail"
+          ],
+          "answer": "otrzymywać"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'answer':",
+          "options": [
+            "odpowiedź",
+            "pytanie",
+            "e-mail",
+            "zdjęcie"
+          ],
+          "answer": "odpowiedź"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ zadzwonić do mamy.",
+          "answer": "Chciałbym"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Chciałabym ___ wiadomość.",
+          "answer": "wysłać"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Chciałbym ___ na twoje pytanie.",
+          "answer": "odpowiedzieć"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jaki jest twój ___ telefonu?",
+          "answer": "numer"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dzwonię z ___.",
+          "answer": "telefonu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Otrzymuję dużo ___.",
+          "answer": "wiadomości"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wysyłam ___ mojej rodzinie.",
+          "answer": "zdjęcia"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Odpowiedź na ___ jest łatwa.",
+          "answer": "pytanie"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Stories and Experiences",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "historia",
+          "translation": "story",
+          "accepted_translations": ["tale"],
+          "pos": "noun",
+          "example": "Babcia opowiada ładne historie."
+        },
+        {
+          "word": "przygoda",
+          "translation": "adventure",
+          "pos": "noun",
+          "example": "Książka opowiada o wielkiej przygodzie."
+        },
+        {
+          "word": "wspomnienie",
+          "translation": "memory",
+          "accepted_translations": ["souvenir"],
+          "pos": "noun",
+          "example": "To dobre wspomnienie."
+        },
+        {
+          "word": "dzieciństwo",
+          "translation": "childhood",
+          "pos": "noun",
+          "example": "On mówi o swoim dzieciństwie."
+        },
+        {
+          "word": "wakacje",
+          "translation": "vacation",
+          "accepted_translations": ["holiday", "holidays"],
+          "pos": "noun",
+          "example": "Wakacje zaczynają się w lipcu."
+        },
+        {
+          "word": "podróż",
+          "translation": "trip",
+          "accepted_translations": ["journey", "travel"],
+          "pos": "noun",
+          "example": "To była piękna podróż."
+        },
+        {
+          "word": "morze",
+          "translation": "sea",
+          "pos": "noun",
+          "example": "Latem jedziemy nad morze."
+        },
+        {
+          "word": "plaża",
+          "translation": "beach",
+          "pos": "noun",
+          "example": "Dzieci bawią się na plaży."
+        },
+        {
+          "word": "góry",
+          "translation": "mountains",
+          "pos": "noun",
+          "example": "Góry są piękne zimą."
+        },
+        {
+          "word": "prezent",
+          "translation": "gift",
+          "accepted_translations": ["present"],
+          "pos": "noun",
+          "example": "Prezent jest na stole."
+        },
+        {
+          "word": "raz",
+          "translation": "time",
+          "accepted_translations": ["occasion"],
+          "pos": "noun",
+          "example": "Chodzę do przyjaciela raz w tygodniu."
+        },
+        {
+          "word": "nigdy",
+          "translation": "never",
+          "pos": "adverb",
+          "example": "On nigdy nie pije herbaty."
+        },
+        {
+          "word": "prawda",
+          "translation": "truth",
+          "pos": "noun",
+          "example": "Czy to prawda?"
+        },
+        {
+          "word": "opowiadać",
+          "translation": "to tell",
+          "pos": "verb",
+          "example": "On opowiada historię swojej mamie."
+        },
+        {
+          "word": "myśleć",
+          "translation": "to think",
+          "pos": "verb",
+          "example": "Myślę o mojej rodzinie."
+        },
+        {
+          "word": "wesoły",
+          "translation": "happy",
+          "accepted_translations": ["cheerful", "merry"],
+          "pos": "adjective",
+          "example": "Oni są bardzo wesośli."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "historia",
+          "answer": "story",
+          "accepted_answers": ["tale"]
+        },
+        {
+          "type": "translation",
+          "prompt": "przygoda",
+          "answer": "adventure"
+        },
+        {
+          "type": "translation",
+          "prompt": "wspomnienie",
+          "answer": "memory",
+          "accepted_answers": ["souvenir"]
+        },
+        {
+          "type": "translation",
+          "prompt": "dzieciństwo",
+          "answer": "childhood"
+        },
+        {
+          "type": "translation",
+          "prompt": "wakacje",
+          "answer": "vacation",
+          "accepted_answers": ["holiday", "holidays"]
+        },
+        {
+          "type": "translation",
+          "prompt": "podróż",
+          "answer": "trip",
+          "accepted_answers": ["journey", "travel"]
+        },
+        {
+          "type": "translation",
+          "prompt": "morze",
+          "answer": "sea"
+        },
+        {
+          "type": "translation",
+          "prompt": "plaża",
+          "answer": "beach"
+        },
+        {
+          "type": "translation",
+          "prompt": "góry",
+          "answer": "mountains"
+        },
+        {
+          "type": "translation",
+          "prompt": "prezent",
+          "answer": "gift",
+          "accepted_answers": ["present"]
+        },
+        {
+          "type": "translation",
+          "prompt": "raz",
+          "answer": "time",
+          "accepted_answers": ["occasion"]
+        },
+        {
+          "type": "translation",
+          "prompt": "nigdy",
+          "answer": "never"
+        },
+        {
+          "type": "translation",
+          "prompt": "prawda",
+          "answer": "truth"
+        },
+        {
+          "type": "translation",
+          "prompt": "opowiadać",
+          "answer": "to tell"
+        },
+        {
+          "type": "translation",
+          "prompt": "myśleć",
+          "answer": "to think"
+        },
+        {
+          "type": "translation",
+          "prompt": "wesoły",
+          "answer": "happy",
+          "accepted_answers": ["cheerful", "merry"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Kiedy byłem mały, mieszkałem w Krakowie.",
+          "answer": "When I was little, I lived in Krakow.",
+          "accepted_answers": ["When I was small, I lived in Krakow", "When I was a child, I lived in Krakow"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Graliśmy w piłkę nożną w każdą niedzielę.",
+          "answer": "We played soccer every Sunday.",
+          "accepted_answers": ["We used to play soccer every Sunday", "We played football every Sunday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Moja babcia opowiadała historie.",
+          "answer": "My grandmother told stories."
+        },
+        {
+          "type": "translation",
+          "prompt": "W zeszłym roku pojechaliśmy nad morze.",
+          "answer": "Last summer, we went to the sea.",
+          "accepted_answers": ["Last year we went to the sea"]
+        },
+        {
+          "type": "translation",
+          "prompt": "W dniu moich urodzin padał śnieg.",
+          "answer": "It was snowing on my birthday.",
+          "accepted_answers": ["It snowed on my birthday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jaka wspaniała przygoda!",
+          "answer": "What a beautiful adventure!",
+          "accepted_answers": ["What a great adventure"]
+        },
+        {
+          "type": "translation",
+          "prompt": "To była moja pierwsza podróż do Polski.",
+          "answer": "It was my first trip to Poland."
+        },
+        {
+          "type": "translation",
+          "prompt": "Często myślałem o mojej babci.",
+          "answer": "I often thought about my grandmother.",
+          "accepted_answers": ["I used to think often about my grandmother"]
+        },
+        {
+          "type": "translation",
+          "prompt": "We were happy.",
+          "answer": "Byliśmy wesołi."
+        },
+        {
+          "type": "translation",
+          "prompt": "It was a beautiful memory.",
+          "answer": "To było piękne wspomnienie."
+        },
+        {
+          "type": "translation",
+          "prompt": "I never drink coffee.",
+          "answer": "Nigdy nie piję kawy."
+        },
+        {
+          "type": "translation",
+          "prompt": "My grandfather told a story.",
+          "answer": "Mój dziadek opowiedział historię."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'story':",
+          "options": [
+            "historia",
+            "przygoda",
+            "wspomnienie",
+            "dzieciństwo"
+          ],
+          "answer": "historia"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'adventure':",
+          "options": [
+            "przygoda",
+            "wspomnienie",
+            "dzieciństwo",
+            "wakacje"
+          ],
+          "answer": "przygoda"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'memory':",
+          "options": [
+            "wspomnienie",
+            "dzieciństwo",
+            "wakacje",
+            "podróż"
+          ],
+          "answer": "wspomnienie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'childhood':",
+          "options": [
+            "dzieciństwo",
+            "wakacje",
+            "podróż",
+            "morze"
+          ],
+          "answer": "dzieciństwo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'vacation':",
+          "options": [
+            "wakacje",
+            "podróż",
+            "morze",
+            "plaża"
+          ],
+          "answer": "wakacje"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'trip':",
+          "options": [
+            "podróż",
+            "morze",
+            "plaża",
+            "góry"
+          ],
+          "answer": "podróż"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sea':",
+          "options": [
+            "morze",
+            "plaża",
+            "góry",
+            "prezent"
+          ],
+          "answer": "morze"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'beach':",
+          "options": [
+            "plaża",
+            "góry",
+            "prezent",
+            "raz"
+          ],
+          "answer": "plaża"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wczoraj ___ w domu cały dzień.",
+          "answer": "byliśmy"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wczoraj kupi___ nowy telefon.",
+          "answer": "ła"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "W zeszłym roku ___ w górach.",
+          "answer": "byli"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Czy ___ tę książkę?",
+          "answer": "czytałeś",
+          "accepted_answers": ["czytałaś"]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wakacje ___ wesołe.",
+          "answer": "były"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Babcia ___ historie.",
+          "answer": "opowiada"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wczoraj ___ list do babci.",
+          "answer": "napisałem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "To były najlepsze ___.",
+          "answer": "wakacje"
+        }
+      ]
     }
   ]
 }
