@@ -454,6 +454,7 @@ fn builtin_courses_work_with_zero_setup() {
         "turkish",
         "icelandic",
         "catalan",
+        "dutch",
     ] {
         let out = termocab(&scratch)
             .args(["progress", lang])
@@ -526,6 +527,7 @@ fn list_langs_shows_builtins_installed_and_overrides() {
         "turkish",
         "icelandic",
         "catalan",
+        "dutch",
     ] {
         let stages = std::fs::read_to_string(
             PathBuf::from(env!("CARGO_MANIFEST_DIR"))
@@ -998,7 +1000,11 @@ fn broken_pipe_is_silent_and_exits_141_like_cat_and_git() {
 /// list — every accent already on file (à è é í ï ó ò ú ç), the one
 /// new question its interpunct, answered by D18's fold: the punt
 /// volat of "col·legi" rides the content through the same validation
-/// gate as every other character.
+/// gate as every other character; Dutch the thirteenth, the last
+/// candidate the roadmap had named — every letter on file (é, the
+/// trema ë of ideeën, all D9), the one new question its ligature,
+/// answered by D19's fold: the Ĳ of "het Ĳsselmeer" rides the
+/// content through the same validation gate as every other character.
 #[test]
 fn shipped_courses_validate() {
     let scratch = Scratch::new("shipped");
@@ -1015,6 +1021,7 @@ fn shipped_courses_validate() {
         "turkish",
         "icelandic",
         "catalan",
+        "dutch",
     ] {
         let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
             .join("languages")
@@ -1964,6 +1971,104 @@ fn catalan_interpunct_and_accents_grade_end_to_end() {
     assert!(srs.contains("word el temps box 2"), "{srs}");
     assert!(srs.contains("word feliç box 2"), "{srs}");
     assert!(srs.contains("word gràcies box 2"), "{srs}");
+}
+
+/// The thirteenth language end to end, in a Dutch course. D19's answer
+/// pinned three ways: the two-letter ij every modern text types counts
+/// with the ligature form as the hint ("het IJsselmeer" for "het
+/// Ĳsselmeer", the œ/æ/ß tier), the ligature typed back folds to the
+/// two letters it spells with no invented matches anywhere, and the y
+/// of the schoolbook shorthand is no spelling of the word ("myn" is
+/// wrong for "mijn", counting against the pass bar exactly like the
+/// closed letters of Icelandic, Turkish and the hyphen of Catalan).
+/// Around the ligature, the accents ride D9 untouched: "een" counts
+/// with "één" — the one Dutch word where the accent does grammar,
+/// separating the number from the article. The review then keeps the
+/// srs keys verbatim: het Ĳsselmeer and één, ligature and accent
+/// riding the keys untouched.
+#[test]
+fn dutch_ligature_and_ij_grade_end_to_end() {
+    let scratch = Scratch::new("dutch");
+    let course = r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Nederlands", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "één", "translation": "one",
+                "accepted_translations": ["1"],
+                "pos": "number", "example": "Ik wil één koffie." },
+              { "word": "mijn", "translation": "my",
+                "pos": "pronoun", "example": "Mijn huis is klein." },
+              { "word": "tijd", "translation": "time",
+                "pos": "noun", "example": "Ik heb geen tijd." },
+              { "word": "de fiets", "translation": "the bicycle",
+                "accepted_translations": ["the bike"],
+                "pos": "noun (de)", "example": "Ik fiets naar mijn werk." },
+              { "word": "het meisje", "translation": "the girl",
+                "pos": "noun (het)", "example": "Het meisje leest een boek." },
+              { "word": "het Ĳsselmeer", "translation": "the IJsselmeer",
+                "pos": "noun (het)", "example": "We varen over het Ĳsselmeer." }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "one", "answer": "één",
+                "accepted_answers": ["een"] },
+              { "type": "translation", "prompt": "my", "answer": "mijn" },
+              { "type": "translation", "prompt": "the IJsselmeer", "answer": "het Ĳsselmeer" },
+              { "type": "translation", "prompt": "time", "answer": "tijd" },
+              { "type": "translation", "prompt": "the bicycle", "answer": "de fiets" },
+              { "type": "translation", "prompt": "the girl", "answer": "het meisje" },
+              { "type": "fill_blank", "prompt": "___, twee, drie.", "answer": "één" },
+              { "type": "fill_blank", "prompt": "Ik heb geen ___.", "answer": "tijd" },
+              { "type": "fill_blank", "prompt": "___ fiets is rood.", "answer": "Mijn" }
+            ] }
+       ] }"#;
+    let file = scratch.stages_file("dutch.json", course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    // everything answered the way a learner without a ligature key
+    // types — the two-letter ij — except "myn", the schoolbook y that
+    // is no spelling of mijn: the ligature folds count with the
+    // properly spelled forms as the hints, the y miss counts against
+    // the pass bar, and the run lands at 8/9 — still past the 80%
+    // bar. The D19 answer in one run.
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "--no-shuffle", "test"]);
+    let out = feed(
+        &mut cmd,
+        "een\nmyn\nhet IJsselmeer\ntijd\nde fiets\nhet meisje\néen\ntijd\nmijn\n",
+    );
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("watch the accents: één"), "{text}");
+    assert!(text.contains("watch the accents: het Ĳsselmeer"), "{text}");
+    assert!(text.contains("not quite — expected: mijn"), "{text}");
+    assert!(!text.contains("watch the accents: mijn"), "{text}");
+    assert!(text.contains("8/9"), "{text}");
+    assert!(text.contains("stage complete"), "{text}");
+
+    // review: due cards come alphabetical (byte order: de fiets, het
+    // meisje, het Ĳsselmeer, mijn, tijd, één), and the srs keys keep
+    // the ligature and the accent verbatim
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(
+        &mut cmd,
+        "the bicycle\nthe girl\nthe IJsselmeer\nmy\ntime\none\n",
+    );
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("correct"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    let srs = scratch.home().join(".config/termocab/srs/test.txt");
+    let srs = std::fs::read_to_string(&srs).expect("srs file");
+    assert!(srs.contains("word de fiets box 2"), "{srs}");
+    assert!(srs.contains("word het meisje box 2"), "{srs}");
+    assert!(srs.contains("word het Ĳsselmeer box 2"), "{srs}");
+    assert!(srs.contains("word mijn box 2"), "{srs}");
+    assert!(srs.contains("word tijd box 2"), "{srs}");
+    assert!(srs.contains("word één box 2"), "{srs}");
 }
 
 /// The stages 6-10 wave end to end. A course that ships ten stages
