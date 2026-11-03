@@ -4014,6 +4014,1961 @@
           "answer": "ben"
         }
       ]
+    },
+    {
+      "id": 11,
+      "title": "Work and School",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "iroda",
+          "translation": "office",
+          "pos": "noun",
+          "example": "Nyolckor megyek az irodába."
+        },
+        {
+          "word": "cég",
+          "translation": "company",
+          "pos": "noun",
+          "example": "Egy nagy cégnél dolgozom."
+        },
+        {
+          "word": "főnök",
+          "translation": "boss",
+          "pos": "noun",
+          "example": "A főnök az irodában van."
+        },
+        {
+          "word": "kolléga",
+          "translation": "colleague",
+          "pos": "noun",
+          "example": "A kollégám a park közelében lakik."
+        },
+        {
+          "word": "megbeszélés",
+          "translation": "meeting",
+          "pos": "noun",
+          "example": "A megbeszélés kilenckor kezdődik."
+        },
+        {
+          "word": "fizetés",
+          "translation": "salary",
+          "pos": "noun",
+          "example": "A fizetésem jó."
+        },
+        {
+          "word": "foglalkozás",
+          "translation": "profession",
+          "accepted_translations": ["job"],
+          "pos": "noun",
+          "example": "Mi a foglalkozásod?"
+        },
+        {
+          "word": "szünet",
+          "translation": "break",
+          "pos": "noun",
+          "example": "Tíz órakor szünetet tartok."
+        },
+        {
+          "word": "osztály",
+          "translation": "class",
+          "pos": "noun",
+          "example": "Az osztályteremben magyarul beszélünk."
+        },
+        {
+          "word": "tantárgy",
+          "translation": "subject",
+          "pos": "noun",
+          "example": "A kedvenc tantárgyam a történelem."
+        },
+        {
+          "word": "házi feladat",
+          "translation": "homework",
+          "pos": "noun",
+          "example": "Este írom a házi feladatot."
+        },
+        {
+          "word": "vizsga",
+          "translation": "exam",
+          "accepted_translations": ["test"],
+          "pos": "noun",
+          "example": "A magyarvizsga holnap van."
+        },
+        {
+          "word": "számítógép",
+          "translation": "computer",
+          "pos": "noun",
+          "example": "A számítógépem új."
+        },
+        {
+          "word": "elfoglalt",
+          "translation": "busy",
+          "pos": "adjective",
+          "example": "Az apám mindig elfoglalt."
+        },
+        {
+          "word": "időpont",
+          "translation": "appointment",
+          "accepted_translations": ["time slot"],
+          "pos": "noun",
+          "example": "Időpontom van az orvosnál."
+        },
+        {
+          "word": "munkahely",
+          "translation": "workplace",
+          "accepted_translations": ["place of work"],
+          "pos": "noun",
+          "example": "A munkahelyem a városban van."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "iroda",
+          "answer": "office"
+        },
+        {
+          "type": "translation",
+          "prompt": "cég",
+          "answer": "company"
+        },
+        {
+          "type": "translation",
+          "prompt": "főnök",
+          "answer": "boss"
+        },
+        {
+          "type": "translation",
+          "prompt": "kolléga",
+          "answer": "colleague"
+        },
+        {
+          "type": "translation",
+          "prompt": "megbeszélés",
+          "answer": "meeting"
+        },
+        {
+          "type": "translation",
+          "prompt": "fizetés",
+          "answer": "salary"
+        },
+        {
+          "type": "translation",
+          "prompt": "foglalkozás",
+          "answer": "profession",
+          "accepted_answers": ["job"]
+        },
+        {
+          "type": "translation",
+          "prompt": "szünet",
+          "answer": "break"
+        },
+        {
+          "type": "translation",
+          "prompt": "osztály",
+          "answer": "class"
+        },
+        {
+          "type": "translation",
+          "prompt": "tantárgy",
+          "answer": "subject"
+        },
+        {
+          "type": "translation",
+          "prompt": "házi feladat",
+          "answer": "homework"
+        },
+        {
+          "type": "translation",
+          "prompt": "vizsga",
+          "answer": "exam",
+          "accepted_answers": ["test"]
+        },
+        {
+          "type": "translation",
+          "prompt": "számítógép",
+          "answer": "computer"
+        },
+        {
+          "type": "translation",
+          "prompt": "elfoglalt",
+          "answer": "busy"
+        },
+        {
+          "type": "translation",
+          "prompt": "időpont",
+          "answer": "appointment",
+          "accepted_answers": ["time slot"]
+        },
+        {
+          "type": "translation",
+          "prompt": "munkahely",
+          "answer": "workplace",
+          "accepted_answers": ["place of work"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Nyolckor megyek az irodába.",
+          "answer": "I go to the office at eight.",
+          "accepted_answers": ["I go to the office at eight o'clock"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Megbeszélésem van a főnökömmel.",
+          "answer": "I have a meeting with the boss."
+        },
+        {
+          "type": "translation",
+          "prompt": "A kollégám három nyelven beszél.",
+          "answer": "My colleague speaks three languages."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ezen a héten sok a munkánk.",
+          "answer": "We have a lot of work this week."
+        },
+        {
+          "type": "translation",
+          "prompt": "A házi feladat nehéz.",
+          "answer": "The homework is difficult.",
+          "accepted_answers": ["The homework is hard"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Írtam egy e-mailt a főnöknek.",
+          "answer": "I wrote an e-mail to the boss.",
+          "accepted_answers": ["I wrote an email to the boss"]
+        },
+        {
+          "type": "translation",
+          "prompt": "A vizsga jövő héten van.",
+          "answer": "The exam is next week."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ma nagyon elfoglalt vagyok.",
+          "answer": "I'm very busy today.",
+          "accepted_answers": ["I am very busy today."]
+        },
+        {
+          "type": "translation",
+          "prompt": "My salary is good.",
+          "answer": "A fizetésem jó."
+        },
+        {
+          "type": "translation",
+          "prompt": "The class starts at nine.",
+          "answer": "Az óra kilenckor kezdődik."
+        },
+        {
+          "type": "translation",
+          "prompt": "I want a break.",
+          "answer": "Szünetet akarok."
+        },
+        {
+          "type": "translation",
+          "prompt": "My computer is new.",
+          "answer": "A számítógépem új."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'office':",
+          "options": [
+            "iroda",
+            "cég",
+            "főnök",
+            "kolléga"
+          ],
+          "answer": "iroda"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'company':",
+          "options": [
+            "cég",
+            "főnök",
+            "kolléga",
+            "megbeszélés"
+          ],
+          "answer": "cég"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'boss':",
+          "options": [
+            "főnök",
+            "kolléga",
+            "megbeszélés",
+            "fizetés"
+          ],
+          "answer": "főnök"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'colleague':",
+          "options": [
+            "kolléga",
+            "megbeszélés",
+            "fizetés",
+            "foglalkozás"
+          ],
+          "answer": "kolléga"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'meeting':",
+          "options": [
+            "megbeszélés",
+            "fizetés",
+            "foglalkozás",
+            "szünet"
+          ],
+          "answer": "megbeszélés"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'salary':",
+          "options": [
+            "fizetés",
+            "foglalkozás",
+            "szünet",
+            "osztály"
+          ],
+          "answer": "fizetés"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'profession':",
+          "options": [
+            "foglalkozás",
+            "szünet",
+            "osztály",
+            "tantárgy"
+          ],
+          "answer": "foglalkozás"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'break':",
+          "options": [
+            "szünet",
+            "osztály",
+            "tantárgy",
+            "házi feladat"
+          ],
+          "answer": "szünet"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Most ___ dolgoznom.",
+          "answer": "kell"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ tanulnod ma este.",
+          "answer": "Kell"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A ___ nehéz ma.",
+          "answer": "vizsga"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A főnök az irod___ van.",
+          "answer": "ában"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az ___ kilenckor kezdődik.",
+          "answer": "megbeszélés"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A házi ___ nehéz ma.",
+          "answer": "feladat"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az ___-om nagyon gyors.",
+          "answer": "számítógép"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A ___ jó a cégnél.",
+          "answer": "fizetés"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Health and the Body",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "fej",
+          "translation": "head",
+          "pos": "noun",
+          "example": "Fáj a fejem."
+        },
+        {
+          "word": "has",
+          "translation": "stomach",
+          "accepted_translations": ["tummy"],
+          "pos": "noun",
+          "example": "Sokat ettem, fáj a hasam."
+        },
+        {
+          "word": "hát",
+          "translation": "back",
+          "pos": "noun",
+          "example": "Az anyukámnak fáj a háta."
+        },
+        {
+          "word": "fog",
+          "translation": "tooth",
+          "accepted_translations": ["teeth"],
+          "pos": "noun",
+          "example": "Fáj a fogam."
+        },
+        {
+          "word": "test",
+          "translation": "body",
+          "pos": "noun",
+          "example": "A testem fáradt."
+        },
+        {
+          "word": "beteg",
+          "translation": "sick",
+          "accepted_translations": ["ill"],
+          "pos": "adjective",
+          "example": "Beteg vagyok, otthon maradok."
+        },
+        {
+          "word": "láz",
+          "translation": "fever",
+          "pos": "noun",
+          "example": "Láza van."
+        },
+        {
+          "word": "influenza",
+          "translation": "flu",
+          "pos": "noun",
+          "example": "Influenzája van és alszik."
+        },
+        {
+          "word": "megfázás",
+          "translation": "cold",
+          "pos": "noun",
+          "example": "Télen megfázásom van."
+        },
+        {
+          "word": "gyógyszer",
+          "translation": "medicine",
+          "accepted_translations": ["medication"],
+          "pos": "noun",
+          "example": "Reggel beveszem a gyógyszeremet."
+        },
+        {
+          "word": "recept",
+          "translation": "prescription",
+          "accepted_translations": ["recipe"],
+          "pos": "noun",
+          "example": "Az orvos receptet ír."
+        },
+        {
+          "word": "gyógyszertár",
+          "translation": "pharmacy",
+          "pos": "noun",
+          "example": "A gyógyszertár a kórház közelében van."
+        },
+        {
+          "word": "orvos",
+          "translation": "doctor",
+          "accepted_translations": ["physician"],
+          "pos": "noun",
+          "example": "Ma az orvoshoz megyek."
+        },
+        {
+          "word": "fájni",
+          "translation": "to hurt",
+          "pos": "verb",
+          "example": "Fáj a fejed?"
+        },
+        {
+          "word": "jobban",
+          "translation": "better",
+          "pos": "adverb",
+          "example": "Ma már jobban vagyok."
+        },
+        {
+          "word": "pihenés",
+          "translation": "rest",
+          "pos": "noun",
+          "example": "Pihenésre van szükséged."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "fej",
+          "answer": "head"
+        },
+        {
+          "type": "translation",
+          "prompt": "has",
+          "answer": "stomach",
+          "accepted_answers": ["tummy"]
+        },
+        {
+          "type": "translation",
+          "prompt": "hát",
+          "answer": "back"
+        },
+        {
+          "type": "translation",
+          "prompt": "fog",
+          "answer": "tooth",
+          "accepted_answers": ["teeth"]
+        },
+        {
+          "type": "translation",
+          "prompt": "test",
+          "answer": "body"
+        },
+        {
+          "type": "translation",
+          "prompt": "beteg",
+          "answer": "sick",
+          "accepted_answers": ["ill"]
+        },
+        {
+          "type": "translation",
+          "prompt": "láz",
+          "answer": "fever"
+        },
+        {
+          "type": "translation",
+          "prompt": "influenza",
+          "answer": "flu"
+        },
+        {
+          "type": "translation",
+          "prompt": "megfázás",
+          "answer": "cold"
+        },
+        {
+          "type": "translation",
+          "prompt": "gyógyszer",
+          "answer": "medicine",
+          "accepted_answers": ["medication"]
+        },
+        {
+          "type": "translation",
+          "prompt": "recept",
+          "answer": "prescription",
+          "accepted_answers": ["recipe"]
+        },
+        {
+          "type": "translation",
+          "prompt": "gyógyszertár",
+          "answer": "pharmacy"
+        },
+        {
+          "type": "translation",
+          "prompt": "orvos",
+          "answer": "doctor",
+          "accepted_answers": ["physician"]
+        },
+        {
+          "type": "translation",
+          "prompt": "fájni",
+          "answer": "to hurt"
+        },
+        {
+          "type": "translation",
+          "prompt": "jobban",
+          "answer": "better"
+        },
+        {
+          "type": "translation",
+          "prompt": "pihenés",
+          "answer": "rest"
+        },
+        {
+          "type": "translation",
+          "prompt": "Fáj a fejem.",
+          "answer": "My head hurts.",
+          "accepted_answers": ["I have a headache", "I have a pain in my head"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Fáj a hasa.",
+          "answer": "His stomach hurts.",
+          "accepted_answers": ["He has a stomach ache", "He has a stomachache"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Beteg vagyok, az ágyban maradok.",
+          "answer": "I'm sick, I'm staying in bed.",
+          "accepted_answers": ["I am sick, I'm staying in bed."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Láza van.",
+          "answer": "She has a fever."
+        },
+        {
+          "type": "translation",
+          "prompt": "Az orvoshoz megyek.",
+          "answer": "I'm going to the doctor.",
+          "accepted_answers": ["I am going to the doctor."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Reggel beveszed a gyógyszered?",
+          "answer": "Do you take your medicine in the morning?"
+        },
+        {
+          "type": "translation",
+          "prompt": "A gyógyszertár a kórház közelében van.",
+          "answer": "The pharmacy is near the hospital."
+        },
+        {
+          "type": "translation",
+          "prompt": "Influenzája van.",
+          "answer": "She has the flu."
+        },
+        {
+          "type": "translation",
+          "prompt": "My back hurts.",
+          "answer": "Fáj a hátam."
+        },
+        {
+          "type": "translation",
+          "prompt": "I have a toothache.",
+          "answer": "Fáj a fogam."
+        },
+        {
+          "type": "translation",
+          "prompt": "I am sick today.",
+          "answer": "Ma beteg vagyok."
+        },
+        {
+          "type": "translation",
+          "prompt": "I am better, thanks.",
+          "answer": "Ma már jobban vagyok, köszönöm."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'head':",
+          "options": [
+            "fej",
+            "has",
+            "hát",
+            "fog"
+          ],
+          "answer": "fej"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'stomach':",
+          "options": [
+            "has",
+            "hát",
+            "fog",
+            "test"
+          ],
+          "answer": "has"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'back':",
+          "options": [
+            "hát",
+            "fog",
+            "test",
+            "beteg"
+          ],
+          "answer": "hát"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tooth':",
+          "options": [
+            "fog",
+            "test",
+            "beteg",
+            "láz"
+          ],
+          "answer": "fog"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'body':",
+          "options": [
+            "test",
+            "beteg",
+            "láz",
+            "influenza"
+          ],
+          "answer": "test"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sick':",
+          "options": [
+            "beteg",
+            "láz",
+            "influenza",
+            "megfázás"
+          ],
+          "answer": "beteg"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fever':",
+          "options": [
+            "láz",
+            "influenza",
+            "megfázás",
+            "gyógyszer"
+          ],
+          "answer": "láz"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'flu':",
+          "options": [
+            "influenza",
+            "megfázás",
+            "gyógyszer",
+            "recept"
+          ],
+          "answer": "influenza"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ a fejem.",
+          "answer": "Fáj"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A hasam ___.",
+          "answer": "fáj"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A gyereknek láz___ van.",
+          "answer": "a"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az orvos ___ ír.",
+          "answer": "receptet"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A ___-ban gyógyszert veszek.",
+          "answer": "gyógyszertár"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ma beteg ___.",
+          "answer": "vagyok"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ma már ___ vagyok.",
+          "answer": "jobban"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hol van a ___?",
+          "answer": "orvos"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Free Time and Hobbies",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "hobby",
+          "translation": "hobby",
+          "accepted_translations": ["pastime"],
+          "pos": "noun",
+          "example": "Mik a hobbijaid?"
+        },
+        {
+          "word": "úszás",
+          "translation": "swimming",
+          "pos": "noun",
+          "example": "Az úszás a kedvenc sportom."
+        },
+        {
+          "word": "foci",
+          "translation": "soccer",
+          "accepted_translations": ["football"],
+          "pos": "noun",
+          "example": "A fivérem focizik."
+        },
+        {
+          "word": "tenisz",
+          "translation": "tennis",
+          "pos": "noun",
+          "example": "Hétvégén teniszezek."
+        },
+        {
+          "word": "kosárlabda",
+          "translation": "basketball",
+          "pos": "noun",
+          "example": "A gyerekek kosárlabdáznak."
+        },
+        {
+          "word": "bicikli",
+          "translation": "bicycle",
+          "accepted_translations": ["bike"],
+          "pos": "noun",
+          "example": "Biciklimegyek dolgozni."
+        },
+        {
+          "word": "gitár",
+          "translation": "guitar",
+          "pos": "noun",
+          "example": "A nővérem gitározik."
+        },
+        {
+          "word": "zongora",
+          "translation": "piano",
+          "pos": "noun",
+          "example": "A zongora a nappaliban van."
+        },
+        {
+          "word": "dal",
+          "translation": "song",
+          "pos": "noun",
+          "example": "A dal nagyon jó."
+        },
+        {
+          "word": "táncolni",
+          "translation": "to dance",
+          "pos": "verb",
+          "example": "Szeret táncolni."
+        },
+        {
+          "word": "énekelni",
+          "translation": "to sing",
+          "pos": "verb",
+          "example": "A gyerekek az iskolában énekelnek."
+        },
+        {
+          "word": "sportolni",
+          "translation": "to do sports",
+          "accepted_translations": ["to play sports"],
+          "pos": "verb",
+          "example": "Szeretek sportolni."
+        },
+        {
+          "word": "hétvége",
+          "translation": "weekend",
+          "pos": "noun",
+          "example": "Jó hétvégét!"
+        },
+        {
+          "word": "túra",
+          "translation": "hike",
+          "accepted_translations": ["hiking trip"],
+          "pos": "noun",
+          "example": "Nyáron túrázunk a hegyekben."
+        },
+        {
+          "word": "olvasás",
+          "translation": "reading",
+          "pos": "noun",
+          "example": "Szeretem az olvasást este."
+        },
+        {
+          "word": "kedvenc",
+          "translation": "favorite",
+          "accepted_translations": ["favourite"],
+          "pos": "adjective",
+          "example": "A kedvenc sportom a foci."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "hobby",
+          "answer": "hobby",
+          "accepted_answers": ["pastime"]
+        },
+        {
+          "type": "translation",
+          "prompt": "úszás",
+          "answer": "swimming"
+        },
+        {
+          "type": "translation",
+          "prompt": "foci",
+          "answer": "soccer",
+          "accepted_answers": ["football"]
+        },
+        {
+          "type": "translation",
+          "prompt": "tenisz",
+          "answer": "tennis"
+        },
+        {
+          "type": "translation",
+          "prompt": "kosárlabda",
+          "answer": "basketball"
+        },
+        {
+          "type": "translation",
+          "prompt": "bicikli",
+          "answer": "bicycle",
+          "accepted_answers": ["bike"]
+        },
+        {
+          "type": "translation",
+          "prompt": "gitár",
+          "answer": "guitar"
+        },
+        {
+          "type": "translation",
+          "prompt": "zongora",
+          "answer": "piano"
+        },
+        {
+          "type": "translation",
+          "prompt": "dal",
+          "answer": "song"
+        },
+        {
+          "type": "translation",
+          "prompt": "táncolni",
+          "answer": "to dance"
+        },
+        {
+          "type": "translation",
+          "prompt": "énekelni",
+          "answer": "to sing"
+        },
+        {
+          "type": "translation",
+          "prompt": "sportolni",
+          "answer": "to do sports",
+          "accepted_answers": ["to play sports"]
+        },
+        {
+          "type": "translation",
+          "prompt": "hétvége",
+          "answer": "weekend"
+        },
+        {
+          "type": "translation",
+          "prompt": "túra",
+          "answer": "hike",
+          "accepted_answers": ["hiking trip"]
+        },
+        {
+          "type": "translation",
+          "prompt": "olvasás",
+          "answer": "reading"
+        },
+        {
+          "type": "translation",
+          "prompt": "kedvenc",
+          "answer": "favorite",
+          "accepted_answers": ["favourite"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hétvégén biciklizem.",
+          "answer": "I ride my bike on weekends.",
+          "accepted_answers": ["I ride my bike at weekends."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hétfőn úszik.",
+          "answer": "She swims on Mondays.",
+          "accepted_answers": ["She does swimming on Mondays"]
+        },
+        {
+          "type": "translation",
+          "prompt": "A fivérem focizik.",
+          "answer": "My brother plays soccer.",
+          "accepted_answers": ["My brother plays football"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ez a dal tetszik.",
+          "answer": "I like this song."
+        },
+        {
+          "type": "translation",
+          "prompt": "A nővérem zongorázik.",
+          "answer": "My sister plays the piano."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mik a hobbijaid?",
+          "answer": "What are your hobbies?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Túrázunk a hegyekben.",
+          "answer": "We go hiking in the mountains.",
+          "accepted_answers": ["We hike in the mountains"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hétvégén inkább olvasok.",
+          "answer": "On weekends, I prefer to read.",
+          "accepted_answers": ["At the weekend, I prefer to read", "On the weekend, I prefer to read"]
+        },
+        {
+          "type": "translation",
+          "prompt": "I play tennis.",
+          "answer": "Teniszezem."
+        },
+        {
+          "type": "translation",
+          "prompt": "She sings a song.",
+          "answer": "Énekel egy dalt."
+        },
+        {
+          "type": "translation",
+          "prompt": "He plays the guitar.",
+          "answer": "Gitározik."
+        },
+        {
+          "type": "translation",
+          "prompt": "Reading is my favorite hobby.",
+          "answer": "Az olvasás a kedvenc hobbim."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hobby':",
+          "options": [
+            "hobby",
+            "úszás",
+            "foci",
+            "tenisz"
+          ],
+          "answer": "hobby"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'swimming':",
+          "options": [
+            "úszás",
+            "foci",
+            "tenisz",
+            "kosárlabda"
+          ],
+          "answer": "úszás"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'soccer':",
+          "options": [
+            "foci",
+            "tenisz",
+            "kosárlabda",
+            "bicikli"
+          ],
+          "answer": "foci"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tennis':",
+          "options": [
+            "tenisz",
+            "kosárlabda",
+            "bicikli",
+            "gitár"
+          ],
+          "answer": "tenisz"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'basketball':",
+          "options": [
+            "kosárlabda",
+            "bicikli",
+            "gitár",
+            "zongora"
+          ],
+          "answer": "kosárlabda"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bicycle':",
+          "options": [
+            "bicikli",
+            "gitár",
+            "zongora",
+            "dal"
+          ],
+          "answer": "bicikli"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'guitar':",
+          "options": [
+            "gitár",
+            "zongora",
+            "dal",
+            "táncolni"
+          ],
+          "answer": "gitár"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'piano':",
+          "options": [
+            "zongora",
+            "dal",
+            "táncolni",
+            "énekelni"
+          ],
+          "answer": "zongora"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ úszni.",
+          "answer": "Szeretek"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A foci a ___ sportom.",
+          "answer": "kedvenc"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ez a ___ nagyon jó.",
+          "answer": "dal"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Szeretek otthon ___.",
+          "answer": "olvasni"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A hétvégén tenisz___.",
+          "answer": "ezek"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A ___ a kertben játszik.",
+          "answer": "gyerek"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A zongora a nappali___ van.",
+          "answer": "ban"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A ___-ra megyünk vasárnap.",
+          "answer": "túra"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Calls and Messages",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "telefon",
+          "translation": "phone",
+          "accepted_translations": ["telephone"],
+          "pos": "noun",
+          "example": "A telefonom új."
+        },
+        {
+          "word": "szám",
+          "translation": "number",
+          "pos": "noun",
+          "example": "Mi a telefonszámod?"
+        },
+        {
+          "word": "hívni",
+          "translation": "to call",
+          "accepted_translations": ["to phone"],
+          "pos": "verb",
+          "example": "Fel akarom hívni az anyukámat."
+        },
+        {
+          "word": "válaszolni",
+          "translation": "to answer",
+          "accepted_translations": ["to reply"],
+          "pos": "verb",
+          "example": "Nem válaszol."
+        },
+        {
+          "word": "üzenet",
+          "translation": "message",
+          "accepted_translations": ["text message"],
+          "pos": "noun",
+          "example": "Üzenetet küldök neked."
+        },
+        {
+          "word": "küldeni",
+          "translation": "to send",
+          "pos": "verb",
+          "example": "Üzenetet küld a bátyjának."
+        },
+        {
+          "word": "kapni",
+          "translation": "to receive",
+          "accepted_translations": ["to get"],
+          "pos": "verb",
+          "example": "Sok üzenetet kapok."
+        },
+        {
+          "word": "válasz",
+          "translation": "answer",
+          "accepted_translations": ["reply"],
+          "pos": "noun",
+          "example": "A válasza nem."
+        },
+        {
+          "word": "kérdés",
+          "translation": "question",
+          "pos": "noun",
+          "example": "Kérdésem van."
+        },
+        {
+          "word": "e-mail",
+          "translation": "e-mail",
+          "accepted_translations": ["email"],
+          "pos": "noun",
+          "example": "Megkaptad az e-mailemet?"
+        },
+        {
+          "word": "fotó",
+          "translation": "photo",
+          "accepted_translations": ["picture"],
+          "pos": "noun",
+          "example": "A fotó szép."
+        },
+        {
+          "word": "videó",
+          "translation": "video",
+          "pos": "noun",
+          "example": "Videót nézek."
+        },
+        {
+          "word": "internet",
+          "translation": "internet",
+          "pos": "noun",
+          "example": "Az interneten vagyok."
+        },
+        {
+          "word": "hírek",
+          "translation": "news",
+          "pos": "noun",
+          "example": "Este híreket nézek."
+        },
+        {
+          "word": "vonal",
+          "translation": "line",
+          "pos": "noun",
+          "example": "A vonal foglalt."
+        },
+        {
+          "word": "online",
+          "translation": "online",
+          "pos": "adverb",
+          "example": "A fivérem mindig online van."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "telefon",
+          "answer": "phone",
+          "accepted_answers": ["telephone"]
+        },
+        {
+          "type": "translation",
+          "prompt": "szám",
+          "answer": "number"
+        },
+        {
+          "type": "translation",
+          "prompt": "hívni",
+          "answer": "to call",
+          "accepted_answers": ["to phone"]
+        },
+        {
+          "type": "translation",
+          "prompt": "válaszolni",
+          "answer": "to answer",
+          "accepted_answers": ["to reply"]
+        },
+        {
+          "type": "translation",
+          "prompt": "üzenet",
+          "answer": "message",
+          "accepted_answers": ["text message"]
+        },
+        {
+          "type": "translation",
+          "prompt": "küldeni",
+          "answer": "to send"
+        },
+        {
+          "type": "translation",
+          "prompt": "kapni",
+          "answer": "to receive",
+          "accepted_answers": ["to get"]
+        },
+        {
+          "type": "translation",
+          "prompt": "válasz",
+          "answer": "answer",
+          "accepted_answers": ["reply"]
+        },
+        {
+          "type": "translation",
+          "prompt": "kérdés",
+          "answer": "question"
+        },
+        {
+          "type": "translation",
+          "prompt": "e-mail",
+          "answer": "e-mail",
+          "accepted_answers": ["email"]
+        },
+        {
+          "type": "translation",
+          "prompt": "fotó",
+          "answer": "photo",
+          "accepted_answers": ["picture"]
+        },
+        {
+          "type": "translation",
+          "prompt": "videó",
+          "answer": "video"
+        },
+        {
+          "type": "translation",
+          "prompt": "internet",
+          "answer": "internet"
+        },
+        {
+          "type": "translation",
+          "prompt": "hírek",
+          "answer": "news"
+        },
+        {
+          "type": "translation",
+          "prompt": "vonal",
+          "answer": "line"
+        },
+        {
+          "type": "translation",
+          "prompt": "online",
+          "answer": "online"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ma este felhívlak.",
+          "answer": "I'll call you tonight.",
+          "accepted_answers": ["I am calling you tonight", "I call you tonight"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Válaszolsz nekem?",
+          "answer": "Can you answer me?",
+          "accepted_answers": ["Can you reply to me?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Üzenetet küld az anyjának.",
+          "answer": "He sends his mother a message.",
+          "accepted_answers": ["He sends a message to his mother"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Nem kaptam meg az e-mailedet.",
+          "answer": "I didn't get your e-mail.",
+          "accepted_answers": ["I did not get your e-mail", "I didn't receive your e-mail", "I did not receive your e-mail"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mi a telefonszámod?",
+          "answer": "What is your phone number?",
+          "accepted_answers": ["What's your phone number?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "A vonal foglalt.",
+          "answer": "The line is busy."
+        },
+        {
+          "type": "translation",
+          "prompt": "Fotókat nézek az interneten.",
+          "answer": "I look at photos on the internet.",
+          "accepted_answers": ["I look at photos on the Internet", "I look at pictures on the internet"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mindig online van.",
+          "answer": "She is always online."
+        },
+        {
+          "type": "translation",
+          "prompt": "I send you a photo.",
+          "answer": "Küldök neked egy fotót."
+        },
+        {
+          "type": "translation",
+          "prompt": "Can you call me tomorrow?",
+          "answer": "Holnap felhívsz?"
+        },
+        {
+          "type": "translation",
+          "prompt": "My phone number is new.",
+          "answer": "A telefonszámom új."
+        },
+        {
+          "type": "translation",
+          "prompt": "Will you play with me?",
+          "answer": "Játszol velem?"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'phone':",
+          "options": [
+            "telefon",
+            "szám",
+            "hívni",
+            "válaszolni"
+          ],
+          "answer": "telefon"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'number':",
+          "options": [
+            "szám",
+            "hívni",
+            "válaszolni",
+            "üzenet"
+          ],
+          "answer": "szám"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to call':",
+          "options": [
+            "hívni",
+            "válaszolni",
+            "üzenet",
+            "küldeni"
+          ],
+          "answer": "hívni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to answer':",
+          "options": [
+            "válaszolni",
+            "üzenet",
+            "küldeni",
+            "kapni"
+          ],
+          "answer": "válaszolni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'message':",
+          "options": [
+            "üzenet",
+            "küldeni",
+            "kapni",
+            "válasz"
+          ],
+          "answer": "üzenet"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to send':",
+          "options": [
+            "küldeni",
+            "kapni",
+            "válasz",
+            "kérdés"
+          ],
+          "answer": "küldeni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to receive':",
+          "options": [
+            "kapni",
+            "válasz",
+            "kérdés",
+            "e-mail"
+          ],
+          "answer": "kapni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'answer':",
+          "options": [
+            "válasz",
+            "kérdés",
+            "e-mail",
+            "fotó"
+          ],
+          "answer": "válasz"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ nekem egy üzenetet !",
+          "answer": "Küldj"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Írj ___ egy e-mailt !",
+          "answer": "nekem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hívj ___ !",
+          "answer": "fel"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A telefonszám___ nem jó.",
+          "answer": "om"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Válaszolok a kérdés___.",
+          "answer": "re"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ küldök a nagymamának.",
+          "answer": "Fotót"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A videó az internet___ van.",
+          "answer": "en"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A vonal most ___.",
+          "answer": "elfoglalt"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Stories and Experiences",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "történet",
+          "translation": "story",
+          "accepted_translations": ["tale"],
+          "pos": "noun",
+          "example": "A nagymama szép történeteket mesél."
+        },
+        {
+          "word": "kaland",
+          "translation": "adventure",
+          "pos": "noun",
+          "example": "A könyv egy nagy kalandról szól."
+        },
+        {
+          "word": "emlék",
+          "translation": "memory",
+          "accepted_translations": ["souvenir"],
+          "pos": "noun",
+          "example": "Ez egy jó emlék."
+        },
+        {
+          "word": "gyerekkor",
+          "translation": "childhood",
+          "pos": "noun",
+          "example": "A gyerekkoráról beszél."
+        },
+        {
+          "word": "nyaralás",
+          "translation": "vacation",
+          "accepted_translations": ["holiday"],
+          "pos": "noun",
+          "example": "A nyaralás júliusban kezdődik."
+        },
+        {
+          "word": "utazás",
+          "translation": "trip",
+          "accepted_translations": ["journey", "travel"],
+          "pos": "noun",
+          "example": "Ez egy nagyon szép utazás volt."
+        },
+        {
+          "word": "tenger",
+          "translation": "sea",
+          "pos": "noun",
+          "example": "Nyáron a tengerhez megyünk."
+        },
+        {
+          "word": "part",
+          "translation": "beach",
+          "accepted_translations": ["shore"],
+          "pos": "noun",
+          "example": "A gyerekek a parton játszanak."
+        },
+        {
+          "word": "hegy",
+          "translation": "mountain",
+          "pos": "noun",
+          "example": "A hegy télen szép."
+        },
+        {
+          "word": "ajándék",
+          "translation": "gift",
+          "accepted_translations": ["present"],
+          "pos": "noun",
+          "example": "Az ajándék az asztalon van."
+        },
+        {
+          "word": "alkalom",
+          "translation": "time",
+          "accepted_translations": ["occasion", "opportunity"],
+          "pos": "noun",
+          "example": "Hetente egyszer megyek a barátomhoz."
+        },
+        {
+          "word": "soha",
+          "translation": "never",
+          "pos": "adverb",
+          "example": "Soha nem iszik teát."
+        },
+        {
+          "word": "igaz",
+          "translation": "true",
+          "pos": "adjective",
+          "example": "Ez igaz?"
+        },
+        {
+          "word": "mesélni",
+          "translation": "to tell",
+          "pos": "verb",
+          "example": "Mesél egy történetet az anyjának."
+        },
+        {
+          "word": "gondolni",
+          "translation": "to think",
+          "pos": "verb",
+          "example": "A családomra gondolok."
+        },
+        {
+          "word": "vidám",
+          "translation": "happy",
+          "accepted_translations": ["cheerful", "merry"],
+          "pos": "adjective",
+          "example": "Nagyon vidámak."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "történet",
+          "answer": "story",
+          "accepted_answers": ["tale"]
+        },
+        {
+          "type": "translation",
+          "prompt": "kaland",
+          "answer": "adventure"
+        },
+        {
+          "type": "translation",
+          "prompt": "emlék",
+          "answer": "memory",
+          "accepted_answers": ["souvenir"]
+        },
+        {
+          "type": "translation",
+          "prompt": "gyerekkor",
+          "answer": "childhood"
+        },
+        {
+          "type": "translation",
+          "prompt": "nyaralás",
+          "answer": "vacation",
+          "accepted_answers": ["holiday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "utazás",
+          "answer": "trip",
+          "accepted_answers": ["journey", "travel"]
+        },
+        {
+          "type": "translation",
+          "prompt": "tenger",
+          "answer": "sea"
+        },
+        {
+          "type": "translation",
+          "prompt": "part",
+          "answer": "beach",
+          "accepted_answers": ["shore"]
+        },
+        {
+          "type": "translation",
+          "prompt": "hegy",
+          "answer": "mountain"
+        },
+        {
+          "type": "translation",
+          "prompt": "ajándék",
+          "answer": "gift",
+          "accepted_answers": ["present"]
+        },
+        {
+          "type": "translation",
+          "prompt": "alkalom",
+          "answer": "time",
+          "accepted_answers": ["occasion", "opportunity"]
+        },
+        {
+          "type": "translation",
+          "prompt": "soha",
+          "answer": "never"
+        },
+        {
+          "type": "translation",
+          "prompt": "igaz",
+          "answer": "true"
+        },
+        {
+          "type": "translation",
+          "prompt": "mesélni",
+          "answer": "to tell"
+        },
+        {
+          "type": "translation",
+          "prompt": "gondolni",
+          "answer": "to think"
+        },
+        {
+          "type": "translation",
+          "prompt": "vidám",
+          "answer": "happy",
+          "accepted_answers": ["cheerful", "merry"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Amikor kicsi voltam, Győrben laktam.",
+          "answer": "When I was little, I lived in Győr.",
+          "accepted_answers": ["When I was small, I lived in Győr", "When I was a child, I lived in Győr"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Minden vasárnap fociztunk.",
+          "answer": "We played soccer every Sunday.",
+          "accepted_answers": ["We used to play soccer every Sunday", "We played football every Sunday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "A nagymamám történeteket mesélt.",
+          "answer": "My grandmother told stories."
+        },
+        {
+          "type": "translation",
+          "prompt": "Tavaly nyáron a tengerhez mentünk.",
+          "answer": "Last summer, we went to the sea.",
+          "accepted_answers": ["Last summer we went to the sea"]
+        },
+        {
+          "type": "translation",
+          "prompt": "A születésnapomon havazott.",
+          "answer": "It was snowing on my birthday.",
+          "accepted_answers": ["It snowed on my birthday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Milyen szép kaland!",
+          "answer": "What a beautiful adventure!",
+          "accepted_answers": ["What a great adventure"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ez volt az első utazásom Magyarországon.",
+          "answer": "It was my first trip in Hungary.",
+          "accepted_answers": ["It was my first trip to Hungary"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Gyakran gondoltam a nagymamámra.",
+          "answer": "I often thought about my grandmother.",
+          "accepted_answers": ["I used to think often about my grandmother"]
+        },
+        {
+          "type": "translation",
+          "prompt": "We were happy.",
+          "answer": "Vidámak voltunk."
+        },
+        {
+          "type": "translation",
+          "prompt": "It was a beautiful memory.",
+          "answer": "Ez egy szép emlék volt."
+        },
+        {
+          "type": "translation",
+          "prompt": "I never drink coffee.",
+          "answer": "Soha nem iszom kávét."
+        },
+        {
+          "type": "translation",
+          "prompt": "My grandfather told a story.",
+          "answer": "A nagypapám mesélt egy történetet."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'story':",
+          "options": [
+            "történet",
+            "kaland",
+            "emlék",
+            "gyerekkor"
+          ],
+          "answer": "történet"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'adventure':",
+          "options": [
+            "kaland",
+            "emlék",
+            "gyerekkor",
+            "nyaralás"
+          ],
+          "answer": "kaland"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'memory':",
+          "options": [
+            "emlék",
+            "gyerekkor",
+            "nyaralás",
+            "utazás"
+          ],
+          "answer": "emlék"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'childhood':",
+          "options": [
+            "gyerekkor",
+            "nyaralás",
+            "utazás",
+            "tenger"
+          ],
+          "answer": "gyerekkor"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'vacation':",
+          "options": [
+            "nyaralás",
+            "utazás",
+            "tenger",
+            "part"
+          ],
+          "answer": "nyaralás"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'trip':",
+          "options": [
+            "utazás",
+            "tenger",
+            "part",
+            "hegy"
+          ],
+          "answer": "utazás"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sea':",
+          "options": [
+            "tenger",
+            "part",
+            "hegy",
+            "ajándék"
+          ],
+          "answer": "tenger"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'beach':",
+          "options": [
+            "part",
+            "hegy",
+            "ajándék",
+            "alkalom"
+          ],
+          "answer": "part"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Holnap ___ dolgozni.",
+          "answer": "fogok"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jövő héten ___ nyaralni.",
+          "answer": "fogunk"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tegnap egész nap ___.",
+          "answer": "dolgoztam"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A történet ___ igaz.",
+          "answer": "volt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A ___ mindig vidám volt.",
+          "answer": "gyerekkor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ez a ___ nagyon jó.",
+          "answer": "történet"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ez a ___ a Balatonon történt.",
+          "answer": "kaland"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A nyaralá___ sok fotót készítettünk.",
+          "answer": "son"
+        }
+      ]
     }
   ]
 }
