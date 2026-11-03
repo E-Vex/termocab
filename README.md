@@ -7,7 +7,7 @@ reviews, streaks — fully offline, fully local, no account, no network.
 Plain text everywhere: content is JSON, your progress is a file you can
 `cat`. UX modeled on git — direct subcommands, no menus.
 
-Ten courses ship today: French (ten stages, 153 words, 397
+Eleven courses ship today: French (ten stages, 153 words, 397
 exercises), Spanish (ten stages, 153 words, 417 exercises), German
 (ten stages, 153 words, 436 exercises — nouns with their articles,
 modal-verb drills, umlauts and the sharp s), Italian (ten stages,
@@ -39,23 +39,34 @@ soft ğ folds like any accent while dotless ı stays closed the way
 one word that is both "a" and "one", the plural suffix blanked
 where the vowel harmony lives, istemek + the -mek/-mak infinitive,
 homonym translations on yemek ay kız, every Turkish letter
-â ç ğ ı ö ş ü alive in real content) — same engine, same rules,
+â ç ğ ı ö ş ü alive in real content) and Icelandic (ten stages, 153
+words, 438 exercises — the eleventh course and the cleanest
+prediction payoff yet: zero engine changes, every letter already on
+file from D9 — the acutes á é í ó ú ý and the ö fold like any accent,
+æ opens as the ligature it shares with French's œ, and þ and ð stay
+closed the way ø and the Turkish ı do — bare nouns, the three-gender
+pronoun drill hann/hún/það, the enclitic definite article blanked
+where it lives at the end of the noun, að + the infinitive with the
+particle kept in the dictionary form, and the past -ði with its
+closed ð, every Icelandic letter alive in real content) — same
+engine, same rules,
 same forgiving grading for all of them. Stages 6–10 (the elementary
-wave) share one skeleton across the ten courses — food, home,
+wave) share one skeleton across the eleven courses — food, home,
 routine and weather, shopping and travel, yesterday and tomorrow —
 while each course keeps its own signature drills: the partitive in
 French, hay in Spanish, the future bracket werden … lesen in German,
 the passato prossimo in Italian, the w/na locative split and the
 gendered past -łem/-łam in Polish, the enclitic article again in
 Romanian, the Brazilian tem in Portuguese, ska in Swedish, the
--ban/-ben harmony in Hungarian, and var/yok plus the four-way
--iyor and -dı harmonies in Turkish.
+-ban/-ben harmony in Hungarian, var/yok plus the four-way
+-iyor and -dı harmonies in Turkish, and the í/á split and the past
+-ði with its closed ð in Icelandic.
 
 ## Install & run
 
 ```
 cargo install --path .     # or: cargo install --git https://github.com/E-Vex/termocab
-termocab start french      # the ten shipped courses are built into the binary
+termocab start french      # the eleven shipped courses are built into the binary
 termocab list-langs        # every language available on this machine
 ```
 
@@ -71,7 +82,7 @@ cargo build --release && ./target/release/termocab start french
                                                         # works from any directory
 ```
 
-The ten shipped courses are compiled into the binary, so a fresh
+The eleven shipped courses are compiled into the binary, so a fresh
 install works with zero setup, from any directory. Content is looked
 up in this order (first hit wins):
 
@@ -175,7 +186,14 @@ accent (`soguk` counts with `soğuk`, and `kardes` with `kardeş`
 through an entry that was already on file for Romanian), while
 dotless ı stays closed the way ø does — `hayir` is wrong for
 `hayır`, never hinted: two different vowels, not one word spelled
-twice.
+twice; and Icelandic collected the whole payoff with nothing new at
+all — the acutes and the ö were in the D9 table from the start
+(`ja` counts with `já`, `tolva` with `tölva` as the hint), æ rides
+the ligature fold the table shipped with (`hae` counts with `hæ`
+as the hint), and þ and ð stay closed exactly as D9 ruled on day
+one, the ı precedent reaffirmed: `godur` is wrong for `góður`,
+never hinted — while the letters around a closed one still fold,
+so `þu` counts with `þú` and `goður` with `góður` as the hint.
 `accepted_answers` lists alternative correct spellings, and
 `accepted_translations` on a vocabulary entry lists alternative correct
 translations a review will accept — reviewing `salut` with "hello" is
