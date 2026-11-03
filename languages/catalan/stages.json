@@ -3821,6 +3821,1960 @@
           "answer": "Demà vaig a treballar."
         }
       ]
+    },
+    {
+      "id": 11,
+      "title": "Work and School",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "l'oficina",
+          "translation": "the office",
+          "pos": "noun (feminine)",
+          "example": "Vaig a l'oficina a les vuit."
+        },
+        {
+          "word": "l'empresa",
+          "translation": "the company",
+          "pos": "noun (feminine)",
+          "example": "Treballo en una empresa gran."
+        },
+        {
+          "word": "el director",
+          "translation": "the boss",
+          "accepted_translations": ["the manager"],
+          "pos": "noun (masculine)",
+          "example": "El director és a la seva oficina."
+        },
+        {
+          "word": "el company",
+          "translation": "the colleague",
+          "pos": "noun (masculine)",
+          "example": "La meva companya viu a prop del parc."
+        },
+        {
+          "word": "la reunió",
+          "translation": "the meeting",
+          "pos": "noun (feminine)",
+          "example": "La reunió comença a les nou."
+        },
+        {
+          "word": "el sou",
+          "translation": "the salary",
+          "pos": "noun (masculine)",
+          "example": "El meu sou és bo."
+        },
+        {
+          "word": "el treball",
+          "translation": "the job",
+          "accepted_translations": ["the work"],
+          "pos": "noun (masculine)",
+          "example": "Quin és el teu treball?"
+        },
+        {
+          "word": "la pausa",
+          "translation": "the break",
+          "pos": "noun (feminine)",
+          "example": "Faig una pausa a les onze."
+        },
+        {
+          "word": "la classe",
+          "translation": "the class",
+          "pos": "noun (feminine)",
+          "example": "Parlem català a classe."
+        },
+        {
+          "word": "l'assignatura",
+          "translation": "the subject",
+          "pos": "noun (feminine)",
+          "example": "L'assignatura preferida és la història."
+        },
+        {
+          "word": "els deures",
+          "translation": "the homework",
+          "pos": "noun (plural)",
+          "example": "Faig els deures al vespre."
+        },
+        {
+          "word": "l'examen",
+          "translation": "the exam",
+          "accepted_translations": ["the test"],
+          "pos": "noun (masculine)",
+          "example": "L'examen de català és demà."
+        },
+        {
+          "word": "l'ordinador",
+          "translation": "the computer",
+          "pos": "noun (masculine)",
+          "example": "El meu ordinador és nou."
+        },
+        {
+          "word": "ocupat",
+          "translation": "busy",
+          "pos": "adjective",
+          "example": "El meu pare està sempre ocupat."
+        },
+        {
+          "word": "la cita",
+          "translation": "the appointment",
+          "pos": "noun (feminine)",
+          "example": "Tinc una cita amb el metge."
+        },
+        {
+          "word": "l'escriptori",
+          "translation": "the desk",
+          "pos": "noun (masculine)",
+          "example": "L'ordinador és a l'escriptori."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "l'oficina",
+          "answer": "the office"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'empresa",
+          "answer": "the company"
+        },
+        {
+          "type": "translation",
+          "prompt": "el director",
+          "answer": "the boss",
+          "accepted_answers": ["the manager"]
+        },
+        {
+          "type": "translation",
+          "prompt": "el company",
+          "answer": "the colleague"
+        },
+        {
+          "type": "translation",
+          "prompt": "la reunió",
+          "answer": "the meeting"
+        },
+        {
+          "type": "translation",
+          "prompt": "el sou",
+          "answer": "the salary"
+        },
+        {
+          "type": "translation",
+          "prompt": "el treball",
+          "answer": "the job",
+          "accepted_answers": ["the work"]
+        },
+        {
+          "type": "translation",
+          "prompt": "la pausa",
+          "answer": "the break"
+        },
+        {
+          "type": "translation",
+          "prompt": "la classe",
+          "answer": "the class"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'assignatura",
+          "answer": "the subject"
+        },
+        {
+          "type": "translation",
+          "prompt": "els deures",
+          "answer": "the homework"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'examen",
+          "answer": "the exam",
+          "accepted_answers": ["the test"]
+        },
+        {
+          "type": "translation",
+          "prompt": "l'ordinador",
+          "answer": "the computer"
+        },
+        {
+          "type": "translation",
+          "prompt": "ocupat",
+          "answer": "busy"
+        },
+        {
+          "type": "translation",
+          "prompt": "la cita",
+          "answer": "the appointment"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'escriptori",
+          "answer": "the desk"
+        },
+        {
+          "type": "translation",
+          "prompt": "Vaig a l'oficina a les vuit.",
+          "answer": "I go to the office at eight.",
+          "accepted_answers": ["I go to the office at eight o'clock"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Tinc una reunió amb el director.",
+          "answer": "I have a meeting with the boss."
+        },
+        {
+          "type": "translation",
+          "prompt": "El meu company parla tres llengües.",
+          "answer": "My colleague speaks three languages."
+        },
+        {
+          "type": "translation",
+          "prompt": "Tenim molta feina aquesta setmana.",
+          "answer": "We have a lot of work this week."
+        },
+        {
+          "type": "translation",
+          "prompt": "Els deures són difícils.",
+          "answer": "The homework is difficult.",
+          "accepted_answers": ["The homework is hard"]
+        },
+        {
+          "type": "translation",
+          "prompt": "He escrit un correu electrònic al cap.",
+          "answer": "I wrote an e-mail to the boss.",
+          "accepted_answers": ["I wrote an email to the boss"]
+        },
+        {
+          "type": "translation",
+          "prompt": "L'examen és la setmana vinent.",
+          "answer": "The exam is next week."
+        },
+        {
+          "type": "translation",
+          "prompt": "Estic molt ocupat avui.",
+          "answer": "I'm very busy today.",
+          "accepted_answers": ["I am very busy today."]
+        },
+        {
+          "type": "translation",
+          "prompt": "My salary is good.",
+          "answer": "El meu sou és bo."
+        },
+        {
+          "type": "translation",
+          "prompt": "The class starts at nine.",
+          "answer": "La classe comença a les nou."
+        },
+        {
+          "type": "translation",
+          "prompt": "I want a break.",
+          "answer": "Vull una pausa."
+        },
+        {
+          "type": "translation",
+          "prompt": "My computer is new.",
+          "answer": "El meu ordinador és nou."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the office':",
+          "options": [
+            "l'oficina",
+            "l'empresa",
+            "el director",
+            "el company"
+          ],
+          "answer": "l'oficina"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the company':",
+          "options": [
+            "l'empresa",
+            "el director",
+            "el company",
+            "la reunió"
+          ],
+          "answer": "l'empresa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the boss':",
+          "options": [
+            "el director",
+            "el company",
+            "la reunió",
+            "el sou"
+          ],
+          "answer": "el director"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the colleague':",
+          "options": [
+            "el company",
+            "la reunió",
+            "el sou",
+            "el treball"
+          ],
+          "answer": "el company"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the meeting':",
+          "options": [
+            "la reunió",
+            "el sou",
+            "el treball",
+            "la pausa"
+          ],
+          "answer": "la reunió"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the salary':",
+          "options": [
+            "el sou",
+            "el treball",
+            "la pausa",
+            "la classe"
+          ],
+          "answer": "el sou"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the job':",
+          "options": [
+            "el treball",
+            "la pausa",
+            "la classe",
+            "l'assignatura"
+          ],
+          "answer": "el treball"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the break':",
+          "options": [
+            "la pausa",
+            "la classe",
+            "l'assignatura",
+            "els deures"
+          ],
+          "answer": "la pausa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "He de ___ avui.",
+          "answer": "treballar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Has de fer els ___.",
+          "answer": "deures"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hem d'anar a la ___ a les nou.",
+          "answer": "reunió"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ d'estudiar per l'examen.",
+          "answer": "He"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El ___ és a l'oficina.",
+          "answer": "cap"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Treballo en una ___ gran.",
+          "answer": "empresa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "L'examen és ___.",
+          "answer": "demà"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tinc una ___ amb el metge.",
+          "answer": "cita"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Health and the Body",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "el cap",
+          "translation": "the head",
+          "pos": "noun (masculine)",
+          "example": "Em fa mal el cap."
+        },
+        {
+          "word": "la panxa",
+          "translation": "the stomach",
+          "accepted_translations": ["the tummy"],
+          "pos": "noun (feminine)",
+          "example": "He menjat massa i em fa mal la panxa."
+        },
+        {
+          "word": "l'esquena",
+          "translation": "the back",
+          "pos": "noun (feminine)",
+          "example": "La meva mare té mal d'esquena."
+        },
+        {
+          "word": "la dent",
+          "translation": "the tooth",
+          "accepted_translations": ["the teeth"],
+          "pos": "noun (feminine)",
+          "example": "La dent fa mal."
+        },
+        {
+          "word": "el cos",
+          "translation": "the body",
+          "pos": "noun (masculine)",
+          "example": "El meu cos està cansat."
+        },
+        {
+          "word": "malalt",
+          "translation": "sick",
+          "accepted_translations": ["ill"],
+          "pos": "adjective",
+          "example": "Estic malalt, resto al llit."
+        },
+        {
+          "word": "la febre",
+          "translation": "the fever",
+          "pos": "noun (feminine)",
+          "example": "Té febre."
+        },
+        {
+          "word": "la grip",
+          "translation": "the flu",
+          "pos": "noun (feminine)",
+          "example": "Té la grip i dorm."
+        },
+        {
+          "word": "el refredat",
+          "translation": "the cold",
+          "pos": "noun (masculine)",
+          "example": "Tinc un refredat a l'hivern."
+        },
+        {
+          "word": "el medicament",
+          "translation": "the medicine",
+          "accepted_translations": ["the medication"],
+          "pos": "noun (masculine)",
+          "example": "Preno el medicament al matí."
+        },
+        {
+          "word": "la recepta",
+          "translation": "the prescription",
+          "accepted_translations": ["the recipe"],
+          "pos": "noun (feminine)",
+          "example": "El metge escriu una recepta."
+        },
+        {
+          "word": "la farmàcia",
+          "translation": "the pharmacy",
+          "pos": "noun (feminine)",
+          "example": "La farmàcia és a prop de l'hospital."
+        },
+        {
+          "word": "el metge",
+          "translation": "the doctor",
+          "accepted_translations": ["the physician"],
+          "pos": "noun (masculine)",
+          "example": "Vaig al metge avui."
+        },
+        {
+          "word": "fer mal",
+          "translation": "to hurt",
+          "pos": "phrase",
+          "example": "Tens mal al cap?"
+        },
+        {
+          "word": "millor",
+          "translation": "better",
+          "pos": "adverb",
+          "example": "Avui estic millor."
+        },
+        {
+          "word": "el descans",
+          "translation": "the rest",
+          "pos": "noun (masculine)",
+          "example": "Necessites descans."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "el cap",
+          "answer": "the head"
+        },
+        {
+          "type": "translation",
+          "prompt": "la panxa",
+          "answer": "the stomach",
+          "accepted_answers": ["the tummy"]
+        },
+        {
+          "type": "translation",
+          "prompt": "l'esquena",
+          "answer": "the back"
+        },
+        {
+          "type": "translation",
+          "prompt": "la dent",
+          "answer": "the tooth",
+          "accepted_answers": ["the teeth"]
+        },
+        {
+          "type": "translation",
+          "prompt": "el cos",
+          "answer": "the body"
+        },
+        {
+          "type": "translation",
+          "prompt": "malalt",
+          "answer": "sick",
+          "accepted_answers": ["ill"]
+        },
+        {
+          "type": "translation",
+          "prompt": "la febre",
+          "answer": "the fever"
+        },
+        {
+          "type": "translation",
+          "prompt": "la grip",
+          "answer": "the flu"
+        },
+        {
+          "type": "translation",
+          "prompt": "el refredat",
+          "answer": "the cold"
+        },
+        {
+          "type": "translation",
+          "prompt": "el medicament",
+          "answer": "the medicine",
+          "accepted_answers": ["the medication"]
+        },
+        {
+          "type": "translation",
+          "prompt": "la recepta",
+          "answer": "the prescription",
+          "accepted_answers": ["the recipe"]
+        },
+        {
+          "type": "translation",
+          "prompt": "la farmàcia",
+          "answer": "the pharmacy"
+        },
+        {
+          "type": "translation",
+          "prompt": "el metge",
+          "answer": "the doctor",
+          "accepted_answers": ["the physician"]
+        },
+        {
+          "type": "translation",
+          "prompt": "fer mal",
+          "answer": "to hurt"
+        },
+        {
+          "type": "translation",
+          "prompt": "millor",
+          "answer": "better"
+        },
+        {
+          "type": "translation",
+          "prompt": "el descans",
+          "answer": "the rest"
+        },
+        {
+          "type": "translation",
+          "prompt": "Em fa mal el cap.",
+          "answer": "My head hurts.",
+          "accepted_answers": ["I have a headache", "I have a pain in my head"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Li fa mal la panxa.",
+          "answer": "His stomach hurts.",
+          "accepted_answers": ["He has a stomach ache", "He has a stomachache"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Estic malalt i resto al llit.",
+          "answer": "I'm sick, I'm staying in bed.",
+          "accepted_answers": ["I am sick, I'm staying in bed."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Té febre.",
+          "answer": "She has a fever."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vaig al metge.",
+          "answer": "I'm going to the doctor.",
+          "accepted_answers": ["I am going to the doctor."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Prens el medicament al matí?",
+          "answer": "Do you take your medicine in the morning?"
+        },
+        {
+          "type": "translation",
+          "prompt": "La farmàcia és a prop de l'hospital.",
+          "answer": "The pharmacy is near the hospital."
+        },
+        {
+          "type": "translation",
+          "prompt": "Té la grip.",
+          "answer": "She has the flu."
+        },
+        {
+          "type": "translation",
+          "prompt": "My back hurts.",
+          "answer": "Em fa mal l'esquena."
+        },
+        {
+          "type": "translation",
+          "prompt": "I have a toothache.",
+          "answer": "Em fa mal la dent."
+        },
+        {
+          "type": "translation",
+          "prompt": "I am sick today.",
+          "answer": "Avui estic malalt."
+        },
+        {
+          "type": "translation",
+          "prompt": "I am better, thanks.",
+          "answer": "Estic millor, gràcies."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the head':",
+          "options": [
+            "el cap",
+            "la panxa",
+            "l'esquena",
+            "la dent"
+          ],
+          "answer": "el cap"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the stomach':",
+          "options": [
+            "la panxa",
+            "l'esquena",
+            "la dent",
+            "el cos"
+          ],
+          "answer": "la panxa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the back':",
+          "options": [
+            "l'esquena",
+            "la dent",
+            "el cos",
+            "malalt"
+          ],
+          "answer": "l'esquena"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the tooth':",
+          "options": [
+            "la dent",
+            "el cos",
+            "malalt",
+            "la febre"
+          ],
+          "answer": "la dent"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the body':",
+          "options": [
+            "el cos",
+            "malalt",
+            "la febre",
+            "la grip"
+          ],
+          "answer": "el cos"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sick':",
+          "options": [
+            "malalt",
+            "la febre",
+            "la grip",
+            "el refredat"
+          ],
+          "answer": "malalt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the fever':",
+          "options": [
+            "la febre",
+            "la grip",
+            "el refredat",
+            "el medicament"
+          ],
+          "answer": "la febre"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the flu':",
+          "options": [
+            "la grip",
+            "el refredat",
+            "el medicament",
+            "la recepta"
+          ],
+          "answer": "la grip"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Em ___ mal el cap.",
+          "answer": "fa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "M'he caigut i em fa mal l'___.",
+          "answer": "esquena"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "He menjat massa i em fa mal la ___.",
+          "answer": "panxa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tinc ___.",
+          "answer": "febre"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El metge escriu una ___.",
+          "answer": "recepta"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Estic ___ avui.",
+          "answer": "malalt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El medicament és de la ___.",
+          "answer": "farmàcia"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Necessito ___.",
+          "answer": "descans"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Free Time and Hobbies",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "l'afició",
+          "translation": "the hobby",
+          "accepted_translations": ["the pastime"],
+          "pos": "noun (feminine)",
+          "example": "Quines són les teves aficions?"
+        },
+        {
+          "word": "la natació",
+          "translation": "the swimming",
+          "pos": "noun (feminine)",
+          "example": "La natació és el meu esport preferit."
+        },
+        {
+          "word": "el futbol",
+          "translation": "the soccer",
+          "accepted_translations": ["the football"],
+          "pos": "noun (masculine)",
+          "example": "El meu germà juga al futbol."
+        },
+        {
+          "word": "el tennis",
+          "translation": "the tennis",
+          "pos": "noun (masculine)",
+          "example": "Joc al tennis el cap de setmana."
+        },
+        {
+          "word": "el bàsquet",
+          "translation": "the basketball",
+          "pos": "noun (masculine)",
+          "example": "Els nens juguen al bàsquet."
+        },
+        {
+          "word": "la bicicleta",
+          "translation": "the bicycle",
+          "accepted_translations": ["the bike"],
+          "pos": "noun (feminine)",
+          "example": "Vaig en bicicleta a la feina."
+        },
+        {
+          "word": "la guitarra",
+          "translation": "the guitar",
+          "pos": "noun (feminine)",
+          "example": "La meva germana toca la guitarra."
+        },
+        {
+          "word": "el piano",
+          "translation": "the piano",
+          "pos": "noun (masculine)",
+          "example": "El piano és al saló."
+        },
+        {
+          "word": "la cançó",
+          "translation": "the song",
+          "pos": "noun (feminine)",
+          "example": "La cançó és bonica."
+        },
+        {
+          "word": "ballar",
+          "translation": "to dance",
+          "pos": "verb",
+          "example": "Ella vol ballar."
+        },
+        {
+          "word": "cantar",
+          "translation": "to sing",
+          "pos": "verb",
+          "example": "Els nens canten al col·legi."
+        },
+        {
+          "word": "jugar",
+          "translation": "to play",
+          "pos": "verb",
+          "example": "Vull jugar al futbol."
+        },
+        {
+          "word": "el cap de setmana",
+          "translation": "the weekend",
+          "pos": "noun (masculine)",
+          "example": "Bon cap de setmana!"
+        },
+        {
+          "word": "l'excursió",
+          "translation": "the hike",
+          "accepted_translations": ["the excursion"],
+          "pos": "noun (feminine)",
+          "example": "A l'estiu fem una excursió a la muntanya."
+        },
+        {
+          "word": "la lectura",
+          "translation": "the reading",
+          "pos": "noun (feminine)",
+          "example": "M'agrada la lectura al vespre."
+        },
+        {
+          "word": "preferit",
+          "translation": "favorite",
+          "accepted_translations": ["favourite"],
+          "pos": "adjective",
+          "example": "El meu esport preferit és el futbol."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "l'afició",
+          "answer": "the hobby",
+          "accepted_answers": ["the pastime"]
+        },
+        {
+          "type": "translation",
+          "prompt": "la natació",
+          "answer": "the swimming"
+        },
+        {
+          "type": "translation",
+          "prompt": "el futbol",
+          "answer": "the soccer",
+          "accepted_answers": ["the football"]
+        },
+        {
+          "type": "translation",
+          "prompt": "el tennis",
+          "answer": "the tennis"
+        },
+        {
+          "type": "translation",
+          "prompt": "el bàsquet",
+          "answer": "the basketball"
+        },
+        {
+          "type": "translation",
+          "prompt": "la bicicleta",
+          "answer": "the bicycle",
+          "accepted_answers": ["the bike"]
+        },
+        {
+          "type": "translation",
+          "prompt": "la guitarra",
+          "answer": "the guitar"
+        },
+        {
+          "type": "translation",
+          "prompt": "el piano",
+          "answer": "the piano"
+        },
+        {
+          "type": "translation",
+          "prompt": "la cançó",
+          "answer": "the song"
+        },
+        {
+          "type": "translation",
+          "prompt": "ballar",
+          "answer": "to dance"
+        },
+        {
+          "type": "translation",
+          "prompt": "cantar",
+          "answer": "to sing"
+        },
+        {
+          "type": "translation",
+          "prompt": "jugar",
+          "answer": "to play"
+        },
+        {
+          "type": "translation",
+          "prompt": "el cap de setmana",
+          "answer": "the weekend"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'excursió",
+          "answer": "the hike",
+          "accepted_answers": ["the excursion"]
+        },
+        {
+          "type": "translation",
+          "prompt": "la lectura",
+          "answer": "the reading"
+        },
+        {
+          "type": "translation",
+          "prompt": "preferit",
+          "answer": "favorite",
+          "accepted_answers": ["favourite"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vaig en bicicleta el cap de setmana.",
+          "answer": "I ride my bike on weekends.",
+          "accepted_answers": ["I ride my bike at weekends."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ella fa natació els dilluns.",
+          "answer": "She does swimming on Mondays.",
+          "accepted_answers": ["She swims on Mondays."]
+        },
+        {
+          "type": "translation",
+          "prompt": "El meu germà juga al futbol.",
+          "answer": "My brother plays soccer.",
+          "accepted_answers": ["My brother plays football"]
+        },
+        {
+          "type": "translation",
+          "prompt": "M'agrada aquesta cançó.",
+          "answer": "I like this song."
+        },
+        {
+          "type": "translation",
+          "prompt": "La meva germana toca el piano.",
+          "answer": "My sister plays the piano."
+        },
+        {
+          "type": "translation",
+          "prompt": "Quines són les teves aficions?",
+          "answer": "What are your hobbies?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Fem una excursió a la muntanya.",
+          "answer": "We go hiking in the mountains.",
+          "accepted_answers": ["We hike in the mountains"]
+        },
+        {
+          "type": "translation",
+          "prompt": "El cap de setmana prefereixo llegir.",
+          "answer": "On weekends, I prefer to read.",
+          "accepted_answers": ["At the weekend, I prefer to read", "On the weekend, I prefer to read"]
+        },
+        {
+          "type": "translation",
+          "prompt": "I play tennis.",
+          "answer": "Joc al tennis."
+        },
+        {
+          "type": "translation",
+          "prompt": "She sings a song.",
+          "answer": "Ella canta una cançó."
+        },
+        {
+          "type": "translation",
+          "prompt": "He plays the guitar.",
+          "answer": "Ell toca la guitarra."
+        },
+        {
+          "type": "translation",
+          "prompt": "Reading is my favorite hobby.",
+          "answer": "La lectura és la meva afició preferida."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the hobby':",
+          "options": [
+            "l'afició",
+            "la natació",
+            "el futbol",
+            "el tennis"
+          ],
+          "answer": "l'afició"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the swimming':",
+          "options": [
+            "la natació",
+            "el futbol",
+            "el tennis",
+            "el bàsquet"
+          ],
+          "answer": "la natació"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the soccer':",
+          "options": [
+            "el futbol",
+            "el tennis",
+            "el bàsquet",
+            "la bicicleta"
+          ],
+          "answer": "el futbol"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the tennis':",
+          "options": [
+            "el tennis",
+            "el bàsquet",
+            "la bicicleta",
+            "la guitarra"
+          ],
+          "answer": "el tennis"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the basketball':",
+          "options": [
+            "el bàsquet",
+            "la bicicleta",
+            "la guitarra",
+            "el piano"
+          ],
+          "answer": "el bàsquet"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the bicycle':",
+          "options": [
+            "la bicicleta",
+            "la guitarra",
+            "el piano",
+            "la cançó"
+          ],
+          "answer": "la bicicleta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the guitar':",
+          "options": [
+            "la guitarra",
+            "el piano",
+            "la cançó",
+            "ballar"
+          ],
+          "answer": "la guitarra"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the piano':",
+          "options": [
+            "el piano",
+            "la cançó",
+            "ballar",
+            "cantar"
+          ],
+          "answer": "el piano"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "M'agrada ___ futbol.",
+          "answer": "jugar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "L'afició preferida és la ___.",
+          "answer": "natació"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ agrada ballar.",
+          "answer": "M'"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El meu germà juga al ___ al parc.",
+          "answer": "futbol"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La ___ està al saló.",
+          "answer": "guitarra"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Canto una ___ bonica.",
+          "answer": "cançó"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El cap de setmana fem una ___ a la muntanya.",
+          "answer": "excursió"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La lectura és la meva afició ___.",
+          "answer": "preferida"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Calls and Messages",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "el telèfon",
+          "translation": "the phone",
+          "accepted_translations": ["the telephone"],
+          "pos": "noun (masculine)",
+          "example": "El meu telèfon és nou."
+        },
+        {
+          "word": "el número",
+          "translation": "the number",
+          "pos": "noun (masculine)",
+          "example": "Quin és el teu número de telèfon?"
+        },
+        {
+          "word": "trucar",
+          "translation": "to call",
+          "accepted_translations": ["to phone"],
+          "pos": "verb",
+          "example": "Vull trucar la meva mare."
+        },
+        {
+          "word": "respondre",
+          "translation": "to answer",
+          "accepted_translations": ["to reply"],
+          "pos": "verb",
+          "example": "Ell no respon."
+        },
+        {
+          "word": "el missatge",
+          "translation": "the message",
+          "accepted_translations": ["the text message"],
+          "pos": "noun (masculine)",
+          "example": "T'envio un missatge."
+        },
+        {
+          "word": "enviar",
+          "translation": "to send",
+          "pos": "verb",
+          "example": "Ella envia un missatge al seu germà."
+        },
+        {
+          "word": "rebre",
+          "translation": "to receive",
+          "accepted_translations": ["to get"],
+          "pos": "verb",
+          "example": "Rebo molts missatges."
+        },
+        {
+          "word": "la resposta",
+          "translation": "the answer",
+          "accepted_translations": ["the reply"],
+          "pos": "noun (feminine)",
+          "example": "La seva resposta és no."
+        },
+        {
+          "word": "el correu electrònic",
+          "translation": "the e-mail",
+          "accepted_translations": ["the email"],
+          "pos": "noun (masculine)",
+          "example": "Has rebut el meu correu electrònic?"
+        },
+        {
+          "word": "la foto",
+          "translation": "the photo",
+          "accepted_translations": ["the picture"],
+          "pos": "noun (feminine)",
+          "example": "La foto és bonica."
+        },
+        {
+          "word": "el vídeo",
+          "translation": "the video",
+          "pos": "noun (masculine)",
+          "example": "Miro un vídeo."
+        },
+        {
+          "word": "internet",
+          "translation": "internet",
+          "pos": "noun",
+          "example": "Sóc a internet."
+        },
+        {
+          "word": "la línia",
+          "translation": "the line",
+          "pos": "noun (feminine)",
+          "example": "La línia està ocupada."
+        },
+        {
+          "word": "les notícies",
+          "translation": "the news",
+          "pos": "noun (plural)",
+          "example": "Miro les notícies al vespre."
+        },
+        {
+          "word": "la pregunta",
+          "translation": "the question",
+          "pos": "noun (feminine)",
+          "example": "Tinc una pregunta."
+        },
+        {
+          "word": "connectat",
+          "translation": "online",
+          "accepted_translations": ["connected"],
+          "pos": "adjective",
+          "example": "El meu germà està sempre connectat."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "el telèfon",
+          "answer": "the phone",
+          "accepted_answers": ["the telephone"]
+        },
+        {
+          "type": "translation",
+          "prompt": "el número",
+          "answer": "the number"
+        },
+        {
+          "type": "translation",
+          "prompt": "trucar",
+          "answer": "to call",
+          "accepted_answers": ["to phone"]
+        },
+        {
+          "type": "translation",
+          "prompt": "respondre",
+          "answer": "to answer",
+          "accepted_answers": ["to reply"]
+        },
+        {
+          "type": "translation",
+          "prompt": "el missatge",
+          "answer": "the message",
+          "accepted_answers": ["the text message"]
+        },
+        {
+          "type": "translation",
+          "prompt": "enviar",
+          "answer": "to send"
+        },
+        {
+          "type": "translation",
+          "prompt": "rebre",
+          "answer": "to receive",
+          "accepted_answers": ["to get"]
+        },
+        {
+          "type": "translation",
+          "prompt": "la resposta",
+          "answer": "the answer",
+          "accepted_answers": ["the reply"]
+        },
+        {
+          "type": "translation",
+          "prompt": "el correu electrònic",
+          "answer": "the e-mail",
+          "accepted_answers": ["the email"]
+        },
+        {
+          "type": "translation",
+          "prompt": "la foto",
+          "answer": "the photo",
+          "accepted_answers": ["the picture"]
+        },
+        {
+          "type": "translation",
+          "prompt": "el vídeo",
+          "answer": "the video"
+        },
+        {
+          "type": "translation",
+          "prompt": "internet",
+          "answer": "internet"
+        },
+        {
+          "type": "translation",
+          "prompt": "la línia",
+          "answer": "the line"
+        },
+        {
+          "type": "translation",
+          "prompt": "les notícies",
+          "answer": "the news"
+        },
+        {
+          "type": "translation",
+          "prompt": "la pregunta",
+          "answer": "the question"
+        },
+        {
+          "type": "translation",
+          "prompt": "connectat",
+          "answer": "online",
+          "accepted_answers": ["connected"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Et truc aquest vespre.",
+          "answer": "I'll call you tonight.",
+          "accepted_answers": ["I am calling you tonight", "I call you tonight"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Em pots respondre?",
+          "answer": "Can you answer me?",
+          "accepted_answers": ["Can you reply to me?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Envia un missatge a la seva mare.",
+          "answer": "He sends his mother a message.",
+          "accepted_answers": ["He sends a message to his mother"]
+        },
+        {
+          "type": "translation",
+          "prompt": "No he rebut el teu correu electrònic.",
+          "answer": "I didn't get your e-mail.",
+          "accepted_answers": ["I did not get your e-mail", "I didn't receive your e-mail", "I did not receive your e-mail"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Quin és el teu número de telèfon?",
+          "answer": "What is your phone number?",
+          "accepted_answers": ["What's your phone number?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "La línia està ocupada.",
+          "answer": "The line is busy."
+        },
+        {
+          "type": "translation",
+          "prompt": "Miro fotos a internet.",
+          "answer": "I look at photos on the internet.",
+          "accepted_answers": ["I look at photos on the Internet", "I look at pictures on the internet"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Està sempre connectada.",
+          "answer": "She is always online."
+        },
+        {
+          "type": "translation",
+          "prompt": "I send you a photo.",
+          "answer": "T'envio una foto."
+        },
+        {
+          "type": "translation",
+          "prompt": "Can you call me tomorrow?",
+          "answer": "Em trucas demà ?"
+        },
+        {
+          "type": "translation",
+          "prompt": "My phone number is new.",
+          "answer": "El meu número de telèfon és nou."
+        },
+        {
+          "type": "translation",
+          "prompt": "Will you play with me?",
+          "answer": "Vols jugar amb mi ?"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the phone':",
+          "options": [
+            "el telèfon",
+            "el número",
+            "trucar",
+            "respondre"
+          ],
+          "answer": "el telèfon"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the number':",
+          "options": [
+            "el número",
+            "trucar",
+            "respondre",
+            "el missatge"
+          ],
+          "answer": "el número"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to call':",
+          "options": [
+            "trucar",
+            "respondre",
+            "el missatge",
+            "enviar"
+          ],
+          "answer": "trucar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to answer':",
+          "options": [
+            "respondre",
+            "el missatge",
+            "enviar",
+            "rebre"
+          ],
+          "answer": "respondre"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the message':",
+          "options": [
+            "el missatge",
+            "enviar",
+            "rebre",
+            "la resposta"
+          ],
+          "answer": "el missatge"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to send':",
+          "options": [
+            "enviar",
+            "rebre",
+            "la resposta",
+            "el correu electrònic"
+          ],
+          "answer": "enviar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to receive':",
+          "options": [
+            "rebre",
+            "la resposta",
+            "el correu electrònic",
+            "la foto"
+          ],
+          "answer": "rebre"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the answer':",
+          "options": [
+            "la resposta",
+            "el correu electrònic",
+            "la foto",
+            "el vídeo"
+          ],
+          "answer": "la resposta"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___'m quan arribis !",
+          "answer": "Truca"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Envia___ un missatge !",
+          "answer": "me"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Respon el ___ si us plau.",
+          "answer": "missatge"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El meu ___ és nou.",
+          "answer": "telèfon"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Envia'm una ___ de les vacances.",
+          "answer": "foto"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La ___ està ocupada.",
+          "answer": "línia"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Truca'm al meu ___ nou.",
+          "answer": "número"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La resposta a la ___ és fàcil.",
+          "answer": "pregunta"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Stories and Experiences",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "la història",
+          "translation": "the story",
+          "accepted_translations": ["the tale", "the history"],
+          "pos": "noun (feminine)",
+          "example": "L'àvia explica històries boniques."
+        },
+        {
+          "word": "l'aventura",
+          "translation": "the adventure",
+          "pos": "noun (feminine)",
+          "example": "El llibre explica una gran aventura."
+        },
+        {
+          "word": "el record",
+          "translation": "the memory",
+          "accepted_translations": ["the souvenir"],
+          "pos": "noun (masculine)",
+          "example": "És un bon record."
+        },
+        {
+          "word": "la infància",
+          "translation": "the childhood",
+          "pos": "noun (feminine)",
+          "example": "Parla de la seva infància."
+        },
+        {
+          "word": "les vacances",
+          "translation": "the vacation",
+          "accepted_translations": ["the holiday", "the holidays"],
+          "pos": "noun (plural)",
+          "example": "Les vacances comencen al juliol."
+        },
+        {
+          "word": "el viatge",
+          "translation": "the trip",
+          "accepted_translations": ["the journey", "the travel"],
+          "pos": "noun (masculine)",
+          "example": "Va ser un viatge molt bonic."
+        },
+        {
+          "word": "el mar",
+          "translation": "the sea",
+          "pos": "noun (masculine)",
+          "example": "A l'estiu anem al mar."
+        },
+        {
+          "word": "la platja",
+          "translation": "the beach",
+          "pos": "noun (feminine)",
+          "example": "Els nens juguen a la platja."
+        },
+        {
+          "word": "la muntanya",
+          "translation": "the mountain",
+          "pos": "noun (feminine)",
+          "example": "La muntanya és bonica a l'hivern."
+        },
+        {
+          "word": "el regal",
+          "translation": "the gift",
+          "accepted_translations": ["the present"],
+          "pos": "noun (masculine)",
+          "example": "El regal és a la taula."
+        },
+        {
+          "word": "la vegada",
+          "translation": "the time",
+          "accepted_translations": ["the occasion"],
+          "pos": "noun (feminine)",
+          "example": "Vaig a casa del meu amic una vegada per setmana."
+        },
+        {
+          "word": "la veritat",
+          "translation": "the truth",
+          "pos": "noun (feminine)",
+          "example": "És veritat?"
+        },
+        {
+          "word": "explicar",
+          "translation": "to tell",
+          "accepted_translations": ["to explain"],
+          "pos": "verb",
+          "example": "Explica una història a la seva mare."
+        },
+        {
+          "word": "pensar",
+          "translation": "to think",
+          "pos": "verb",
+          "example": "Penso en la meva família."
+        },
+        {
+          "word": "content",
+          "translation": "happy",
+          "accepted_translations": ["glad", "pleased"],
+          "pos": "adjective",
+          "example": "Estan molt contents."
+        },
+        {
+          "word": "recordar",
+          "translation": "to remember",
+          "accepted_translations": ["to remind"],
+          "pos": "verb",
+          "example": "Recordo les vacances a la platja."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "la història",
+          "answer": "the story",
+          "accepted_answers": ["the tale", "the history"]
+        },
+        {
+          "type": "translation",
+          "prompt": "l'aventura",
+          "answer": "the adventure"
+        },
+        {
+          "type": "translation",
+          "prompt": "el record",
+          "answer": "the memory",
+          "accepted_answers": ["the souvenir"]
+        },
+        {
+          "type": "translation",
+          "prompt": "la infància",
+          "answer": "the childhood"
+        },
+        {
+          "type": "translation",
+          "prompt": "les vacances",
+          "answer": "the vacation",
+          "accepted_answers": ["the holiday", "the holidays"]
+        },
+        {
+          "type": "translation",
+          "prompt": "el viatge",
+          "answer": "the trip",
+          "accepted_answers": ["the journey", "the travel"]
+        },
+        {
+          "type": "translation",
+          "prompt": "el mar",
+          "answer": "the sea"
+        },
+        {
+          "type": "translation",
+          "prompt": "la platja",
+          "answer": "the beach"
+        },
+        {
+          "type": "translation",
+          "prompt": "la muntanya",
+          "answer": "the mountain"
+        },
+        {
+          "type": "translation",
+          "prompt": "el regal",
+          "answer": "the gift",
+          "accepted_answers": ["the present"]
+        },
+        {
+          "type": "translation",
+          "prompt": "la vegada",
+          "answer": "the time",
+          "accepted_answers": ["the occasion"]
+        },
+        {
+          "type": "translation",
+          "prompt": "la veritat",
+          "answer": "the truth"
+        },
+        {
+          "type": "translation",
+          "prompt": "explicar",
+          "answer": "to tell",
+          "accepted_answers": ["to explain"]
+        },
+        {
+          "type": "translation",
+          "prompt": "pensar",
+          "answer": "to think"
+        },
+        {
+          "type": "translation",
+          "prompt": "content",
+          "answer": "happy",
+          "accepted_answers": ["glad", "pleased"]
+        },
+        {
+          "type": "translation",
+          "prompt": "recordar",
+          "answer": "to remember",
+          "accepted_answers": ["to remind"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Quan era petit, vivia a Girona.",
+          "answer": "When I was little, I lived in Girona.",
+          "accepted_answers": ["When I was small, I lived in Girona", "When I was a child, I lived in Girona"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jugàvem al futbol tots els diumenges.",
+          "answer": "We played soccer every Sunday.",
+          "accepted_answers": ["We used to play soccer every Sunday", "We played football every Sunday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "L'àvia explicava històries.",
+          "answer": "My grandmother told stories."
+        },
+        {
+          "type": "translation",
+          "prompt": "L'estiu passat vam anar al mar.",
+          "answer": "Last summer, we went to the sea.",
+          "accepted_answers": ["Last summer we went to the sea"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Nevava el dia del meu aniversari.",
+          "answer": "It was snowing on my birthday.",
+          "accepted_answers": ["It snowed on my birthday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Quina aventura tan bonica!",
+          "answer": "What a beautiful adventure!",
+          "accepted_answers": ["What a great adventure"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Va ser el meu primer viatge a Catalunya.",
+          "answer": "It was my first trip to Catalonia."
+        },
+        {
+          "type": "translation",
+          "prompt": "Pensava sovint en l'àvia.",
+          "answer": "I often thought about my grandmother.",
+          "accepted_answers": ["I used to think often about my grandmother"]
+        },
+        {
+          "type": "translation",
+          "prompt": "We were happy.",
+          "answer": "Estàvem contents."
+        },
+        {
+          "type": "translation",
+          "prompt": "It was a beautiful memory.",
+          "answer": "Va ser un bon record."
+        },
+        {
+          "type": "translation",
+          "prompt": "I never drink coffee.",
+          "answer": "Mai no bec cafè."
+        },
+        {
+          "type": "translation",
+          "prompt": "My grandfather told a story.",
+          "answer": "L'avi va explicar una història."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the story':",
+          "options": [
+            "la història",
+            "l'aventura",
+            "el record",
+            "la infància"
+          ],
+          "answer": "la història"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the adventure':",
+          "options": [
+            "l'aventura",
+            "el record",
+            "la infància",
+            "les vacances"
+          ],
+          "answer": "l'aventura"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the memory':",
+          "options": [
+            "el record",
+            "la infància",
+            "les vacances",
+            "el viatge"
+          ],
+          "answer": "el record"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the childhood':",
+          "options": [
+            "la infància",
+            "les vacances",
+            "el viatge",
+            "el mar"
+          ],
+          "answer": "la infància"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the vacation':",
+          "options": [
+            "les vacances",
+            "el viatge",
+            "el mar",
+            "la platja"
+          ],
+          "answer": "les vacances"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the trip':",
+          "options": [
+            "el viatge",
+            "el mar",
+            "la platja",
+            "la muntanya"
+          ],
+          "answer": "el viatge"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the sea':",
+          "options": [
+            "el mar",
+            "la platja",
+            "la muntanya",
+            "el regal"
+          ],
+          "answer": "el mar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the beach':",
+          "options": [
+            "la platja",
+            "la muntanya",
+            "el regal",
+            "la vegada"
+          ],
+          "answer": "la platja"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Estic ___ una pel·lícula.",
+          "answer": "veient"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Què estàs ___ ?",
+          "answer": "fent"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Estem ___ el dinar.",
+          "answer": "menjant"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ahir vam ___ una pel·lícula.",
+          "answer": "veure"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Demà estic ___ tot el dia.",
+          "answer": "treballant"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El llibre explica una bona ___.",
+          "answer": "història"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El record de les vacances és un bon ___.",
+          "answer": "record"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La platja i la ___ són boniques.",
+          "answer": "muntanya"
+        }
+      ]
     }
   ]
 }
