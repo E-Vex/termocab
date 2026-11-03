@@ -3883,6 +3883,1968 @@
           "answer": "desember"
         }
       ]
+    },
+    {
+      "id": 11,
+      "title": "Work and School",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "skrifstofa",
+          "translation": "office",
+          "pos": "noun",
+          "example": "Ég fer á skrifstofuna klukkan átta."
+        },
+        {
+          "word": "fyrirtæki",
+          "translation": "company",
+          "pos": "noun",
+          "example": "Ég vinn hjá stóru fyrirtæki."
+        },
+        {
+          "word": "stjóri",
+          "translation": "boss",
+          "pos": "noun",
+          "example": "Stjórinn er í fundinum."
+        },
+        {
+          "word": "starfsfélagi",
+          "translation": "colleague",
+          "pos": "noun",
+          "example": "Starfsfélagi mín býr nálægt garðinum."
+        },
+        {
+          "word": "fundur",
+          "translation": "meeting",
+          "pos": "noun",
+          "example": "Fundurinn byrjar klukkan níu."
+        },
+        {
+          "word": "laun",
+          "translation": "salary",
+          "accepted_translations": ["wages"],
+          "pos": "noun",
+          "example": "Launin mín eru góð."
+        },
+        {
+          "word": "starf",
+          "translation": "job",
+          "accepted_translations": ["profession"],
+          "pos": "noun",
+          "example": "Hvað gerir þú í starfinu þínu?"
+        },
+        {
+          "word": "hlé",
+          "translation": "break",
+          "pos": "noun",
+          "example": "Ég tek hlé klukkan ellefu."
+        },
+        {
+          "word": "bekkur",
+          "translation": "class",
+          "accepted_translations": ["grade"],
+          "pos": "noun",
+          "example": "Við tölum íslensku í bekknum."
+        },
+        {
+          "word": "grein",
+          "translation": "subject",
+          "pos": "noun",
+          "example": "Uppáhaldsgreinin mín er saga."
+        },
+        {
+          "word": "heimaverkefni",
+          "translation": "homework",
+          "accepted_translations": ["assignment"],
+          "pos": "noun",
+          "example": "Ég geri heimaverkefnið á kvöldin."
+        },
+        {
+          "word": "próf",
+          "translation": "exam",
+          "accepted_translations": ["test"],
+          "pos": "noun",
+          "example": "Íslenskuprófið er á morgun."
+        },
+        {
+          "word": "námskeið",
+          "translation": "course",
+          "pos": "noun",
+          "example": "Námskeiðið er áhugavert."
+        },
+        {
+          "word": "viðtal",
+          "translation": "interview",
+          "pos": "noun",
+          "example": "Ég er í viðtali á morgun."
+        },
+        {
+          "word": "upptekinn",
+          "translation": "busy",
+          "pos": "adjective",
+          "example": "Pabbi minn er alltaf upptekinn."
+        },
+        {
+          "word": "skjár",
+          "translation": "screen",
+          "pos": "noun",
+          "example": "Tölvan er á skrifborðinu."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "skrifstofa",
+          "answer": "office"
+        },
+        {
+          "type": "translation",
+          "prompt": "fyrirtæki",
+          "answer": "company"
+        },
+        {
+          "type": "translation",
+          "prompt": "stjóri",
+          "answer": "boss"
+        },
+        {
+          "type": "translation",
+          "prompt": "starfsfélagi",
+          "answer": "colleague"
+        },
+        {
+          "type": "translation",
+          "prompt": "fundur",
+          "answer": "meeting"
+        },
+        {
+          "type": "translation",
+          "prompt": "laun",
+          "answer": "salary",
+          "accepted_answers": ["wages"]
+        },
+        {
+          "type": "translation",
+          "prompt": "starf",
+          "answer": "job",
+          "accepted_answers": ["profession"]
+        },
+        {
+          "type": "translation",
+          "prompt": "hlé",
+          "answer": "break"
+        },
+        {
+          "type": "translation",
+          "prompt": "bekkur",
+          "answer": "class",
+          "accepted_answers": ["grade"]
+        },
+        {
+          "type": "translation",
+          "prompt": "grein",
+          "answer": "subject"
+        },
+        {
+          "type": "translation",
+          "prompt": "heimaverkefni",
+          "answer": "homework",
+          "accepted_answers": ["assignment"]
+        },
+        {
+          "type": "translation",
+          "prompt": "próf",
+          "answer": "exam",
+          "accepted_answers": ["test"]
+        },
+        {
+          "type": "translation",
+          "prompt": "námskeið",
+          "answer": "course"
+        },
+        {
+          "type": "translation",
+          "prompt": "viðtal",
+          "answer": "interview"
+        },
+        {
+          "type": "translation",
+          "prompt": "upptekinn",
+          "answer": "busy"
+        },
+        {
+          "type": "translation",
+          "prompt": "skjár",
+          "answer": "screen"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég fer á skrifstofuna klukkan átta.",
+          "answer": "I go to the office at eight.",
+          "accepted_answers": ["I go to the office at eight o'clock"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég er með fund hjá stjóranum.",
+          "answer": "I have a meeting with the boss."
+        },
+        {
+          "type": "translation",
+          "prompt": "Starfsfélagi minn talar þrjú tungumál.",
+          "answer": "My colleague speaks three languages."
+        },
+        {
+          "type": "translation",
+          "prompt": "Við erum með mikið vinnu í þessari viku.",
+          "answer": "We have a lot of work this week."
+        },
+        {
+          "type": "translation",
+          "prompt": "Heimaverkefnið er erfitt.",
+          "answer": "The homework is difficult.",
+          "accepted_answers": ["The homework is hard"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég skrifaði tölvupóst til stjórans.",
+          "answer": "I wrote an e-mail to the boss.",
+          "accepted_answers": ["I wrote an email to the boss"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Prófið er í næstu viku.",
+          "answer": "The exam is next week."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég er mjög upptekinn í dag.",
+          "answer": "I'm very busy today.",
+          "accepted_answers": ["I am very busy today."]
+        },
+        {
+          "type": "translation",
+          "prompt": "My salary is good.",
+          "answer": "Launin mín eru góð."
+        },
+        {
+          "type": "translation",
+          "prompt": "The class starts at nine.",
+          "answer": "Bekkurinn byrjar klukkan níu."
+        },
+        {
+          "type": "translation",
+          "prompt": "I want a break.",
+          "answer": "Ég vil hlé."
+        },
+        {
+          "type": "translation",
+          "prompt": "My computer is new.",
+          "answer": "Tölvan mín er ný."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'office':",
+          "options": [
+            "skrifstofa",
+            "fyrirtæki",
+            "stjóri",
+            "starfsfélagi"
+          ],
+          "answer": "skrifstofa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'company':",
+          "options": [
+            "fyrirtæki",
+            "stjóri",
+            "starfsfélagi",
+            "fundur"
+          ],
+          "answer": "fyrirtæki"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'boss':",
+          "options": [
+            "stjóri",
+            "starfsfélagi",
+            "fundur",
+            "laun"
+          ],
+          "answer": "stjóri"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'colleague':",
+          "options": [
+            "starfsfélagi",
+            "fundur",
+            "laun",
+            "starf"
+          ],
+          "answer": "starfsfélagi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'meeting':",
+          "options": [
+            "fundur",
+            "laun",
+            "starf",
+            "hlé"
+          ],
+          "answer": "fundur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'salary':",
+          "options": [
+            "laun",
+            "starf",
+            "hlé",
+            "bekkur"
+          ],
+          "answer": "laun"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'job':",
+          "options": [
+            "starf",
+            "hlé",
+            "bekkur",
+            "grein"
+          ],
+          "answer": "starf"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'break':",
+          "options": [
+            "hlé",
+            "bekkur",
+            "grein",
+            "heimaverkefni"
+          ],
+          "answer": "hlé"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég vinn á ___.",
+          "answer": "skrifstofu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég ___ hest.",
+          "answer": "á"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hann vinnur ___ sjúkrahúsi.",
+          "answer": "á"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Við höfum ___ á morgun.",
+          "answer": "fund"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Stjórinn er á ___.",
+          "answer": "fundinum"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég er ___ í dag.",
+          "answer": "upptekinn"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég er í ___ í skólanum.",
+          "answer": "bekk"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Launin mín eru ___.",
+          "answer": "góð"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Health and the Body",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "höfuð",
+          "translation": "head",
+          "pos": "noun",
+          "example": "Ég er með verk í höfðinu."
+        },
+        {
+          "word": "magi",
+          "translation": "stomach",
+          "accepted_translations": ["tummy"],
+          "pos": "noun",
+          "example": "Ég borðaði of mikið, maginn særir."
+        },
+        {
+          "word": "bak",
+          "translation": "back",
+          "pos": "noun",
+          "example": "Móðir mín er með verk í baki."
+        },
+        {
+          "word": "tönn",
+          "translation": "tooth",
+          "accepted_translations": ["teeth"],
+          "pos": "noun",
+          "example": "Tanninn særir."
+        },
+        {
+          "word": "líkami",
+          "translation": "body",
+          "pos": "noun",
+          "example": "Líkami minn er þreyttur."
+        },
+        {
+          "word": "veikur",
+          "translation": "sick",
+          "accepted_translations": ["ill"],
+          "pos": "adjective",
+          "example": "Ég er veikur og fer til læknis."
+        },
+        {
+          "word": "hiti",
+          "translation": "fever",
+          "accepted_translations": ["heat"],
+          "pos": "noun",
+          "example": "Hún er með hita."
+        },
+        {
+          "word": "flensa",
+          "translation": "flu",
+          "pos": "noun",
+          "example": "Hann er með flensu og sefur."
+        },
+        {
+          "word": "kvef",
+          "translation": "cold",
+          "pos": "noun",
+          "example": "Ég er með kvef á vetrum."
+        },
+        {
+          "word": "lyf",
+          "translation": "medicine",
+          "accepted_translations": ["medication"],
+          "pos": "noun",
+          "example": "Ég taka lyfin mín að morgni."
+        },
+        {
+          "word": "uppskrift",
+          "translation": "prescription",
+          "accepted_translations": ["recipe"],
+          "pos": "noun",
+          "example": "Læknirinn skrifar uppskrift."
+        },
+        {
+          "word": "apótek",
+          "translation": "pharmacy",
+          "pos": "noun",
+          "example": "Apótekið er nálægt sjúkrahúsinu."
+        },
+        {
+          "word": "læknir",
+          "translation": "doctor",
+          "accepted_translations": ["physician"],
+          "pos": "noun",
+          "example": "Ég fer til læknis í dag."
+        },
+        {
+          "word": "verkur",
+          "translation": "pain",
+          "pos": "noun",
+          "example": "Verkurinn er vondur."
+        },
+        {
+          "word": "betri",
+          "translation": "better",
+          "pos": "adjective",
+          "example": "Í dag líður mér betri."
+        },
+        {
+          "word": "hvíld",
+          "translation": "rest",
+          "pos": "noun",
+          "example": "Þú þarft hvíld."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "höfuð",
+          "answer": "head"
+        },
+        {
+          "type": "translation",
+          "prompt": "magi",
+          "answer": "stomach",
+          "accepted_answers": ["tummy"]
+        },
+        {
+          "type": "translation",
+          "prompt": "bak",
+          "answer": "back"
+        },
+        {
+          "type": "translation",
+          "prompt": "tönn",
+          "answer": "tooth",
+          "accepted_answers": ["teeth"]
+        },
+        {
+          "type": "translation",
+          "prompt": "líkami",
+          "answer": "body"
+        },
+        {
+          "type": "translation",
+          "prompt": "veikur",
+          "answer": "sick",
+          "accepted_answers": ["ill"]
+        },
+        {
+          "type": "translation",
+          "prompt": "hiti",
+          "answer": "fever",
+          "accepted_answers": ["heat"]
+        },
+        {
+          "type": "translation",
+          "prompt": "flensa",
+          "answer": "flu"
+        },
+        {
+          "type": "translation",
+          "prompt": "kvef",
+          "answer": "cold"
+        },
+        {
+          "type": "translation",
+          "prompt": "lyf",
+          "answer": "medicine",
+          "accepted_answers": ["medication"]
+        },
+        {
+          "type": "translation",
+          "prompt": "uppskrift",
+          "answer": "prescription",
+          "accepted_answers": ["recipe"]
+        },
+        {
+          "type": "translation",
+          "prompt": "apótek",
+          "answer": "pharmacy"
+        },
+        {
+          "type": "translation",
+          "prompt": "læknir",
+          "answer": "doctor",
+          "accepted_answers": ["physician"]
+        },
+        {
+          "type": "translation",
+          "prompt": "verkur",
+          "answer": "pain"
+        },
+        {
+          "type": "translation",
+          "prompt": "betri",
+          "answer": "better"
+        },
+        {
+          "type": "translation",
+          "prompt": "hvíld",
+          "answer": "rest"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég er með verk í höfðinu.",
+          "answer": "My head hurts.",
+          "accepted_answers": ["I have a headache", "I have a pain in my head"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Maginn særir hann.",
+          "answer": "His stomach hurts.",
+          "accepted_answers": ["He has a stomach ache", "He has a stomachache"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég er veikur og liggi í rúminu.",
+          "answer": "I'm sick, I'm staying in bed.",
+          "accepted_answers": ["I am sick, I'm staying in bed."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hún er með hita.",
+          "answer": "She has a fever."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég fer til læknis.",
+          "answer": "I'm going to the doctor.",
+          "accepted_answers": ["I am going to the doctor."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Tekur þú lyfin þín að morgni?",
+          "answer": "Do you take your medicine in the morning?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Apótekið er nálægt sjúkrahúsinu.",
+          "answer": "The pharmacy is near the hospital."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hún er með flensu.",
+          "answer": "She has the flu."
+        },
+        {
+          "type": "translation",
+          "prompt": "My back hurts.",
+          "answer": "Ég er með verk í baki."
+        },
+        {
+          "type": "translation",
+          "prompt": "I have a toothache.",
+          "answer": "Tanninn særir."
+        },
+        {
+          "type": "translation",
+          "prompt": "I am sick today.",
+          "answer": "Ég er veikur í dag."
+        },
+        {
+          "type": "translation",
+          "prompt": "I am better, thanks.",
+          "answer": "Í dag líður mér betri, takk."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'head':",
+          "options": [
+            "höfuð",
+            "magi",
+            "bak",
+            "tönn"
+          ],
+          "answer": "höfuð"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'stomach':",
+          "options": [
+            "magi",
+            "bak",
+            "tönn",
+            "líkami"
+          ],
+          "answer": "magi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'back':",
+          "options": [
+            "bak",
+            "tönn",
+            "líkami",
+            "veikur"
+          ],
+          "answer": "bak"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tooth':",
+          "options": [
+            "tönn",
+            "líkami",
+            "veikur",
+            "hiti"
+          ],
+          "answer": "tönn"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'body':",
+          "options": [
+            "líkami",
+            "veikur",
+            "hiti",
+            "flensa"
+          ],
+          "answer": "líkami"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sick':",
+          "options": [
+            "veikur",
+            "hiti",
+            "flensa",
+            "kvef"
+          ],
+          "answer": "veikur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fever':",
+          "options": [
+            "hiti",
+            "flensa",
+            "kvef",
+            "lyf"
+          ],
+          "answer": "hiti"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'flu':",
+          "options": [
+            "flensa",
+            "kvef",
+            "lyf",
+            "uppskrift"
+          ],
+          "answer": "flensa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég er með verk í ___.",
+          "answer": "höfðinu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hvernig ___ þér ?",
+          "answer": "líður"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hann er ___ í dag.",
+          "answer": "veikur"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Læknirinn skrifar ___.",
+          "answer": "uppskrift"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég kaupi lyfin á ___.",
+          "answer": "apóteki"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Barnið er með ___.",
+          "answer": "hita"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hún er með ___.",
+          "answer": "flensu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég þarf ___.",
+          "answer": "hvíld"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Free Time and Hobbies",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "áhugamál",
+          "translation": "hobby",
+          "accepted_translations": ["interest", "pastime"],
+          "pos": "noun",
+          "example": "Hver eru áhugamálin þín?"
+        },
+        {
+          "word": "sund",
+          "translation": "swimming",
+          "pos": "noun",
+          "example": "Sundið er uppáhaldsíþróttin mín."
+        },
+        {
+          "word": "fótbolti",
+          "translation": "soccer",
+          "accepted_translations": ["football"],
+          "pos": "noun",
+          "example": "Bróðir minn spilar fótbolta."
+        },
+        {
+          "word": "tennis",
+          "translation": "tennis",
+          "pos": "noun",
+          "example": "Ég spila tennis um helgar."
+        },
+        {
+          "word": "körfubolti",
+          "translation": "basketball",
+          "pos": "noun",
+          "example": "Börnin spila körfubolta."
+        },
+        {
+          "word": "hjól",
+          "translation": "bicycle",
+          "accepted_translations": ["bike"],
+          "pos": "noun",
+          "example": "Ég hjóla í vinnuna."
+        },
+        {
+          "word": "gítar",
+          "translation": "guitar",
+          "pos": "noun",
+          "example": "Systir mín spilar á gítar."
+        },
+        {
+          "word": "píanó",
+          "translation": "piano",
+          "pos": "noun",
+          "example": "Píanó er í stofunni."
+        },
+        {
+          "word": "lag",
+          "translation": "song",
+          "accepted_translations": ["tune"],
+          "pos": "noun",
+          "example": "Lagið er fallegt."
+        },
+        {
+          "word": "dansa",
+          "translation": "to dance",
+          "pos": "verb",
+          "example": "Hún vill dansa."
+        },
+        {
+          "word": "syngja",
+          "translation": "to sing",
+          "pos": "verb",
+          "example": "Börnin syngja í skólanum."
+        },
+        {
+          "word": "spila",
+          "translation": "to play",
+          "pos": "verb",
+          "example": "Ég vil spila fótbolta."
+        },
+        {
+          "word": "helgi",
+          "translation": "weekend",
+          "pos": "noun",
+          "example": "Gleðilegra helgi!"
+        },
+        {
+          "word": "gönguferð",
+          "translation": "hike",
+          "accepted_translations": ["hiking trip"],
+          "pos": "noun",
+          "example": "Á sumrin förum við í gönguferð í fjöllin."
+        },
+        {
+          "word": "lestur",
+          "translation": "reading",
+          "pos": "noun",
+          "example": "Mér finnst lestur gott á kvöldin."
+        },
+        {
+          "word": "uppáhalds",
+          "translation": "favorite",
+          "accepted_translations": ["favourite"],
+          "pos": "adjective",
+          "example": "Uppáhaldsíþrótta mín er fótbolti."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "áhugamál",
+          "answer": "hobby",
+          "accepted_answers": ["interest", "pastime"]
+        },
+        {
+          "type": "translation",
+          "prompt": "sund",
+          "answer": "swimming"
+        },
+        {
+          "type": "translation",
+          "prompt": "fótbolti",
+          "answer": "soccer",
+          "accepted_answers": ["football"]
+        },
+        {
+          "type": "translation",
+          "prompt": "tennis",
+          "answer": "tennis"
+        },
+        {
+          "type": "translation",
+          "prompt": "körfubolti",
+          "answer": "basketball"
+        },
+        {
+          "type": "translation",
+          "prompt": "hjól",
+          "answer": "bicycle",
+          "accepted_answers": ["bike"]
+        },
+        {
+          "type": "translation",
+          "prompt": "gítar",
+          "answer": "guitar"
+        },
+        {
+          "type": "translation",
+          "prompt": "píanó",
+          "answer": "piano"
+        },
+        {
+          "type": "translation",
+          "prompt": "lag",
+          "answer": "song",
+          "accepted_answers": ["tune"]
+        },
+        {
+          "type": "translation",
+          "prompt": "dansa",
+          "answer": "to dance"
+        },
+        {
+          "type": "translation",
+          "prompt": "syngja",
+          "answer": "to sing"
+        },
+        {
+          "type": "translation",
+          "prompt": "spila",
+          "answer": "to play"
+        },
+        {
+          "type": "translation",
+          "prompt": "helgi",
+          "answer": "weekend"
+        },
+        {
+          "type": "translation",
+          "prompt": "gönguferð",
+          "answer": "hike",
+          "accepted_answers": ["hiking trip"]
+        },
+        {
+          "type": "translation",
+          "prompt": "lestur",
+          "answer": "reading"
+        },
+        {
+          "type": "translation",
+          "prompt": "uppáhalds",
+          "answer": "favorite",
+          "accepted_answers": ["favourite"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég hjóla um helgar.",
+          "answer": "I ride my bike on weekends.",
+          "accepted_answers": ["I ride my bike at weekends."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hún sundar á mánudögum.",
+          "answer": "She swims on Mondays.",
+          "accepted_answers": ["She does swimming on Mondays"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bróðir minn spilar fótbolta.",
+          "answer": "My brother plays soccer.",
+          "accepted_answers": ["My brother plays football"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mér finnst lagið gott.",
+          "answer": "I like this song."
+        },
+        {
+          "type": "translation",
+          "prompt": "Systir mín spilar píanó.",
+          "answer": "My sister plays the piano."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hver eru áhugamálin þín?",
+          "answer": "What are your hobbies?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Við förum í gönguferð í fjöllin.",
+          "answer": "We go hiking in the mountains.",
+          "accepted_answers": ["We hike in the mountains"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Um helgar les ég heldur.",
+          "answer": "On weekends, I prefer to read.",
+          "accepted_answers": ["At the weekend, I prefer to read", "On the weekend, I prefer to read"]
+        },
+        {
+          "type": "translation",
+          "prompt": "I play tennis.",
+          "answer": "Ég spila tennis."
+        },
+        {
+          "type": "translation",
+          "prompt": "She sings a song.",
+          "answer": "Hún syngur lag."
+        },
+        {
+          "type": "translation",
+          "prompt": "He plays the guitar.",
+          "answer": "Hann spilar á gítar."
+        },
+        {
+          "type": "translation",
+          "prompt": "Reading is my favorite hobby.",
+          "answer": "Lestur er uppáhaldsáhugamálið mitt."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hobby':",
+          "options": [
+            "áhugamál",
+            "sund",
+            "fótbolti",
+            "tennis"
+          ],
+          "answer": "áhugamál"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'swimming':",
+          "options": [
+            "sund",
+            "fótbolti",
+            "tennis",
+            "körfubolti"
+          ],
+          "answer": "sund"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'soccer':",
+          "options": [
+            "fótbolti",
+            "tennis",
+            "körfubolti",
+            "hjól"
+          ],
+          "answer": "fótbolti"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tennis':",
+          "options": [
+            "tennis",
+            "körfubolti",
+            "hjól",
+            "gítar"
+          ],
+          "answer": "tennis"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'basketball':",
+          "options": [
+            "körfubolti",
+            "hjól",
+            "gítar",
+            "píanó"
+          ],
+          "answer": "körfubolti"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bicycle':",
+          "options": [
+            "hjól",
+            "gítar",
+            "píanó",
+            "lag"
+          ],
+          "answer": "hjól"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'guitar':",
+          "options": [
+            "gítar",
+            "píanó",
+            "lag",
+            "dansa"
+          ],
+          "answer": "gítar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'piano':",
+          "options": [
+            "píanó",
+            "lag",
+            "dansa",
+            "syngja"
+          ],
+          "answer": "píanó"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ langar að synda.",
+          "answer": "Mig"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mig langar að ___ bók.",
+          "answer": "lesa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mig langar að fara í ___.",
+          "answer": "sund"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hann spilar ___.",
+          "answer": "fótbolta"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hann kaupir nýtt ___.",
+          "answer": "hjól"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hún spilar á ___.",
+          "answer": "gítar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Barnið lærir að ___.",
+          "answer": "syngja"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ er á laugardögum og sunnudögum.",
+          "answer": "Helgin"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Calls and Messages",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "sími",
+          "translation": "phone",
+          "accepted_translations": ["telephone"],
+          "pos": "noun",
+          "example": "Síminn minn er nýr."
+        },
+        {
+          "word": "númer",
+          "translation": "number",
+          "pos": "noun",
+          "example": "Hvað er símanúmerið þitt?"
+        },
+        {
+          "word": "hringja",
+          "translation": "to call",
+          "accepted_translations": ["to ring"],
+          "pos": "verb",
+          "example": "Ég vil hringja í mömmu."
+        },
+        {
+          "word": "svara",
+          "translation": "to answer",
+          "accepted_translations": ["to reply"],
+          "pos": "verb",
+          "example": "Hann svarar ekki."
+        },
+        {
+          "word": "skilaboð",
+          "translation": "message",
+          "accepted_translations": ["text message"],
+          "pos": "noun",
+          "example": "Ég sendi þér skilaboð."
+        },
+        {
+          "word": "senda",
+          "translation": "to send",
+          "pos": "verb",
+          "example": "Hún sendir skilaboð til bróður síns."
+        },
+        {
+          "word": "að fá",
+          "translation": "to get",
+          "accepted_translations": ["to receive"],
+          "pos": "verb",
+          "example": "Ég fæ mörg skilaboð."
+        },
+        {
+          "word": "svar",
+          "translation": "answer",
+          "accepted_translations": ["reply"],
+          "pos": "noun",
+          "example": "Svarið hans er nei."
+        },
+        {
+          "word": "spurning",
+          "translation": "question",
+          "pos": "noun",
+          "example": "Ég er með spurningu."
+        },
+        {
+          "word": "tölvupóstur",
+          "translation": "e-mail",
+          "accepted_translations": ["email"],
+          "pos": "noun",
+          "example": "Fékk þú tölvupóstinn minn?"
+        },
+        {
+          "word": "ljósmynd",
+          "translation": "photo",
+          "accepted_translations": ["picture"],
+          "pos": "noun",
+          "example": "Ljósmyndin er falleg."
+        },
+        {
+          "word": "myndband",
+          "translation": "video",
+          "pos": "noun",
+          "example": "Ég horfi á myndband."
+        },
+        {
+          "word": "internet",
+          "translation": "internet",
+          "pos": "noun",
+          "example": "Ég er á internetinu."
+        },
+        {
+          "word": "fréttir",
+          "translation": "news",
+          "pos": "noun",
+          "example": "Ég horfi á fréttirnar á kvöldin."
+        },
+        {
+          "word": "lína",
+          "translation": "line",
+          "pos": "noun",
+          "example": "Línan er upptekin."
+        },
+        {
+          "word": "nettengdur",
+          "translation": "online",
+          "accepted_translations": ["connected"],
+          "pos": "adjective",
+          "example": "Bróðir minn er alltaf nettengdur."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "sími",
+          "answer": "phone",
+          "accepted_answers": ["telephone"]
+        },
+        {
+          "type": "translation",
+          "prompt": "númer",
+          "answer": "number"
+        },
+        {
+          "type": "translation",
+          "prompt": "hringja",
+          "answer": "to call",
+          "accepted_answers": ["to ring"]
+        },
+        {
+          "type": "translation",
+          "prompt": "svara",
+          "answer": "to answer",
+          "accepted_answers": ["to reply"]
+        },
+        {
+          "type": "translation",
+          "prompt": "skilaboð",
+          "answer": "message",
+          "accepted_answers": ["text message"]
+        },
+        {
+          "type": "translation",
+          "prompt": "senda",
+          "answer": "to send"
+        },
+        {
+          "type": "translation",
+          "prompt": "að fá",
+          "answer": "to get",
+          "accepted_answers": ["to receive"]
+        },
+        {
+          "type": "translation",
+          "prompt": "svar",
+          "answer": "answer",
+          "accepted_answers": ["reply"]
+        },
+        {
+          "type": "translation",
+          "prompt": "spurning",
+          "answer": "question"
+        },
+        {
+          "type": "translation",
+          "prompt": "tölvupóstur",
+          "answer": "e-mail",
+          "accepted_answers": ["email"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ljósmynd",
+          "answer": "photo",
+          "accepted_answers": ["picture"]
+        },
+        {
+          "type": "translation",
+          "prompt": "myndband",
+          "answer": "video"
+        },
+        {
+          "type": "translation",
+          "prompt": "internet",
+          "answer": "internet"
+        },
+        {
+          "type": "translation",
+          "prompt": "fréttir",
+          "answer": "news"
+        },
+        {
+          "type": "translation",
+          "prompt": "lína",
+          "answer": "line"
+        },
+        {
+          "type": "translation",
+          "prompt": "nettengdur",
+          "answer": "online",
+          "accepted_answers": ["connected"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég hring í þig í kvöld.",
+          "answer": "I'll call you tonight.",
+          "accepted_answers": ["I am calling you tonight", "I call you tonight"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Getur þú svarað mér?",
+          "answer": "Can you answer me?",
+          "accepted_answers": ["Can you reply to me?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hann sendir móður sinni skilaboð.",
+          "answer": "He sends his mother a message.",
+          "accepted_answers": ["He sends a message to his mother"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég fékk ekki tölvupóstinn þinn.",
+          "answer": "I didn't get your e-mail.",
+          "accepted_answers": ["I did not get your e-mail", "I didn't receive your e-mail", "I did not receive your e-mail"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hvað er símanúmerið þitt?",
+          "answer": "What is your phone number?",
+          "accepted_answers": ["What's your phone number?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Línan er upptekin.",
+          "answer": "The line is busy."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég horfi á ljósmyndir á internetinu.",
+          "answer": "I look at photos on the internet.",
+          "accepted_answers": ["I look at photos on the Internet", "I look at pictures on the internet"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hún er alltaf nettengd.",
+          "answer": "She is always online."
+        },
+        {
+          "type": "translation",
+          "prompt": "I send you a photo.",
+          "answer": "Ég sendi þér ljósmynd."
+        },
+        {
+          "type": "translation",
+          "prompt": "Can you call me tomorrow?",
+          "answer": "Getur þú hringt í mig á morgun?"
+        },
+        {
+          "type": "translation",
+          "prompt": "My phone number is new.",
+          "answer": "Símanúmerið mitt er nýtt."
+        },
+        {
+          "type": "translation",
+          "prompt": "Will you play with me?",
+          "answer": "Vilt þú spila við mig?"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'phone':",
+          "options": [
+            "sími",
+            "númer",
+            "hringja",
+            "svara"
+          ],
+          "answer": "sími"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'number':",
+          "options": [
+            "númer",
+            "hringja",
+            "svara",
+            "skilaboð"
+          ],
+          "answer": "númer"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to call':",
+          "options": [
+            "hringja",
+            "svara",
+            "skilaboð",
+            "senda"
+          ],
+          "answer": "hringja"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to answer':",
+          "options": [
+            "svara",
+            "skilaboð",
+            "senda",
+            "að fá"
+          ],
+          "answer": "svara"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'message':",
+          "options": [
+            "skilaboð",
+            "senda",
+            "að fá",
+            "svar"
+          ],
+          "answer": "skilaboð"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to send':",
+          "options": [
+            "senda",
+            "að fá",
+            "svar",
+            "spurning"
+          ],
+          "answer": "senda"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to get':",
+          "options": [
+            "að fá",
+            "svar",
+            "spurning",
+            "tölvupóstur"
+          ],
+          "answer": "að fá"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'answer':",
+          "options": [
+            "svar",
+            "spurning",
+            "tölvupóstur",
+            "ljósmynd"
+          ],
+          "answer": "svar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ í mig !",
+          "answer": "Hringdu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Skrifaðu ___ tölvupóst !",
+          "answer": "mér"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sendu ___ skilaboð !",
+          "answer": "mér"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Síminn minn er ___.",
+          "answer": "nýr"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég fæ skilaboð á ___.",
+          "answer": "símann"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég les ___ á netinu.",
+          "answer": "fréttir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Svarið við ___ina er já.",
+          "answer": "spurning"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tölvan er ___ netinu.",
+          "answer": "á"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Stories and Experiences",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "saga",
+          "translation": "story",
+          "accepted_translations": ["tale", "history"],
+          "pos": "noun",
+          "example": "Ömmu mín segir fallegar sögur."
+        },
+        {
+          "word": "ævintýri",
+          "translation": "adventure",
+          "pos": "noun",
+          "example": "Bókin segir frá miklu ævintýri."
+        },
+        {
+          "word": "minning",
+          "translation": "memory",
+          "accepted_translations": ["souvenir"],
+          "pos": "noun",
+          "example": "Þetta er falleg minning."
+        },
+        {
+          "word": "barnæska",
+          "translation": "childhood",
+          "pos": "noun",
+          "example": "Hann talar um barnæskuna sína."
+        },
+        {
+          "word": "frí",
+          "translation": "vacation",
+          "accepted_translations": ["holiday"],
+          "pos": "noun",
+          "example": "Fríið byrjar í júlí."
+        },
+        {
+          "word": "ferð",
+          "translation": "trip",
+          "accepted_translations": ["journey", "travel"],
+          "pos": "noun",
+          "example": "Það var falleg ferð."
+        },
+        {
+          "word": "haf",
+          "translation": "sea",
+          "accepted_translations": ["ocean"],
+          "pos": "noun",
+          "example": "Á sumrin förum við til hafs."
+        },
+        {
+          "word": "strönd",
+          "translation": "beach",
+          "pos": "noun",
+          "example": "Börnin leika sér á ströndinni."
+        },
+        {
+          "word": "fjall",
+          "translation": "mountain",
+          "pos": "noun",
+          "example": "Fjallið er fallegt á vetrum."
+        },
+        {
+          "word": "gjöf",
+          "translation": "gift",
+          "accepted_translations": ["present"],
+          "pos": "noun",
+          "example": "Gjöfin er á borðinu."
+        },
+        {
+          "word": "sinn",
+          "translation": "time",
+          "accepted_translations": ["occasion"],
+          "pos": "noun",
+          "example": "Ég heimsæki vin minn einu sinni í viku."
+        },
+        {
+          "word": "aldrei",
+          "translation": "never",
+          "pos": "adverb",
+          "example": "Hann drekkur aldrei te."
+        },
+        {
+          "word": "sannur",
+          "translation": "true",
+          "pos": "adjective",
+          "example": "Er þetta satt?"
+        },
+        {
+          "word": "segja",
+          "translation": "to tell",
+          "accepted_translations": ["to say"],
+          "pos": "verb",
+          "example": "Hann segir sögu mömmu sinni."
+        },
+        {
+          "word": "hugsa",
+          "translation": "to think",
+          "pos": "verb",
+          "example": "Ég hugsa um fjölskylduna mína."
+        },
+        {
+          "word": "glaður",
+          "translation": "happy",
+          "accepted_translations": ["glad"],
+          "pos": "adjective",
+          "example": "Þeir eru mjög glaðir."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "saga",
+          "answer": "story",
+          "accepted_answers": ["tale", "history"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ævintýri",
+          "answer": "adventure"
+        },
+        {
+          "type": "translation",
+          "prompt": "minning",
+          "answer": "memory",
+          "accepted_answers": ["souvenir"]
+        },
+        {
+          "type": "translation",
+          "prompt": "barnæska",
+          "answer": "childhood"
+        },
+        {
+          "type": "translation",
+          "prompt": "frí",
+          "answer": "vacation",
+          "accepted_answers": ["holiday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ferð",
+          "answer": "trip",
+          "accepted_answers": ["journey", "travel"]
+        },
+        {
+          "type": "translation",
+          "prompt": "haf",
+          "answer": "sea",
+          "accepted_answers": ["ocean"]
+        },
+        {
+          "type": "translation",
+          "prompt": "strönd",
+          "answer": "beach"
+        },
+        {
+          "type": "translation",
+          "prompt": "fjall",
+          "answer": "mountain"
+        },
+        {
+          "type": "translation",
+          "prompt": "gjöf",
+          "answer": "gift",
+          "accepted_answers": ["present"]
+        },
+        {
+          "type": "translation",
+          "prompt": "sinn",
+          "answer": "time",
+          "accepted_answers": ["occasion"]
+        },
+        {
+          "type": "translation",
+          "prompt": "aldrei",
+          "answer": "never"
+        },
+        {
+          "type": "translation",
+          "prompt": "sannur",
+          "answer": "true"
+        },
+        {
+          "type": "translation",
+          "prompt": "segja",
+          "answer": "to tell",
+          "accepted_answers": ["to say"]
+        },
+        {
+          "type": "translation",
+          "prompt": "hugsa",
+          "answer": "to think"
+        },
+        {
+          "type": "translation",
+          "prompt": "glaður",
+          "answer": "happy",
+          "accepted_answers": ["glad"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Þegar ég var lítill bjó ég á Akureyri.",
+          "answer": "When I was little, I lived in Akureyri.",
+          "accepted_answers": ["When I was small, I lived in Akureyri", "When I was a child, I lived in Akureyri"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Við spiluðum fótbolta alla sunnudaga.",
+          "answer": "We played soccer every Sunday.",
+          "accepted_answers": ["We used to play soccer every Sunday", "We played football every Sunday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ömmu mín sagði sögur.",
+          "answer": "My grandmother told stories."
+        },
+        {
+          "type": "translation",
+          "prompt": "Í fyrra fórum við til hafs.",
+          "answer": "Last summer, we went to the sea.",
+          "accepted_answers": ["Last year we went to the sea"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Það snjóaði á afmælisdeginum mínum.",
+          "answer": "It was snowing on my birthday.",
+          "accepted_answers": ["It snowed on my birthday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hvað fallegt ævintýri!",
+          "answer": "What a beautiful adventure!",
+          "accepted_answers": ["What a great adventure"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Þetta var fyrsta ferðin mín til Íslands.",
+          "answer": "It was my first trip to Iceland."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég hugsaði oft um ömmu mína.",
+          "answer": "I often thought about my grandmother.",
+          "accepted_answers": ["I used to think often about my grandmother"]
+        },
+        {
+          "type": "translation",
+          "prompt": "We were happy.",
+          "answer": "Við vorum glaðir."
+        },
+        {
+          "type": "translation",
+          "prompt": "It was a beautiful memory.",
+          "answer": "Það var falleg minning."
+        },
+        {
+          "type": "translation",
+          "prompt": "I never drink coffee.",
+          "answer": "Ég drekk aldrei kaffi."
+        },
+        {
+          "type": "translation",
+          "prompt": "My grandfather told a story.",
+          "answer": "Afi minn sagði sögu."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'story':",
+          "options": [
+            "saga",
+            "ævintýri",
+            "minning",
+            "barnæska"
+          ],
+          "answer": "saga"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'adventure':",
+          "options": [
+            "ævintýri",
+            "minning",
+            "barnæska",
+            "frí"
+          ],
+          "answer": "ævintýri"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'memory':",
+          "options": [
+            "minning",
+            "barnæska",
+            "frí",
+            "ferð"
+          ],
+          "answer": "minning"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'childhood':",
+          "options": [
+            "barnæska",
+            "frí",
+            "ferð",
+            "haf"
+          ],
+          "answer": "barnæska"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'vacation':",
+          "options": [
+            "frí",
+            "ferð",
+            "haf",
+            "strönd"
+          ],
+          "answer": "frí"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'trip':",
+          "options": [
+            "ferð",
+            "haf",
+            "strönd",
+            "fjall"
+          ],
+          "answer": "ferð"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sea':",
+          "options": [
+            "haf",
+            "strönd",
+            "fjall",
+            "gjöf"
+          ],
+          "answer": "haf"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'beach':",
+          "options": [
+            "strönd",
+            "fjall",
+            "gjöf",
+            "sinn"
+          ],
+          "answer": "strönd"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég hef ___ mikið.",
+          "answer": "lært"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hann hefur ___ bókina.",
+          "answer": "lesið"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þau hafa ___ mikið.",
+          "answer": "dansað"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég hef aldrei ___ í Þýskalandi.",
+          "answer": "verið"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Við höfum ___ góðan mat.",
+          "answer": "borðað"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Afi sagði ___ um æsku sína.",
+          "answer": "sögu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þetta var falleg ___.",
+          "answer": "minning"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Barnið fékk ___.",
+          "answer": "gjöf"
+        }
+      ]
     }
   ]
 }
