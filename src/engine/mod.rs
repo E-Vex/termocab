@@ -702,6 +702,48 @@ mod tests {
     }
 
     #[test]
+    fn the_icelandic_letters_were_all_on_file_from_d9() {
+        // The eleventh-language wave (D17) is the payoff the D9 table
+        // was holding: Icelandic needed no entry, no table, no rule —
+        // its whole alphabet was on file before the course arrived.
+        // þ and ð take the closed-club answer ø set and D15's ı
+        // reaffirmed: letters in their own right, never hinted —
+        // "thu" is wrong for "þú", "godur" is wrong for "góður" —
+        // while the letters around them fold exactly like anywhere
+        // else: "þu" counts with "þú" as the hint (ú folds, þ
+        // stays), "goður" counts with "góður" (ó folds, ð stays).
+        let thu = translation("þú", &[]);
+        assert_eq!(thu.grade("þu"), Grade::CorrectWithHint("þú".into()));
+        assert_eq!(thu.grade("thu"), Grade::Incorrect);
+        assert!(thu.is_correct("ÞÚ"));
+        let godur = translation("góður", &[]);
+        assert_eq!(godur.grade("goður"), Grade::CorrectWithHint("góður".into()));
+        assert_eq!(godur.grade("godur"), Grade::Incorrect);
+        assert!(godur.is_correct("GÓÐUR"));
+        // æ rides LIGATURES beside œ and ß — "hae" counts with "hæ"
+        // as the hint, the fold the table shipped with in D9's day
+        let hae = translation("hæ", &[]);
+        assert_eq!(hae.grade("hae"), Grade::CorrectWithHint("hæ".into()));
+        assert!(hae.is_correct("HÆ"));
+        // and the acutes all decompose like any Latin-1 accent: ý on
+        // "nýr", á on "já", ö on "tölva" — no new entries anywhere
+        let nyr = translation("nýr", &[]);
+        assert_eq!(nyr.grade("nyr"), Grade::CorrectWithHint("nýr".into()));
+        let ja = translation("já", &[]);
+        assert_eq!(ja.grade("ja"), Grade::CorrectWithHint("já".into()));
+        let tolva = translation("tölva", &[]);
+        assert_eq!(tolva.grade("tolva"), Grade::CorrectWithHint("tölva".into()));
+        // að — the particle every Icelandic infinitive carries — is
+        // plain ASCII through and through, and the closed letters
+        // never cross vowels: "þyða" is not "þyda" (the ð), and
+        // neither is it "þýda" spelled twice
+        let thyda = translation("þýða", &[]);
+        assert_eq!(thyda.grade("þyða"), Grade::CorrectWithHint("þýða".into()));
+        assert_eq!(thyda.grade("þyda"), Grade::Incorrect);
+        assert!(!thyda.is_correct("þyrr"));
+    }
+
+    #[test]
     fn prompt_and_answer_accessors_cover_every_kind() {
         let mc = Exercise::MultipleChoice {
             prompt: "pick one".into(),

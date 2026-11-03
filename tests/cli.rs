@@ -452,6 +452,7 @@ fn builtin_courses_work_with_zero_setup() {
         "swedish",
         "hungarian",
         "turkish",
+        "icelandic",
     ] {
         let out = termocab(&scratch)
             .args(["progress", lang])
@@ -522,6 +523,7 @@ fn list_langs_shows_builtins_installed_and_overrides() {
         "swedish",
         "hungarian",
         "turkish",
+        "icelandic",
     ] {
         let stages = std::fs::read_to_string(
             PathBuf::from(env!("CARGO_MANIFEST_DIR"))
@@ -983,8 +985,13 @@ fn broken_pipe_is_silent_and_exits_141_like_cat_and_git() {
 /// zero engine changes, the tildes ã õ, the cedilla ç, the acute and
 /// circumflex vowels and the crase à all flowing through content
 /// validation like everything else; Swedish the eighth, the last clean
-/// zero-change candidate inside the D9 table — its å ä ö flowing
-/// through content validation like everything else.
+/// zero-change candidate inside the D9 table before Icelandic — its
+/// å ä ö flowing through content validation like everything else;
+/// Hungarian the ninth and Turkish the tenth (the double acutes ő ű
+/// and the split ğ/ı question, D14 and D15); Icelandic the eleventh,
+/// the zero-change payoff D9 was holding all along — its acutes and
+/// its ö straight out of the Latin-1 table, its æ a ligature already
+/// on file, its þ and ð closed exactly where D9 put them on day one.
 #[test]
 fn shipped_courses_validate() {
     let scratch = Scratch::new("shipped");
@@ -999,6 +1006,7 @@ fn shipped_courses_validate() {
         "swedish",
         "hungarian",
         "turkish",
+        "icelandic",
     ] {
         let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
             .join("languages")
@@ -1750,6 +1758,104 @@ fn turkish_closed_letters_and_harmony_grade_end_to_end() {
     assert!(srs.contains("word küçük box 2"), "{srs}");
     assert!(srs.contains("word soğuk box 2"), "{srs}");
     assert!(srs.contains("word üç box 2"), "{srs}");
+}
+
+/// The eleventh language end to end, in an Icelandic course. The
+/// roadmap called Icelandic the candidate that would collect the
+/// closed letters the ı precedent predicted — and it collected with
+/// zero engine changes: D9's table already held every letter the
+/// language carries. The acutes and the ö fold like any accent
+/// ("tolva" counts with "tölva" as the hint, "ja" with "já", and
+/// "þu" with "þú" — ú folds, þ stays), the æ ligature opens exactly
+/// where D9 put it beside œ and ß ("hae" counts with "hæ" as the
+/// hint), and the closed pair answers the ı precedent itself: þ and
+/// ð are letters in their own right, so "godur" is wrong for
+/// "góður", never hinted, and the run lands at 7/8 — still past the
+/// 80% bar, the hinted folds counting toward it and the closed miss
+/// not. The course is Icelandic through and through: the stage-2
+/// drill is the three-gender pronoun (hann/hún/það — Icelandic's
+/// three noun genders surface through the pronouns, the
+/// identification slot's edition), the stage-3 signature is the
+/// enclitic definite article blanked where it lives, at the end of
+/// the noun (Hestur___ wants urinn — hestur → hesturinn), and the
+/// modal drill is vilja/þurfa + að + infinitive, the particle every
+/// Icelandic infinitive carries. The review keeps the Icelandic
+/// letters verbatim in the srs keys.
+#[test]
+fn icelandic_closed_letters_and_ligature_grade_end_to_end() {
+    let scratch = Scratch::new("icelandic");
+    let course = r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Íslenska", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "hæ", "translation": "hi",
+                "accepted_translations": ["hello", "bye"],
+                "pos": "interjection", "example": "Hæ, hvað segirðu?" },
+              { "word": "þú", "translation": "you",
+                "pos": "pronoun", "example": "Þú ert vinur minn." },
+              { "word": "góður", "translation": "good",
+                "pos": "adjective", "example": "Hann er góður." },
+              { "word": "tölva", "translation": "computer",
+                "pos": "noun", "example": "Tölvan er í herberginu." },
+              { "word": "já", "translation": "yes",
+                "pos": "adverb", "example": "Já, takk." }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "hi", "answer": "hæ" },
+              { "type": "translation", "prompt": "you", "answer": "þú" },
+              { "type": "translation", "prompt": "good", "answer": "góður" },
+              { "type": "translation", "prompt": "computer", "answer": "tölva" },
+              { "type": "translation", "prompt": "yes", "answer": "já" },
+              { "type": "fill_blank", "prompt": "Góð___ daginn!", "answer": "an" },
+              { "type": "fill_blank", "prompt": "Hestur___ er fljótur.", "answer": "urinn" },
+              { "type": "fill_blank", "prompt": "Þetta er tölva. ___ er góð.", "answer": "Hún" }
+            ] }
+       ] }"#;
+    let file = scratch.stages_file("icelandic.json", course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    // everything answered with the foldable letters stripped — the
+    // acutes, the ö and the æ ligature count with the properly
+    // spelled form as the hint, and the closed ð does not: "godur"
+    // is wrong for "góður", never hinted, so the run lands at 7/8 —
+    // still past the 80% bar, the hinted folds counting toward it
+    // and the closed miss not. The D9 payoff and the D15 precedent
+    // in one run, with no engine change anywhere in sight.
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "--no-shuffle", "test"]);
+    let out = feed(&mut cmd, "hae\nþu\ngodur\ntolva\nja\nan\nurinn\nhun\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("watch the accents: hæ"), "{text}");
+    assert!(text.contains("watch the accents: þú"), "{text}");
+    assert!(text.contains("watch the accents: tölva"), "{text}");
+    assert!(text.contains("watch the accents: já"), "{text}");
+    assert!(text.contains("not quite — expected: góður"), "{text}");
+    assert!(!text.contains("watch the accents: góður"), "{text}");
+    assert!(text.contains("7/8"), "{text}");
+    assert!(text.contains("stage complete"), "{text}");
+
+    // review: due cards come alphabetical (byte order: góður, hæ,
+    // já, tölva, þú), the accepted alternatives count ("hello" for
+    // hæ), and the srs keys keep every Icelandic letter verbatim —
+    // including both members of the closed pair
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(&mut cmd, "good\nhello\nyes\ncomputer\nyou\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("correct"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    let srs = scratch.home().join(".config/termocab/srs/test.txt");
+    let srs = std::fs::read_to_string(&srs).expect("srs file");
+    assert!(srs.contains("word hæ box 2"), "{srs}");
+    assert!(srs.contains("word þú box 2"), "{srs}");
+    assert!(srs.contains("word góður box 2"), "{srs}");
+    assert!(srs.contains("word tölva box 2"), "{srs}");
+    assert!(srs.contains("word já box 2"), "{srs}");
 }
 
 /// The stages 6-10 wave end to end. A course that ships ten stages
