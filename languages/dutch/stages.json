@@ -1,0 +1,4068 @@
+{
+  "language": "dutch",
+  "stages": [
+    {
+      "id": 1,
+      "title": "Greetings and Basics",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "hallo",
+          "translation": "hello",
+          "pos": "interjection",
+          "example": "Hallo, hoe gaat het?",
+          "accepted_translations": [
+            "hi"
+          ]
+        },
+        {
+          "word": "hoi",
+          "translation": "hi",
+          "pos": "interjection",
+          "example": "Hoi, Piet! Hoe gaat het?",
+          "accepted_translations": [
+            "hello"
+          ]
+        },
+        {
+          "word": "goedemorgen",
+          "translation": "good morning",
+          "pos": "phrase",
+          "example": "Goedemorgen, meneer Jansen!"
+        },
+        {
+          "word": "goedemiddag",
+          "translation": "good afternoon",
+          "pos": "phrase",
+          "example": "Goedemiddag, mevrouw de Vries!"
+        },
+        {
+          "word": "goedenavond",
+          "translation": "good evening",
+          "pos": "phrase",
+          "example": "Goedenavond, allemaal."
+        },
+        {
+          "word": "doei",
+          "translation": "bye",
+          "pos": "interjection",
+          "example": "Doei, tot morgen!",
+          "accepted_translations": [
+            "goodbye"
+          ]
+        },
+        {
+          "word": "tot ziens",
+          "translation": "goodbye",
+          "pos": "phrase",
+          "example": "Tot ziens, meneer.",
+          "accepted_translations": [
+            "see you"
+          ]
+        },
+        {
+          "word": "alsjeblieft",
+          "translation": "please",
+          "pos": "interjection",
+          "example": "Een koffie, alsjeblieft.",
+          "accepted_translations": [
+            "here you go"
+          ]
+        },
+        {
+          "word": "dank je",
+          "translation": "thank you",
+          "pos": "phrase",
+          "example": "Dank je voor de koffie!",
+          "accepted_translations": [
+            "thanks"
+          ]
+        },
+        {
+          "word": "ja",
+          "translation": "yes",
+          "pos": "adverb",
+          "example": "Ja, graag."
+        },
+        {
+          "word": "nee",
+          "translation": "no",
+          "pos": "adverb",
+          "example": "Nee, bedankt."
+        },
+        {
+          "word": "hoe gaat het",
+          "translation": "how are you",
+          "pos": "phrase",
+          "example": "Hoe gaat het met jou?",
+          "accepted_translations": [
+            "how are things"
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "hallo",
+          "answer": "hello",
+          "accepted_answers": [
+            "hi"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "hi",
+          "answer": "hoi",
+          "accepted_answers": [
+            "hello"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "hoi",
+          "answer": "hi",
+          "accepted_answers": [
+            "hello"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "goedemorgen",
+          "answer": "good morning"
+        },
+        {
+          "type": "translation",
+          "prompt": "good afternoon",
+          "answer": "goedemiddag"
+        },
+        {
+          "type": "translation",
+          "prompt": "goedenavond",
+          "answer": "good evening"
+        },
+        {
+          "type": "translation",
+          "prompt": "doei",
+          "answer": "bye",
+          "accepted_answers": [
+            "goodbye"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "goodbye",
+          "answer": "tot ziens",
+          "accepted_answers": [
+            "see you",
+            "doei"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "please",
+          "answer": "alsjeblieft",
+          "accepted_answers": [
+            "alstublieft"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "thank you",
+          "answer": "dank je",
+          "accepted_answers": [
+            "dank je wel"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "yes",
+          "answer": "ja"
+        },
+        {
+          "type": "translation",
+          "prompt": "nee",
+          "answer": "no"
+        },
+        {
+          "type": "translation",
+          "prompt": "hoe gaat het",
+          "answer": "how are you",
+          "accepted_answers": [
+            "how are things"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Goedemorgen, Anna!",
+          "answer": "Good morning, Anna!"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ja, graag.",
+          "answer": "Yes, please.",
+          "accepted_answers": [
+            "Yes please"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Nee, bedankt.",
+          "answer": "No, thank you.",
+          "accepted_answers": [
+            "No thanks"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Een koffie, alsjeblieft.",
+          "answer": "A coffee, please."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hallo, ik ben Sanne.",
+          "answer": "Hello, I am Sanne.",
+          "accepted_answers": [
+            "Hello, I'm Sanne"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Dank je wel, tot ziens!",
+          "answer": "Thank you, goodbye!",
+          "accepted_answers": [
+            "Thanks, goodbye!"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Goedenavond, hoe gaat het?",
+          "answer": "Good evening, how are you?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Tot ziens, tot morgen!",
+          "answer": "Goodbye, until tomorrow!",
+          "accepted_answers": [
+            "See you, until tomorrow!"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Goedemiddag, mevrouw de Vries!",
+          "answer": "Good afternoon, Mrs de Vries.",
+          "accepted_answers": [
+            "Good afternoon, Mrs. de Vries"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Een thee, alsjeblieft.",
+          "answer": "A tea, please."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hello':",
+          "options": [
+            "hallo",
+            "hoi",
+            "dank je",
+            "ja"
+          ],
+          "answer": "hallo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'thank you':",
+          "options": [
+            "dank je",
+            "alsjeblieft",
+            "ja",
+            "doei"
+          ],
+          "answer": "dank je"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bye':",
+          "options": [
+            "doei",
+            "hoi",
+            "alsjeblieft",
+            "ja"
+          ],
+          "answer": "doei"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good morning':",
+          "options": [
+            "goedemorgen",
+            "goedemiddag",
+            "goedenavond",
+            "hallo"
+          ],
+          "answer": "goedemorgen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good evening':",
+          "options": [
+            "goedenavond",
+            "goedemorgen",
+            "goedemiddag",
+            "doei"
+          ],
+          "answer": "goedenavond"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'yes':",
+          "options": [
+            "ja",
+            "nee",
+            "hoi",
+            "dank je"
+          ],
+          "answer": "ja"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'no':",
+          "options": [
+            "nee",
+            "ja",
+            "doei",
+            "hallo"
+          ],
+          "answer": "nee"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'please':",
+          "options": [
+            "alsjeblieft",
+            "dank je",
+            "ja",
+            "nee"
+          ],
+          "answer": "alsjeblieft"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, hoe gaat het?",
+          "answer": "Hallo",
+          "accepted_answers": [
+            "Hoi"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ gaat het?",
+          "answer": "Hoe"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Doei, ___ ziens!",
+          "answer": "tot"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Een koffie, ___.",
+          "answer": "alsjeblieft",
+          "accepted_answers": [
+            "alstublieft"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ja, ___.",
+          "answer": "graag"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Goedemorgen, ___ Jansen!",
+          "answer": "meneer"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "People and Family",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "de vader",
+          "translation": "the father",
+          "pos": "noun (de)",
+          "example": "Mijn vader werkt in Amsterdam."
+        },
+        {
+          "word": "de moeder",
+          "translation": "the mother",
+          "pos": "noun (de)",
+          "example": "Zijn moeder kookt heel goed."
+        },
+        {
+          "word": "de zoon",
+          "translation": "the son",
+          "pos": "noun (de)",
+          "example": "Hun zoon is acht jaar."
+        },
+        {
+          "word": "de dochter",
+          "translation": "the daughter",
+          "pos": "noun (de)",
+          "example": "Haar dochter heet Sanne."
+        },
+        {
+          "word": "de broer",
+          "translation": "the brother",
+          "pos": "noun (de)",
+          "example": "Mijn broer heet Kees."
+        },
+        {
+          "word": "de zus",
+          "translation": "the sister",
+          "pos": "noun (de)",
+          "example": "Mijn zus woont in Utrecht."
+        },
+        {
+          "word": "de opa",
+          "translation": "the grandfather",
+          "pos": "noun (de)",
+          "example": "Mijn opa leest de krant."
+        },
+        {
+          "word": "de oma",
+          "translation": "the grandmother",
+          "pos": "noun (de)",
+          "example": "Mijn oma bakt appeltaart."
+        },
+        {
+          "word": "het kind",
+          "translation": "the child",
+          "pos": "noun (het)",
+          "example": "Het kind speelt in de tuin."
+        },
+        {
+          "word": "het meisje",
+          "translation": "the girl",
+          "pos": "noun (het)",
+          "example": "Het meisje leest een boek."
+        },
+        {
+          "word": "de vriend",
+          "translation": "the friend",
+          "pos": "noun (de)",
+          "example": "Jan is mijn beste vriend."
+        },
+        {
+          "word": "de vriendin",
+          "translation": "the friend (female)",
+          "pos": "noun (de)",
+          "example": "Mijn vriendin heet Emma.",
+          "accepted_translations": [
+            "the girlfriend"
+          ]
+        },
+        {
+          "word": "de naam",
+          "translation": "the name",
+          "pos": "noun (de)",
+          "example": "Mijn naam is Pieter."
+        },
+        {
+          "word": "het gezin",
+          "translation": "the family",
+          "pos": "noun (het)",
+          "example": "Het gezin woont in een klein huis.",
+          "accepted_translations": [
+            "the household"
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "de vader",
+          "answer": "the father"
+        },
+        {
+          "type": "translation",
+          "prompt": "de moeder",
+          "answer": "the mother"
+        },
+        {
+          "type": "translation",
+          "prompt": "de zoon",
+          "answer": "the son"
+        },
+        {
+          "type": "translation",
+          "prompt": "de dochter",
+          "answer": "the daughter"
+        },
+        {
+          "type": "translation",
+          "prompt": "de broer",
+          "answer": "the brother"
+        },
+        {
+          "type": "translation",
+          "prompt": "de zus",
+          "answer": "the sister"
+        },
+        {
+          "type": "translation",
+          "prompt": "de opa",
+          "answer": "the grandfather"
+        },
+        {
+          "type": "translation",
+          "prompt": "de oma",
+          "answer": "the grandmother"
+        },
+        {
+          "type": "translation",
+          "prompt": "het kind",
+          "answer": "the child"
+        },
+        {
+          "type": "translation",
+          "prompt": "het meisje",
+          "answer": "the girl"
+        },
+        {
+          "type": "translation",
+          "prompt": "de vriend",
+          "answer": "the friend"
+        },
+        {
+          "type": "translation",
+          "prompt": "de vriendin",
+          "answer": "the friend (female)",
+          "accepted_answers": [
+            "the girlfriend"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "de naam",
+          "answer": "the name"
+        },
+        {
+          "type": "translation",
+          "prompt": "het gezin",
+          "answer": "the family",
+          "accepted_answers": [
+            "the household"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "the father",
+          "answer": "de vader"
+        },
+        {
+          "type": "translation",
+          "prompt": "the mother",
+          "answer": "de moeder"
+        },
+        {
+          "type": "translation",
+          "prompt": "the son",
+          "answer": "de zoon"
+        },
+        {
+          "type": "translation",
+          "prompt": "the daughter",
+          "answer": "de dochter"
+        },
+        {
+          "type": "translation",
+          "prompt": "the brother",
+          "answer": "de broer"
+        },
+        {
+          "type": "translation",
+          "prompt": "the sister",
+          "answer": "de zus"
+        },
+        {
+          "type": "translation",
+          "prompt": "the girl",
+          "answer": "het meisje"
+        },
+        {
+          "type": "translation",
+          "prompt": "the child",
+          "answer": "het kind"
+        },
+        {
+          "type": "translation",
+          "prompt": "the name",
+          "answer": "de naam"
+        },
+        {
+          "type": "translation",
+          "prompt": "Mijn zus heet Anna.",
+          "answer": "My sister is called Anna.",
+          "accepted_answers": [
+            "My sister's name is Anna"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Het gezin is groot.",
+          "answer": "The family is big.",
+          "accepted_answers": [
+            "The household is big"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the father':",
+          "options": [
+            "de vader",
+            "de moeder",
+            "de broer",
+            "de zus"
+          ],
+          "answer": "de vader"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the mother':",
+          "options": [
+            "de moeder",
+            "de vader",
+            "de opa",
+            "de zus"
+          ],
+          "answer": "de moeder"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the brother':",
+          "options": [
+            "de broer",
+            "de zus",
+            "de zoon",
+            "de vriend"
+          ],
+          "answer": "de broer"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the sister':",
+          "options": [
+            "de zus",
+            "de broer",
+            "de dochter",
+            "de oma"
+          ],
+          "answer": "de zus"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the grandfather':",
+          "options": [
+            "de opa",
+            "de oma",
+            "de vader",
+            "de zoon"
+          ],
+          "answer": "de opa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the grandmother':",
+          "options": [
+            "de oma",
+            "de opa",
+            "de moeder",
+            "de dochter"
+          ],
+          "answer": "de oma"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the girl':",
+          "options": [
+            "het meisje",
+            "de zus",
+            "de dochter",
+            "de moeder"
+          ],
+          "answer": "het meisje"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the family':",
+          "options": [
+            "het gezin",
+            "het kind",
+            "het meisje",
+            "de naam"
+          ],
+          "answer": "het gezin"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ vader werkt in Utrecht.",
+          "answer": "De"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ moeder kookt goed.",
+          "answer": "De"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ kind speelt buiten.",
+          "answer": "Het"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ meisje leest een boek.",
+          "answer": "Het"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De moeder van mijn vader is mijn ___.",
+          "answer": "oma"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De vader van mijn moeder is mijn ___.",
+          "answer": "opa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ naam is Pieter.",
+          "answer": "Mijn"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Het ___ van mijn broer is Piet.",
+          "answer": "naam"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Numbers and Time",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "één",
+          "translation": "one",
+          "pos": "number",
+          "example": "Ik wil één koffie, alsjeblieft.",
+          "accepted_translations": [
+            "1"
+          ]
+        },
+        {
+          "word": "twee",
+          "translation": "two",
+          "pos": "number",
+          "example": "Ik heb twee broers.",
+          "accepted_translations": [
+            "2"
+          ]
+        },
+        {
+          "word": "drie",
+          "translation": "three",
+          "pos": "number",
+          "example": "De bus komt over drie minuten.",
+          "accepted_translations": [
+            "3"
+          ]
+        },
+        {
+          "word": "vier",
+          "translation": "four",
+          "pos": "number",
+          "example": "De tafel heeft vier stoelen.",
+          "accepted_translations": [
+            "4"
+          ]
+        },
+        {
+          "word": "vijf",
+          "translation": "five",
+          "pos": "number",
+          "example": "Ik werk vijf dagen per week.",
+          "accepted_translations": [
+            "5"
+          ]
+        },
+        {
+          "word": "zes",
+          "translation": "six",
+          "pos": "number",
+          "example": "Het avondeten is om zes uur.",
+          "accepted_translations": [
+            "6"
+          ]
+        },
+        {
+          "word": "zeven",
+          "translation": "seven",
+          "pos": "number",
+          "example": "De week heeft zeven dagen.",
+          "accepted_translations": [
+            "7"
+          ]
+        },
+        {
+          "word": "acht",
+          "translation": "eight",
+          "pos": "number",
+          "example": "Ik sta om acht uur op.",
+          "accepted_translations": [
+            "8"
+          ]
+        },
+        {
+          "word": "negen",
+          "translation": "nine",
+          "pos": "number",
+          "example": "De trein komt om negen uur aan.",
+          "accepted_translations": [
+            "9"
+          ]
+        },
+        {
+          "word": "tien",
+          "translation": "ten",
+          "pos": "number",
+          "example": "Het duurt tien minuten.",
+          "accepted_translations": [
+            "10"
+          ]
+        },
+        {
+          "word": "de dag",
+          "translation": "the day",
+          "pos": "noun (de)",
+          "example": "Vandaag is een mooie dag."
+        },
+        {
+          "word": "de week",
+          "translation": "the week",
+          "pos": "noun (de)",
+          "example": "Ik werk vijf dagen in de week."
+        },
+        {
+          "word": "het uur",
+          "translation": "the hour",
+          "pos": "noun (het)",
+          "example": "Een uur heeft zestig minuten."
+        },
+        {
+          "word": "vandaag",
+          "translation": "today",
+          "pos": "adverb",
+          "example": "Vandaag werk ik thuis."
+        },
+        {
+          "word": "nu",
+          "translation": "now",
+          "pos": "adverb",
+          "example": "Ik ga nu naar huis."
+        },
+        {
+          "word": "straks",
+          "translation": "soon",
+          "pos": "adverb",
+          "example": "Straks drink ik koffie.",
+          "accepted_translations": [
+            "later"
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "één",
+          "answer": "one",
+          "accepted_answers": [
+            "1"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "twee",
+          "answer": "two",
+          "accepted_answers": [
+            "2"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "drie",
+          "answer": "three",
+          "accepted_answers": [
+            "3"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "vier",
+          "answer": "four",
+          "accepted_answers": [
+            "4"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "vijf",
+          "answer": "five",
+          "accepted_answers": [
+            "5"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "zes",
+          "answer": "six",
+          "accepted_answers": [
+            "6"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "zeven",
+          "answer": "seven",
+          "accepted_answers": [
+            "7"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "acht",
+          "answer": "eight",
+          "accepted_answers": [
+            "8"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "negen",
+          "answer": "nine",
+          "accepted_answers": [
+            "9"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "tien",
+          "answer": "ten",
+          "accepted_answers": [
+            "10"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "de dag",
+          "answer": "the day"
+        },
+        {
+          "type": "translation",
+          "prompt": "de week",
+          "answer": "the week"
+        },
+        {
+          "type": "translation",
+          "prompt": "het uur",
+          "answer": "the hour"
+        },
+        {
+          "type": "translation",
+          "prompt": "vandaag",
+          "answer": "today"
+        },
+        {
+          "type": "translation",
+          "prompt": "nu",
+          "answer": "now"
+        },
+        {
+          "type": "translation",
+          "prompt": "straks",
+          "answer": "soon",
+          "accepted_answers": [
+            "later"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "one",
+          "answer": "één",
+          "accepted_answers": [
+            "een"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "two",
+          "answer": "twee"
+        },
+        {
+          "type": "translation",
+          "prompt": "three",
+          "answer": "drie"
+        },
+        {
+          "type": "translation",
+          "prompt": "four",
+          "answer": "vier"
+        },
+        {
+          "type": "translation",
+          "prompt": "five",
+          "answer": "vijf"
+        },
+        {
+          "type": "translation",
+          "prompt": "six",
+          "answer": "zes"
+        },
+        {
+          "type": "translation",
+          "prompt": "seven",
+          "answer": "zeven"
+        },
+        {
+          "type": "translation",
+          "prompt": "eight",
+          "answer": "acht"
+        },
+        {
+          "type": "translation",
+          "prompt": "nine",
+          "answer": "negen"
+        },
+        {
+          "type": "translation",
+          "prompt": "ten",
+          "answer": "tien"
+        },
+        {
+          "type": "translation",
+          "prompt": "De dag heeft vierentwintig uur.",
+          "answer": "The day has twenty-four hours."
+        },
+        {
+          "type": "translation",
+          "prompt": "De week heeft zeven dagen.",
+          "answer": "The week has seven days."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vandaag ben ik thuis.",
+          "answer": "Today I am at home.",
+          "accepted_answers": [
+            "I am at home today"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik ga nu naar huis.",
+          "answer": "I am going home now."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'one':",
+          "options": [
+            "één",
+            "twee",
+            "drie",
+            "tien"
+          ],
+          "answer": "één"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'two':",
+          "options": [
+            "twee",
+            "één",
+            "drie",
+            "tien"
+          ],
+          "answer": "twee"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'five':",
+          "options": [
+            "vijf",
+            "vier",
+            "zes",
+            "negen"
+          ],
+          "answer": "vijf"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'seven':",
+          "options": [
+            "zeven",
+            "zes",
+            "acht",
+            "negen"
+          ],
+          "answer": "zeven"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'ten':",
+          "options": [
+            "tien",
+            "negen",
+            "acht",
+            "zes"
+          ],
+          "answer": "tien"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the day':",
+          "options": [
+            "de dag",
+            "de week",
+            "het uur",
+            "vandaag"
+          ],
+          "answer": "de dag"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the week':",
+          "options": [
+            "de week",
+            "de dag",
+            "het uur",
+            "nu"
+          ],
+          "answer": "de week"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'today':",
+          "options": [
+            "vandaag",
+            "nu",
+            "straks",
+            "de dag"
+          ],
+          "answer": "vandaag"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Een, ___, drie.",
+          "answer": "twee"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vier, vijf, ___.",
+          "answer": "zes"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Zeven, acht, ___.",
+          "answer": "negen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De week heeft ___ dagen.",
+          "answer": "zeven"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Een uur heeft ___ minuten.",
+          "answer": "zestig"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ werk ik thuis.",
+          "answer": "Vandaag"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik ga ___ naar huis.",
+          "answer": "nu",
+          "accepted_answers": [
+            "straks"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Eén, twee, drie, vier, ___, zes.",
+          "answer": "vijf"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Everyday Verbs",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "willen",
+          "translation": "to want",
+          "pos": "verb",
+          "example": "Ik wil een kop koffie."
+        },
+        {
+          "word": "kunnen",
+          "translation": "to be able to",
+          "pos": "verb",
+          "example": "Kun je morgen komen?",
+          "accepted_translations": [
+            "can"
+          ]
+        },
+        {
+          "word": "moeten",
+          "translation": "must",
+          "pos": "verb",
+          "example": "Ik moet nu gaan.",
+          "accepted_translations": [
+            "to have to"
+          ]
+        },
+        {
+          "word": "gaan",
+          "translation": "to go",
+          "pos": "verb",
+          "example": "We gaan naar de markt."
+        },
+        {
+          "word": "komen",
+          "translation": "to come",
+          "pos": "verb",
+          "example": "Kom je vanavond?"
+        },
+        {
+          "word": "eten",
+          "translation": "to eat",
+          "pos": "verb",
+          "example": "Ik wil een broodje eten."
+        },
+        {
+          "word": "drinken",
+          "translation": "to drink",
+          "pos": "verb",
+          "example": "Ik drink veel water."
+        },
+        {
+          "word": "werken",
+          "translation": "to work",
+          "pos": "verb",
+          "example": "Ik werk in een winkel."
+        },
+        {
+          "word": "kopen",
+          "translation": "to buy",
+          "pos": "verb",
+          "example": "Ik wil een boek kopen."
+        },
+        {
+          "word": "lezen",
+          "translation": "to read",
+          "pos": "verb",
+          "example": "Ik lees elke dag een boek."
+        },
+        {
+          "word": "kijken",
+          "translation": "to watch",
+          "pos": "verb",
+          "example": "Ik kijk graag tv.",
+          "accepted_translations": [
+            "to look"
+          ]
+        },
+        {
+          "word": "spelen",
+          "translation": "to play",
+          "pos": "verb",
+          "example": "De kinderen spelen buiten."
+        },
+        {
+          "word": "maken",
+          "translation": "to make",
+          "pos": "verb",
+          "example": "Ik maak vanmiddag soep.",
+          "accepted_translations": [
+            "to do"
+          ]
+        },
+        {
+          "word": "bellen",
+          "translation": "to call",
+          "pos": "verb",
+          "example": "Ik bel je vanavond.",
+          "accepted_translations": [
+            "to phone"
+          ]
+        },
+        {
+          "word": "wonen",
+          "translation": "to live",
+          "pos": "verb",
+          "example": "Ik woon in Rotterdam.",
+          "accepted_translations": [
+            "to reside"
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "willen",
+          "answer": "to want"
+        },
+        {
+          "type": "translation",
+          "prompt": "kunnen",
+          "answer": "to be able to",
+          "accepted_answers": [
+            "can"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "moeten",
+          "answer": "must",
+          "accepted_answers": [
+            "to have to"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "gaan",
+          "answer": "to go"
+        },
+        {
+          "type": "translation",
+          "prompt": "komen",
+          "answer": "to come"
+        },
+        {
+          "type": "translation",
+          "prompt": "eten",
+          "answer": "to eat"
+        },
+        {
+          "type": "translation",
+          "prompt": "drinken",
+          "answer": "to drink"
+        },
+        {
+          "type": "translation",
+          "prompt": "werken",
+          "answer": "to work"
+        },
+        {
+          "type": "translation",
+          "prompt": "kopen",
+          "answer": "to buy"
+        },
+        {
+          "type": "translation",
+          "prompt": "lezen",
+          "answer": "to read"
+        },
+        {
+          "type": "translation",
+          "prompt": "kijken",
+          "answer": "to watch",
+          "accepted_answers": [
+            "to look"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "spelen",
+          "answer": "to play"
+        },
+        {
+          "type": "translation",
+          "prompt": "maken",
+          "answer": "to make",
+          "accepted_answers": [
+            "to do"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "bellen",
+          "answer": "to call",
+          "accepted_answers": [
+            "to phone"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "wonen",
+          "answer": "to live",
+          "accepted_answers": [
+            "to reside"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "to want",
+          "answer": "willen"
+        },
+        {
+          "type": "translation",
+          "prompt": "can",
+          "answer": "kunnen"
+        },
+        {
+          "type": "translation",
+          "prompt": "must",
+          "answer": "moeten"
+        },
+        {
+          "type": "translation",
+          "prompt": "to go",
+          "answer": "gaan"
+        },
+        {
+          "type": "translation",
+          "prompt": "to eat",
+          "answer": "eten"
+        },
+        {
+          "type": "translation",
+          "prompt": "to drink",
+          "answer": "drinken"
+        },
+        {
+          "type": "translation",
+          "prompt": "to work",
+          "answer": "werken"
+        },
+        {
+          "type": "translation",
+          "prompt": "to buy",
+          "answer": "kopen"
+        },
+        {
+          "type": "translation",
+          "prompt": "to read",
+          "answer": "lezen"
+        },
+        {
+          "type": "translation",
+          "prompt": "to live",
+          "answer": "wonen"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik wil een boek kopen.",
+          "answer": "I want to buy a book."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik moet vandaag werken.",
+          "answer": "I have to work today.",
+          "accepted_answers": [
+            "I must work today"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Kun je vanavond komen?",
+          "answer": "Can you come tonight?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik woon in Utrecht.",
+          "answer": "I live in Utrecht."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to want':",
+          "options": [
+            "willen",
+            "kunnen",
+            "moeten",
+            "gaan"
+          ],
+          "answer": "willen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to eat':",
+          "options": [
+            "eten",
+            "drinken",
+            "kopen",
+            "maken"
+          ],
+          "answer": "eten"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to drink':",
+          "options": [
+            "drinken",
+            "eten",
+            "lezen",
+            "werken"
+          ],
+          "answer": "drinken"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to go':",
+          "options": [
+            "gaan",
+            "komen",
+            "spelen",
+            "bellen"
+          ],
+          "answer": "gaan"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to come':",
+          "options": [
+            "komen",
+            "gaan",
+            "kijken",
+            "wonen"
+          ],
+          "answer": "komen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to buy':",
+          "options": [
+            "kopen",
+            "eten",
+            "maken",
+            "lezen"
+          ],
+          "answer": "kopen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to work':",
+          "options": [
+            "werken",
+            "wonen",
+            "spelen",
+            "drinken"
+          ],
+          "answer": "werken"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to call':",
+          "options": [
+            "bellen",
+            "kijken",
+            "komen",
+            "kopen"
+          ],
+          "answer": "bellen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik wil een pizza ___.",
+          "answer": "eten"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik moet vandaag ___.",
+          "answer": "werken"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik kan niet ___.",
+          "answer": "komen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik wil een boek ___.",
+          "answer": "kopen",
+          "accepted_answers": [
+            "lezen"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik wil koffie ___.",
+          "answer": "drinken"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik wil tv ___.",
+          "answer": "kijken"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik moet naar de winkel ___.",
+          "answer": "gaan"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik wil mijn moeder ___.",
+          "answer": "bellen"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Describing and Asking",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "groot",
+          "translation": "big",
+          "pos": "adjective",
+          "example": "De stad is groot."
+        },
+        {
+          "word": "klein",
+          "translation": "small",
+          "pos": "adjective",
+          "example": "Het huis is klein."
+        },
+        {
+          "word": "mooi",
+          "translation": "beautiful",
+          "pos": "adjective",
+          "example": "Een mooie dag.",
+          "accepted_translations": [
+            "nice",
+            "pretty"
+          ]
+        },
+        {
+          "word": "lekker",
+          "translation": "tasty",
+          "pos": "adjective",
+          "example": "De soep is lekker.",
+          "accepted_translations": [
+            "yummy"
+          ]
+        },
+        {
+          "word": "duur",
+          "translation": "expensive",
+          "pos": "adjective",
+          "example": "De auto is duur."
+        },
+        {
+          "word": "goedkoop",
+          "translation": "cheap",
+          "pos": "adjective",
+          "example": "De fiets is goedkoop."
+        },
+        {
+          "word": "goed",
+          "translation": "good",
+          "pos": "adjective",
+          "example": "Het boek is goed."
+        },
+        {
+          "word": "nieuw",
+          "translation": "new",
+          "pos": "adjective",
+          "example": "Ik heb een nieuw boek."
+        },
+        {
+          "word": "oud",
+          "translation": "old",
+          "pos": "adjective",
+          "example": "Mijn opa is oud."
+        },
+        {
+          "word": "het idee",
+          "translation": "the idea",
+          "pos": "noun (het)",
+          "example": "We hebben mooie ideeën."
+        },
+        {
+          "word": "wie",
+          "translation": "who",
+          "pos": "question word",
+          "example": "Wie is dat?"
+        },
+        {
+          "word": "wat",
+          "translation": "what",
+          "pos": "question word",
+          "example": "Wat drink je?"
+        },
+        {
+          "word": "waar",
+          "translation": "where",
+          "pos": "question word",
+          "example": "Waar woon je?"
+        },
+        {
+          "word": "wanneer",
+          "translation": "when",
+          "pos": "question word",
+          "example": "Wanneer kom je?"
+        },
+        {
+          "word": "waarom",
+          "translation": "why",
+          "pos": "question word",
+          "example": "Waarom leer je Nederlands?"
+        },
+        {
+          "word": "hoeveel",
+          "translation": "how much",
+          "pos": "question word",
+          "example": "Hoeveel kost de kaas?",
+          "accepted_translations": [
+            "how many"
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "groot",
+          "answer": "big"
+        },
+        {
+          "type": "translation",
+          "prompt": "klein",
+          "answer": "small"
+        },
+        {
+          "type": "translation",
+          "prompt": "mooi",
+          "answer": "beautiful",
+          "accepted_answers": [
+            "nice",
+            "pretty"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "lekker",
+          "answer": "tasty",
+          "accepted_answers": [
+            "yummy"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "duur",
+          "answer": "expensive"
+        },
+        {
+          "type": "translation",
+          "prompt": "goedkoop",
+          "answer": "cheap"
+        },
+        {
+          "type": "translation",
+          "prompt": "goed",
+          "answer": "good"
+        },
+        {
+          "type": "translation",
+          "prompt": "nieuw",
+          "answer": "new"
+        },
+        {
+          "type": "translation",
+          "prompt": "oud",
+          "answer": "old"
+        },
+        {
+          "type": "translation",
+          "prompt": "het idee",
+          "answer": "the idea"
+        },
+        {
+          "type": "translation",
+          "prompt": "wie",
+          "answer": "who"
+        },
+        {
+          "type": "translation",
+          "prompt": "wat",
+          "answer": "what"
+        },
+        {
+          "type": "translation",
+          "prompt": "waar",
+          "answer": "where"
+        },
+        {
+          "type": "translation",
+          "prompt": "wanneer",
+          "answer": "when"
+        },
+        {
+          "type": "translation",
+          "prompt": "waarom",
+          "answer": "why"
+        },
+        {
+          "type": "translation",
+          "prompt": "hoeveel",
+          "answer": "how much",
+          "accepted_answers": [
+            "how many"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "big",
+          "answer": "groot"
+        },
+        {
+          "type": "translation",
+          "prompt": "small",
+          "answer": "klein"
+        },
+        {
+          "type": "translation",
+          "prompt": "beautiful",
+          "answer": "mooi",
+          "accepted_answers": [
+            "nice"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "tasty",
+          "answer": "lekker",
+          "accepted_answers": [
+            "yummy"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "expensive",
+          "answer": "duur"
+        },
+        {
+          "type": "translation",
+          "prompt": "cheap",
+          "answer": "goedkoop"
+        },
+        {
+          "type": "translation",
+          "prompt": "good",
+          "answer": "goed"
+        },
+        {
+          "type": "translation",
+          "prompt": "new",
+          "answer": "nieuw"
+        },
+        {
+          "type": "translation",
+          "prompt": "old",
+          "answer": "oud"
+        },
+        {
+          "type": "translation",
+          "prompt": "the idea",
+          "answer": "het idee"
+        },
+        {
+          "type": "translation",
+          "prompt": "Wie is dat?",
+          "answer": "Who is that?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Waar woon je?",
+          "answer": "Where do you live?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Wat wil je drinken?",
+          "answer": "What do you want to drink?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Waarom leer je Nederlands?",
+          "answer": "Why do you learn Dutch?",
+          "accepted_answers": [
+            "Why are you learning Dutch?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Wanneer komt de bus?",
+          "answer": "When does the bus come?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Hoeveel kost de koffie?",
+          "answer": "How much is the coffee?",
+          "accepted_answers": [
+            "How much does the coffee cost?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "the ideas",
+          "answer": "de ideeën"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'big':",
+          "options": [
+            "groot",
+            "klein",
+            "mooi",
+            "oud"
+          ],
+          "answer": "groot"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'small':",
+          "options": [
+            "klein",
+            "groot",
+            "nieuw",
+            "duur"
+          ],
+          "answer": "klein"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'beautiful':",
+          "options": [
+            "mooi",
+            "lekker",
+            "goed",
+            "oud"
+          ],
+          "answer": "mooi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'expensive':",
+          "options": [
+            "duur",
+            "goedkoop",
+            "klein",
+            "nieuw"
+          ],
+          "answer": "duur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cheap':",
+          "options": [
+            "goedkoop",
+            "duur",
+            "mooi",
+            "goed"
+          ],
+          "answer": "goedkoop"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'who':",
+          "options": [
+            "wie",
+            "wat",
+            "waar",
+            "wanneer"
+          ],
+          "answer": "wie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'where':",
+          "options": [
+            "waar",
+            "wie",
+            "wat",
+            "waarom"
+          ],
+          "answer": "waar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'how much':",
+          "options": [
+            "hoeveel",
+            "wanneer",
+            "waarom",
+            "wie"
+          ],
+          "answer": "hoeveel"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Een olifant is ___.",
+          "answer": "groot"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Een muis is ___.",
+          "answer": "klein"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kaas uit Nederland is ___.",
+          "answer": "lekker",
+          "accepted_answers": [
+            "goed"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Een Ferrari is ___.",
+          "answer": "duur"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Deze fiets is niet duur, hij is ___.",
+          "answer": "goedkoop"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mijn fiets is ___, ik wil een nieuwe.",
+          "answer": "oud"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ komt de trein?",
+          "answer": "Wanneer"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ kost het brood?",
+          "answer": "Hoeveel"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Food and Drink",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "de koffie",
+          "translation": "the coffee",
+          "pos": "noun (de)",
+          "example": "Ik drink elke ochtend koffie."
+        },
+        {
+          "word": "de thee",
+          "translation": "the tea",
+          "pos": "noun (de)",
+          "example": "Wil je een kopje thee?"
+        },
+        {
+          "word": "het water",
+          "translation": "the water",
+          "pos": "noun (het)",
+          "example": "Ik drink alleen water."
+        },
+        {
+          "word": "het bier",
+          "translation": "the beer",
+          "pos": "noun (het)",
+          "example": "Een biertje, alsjeblieft."
+        },
+        {
+          "word": "de melk",
+          "translation": "the milk",
+          "pos": "noun (de)",
+          "example": "Ik drink melk bij het ontbijt."
+        },
+        {
+          "word": "het brood",
+          "translation": "the bread",
+          "pos": "noun (het)",
+          "example": "Ik eet brood met kaas."
+        },
+        {
+          "word": "de kaas",
+          "translation": "the cheese",
+          "pos": "noun (de)",
+          "example": "De kaas is lekker."
+        },
+        {
+          "word": "de appel",
+          "translation": "the apple",
+          "pos": "noun (de)",
+          "example": "Ik eet elke dag een appel."
+        },
+        {
+          "word": "de aardappel",
+          "translation": "the potato",
+          "pos": "noun (de)",
+          "example": "Wij eten aardappels bij het avondeten."
+        },
+        {
+          "word": "het vlees",
+          "translation": "the meat",
+          "pos": "noun (het)",
+          "example": "Wij eten geen vlees."
+        },
+        {
+          "word": "de vis",
+          "translation": "the fish",
+          "pos": "noun (de)",
+          "example": "Zij eet graag vis."
+        },
+        {
+          "word": "de rijst",
+          "translation": "the rice",
+          "pos": "noun (de)",
+          "example": "Ik koop rijst in de winkel."
+        },
+        {
+          "word": "de soep",
+          "translation": "the soup",
+          "pos": "noun (de)",
+          "example": "De soep is heet."
+        },
+        {
+          "word": "het ontbijt",
+          "translation": "breakfast",
+          "pos": "noun (het)",
+          "example": "Het ontbijt is om achten."
+        },
+        {
+          "word": "de lunch",
+          "translation": "lunch",
+          "pos": "noun (de)",
+          "example": "De lunch is om half één."
+        },
+        {
+          "word": "het avondeten",
+          "translation": "dinner",
+          "pos": "noun (het)",
+          "example": "Het avondeten is om zes uur.",
+          "accepted_translations": [
+            "supper"
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "de koffie",
+          "answer": "the coffee"
+        },
+        {
+          "type": "translation",
+          "prompt": "de thee",
+          "answer": "the tea"
+        },
+        {
+          "type": "translation",
+          "prompt": "het water",
+          "answer": "the water"
+        },
+        {
+          "type": "translation",
+          "prompt": "het bier",
+          "answer": "the beer"
+        },
+        {
+          "type": "translation",
+          "prompt": "de melk",
+          "answer": "the milk"
+        },
+        {
+          "type": "translation",
+          "prompt": "het brood",
+          "answer": "the bread"
+        },
+        {
+          "type": "translation",
+          "prompt": "de kaas",
+          "answer": "the cheese"
+        },
+        {
+          "type": "translation",
+          "prompt": "de appel",
+          "answer": "the apple"
+        },
+        {
+          "type": "translation",
+          "prompt": "de aardappel",
+          "answer": "the potato"
+        },
+        {
+          "type": "translation",
+          "prompt": "het vlees",
+          "answer": "the meat"
+        },
+        {
+          "type": "translation",
+          "prompt": "de vis",
+          "answer": "the fish"
+        },
+        {
+          "type": "translation",
+          "prompt": "de rijst",
+          "answer": "the rice"
+        },
+        {
+          "type": "translation",
+          "prompt": "de soep",
+          "answer": "the soup"
+        },
+        {
+          "type": "translation",
+          "prompt": "het ontbijt",
+          "answer": "breakfast",
+          "accepted_answers": [
+            "the breakfast"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "de lunch",
+          "answer": "lunch",
+          "accepted_answers": [
+            "the lunch"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "het avondeten",
+          "answer": "dinner",
+          "accepted_answers": [
+            "supper",
+            "the dinner"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "the coffee",
+          "answer": "de koffie"
+        },
+        {
+          "type": "translation",
+          "prompt": "the tea",
+          "answer": "de thee"
+        },
+        {
+          "type": "translation",
+          "prompt": "the water",
+          "answer": "het water"
+        },
+        {
+          "type": "translation",
+          "prompt": "the bread",
+          "answer": "het brood"
+        },
+        {
+          "type": "translation",
+          "prompt": "the cheese",
+          "answer": "de kaas"
+        },
+        {
+          "type": "translation",
+          "prompt": "the apple",
+          "answer": "de appel"
+        },
+        {
+          "type": "translation",
+          "prompt": "the meat",
+          "answer": "het vlees"
+        },
+        {
+          "type": "translation",
+          "prompt": "the fish",
+          "answer": "de vis"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik drink koffie in de ochtend.",
+          "answer": "I drink coffee in the morning.",
+          "accepted_answers": [
+            "In the morning I drink coffee"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik eet brood met kaas.",
+          "answer": "I eat bread with cheese."
+        },
+        {
+          "type": "translation",
+          "prompt": "Wij drinken water bij het eten.",
+          "answer": "We drink water with the meal.",
+          "accepted_answers": [
+            "We drink water with dinner"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "De soep is heet.",
+          "answer": "The soup is hot.",
+          "accepted_answers": [
+            "The soup is warm"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the coffee':",
+          "options": [
+            "de koffie",
+            "de thee",
+            "het water",
+            "de melk"
+          ],
+          "answer": "de koffie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the tea':",
+          "options": [
+            "de thee",
+            "de koffie",
+            "het bier",
+            "het water"
+          ],
+          "answer": "de thee"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the water':",
+          "options": [
+            "het water",
+            "de melk",
+            "het bier",
+            "de soep"
+          ],
+          "answer": "het water"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the bread':",
+          "options": [
+            "het brood",
+            "de kaas",
+            "de appel",
+            "het vlees"
+          ],
+          "answer": "het brood"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the cheese':",
+          "options": [
+            "de kaas",
+            "het brood",
+            "de vis",
+            "de rijst"
+          ],
+          "answer": "de kaas"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the potato':",
+          "options": [
+            "de aardappel",
+            "de appel",
+            "de vis",
+            "het vlees"
+          ],
+          "answer": "de aardappel"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'breakfast':",
+          "options": [
+            "het ontbijt",
+            "de lunch",
+            "het avondeten",
+            "de soep"
+          ],
+          "answer": "het ontbijt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'dinner':",
+          "options": [
+            "het avondeten",
+            "het ontbijt",
+            "de lunch",
+            "het bier"
+          ],
+          "answer": "het avondeten"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik ___ van kaas.",
+          "answer": "hou",
+          "accepted_answers": [
+            "houd"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wij ___ van thee.",
+          "answer": "houden"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik heb ___. Ik wil eten.",
+          "answer": "honger"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik heb ___. Ik wil drinken.",
+          "answer": "dorst"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Een appel is rood of ___.",
+          "answer": "groen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Het ___ is om achten.",
+          "answer": "ontbijt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De ___ is om half één.",
+          "answer": "lunch"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Het ___ is om zes uur.",
+          "answer": "avondeten",
+          "accepted_answers": [
+            "diner"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Home and Places",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "het huis",
+          "translation": "the house",
+          "pos": "noun (het)",
+          "example": "Ons huis heeft een grote tuin."
+        },
+        {
+          "word": "de kamer",
+          "translation": "the room",
+          "pos": "noun (de)",
+          "example": "Mijn kamer is klein maar mooi."
+        },
+        {
+          "word": "het bed",
+          "translation": "the bed",
+          "pos": "noun (het)",
+          "example": "Het kind ligt in bed."
+        },
+        {
+          "word": "de keuken",
+          "translation": "the kitchen",
+          "pos": "noun (de)",
+          "example": "We eten in de keuken."
+        },
+        {
+          "word": "de tuin",
+          "translation": "the garden",
+          "pos": "noun (de)",
+          "example": "De kinderen spelen in de tuin."
+        },
+        {
+          "word": "de deur",
+          "translation": "the door",
+          "pos": "noun (de)",
+          "example": "Doe de deur dicht, alsjeblieft."
+        },
+        {
+          "word": "het raam",
+          "translation": "the window",
+          "pos": "noun (het)",
+          "example": "Het raam is open."
+        },
+        {
+          "word": "de tafel",
+          "translation": "the table",
+          "pos": "noun (de)",
+          "example": "Het boek ligt op de tafel."
+        },
+        {
+          "word": "de stoel",
+          "translation": "the chair",
+          "pos": "noun (de)",
+          "example": "Er is een stoel aan de tafel."
+        },
+        {
+          "word": "het boek",
+          "translation": "the book",
+          "pos": "noun (het)",
+          "example": "Ik lees een boek over Amsterdam."
+        },
+        {
+          "word": "de stad",
+          "translation": "the city",
+          "pos": "noun (de)",
+          "example": "Utrecht is een oude stad.",
+          "accepted_translations": [
+            "the town"
+          ]
+        },
+        {
+          "word": "het dorp",
+          "translation": "the village",
+          "pos": "noun (het)",
+          "example": "Ik woon in een klein dorp."
+        },
+        {
+          "word": "het park",
+          "translation": "the park",
+          "pos": "noun (het)",
+          "example": "Wij wandelen in het park."
+        },
+        {
+          "word": "de straat",
+          "translation": "the street",
+          "pos": "noun (de)",
+          "example": "De straat is rustig op zondag."
+        },
+        {
+          "word": "de winkel",
+          "translation": "the shop",
+          "pos": "noun (de)",
+          "example": "De winkel is om zes uur dicht.",
+          "accepted_translations": [
+            "the store"
+          ]
+        },
+        {
+          "word": "de kerk",
+          "translation": "the church",
+          "pos": "noun (de)",
+          "example": "De kerk staat in het midden van het dorp."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "het huis",
+          "answer": "the house"
+        },
+        {
+          "type": "translation",
+          "prompt": "de kamer",
+          "answer": "the room"
+        },
+        {
+          "type": "translation",
+          "prompt": "het bed",
+          "answer": "the bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "de keuken",
+          "answer": "the kitchen"
+        },
+        {
+          "type": "translation",
+          "prompt": "de tuin",
+          "answer": "the garden"
+        },
+        {
+          "type": "translation",
+          "prompt": "de deur",
+          "answer": "the door"
+        },
+        {
+          "type": "translation",
+          "prompt": "het raam",
+          "answer": "the window"
+        },
+        {
+          "type": "translation",
+          "prompt": "de tafel",
+          "answer": "the table"
+        },
+        {
+          "type": "translation",
+          "prompt": "de stoel",
+          "answer": "the chair"
+        },
+        {
+          "type": "translation",
+          "prompt": "het boek",
+          "answer": "the book"
+        },
+        {
+          "type": "translation",
+          "prompt": "de stad",
+          "answer": "the city",
+          "accepted_answers": [
+            "the town"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "het dorp",
+          "answer": "the village"
+        },
+        {
+          "type": "translation",
+          "prompt": "het park",
+          "answer": "the park"
+        },
+        {
+          "type": "translation",
+          "prompt": "de straat",
+          "answer": "the street"
+        },
+        {
+          "type": "translation",
+          "prompt": "de winkel",
+          "answer": "the shop",
+          "accepted_answers": [
+            "the store"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "de kerk",
+          "answer": "the church"
+        },
+        {
+          "type": "translation",
+          "prompt": "the house",
+          "answer": "het huis"
+        },
+        {
+          "type": "translation",
+          "prompt": "the room",
+          "answer": "de kamer"
+        },
+        {
+          "type": "translation",
+          "prompt": "the bed",
+          "answer": "het bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "the kitchen",
+          "answer": "de keuken"
+        },
+        {
+          "type": "translation",
+          "prompt": "the garden",
+          "answer": "de tuin"
+        },
+        {
+          "type": "translation",
+          "prompt": "the book",
+          "answer": "het boek"
+        },
+        {
+          "type": "translation",
+          "prompt": "the city",
+          "answer": "de stad"
+        },
+        {
+          "type": "translation",
+          "prompt": "the village",
+          "answer": "het dorp"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik woon in een klein dorp.",
+          "answer": "I live in a small village.",
+          "accepted_answers": [
+            "I live in a little village"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Het boek ligt op de tafel.",
+          "answer": "The book is on the table.",
+          "accepted_answers": [
+            "The book lies on the table"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "De winkel is vandaag dicht.",
+          "answer": "The shop is closed today.",
+          "accepted_answers": [
+            "The store is closed today"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Er is een kerk in het dorp.",
+          "answer": "There is a church in the village."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the house':",
+          "options": [
+            "het huis",
+            "de tuin",
+            "het bed",
+            "de kamer"
+          ],
+          "answer": "het huis"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the bed':",
+          "options": [
+            "het bed",
+            "de stoel",
+            "de tafel",
+            "het raam"
+          ],
+          "answer": "het bed"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the window':",
+          "options": [
+            "het raam",
+            "de deur",
+            "de tafel",
+            "het boek"
+          ],
+          "answer": "het raam"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the table':",
+          "options": [
+            "de tafel",
+            "de stoel",
+            "het bed",
+            "de deur"
+          ],
+          "answer": "de tafel"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the city':",
+          "options": [
+            "de stad",
+            "het dorp",
+            "het park",
+            "de straat"
+          ],
+          "answer": "de stad"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the shop':",
+          "options": [
+            "de winkel",
+            "de kerk",
+            "de stad",
+            "de straat"
+          ],
+          "answer": "de winkel"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the chair':",
+          "options": [
+            "de stoel",
+            "het bed",
+            "de tafel",
+            "de deur"
+          ],
+          "answer": "de stoel"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the church':",
+          "options": [
+            "de kerk",
+            "het park",
+            "de winkel",
+            "de stad"
+          ],
+          "answer": "de kerk"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ is een tuin bij het huis.",
+          "answer": "Er"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ is een park hier dichtbij.",
+          "answer": "Er"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Er ___ twee kamers in het huis.",
+          "answer": "zijn"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Er ___ veel winkels in de stad.",
+          "answer": "zijn"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Een klein huis is een huis___.",
+          "answer": "je"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Een klein boek is een boek___.",
+          "answer": "je"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Een klein stadje is een kleine ___.",
+          "answer": "stad"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Het ___ ligt op de tafel.",
+          "answer": "boek"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Daily Routine and Weather",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "opstaan",
+          "translation": "to get up",
+          "pos": "verb",
+          "example": "Ik sta elke dag om zeven uur op.",
+          "accepted_translations": [
+            "to rise"
+          ]
+        },
+        {
+          "word": "slapen",
+          "translation": "to sleep",
+          "pos": "verb",
+          "example": "Het kind slaapt in zijn bed."
+        },
+        {
+          "word": "douchen",
+          "translation": "to shower",
+          "pos": "verb",
+          "example": "Ik douche voor het ontbijt.",
+          "accepted_translations": [
+            "to take a shower"
+          ]
+        },
+        {
+          "word": "aankomen",
+          "translation": "to arrive",
+          "pos": "verb",
+          "example": "De trein komt om negen uur aan."
+        },
+        {
+          "word": "uitgaan",
+          "translation": "to go out",
+          "pos": "verb",
+          "example": "We gaan vanavond uit."
+        },
+        {
+          "word": "de ochtend",
+          "translation": "the morning",
+          "pos": "noun (de)",
+          "example": "De ochtend begint met koffie."
+        },
+        {
+          "word": "de middag",
+          "translation": "the afternoon",
+          "pos": "noun (de)",
+          "example": "In de middag werk ik."
+        },
+        {
+          "word": "de avond",
+          "translation": "the evening",
+          "pos": "noun (de)",
+          "example": "In de avond kijk ik tv."
+        },
+        {
+          "word": "de nacht",
+          "translation": "the night",
+          "pos": "noun (de)",
+          "example": "Ik slaap acht uur per nacht."
+        },
+        {
+          "word": "het weer",
+          "translation": "the weather",
+          "pos": "noun (het)",
+          "example": "Het weer is vandaag mooi."
+        },
+        {
+          "word": "de zon",
+          "translation": "the sun",
+          "pos": "noun (de)",
+          "example": "De zon schijnt vandaag."
+        },
+        {
+          "word": "de regen",
+          "translation": "the rain",
+          "pos": "noun (de)",
+          "example": "De regen komt vanmiddag."
+        },
+        {
+          "word": "de sneeuw",
+          "translation": "the snow",
+          "pos": "noun (de)",
+          "example": "De sneeuw is wit en koud."
+        },
+        {
+          "word": "de wind",
+          "translation": "the wind",
+          "pos": "noun (de)",
+          "example": "De wind waait hard."
+        },
+        {
+          "word": "koud",
+          "translation": "cold",
+          "pos": "adjective",
+          "example": "Het water is koud."
+        },
+        {
+          "word": "warm",
+          "translation": "warm",
+          "pos": "adjective",
+          "example": "De soep is nog warm."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "opstaan",
+          "answer": "to get up",
+          "accepted_answers": [
+            "to rise"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "slapen",
+          "answer": "to sleep"
+        },
+        {
+          "type": "translation",
+          "prompt": "douchen",
+          "answer": "to shower",
+          "accepted_answers": [
+            "to take a shower"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "aankomen",
+          "answer": "to arrive"
+        },
+        {
+          "type": "translation",
+          "prompt": "uitgaan",
+          "answer": "to go out"
+        },
+        {
+          "type": "translation",
+          "prompt": "de ochtend",
+          "answer": "the morning"
+        },
+        {
+          "type": "translation",
+          "prompt": "de middag",
+          "answer": "the afternoon"
+        },
+        {
+          "type": "translation",
+          "prompt": "de avond",
+          "answer": "the evening"
+        },
+        {
+          "type": "translation",
+          "prompt": "de nacht",
+          "answer": "the night"
+        },
+        {
+          "type": "translation",
+          "prompt": "het weer",
+          "answer": "the weather"
+        },
+        {
+          "type": "translation",
+          "prompt": "de zon",
+          "answer": "the sun"
+        },
+        {
+          "type": "translation",
+          "prompt": "de regen",
+          "answer": "the rain"
+        },
+        {
+          "type": "translation",
+          "prompt": "de sneeuw",
+          "answer": "the snow"
+        },
+        {
+          "type": "translation",
+          "prompt": "de wind",
+          "answer": "the wind"
+        },
+        {
+          "type": "translation",
+          "prompt": "koud",
+          "answer": "cold"
+        },
+        {
+          "type": "translation",
+          "prompt": "warm",
+          "answer": "warm",
+          "accepted_answers": [
+            "hot"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "to get up",
+          "answer": "opstaan"
+        },
+        {
+          "type": "translation",
+          "prompt": "to sleep",
+          "answer": "slapen"
+        },
+        {
+          "type": "translation",
+          "prompt": "to arrive",
+          "answer": "aankomen"
+        },
+        {
+          "type": "translation",
+          "prompt": "to go out",
+          "answer": "uitgaan"
+        },
+        {
+          "type": "translation",
+          "prompt": "the weather",
+          "answer": "het weer"
+        },
+        {
+          "type": "translation",
+          "prompt": "the sun",
+          "answer": "de zon"
+        },
+        {
+          "type": "translation",
+          "prompt": "the rain",
+          "answer": "de regen"
+        },
+        {
+          "type": "translation",
+          "prompt": "the snow",
+          "answer": "de sneeuw"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik sta om zeven uur op.",
+          "answer": "I get up at seven o'clock.",
+          "accepted_answers": [
+            "I get up at seven"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Het weer is vandaag mooi.",
+          "answer": "The weather is nice today.",
+          "accepted_answers": [
+            "The weather is good today"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "In de nacht is het koud.",
+          "answer": "At night it is cold.",
+          "accepted_answers": [
+            "It is cold at night"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vandaag schijnt de zon.",
+          "answer": "Today the sun shines.",
+          "accepted_answers": [
+            "The sun is shining today"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to get up':",
+          "options": [
+            "opstaan",
+            "slapen",
+            "douchen",
+            "aankomen"
+          ],
+          "answer": "opstaan"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to sleep':",
+          "options": [
+            "slapen",
+            "opstaan",
+            "uitgaan",
+            "douchen"
+          ],
+          "answer": "slapen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to arrive':",
+          "options": [
+            "aankomen",
+            "uitgaan",
+            "opstaan",
+            "slapen"
+          ],
+          "answer": "aankomen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the morning':",
+          "options": [
+            "de ochtend",
+            "de middag",
+            "de avond",
+            "de nacht"
+          ],
+          "answer": "de ochtend"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the afternoon':",
+          "options": [
+            "de middag",
+            "de ochtend",
+            "de avond",
+            "de nacht"
+          ],
+          "answer": "de middag"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the night':",
+          "options": [
+            "de nacht",
+            "de ochtend",
+            "de middag",
+            "de avond"
+          ],
+          "answer": "de nacht"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the weather':",
+          "options": [
+            "het weer",
+            "de zon",
+            "de regen",
+            "de wind"
+          ],
+          "answer": "het weer"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cold':",
+          "options": [
+            "koud",
+            "warm",
+            "nieuw",
+            "oud"
+          ],
+          "answer": "koud"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik sta elke dag om zeven uur ___.",
+          "answer": "op"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De trein komt om negen uur ___.",
+          "answer": "aan"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "We gaan vanavond ___.",
+          "answer": "uit"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Het ___ vandaag. Pak een paraplu!",
+          "answer": "regent"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Het water in de winter is ___.",
+          "answer": "koud"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "In de zomer is het ___.",
+          "answer": "warm"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik slaap acht uur per ___.",
+          "answer": "nacht"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De ___ schijnt vandaag.",
+          "answer": "zon"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Shopping and Travel",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "het geld",
+          "translation": "the money",
+          "pos": "noun (het)",
+          "example": "Ik heb geen geld bij me."
+        },
+        {
+          "word": "de prijs",
+          "translation": "the price",
+          "pos": "noun (de)",
+          "example": "De prijs is te duur."
+        },
+        {
+          "word": "de euro",
+          "translation": "the euro",
+          "pos": "noun (de)",
+          "example": "Dat kost tien euro."
+        },
+        {
+          "word": "de markt",
+          "translation": "the market",
+          "pos": "noun (de)",
+          "example": "Op zaterdag koop ik kaas op de markt."
+        },
+        {
+          "word": "de reis",
+          "translation": "the trip",
+          "pos": "noun (de)",
+          "example": "De reis naar Parijs is lang.",
+          "accepted_translations": [
+            "the journey"
+          ]
+        },
+        {
+          "word": "het kaartje",
+          "translation": "the ticket",
+          "pos": "noun (het)",
+          "example": "Ik koop een kaartje voor de trein."
+        },
+        {
+          "word": "de trein",
+          "translation": "the train",
+          "pos": "noun (de)",
+          "example": "De trein komt om negen uur aan."
+        },
+        {
+          "word": "de bus",
+          "translation": "the bus",
+          "pos": "noun (de)",
+          "example": "De bus is vol."
+        },
+        {
+          "word": "het vliegtuig",
+          "translation": "the airplane",
+          "pos": "noun (het)",
+          "example": "Het vliegtuig vertrekt om half drie.",
+          "accepted_translations": [
+            "the plane"
+          ]
+        },
+        {
+          "word": "de fiets",
+          "translation": "the bicycle",
+          "pos": "noun (de)",
+          "example": "Ik fiets elke dag naar mijn werk.",
+          "accepted_translations": [
+            "the bike"
+          ]
+        },
+        {
+          "word": "het station",
+          "translation": "the station",
+          "pos": "noun (het)",
+          "example": "Het station is groot en druk."
+        },
+        {
+          "word": "de jas",
+          "translation": "the coat",
+          "pos": "noun (de)",
+          "example": "In de winter draag ik een warme jas."
+        },
+        {
+          "word": "de schoen",
+          "translation": "the shoe",
+          "pos": "noun (de)",
+          "example": "Deze schoenen zijn nieuw."
+        },
+        {
+          "word": "de tas",
+          "translation": "the bag",
+          "pos": "noun (de)",
+          "example": "Mijn tas is zwaar."
+        },
+        {
+          "word": "betalen",
+          "translation": "to pay",
+          "pos": "verb",
+          "example": "Ik betaal met pin."
+        },
+        {
+          "word": "het Ĳsselmeer",
+          "translation": "the IJsselmeer",
+          "pos": "noun (het)",
+          "example": "We varen met de boot over het Ĳsselmeer."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "het geld",
+          "answer": "the money"
+        },
+        {
+          "type": "translation",
+          "prompt": "de prijs",
+          "answer": "the price"
+        },
+        {
+          "type": "translation",
+          "prompt": "de euro",
+          "answer": "the euro"
+        },
+        {
+          "type": "translation",
+          "prompt": "de markt",
+          "answer": "the market"
+        },
+        {
+          "type": "translation",
+          "prompt": "de reis",
+          "answer": "the trip",
+          "accepted_answers": [
+            "the journey"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "het kaartje",
+          "answer": "the ticket"
+        },
+        {
+          "type": "translation",
+          "prompt": "de trein",
+          "answer": "the train"
+        },
+        {
+          "type": "translation",
+          "prompt": "de bus",
+          "answer": "the bus"
+        },
+        {
+          "type": "translation",
+          "prompt": "het vliegtuig",
+          "answer": "the airplane",
+          "accepted_answers": [
+            "the plane"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "de fiets",
+          "answer": "the bicycle",
+          "accepted_answers": [
+            "the bike"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "het station",
+          "answer": "the station"
+        },
+        {
+          "type": "translation",
+          "prompt": "de jas",
+          "answer": "the coat"
+        },
+        {
+          "type": "translation",
+          "prompt": "de schoen",
+          "answer": "the shoe"
+        },
+        {
+          "type": "translation",
+          "prompt": "de tas",
+          "answer": "the bag"
+        },
+        {
+          "type": "translation",
+          "prompt": "betalen",
+          "answer": "to pay"
+        },
+        {
+          "type": "translation",
+          "prompt": "het Ĳsselmeer",
+          "answer": "the IJsselmeer"
+        },
+        {
+          "type": "translation",
+          "prompt": "the money",
+          "answer": "het geld"
+        },
+        {
+          "type": "translation",
+          "prompt": "the price",
+          "answer": "de prijs"
+        },
+        {
+          "type": "translation",
+          "prompt": "the market",
+          "answer": "de markt"
+        },
+        {
+          "type": "translation",
+          "prompt": "the ticket",
+          "answer": "het kaartje"
+        },
+        {
+          "type": "translation",
+          "prompt": "the train",
+          "answer": "de trein"
+        },
+        {
+          "type": "translation",
+          "prompt": "the airplane",
+          "answer": "het vliegtuig"
+        },
+        {
+          "type": "translation",
+          "prompt": "the coat",
+          "answer": "de jas"
+        },
+        {
+          "type": "translation",
+          "prompt": "the IJsselmeer",
+          "answer": "het Ĳsselmeer"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik koop brood op de markt.",
+          "answer": "I buy bread at the market."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hoeveel kost de fiets?",
+          "answer": "How much is the bicycle?",
+          "accepted_answers": [
+            "How much does the bicycle cost?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "De trein komt om tien uur aan.",
+          "answer": "The train arrives at ten o'clock.",
+          "accepted_answers": [
+            "The train arrives at ten"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "We varen met de boot over het Ĳsselmeer.",
+          "answer": "We sail across the IJsselmeer with the boat.",
+          "accepted_answers": [
+            "We sail with the boat across the IJsselmeer"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the money':",
+          "options": [
+            "het geld",
+            "de prijs",
+            "de euro",
+            "de markt"
+          ],
+          "answer": "het geld"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the price':",
+          "options": [
+            "de prijs",
+            "het geld",
+            "de euro",
+            "de reis"
+          ],
+          "answer": "de prijs"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the train':",
+          "options": [
+            "de trein",
+            "de bus",
+            "het vliegtuig",
+            "de fiets"
+          ],
+          "answer": "de trein"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the airplane':",
+          "options": [
+            "het vliegtuig",
+            "de trein",
+            "de bus",
+            "het station"
+          ],
+          "answer": "het vliegtuig"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the bicycle':",
+          "options": [
+            "de fiets",
+            "de trein",
+            "de jas",
+            "de schoen"
+          ],
+          "answer": "de fiets"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the coat':",
+          "options": [
+            "de jas",
+            "de schoen",
+            "de tas",
+            "de markt"
+          ],
+          "answer": "de jas"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to pay':",
+          "options": [
+            "betalen",
+            "kopen",
+            "gaan",
+            "maken"
+          ],
+          "answer": "betalen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the market':",
+          "options": [
+            "de markt",
+            "het station",
+            "de stad",
+            "de winkel"
+          ],
+          "answer": "de markt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hoeveel ___ de kaas?",
+          "answer": "kost"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hoeveel ___ de appels?",
+          "answer": "kosten"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik wil de fiets ___.",
+          "answer": "kopen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik koop een kaartje voor de ___.",
+          "answer": "trein",
+          "accepted_answers": [
+            "bus"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dat ___ tien euro.",
+          "answer": "kost"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De ___ is te hoog.",
+          "answer": "prijs"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik koop kaas op de ___.",
+          "answer": "markt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mijn geld zit in mijn ___.",
+          "answer": "tas"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Yesterday and Tomorrow",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "gisteren",
+          "translation": "yesterday",
+          "pos": "adverb",
+          "example": "Gisteren heb ik hard gewerkt."
+        },
+        {
+          "word": "gisteravond",
+          "translation": "last night",
+          "pos": "adverb",
+          "example": "Gisteravond zijn we uitgegaan.",
+          "accepted_translations": [
+            "yesterday evening"
+          ]
+        },
+        {
+          "word": "eergisteren",
+          "translation": "the day before yesterday",
+          "pos": "adverb",
+          "example": "Eergisteren heb ik een boek gelezen."
+        },
+        {
+          "word": "morgen",
+          "translation": "tomorrow",
+          "pos": "adverb",
+          "example": "Morgen ga ik naar de markt."
+        },
+        {
+          "word": "overmorgen",
+          "translation": "the day after tomorrow",
+          "pos": "adverb",
+          "example": "Overmorgen komt mijn moeder."
+        },
+        {
+          "word": "het weekend",
+          "translation": "the weekend",
+          "pos": "noun (het)",
+          "example": "Het weekend begint op vrijdag."
+        },
+        {
+          "word": "vorige week",
+          "translation": "last week",
+          "pos": "phrase",
+          "example": "Vorige week was ik in Utrecht."
+        },
+        {
+          "word": "volgende week",
+          "translation": "next week",
+          "pos": "phrase",
+          "example": "Volgende week kopen we een nieuwe fiets."
+        },
+        {
+          "word": "de verjaardag",
+          "translation": "the birthday",
+          "pos": "noun (de)",
+          "example": "Mijn verjaardag is in april."
+        },
+        {
+          "word": "het feest",
+          "translation": "the party",
+          "pos": "noun (het)",
+          "example": "Het feest was heel gezellig."
+        },
+        {
+          "word": "vroeg",
+          "translation": "early",
+          "pos": "adverb",
+          "example": "Ik sta elke dag vroeg op."
+        },
+        {
+          "word": "laat",
+          "translation": "late",
+          "pos": "adverb",
+          "example": "Vanavond werk ik laat."
+        },
+        {
+          "word": "het jaar",
+          "translation": "the year",
+          "pos": "noun (het)",
+          "example": "Het jaar heeft twaalf maanden."
+        },
+        {
+          "word": "de maand",
+          "translation": "the month",
+          "pos": "noun (de)",
+          "example": "De maand heeft vier weken."
+        },
+        {
+          "word": "de vakantie",
+          "translation": "the holiday",
+          "pos": "noun (de)",
+          "example": "Overmorgen begint de vakantie.",
+          "accepted_translations": [
+            "the vacation"
+          ]
+        },
+        {
+          "word": "gezellig",
+          "translation": "cosy",
+          "pos": "adjective",
+          "example": "Een avond met vrienden is altijd gezellig.",
+          "accepted_translations": [
+            "cozy",
+            "fun",
+            "sociable"
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "gisteren",
+          "answer": "yesterday"
+        },
+        {
+          "type": "translation",
+          "prompt": "gisteravond",
+          "answer": "last night",
+          "accepted_answers": [
+            "yesterday evening"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "eergisteren",
+          "answer": "the day before yesterday"
+        },
+        {
+          "type": "translation",
+          "prompt": "morgen",
+          "answer": "tomorrow"
+        },
+        {
+          "type": "translation",
+          "prompt": "overmorgen",
+          "answer": "the day after tomorrow"
+        },
+        {
+          "type": "translation",
+          "prompt": "het weekend",
+          "answer": "the weekend"
+        },
+        {
+          "type": "translation",
+          "prompt": "vorige week",
+          "answer": "last week"
+        },
+        {
+          "type": "translation",
+          "prompt": "volgende week",
+          "answer": "next week"
+        },
+        {
+          "type": "translation",
+          "prompt": "de verjaardag",
+          "answer": "the birthday"
+        },
+        {
+          "type": "translation",
+          "prompt": "het feest",
+          "answer": "the party"
+        },
+        {
+          "type": "translation",
+          "prompt": "vroeg",
+          "answer": "early"
+        },
+        {
+          "type": "translation",
+          "prompt": "laat",
+          "answer": "late"
+        },
+        {
+          "type": "translation",
+          "prompt": "het jaar",
+          "answer": "the year"
+        },
+        {
+          "type": "translation",
+          "prompt": "de maand",
+          "answer": "the month"
+        },
+        {
+          "type": "translation",
+          "prompt": "de vakantie",
+          "answer": "the holiday",
+          "accepted_answers": [
+            "the vacation"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "gezellig",
+          "answer": "cosy",
+          "accepted_answers": [
+            "cozy",
+            "fun",
+            "sociable"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "yesterday",
+          "answer": "gisteren"
+        },
+        {
+          "type": "translation",
+          "prompt": "tomorrow",
+          "answer": "morgen"
+        },
+        {
+          "type": "translation",
+          "prompt": "last night",
+          "answer": "gisteravond"
+        },
+        {
+          "type": "translation",
+          "prompt": "the party",
+          "answer": "het feest"
+        },
+        {
+          "type": "translation",
+          "prompt": "the birthday",
+          "answer": "de verjaardag"
+        },
+        {
+          "type": "translation",
+          "prompt": "early",
+          "answer": "vroeg"
+        },
+        {
+          "type": "translation",
+          "prompt": "late",
+          "answer": "laat"
+        },
+        {
+          "type": "translation",
+          "prompt": "next week",
+          "answer": "volgende week"
+        },
+        {
+          "type": "translation",
+          "prompt": "Gisteren heb ik hard gewerkt.",
+          "answer": "Yesterday I worked hard.",
+          "accepted_answers": [
+            "I worked hard yesterday"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Morgen ga ik naar de markt.",
+          "answer": "Tomorrow I am going to the market.",
+          "accepted_answers": [
+            "Tomorrow I'll go to the market",
+            "I am going to the market tomorrow"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Het feest was heel gezellig.",
+          "answer": "The party was very cosy.",
+          "accepted_answers": [
+            "The party was very cozy",
+            "The party was a lot of fun"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Volgende week begint de vakantie.",
+          "answer": "Next week the holiday starts.",
+          "accepted_answers": [
+            "The holiday starts next week"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'yesterday':",
+          "options": [
+            "gisteren",
+            "morgen",
+            "vandaag",
+            "overmorgen"
+          ],
+          "answer": "gisteren"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tomorrow':",
+          "options": [
+            "morgen",
+            "gisteren",
+            "vandaag",
+            "eergisteren"
+          ],
+          "answer": "morgen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'last night':",
+          "options": [
+            "gisteravond",
+            "gisteren",
+            "overmorgen",
+            "de avond"
+          ],
+          "answer": "gisteravond"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the party':",
+          "options": [
+            "het feest",
+            "de verjaardag",
+            "het jaar",
+            "de maand"
+          ],
+          "answer": "het feest"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the birthday':",
+          "options": [
+            "de verjaardag",
+            "het feest",
+            "de vakantie",
+            "het weekend"
+          ],
+          "answer": "de verjaardag"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'early':",
+          "options": [
+            "vroeg",
+            "laat",
+            "koud",
+            "warm"
+          ],
+          "answer": "vroeg"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the year':",
+          "options": [
+            "het jaar",
+            "de maand",
+            "de week",
+            "de dag"
+          ],
+          "answer": "het jaar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the holiday':",
+          "options": [
+            "de vakantie",
+            "het feest",
+            "het weekend",
+            "de reis"
+          ],
+          "answer": "de vakantie"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gisteren heb ik een boek ___.",
+          "answer": "gelezen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Morgen ga ik een boek ___.",
+          "answer": "lezen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik heb gisteren pizza ___.",
+          "answer": "gegeten"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik heb de hele dag ___.",
+          "answer": "gewerkt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gisteren ___ ik thuis.",
+          "answer": "was"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Morgen ___ ik naar de markt.",
+          "answer": "ga"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gisteren ___ ik laat naar bed.",
+          "answer": "ging"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mijn verjaardag is ___ maand.",
+          "answer": "volgende",
+          "accepted_answers": [
+            "vorige"
+          ]
+        }
+      ]
+    }
+  ]
+}
