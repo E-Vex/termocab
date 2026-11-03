@@ -1,0 +1,3826 @@
+{
+  "language": "catalan",
+  "stages": [
+    {
+      "id": 1,
+      "title": "Greetings and Basics",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "hola",
+          "translation": "hi",
+          "accepted_translations": [
+            "hello"
+          ],
+          "pos": "interjection",
+          "example": "Hola, com estàs?"
+        },
+        {
+          "word": "bon dia",
+          "translation": "good morning",
+          "accepted_translations": [
+            "good day"
+          ],
+          "pos": "phrase",
+          "example": "Bon dia, Anna!"
+        },
+        {
+          "word": "bona tarda",
+          "translation": "good afternoon",
+          "pos": "phrase",
+          "example": "Bona tarda, com estàs?"
+        },
+        {
+          "word": "bona nit",
+          "translation": "good evening",
+          "accepted_translations": [
+            "good night"
+          ],
+          "pos": "phrase",
+          "example": "Bona nit, fins demà!"
+        },
+        {
+          "word": "adéu",
+          "translation": "goodbye",
+          "accepted_translations": [
+            "bye"
+          ],
+          "pos": "interjection",
+          "example": "Adéu, fins aviat!"
+        },
+        {
+          "word": "sí",
+          "translation": "yes",
+          "pos": "adverb",
+          "example": "Sí, és clar."
+        },
+        {
+          "word": "no",
+          "translation": "no",
+          "pos": "adverb",
+          "example": "No, gràcies."
+        },
+        {
+          "word": "gràcies",
+          "translation": "thank you",
+          "accepted_translations": [
+            "thanks"
+          ],
+          "pos": "interjection",
+          "example": "Gràcies pel cafè!"
+        },
+        {
+          "word": "si us plau",
+          "translation": "please",
+          "pos": "phrase",
+          "example": "Un cafè, si us plau."
+        },
+        {
+          "word": "perdó",
+          "translation": "sorry",
+          "accepted_translations": [
+            "excuse me"
+          ],
+          "pos": "interjection",
+          "example": "Perdó, on és el mercat?"
+        },
+        {
+          "word": "encantat",
+          "translation": "nice to meet you",
+          "accepted_translations": [
+            "pleased to meet you"
+          ],
+          "pos": "interjection",
+          "example": "Encantat, em dic Pau."
+        },
+        {
+          "word": "em dic",
+          "translation": "my name is",
+          "pos": "phrase",
+          "example": "Em dic Marta. I tu?"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "hola",
+          "answer": "hi",
+          "accepted_answers": [
+            "hello"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "bon dia",
+          "answer": "good morning",
+          "accepted_answers": [
+            "good day"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "bona tarda",
+          "answer": "good afternoon"
+        },
+        {
+          "type": "translation",
+          "prompt": "bona nit",
+          "answer": "good evening",
+          "accepted_answers": [
+            "good night"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "adéu",
+          "answer": "goodbye",
+          "accepted_answers": [
+            "bye"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "sí",
+          "answer": "yes"
+        },
+        {
+          "type": "translation",
+          "prompt": "no",
+          "answer": "no"
+        },
+        {
+          "type": "translation",
+          "prompt": "gràcies",
+          "answer": "thank you",
+          "accepted_answers": [
+            "thanks"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "si us plau",
+          "answer": "please"
+        },
+        {
+          "type": "translation",
+          "prompt": "perdó",
+          "answer": "sorry",
+          "accepted_answers": [
+            "excuse me"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "encantat",
+          "answer": "nice to meet you",
+          "accepted_answers": [
+            "pleased to meet you"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "em dic",
+          "answer": "my name is"
+        },
+        {
+          "type": "translation",
+          "prompt": "hello",
+          "answer": "hola"
+        },
+        {
+          "type": "translation",
+          "prompt": "thank you",
+          "answer": "gràcies"
+        },
+        {
+          "type": "translation",
+          "prompt": "goodbye",
+          "answer": "adéu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hello':",
+          "options": [
+            "hola",
+            "adéu",
+            "gràcies",
+            "sí"
+          ],
+          "answer": "hola"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'goodbye':",
+          "options": [
+            "adéu",
+            "hola",
+            "bon dia",
+            "no"
+          ],
+          "answer": "adéu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good morning':",
+          "options": [
+            "bon dia",
+            "bona tarda",
+            "bona nit",
+            "adéu"
+          ],
+          "answer": "bon dia"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'good evening':",
+          "options": [
+            "bona nit",
+            "bona tarda",
+            "bon dia",
+            "perdó"
+          ],
+          "answer": "bona nit"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'please':",
+          "options": [
+            "si us plau",
+            "gràcies",
+            "perdó",
+            "encantat"
+          ],
+          "answer": "si us plau"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'thank you':",
+          "options": [
+            "gràcies",
+            "si us plau",
+            "adéu",
+            "sí"
+          ],
+          "answer": "gràcies"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'yes':",
+          "options": [
+            "sí",
+            "no",
+            "hola",
+            "gràcies"
+          ],
+          "answer": "sí"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sorry':",
+          "options": [
+            "perdó",
+            "gràcies",
+            "si us plau",
+            "adéu"
+          ],
+          "answer": "perdó"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, com estàs?",
+          "answer": "hola"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bon ___, Anna!",
+          "answer": "dia"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Un cafè, ___.",
+          "answer": "si us plau"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, on és el mercat?",
+          "answer": "perdó"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Em ___ Marta.",
+          "answer": "dic"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bona nit, fins ___!",
+          "answer": "demà"
+        },
+        {
+          "type": "translation",
+          "prompt": "Com estàs?",
+          "answer": "How are you?",
+          "accepted_answers": [
+            "How are you doing?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Molt bé, gràcies.",
+          "answer": "I'm very well, thank you.",
+          "accepted_answers": [
+            "Very well, thank you."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Em dic Marta.",
+          "answer": "My name is Marta.",
+          "accepted_answers": [
+            "I'm Marta.",
+            "I am Marta."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Com et dius?",
+          "answer": "What's your name?",
+          "accepted_answers": [
+            "What is your name?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Gràcies, adéu!",
+          "answer": "Thank you, bye!"
+        },
+        {
+          "type": "translation",
+          "prompt": "Fins demà!",
+          "answer": "See you tomorrow!"
+        },
+        {
+          "type": "translation",
+          "prompt": "Sí, és clar.",
+          "answer": "Yes, of course."
+        },
+        {
+          "type": "translation",
+          "prompt": "De res.",
+          "answer": "You're welcome."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "People and Family",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "l'home",
+          "translation": "the man",
+          "pos": "noun (masculine)",
+          "example": "L'home llegeix un llibre."
+        },
+        {
+          "word": "la dona",
+          "translation": "the woman",
+          "pos": "noun (feminine)",
+          "example": "La dona beu cafè."
+        },
+        {
+          "word": "el noi",
+          "translation": "the boy",
+          "pos": "noun (masculine)",
+          "example": "El noi juga al parc."
+        },
+        {
+          "word": "la noia",
+          "translation": "the girl",
+          "pos": "noun (feminine)",
+          "example": "La noia és alta."
+        },
+        {
+          "word": "l'amic",
+          "translation": "the friend",
+          "pos": "noun (masculine)",
+          "example": "El meu amic viu aquí."
+        },
+        {
+          "word": "la família",
+          "translation": "the family",
+          "pos": "noun (feminine)",
+          "example": "La meva família és gran."
+        },
+        {
+          "word": "la mare",
+          "translation": "the mother",
+          "pos": "noun (feminine)",
+          "example": "La mare cuina molt bé."
+        },
+        {
+          "word": "el pare",
+          "translation": "the father",
+          "pos": "noun (masculine)",
+          "example": "El pare treballa molt."
+        },
+        {
+          "word": "el germà",
+          "translation": "the brother",
+          "pos": "noun (masculine)",
+          "example": "El meu germà és alt."
+        },
+        {
+          "word": "la germana",
+          "translation": "the sister",
+          "pos": "noun (feminine)",
+          "example": "La meva germana és petita."
+        },
+        {
+          "word": "el fill",
+          "translation": "the son",
+          "pos": "noun (masculine)",
+          "example": "El fill petit dorm."
+        },
+        {
+          "word": "la filla",
+          "translation": "the daughter",
+          "pos": "noun (feminine)",
+          "example": "La filla va a l'escola."
+        },
+        {
+          "word": "el nom",
+          "translation": "the name",
+          "pos": "noun (masculine)",
+          "example": "El meu nom és Pau."
+        },
+        {
+          "word": "la gent",
+          "translation": "the people",
+          "pos": "noun (feminine)",
+          "example": "La gent és simpàtica."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "l'home",
+          "answer": "the man"
+        },
+        {
+          "type": "translation",
+          "prompt": "la dona",
+          "answer": "the woman"
+        },
+        {
+          "type": "translation",
+          "prompt": "el noi",
+          "answer": "the boy"
+        },
+        {
+          "type": "translation",
+          "prompt": "la noia",
+          "answer": "the girl"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'amic",
+          "answer": "the friend"
+        },
+        {
+          "type": "translation",
+          "prompt": "la família",
+          "answer": "the family"
+        },
+        {
+          "type": "translation",
+          "prompt": "la mare",
+          "answer": "the mother"
+        },
+        {
+          "type": "translation",
+          "prompt": "el pare",
+          "answer": "the father"
+        },
+        {
+          "type": "translation",
+          "prompt": "el germà",
+          "answer": "the brother"
+        },
+        {
+          "type": "translation",
+          "prompt": "la germana",
+          "answer": "the sister"
+        },
+        {
+          "type": "translation",
+          "prompt": "el fill",
+          "answer": "the son"
+        },
+        {
+          "type": "translation",
+          "prompt": "la filla",
+          "answer": "the daughter"
+        },
+        {
+          "type": "translation",
+          "prompt": "el nom",
+          "answer": "the name"
+        },
+        {
+          "type": "translation",
+          "prompt": "la gent",
+          "answer": "the people"
+        },
+        {
+          "type": "translation",
+          "prompt": "the family",
+          "answer": "la família"
+        },
+        {
+          "type": "translation",
+          "prompt": "the boy",
+          "answer": "el noi"
+        },
+        {
+          "type": "translation",
+          "prompt": "the friend",
+          "answer": "l'amic"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the man':",
+          "options": [
+            "l'home",
+            "la dona",
+            "el noi",
+            "el pare"
+          ],
+          "answer": "l'home"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the woman':",
+          "options": [
+            "la dona",
+            "l'home",
+            "la noia",
+            "la mare"
+          ],
+          "answer": "la dona"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the boy':",
+          "options": [
+            "el noi",
+            "la noia",
+            "l'home",
+            "el fill"
+          ],
+          "answer": "el noi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the girl':",
+          "options": [
+            "la noia",
+            "el noi",
+            "la dona",
+            "la filla"
+          ],
+          "answer": "la noia"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the mother':",
+          "options": [
+            "la mare",
+            "el pare",
+            "la germana",
+            "la filla"
+          ],
+          "answer": "la mare"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the father':",
+          "options": [
+            "el pare",
+            "la mare",
+            "el germà",
+            "el fill"
+          ],
+          "answer": "el pare"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the sister':",
+          "options": [
+            "la germana",
+            "el germà",
+            "la mare",
+            "la noia"
+          ],
+          "answer": "la germana"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the family':",
+          "options": [
+            "la família",
+            "la gent",
+            "la mare",
+            "el nom"
+          ],
+          "answer": "la família"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ dona treballa a la ciutat.",
+          "answer": "la"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ noi juga al parc.",
+          "answer": "el"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La meva ___ cuina molt bé.",
+          "answer": "mare"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El meu ___ treballa molt.",
+          "answer": "pare"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La meva ___ és petita.",
+          "answer": "germana"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El meu ___ és gran.",
+          "answer": "germà"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El ___ d'ella és Anna.",
+          "answer": "nom"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La ___ és simpàtica.",
+          "answer": "gent"
+        },
+        {
+          "type": "translation",
+          "prompt": "Qui és ell?",
+          "answer": "Who is he?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Aquest és el meu amic.",
+          "answer": "This is my friend."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ella és la meva germana.",
+          "answer": "She is my sister."
+        },
+        {
+          "type": "translation",
+          "prompt": "La meva mare cuina molt bé.",
+          "answer": "My mother cooks very well."
+        },
+        {
+          "type": "translation",
+          "prompt": "El meu pare treballa molt.",
+          "answer": "My father works a lot."
+        },
+        {
+          "type": "translation",
+          "prompt": "La meva família és gran.",
+          "answer": "My family is big."
+        },
+        {
+          "type": "translation",
+          "prompt": "L'avi i l'àvia ballen.",
+          "answer": "Grandpa and grandma dance."
+        },
+        {
+          "type": "translation",
+          "prompt": "La gent de la plaça és simpàtica.",
+          "answer": "The people at the square are friendly."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Numbers and Time",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "un",
+          "translation": "one",
+          "pos": "number",
+          "example": "Falta només un."
+        },
+        {
+          "word": "dos",
+          "translation": "two",
+          "pos": "number",
+          "example": "Tinc dos germans."
+        },
+        {
+          "word": "tres",
+          "translation": "three",
+          "pos": "number",
+          "example": "Són les tres."
+        },
+        {
+          "word": "quatre",
+          "translation": "four",
+          "pos": "number",
+          "example": "La casa té quatre finestres."
+        },
+        {
+          "word": "cinc",
+          "translation": "five",
+          "pos": "number",
+          "example": "Treballo cinc dies a la setmana."
+        },
+        {
+          "word": "sis",
+          "translation": "six",
+          "pos": "number",
+          "example": "El sopar és a les sis."
+        },
+        {
+          "word": "set",
+          "translation": "seven",
+          "pos": "number",
+          "example": "La setmana té set dies."
+        },
+        {
+          "word": "vuit",
+          "translation": "eight",
+          "pos": "number",
+          "example": "El film comença a les vuit."
+        },
+        {
+          "word": "nou",
+          "translation": "nine",
+          "pos": "number",
+          "example": "Són nou del matí."
+        },
+        {
+          "word": "deu",
+          "translation": "ten",
+          "pos": "number",
+          "example": "Costa deu euros."
+        },
+        {
+          "word": "el dia",
+          "translation": "the day",
+          "pos": "noun (masculine)",
+          "example": "El dia és bonic."
+        },
+        {
+          "word": "la setmana",
+          "translation": "the week",
+          "pos": "noun (feminine)",
+          "example": "Fins la setmana vinent!"
+        },
+        {
+          "word": "avui",
+          "translation": "today",
+          "pos": "adverb",
+          "example": "Avui fa molt calor."
+        },
+        {
+          "word": "demà",
+          "translation": "tomorrow",
+          "pos": "adverb",
+          "example": "Fins demà!"
+        },
+        {
+          "word": "ara",
+          "translation": "now",
+          "pos": "adverb",
+          "example": "Ara no puc."
+        },
+        {
+          "word": "l'hora",
+          "translation": "the hour",
+          "accepted_translations": [
+            "the time"
+          ],
+          "pos": "noun (feminine)",
+          "example": "Quina hora és?"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "un",
+          "answer": "one"
+        },
+        {
+          "type": "translation",
+          "prompt": "dos",
+          "answer": "two"
+        },
+        {
+          "type": "translation",
+          "prompt": "tres",
+          "answer": "three"
+        },
+        {
+          "type": "translation",
+          "prompt": "quatre",
+          "answer": "four"
+        },
+        {
+          "type": "translation",
+          "prompt": "cinc",
+          "answer": "five"
+        },
+        {
+          "type": "translation",
+          "prompt": "sis",
+          "answer": "six"
+        },
+        {
+          "type": "translation",
+          "prompt": "set",
+          "answer": "seven"
+        },
+        {
+          "type": "translation",
+          "prompt": "vuit",
+          "answer": "eight"
+        },
+        {
+          "type": "translation",
+          "prompt": "nou",
+          "answer": "nine"
+        },
+        {
+          "type": "translation",
+          "prompt": "deu",
+          "answer": "ten"
+        },
+        {
+          "type": "translation",
+          "prompt": "el dia",
+          "answer": "the day"
+        },
+        {
+          "type": "translation",
+          "prompt": "la setmana",
+          "answer": "the week"
+        },
+        {
+          "type": "translation",
+          "prompt": "avui",
+          "answer": "today"
+        },
+        {
+          "type": "translation",
+          "prompt": "demà",
+          "answer": "tomorrow"
+        },
+        {
+          "type": "translation",
+          "prompt": "ara",
+          "answer": "now"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'hora",
+          "answer": "the hour",
+          "accepted_answers": [
+            "the time"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "one",
+          "answer": "un"
+        },
+        {
+          "type": "translation",
+          "prompt": "tomorrow",
+          "answer": "demà"
+        },
+        {
+          "type": "translation",
+          "prompt": "now",
+          "answer": "ara"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'one':",
+          "options": [
+            "un",
+            "dos",
+            "tres",
+            "quatre"
+          ],
+          "answer": "un"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'three':",
+          "options": [
+            "tres",
+            "dos",
+            "quatre",
+            "cinc"
+          ],
+          "answer": "tres"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'ten':",
+          "options": [
+            "deu",
+            "sis",
+            "set",
+            "vuit"
+          ],
+          "answer": "deu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'today':",
+          "options": [
+            "avui",
+            "demà",
+            "ara",
+            "la setmana"
+          ],
+          "answer": "avui"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tomorrow':",
+          "options": [
+            "demà",
+            "avui",
+            "ara",
+            "l'hora"
+          ],
+          "answer": "demà"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'now':",
+          "options": [
+            "ara",
+            "avui",
+            "demà",
+            "el dia"
+          ],
+          "answer": "ara"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the week':",
+          "options": [
+            "la setmana",
+            "el dia",
+            "l'hora",
+            "avui"
+          ],
+          "answer": "la setmana"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the hour':",
+          "options": [
+            "l'hora",
+            "el dia",
+            "la setmana",
+            "ara"
+          ],
+          "answer": "l'hora"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tinc ___ germans.",
+          "answer": "dos"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La setmana té ___ dies.",
+          "answer": "set"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Quin ___ és avui?",
+          "answer": "dia"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vaig ___ mercat ara.",
+          "answer": "al"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vinc ___ treball.",
+          "answer": "del"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ no puc.",
+          "answer": "ara"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Quina ___ és?",
+          "answer": "hora"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Fins ___!",
+          "answer": "demà"
+        },
+        {
+          "type": "translation",
+          "prompt": "Quina hora és?",
+          "answer": "What time is it?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Són les tres.",
+          "answer": "It's three o'clock.",
+          "accepted_answers": [
+            "It is three o'clock."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "És la una.",
+          "answer": "It's one o'clock.",
+          "accepted_answers": [
+            "It is one o'clock."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Avui és dissabte.",
+          "answer": "Today is Saturday."
+        },
+        {
+          "type": "translation",
+          "prompt": "Demà vaig a la platja.",
+          "answer": "Tomorrow I'm going to the beach.",
+          "accepted_answers": [
+            "I'm going to the beach tomorrow.",
+            "I am going to the beach tomorrow."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "El film comença a les vuit.",
+          "answer": "The movie starts at eight."
+        },
+        {
+          "type": "translation",
+          "prompt": "El meu germà té deu anys.",
+          "answer": "My brother is ten years old."
+        },
+        {
+          "type": "translation",
+          "prompt": "Fins la setmana vinent!",
+          "answer": "See you next week!"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ara estic ocupat.",
+          "answer": "I'm busy now.",
+          "accepted_answers": [
+            "I am busy now."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Avui fa molt calor.",
+          "answer": "It's very hot today.",
+          "accepted_answers": [
+            "It is very hot today."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vaig al mercat ara.",
+          "answer": "I'm going to the market now.",
+          "accepted_answers": [
+            "I am going to the market now."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Everyday Verbs",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "ser",
+          "translation": "to be",
+          "pos": "verb",
+          "example": "Jo sóc de Barcelona."
+        },
+        {
+          "word": "estar",
+          "translation": "to be (state or place)",
+          "pos": "verb",
+          "example": "Estic a casa ara."
+        },
+        {
+          "word": "tenir",
+          "translation": "to have",
+          "pos": "verb",
+          "example": "Tenim gana!"
+        },
+        {
+          "word": "fer",
+          "translation": "to do",
+          "pos": "verb",
+          "example": "Què fas?"
+        },
+        {
+          "word": "anar",
+          "translation": "to go",
+          "pos": "verb",
+          "example": "Vaig al mercat."
+        },
+        {
+          "word": "voler",
+          "translation": "to want",
+          "pos": "verb",
+          "example": "Vull un cafè, si us plau."
+        },
+        {
+          "word": "poder",
+          "translation": "to be able to",
+          "pos": "verb",
+          "example": "Puc parlar català?"
+        },
+        {
+          "word": "parlar",
+          "translation": "to speak",
+          "pos": "verb",
+          "example": "Parles anglès?"
+        },
+        {
+          "word": "menjar",
+          "translation": "to eat",
+          "pos": "verb",
+          "example": "Vull menjar pizza."
+        },
+        {
+          "word": "beure",
+          "translation": "to drink",
+          "pos": "verb",
+          "example": "Vull beure aigua."
+        },
+        {
+          "word": "viure",
+          "translation": "to live",
+          "pos": "verb",
+          "example": "Visc a Barcelona."
+        },
+        {
+          "word": "saber",
+          "translation": "to know",
+          "pos": "verb",
+          "example": "No ho sé."
+        },
+        {
+          "word": "dir",
+          "translation": "to say",
+          "pos": "verb",
+          "example": "Què vols dir?"
+        },
+        {
+          "word": "venir",
+          "translation": "to come",
+          "pos": "verb",
+          "example": "Vens demà?"
+        },
+        {
+          "word": "veure",
+          "translation": "to see",
+          "pos": "verb",
+          "example": "Et veig demà!"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ser",
+          "answer": "to be"
+        },
+        {
+          "type": "translation",
+          "prompt": "estar",
+          "answer": "to be (state or place)"
+        },
+        {
+          "type": "translation",
+          "prompt": "tenir",
+          "answer": "to have"
+        },
+        {
+          "type": "translation",
+          "prompt": "fer",
+          "answer": "to do"
+        },
+        {
+          "type": "translation",
+          "prompt": "anar",
+          "answer": "to go"
+        },
+        {
+          "type": "translation",
+          "prompt": "voler",
+          "answer": "to want"
+        },
+        {
+          "type": "translation",
+          "prompt": "poder",
+          "answer": "to be able to"
+        },
+        {
+          "type": "translation",
+          "prompt": "parlar",
+          "answer": "to speak"
+        },
+        {
+          "type": "translation",
+          "prompt": "menjar",
+          "answer": "to eat"
+        },
+        {
+          "type": "translation",
+          "prompt": "beure",
+          "answer": "to drink"
+        },
+        {
+          "type": "translation",
+          "prompt": "viure",
+          "answer": "to live"
+        },
+        {
+          "type": "translation",
+          "prompt": "saber",
+          "answer": "to know"
+        },
+        {
+          "type": "translation",
+          "prompt": "dir",
+          "answer": "to say"
+        },
+        {
+          "type": "translation",
+          "prompt": "venir",
+          "answer": "to come"
+        },
+        {
+          "type": "translation",
+          "prompt": "veure",
+          "answer": "to see"
+        },
+        {
+          "type": "translation",
+          "prompt": "to have",
+          "answer": "tenir"
+        },
+        {
+          "type": "translation",
+          "prompt": "to eat",
+          "answer": "menjar"
+        },
+        {
+          "type": "translation",
+          "prompt": "to speak",
+          "answer": "parlar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to be':",
+          "options": [
+            "ser",
+            "estar",
+            "tenir",
+            "fer"
+          ],
+          "answer": "ser"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to have':",
+          "options": [
+            "tenir",
+            "ser",
+            "fer",
+            "dir"
+          ],
+          "answer": "tenir"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to eat':",
+          "options": [
+            "menjar",
+            "beure",
+            "parlar",
+            "venir"
+          ],
+          "answer": "menjar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to drink':",
+          "options": [
+            "beure",
+            "menjar",
+            "dir",
+            "veure"
+          ],
+          "answer": "beure"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to speak':",
+          "options": [
+            "parlar",
+            "dir",
+            "saber",
+            "menjar"
+          ],
+          "answer": "parlar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to go':",
+          "options": [
+            "anar",
+            "venir",
+            "veure",
+            "fer"
+          ],
+          "answer": "anar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to want':",
+          "options": [
+            "voler",
+            "poder",
+            "saber",
+            "tenir"
+          ],
+          "answer": "voler"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to see':",
+          "options": [
+            "veure",
+            "venir",
+            "dir",
+            "saber"
+          ],
+          "answer": "veure"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vull ___ una pizza.",
+          "answer": "menjar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Puc ___ català.",
+          "answer": "parlar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vaig ___ a Barcelona.",
+          "answer": "viure"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vull ___ el film.",
+          "answer": "veure"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vull ___ aigua.",
+          "answer": "beure"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Pots ___ aquí, si us plau?",
+          "answer": "venir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Què vols ___?",
+          "answer": "dir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ella vol ___ la resposta.",
+          "answer": "saber"
+        },
+        {
+          "type": "translation",
+          "prompt": "Jo parlo català.",
+          "answer": "I speak Catalan."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bec cafè al matí.",
+          "answer": "I drink coffee in the morning."
+        },
+        {
+          "type": "translation",
+          "prompt": "Poso sucre al cafè.",
+          "answer": "I put sugar in the coffee."
+        },
+        {
+          "type": "translation",
+          "prompt": "I want a coffee, please.",
+          "answer": "Vull un cafè, si us plau."
+        },
+        {
+          "type": "translation",
+          "prompt": "Sóc de Barcelona.",
+          "answer": "I'm from Barcelona.",
+          "accepted_answers": [
+            "I am from Barcelona."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Estic a casa ara.",
+          "answer": "I'm at home now.",
+          "accepted_answers": [
+            "I am at home now."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Parles anglès?",
+          "answer": "Do you speak English?"
+        },
+        {
+          "type": "translation",
+          "prompt": "No ho sé.",
+          "answer": "I don't know."
+        },
+        {
+          "type": "translation",
+          "prompt": "Et veig demà!",
+          "answer": "See you tomorrow!"
+        },
+        {
+          "type": "translation",
+          "prompt": "Sóc feliç.",
+          "answer": "I'm happy.",
+          "accepted_answers": [
+            "I am happy."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ara estic cansat.",
+          "answer": "I'm tired now.",
+          "accepted_answers": [
+            "I am tired now."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Describing and Asking",
+      "level_hint": "beginner",
+      "vocabulary": [
+        {
+          "word": "gran",
+          "translation": "big",
+          "pos": "adjective",
+          "example": "La ciutat és gran."
+        },
+        {
+          "word": "petit",
+          "translation": "small",
+          "pos": "adjective",
+          "example": "El pis és petit."
+        },
+        {
+          "word": "bonic",
+          "translation": "beautiful",
+          "accepted_translations": [
+            "pretty"
+          ],
+          "pos": "adjective",
+          "example": "El jardí és bonic."
+        },
+        {
+          "word": "vell",
+          "translation": "old",
+          "pos": "adjective",
+          "example": "L'home és vell."
+        },
+        {
+          "word": "bo",
+          "translation": "good",
+          "pos": "adjective",
+          "example": "El cafè és molt bo."
+        },
+        {
+          "word": "dolent",
+          "translation": "bad",
+          "pos": "adjective",
+          "example": "El film és dolent."
+        },
+        {
+          "word": "feliç",
+          "translation": "happy",
+          "pos": "adjective",
+          "example": "Sóc molt feliç."
+        },
+        {
+          "word": "trist",
+          "translation": "sad",
+          "pos": "adjective",
+          "example": "Per què estàs trist?"
+        },
+        {
+          "word": "fàcil",
+          "translation": "easy",
+          "pos": "adjective",
+          "example": "L'exercici és fàcil."
+        },
+        {
+          "word": "difícil",
+          "translation": "difficult",
+          "pos": "adjective",
+          "example": "L'examen és difícil."
+        },
+        {
+          "word": "on",
+          "translation": "where",
+          "pos": "question word",
+          "example": "On vius?"
+        },
+        {
+          "word": "què",
+          "translation": "what",
+          "pos": "question word",
+          "example": "Què vols?"
+        },
+        {
+          "word": "qui",
+          "translation": "who",
+          "pos": "question word",
+          "example": "Qui és ella?"
+        },
+        {
+          "word": "quan",
+          "translation": "when",
+          "pos": "question word",
+          "example": "Quan vens?"
+        },
+        {
+          "word": "com",
+          "translation": "how",
+          "pos": "question word",
+          "example": "Com estàs?"
+        },
+        {
+          "word": "per què",
+          "translation": "why",
+          "pos": "question word",
+          "example": "No sé per què."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "gran",
+          "answer": "big"
+        },
+        {
+          "type": "translation",
+          "prompt": "petit",
+          "answer": "small"
+        },
+        {
+          "type": "translation",
+          "prompt": "bonic",
+          "answer": "beautiful",
+          "accepted_answers": [
+            "pretty"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "vell",
+          "answer": "old"
+        },
+        {
+          "type": "translation",
+          "prompt": "bo",
+          "answer": "good"
+        },
+        {
+          "type": "translation",
+          "prompt": "dolent",
+          "answer": "bad"
+        },
+        {
+          "type": "translation",
+          "prompt": "feliç",
+          "answer": "happy"
+        },
+        {
+          "type": "translation",
+          "prompt": "trist",
+          "answer": "sad"
+        },
+        {
+          "type": "translation",
+          "prompt": "fàcil",
+          "answer": "easy"
+        },
+        {
+          "type": "translation",
+          "prompt": "difícil",
+          "answer": "difficult"
+        },
+        {
+          "type": "translation",
+          "prompt": "on",
+          "answer": "where"
+        },
+        {
+          "type": "translation",
+          "prompt": "què",
+          "answer": "what"
+        },
+        {
+          "type": "translation",
+          "prompt": "qui",
+          "answer": "who"
+        },
+        {
+          "type": "translation",
+          "prompt": "quan",
+          "answer": "when"
+        },
+        {
+          "type": "translation",
+          "prompt": "com",
+          "answer": "how"
+        },
+        {
+          "type": "translation",
+          "prompt": "per què",
+          "answer": "why"
+        },
+        {
+          "type": "translation",
+          "prompt": "big",
+          "answer": "gran"
+        },
+        {
+          "type": "translation",
+          "prompt": "easy",
+          "answer": "fàcil"
+        },
+        {
+          "type": "translation",
+          "prompt": "why",
+          "answer": "per què"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'big':",
+          "options": [
+            "gran",
+            "petit",
+            "bonic",
+            "bo"
+          ],
+          "answer": "gran"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'small':",
+          "options": [
+            "petit",
+            "gran",
+            "bonic",
+            "vell"
+          ],
+          "answer": "petit"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'happy':",
+          "options": [
+            "feliç",
+            "trist",
+            "bo",
+            "bonic"
+          ],
+          "answer": "feliç"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sad':",
+          "options": [
+            "trist",
+            "feliç",
+            "dolent",
+            "vell"
+          ],
+          "answer": "trist"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'easy':",
+          "options": [
+            "fàcil",
+            "difícil",
+            "bo",
+            "bonic"
+          ],
+          "answer": "fàcil"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'difficult':",
+          "options": [
+            "difícil",
+            "fàcil",
+            "dolent",
+            "gran"
+          ],
+          "answer": "difícil"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'where':",
+          "options": [
+            "on",
+            "qui",
+            "quan",
+            "com"
+          ],
+          "answer": "on"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'who':",
+          "options": [
+            "qui",
+            "on",
+            "quan",
+            "què"
+          ],
+          "answer": "qui"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ vius?",
+          "answer": "on"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ és ell?",
+          "answer": "qui"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ comença el film?",
+          "answer": "quan"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ estàs trist?",
+          "answer": "per què"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La casa és ___.",
+          "answer": "gran"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El film és ___.",
+          "answer": "dolent"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El noi està ___.",
+          "answer": "trist"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "L'home és ___.",
+          "answer": "vell"
+        },
+        {
+          "type": "translation",
+          "prompt": "Com estàs?",
+          "answer": "How are you?",
+          "accepted_answers": [
+            "How are you doing?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "On vius?",
+          "answer": "Where do you live?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Qui és ella?",
+          "answer": "Who is she?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Quan vens?",
+          "answer": "When are you coming?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Per què estàs trist?",
+          "answer": "Why are you sad?"
+        },
+        {
+          "type": "translation",
+          "prompt": "La ciutat és gran.",
+          "answer": "The city is big."
+        },
+        {
+          "type": "translation",
+          "prompt": "El cafè aquí és molt bo.",
+          "answer": "The coffee here is very good."
+        },
+        {
+          "type": "translation",
+          "prompt": "L'exercici és fàcil.",
+          "answer": "The exercise is easy."
+        },
+        {
+          "type": "translation",
+          "prompt": "L'examen és difícil.",
+          "answer": "The test is difficult."
+        },
+        {
+          "type": "translation",
+          "prompt": "Avui estic molt feliç.",
+          "answer": "I'm very happy today."
+        },
+        {
+          "type": "translation",
+          "prompt": "És una història trista.",
+          "answer": "It's a sad story."
+        },
+        {
+          "type": "translation",
+          "prompt": "My house is small.",
+          "answer": "La meva casa és petita."
+        },
+        {
+          "type": "translation",
+          "prompt": "Com es diu això en català?",
+          "answer": "How do you say this in Catalan?"
+        },
+        {
+          "type": "translation",
+          "prompt": "No sé per què.",
+          "answer": "I don't know why."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Food and Drink",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "el pa",
+          "translation": "the bread",
+          "pos": "noun (masculine)",
+          "example": "Pa amb tomàquet, si us plau."
+        },
+        {
+          "word": "el formatge",
+          "translation": "the cheese",
+          "pos": "noun (masculine)",
+          "example": "El formatge és bo."
+        },
+        {
+          "word": "la poma",
+          "translation": "the apple",
+          "pos": "noun (feminine)",
+          "example": "Menjo una poma."
+        },
+        {
+          "word": "l'aigua",
+          "translation": "the water",
+          "pos": "noun (feminine)",
+          "example": "Aigua, si us plau."
+        },
+        {
+          "word": "el vi",
+          "translation": "the wine",
+          "pos": "noun (masculine)",
+          "example": "Vols vi?"
+        },
+        {
+          "word": "la cervesa",
+          "translation": "the beer",
+          "pos": "noun (feminine)",
+          "example": "Una cervesa, si us plau."
+        },
+        {
+          "word": "el peix",
+          "translation": "the fish",
+          "pos": "noun (masculine)",
+          "example": "M'agrada el peix."
+        },
+        {
+          "word": "el pastís",
+          "translation": "the cake",
+          "pos": "noun (masculine)",
+          "example": "Vull pastís."
+        },
+        {
+          "word": "el raïm",
+          "translation": "the grapes",
+          "pos": "noun (masculine)",
+          "example": "Mengem raïm."
+        },
+        {
+          "word": "l'esmorzar",
+          "translation": "the breakfast",
+          "pos": "noun (masculine)",
+          "example": "L'esmorzar és a les vuit."
+        },
+        {
+          "word": "el dinar",
+          "translation": "the lunch",
+          "pos": "noun (masculine)",
+          "example": "El dinar és a les tres."
+        },
+        {
+          "word": "el sopar",
+          "translation": "the dinner",
+          "pos": "noun (masculine)",
+          "example": "El sopar és a les nou."
+        },
+        {
+          "word": "tinc gana",
+          "translation": "I'm hungry",
+          "pos": "phrase",
+          "example": "Tinc gana. Vull menjar."
+        },
+        {
+          "word": "tinc set",
+          "translation": "I'm thirsty",
+          "pos": "phrase",
+          "example": "Tinc set. Vull beure."
+        },
+        {
+          "word": "el restaurant",
+          "translation": "the restaurant",
+          "pos": "noun (masculine)",
+          "example": "Sopem en un restaurant."
+        },
+        {
+          "word": "la tassa",
+          "translation": "the cup",
+          "pos": "noun (feminine)",
+          "example": "Una tassa de cafè, si us plau."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "el pa",
+          "answer": "the bread"
+        },
+        {
+          "type": "translation",
+          "prompt": "el formatge",
+          "answer": "the cheese"
+        },
+        {
+          "type": "translation",
+          "prompt": "la poma",
+          "answer": "the apple"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'aigua",
+          "answer": "the water"
+        },
+        {
+          "type": "translation",
+          "prompt": "el vi",
+          "answer": "the wine"
+        },
+        {
+          "type": "translation",
+          "prompt": "la cervesa",
+          "answer": "the beer"
+        },
+        {
+          "type": "translation",
+          "prompt": "el peix",
+          "answer": "the fish"
+        },
+        {
+          "type": "translation",
+          "prompt": "el pastís",
+          "answer": "the cake"
+        },
+        {
+          "type": "translation",
+          "prompt": "el raïm",
+          "answer": "the grapes"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'esmorzar",
+          "answer": "the breakfast"
+        },
+        {
+          "type": "translation",
+          "prompt": "el dinar",
+          "answer": "the lunch"
+        },
+        {
+          "type": "translation",
+          "prompt": "el sopar",
+          "answer": "the dinner"
+        },
+        {
+          "type": "translation",
+          "prompt": "tinc gana",
+          "answer": "I'm hungry"
+        },
+        {
+          "type": "translation",
+          "prompt": "tinc set",
+          "answer": "I'm thirsty"
+        },
+        {
+          "type": "translation",
+          "prompt": "el restaurant",
+          "answer": "the restaurant"
+        },
+        {
+          "type": "translation",
+          "prompt": "la tassa",
+          "answer": "the cup"
+        },
+        {
+          "type": "translation",
+          "prompt": "the water",
+          "answer": "l'aigua"
+        },
+        {
+          "type": "translation",
+          "prompt": "the bread",
+          "answer": "el pa"
+        },
+        {
+          "type": "translation",
+          "prompt": "the cup",
+          "answer": "la tassa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the bread':",
+          "options": [
+            "el pa",
+            "el formatge",
+            "el vi",
+            "el peix"
+          ],
+          "answer": "el pa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the water':",
+          "options": [
+            "l'aigua",
+            "el vi",
+            "la cervesa",
+            "la poma"
+          ],
+          "answer": "l'aigua"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the wine':",
+          "options": [
+            "el vi",
+            "l'aigua",
+            "la cervesa",
+            "el pa"
+          ],
+          "answer": "el vi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the fish':",
+          "options": [
+            "el peix",
+            "el pa",
+            "el formatge",
+            "el pastís"
+          ],
+          "answer": "el peix"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the apple':",
+          "options": [
+            "la poma",
+            "el raïm",
+            "el pastís",
+            "la tassa"
+          ],
+          "answer": "la poma"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the lunch':",
+          "options": [
+            "el dinar",
+            "l'esmorzar",
+            "el sopar",
+            "el pastís"
+          ],
+          "answer": "el dinar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'I'm hungry':",
+          "options": [
+            "tinc gana",
+            "tinc set",
+            "el dinar",
+            "l'esmorzar"
+          ],
+          "answer": "tinc gana"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the cup':",
+          "options": [
+            "la tassa",
+            "el restaurant",
+            "la cervesa",
+            "la poma"
+          ],
+          "answer": "la tassa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "M'___ el cafè.",
+          "answer": "agrada"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Li ___ el formatge.",
+          "answer": "agrada"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tinc ___. Vull menjar.",
+          "answer": "gana"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tinc ___. Vull beure.",
+          "answer": "set"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "L'___ és al matí.",
+          "answer": "esmorzar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El sopar és a les ___.",
+          "answer": "nou"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bec una ___ de cafè.",
+          "answer": "tassa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vull ___ aigua.",
+          "answer": "beure"
+        },
+        {
+          "type": "translation",
+          "prompt": "M'agrada el pa amb tomàquet.",
+          "answer": "I like bread with tomato."
+        },
+        {
+          "type": "translation",
+          "prompt": "No tinc gana.",
+          "answer": "I'm not hungry."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vols vi o aigua?",
+          "answer": "Do you want wine or water?"
+        },
+        {
+          "type": "translation",
+          "prompt": "El cafè amb llet, si us plau.",
+          "answer": "Coffee with milk, please."
+        },
+        {
+          "type": "translation",
+          "prompt": "El peix és molt bo.",
+          "answer": "The fish is very good."
+        },
+        {
+          "type": "translation",
+          "prompt": "Una tassa de te, si us plau.",
+          "answer": "A cup of tea, please."
+        },
+        {
+          "type": "translation",
+          "prompt": "El dinar és a les tres.",
+          "answer": "Lunch is at three."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mengem pa amb formatge.",
+          "answer": "We eat bread with cheese."
+        },
+        {
+          "type": "translation",
+          "prompt": "Tinc set.",
+          "answer": "I'm thirsty."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Home and Places",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "la casa",
+          "translation": "the house",
+          "pos": "noun (feminine)",
+          "example": "La meva casa és petita."
+        },
+        {
+          "word": "el pis",
+          "translation": "the apartment",
+          "pos": "noun (masculine)",
+          "example": "Visc en un pis."
+        },
+        {
+          "word": "la cuina",
+          "translation": "the kitchen",
+          "pos": "noun (feminine)",
+          "example": "La mare és a la cuina."
+        },
+        {
+          "word": "l'habitació",
+          "translation": "the bedroom",
+          "pos": "noun (feminine)",
+          "example": "L'habitació és gran."
+        },
+        {
+          "word": "la sala",
+          "translation": "the living room",
+          "pos": "noun (feminine)",
+          "example": "El gat dorm a la sala."
+        },
+        {
+          "word": "el bany",
+          "translation": "the bathroom",
+          "pos": "noun (masculine)",
+          "example": "On és el bany?"
+        },
+        {
+          "word": "el jardí",
+          "translation": "the garden",
+          "pos": "noun (masculine)",
+          "example": "El jardí és bonic."
+        },
+        {
+          "word": "el carrer",
+          "translation": "the street",
+          "pos": "noun (masculine)",
+          "example": "Visc en aquest carrer."
+        },
+        {
+          "word": "la ciutat",
+          "translation": "the city",
+          "pos": "noun (feminine)",
+          "example": "La ciutat és gran."
+        },
+        {
+          "word": "el parc",
+          "translation": "the park",
+          "pos": "noun (masculine)",
+          "example": "El noi juga al parc."
+        },
+        {
+          "word": "el mercat",
+          "translation": "the market",
+          "pos": "noun (masculine)",
+          "example": "Vaig al mercat."
+        },
+        {
+          "word": "el col·legi",
+          "translation": "the school",
+          "accepted_translations": [
+            "the college"
+          ],
+          "pos": "noun (masculine)",
+          "example": "Vaig al col·legi a peu."
+        },
+        {
+          "word": "l'hospital",
+          "translation": "the hospital",
+          "pos": "noun (masculine)",
+          "example": "L'hospital és a prop."
+        },
+        {
+          "word": "la taula",
+          "translation": "the table",
+          "pos": "noun (feminine)",
+          "example": "El llibre és a la taula."
+        },
+        {
+          "word": "el llit",
+          "translation": "the bed",
+          "pos": "noun (masculine)",
+          "example": "El gat dorm al llit."
+        },
+        {
+          "word": "a prop de",
+          "translation": "near",
+          "accepted_translations": [
+            "close to"
+          ],
+          "pos": "phrase",
+          "example": "El col·legi és a prop de casa."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "la casa",
+          "answer": "the house"
+        },
+        {
+          "type": "translation",
+          "prompt": "el pis",
+          "answer": "the apartment"
+        },
+        {
+          "type": "translation",
+          "prompt": "la cuina",
+          "answer": "the kitchen"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'habitació",
+          "answer": "the bedroom"
+        },
+        {
+          "type": "translation",
+          "prompt": "la sala",
+          "answer": "the living room"
+        },
+        {
+          "type": "translation",
+          "prompt": "el bany",
+          "answer": "the bathroom"
+        },
+        {
+          "type": "translation",
+          "prompt": "el jardí",
+          "answer": "the garden"
+        },
+        {
+          "type": "translation",
+          "prompt": "el carrer",
+          "answer": "the street"
+        },
+        {
+          "type": "translation",
+          "prompt": "la ciutat",
+          "answer": "the city"
+        },
+        {
+          "type": "translation",
+          "prompt": "el parc",
+          "answer": "the park"
+        },
+        {
+          "type": "translation",
+          "prompt": "el mercat",
+          "answer": "the market"
+        },
+        {
+          "type": "translation",
+          "prompt": "el col·legi",
+          "answer": "the school",
+          "accepted_answers": [
+            "the college"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "l'hospital",
+          "answer": "the hospital"
+        },
+        {
+          "type": "translation",
+          "prompt": "la taula",
+          "answer": "the table"
+        },
+        {
+          "type": "translation",
+          "prompt": "el llit",
+          "answer": "the bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "a prop de",
+          "answer": "near",
+          "accepted_answers": [
+            "close to"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "the house",
+          "answer": "la casa"
+        },
+        {
+          "type": "translation",
+          "prompt": "the kitchen",
+          "answer": "la cuina"
+        },
+        {
+          "type": "translation",
+          "prompt": "the school",
+          "answer": "el col·legi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the house':",
+          "options": [
+            "la casa",
+            "el pis",
+            "la cuina",
+            "el bany"
+          ],
+          "answer": "la casa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the kitchen':",
+          "options": [
+            "la cuina",
+            "el bany",
+            "la sala",
+            "la taula"
+          ],
+          "answer": "la cuina"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the bedroom':",
+          "options": [
+            "l'habitació",
+            "la sala",
+            "el bany",
+            "la cuina"
+          ],
+          "answer": "l'habitació"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the school':",
+          "options": [
+            "el col·legi",
+            "l'hospital",
+            "el mercat",
+            "el parc"
+          ],
+          "answer": "el col·legi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the market':",
+          "options": [
+            "el mercat",
+            "el parc",
+            "el col·legi",
+            "l'hospital"
+          ],
+          "answer": "el mercat"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the city':",
+          "options": [
+            "la ciutat",
+            "el carrer",
+            "el parc",
+            "el jardí"
+          ],
+          "answer": "la ciutat"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the table':",
+          "options": [
+            "la taula",
+            "el llit",
+            "la cuina",
+            "el bany"
+          ],
+          "answer": "la taula"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the bed':",
+          "options": [
+            "el llit",
+            "la taula",
+            "l'habitació",
+            "el jardí"
+          ],
+          "answer": "el llit"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ un parc aquí a prop.",
+          "answer": "hi ha"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ dos banys al meu pis.",
+          "answer": "hi ha"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "No ___ llet a la nevera.",
+          "answer": "hi ha"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ molts parcs a Barcelona.",
+          "answer": "hi ha"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El llibre és a la ___.",
+          "answer": "taula"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El gat dorm al ___.",
+          "answer": "llit"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Visc en un ___.",
+          "answer": "pis"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El col·legi és ___ de casa.",
+          "answer": "a prop"
+        },
+        {
+          "type": "translation",
+          "prompt": "Visc en un pis petit.",
+          "answer": "I live in a small apartment."
+        },
+        {
+          "type": "translation",
+          "prompt": "L'habitació és gran.",
+          "answer": "The bedroom is big."
+        },
+        {
+          "type": "translation",
+          "prompt": "El mercat és a la plaça.",
+          "answer": "The market is at the square."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vaig al col·legi a peu.",
+          "answer": "I go to school on foot."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hi ha un hospital a prop.",
+          "answer": "There is a hospital nearby."
+        },
+        {
+          "type": "translation",
+          "prompt": "El col·legi és a prop de casa.",
+          "answer": "The school is near my house."
+        },
+        {
+          "type": "translation",
+          "prompt": "La taula és a la cuina.",
+          "answer": "The table is in the kitchen."
+        },
+        {
+          "type": "translation",
+          "prompt": "La meva ciutat és petita.",
+          "answer": "My city is small."
+        },
+        {
+          "type": "translation",
+          "prompt": "I live in Barcelona.",
+          "answer": "Visc a Barcelona."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Daily Routine and Weather",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "llevar-se",
+          "translation": "to get up",
+          "pos": "verb (reflexive)",
+          "example": "Em llevo a les set."
+        },
+        {
+          "word": "despertar-se",
+          "translation": "to wake up",
+          "pos": "verb (reflexive)",
+          "example": "Em desperto d'hora."
+        },
+        {
+          "word": "dutxar-se",
+          "translation": "to take a shower",
+          "pos": "verb (reflexive)",
+          "example": "Em dutxo cada matí."
+        },
+        {
+          "word": "anar a dormir",
+          "translation": "to go to bed",
+          "pos": "phrase",
+          "example": "Vaig a dormir a les onze."
+        },
+        {
+          "word": "la feina",
+          "translation": "the work",
+          "accepted_translations": [
+            "the job"
+          ],
+          "pos": "noun (feminine)",
+          "example": "La feina comença a les nou."
+        },
+        {
+          "word": "sempre",
+          "translation": "always",
+          "pos": "adverb",
+          "example": "Sempre bec cafè al matí."
+        },
+        {
+          "word": "a vegades",
+          "translation": "sometimes",
+          "pos": "phrase",
+          "example": "A vegades sopem fora."
+        },
+        {
+          "word": "mai",
+          "translation": "never",
+          "pos": "adverb",
+          "example": "Mai arribo tard."
+        },
+        {
+          "word": "el sol",
+          "translation": "the sun",
+          "pos": "noun (masculine)",
+          "example": "Avui fa sol."
+        },
+        {
+          "word": "el vent",
+          "translation": "the wind",
+          "pos": "noun (masculine)",
+          "example": "Fa molt de vent."
+        },
+        {
+          "word": "la pluja",
+          "translation": "the rain",
+          "pos": "noun (feminine)",
+          "example": "M'agrada la pluja."
+        },
+        {
+          "word": "la neu",
+          "translation": "the snow",
+          "pos": "noun (feminine)",
+          "example": "A l'hivern neva molt."
+        },
+        {
+          "word": "el núvol",
+          "translation": "the cloud",
+          "pos": "noun (masculine)",
+          "example": "Avui hi ha núvols."
+        },
+        {
+          "word": "plou",
+          "translation": "it's raining",
+          "pos": "phrase",
+          "example": "Avui plou molt."
+        },
+        {
+          "word": "neva",
+          "translation": "it's snowing",
+          "pos": "phrase",
+          "example": "A l'hivern neva."
+        },
+        {
+          "word": "el temps",
+          "translation": "the weather",
+          "accepted_translations": [
+            "the time"
+          ],
+          "pos": "noun (masculine)",
+          "example": "Quin temps fa avui?"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "llevar-se",
+          "answer": "to get up"
+        },
+        {
+          "type": "translation",
+          "prompt": "despertar-se",
+          "answer": "to wake up"
+        },
+        {
+          "type": "translation",
+          "prompt": "dutxar-se",
+          "answer": "to take a shower"
+        },
+        {
+          "type": "translation",
+          "prompt": "anar a dormir",
+          "answer": "to go to bed"
+        },
+        {
+          "type": "translation",
+          "prompt": "la feina",
+          "answer": "the work",
+          "accepted_answers": [
+            "the job"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "sempre",
+          "answer": "always"
+        },
+        {
+          "type": "translation",
+          "prompt": "a vegades",
+          "answer": "sometimes"
+        },
+        {
+          "type": "translation",
+          "prompt": "mai",
+          "answer": "never"
+        },
+        {
+          "type": "translation",
+          "prompt": "el sol",
+          "answer": "the sun"
+        },
+        {
+          "type": "translation",
+          "prompt": "el vent",
+          "answer": "the wind"
+        },
+        {
+          "type": "translation",
+          "prompt": "la pluja",
+          "answer": "the rain"
+        },
+        {
+          "type": "translation",
+          "prompt": "la neu",
+          "answer": "the snow"
+        },
+        {
+          "type": "translation",
+          "prompt": "el núvol",
+          "answer": "the cloud"
+        },
+        {
+          "type": "translation",
+          "prompt": "plou",
+          "answer": "it's raining"
+        },
+        {
+          "type": "translation",
+          "prompt": "neva",
+          "answer": "it's snowing"
+        },
+        {
+          "type": "translation",
+          "prompt": "el temps",
+          "answer": "the weather",
+          "accepted_answers": [
+            "the time"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "the sun",
+          "answer": "el sol"
+        },
+        {
+          "type": "translation",
+          "prompt": "the rain",
+          "answer": "la pluja"
+        },
+        {
+          "type": "translation",
+          "prompt": "always",
+          "answer": "sempre"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the sun':",
+          "options": [
+            "el sol",
+            "el vent",
+            "la pluja",
+            "la neu"
+          ],
+          "answer": "el sol"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the rain':",
+          "options": [
+            "la pluja",
+            "la neu",
+            "el vent",
+            "el núvol"
+          ],
+          "answer": "la pluja"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the snow':",
+          "options": [
+            "la neu",
+            "la pluja",
+            "el núvol",
+            "el sol"
+          ],
+          "answer": "la neu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'always':",
+          "options": [
+            "sempre",
+            "mai",
+            "a vegades",
+            "el temps"
+          ],
+          "answer": "sempre"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'never':",
+          "options": [
+            "mai",
+            "sempre",
+            "a vegades",
+            "el temps"
+          ],
+          "answer": "mai"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the weather':",
+          "options": [
+            "el temps",
+            "el sol",
+            "el vent",
+            "la pluja"
+          ],
+          "answer": "el temps"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to get up':",
+          "options": [
+            "llevar-se",
+            "dutxar-se",
+            "despertar-se",
+            "anar a dormir"
+          ],
+          "answer": "llevar-se"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to take a shower':",
+          "options": [
+            "dutxar-se",
+            "llevar-se",
+            "despertar-se",
+            "anar a dormir"
+          ],
+          "answer": "dutxar-se"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jo ___ llevo a les set.",
+          "answer": "em"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ella ___ lleva d'hora.",
+          "answer": "es"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nosaltres ___ llevem tard.",
+          "answer": "ens"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Avui ___ molt.",
+          "answer": "plou"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A l'hivern ___ molt.",
+          "answer": "neva"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vaig a ___ a les deu.",
+          "answer": "dormir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ell mai ___ cafè.",
+          "answer": "bec"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A ___ anem al cinema.",
+          "answer": "vegades"
+        },
+        {
+          "type": "translation",
+          "prompt": "Em llevo a les set.",
+          "answer": "I get up at seven."
+        },
+        {
+          "type": "translation",
+          "prompt": "Es desperta d'hora.",
+          "answer": "She wakes up early."
+        },
+        {
+          "type": "translation",
+          "prompt": "Anem a dormir a les onze.",
+          "answer": "We go to bed at eleven."
+        },
+        {
+          "type": "translation",
+          "prompt": "Avui no treballo.",
+          "answer": "I'm not working today."
+        },
+        {
+          "type": "translation",
+          "prompt": "Sempre bec cafè al matí.",
+          "answer": "I always drink coffee in the morning."
+        },
+        {
+          "type": "translation",
+          "prompt": "A vegades sopem fora.",
+          "answer": "Sometimes we have dinner out."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mai arribo tard.",
+          "answer": "I never arrive late."
+        },
+        {
+          "type": "translation",
+          "prompt": "Avui plou molt.",
+          "answer": "It's raining a lot today."
+        },
+        {
+          "type": "translation",
+          "prompt": "El pingüí estima el fred.",
+          "answer": "The penguin loves the cold."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Shopping and Travel",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "vint",
+          "translation": "twenty",
+          "pos": "number",
+          "example": "Tinc vint euros."
+        },
+        {
+          "word": "trenta",
+          "translation": "thirty",
+          "pos": "number",
+          "example": "Tinc trenta anys."
+        },
+        {
+          "word": "quaranta",
+          "translation": "forty",
+          "pos": "number",
+          "example": "El sopar costa quaranta euros."
+        },
+        {
+          "word": "cinquanta",
+          "translation": "fifty",
+          "pos": "number",
+          "example": "Les sabates costen cinquanta euros."
+        },
+        {
+          "word": "seixanta",
+          "translation": "sixty",
+          "pos": "number",
+          "example": "Un minut té seixanta segons."
+        },
+        {
+          "word": "cent",
+          "translation": "hundred",
+          "pos": "number",
+          "example": "Cinquanta i cinquanta són cent."
+        },
+        {
+          "word": "els diners",
+          "translation": "the money",
+          "pos": "noun (plural)",
+          "example": "No tinc diners."
+        },
+        {
+          "word": "car",
+          "translation": "expensive",
+          "pos": "adjective",
+          "example": "Aquest hotel és molt car."
+        },
+        {
+          "word": "barat",
+          "translation": "cheap",
+          "pos": "adjective",
+          "example": "El cafè aquí és barat."
+        },
+        {
+          "word": "comprar",
+          "translation": "to buy",
+          "pos": "verb",
+          "example": "Vull comprar una maleta."
+        },
+        {
+          "word": "la botiga",
+          "translation": "the shop",
+          "pos": "noun (feminine)",
+          "example": "Compro pa a la botiga."
+        },
+        {
+          "word": "el tren",
+          "translation": "the train",
+          "pos": "noun (masculine)",
+          "example": "El tren va a Barcelona."
+        },
+        {
+          "word": "l'autobús",
+          "translation": "the bus",
+          "pos": "noun (masculine)",
+          "example": "L'autobús va a l'aeroport."
+        },
+        {
+          "word": "l'hotel",
+          "translation": "the hotel",
+          "pos": "noun (masculine)",
+          "example": "L'hotel és a prop de l'aeroport."
+        },
+        {
+          "word": "la maleta",
+          "translation": "the suitcase",
+          "pos": "noun (feminine)",
+          "example": "La maleta és nova."
+        },
+        {
+          "word": "el bitllet",
+          "translation": "the ticket",
+          "pos": "noun (masculine)",
+          "example": "Un bitllet, si us plau."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "vint",
+          "answer": "twenty"
+        },
+        {
+          "type": "translation",
+          "prompt": "trenta",
+          "answer": "thirty"
+        },
+        {
+          "type": "translation",
+          "prompt": "quaranta",
+          "answer": "forty"
+        },
+        {
+          "type": "translation",
+          "prompt": "cinquanta",
+          "answer": "fifty"
+        },
+        {
+          "type": "translation",
+          "prompt": "seixanta",
+          "answer": "sixty"
+        },
+        {
+          "type": "translation",
+          "prompt": "cent",
+          "answer": "hundred"
+        },
+        {
+          "type": "translation",
+          "prompt": "els diners",
+          "answer": "the money"
+        },
+        {
+          "type": "translation",
+          "prompt": "car",
+          "answer": "expensive"
+        },
+        {
+          "type": "translation",
+          "prompt": "barat",
+          "answer": "cheap"
+        },
+        {
+          "type": "translation",
+          "prompt": "comprar",
+          "answer": "to buy"
+        },
+        {
+          "type": "translation",
+          "prompt": "la botiga",
+          "answer": "the shop"
+        },
+        {
+          "type": "translation",
+          "prompt": "el tren",
+          "answer": "the train"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'autobús",
+          "answer": "the bus"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'hotel",
+          "answer": "the hotel"
+        },
+        {
+          "type": "translation",
+          "prompt": "la maleta",
+          "answer": "the suitcase"
+        },
+        {
+          "type": "translation",
+          "prompt": "el bitllet",
+          "answer": "the ticket"
+        },
+        {
+          "type": "translation",
+          "prompt": "the train",
+          "answer": "el tren"
+        },
+        {
+          "type": "translation",
+          "prompt": "the money",
+          "answer": "els diners"
+        },
+        {
+          "type": "translation",
+          "prompt": "cheap",
+          "answer": "barat"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'twenty':",
+          "options": [
+            "vint",
+            "trenta",
+            "quaranta",
+            "cinquanta"
+          ],
+          "answer": "vint"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fifty':",
+          "options": [
+            "cinquanta",
+            "quaranta",
+            "seixanta",
+            "vint"
+          ],
+          "answer": "cinquanta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hundred':",
+          "options": [
+            "cent",
+            "seixanta",
+            "vint",
+            "trenta"
+          ],
+          "answer": "cent"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the money':",
+          "options": [
+            "els diners",
+            "el bitllet",
+            "la maleta",
+            "la botiga"
+          ],
+          "answer": "els diners"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'expensive':",
+          "options": [
+            "car",
+            "barat",
+            "el tren",
+            "l'hotel"
+          ],
+          "answer": "car"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cheap':",
+          "options": [
+            "barat",
+            "car",
+            "la botiga",
+            "el bitllet"
+          ],
+          "answer": "barat"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the train':",
+          "options": [
+            "el tren",
+            "l'autobús",
+            "l'hotel",
+            "la maleta"
+          ],
+          "answer": "el tren"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the ticket':",
+          "options": [
+            "el bitllet",
+            "la maleta",
+            "el tren",
+            "els diners"
+          ],
+          "answer": "el bitllet"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Quant ___ el cafè?",
+          "answer": "costa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Quant ___ les pomes?",
+          "answer": "costen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El bitllet ___ deu euros.",
+          "answer": "costa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Les sabates ___ cinquanta euros.",
+          "answer": "costen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vull ___ una maleta.",
+          "answer": "comprar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Deu, vint, trenta, ___.",
+          "answer": "quaranta"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vint i trenta són ___.",
+          "answer": "cinquanta"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cinquanta i cinquanta són ___.",
+          "answer": "cent"
+        },
+        {
+          "type": "translation",
+          "prompt": "Quant costa el cafè?",
+          "answer": "How much is the coffee?",
+          "accepted_answers": [
+            "How much does the coffee cost?"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "El bitllet de tren costa vint euros.",
+          "answer": "The train ticket costs twenty euros."
+        },
+        {
+          "type": "translation",
+          "prompt": "Aquest hotel és molt car.",
+          "answer": "This hotel is very expensive."
+        },
+        {
+          "type": "translation",
+          "prompt": "L'autobús va a l'aeroport.",
+          "answer": "The bus goes to the airport."
+        },
+        {
+          "type": "translation",
+          "prompt": "Prenc el tren a les vuit.",
+          "answer": "I take the train at eight."
+        },
+        {
+          "type": "translation",
+          "prompt": "No tinc diners.",
+          "answer": "I don't have money."
+        },
+        {
+          "type": "translation",
+          "prompt": "El mòbil nou costa molts diners.",
+          "answer": "The new phone costs a lot of money."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vull comprar una maleta nova.",
+          "answer": "I want to buy a new suitcase."
+        },
+        {
+          "type": "translation",
+          "prompt": "La botiga és al carrer.",
+          "answer": "The shop is on the street."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Yesterday and Tomorrow",
+      "level_hint": "elementary",
+      "vocabulary": [
+        {
+          "word": "l'estiu",
+          "translation": "the summer",
+          "pos": "noun (masculine)",
+          "example": "A l'estiu fa calor."
+        },
+        {
+          "word": "l'hivern",
+          "translation": "the winter",
+          "pos": "noun (masculine)",
+          "example": "A l'hivern fa fred."
+        },
+        {
+          "word": "la primavera",
+          "translation": "the spring",
+          "pos": "noun (feminine)",
+          "example": "La primavera és bonica."
+        },
+        {
+          "word": "la tardor",
+          "translation": "the autumn",
+          "accepted_translations": [
+            "the fall"
+          ],
+          "pos": "noun (feminine)",
+          "example": "A la tardor plou molt."
+        },
+        {
+          "word": "fa fred",
+          "translation": "it's cold",
+          "pos": "phrase",
+          "example": "Avui fa fred."
+        },
+        {
+          "word": "gener",
+          "translation": "January",
+          "pos": "noun",
+          "example": "El gener és el primer mes."
+        },
+        {
+          "word": "març",
+          "translation": "March",
+          "pos": "noun",
+          "example": "La primavera comença al març."
+        },
+        {
+          "word": "juny",
+          "translation": "June",
+          "pos": "noun",
+          "example": "L'estiu comença al juny."
+        },
+        {
+          "word": "juliol",
+          "translation": "July",
+          "pos": "noun",
+          "example": "Fa molta calor al juliol."
+        },
+        {
+          "word": "desembre",
+          "translation": "December",
+          "pos": "noun",
+          "example": "El Nadal és al desembre."
+        },
+        {
+          "word": "la setmana passada",
+          "translation": "last week",
+          "pos": "phrase",
+          "example": "La setmana passada vaig dinar a casa."
+        },
+        {
+          "word": "la setmana vinent",
+          "translation": "next week",
+          "pos": "phrase",
+          "example": "La setmana vinent anem al cinema."
+        },
+        {
+          "word": "l'any passat",
+          "translation": "last year",
+          "pos": "phrase",
+          "example": "L'any passat va nevar molt."
+        },
+        {
+          "word": "l'any vinent",
+          "translation": "next year",
+          "pos": "phrase",
+          "example": "Fins l'any vinent!"
+        },
+        {
+          "word": "la pel·lícula",
+          "translation": "the film",
+          "accepted_translations": [
+            "the movie"
+          ],
+          "pos": "noun (feminine)",
+          "example": "La pel·lícula comença a les vuit."
+        },
+        {
+          "word": "ahir",
+          "translation": "yesterday",
+          "pos": "adverb",
+          "example": "Ahir vaig anar al mercat."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "l'estiu",
+          "answer": "the summer"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'hivern",
+          "answer": "the winter"
+        },
+        {
+          "type": "translation",
+          "prompt": "la primavera",
+          "answer": "the spring"
+        },
+        {
+          "type": "translation",
+          "prompt": "la tardor",
+          "answer": "the autumn",
+          "accepted_answers": [
+            "the fall"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "fa fred",
+          "answer": "it's cold"
+        },
+        {
+          "type": "translation",
+          "prompt": "gener",
+          "answer": "January"
+        },
+        {
+          "type": "translation",
+          "prompt": "març",
+          "answer": "March"
+        },
+        {
+          "type": "translation",
+          "prompt": "juny",
+          "answer": "June"
+        },
+        {
+          "type": "translation",
+          "prompt": "juliol",
+          "answer": "July"
+        },
+        {
+          "type": "translation",
+          "prompt": "desembre",
+          "answer": "December"
+        },
+        {
+          "type": "translation",
+          "prompt": "la setmana passada",
+          "answer": "last week"
+        },
+        {
+          "type": "translation",
+          "prompt": "la setmana vinent",
+          "answer": "next week"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'any passat",
+          "answer": "last year"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'any vinent",
+          "answer": "next year"
+        },
+        {
+          "type": "translation",
+          "prompt": "la pel·lícula",
+          "answer": "the film",
+          "accepted_answers": [
+            "the movie"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "ahir",
+          "answer": "yesterday"
+        },
+        {
+          "type": "translation",
+          "prompt": "yesterday",
+          "answer": "ahir"
+        },
+        {
+          "type": "translation",
+          "prompt": "the winter",
+          "answer": "l'hivern"
+        },
+        {
+          "type": "translation",
+          "prompt": "the summer",
+          "answer": "l'estiu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the summer':",
+          "options": [
+            "l'estiu",
+            "l'hivern",
+            "la primavera",
+            "la tardor"
+          ],
+          "answer": "l'estiu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the winter':",
+          "options": [
+            "l'hivern",
+            "l'estiu",
+            "la primavera",
+            "la tardor"
+          ],
+          "answer": "l'hivern"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the autumn':",
+          "options": [
+            "la tardor",
+            "la primavera",
+            "l'estiu",
+            "l'hivern"
+          ],
+          "answer": "la tardor"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'yesterday':",
+          "options": [
+            "ahir",
+            "la setmana passada",
+            "la setmana vinent",
+            "l'any passat"
+          ],
+          "answer": "ahir"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'next week':",
+          "options": [
+            "la setmana vinent",
+            "la setmana passada",
+            "l'any passat",
+            "l'any vinent"
+          ],
+          "answer": "la setmana vinent"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'last year':",
+          "options": [
+            "l'any passat",
+            "l'any vinent",
+            "la setmana passada",
+            "la setmana vinent"
+          ],
+          "answer": "l'any passat"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the film':",
+          "options": [
+            "la pel·lícula",
+            "ahir",
+            "fa fred",
+            "l'hivern"
+          ],
+          "answer": "la pel·lícula"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'January':",
+          "options": [
+            "gener",
+            "març",
+            "juny",
+            "juliol"
+          ],
+          "answer": "gener"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ahir ___ menjar pizza.",
+          "answer": "vaig"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ahir ella ___ comprar un cotxe.",
+          "answer": "va"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ahir nosaltres ___ veure una pel·lícula.",
+          "answer": "vam"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ahir ells ___ jugar al parc.",
+          "answer": "van"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Demà ___ a treballar.",
+          "answer": "vaig"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ahir vaig ___ una pizza.",
+          "answer": "menjar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A l'hivern fa ___.",
+          "answer": "fred"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El Nadal és al ___.",
+          "answer": "desembre"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ahir vaig treballar molt.",
+          "answer": "Yesterday I worked a lot."
+        },
+        {
+          "type": "translation",
+          "prompt": "La setmana passada vam anar a Roma.",
+          "answer": "Last week we went to Rome."
+        },
+        {
+          "type": "translation",
+          "prompt": "Demà vaig a menjar pizza.",
+          "answer": "Tomorrow I'm going to eat pizza."
+        },
+        {
+          "type": "translation",
+          "prompt": "Anem a veure una pel·lícula.",
+          "answer": "We're going to watch a film.",
+          "accepted_answers": [
+            "We are going to watch a film."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "A l'estiu fa calor.",
+          "answer": "In summer it's hot."
+        },
+        {
+          "type": "translation",
+          "prompt": "El meu aniversari és al juliol.",
+          "answer": "My birthday is in July."
+        },
+        {
+          "type": "translation",
+          "prompt": "El gener és el primer mes de l'any.",
+          "answer": "January is the first month of the year."
+        },
+        {
+          "type": "translation",
+          "prompt": "El Nadal és al desembre.",
+          "answer": "Christmas is in December."
+        },
+        {
+          "type": "translation",
+          "prompt": "Tomorrow I'm going to work.",
+          "answer": "Demà vaig a treballar."
+        }
+      ]
+    }
+  ]
+}
