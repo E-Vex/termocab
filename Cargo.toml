@@ -1,10 +1,13 @@
 [package]
 name = "termocab"
-version = "0.17.0"
+version = "0.18.0"
 edition = "2021"
 description = "Language learning for terminal enthusiasts — staged lessons, spaced repetition, plain-text progress"
 license = "MIT"
 repository = "https://github.com/E-Vex/termocab"
+readme = "README.md"
+keywords = ["language-learning", "vocabulary", "spaced-repetition", "terminal", "cli"]
+categories = ["command-line-utilities"]
 # The lockfile is version 4, which cargo cannot parse before 1.78.
 rust-version = "1.78"
 

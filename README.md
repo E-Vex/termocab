@@ -106,10 +106,29 @@ in Icelandic; haver de, em fa mal, Truca'm and estar + gerundio in Catalan;
 and aan het + infinitive, hoofdpijn, graag, Bel me terug and the simple
 past against the ge- perfect in Dutch.
 
+## Releases & versioning
+
+Releases are cut by tag (D20 in `HANDOFF.md`, the process in
+`RELEASE.md`): the owner pushes `vX.Y.Z`, and the Release workflow verifies
+the tag — fmt, clippy, tests, release build, publish dry-run — then
+publishes the crate to crates.io and attaches release binaries (Linux and
+macOS) to the GitHub Release. `cargo install termocab` becomes the
+one-line install at the first tagged release.
+
+One version number covers the engine, the CLI and the embedded courses
+together — they ship as one binary. SemVer with a content contract: stage
+ids are append-only, review state only ever orphans (skipped at review,
+never an error), and grading plus the CLI surface only grow — additive
+content (a new course, a new stage wave) is a MINOR bump, anything that
+could strand existing learner state is a MAJOR bump. Release history:
+`CHANGELOG.md`.
+
 ## Install & run
 
 ```
-cargo install --path .     # or: cargo install --git https://github.com/E-Vex/termocab
+cargo install termocab     # once the first release is tagged (Releases above)
+cargo install --path .     # or, from a checkout
+cargo install --git https://github.com/E-Vex/termocab
 termocab start french      # the thirteen shipped courses are built into the binary
 termocab list-langs        # every language available on this machine
 ```
@@ -278,4 +297,6 @@ cargo clippy --all-targets -- -D warnings
 cargo fmt --check
 ```
 
-CI runs all of the above on ubuntu and macOS.
+CI runs all of the above on ubuntu and macOS. The release process — who
+cuts releases, what semver means for course content, the owner's go-live
+checklist — is documented in `RELEASE.md` (D20).
