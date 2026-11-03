@@ -252,6 +252,31 @@ const LIGATURES: [(char, &str); 3] = [('œ', "oe"), ('æ', "ae"), ('ß', "ss")];
 /// (D11); the table still holds just ł.
 const OPEN_LETTERS: [(char, &str); 1] = [('ł', "l")];
 
+/// Marks that fold away in the loose pass without being combining
+/// diacritics. Catalan's interpunct (D18) — the "punt volat" that
+/// separates the two l's of "col·legi" from the digraph "ll" — is
+/// the first, and it answers the question the roadmap held open for
+/// the twelfth language: is the raised dot decoration like ¡ ¿, or
+/// meaningful like a letter? Neither. Not decoration, because ¡ and
+/// ¿ only ever wrap an utterance and carry nothing inside the word,
+/// while the interpunct sits inside the word and its absence is a
+/// genuine misspelling — "collegi" is wrong in Catalan — so
+/// stripping it in the strict pass would hand a full match to a
+/// misspelled answer. Not a letter in its own right, because it has
+/// no sound and no place in the alphabet, unlike the closed club
+/// ø þ ð ı (D9, D15) whose members are phonemes with their own
+/// slot. So it takes the tier ł built (D10): the same word missing
+/// its mark counts, with the properly spelled form as the hint —
+/// "collegi" counts with "col·legi" exactly like "lodz" counts
+/// with "łódź". The ASCII hyphen some typists write instead
+/// ("col-legi") stays a miss — folding internal hyphens would touch
+/// every course that ships one, and the change is deliberately
+/// additive only (the D14 rule). ŀ (U+0140, l with middle dot)
+/// decomposes to l + · in Unicode but lives in no modern text —
+/// the Portuguese â rule, one tier stricter — so it stays off the
+/// ACCENTED table.
+const FOLDED_MARKS: [char; 1] = ['\u{00B7}'];
+
 /// Punctuation that may differ at the ends of an answer: a missing "?"
 /// must not fail "How are you?", and Spanish's inverted marks must not
 /// fail "¡Hola!" — "hola" is right (D9).
@@ -284,15 +309,17 @@ pub fn normalize_strict(input: &str) -> String {
 }
 
 /// Strict normalization plus the accent fold: combining marks drop
-/// ("étudiant" == "etudiant") and the ligatures and open letters
-/// unfold ("œuvre" == "oeuvre", "łódź" == "lodz" — D10). A loose-only
+/// ("étudiant" == "etudiant"), the ligatures and open letters
+/// unfold ("œuvre" == "oeuvre", "łódź" == "lodz" — D10), and the
+/// folded marks vanish ("col·legi" == "collegi" — D18). A loose-only
 /// match is correct with a hint.
 pub fn normalize_loose(input: &str) -> String {
     let strict = normalize_strict(input);
     let mut out = String::with_capacity(strict.len());
     for c in strict.chars() {
-        // combining diacritical marks
-        if ('\u{0300}'..='\u{036F}').contains(&c) {
+        // combining diacritical marks drop, and so do the folded
+        // marks beside them (D18)
+        if ('\u{0300}'..='\u{036F}').contains(&c) || FOLDED_MARKS.contains(&c) {
             continue;
         }
         match LIGATURES
@@ -741,6 +768,58 @@ mod tests {
         assert_eq!(thyda.grade("þyða"), Grade::CorrectWithHint("þýða".into()));
         assert_eq!(thyda.grade("þyda"), Grade::Incorrect);
         assert!(!thyda.is_correct("þyrr"));
+    }
+
+    #[test]
+    fn the_catalan_interpunct_folds_like_the_stroke() {
+        // The twelfth-language wave (D18) answers the question the
+        // roadmap held open for Catalan: is the raised dot decoration
+        // like ¡ ¿, or meaningful like a letter? Neither — it is an
+        // internal mark the way ł's stroke is internal, so it takes
+        // the open-letter tier: a correctly typed "col·legi" is a
+        // full match (the dot survives the strict pass), and the
+        // dotless "collegi" counts with the properly spelled form as
+        // the hint, exactly like "lodz" counts with "łódź".
+        let colegi = translation("col·legi", &[]);
+        assert_eq!(colegi.grade("col·legi"), Grade::Correct);
+        assert_eq!(
+            colegi.grade("collegi"),
+            Grade::CorrectWithHint("col·legi".into())
+        );
+        assert!(colegi.is_correct("Col·legi"));
+        // the ASCII hyphen some typists fall back to stays a miss:
+        // only the dot folds, never the hyphen — folding internal
+        // hyphens would touch every course that ships one, and the
+        // change is deliberately additive only (the D14 rule)
+        assert_eq!(colegi.grade("col-legi"), Grade::Incorrect);
+        // around the dot, everything folds as usual: "il·lusió"
+        // carries the ó as well, so "il·lusio" hints the accent,
+        // "illusio" hints accent and dot both, and the properly
+        // spelled word is a full match
+        let ilusio = translation("il·lusió", &[]);
+        assert_eq!(ilusio.grade("il·lusió"), Grade::Correct);
+        assert_eq!(
+            ilusio.grade("il·lusio"),
+            Grade::CorrectWithHint("il·lusió".into())
+        );
+        assert_eq!(
+            ilusio.grade("illusio"),
+            Grade::CorrectWithHint("il·lusió".into())
+        );
+        // and the accents of the rest of the course ride the Latin-1
+        // table D9 shipped with Catalan's name already on it: à è é
+        // í ï ó ò ú ç all decompose like any French accent — "gracies"
+        // counts with "gràcies", "felic" with "feliç", "raim" with
+        // "raïm" — which is why the course needed no other entry
+        let gracies = translation("gràcies", &[]);
+        assert_eq!(
+            gracies.grade("gracies"),
+            Grade::CorrectWithHint("gràcies".into())
+        );
+        let felic = translation("feliç", &[]);
+        assert_eq!(felic.grade("felic"), Grade::CorrectWithHint("feliç".into()));
+        let raim = translation("raïm", &[]);
+        assert_eq!(raim.grade("raim"), Grade::CorrectWithHint("raïm".into()));
     }
 
     #[test]
