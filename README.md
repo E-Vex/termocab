@@ -7,7 +7,7 @@ reviews, streaks — fully offline, fully local, no account, no network.
 Plain text everywhere: content is JSON, your progress is a file you can
 `cat`. UX modeled on git — direct subcommands, no menus.
 
-Twelve courses ship today: French (ten stages, 153 words, 397
+Thirteen courses ship today: French (ten stages, 153 words, 397
 exercises), Spanish (ten stages, 153 words, 417 exercises), German
 (ten stages, 153 words, 436 exercises — nouns with their articles,
 modal-verb drills, umlauts and the sharp s), Italian (ten stages,
@@ -59,10 +59,24 @@ gendered articles and the apostrophe elisions l'home l'aigua, the
 mandatory al/del contraction drills, the agradar flip, hi ha, the
 em/es/ens reflexives, the go-past vaig menjar drilled against the
 go-future vaig a menjar, homonym translations on temps col·legi,
-every Catalan letter alive in real content) — same
+every Catalan letter alive in real content) and Dutch (ten stages,
+153 words, 438 exercises — the thirteenth course and the ligature
+question it was chosen for: ĳ joins the ligature table and opens to
+the two letters it spells, so het IJsselmeer counts with het
+Ĳsselmeer as the hint while the schoolbook y of myn stays a miss for
+mijn, and every accent was already on file from D9 — the é of één,
+the one word where an accent does grammar, separating the number
+from the article, and the trema ë of ideeën — standard Dutch as
+spoken in the Netherlands, nouns with their de/het articles, the
+de/het article drill, the modal drill with the bare infinitive where
+Dutch puts it at the end, the hou van flip with honger and dorst,
+er is/er zijn, the separable verbs standing at the end, hoeveel
+kost/kosten, and the ge- participle past drilled against the gaan
+future in a minimal pair, homonym translations on gezellig, het
+Ĳsselmeer alive in real content) — same
 engine, same rules,
 same forgiving grading for all of them. Stages 6–10 (the elementary
-wave) share one skeleton across the twelve courses — food, home,
+wave) share one skeleton across the thirteen courses — food, home,
 routine and weather, shopping and travel, yesterday and tomorrow —
 while each course keeps its own signature drills: the partitive in
 French, hay in Spanish, the future bracket werden … lesen in German,
@@ -71,14 +85,15 @@ gendered past -łem/-łam in Polish, the enclitic article again in
 Romanian, the Brazilian tem in Portuguese, ska in Swedish, the
 -ban/-ben harmony in Hungarian, var/yok plus the four-way
 -iyor and -dı harmonies in Turkish, the í/á split and the past
--ði with its closed ð in Icelandic, and the al/del contractions with
-the go-past in Catalan.
+-ði with its closed ð in Icelandic, the al/del contractions with
+the go-past in Catalan, and the separable verbs with the ge-
+participle past against the gaan future in Dutch.
 
 ## Install & run
 
 ```
 cargo install --path .     # or: cargo install --git https://github.com/E-Vex/termocab
-termocab start french      # the twelve shipped courses are built into the binary
+termocab start french      # the thirteen shipped courses are built into the binary
 termocab list-langs        # every language available on this machine
 ```
 
@@ -94,7 +109,7 @@ cargo build --release && ./target/release/termocab start french
                                                         # works from any directory
 ```
 
-The twelve shipped courses are compiled into the binary, so a fresh
+The thirteen shipped courses are compiled into the binary, so a fresh
 install works with zero setup, from any directory. Content is looked
 up in this order (first hit wins):
 
@@ -212,7 +227,15 @@ counts with `col·legi` as the hint and `pellicula` with
 `pel·lícula`, while the hyphen some typists write instead
 (`col-legi`) stays a miss, and every accent rides the table D9
 shipped with Catalan's name already on it: `gracies` counts with
-`gràcies`, `felic` with `feliç`, `raim` with `raïm` as the hint.
+`gràcies`, `felic` with `feliç`, `raim` with `raïm` as the hint; and
+Dutch answered the ligature question its course had been chosen to
+ask — ĳ opens like œ
+and æ to the two letters it spells, so `het IJsselmeer` counts with
+`het Ĳsselmeer` and `mĳn` with `mijn` as the hint, the schoolbook y of
+`myn` stays a miss for `mijn`, and every accent was already on file:
+`een` counts with `één` — the one Dutch word where the accent does
+grammar, separating the number from the article — and the trema folds
+like any diaeresis, `de ideeen` with `de ideeën` as the hint.
 `accepted_answers` lists alternative correct spellings, and
 `accepted_translations` on a vocabulary entry lists alternative correct
 translations a review will accept — reviewing `salut` with "hello" is
