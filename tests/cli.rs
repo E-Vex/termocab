@@ -453,6 +453,7 @@ fn builtin_courses_work_with_zero_setup() {
         "hungarian",
         "turkish",
         "icelandic",
+        "catalan",
     ] {
         let out = termocab(&scratch)
             .args(["progress", lang])
@@ -507,7 +508,7 @@ fn list_langs_shows_builtins_installed_and_overrides() {
             .to_string()
     };
 
-    // fresh: the ten shipped courses, all built-in, with real sizes
+    // fresh: the shipped courses, all built-in, with real sizes
     // read from the same files `check` pins (count-agnostic)
     let out = termocab(&scratch).args(["list-langs"]).output().unwrap();
     assert!(out.status.success(), "{}", stderr(&out));
@@ -524,6 +525,7 @@ fn list_langs_shows_builtins_installed_and_overrides() {
         "hungarian",
         "turkish",
         "icelandic",
+        "catalan",
     ] {
         let stages = std::fs::read_to_string(
             PathBuf::from(env!("CARGO_MANIFEST_DIR"))
@@ -991,7 +993,12 @@ fn broken_pipe_is_silent_and_exits_141_like_cat_and_git() {
 /// and the split ğ/ı question, D14 and D15); Icelandic the eleventh,
 /// the zero-change payoff D9 was holding all along — its acutes and
 /// its ö straight out of the Latin-1 table, its æ a ligature already
-/// on file, its þ and ð closed exactly where D9 put them on day one.
+/// on file, its þ and ð closed exactly where D9 put them on day one;
+/// Catalan the twelfth, the language D9 named on the same coverage
+/// list — every accent already on file (à è é í ï ó ò ú ç), the one
+/// new question its interpunct, answered by D18's fold: the punt
+/// volat of "col·legi" rides the content through the same validation
+/// gate as every other character.
 #[test]
 fn shipped_courses_validate() {
     let scratch = Scratch::new("shipped");
@@ -1007,6 +1014,7 @@ fn shipped_courses_validate() {
         "hungarian",
         "turkish",
         "icelandic",
+        "catalan",
     ] {
         let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
             .join("languages")
@@ -1856,6 +1864,106 @@ fn icelandic_closed_letters_and_ligature_grade_end_to_end() {
     assert!(srs.contains("word góður box 2"), "{srs}");
     assert!(srs.contains("word tölva box 2"), "{srs}");
     assert!(srs.contains("word já box 2"), "{srs}");
+}
+
+/// The twelfth language end to end, in a Catalan course. D18's answer
+/// pinned three ways: the dotless spelling counts with the properly
+/// spelled form as the hint ("pellicula" for "pel·lícula", the ł tier),
+/// the ASCII hyphen some typists fall back to is a real miss
+/// ("col-legi" is wrong for "col·legi", counting against the pass bar
+/// exactly like the closed letters of Icelandic and Turkish), and the
+/// accents around the dot fold like anywhere else ("gracies" for
+/// "gràcies", "felic" for "feliç", "raim" for "raïm"). The review then
+/// accepts every listed alternative translation — the homonyms this
+/// course carries: "the college" for col·legi, "the time" for el
+/// temps — and the srs keys keep the punt volat verbatim.
+#[test]
+fn catalan_interpunct_and_accents_grade_end_to_end() {
+    let scratch = Scratch::new("catalan");
+    let course = r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Català", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "gràcies", "translation": "thank you",
+                "accepted_translations": ["thanks"],
+                "pos": "interjection", "example": "Gràcies pel cafè!" },
+              { "word": "feliç", "translation": "happy",
+                "pos": "adjective", "example": "Sóc molt feliç." },
+              { "word": "el raïm", "translation": "the grapes",
+                "pos": "noun (masculine)", "example": "Mengem raïm." },
+              { "word": "el col·legi", "translation": "the school",
+                "accepted_translations": ["the college"],
+                "pos": "noun (masculine)", "example": "Vaig al col·legi a peu." },
+              { "word": "la pel·lícula", "translation": "the film",
+                "accepted_translations": ["the movie"],
+                "pos": "noun (feminine)", "example": "La pel·lícula comença a les vuit." },
+              { "word": "el temps", "translation": "the weather",
+                "accepted_translations": ["the time"],
+                "pos": "noun (masculine)", "example": "Quin temps fa avui?" }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "thank you", "answer": "gràcies" },
+              { "type": "translation", "prompt": "happy", "answer": "feliç" },
+              { "type": "translation", "prompt": "the grapes", "answer": "el raïm" },
+              { "type": "translation", "prompt": "the school", "answer": "el col·legi" },
+              { "type": "translation", "prompt": "the film", "answer": "la pel·lícula" },
+              { "type": "translation", "prompt": "the weather", "answer": "el temps" },
+              { "type": "fill_blank", "prompt": "Vaig ___ col·legi a peu.", "answer": "al" },
+              { "type": "fill_blank", "prompt": "Quin ___ fa avui?", "answer": "temps" },
+              { "type": "fill_blank", "prompt": "Ahir vaig ___ pizza.", "answer": "menjar" }
+            ] }
+       ] }"#;
+    let file = scratch.stages_file("catalan.json", course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    // everything answered with the marks stripped — the accents and the
+    // interpunct count with the properly spelled form as the hint, but
+    // the hyphen fallback does not: "el col-legi" is wrong for
+    // "el col·legi", never hinted, so the run lands at 8/9 — still past
+    // the 80% bar, the hinted folds counting toward it and the hyphen
+    // miss not. The D18 answer in one run.
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "--no-shuffle", "test"]);
+    let out = feed(
+        &mut cmd,
+        "gracies\nfelic\nel raim\nel col-legi\nla pellicula\nel temps\nal\ntemps\nmenjar\n",
+    );
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("watch the accents: gràcies"), "{text}");
+    assert!(text.contains("watch the accents: feliç"), "{text}");
+    assert!(text.contains("watch the accents: el raïm"), "{text}");
+    assert!(text.contains("watch the accents: la pel·lícula"), "{text}");
+    assert!(text.contains("not quite — expected: el col·legi"), "{text}");
+    assert!(!text.contains("watch the accents: el col·legi"), "{text}");
+    assert!(text.contains("8/9"), "{text}");
+    assert!(text.contains("stage complete"), "{text}");
+
+    // review: due cards come alphabetical (byte order: el col·legi,
+    // el raïm, el temps, feliç, gràcies, la pel·lícula), the accepted
+    // alternatives all count — "the college", "the time", "the movie",
+    // "thanks" — and the srs keys keep the punt volat verbatim
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(
+        &mut cmd,
+        "the college\nthe grapes\nthe time\nhappy\nthanks\nthe movie\n",
+    );
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("correct"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    let srs = scratch.home().join(".config/termocab/srs/test.txt");
+    let srs = std::fs::read_to_string(&srs).expect("srs file");
+    assert!(srs.contains("word el col·legi box 2"), "{srs}");
+    assert!(srs.contains("word la pel·lícula box 2"), "{srs}");
+    assert!(srs.contains("word el raïm box 2"), "{srs}");
+    assert!(srs.contains("word el temps box 2"), "{srs}");
+    assert!(srs.contains("word feliç box 2"), "{srs}");
+    assert!(srs.contains("word gràcies box 2"), "{srs}");
 }
 
 /// The stages 6-10 wave end to end. A course that ships ten stages
