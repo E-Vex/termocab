@@ -7,40 +7,40 @@ reviews, streaks — fully offline, fully local, no account, no network.
 Plain text everywhere: content is JSON, your progress is a file you can
 `cat`. UX modeled on git — direct subcommands, no menus.
 
-Thirteen courses ship today: French (ten stages, 153 words, 397
-exercises), Spanish (ten stages, 153 words, 417 exercises), German
-(ten stages, 153 words, 436 exercises — nouns with their articles,
-modal-verb drills, umlauts and the sharp s), Italian (ten stages,
-153 words, 438 exercises — articles with their elisions, modal-verb
-drills, the grave and the acute accents), Polish (ten stages,
-153 words, 438 exercises — bare nouns, "to jest" drills, want/like +
+Thirteen courses ship today: French (fifteen stages, 233 words, 617
+exercises), Spanish (fifteen stages, 233 words, 637 exercises), German
+(fifteen stages, 233 words, 656 exercises — nouns with their articles,
+modal-verb drills, umlauts and the sharp s), Italian (fifteen stages,
+233 words, 658 exercises — articles with their elisions, modal-verb
+drills, the grave and the acute accents), Polish (fifteen stages,
+233 words, 658 exercises — bare nouns, "to jest" drills, want/like +
 infinitive drills, every letter ą ć ę ł ń ó ś ź ż alive in real
-content), Romanian (ten stages, 153 words, 438 exercises — the
+content), Romanian (fifteen stages, 233 words, 658 exercises — the
 enclitic definite article blanked where it lives, at the end of the
 noun, can + infinitive drills, every letter ă â î ș ț alive in real
-content), Portuguese (ten stages, 153 words, 438 exercises —
+content), Portuguese (fifteen stages, 233 words, 658 exercises —
 Brazilian Portuguese, nouns with their gendered articles, the crase
 à blanked where it lives, want/can + infinitive drills, the tildes
 ã õ, the cedilla ç, the acutes á é í ó ú, the circumflexes ê ô
-alive in real content), Swedish (ten stages, 153 words, 438
+alive in real content), Swedish (fifteen stages, 233 words, 658
 exercises — nouns with their en/ett articles, the gender drill and
 the enclitic definite article blanked where it lives, at the end of
 the noun, want/can + infinitive drills, every letter å ä ö alive in
-real content) and Hungarian (ten stages, 153 words, 438 exercises —
+real content) and Hungarian (fifteen stages, 233 words, 658 exercises —
 the third engine extension: the double acute ő ű fold like any
 accent, bare nouns, the a/az article alternation drill, the plural
 suffix blanked with its linking vowel — the vowel harmony made
 visible — want/like/can + infinitive drills, homonym translations on
 hét nap óra, every Hungarian letter á é í ó ö ő ú ü ű alive in real
-content) and Turkish (ten stages, 153 words, 438 exercises —
+content) and Turkish (fifteen stages, 233 words, 658 exercises —
 the fourth engine extension, and the first to split in two: the
 soft ğ folds like any accent while dotless ı stays closed the way
 ø does — hayır is never hayir — bare nouns, the bir drill for the
 one word that is both "a" and "one", the plural suffix blanked
 where the vowel harmony lives, istemek + the -mek/-mak infinitive,
 homonym translations on yemek ay kız, every Turkish letter
-â ç ğ ı ö ş ü alive in real content) and Icelandic (ten stages, 153
-words, 438 exercises — the eleventh course and the cleanest
+â ç ğ ı ö ş ü alive in real content) and Icelandic (fifteen stages, 233
+words, 658 exercises — the eleventh course and the cleanest
 prediction payoff yet: zero engine changes, every letter already on
 file from D9 — the acutes á é í ó ú ý and the ö fold like any accent,
 æ opens as the ligature it shares with French's œ, and þ and ð stay
@@ -49,7 +49,7 @@ pronoun drill hann/hún/það, the enclitic definite article blanked
 where it lives at the end of the noun, að + the infinitive with the
 particle kept in the dictionary form, and the past -ði with its
 closed ð, every Icelandic letter alive in real content) and Catalan
-(ten stages, 153 words, 438 exercises — the twelfth course and the
+(fifteen stages, 233 words, 658 exercises — the twelfth course and the
 punctuation question it was chosen for: the interpunct of col·legi
 and pel·lícula folds the way ł's stroke does, dotless collegi counts
 with col·legi as the hint while the hyphen fallback col-legi stays
@@ -59,8 +59,8 @@ gendered articles and the apostrophe elisions l'home l'aigua, the
 mandatory al/del contraction drills, the agradar flip, hi ha, the
 em/es/ens reflexives, the go-past vaig menjar drilled against the
 go-future vaig a menjar, homonym translations on temps col·legi,
-every Catalan letter alive in real content) and Dutch (ten stages,
-153 words, 438 exercises — the thirteenth course and the ligature
+every Catalan letter alive in real content) and Dutch (fifteen stages,
+233 words, 658 exercises — the thirteenth course and the ligature
 question it was chosen for: ĳ joins the ligature table and opens to
 the two letters it spells, so het IJsselmeer counts with het
 Ĳsselmeer as the hint while the schoolbook y of myn stays a miss for
@@ -88,6 +88,23 @@ Romanian, the Brazilian tem in Portuguese, ska in Swedish, the
 -ði with its closed ð in Icelandic, the al/del contractions with
 the go-past in Catalan, and the separable verbs with the ge-
 participle past against the gaan future in Dutch.
+Stages 11–15 (the intermediate wave) share one skeleton across the thirteen
+courses — work and school, health and the body, free time and hobbies, calls
+and messages, stories and experiences — while each course keeps its own
+signature again: the passé composé, avoir mal à, faire du/de la, the object
+pronouns and the imparfait in French; tener que, me duele, estar + gerundio
+and the pretérito in Spanish; the Perfekt with haben and with sein, gern and
+the imperative in German; dovere, mi fa male, stare + gerundio and the
+imperfetto in Italian; mieć, boli mnie, chciałbym and the past beyond the
+first person in Polish; trebuie să, mă doare, Sună-mă and the imperfect in
+Romanian; precisar, the me/te/lhe pronouns and the pretérito-against-future
+minimal pair in Portuguese; måste, ha ont i, the imperative and har +
+supinum in Swedish; mennem kell, fáj, Küldj nekem and the fog future in
+Hungarian; -mE lazım, Başım ağrıyor, Ara beni and the -ecek future in
+Turkish; vinna á, vera með, mig langar að, Hringdu í mig and hafa + supine
+in Icelandic; haver de, em fa mal, Truca'm and estar + gerundio in Catalan;
+and aan het + infinitive, hoofdpijn, graag, Bel me terug and the simple
+past against the ge- perfect in Dutch.
 
 ## Install & run
 
