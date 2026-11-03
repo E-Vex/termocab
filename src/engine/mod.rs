@@ -233,8 +233,13 @@ const ACCENTED: [(char, &str); 42] = [
 /// The ligatures open up only in the loose pass — "œuvre" and
 /// "oeuvre", "straße" and "strasse" are the same word, but the
 /// learner should see the ligature (or the German sharp s) spelled
-/// out.
-const LIGATURES: [(char, &str); 3] = [('œ', "oe"), ('æ', "ae"), ('ß', "ss")];
+/// out. Dutch's ĳ (D19) opens to the two letters it spells, the way
+/// œ opens to oe and æ to ae: modern Dutch types the two-letter ij
+/// everywhere, so a learner answering "IJsselmeer" for "Ĳsselmeer"
+/// counts, with the ligature form as the hint. The y of the old
+/// schoolbook shorthand ("myn" for "mĳn") is no spelling of the word
+/// and stays a miss.
+const LIGATURES: [(char, &str); 4] = [('œ', "oe"), ('æ', "ae"), ('ß', "ss"), ('ĳ', "ij")];
 
 /// Single letters that open to a plain ASCII letter in the loose
 /// pass only, exactly like the ligatures above: they have no Unicode
@@ -820,6 +825,58 @@ mod tests {
         assert_eq!(felic.grade("felic"), Grade::CorrectWithHint("feliç".into()));
         let raim = translation("raïm", &[]);
         assert_eq!(raim.grade("raim"), Grade::CorrectWithHint("raïm".into()));
+    }
+
+    #[test]
+    fn the_dutch_ligature_opens_to_its_two_letters() {
+        // The thirteenth-language wave (D19) answers the question the
+        // roadmap held open for Dutch: where does ĳ live, LIGATURES or
+        // OPEN_LETTERS? With the ligatures — it is one, the name says
+        // so, and its opening is the two-letter sequence it spells
+        // ("ij"), exactly the œ → oe and æ → ae shape; OPEN_LETTERS
+        // holds letters in their own right opening to a single letter
+        // (ł → l), which ĳ is not. Modern Dutch types the two-letter
+        // ij everywhere, so the two spellings meet in the loose pass:
+        // a correctly ligatured "ĳsselmeer" is a full match (the
+        // strict pass leaves it alone), the two-letter typing counts
+        // with the ligature form as the hint, and the capital Ĳ
+        // round-trips through to_lowercase with no D15-style
+        // asymmetry — no authoring rule needed.
+        let ijssel = translation("Ĳsselmeer", &[]);
+        assert_eq!(ijssel.grade("ĳsselmeer"), Grade::Correct);
+        assert_eq!(
+            ijssel.grade("ijsselmeer"),
+            Grade::CorrectWithHint("Ĳsselmeer".into())
+        );
+        // the capital ligature survives the default case mapping, so
+        // an all-caps answer grades strict with no hint at all
+        assert!(ijssel.is_correct("ĲSSELMEER"));
+        assert!(!ijssel.is_correct("ijsselmere"));
+        // in a running word, the ligature folds to the two letters it
+        // spells — the old-orthography spelling grades like any
+        // ligature word, and the y of the schoolbook shorthand is no
+        // spelling at all: the fold is exactly i+j, never y
+        let mijn = translation("mĳn", &[]);
+        assert_eq!(mijn.grade("mĳn"), Grade::Correct);
+        assert_eq!(mijn.grade("mijn"), Grade::CorrectWithHint("mĳn".into()));
+        assert_eq!(mijn.grade("myn"), Grade::Incorrect);
+        assert!(mijn.is_correct("MĲN"));
+        assert!(!mijn.is_correct("mjn"));
+        assert!(!mijn.is_correct("mijnn"));
+        // the two-letter spelling typed with the ligature folds back
+        // the same way, and the closed club ø þ ð ı gains nothing (D9,
+        // D15): no Dutch letter is a letter in its own right the way
+        // those are
+        let tijd = translation("tijd", &[]);
+        assert_eq!(tijd.grade("tĳd"), Grade::CorrectWithHint("tijd".into()));
+        assert_eq!(tijd.grade("tijd"), Grade::Correct);
+        // and the rest of the course rides the D9 table untouched: the
+        // é of één folds like any accent, so "een" counts with "één"
+        // as the hint — the one word where the accent is doing
+        // grammar, separating the number from the article
+        let een = translation("één", &[]);
+        assert_eq!(een.grade("een"), Grade::CorrectWithHint("één".into()));
+        assert!(een.is_correct("ÉÉN"));
     }
 
     #[test]
