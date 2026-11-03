@@ -4018,6 +4018,1971 @@
           "answer": "da"
         }
       ]
+    },
+    {
+      "id": 11,
+      "title": "Work and School",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "ofis",
+          "translation": "office",
+          "pos": "noun",
+          "example": "Sekizde ofise gidiyorum."
+        },
+        {
+          "word": "şirket",
+          "translation": "company",
+          "pos": "noun",
+          "example": "Büyük bir şirkette çalışıyorum."
+        },
+        {
+          "word": "patron",
+          "translation": "boss",
+          "pos": "noun",
+          "example": "Patron ofiste."
+        },
+        {
+          "word": "iş arkadaşı",
+          "translation": "colleague",
+          "accepted_translations": ["coworker"],
+          "pos": "noun",
+          "example": "İş arkadaşım parka yakın oturuyor."
+        },
+        {
+          "word": "toplantı",
+          "translation": "meeting",
+          "pos": "noun",
+          "example": "Toplantı dokuzda başlıyor."
+        },
+        {
+          "word": "maaş",
+          "translation": "salary",
+          "pos": "noun",
+          "example": "Maaşım iyi."
+        },
+        {
+          "word": "meslek",
+          "translation": "profession",
+          "accepted_translations": ["job"],
+          "pos": "noun",
+          "example": "Mesleğin ne?"
+        },
+        {
+          "word": "ara",
+          "translation": "break",
+          "accepted_translations": ["intermission"],
+          "pos": "noun",
+          "example": "On birde ara veriyorum."
+        },
+        {
+          "word": "sınıf",
+          "translation": "class",
+          "pos": "noun",
+          "example": "Sınıfta Türkçe konuşuyoruz."
+        },
+        {
+          "word": "ders",
+          "translation": "lesson",
+          "accepted_translations": ["subject", "class"],
+          "pos": "noun",
+          "example": "Bugünün dersi kolay."
+        },
+        {
+          "word": "ödev",
+          "translation": "homework",
+          "accepted_translations": ["assignment"],
+          "pos": "noun",
+          "example": "Akşam ödevimi yapıyorum."
+        },
+        {
+          "word": "sınav",
+          "translation": "exam",
+          "accepted_translations": ["test"],
+          "pos": "noun",
+          "example": "Türkçe sınavı yarın."
+        },
+        {
+          "word": "bilgisayar",
+          "translation": "computer",
+          "pos": "noun",
+          "example": "Bilgisayarım yeni."
+        },
+        {
+          "word": "meşgul",
+          "translation": "busy",
+          "pos": "adjective",
+          "example": "Babam hep meşgul."
+        },
+        {
+          "word": "randevu",
+          "translation": "appointment",
+          "pos": "noun",
+          "example": "Doktorda randevum var."
+        },
+        {
+          "word": "proje",
+          "translation": "project",
+          "pos": "noun",
+          "example": "Bu proje çok zor."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ofis",
+          "answer": "office"
+        },
+        {
+          "type": "translation",
+          "prompt": "şirket",
+          "answer": "company"
+        },
+        {
+          "type": "translation",
+          "prompt": "patron",
+          "answer": "boss"
+        },
+        {
+          "type": "translation",
+          "prompt": "iş arkadaşı",
+          "answer": "colleague",
+          "accepted_answers": ["coworker"]
+        },
+        {
+          "type": "translation",
+          "prompt": "toplantı",
+          "answer": "meeting"
+        },
+        {
+          "type": "translation",
+          "prompt": "maaş",
+          "answer": "salary"
+        },
+        {
+          "type": "translation",
+          "prompt": "meslek",
+          "answer": "profession",
+          "accepted_answers": ["job"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ara",
+          "answer": "break",
+          "accepted_answers": ["intermission"]
+        },
+        {
+          "type": "translation",
+          "prompt": "sınıf",
+          "answer": "class"
+        },
+        {
+          "type": "translation",
+          "prompt": "ders",
+          "answer": "lesson",
+          "accepted_answers": ["subject", "class"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ödev",
+          "answer": "homework",
+          "accepted_answers": ["assignment"]
+        },
+        {
+          "type": "translation",
+          "prompt": "sınav",
+          "answer": "exam",
+          "accepted_answers": ["test"]
+        },
+        {
+          "type": "translation",
+          "prompt": "bilgisayar",
+          "answer": "computer"
+        },
+        {
+          "type": "translation",
+          "prompt": "meşgul",
+          "answer": "busy"
+        },
+        {
+          "type": "translation",
+          "prompt": "randevu",
+          "answer": "appointment"
+        },
+        {
+          "type": "translation",
+          "prompt": "proje",
+          "answer": "project"
+        },
+        {
+          "type": "translation",
+          "prompt": "Sekizde ofise gidiyorum.",
+          "answer": "I go to the office at eight.",
+          "accepted_answers": ["I go to the office at eight o'clock"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Patronla toplantım var.",
+          "answer": "I have a meeting with the boss."
+        },
+        {
+          "type": "translation",
+          "prompt": "İş arkadaşım üç dil konuşuyor.",
+          "answer": "My colleague speaks three languages."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu hafta işimiz çok.",
+          "answer": "We have a lot of work this week."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ödev çok zor.",
+          "answer": "The homework is difficult.",
+          "accepted_answers": ["The homework is hard"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Patrona bir e-posta yazdım.",
+          "answer": "I wrote an e-mail to the boss.",
+          "accepted_answers": ["I wrote an email to the boss"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Sınav gelecek hafta.",
+          "answer": "The exam is next week."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bugün çok meşgulüm.",
+          "answer": "I'm very busy today.",
+          "accepted_answers": ["I am very busy today."]
+        },
+        {
+          "type": "translation",
+          "prompt": "My salary is good.",
+          "answer": "Maaşım iyi."
+        },
+        {
+          "type": "translation",
+          "prompt": "The class starts at nine.",
+          "answer": "Ders dokuzda başlıyor."
+        },
+        {
+          "type": "translation",
+          "prompt": "I want a break.",
+          "answer": "Ara istiyorum."
+        },
+        {
+          "type": "translation",
+          "prompt": "My computer is new.",
+          "answer": "Bilgisayarım yeni."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'office':",
+          "options": [
+            "ofis",
+            "şirket",
+            "patron",
+            "iş arkadaşı"
+          ],
+          "answer": "ofis"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'company':",
+          "options": [
+            "şirket",
+            "patron",
+            "iş arkadaşı",
+            "toplantı"
+          ],
+          "answer": "şirket"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'boss':",
+          "options": [
+            "patron",
+            "iş arkadaşı",
+            "toplantı",
+            "maaş"
+          ],
+          "answer": "patron"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'colleague':",
+          "options": [
+            "iş arkadaşı",
+            "toplantı",
+            "maaş",
+            "meslek"
+          ],
+          "answer": "iş arkadaşı"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'meeting':",
+          "options": [
+            "toplantı",
+            "maaş",
+            "meslek",
+            "ara"
+          ],
+          "answer": "toplantı"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'salary':",
+          "options": [
+            "maaş",
+            "meslek",
+            "ara",
+            "sınıf"
+          ],
+          "answer": "maaş"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'profession':",
+          "options": [
+            "meslek",
+            "ara",
+            "sınıf",
+            "ders"
+          ],
+          "answer": "meslek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'break':",
+          "options": [
+            "ara",
+            "sınıf",
+            "ders",
+            "ödev"
+          ],
+          "answer": "ara"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bugün çalış___ lazım.",
+          "answer": "mam"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bilgisayar alm___ lazım.",
+          "answer": "am"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Toplantı saat dokuz___.",
+          "answer": "da"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ çok meşgulüm.",
+          "answer": "Bugün"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Doktorda ___ var.",
+          "answer": "randevu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ödev___ şimdi yapıyorum.",
+          "answer": "i"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sınav ___ çok çalışıyorum.",
+          "answer": "için"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bu ___ çok zor.",
+          "answer": "proje"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Health and the Body",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "baş",
+          "translation": "head",
+          "pos": "noun",
+          "example": "Başım ağrıyor."
+        },
+        {
+          "word": "karın",
+          "translation": "stomach",
+          "accepted_translations": ["belly"],
+          "pos": "noun",
+          "example": "Çok yedim, karnım ağrıyor."
+        },
+        {
+          "word": "sırt",
+          "translation": "back",
+          "pos": "noun",
+          "example": "Annamın sırtı ağrıyor."
+        },
+        {
+          "word": "diş",
+          "translation": "tooth",
+          "accepted_translations": ["teeth"],
+          "pos": "noun",
+          "example": "Dişim ağrıyor."
+        },
+        {
+          "word": "vücut",
+          "translation": "body",
+          "pos": "noun",
+          "example": "Vücudum yorgun."
+        },
+        {
+          "word": "hasta",
+          "translation": "sick",
+          "accepted_translations": ["ill"],
+          "pos": "adjective",
+          "example": "Bugün hastayım, doktora gidiyorum."
+        },
+        {
+          "word": "ateş",
+          "translation": "fever",
+          "accepted_translations": ["fire"],
+          "pos": "noun",
+          "example": "Ateşi var."
+        },
+        {
+          "word": "grip",
+          "translation": "flu",
+          "pos": "noun",
+          "example": "Gripi var, uyuyor."
+        },
+        {
+          "word": "nezle",
+          "translation": "cold",
+          "accepted_translations": ["head cold"],
+          "pos": "noun",
+          "example": "Kışın nezlem oluyorum."
+        },
+        {
+          "word": "ilaç",
+          "translation": "medicine",
+          "accepted_translations": ["medication"],
+          "pos": "noun",
+          "example": "İlacımı sabah içiyorum."
+        },
+        {
+          "word": "reçete",
+          "translation": "prescription",
+          "accepted_translations": ["recipe"],
+          "pos": "noun",
+          "example": "Doktor bir reçete yazdı."
+        },
+        {
+          "word": "eczane",
+          "translation": "pharmacy",
+          "pos": "noun",
+          "example": "Eczane hastaneye yakın."
+        },
+        {
+          "word": "doktor",
+          "translation": "doctor",
+          "accepted_translations": ["physician"],
+          "pos": "noun",
+          "example": "Bugün doktora gidiyorum."
+        },
+        {
+          "word": "ağrımak",
+          "translation": "to hurt",
+          "pos": "verb",
+          "example": "Başın ağrıyor mu?"
+        },
+        {
+          "word": "daha",
+          "translation": "more",
+          "pos": "adverb",
+          "example": "Bugün daha iyiyim."
+        },
+        {
+          "word": "dinlenmek",
+          "translation": "to rest",
+          "pos": "verb",
+          "example": "Evde dinlenmek istiyorum."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "baş",
+          "answer": "head"
+        },
+        {
+          "type": "translation",
+          "prompt": "karın",
+          "answer": "stomach",
+          "accepted_answers": ["belly"]
+        },
+        {
+          "type": "translation",
+          "prompt": "sırt",
+          "answer": "back"
+        },
+        {
+          "type": "translation",
+          "prompt": "diş",
+          "answer": "tooth",
+          "accepted_answers": ["teeth"]
+        },
+        {
+          "type": "translation",
+          "prompt": "vücut",
+          "answer": "body"
+        },
+        {
+          "type": "translation",
+          "prompt": "hasta",
+          "answer": "sick",
+          "accepted_answers": ["ill"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ateş",
+          "answer": "fever",
+          "accepted_answers": ["fire"]
+        },
+        {
+          "type": "translation",
+          "prompt": "grip",
+          "answer": "flu"
+        },
+        {
+          "type": "translation",
+          "prompt": "nezle",
+          "answer": "cold",
+          "accepted_answers": ["head cold"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ilaç",
+          "answer": "medicine",
+          "accepted_answers": ["medication"]
+        },
+        {
+          "type": "translation",
+          "prompt": "reçete",
+          "answer": "prescription",
+          "accepted_answers": ["recipe"]
+        },
+        {
+          "type": "translation",
+          "prompt": "eczane",
+          "answer": "pharmacy"
+        },
+        {
+          "type": "translation",
+          "prompt": "doktor",
+          "answer": "doctor",
+          "accepted_answers": ["physician"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ağrımak",
+          "answer": "to hurt"
+        },
+        {
+          "type": "translation",
+          "prompt": "daha",
+          "answer": "more"
+        },
+        {
+          "type": "translation",
+          "prompt": "dinlenmek",
+          "answer": "to rest"
+        },
+        {
+          "type": "translation",
+          "prompt": "Başım ağrıyor.",
+          "answer": "My head hurts.",
+          "accepted_answers": ["I have a headache", "I have a pain in my head"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Karnı ağrıyor.",
+          "answer": "His stomach hurts.",
+          "accepted_answers": ["He has a stomach ache", "He has a stomachache"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hastayım, yatakta kalıyorum.",
+          "answer": "I'm sick, I'm staying in bed.",
+          "accepted_answers": ["I am sick, I'm staying in bed."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ateşi var.",
+          "answer": "She has a fever."
+        },
+        {
+          "type": "translation",
+          "prompt": "Doktora gidiyorum.",
+          "answer": "I'm going to the doctor.",
+          "accepted_answers": ["I am going to the doctor."]
+        },
+        {
+          "type": "translation",
+          "prompt": "İlacını sabah içiyor musun?",
+          "answer": "Do you take your medicine in the morning?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Eczane hastaneye yakın.",
+          "answer": "The pharmacy is near the hospital."
+        },
+        {
+          "type": "translation",
+          "prompt": "Gripi var.",
+          "answer": "She has the flu."
+        },
+        {
+          "type": "translation",
+          "prompt": "My back hurts.",
+          "answer": "Sırtım ağrıyor."
+        },
+        {
+          "type": "translation",
+          "prompt": "I have a toothache.",
+          "answer": "Dişim ağrıyor."
+        },
+        {
+          "type": "translation",
+          "prompt": "I am sick today.",
+          "answer": "Bugün hastayım."
+        },
+        {
+          "type": "translation",
+          "prompt": "I am better, thanks.",
+          "answer": "Bugün daha iyiyim, teşekkürler."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'head':",
+          "options": [
+            "baş",
+            "karın",
+            "sırt",
+            "diş"
+          ],
+          "answer": "baş"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'stomach':",
+          "options": [
+            "karın",
+            "sırt",
+            "diş",
+            "vücut"
+          ],
+          "answer": "karın"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'back':",
+          "options": [
+            "sırt",
+            "diş",
+            "vücut",
+            "hasta"
+          ],
+          "answer": "sırt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tooth':",
+          "options": [
+            "diş",
+            "vücut",
+            "hasta",
+            "ateş"
+          ],
+          "answer": "diş"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'body':",
+          "options": [
+            "vücut",
+            "hasta",
+            "ateş",
+            "grip"
+          ],
+          "answer": "vücut"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sick':",
+          "options": [
+            "hasta",
+            "ateş",
+            "grip",
+            "nezle"
+          ],
+          "answer": "hasta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fever':",
+          "options": [
+            "ateş",
+            "grip",
+            "nezle",
+            "ilaç"
+          ],
+          "answer": "ateş"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'flu':",
+          "options": [
+            "grip",
+            "nezle",
+            "ilaç",
+            "reçete"
+          ],
+          "answer": "grip"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Baş___ ağrıyor.",
+          "answer": "ım"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Diş___ ağrıyor.",
+          "answer": "im"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Başım çok ___.",
+          "answer": "ağrıyor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bugün hast___, işe gitmiyorum.",
+          "answer": "ayım"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Doktor bir ___ yazdı.",
+          "answer": "reçete"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "İlaç___ eczaneden alıyorum.",
+          "answer": "ı"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ateş___ var.",
+          "answer": "im"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bugün ___ iyiyim.",
+          "answer": "daha"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Free Time and Hobbies",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "hobi",
+          "translation": "hobby",
+          "accepted_translations": ["pastime"],
+          "pos": "noun",
+          "example": "Hobilerim neler?"
+        },
+        {
+          "word": "yüzme",
+          "translation": "swimming",
+          "pos": "noun",
+          "example": "Yüzme benim favori sporum."
+        },
+        {
+          "word": "futbol",
+          "translation": "soccer",
+          "accepted_translations": ["football"],
+          "pos": "noun",
+          "example": "Ağabeyim futbol oynuyor."
+        },
+        {
+          "word": "tenis",
+          "translation": "tennis",
+          "pos": "noun",
+          "example": "Hafta sonu tenis oynuyorum."
+        },
+        {
+          "word": "basketbol",
+          "translation": "basketball",
+          "pos": "noun",
+          "example": "Çocuklar basketbol oynuyor."
+        },
+        {
+          "word": "bisiklet",
+          "translation": "bicycle",
+          "accepted_translations": ["bike"],
+          "pos": "noun",
+          "example": "İşe bisikletle gidiyorum."
+        },
+        {
+          "word": "gitar",
+          "translation": "guitar",
+          "pos": "noun",
+          "example": "Ablam gitar çalıyor."
+        },
+        {
+          "word": "piyano",
+          "translation": "piano",
+          "pos": "noun",
+          "example": "Piyano salonda."
+        },
+        {
+          "word": "şarkı",
+          "translation": "song",
+          "pos": "noun",
+          "example": "Şarkı çok güzel."
+        },
+        {
+          "word": "şarkı söylemek",
+          "translation": "to sing",
+          "pos": "phrase",
+          "example": "Çocuklar okulda şarkı söylüyor."
+        },
+        {
+          "word": "dans etmek",
+          "translation": "to dance",
+          "pos": "phrase",
+          "example": "O dans etmek istiyor."
+        },
+        {
+          "word": "oynamak",
+          "translation": "to play",
+          "pos": "verb",
+          "example": "Parkta oynamak istiyorum."
+        },
+        {
+          "word": "hafta sonu",
+          "translation": "weekend",
+          "pos": "noun",
+          "example": "İyi hafta sonları!"
+        },
+        {
+          "word": "yürüyüş",
+          "translation": "walk",
+          "accepted_translations": ["hike"],
+          "pos": "noun",
+          "example": "Yazın doğada yürüyüş yapıyoruz."
+        },
+        {
+          "word": "koşmak",
+          "translation": "to run",
+          "accepted_translations": ["to jog"],
+          "pos": "verb",
+          "example": "Sabahları parkta koşuyorum."
+        },
+        {
+          "word": "resim",
+          "translation": "picture",
+          "accepted_translations": ["drawing", "painting"],
+          "pos": "noun",
+          "example": "Resim çok güzel."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "hobi",
+          "answer": "hobby",
+          "accepted_answers": ["pastime"]
+        },
+        {
+          "type": "translation",
+          "prompt": "yüzme",
+          "answer": "swimming"
+        },
+        {
+          "type": "translation",
+          "prompt": "futbol",
+          "answer": "soccer",
+          "accepted_answers": ["football"]
+        },
+        {
+          "type": "translation",
+          "prompt": "tenis",
+          "answer": "tennis"
+        },
+        {
+          "type": "translation",
+          "prompt": "basketbol",
+          "answer": "basketball"
+        },
+        {
+          "type": "translation",
+          "prompt": "bisiklet",
+          "answer": "bicycle",
+          "accepted_answers": ["bike"]
+        },
+        {
+          "type": "translation",
+          "prompt": "gitar",
+          "answer": "guitar"
+        },
+        {
+          "type": "translation",
+          "prompt": "piyano",
+          "answer": "piano"
+        },
+        {
+          "type": "translation",
+          "prompt": "şarkı",
+          "answer": "song"
+        },
+        {
+          "type": "translation",
+          "prompt": "şarkı söylemek",
+          "answer": "to sing"
+        },
+        {
+          "type": "translation",
+          "prompt": "dans etmek",
+          "answer": "to dance"
+        },
+        {
+          "type": "translation",
+          "prompt": "oynamak",
+          "answer": "to play"
+        },
+        {
+          "type": "translation",
+          "prompt": "hafta sonu",
+          "answer": "weekend"
+        },
+        {
+          "type": "translation",
+          "prompt": "yürüyüş",
+          "answer": "walk",
+          "accepted_answers": ["hike"]
+        },
+        {
+          "type": "translation",
+          "prompt": "koşmak",
+          "answer": "to run",
+          "accepted_answers": ["to jog"]
+        },
+        {
+          "type": "translation",
+          "prompt": "resim",
+          "answer": "picture",
+          "accepted_answers": ["drawing", "painting"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hafta sonu bisiklete biniyorum.",
+          "answer": "I ride my bike on weekends.",
+          "accepted_answers": ["I ride my bike at weekends."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Pazartesi günleri yüzüyor.",
+          "answer": "She swims on Mondays.",
+          "accepted_answers": ["She does swimming on Mondays"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ağabeyim futbol oynuyor.",
+          "answer": "My brother plays soccer.",
+          "accepted_answers": ["My brother plays football"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu şarkıyı seviyorum.",
+          "answer": "I like this song."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ablam piyano çalıyor.",
+          "answer": "My sister plays the piano."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hobilerim neler?",
+          "answer": "What are your hobbies?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Doğada yürüyüş yapıyoruz.",
+          "answer": "We go hiking in nature.",
+          "accepted_answers": ["We hike in nature"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hafta sonu kitap okumayı tercih ediyorum.",
+          "answer": "On weekends, I prefer to read.",
+          "accepted_answers": ["At the weekend, I prefer to read", "On the weekend, I prefer to read"]
+        },
+        {
+          "type": "translation",
+          "prompt": "I play tennis.",
+          "answer": "Tenis oynuyorum."
+        },
+        {
+          "type": "translation",
+          "prompt": "She sings a song.",
+          "answer": "Bir şarkı söylüyor."
+        },
+        {
+          "type": "translation",
+          "prompt": "He plays the guitar.",
+          "answer": "Gitar çalıyor."
+        },
+        {
+          "type": "translation",
+          "prompt": "Reading is my favorite hobby.",
+          "answer": "Kitap okumak benim favori hobim."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hobby':",
+          "options": [
+            "hobi",
+            "yüzme",
+            "futbol",
+            "tenis"
+          ],
+          "answer": "hobi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'swimming':",
+          "options": [
+            "yüzme",
+            "futbol",
+            "tenis",
+            "basketbol"
+          ],
+          "answer": "yüzme"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'soccer':",
+          "options": [
+            "futbol",
+            "tenis",
+            "basketbol",
+            "bisiklet"
+          ],
+          "answer": "futbol"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tennis':",
+          "options": [
+            "tenis",
+            "basketbol",
+            "bisiklet",
+            "gitar"
+          ],
+          "answer": "tenis"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'basketball':",
+          "options": [
+            "basketbol",
+            "bisiklet",
+            "gitar",
+            "piyano"
+          ],
+          "answer": "basketbol"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bicycle':",
+          "options": [
+            "bisiklet",
+            "gitar",
+            "piyano",
+            "şarkı"
+          ],
+          "answer": "bisiklet"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'guitar':",
+          "options": [
+            "gitar",
+            "piyano",
+            "şarkı",
+            "şarkı söylemek"
+          ],
+          "answer": "gitar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'piano':",
+          "options": [
+            "piyano",
+            "şarkı",
+            "şarkı söylemek",
+            "dans etmek"
+          ],
+          "answer": "piyano"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Yüz___ seviyorum.",
+          "answer": "meyi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Futbol oyna___ seviyorum.",
+          "answer": "mayı"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kitap okuma___ seviyorum.",
+          "answer": "yı"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ parka gidiyoruz.",
+          "answer": "Hafta sonu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gitar ___ öğreniyorum.",
+          "answer": "çalmayı"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Piyano___ dinliyorum.",
+          "answer": "yu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Her sabah parkta koş___.",
+          "answer": "uyorum"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bisikletim ___.",
+          "answer": "yok"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Calls and Messages",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "telefon",
+          "translation": "phone",
+          "accepted_translations": ["telephone"],
+          "pos": "noun",
+          "example": "Telefonum yeni."
+        },
+        {
+          "word": "numara",
+          "translation": "number",
+          "pos": "noun",
+          "example": "Telefon numaran ne?"
+        },
+        {
+          "word": "aramak",
+          "translation": "to call",
+          "accepted_translations": ["to search"],
+          "pos": "verb",
+          "example": "Annemi aramak istiyorum."
+        },
+        {
+          "word": "cevap",
+          "translation": "answer",
+          "accepted_translations": ["reply"],
+          "pos": "noun",
+          "example": "Cevabı hayır."
+        },
+        {
+          "word": "mesaj",
+          "translation": "message",
+          "accepted_translations": ["text message"],
+          "pos": "noun",
+          "example": "Sana mesaj atıyorum."
+        },
+        {
+          "word": "göndermek",
+          "translation": "to send",
+          "pos": "verb",
+          "example": "Kardeşine mesaj gönderiyor."
+        },
+        {
+          "word": "mesaj almak",
+          "translation": "to receive",
+          "accepted_translations": ["to get (messages)"],
+          "pos": "phrase",
+          "example": "Her gün mesaj alıyorum."
+        },
+        {
+          "word": "soru",
+          "translation": "question",
+          "pos": "noun",
+          "example": "Bir sorum var."
+        },
+        {
+          "word": "e-posta",
+          "translation": "e-mail",
+          "accepted_translations": ["email"],
+          "pos": "noun",
+          "example": "E-postamı aldın mı?"
+        },
+        {
+          "word": "fotoğraf",
+          "translation": "photo",
+          "accepted_translations": ["picture"],
+          "pos": "noun",
+          "example": "Fotoğraf çok güzel."
+        },
+        {
+          "word": "video",
+          "translation": "video",
+          "pos": "noun",
+          "example": "Video izliyorum."
+        },
+        {
+          "word": "internet",
+          "translation": "internet",
+          "pos": "noun",
+          "example": "İnternettedeyim."
+        },
+        {
+          "word": "haberler",
+          "translation": "news",
+          "pos": "noun",
+          "example": "Akşam haberleri izliyorum."
+        },
+        {
+          "word": "hat",
+          "translation": "line",
+          "pos": "noun",
+          "example": "Hat meşgul."
+        },
+        {
+          "word": "ses",
+          "translation": "voice",
+          "accepted_translations": ["sound"],
+          "pos": "noun",
+          "example": "Sesin çok güzel."
+        },
+        {
+          "word": "şarj",
+          "translation": "charger",
+          "accepted_translations": ["charge"],
+          "pos": "noun",
+          "example": "Telefonumun şarjı bitti."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "telefon",
+          "answer": "phone",
+          "accepted_answers": ["telephone"]
+        },
+        {
+          "type": "translation",
+          "prompt": "numara",
+          "answer": "number"
+        },
+        {
+          "type": "translation",
+          "prompt": "aramak",
+          "answer": "to call",
+          "accepted_answers": ["to search"]
+        },
+        {
+          "type": "translation",
+          "prompt": "cevap",
+          "answer": "answer",
+          "accepted_answers": ["reply"]
+        },
+        {
+          "type": "translation",
+          "prompt": "mesaj",
+          "answer": "message",
+          "accepted_answers": ["text message"]
+        },
+        {
+          "type": "translation",
+          "prompt": "göndermek",
+          "answer": "to send"
+        },
+        {
+          "type": "translation",
+          "prompt": "mesaj almak",
+          "answer": "to receive",
+          "accepted_answers": ["to get (messages)"]
+        },
+        {
+          "type": "translation",
+          "prompt": "soru",
+          "answer": "question"
+        },
+        {
+          "type": "translation",
+          "prompt": "e-posta",
+          "answer": "e-mail",
+          "accepted_answers": ["email"]
+        },
+        {
+          "type": "translation",
+          "prompt": "fotoğraf",
+          "answer": "photo",
+          "accepted_answers": ["picture"]
+        },
+        {
+          "type": "translation",
+          "prompt": "video",
+          "answer": "video"
+        },
+        {
+          "type": "translation",
+          "prompt": "internet",
+          "answer": "internet"
+        },
+        {
+          "type": "translation",
+          "prompt": "haberler",
+          "answer": "news"
+        },
+        {
+          "type": "translation",
+          "prompt": "hat",
+          "answer": "line"
+        },
+        {
+          "type": "translation",
+          "prompt": "ses",
+          "answer": "voice",
+          "accepted_answers": ["sound"]
+        },
+        {
+          "type": "translation",
+          "prompt": "şarj",
+          "answer": "charger",
+          "accepted_answers": ["charge"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu akşam seni arıyorum.",
+          "answer": "I'll call you tonight.",
+          "accepted_answers": ["I am calling you tonight", "I call you tonight"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bana cevap verir misin?",
+          "answer": "Can you answer me?",
+          "accepted_answers": ["Can you reply to me?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Annesine mesaj gönderiyor.",
+          "answer": "He sends his mother a message.",
+          "accepted_answers": ["He sends a message to his mother"]
+        },
+        {
+          "type": "translation",
+          "prompt": "E-postanı almadım.",
+          "answer": "I didn't get your e-mail.",
+          "accepted_answers": ["I did not get your e-mail", "I didn't receive your e-mail", "I did not receive your e-mail"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Telefon numaran ne?",
+          "answer": "What is your phone number?",
+          "accepted_answers": ["What's your phone number?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hat meşgul.",
+          "answer": "The line is busy."
+        },
+        {
+          "type": "translation",
+          "prompt": "İnternette fotoğraflara bakıyorum.",
+          "answer": "I look at photos on the internet.",
+          "accepted_answers": ["I look at photos on the Internet", "I look at pictures on the internet"]
+        },
+        {
+          "type": "translation",
+          "prompt": "O hep internette.",
+          "answer": "She is always online."
+        },
+        {
+          "type": "translation",
+          "prompt": "I send you a photo.",
+          "answer": "Sana bir fotoğraf gönderiyorum."
+        },
+        {
+          "type": "translation",
+          "prompt": "Can you call me tomorrow?",
+          "answer": "Yarın beni arar mısın?"
+        },
+        {
+          "type": "translation",
+          "prompt": "My phone number is new.",
+          "answer": "Telefon numaram yeni."
+        },
+        {
+          "type": "translation",
+          "prompt": "Will you play with me?",
+          "answer": "Benimle oynar mısın?"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'phone':",
+          "options": [
+            "telefon",
+            "numara",
+            "aramak",
+            "cevap"
+          ],
+          "answer": "telefon"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'number':",
+          "options": [
+            "numara",
+            "aramak",
+            "cevap",
+            "mesaj"
+          ],
+          "answer": "numara"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to call':",
+          "options": [
+            "aramak",
+            "cevap",
+            "mesaj",
+            "göndermek"
+          ],
+          "answer": "aramak"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'answer':",
+          "options": [
+            "cevap",
+            "mesaj",
+            "göndermek",
+            "mesaj almak"
+          ],
+          "answer": "cevap"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'message':",
+          "options": [
+            "mesaj",
+            "göndermek",
+            "mesaj almak",
+            "soru"
+          ],
+          "answer": "mesaj"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to send':",
+          "options": [
+            "göndermek",
+            "mesaj almak",
+            "soru",
+            "e-posta"
+          ],
+          "answer": "göndermek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'to receive':",
+          "options": [
+            "mesaj almak",
+            "soru",
+            "e-posta",
+            "fotoğraf"
+          ],
+          "answer": "mesaj almak"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'question':",
+          "options": [
+            "soru",
+            "e-posta",
+            "fotoğraf",
+            "video"
+          ],
+          "answer": "soru"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Beni ___ !",
+          "answer": "Ara"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bana mesaj ___ !",
+          "answer": "gönder"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Yarın beni ___ !",
+          "answer": "ara"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Telefon___ masada.",
+          "answer": "um"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Numara___ değişti.",
+          "answer": "m"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cevab___ bilmiyorum.",
+          "answer": "ı"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "İnternet___ çok video var.",
+          "answer": "te"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bu fotoğraf çok ___.",
+          "answer": "güzel"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Stories and Experiences",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "hikâye",
+          "translation": "story",
+          "accepted_translations": ["tale"],
+          "pos": "noun",
+          "example": "Babaannem güzel hikâyeler anlatıyor."
+        },
+        {
+          "word": "macera",
+          "translation": "adventure",
+          "pos": "noun",
+          "example": "Kitap büyük bir macera anlatıyor."
+        },
+        {
+          "word": "anı",
+          "translation": "memory",
+          "accepted_translations": ["souvenir"],
+          "pos": "noun",
+          "example": "Bu güzel bir anı."
+        },
+        {
+          "word": "çocukluk",
+          "translation": "childhood",
+          "pos": "noun",
+          "example": "Çocukluğundan konuşuyor."
+        },
+        {
+          "word": "tatil",
+          "translation": "vacation",
+          "accepted_translations": ["holiday"],
+          "pos": "noun",
+          "example": "Tatil temmuzda başlıyor."
+        },
+        {
+          "word": "seyahat",
+          "translation": "trip",
+          "accepted_translations": ["travel", "journey"],
+          "pos": "noun",
+          "example": "Çok güzel bir seyahatti."
+        },
+        {
+          "word": "deniz",
+          "translation": "sea",
+          "pos": "noun",
+          "example": "Yazın denize gidiyoruz."
+        },
+        {
+          "word": "plaj",
+          "translation": "beach",
+          "pos": "noun",
+          "example": "Çocuklar plajda oynuyor."
+        },
+        {
+          "word": "dağ",
+          "translation": "mountain",
+          "pos": "noun",
+          "example": "Dağ kışın güzel."
+        },
+        {
+          "word": "hediye",
+          "translation": "gift",
+          "accepted_translations": ["present"],
+          "pos": "noun",
+          "example": "Hediye masada."
+        },
+        {
+          "word": "kez",
+          "translation": "time",
+          "accepted_translations": ["occasion"],
+          "pos": "noun",
+          "example": "Haftada bir arkadaşıma gidiyorum."
+        },
+        {
+          "word": "asla",
+          "translation": "never",
+          "pos": "adverb",
+          "example": "Asla çay içmiyor."
+        },
+        {
+          "word": "doğru",
+          "translation": "true",
+          "accepted_translations": ["correct"],
+          "pos": "adjective",
+          "example": "Bu doğru mu?"
+        },
+        {
+          "word": "anlatmak",
+          "translation": "to tell",
+          "pos": "verb",
+          "example": "Annesine bir hikâye anlatıyor."
+        },
+        {
+          "word": "düşünmek",
+          "translation": "to think",
+          "pos": "verb",
+          "example": "Ailemi düşünüyorum."
+        },
+        {
+          "word": "mutlu",
+          "translation": "happy",
+          "accepted_translations": ["glad"],
+          "pos": "adjective",
+          "example": "Onlar çok mutlu."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "hikâye",
+          "answer": "story",
+          "accepted_answers": ["tale"]
+        },
+        {
+          "type": "translation",
+          "prompt": "macera",
+          "answer": "adventure"
+        },
+        {
+          "type": "translation",
+          "prompt": "anı",
+          "answer": "memory",
+          "accepted_answers": ["souvenir"]
+        },
+        {
+          "type": "translation",
+          "prompt": "çocukluk",
+          "answer": "childhood"
+        },
+        {
+          "type": "translation",
+          "prompt": "tatil",
+          "answer": "vacation",
+          "accepted_answers": ["holiday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "seyahat",
+          "answer": "trip",
+          "accepted_answers": ["travel", "journey"]
+        },
+        {
+          "type": "translation",
+          "prompt": "deniz",
+          "answer": "sea"
+        },
+        {
+          "type": "translation",
+          "prompt": "plaj",
+          "answer": "beach"
+        },
+        {
+          "type": "translation",
+          "prompt": "dağ",
+          "answer": "mountain"
+        },
+        {
+          "type": "translation",
+          "prompt": "hediye",
+          "answer": "gift",
+          "accepted_answers": ["present"]
+        },
+        {
+          "type": "translation",
+          "prompt": "kez",
+          "answer": "time",
+          "accepted_answers": ["occasion"]
+        },
+        {
+          "type": "translation",
+          "prompt": "asla",
+          "answer": "never"
+        },
+        {
+          "type": "translation",
+          "prompt": "doğru",
+          "answer": "true",
+          "accepted_answers": ["correct"]
+        },
+        {
+          "type": "translation",
+          "prompt": "anlatmak",
+          "answer": "to tell"
+        },
+        {
+          "type": "translation",
+          "prompt": "düşünmek",
+          "answer": "to think"
+        },
+        {
+          "type": "translation",
+          "prompt": "mutlu",
+          "answer": "happy",
+          "accepted_answers": ["glad"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Küçükken Bursa'da yaşıyordum.",
+          "answer": "When I was little, I lived in Bursa.",
+          "accepted_answers": ["When I was small, I lived in Bursa", "When I was a child, I lived in Bursa"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Her pazar futbol oynuyorduk.",
+          "answer": "We played soccer every Sunday.",
+          "accepted_answers": ["We used to play soccer every Sunday", "We played football every Sunday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Babaannem bize hikâyeler anlattı.",
+          "answer": "My grandmother told us stories.",
+          "accepted_answers": ["My grandmother told stories to us"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Geçen yaz denize gittik.",
+          "answer": "Last summer, we went to the sea.",
+          "accepted_answers": ["Last summer we went to the sea"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Doğum günümde kar yağıyordu.",
+          "answer": "It was snowing on my birthday.",
+          "accepted_answers": ["It snowed on my birthday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ne güzel bir macera!",
+          "answer": "What a beautiful adventure!",
+          "accepted_answers": ["What a great adventure"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu benim ilk Türkiye seyahatim.",
+          "answer": "It was my first trip to Turkey."
+        },
+        {
+          "type": "translation",
+          "prompt": "Babaannemi çok düşünüyordum.",
+          "answer": "I often thought about my grandmother.",
+          "accepted_answers": ["I used to think a lot about my grandmother"]
+        },
+        {
+          "type": "translation",
+          "prompt": "We were happy.",
+          "answer": "Mutluyduk."
+        },
+        {
+          "type": "translation",
+          "prompt": "It was a beautiful memory.",
+          "answer": "Güzel bir anıydı."
+        },
+        {
+          "type": "translation",
+          "prompt": "I never drink coffee.",
+          "answer": "Asla kahve içmem."
+        },
+        {
+          "type": "translation",
+          "prompt": "My grandfather told a story.",
+          "answer": "Dedem bir hikâye anlattı."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'story':",
+          "options": [
+            "hikâye",
+            "macera",
+            "anı",
+            "çocukluk"
+          ],
+          "answer": "hikâye"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'adventure':",
+          "options": [
+            "macera",
+            "anı",
+            "çocukluk",
+            "tatil"
+          ],
+          "answer": "macera"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'memory':",
+          "options": [
+            "anı",
+            "çocukluk",
+            "tatil",
+            "seyahat"
+          ],
+          "answer": "anı"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'childhood':",
+          "options": [
+            "çocukluk",
+            "tatil",
+            "seyahat",
+            "deniz"
+          ],
+          "answer": "çocukluk"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'vacation':",
+          "options": [
+            "tatil",
+            "seyahat",
+            "deniz",
+            "plaj"
+          ],
+          "answer": "tatil"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'trip':",
+          "options": [
+            "seyahat",
+            "deniz",
+            "plaj",
+            "dağ"
+          ],
+          "answer": "seyahat"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sea':",
+          "options": [
+            "deniz",
+            "plaj",
+            "dağ",
+            "hediye"
+          ],
+          "answer": "deniz"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'beach':",
+          "options": [
+            "plaj",
+            "dağ",
+            "hediye",
+            "kez"
+          ],
+          "answer": "plaj"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Yarın çalış___.",
+          "answer": "acağım"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hafta sonu denize gid___.",
+          "answer": "eceğim"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dün çok ___.",
+          "answer": "çalıştım"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Geçen yaz denize gid___.",
+          "answer": "tik"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Babaannem her akşam ___ anlatıyor.",
+          "answer": "hikâye"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Çocukken her gün ___.",
+          "answer": "oynadım"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bu hediye___ çok sevdim.",
+          "answer": "i"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tatilde çok ___ zaman geçirdik.",
+          "answer": "güzel"
+        }
+      ]
     }
   ]
 }
