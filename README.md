@@ -7,7 +7,7 @@ reviews, streaks — fully offline, fully local, no account, no network.
 Plain text everywhere: content is JSON, your progress is a file you can
 `cat`. UX modeled on git — direct subcommands, no menus.
 
-Eleven courses ship today: French (ten stages, 153 words, 397
+Twelve courses ship today: French (ten stages, 153 words, 397
 exercises), Spanish (ten stages, 153 words, 417 exercises), German
 (ten stages, 153 words, 436 exercises — nouns with their articles,
 modal-verb drills, umlauts and the sharp s), Italian (ten stages,
@@ -48,10 +48,21 @@ closed the way ø and the Turkish ı do — bare nouns, the three-gender
 pronoun drill hann/hún/það, the enclitic definite article blanked
 where it lives at the end of the noun, að + the infinitive with the
 particle kept in the dictionary form, and the past -ði with its
-closed ð, every Icelandic letter alive in real content) — same
+closed ð, every Icelandic letter alive in real content) and Catalan
+(ten stages, 153 words, 438 exercises — the twelfth course and the
+punctuation question it was chosen for: the interpunct of col·legi
+and pel·lícula folds the way ł's stroke does, dotless collegi counts
+with col·legi as the hint while the hyphen fallback col-legi stays
+a miss, and every accent à è é í ï ó ò ú ç was already on file from
+D9 — standard Catalan as spoken in Catalonia, nouns with their
+gendered articles and the apostrophe elisions l'home l'aigua, the
+mandatory al/del contraction drills, the agradar flip, hi ha, the
+em/es/ens reflexives, the go-past vaig menjar drilled against the
+go-future vaig a menjar, homonym translations on temps col·legi,
+every Catalan letter alive in real content) — same
 engine, same rules,
 same forgiving grading for all of them. Stages 6–10 (the elementary
-wave) share one skeleton across the eleven courses — food, home,
+wave) share one skeleton across the twelve courses — food, home,
 routine and weather, shopping and travel, yesterday and tomorrow —
 while each course keeps its own signature drills: the partitive in
 French, hay in Spanish, the future bracket werden … lesen in German,
@@ -59,14 +70,15 @@ the passato prossimo in Italian, the w/na locative split and the
 gendered past -łem/-łam in Polish, the enclitic article again in
 Romanian, the Brazilian tem in Portuguese, ska in Swedish, the
 -ban/-ben harmony in Hungarian, var/yok plus the four-way
--iyor and -dı harmonies in Turkish, and the í/á split and the past
--ði with its closed ð in Icelandic.
+-iyor and -dı harmonies in Turkish, the í/á split and the past
+-ði with its closed ð in Icelandic, and the al/del contractions with
+the go-past in Catalan.
 
 ## Install & run
 
 ```
 cargo install --path .     # or: cargo install --git https://github.com/E-Vex/termocab
-termocab start french      # the eleven shipped courses are built into the binary
+termocab start french      # the twelve shipped courses are built into the binary
 termocab list-langs        # every language available on this machine
 ```
 
@@ -82,7 +94,7 @@ cargo build --release && ./target/release/termocab start french
                                                         # works from any directory
 ```
 
-The eleven shipped courses are compiled into the binary, so a fresh
+The twelve shipped courses are compiled into the binary, so a fresh
 install works with zero setup, from any directory. Content is looked
 up in this order (first hit wins):
 
@@ -193,7 +205,14 @@ the ligature fold the table shipped with (`hae` counts with `hæ`
 as the hint), and þ and ð stay closed exactly as D9 ruled on day
 one, the ı precedent reaffirmed: `godur` is wrong for `góður`,
 never hinted — while the letters around a closed one still fold,
-so `þu` counts with `þú` and `goður` with `góður` as the hint.
+so `þu` counts with `þú` and `goður` with `góður` as the hint; and
+Catalan answered the punctuation question its course had been
+chosen to ask — the punt volat folds like ł's stroke, so `collegi`
+counts with `col·legi` as the hint and `pellicula` with
+`pel·lícula`, while the hyphen some typists write instead
+(`col-legi`) stays a miss, and every accent rides the table D9
+shipped with Catalan's name already on it: `gracies` counts with
+`gràcies`, `felic` with `feliç`, `raim` with `raïm` as the hint.
 `accepted_answers` lists alternative correct spellings, and
 `accepted_translations` on a vocabulary entry lists alternative correct
 translations a review will accept — reviewing `salut` with "hello" is
