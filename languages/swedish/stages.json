@@ -3952,6 +3952,1964 @@
           "answer": "året"
         }
       ]
+    },
+    {
+      "id": 11,
+      "title": "Work and School",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "ett kontor",
+          "translation": "an office",
+          "pos": "noun",
+          "example": "Jag går till kontoret klockan åtta."
+        },
+        {
+          "word": "ett företag",
+          "translation": "a company",
+          "pos": "noun",
+          "example": "Jag arbetar i ett stort företag."
+        },
+        {
+          "word": "en chef",
+          "translation": "a boss",
+          "pos": "noun",
+          "example": "Chefen är i mötet."
+        },
+        {
+          "word": "en kollega",
+          "translation": "a colleague",
+          "pos": "noun",
+          "example": "Min kollega bor nära parken."
+        },
+        {
+          "word": "ett möte",
+          "translation": "a meeting",
+          "pos": "noun",
+          "example": "Mötet börjar klockan nio."
+        },
+        {
+          "word": "en lön",
+          "translation": "a salary",
+          "pos": "noun",
+          "example": "Min lön är bra."
+        },
+        {
+          "word": "ett yrke",
+          "translation": "a profession",
+          "accepted_translations": ["a job", "a trade"],
+          "pos": "noun",
+          "example": "Vilket yrke har du?"
+        },
+        {
+          "word": "en paus",
+          "translation": "a break",
+          "pos": "noun",
+          "example": "Jag tar en paus klockan elva."
+        },
+        {
+          "word": "en klass",
+          "translation": "a class",
+          "pos": "noun",
+          "example": "Vi talar svenska i klassen."
+        },
+        {
+          "word": "ett ämne",
+          "translation": "a subject",
+          "pos": "noun",
+          "example": "Mitt favoritämne är historia."
+        },
+        {
+          "word": "en läxa",
+          "translation": "homework",
+          "accepted_translations": ["an assignment"],
+          "pos": "noun",
+          "example": "Jag gör läxan på kvällen."
+        },
+        {
+          "word": "ett prov",
+          "translation": "an exam",
+          "accepted_translations": ["a test"],
+          "pos": "noun",
+          "example": "Svenskaprov är imorgon."
+        },
+        {
+          "word": "en dator",
+          "translation": "a computer",
+          "pos": "noun",
+          "example": "Min dator är ny."
+        },
+        {
+          "word": "upptagen",
+          "translation": "busy",
+          "pos": "adjective",
+          "example": "Min pappa är alltid upptagen."
+        },
+        {
+          "word": "en tid",
+          "translation": "an appointment",
+          "accepted_translations": ["a time"],
+          "pos": "noun",
+          "example": "Jag har en tid hos läkaren."
+        },
+        {
+          "word": "ett skrivbord",
+          "translation": "a desk",
+          "pos": "noun",
+          "example": "Datorn står på skrivbordet."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ett kontor",
+          "answer": "an office"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett företag",
+          "answer": "a company"
+        },
+        {
+          "type": "translation",
+          "prompt": "en chef",
+          "answer": "a boss"
+        },
+        {
+          "type": "translation",
+          "prompt": "en kollega",
+          "answer": "a colleague"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett möte",
+          "answer": "a meeting"
+        },
+        {
+          "type": "translation",
+          "prompt": "en lön",
+          "answer": "a salary"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett yrke",
+          "answer": "a profession",
+          "accepted_answers": ["a job", "a trade"]
+        },
+        {
+          "type": "translation",
+          "prompt": "en paus",
+          "answer": "a break"
+        },
+        {
+          "type": "translation",
+          "prompt": "en klass",
+          "answer": "a class"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett ämne",
+          "answer": "a subject"
+        },
+        {
+          "type": "translation",
+          "prompt": "en läxa",
+          "answer": "homework",
+          "accepted_answers": ["an assignment"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ett prov",
+          "answer": "an exam",
+          "accepted_answers": ["a test"]
+        },
+        {
+          "type": "translation",
+          "prompt": "en dator",
+          "answer": "a computer"
+        },
+        {
+          "type": "translation",
+          "prompt": "upptagen",
+          "answer": "busy"
+        },
+        {
+          "type": "translation",
+          "prompt": "en tid",
+          "answer": "an appointment",
+          "accepted_answers": ["a time"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ett skrivbord",
+          "answer": "a desk"
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag går till kontoret klockan åtta.",
+          "answer": "I go to the office at eight.",
+          "accepted_answers": ["I go to the office at eight o'clock"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag har ett möte med chefen.",
+          "answer": "I have a meeting with the boss."
+        },
+        {
+          "type": "translation",
+          "prompt": "Min kollega talar tre språk.",
+          "answer": "My colleague speaks three languages."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vi har mycket arbete den här veckan.",
+          "answer": "We have a lot of work this week."
+        },
+        {
+          "type": "translation",
+          "prompt": "Läxan är svår.",
+          "answer": "The homework is difficult.",
+          "accepted_answers": ["The homework is hard"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag skrev ett mejl till chefen.",
+          "answer": "I wrote an e-mail to the boss.",
+          "accepted_answers": ["I wrote an email to the boss"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Provet är nästa vecka.",
+          "answer": "The exam is next week."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag är mycket upptagen idag.",
+          "answer": "I'm very busy today.",
+          "accepted_answers": ["I am very busy today."]
+        },
+        {
+          "type": "translation",
+          "prompt": "My salary is good.",
+          "answer": "Min lön är bra."
+        },
+        {
+          "type": "translation",
+          "prompt": "The class starts at nine.",
+          "answer": "Klassen börjar klockan nio."
+        },
+        {
+          "type": "translation",
+          "prompt": "I want a break.",
+          "answer": "Jag vill ha en paus."
+        },
+        {
+          "type": "translation",
+          "prompt": "My computer is new.",
+          "answer": "Min dator är ny."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'an office':",
+          "options": [
+            "ett kontor",
+            "ett företag",
+            "en chef",
+            "en kollega"
+          ],
+          "answer": "ett kontor"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a company':",
+          "options": [
+            "ett företag",
+            "en chef",
+            "en kollega",
+            "ett möte"
+          ],
+          "answer": "ett företag"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a boss':",
+          "options": [
+            "en chef",
+            "en kollega",
+            "ett möte",
+            "en lön"
+          ],
+          "answer": "en chef"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a colleague':",
+          "options": [
+            "en kollega",
+            "ett möte",
+            "en lön",
+            "ett yrke"
+          ],
+          "answer": "en kollega"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a meeting':",
+          "options": [
+            "ett möte",
+            "en lön",
+            "ett yrke",
+            "en paus"
+          ],
+          "answer": "ett möte"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a salary':",
+          "options": [
+            "en lön",
+            "ett yrke",
+            "en paus",
+            "en klass"
+          ],
+          "answer": "en lön"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a profession':",
+          "options": [
+            "ett yrke",
+            "en paus",
+            "en klass",
+            "ett ämne"
+          ],
+          "answer": "ett yrke"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a break':",
+          "options": [
+            "en paus",
+            "en klass",
+            "ett ämne",
+            "en läxa"
+          ],
+          "answer": "en paus"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag ___ arbeta sent idag.",
+          "answer": "måste"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vi ___ tala med chefen.",
+          "answer": "måste"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ett barn ___ inte arbeta.",
+          "answer": "måste"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Måste du ___ nu?",
+          "answer": "gå"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag arbetar i ett stort ___.",
+          "answer": "kontor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Min ___ är ny.",
+          "answer": "dator"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Boken ligger på ___.",
+          "answer": "skrivbordet"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Läxan är ___.",
+          "answer": "svår"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Health and the Body",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "ett huvud",
+          "translation": "a head",
+          "pos": "noun",
+          "example": "Jag har ont i huvudet."
+        },
+        {
+          "word": "en mage",
+          "translation": "a stomach",
+          "accepted_translations": ["a tummy"],
+          "pos": "noun",
+          "example": "Jag har ätit för mycket, magen gör ont."
+        },
+        {
+          "word": "en rygg",
+          "translation": "a back",
+          "pos": "noun",
+          "example": "Mina föräldrar har ont i ryggen."
+        },
+        {
+          "word": "en tand",
+          "translation": "a tooth",
+          "accepted_translations": ["teeth"],
+          "pos": "noun",
+          "example": "Tanden gör ont."
+        },
+        {
+          "word": "en kropp",
+          "translation": "a body",
+          "pos": "noun",
+          "example": "Min kropp är trött."
+        },
+        {
+          "word": "sjuk",
+          "translation": "sick",
+          "accepted_translations": ["ill"],
+          "pos": "adjective",
+          "example": "Jag är sjuk och går till läkaren."
+        },
+        {
+          "word": "feber",
+          "translation": "fever",
+          "pos": "noun",
+          "example": "Hon har feber."
+        },
+        {
+          "word": "en influensa",
+          "translation": "the flu",
+          "accepted_translations": ["influenza"],
+          "pos": "noun",
+          "example": "Han har influensa och sover."
+        },
+        {
+          "word": "en förkylning",
+          "translation": "a cold",
+          "pos": "noun",
+          "example": "Jag har en förkylning på vintern."
+        },
+        {
+          "word": "en medicin",
+          "translation": "medicine",
+          "accepted_translations": ["medication"],
+          "pos": "noun",
+          "example": "Jag tar min medicin på morgonen."
+        },
+        {
+          "word": "ett recept",
+          "translation": "a prescription",
+          "accepted_translations": ["a recipe"],
+          "pos": "noun",
+          "example": "Läkaren skriver ett recept."
+        },
+        {
+          "word": "ett apotek",
+          "translation": "a pharmacy",
+          "pos": "noun",
+          "example": "Apoteket är nära sjukhuset."
+        },
+        {
+          "word": "en läkare",
+          "translation": "a doctor",
+          "accepted_translations": ["a physician"],
+          "pos": "noun",
+          "example": "Jag går till läkaren idag."
+        },
+        {
+          "word": "ont",
+          "translation": "pain",
+          "accepted_translations": ["hurt"],
+          "pos": "adverb",
+          "example": "Har du ont?"
+        },
+        {
+          "word": "bättre",
+          "translation": "better",
+          "pos": "adverb",
+          "example": "Idag mår jag bättre."
+        },
+        {
+          "word": "vila",
+          "translation": "to rest",
+          "pos": "verb",
+          "example": "Jag vill vila hemma."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ett huvud",
+          "answer": "a head"
+        },
+        {
+          "type": "translation",
+          "prompt": "en mage",
+          "answer": "a stomach",
+          "accepted_answers": ["a tummy"]
+        },
+        {
+          "type": "translation",
+          "prompt": "en rygg",
+          "answer": "a back"
+        },
+        {
+          "type": "translation",
+          "prompt": "en tand",
+          "answer": "a tooth",
+          "accepted_answers": ["teeth"]
+        },
+        {
+          "type": "translation",
+          "prompt": "en kropp",
+          "answer": "a body"
+        },
+        {
+          "type": "translation",
+          "prompt": "sjuk",
+          "answer": "sick",
+          "accepted_answers": ["ill"]
+        },
+        {
+          "type": "translation",
+          "prompt": "feber",
+          "answer": "fever"
+        },
+        {
+          "type": "translation",
+          "prompt": "en influensa",
+          "answer": "the flu",
+          "accepted_answers": ["influenza"]
+        },
+        {
+          "type": "translation",
+          "prompt": "en förkylning",
+          "answer": "a cold"
+        },
+        {
+          "type": "translation",
+          "prompt": "en medicin",
+          "answer": "medicine",
+          "accepted_answers": ["medication"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ett recept",
+          "answer": "a prescription",
+          "accepted_answers": ["a recipe"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ett apotek",
+          "answer": "a pharmacy"
+        },
+        {
+          "type": "translation",
+          "prompt": "en läkare",
+          "answer": "a doctor",
+          "accepted_answers": ["a physician"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ont",
+          "answer": "pain",
+          "accepted_answers": ["hurt"]
+        },
+        {
+          "type": "translation",
+          "prompt": "bättre",
+          "answer": "better"
+        },
+        {
+          "type": "translation",
+          "prompt": "vila",
+          "answer": "to rest"
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag har ont i huvudet.",
+          "answer": "My head hurts.",
+          "accepted_answers": ["I have a headache", "I have a pain in my head"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hans mage gör ont.",
+          "answer": "His stomach hurts.",
+          "accepted_answers": ["He has a stomach ache", "He has a stomachache"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag är sjuk och ligger i sängen.",
+          "answer": "I'm sick, I'm staying in bed.",
+          "accepted_answers": ["I am sick, I'm staying in bed."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hon har feber.",
+          "answer": "She has a fever."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag går till läkaren.",
+          "answer": "I'm going to the doctor.",
+          "accepted_answers": ["I am going to the doctor."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Tar du din medicin på morgonen?",
+          "answer": "Do you take your medicine in the morning?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Apoteket är nära sjukhuset.",
+          "answer": "The pharmacy is near the hospital."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hon har influensa.",
+          "answer": "She has the flu."
+        },
+        {
+          "type": "translation",
+          "prompt": "My back hurts.",
+          "answer": "Jag har ont i ryggen."
+        },
+        {
+          "type": "translation",
+          "prompt": "I have a toothache.",
+          "answer": "Jag har ont i tanden."
+        },
+        {
+          "type": "translation",
+          "prompt": "I am sick today.",
+          "answer": "Jag är sjuk idag."
+        },
+        {
+          "type": "translation",
+          "prompt": "I am better, thanks.",
+          "answer": "Jag mår bättre, tack."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a head':",
+          "options": [
+            "ett huvud",
+            "en mage",
+            "en rygg",
+            "en tand"
+          ],
+          "answer": "ett huvud"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a stomach':",
+          "options": [
+            "en mage",
+            "en rygg",
+            "en tand",
+            "en kropp"
+          ],
+          "answer": "en mage"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a back':",
+          "options": [
+            "en rygg",
+            "en tand",
+            "en kropp",
+            "sjuk"
+          ],
+          "answer": "en rygg"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a tooth':",
+          "options": [
+            "en tand",
+            "en kropp",
+            "sjuk",
+            "feber"
+          ],
+          "answer": "en tand"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a body':",
+          "options": [
+            "en kropp",
+            "sjuk",
+            "feber",
+            "en influensa"
+          ],
+          "answer": "en kropp"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sick':",
+          "options": [
+            "sjuk",
+            "feber",
+            "en influensa",
+            "en förkylning"
+          ],
+          "answer": "sjuk"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fever':",
+          "options": [
+            "feber",
+            "en influensa",
+            "en förkylning",
+            "en medicin"
+          ],
+          "answer": "feber"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the flu':",
+          "options": [
+            "en influensa",
+            "en förkylning",
+            "en medicin",
+            "ett recept"
+          ],
+          "answer": "en influensa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag har ___ i huvudet.",
+          "answer": "ont"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag har ont i ___.",
+          "answer": "magen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag är ___ idag.",
+          "answer": "sjuk"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Barnet har ___.",
+          "answer": "feber"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Läkaren skriver ett ___.",
+          "answer": "recept"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag köper medicin på ___.",
+          "answer": "apoteket"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag går till ___ idag.",
+          "answer": "läkaren"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Idag mår jag ___.",
+          "answer": "bättre"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Free Time and Hobbies",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "en hobby",
+          "translation": "a hobby",
+          "accepted_translations": ["a pastime"],
+          "pos": "noun",
+          "example": "Vilka är dina hobbyer?"
+        },
+        {
+          "word": "simning",
+          "translation": "swimming",
+          "pos": "noun",
+          "example": "Simning är min favoritsport."
+        },
+        {
+          "word": "fotboll",
+          "translation": "soccer",
+          "accepted_translations": ["football"],
+          "pos": "noun",
+          "example": "Min bror spelar fotboll."
+        },
+        {
+          "word": "tennis",
+          "translation": "tennis",
+          "pos": "noun",
+          "example": "Jag spelar tennis på helgen."
+        },
+        {
+          "word": "basket",
+          "translation": "basketball",
+          "pos": "noun",
+          "example": "Barnen spelar basket."
+        },
+        {
+          "word": "en cykel",
+          "translation": "a bicycle",
+          "accepted_translations": ["a bike"],
+          "pos": "noun",
+          "example": "Jag cyklar till arbetet."
+        },
+        {
+          "word": "en gitarr",
+          "translation": "a guitar",
+          "pos": "noun",
+          "example": "Min syster spelar gitarr."
+        },
+        {
+          "word": "ett piano",
+          "translation": "a piano",
+          "pos": "noun",
+          "example": "Pianot står i vardagsrummet."
+        },
+        {
+          "word": "en sång",
+          "translation": "a song",
+          "pos": "noun",
+          "example": "Sången är vacker."
+        },
+        {
+          "word": "dansa",
+          "translation": "to dance",
+          "pos": "verb",
+          "example": "Hon vill dansa."
+        },
+        {
+          "word": "sjunga",
+          "translation": "to sing",
+          "pos": "verb",
+          "example": "Barnen sjunger i skolan."
+        },
+        {
+          "word": "gilla",
+          "translation": "to like",
+          "pos": "verb",
+          "example": "Jag gillar musik."
+        },
+        {
+          "word": "en helg",
+          "translation": "a weekend",
+          "accepted_translations": ["a weekend"],
+          "pos": "noun",
+          "example": "Trevlig helg!"
+        },
+        {
+          "word": "en vandring",
+          "translation": "a hike",
+          "accepted_translations": ["a hiking trip"],
+          "pos": "noun",
+          "example": "På sommaren går vi på vandring i fjällen."
+        },
+        {
+          "word": "läsning",
+          "translation": "reading",
+          "pos": "noun",
+          "example": "Jag gillar läsning på kvällen."
+        },
+        {
+          "word": "rolig",
+          "translation": "fun",
+          "accepted_translations": ["funny", "amusing"],
+          "pos": "adjective",
+          "example": "Tennis är roligt."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "en hobby",
+          "answer": "a hobby",
+          "accepted_answers": ["a pastime"]
+        },
+        {
+          "type": "translation",
+          "prompt": "simning",
+          "answer": "swimming"
+        },
+        {
+          "type": "translation",
+          "prompt": "fotboll",
+          "answer": "soccer",
+          "accepted_answers": ["football"]
+        },
+        {
+          "type": "translation",
+          "prompt": "tennis",
+          "answer": "tennis"
+        },
+        {
+          "type": "translation",
+          "prompt": "basket",
+          "answer": "basketball"
+        },
+        {
+          "type": "translation",
+          "prompt": "en cykel",
+          "answer": "a bicycle",
+          "accepted_answers": ["a bike"]
+        },
+        {
+          "type": "translation",
+          "prompt": "en gitarr",
+          "answer": "a guitar"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett piano",
+          "answer": "a piano"
+        },
+        {
+          "type": "translation",
+          "prompt": "en sång",
+          "answer": "a song"
+        },
+        {
+          "type": "translation",
+          "prompt": "dansa",
+          "answer": "to dance"
+        },
+        {
+          "type": "translation",
+          "prompt": "sjunga",
+          "answer": "to sing"
+        },
+        {
+          "type": "translation",
+          "prompt": "gilla",
+          "answer": "to like"
+        },
+        {
+          "type": "translation",
+          "prompt": "en helg",
+          "answer": "a weekend",
+          "accepted_answers": ["a weekend"]
+        },
+        {
+          "type": "translation",
+          "prompt": "en vandring",
+          "answer": "a hike",
+          "accepted_answers": ["a hiking trip"]
+        },
+        {
+          "type": "translation",
+          "prompt": "läsning",
+          "answer": "reading"
+        },
+        {
+          "type": "translation",
+          "prompt": "rolig",
+          "answer": "fun",
+          "accepted_answers": ["funny", "amusing"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag cyklar på helgen.",
+          "answer": "I ride my bike on weekends.",
+          "accepted_answers": ["I ride my bike at weekends."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hon simmar på måndagar.",
+          "answer": "She swims on Mondays.",
+          "accepted_answers": ["She does swimming on Mondays"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Min bror spelar fotboll.",
+          "answer": "My brother plays soccer.",
+          "accepted_answers": ["My brother plays football"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag gillar den sången.",
+          "answer": "I like this song."
+        },
+        {
+          "type": "translation",
+          "prompt": "Min syster spelar piano.",
+          "answer": "My sister plays the piano."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vilka är dina hobbyer?",
+          "answer": "What are your hobbies?"
+        },
+        {
+          "type": "translation",
+          "prompt": "Vi går på vandring i fjällen.",
+          "answer": "We go hiking in the mountains.",
+          "accepted_answers": ["We hike in the mountains"]
+        },
+        {
+          "type": "translation",
+          "prompt": "På helgen läser jag hellre.",
+          "answer": "On weekends, I prefer to read.",
+          "accepted_answers": ["At the weekend, I prefer to read", "On the weekend, I prefer to read"]
+        },
+        {
+          "type": "translation",
+          "prompt": "I play tennis.",
+          "answer": "Jag spelar tennis."
+        },
+        {
+          "type": "translation",
+          "prompt": "She sings a song.",
+          "answer": "Hon sjunger en sång."
+        },
+        {
+          "type": "translation",
+          "prompt": "He plays the guitar.",
+          "answer": "Han spelar gitarr."
+        },
+        {
+          "type": "translation",
+          "prompt": "Reading is my favorite hobby.",
+          "answer": "Läsning är min favorithobby."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a hobby':",
+          "options": [
+            "en hobby",
+            "simning",
+            "fotboll",
+            "tennis"
+          ],
+          "answer": "en hobby"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'swimming':",
+          "options": [
+            "simning",
+            "fotboll",
+            "tennis",
+            "basket"
+          ],
+          "answer": "simning"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'soccer':",
+          "options": [
+            "fotboll",
+            "tennis",
+            "basket",
+            "en cykel"
+          ],
+          "answer": "fotboll"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tennis':",
+          "options": [
+            "tennis",
+            "basket",
+            "en cykel",
+            "en gitarr"
+          ],
+          "answer": "tennis"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'basketball':",
+          "options": [
+            "basket",
+            "en cykel",
+            "en gitarr",
+            "ett piano"
+          ],
+          "answer": "basket"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a bicycle':",
+          "options": [
+            "en cykel",
+            "en gitarr",
+            "ett piano",
+            "en sång"
+          ],
+          "answer": "en cykel"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a guitar':",
+          "options": [
+            "en gitarr",
+            "ett piano",
+            "en sång",
+            "dansa"
+          ],
+          "answer": "en gitarr"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a piano':",
+          "options": [
+            "ett piano",
+            "en sång",
+            "dansa",
+            "sjunga"
+          ],
+          "answer": "ett piano"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag gillar att ___ fotboll.",
+          "answer": "spela"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "På festen gillar jag att ___.",
+          "answer": "dansa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Han brukar spela ___.",
+          "answer": "tennis"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag köper en ny ___ imorgon.",
+          "answer": "cykel"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hon sjunger en ___.",
+          "answer": "sång"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Pianot står i ___.",
+          "answer": "vardagsrummet"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "På ___ spelar jag tennis.",
+          "answer": "helgen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Musik är min ___.",
+          "answer": "hobby"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Calls and Messages",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "en telefon",
+          "translation": "a phone",
+          "accepted_translations": ["a telephone"],
+          "pos": "noun",
+          "example": "Min telefon är ny."
+        },
+        {
+          "word": "ett nummer",
+          "translation": "a number",
+          "pos": "noun",
+          "example": "Vad är ditt telefonnummer?"
+        },
+        {
+          "word": "ringa",
+          "translation": "to call",
+          "accepted_translations": ["to phone"],
+          "pos": "verb",
+          "example": "Jag vill ringa min mamma."
+        },
+        {
+          "word": "svara",
+          "translation": "to answer",
+          "accepted_translations": ["to reply"],
+          "pos": "verb",
+          "example": "Han svarar inte."
+        },
+        {
+          "word": "ett meddelande",
+          "translation": "a message",
+          "accepted_translations": ["a text message"],
+          "pos": "noun",
+          "example": "Jag skickar ett meddelande till dig."
+        },
+        {
+          "word": "skicka",
+          "translation": "to send",
+          "pos": "verb",
+          "example": "Hon skickar ett meddelande till sin bror."
+        },
+        {
+          "word": "ta emot",
+          "translation": "to receive",
+          "accepted_translations": ["to get"],
+          "pos": "phrase",
+          "example": "Jag tar emot många meddelanden."
+        },
+        {
+          "word": "ett svar",
+          "translation": "an answer",
+          "accepted_translations": ["a reply"],
+          "pos": "noun",
+          "example": "Hans svar är nej."
+        },
+        {
+          "word": "en fråga",
+          "translation": "a question",
+          "pos": "noun",
+          "example": "Jag har en fråga."
+        },
+        {
+          "word": "ett mejl",
+          "translation": "an e-mail",
+          "accepted_translations": ["an email"],
+          "pos": "noun",
+          "example": "Fick du mitt mejl?"
+        },
+        {
+          "word": "ett foto",
+          "translation": "a photo",
+          "accepted_translations": ["a picture"],
+          "pos": "noun",
+          "example": "Fotot är vackert."
+        },
+        {
+          "word": "en video",
+          "translation": "a video",
+          "pos": "noun",
+          "example": "Jag tittar på en video."
+        },
+        {
+          "word": "internet",
+          "translation": "internet",
+          "pos": "noun",
+          "example": "Jag är på internet."
+        },
+        {
+          "word": "nyheter",
+          "translation": "news",
+          "pos": "noun",
+          "example": "Jag läser nyheterna på kvällen."
+        },
+        {
+          "word": "en linje",
+          "translation": "a line",
+          "pos": "noun",
+          "example": "Linjen är upptagen."
+        },
+        {
+          "word": "uppkopplad",
+          "translation": "online",
+          "accepted_translations": ["connected"],
+          "pos": "adjective",
+          "example": "Min bror är alltid uppkopplad."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "en telefon",
+          "answer": "a phone",
+          "accepted_answers": ["a telephone"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ett nummer",
+          "answer": "a number"
+        },
+        {
+          "type": "translation",
+          "prompt": "ringa",
+          "answer": "to call",
+          "accepted_answers": ["to phone"]
+        },
+        {
+          "type": "translation",
+          "prompt": "svara",
+          "answer": "to answer",
+          "accepted_answers": ["to reply"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ett meddelande",
+          "answer": "a message",
+          "accepted_answers": ["a text message"]
+        },
+        {
+          "type": "translation",
+          "prompt": "skicka",
+          "answer": "to send"
+        },
+        {
+          "type": "translation",
+          "prompt": "ta emot",
+          "answer": "to receive",
+          "accepted_answers": ["to get"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ett svar",
+          "answer": "an answer",
+          "accepted_answers": ["a reply"]
+        },
+        {
+          "type": "translation",
+          "prompt": "en fråga",
+          "answer": "a question"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett mejl",
+          "answer": "an e-mail",
+          "accepted_answers": ["an email"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ett foto",
+          "answer": "a photo",
+          "accepted_answers": ["a picture"]
+        },
+        {
+          "type": "translation",
+          "prompt": "en video",
+          "answer": "a video"
+        },
+        {
+          "type": "translation",
+          "prompt": "internet",
+          "answer": "internet"
+        },
+        {
+          "type": "translation",
+          "prompt": "nyheter",
+          "answer": "news"
+        },
+        {
+          "type": "translation",
+          "prompt": "en linje",
+          "answer": "a line"
+        },
+        {
+          "type": "translation",
+          "prompt": "uppkopplad",
+          "answer": "online",
+          "accepted_answers": ["connected"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag ringer dig ikväll.",
+          "answer": "I'll call you tonight.",
+          "accepted_answers": ["I am calling you tonight", "I call you tonight"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Kan du svara mig?",
+          "answer": "Can you answer me?",
+          "accepted_answers": ["Can you reply to me?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Han skickar ett meddelande till sin mamma.",
+          "answer": "He sends his mother a message.",
+          "accepted_answers": ["He sends a message to his mother"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag fick inte ditt mejl.",
+          "answer": "I didn't get your e-mail.",
+          "accepted_answers": ["I did not get your e-mail", "I didn't receive your e-mail", "I did not receive your e-mail"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vad är ditt telefonnummer?",
+          "answer": "What is your phone number?",
+          "accepted_answers": ["What's your phone number?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Linjen är upptagen.",
+          "answer": "The line is busy."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag tittar på foton på internet.",
+          "answer": "I look at photos on the internet.",
+          "accepted_answers": ["I look at photos on the Internet", "I look at pictures on the internet"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hon är alltid uppkopplad.",
+          "answer": "She is always online."
+        },
+        {
+          "type": "translation",
+          "prompt": "I send you a photo.",
+          "answer": "Jag skickar ett foto till dig."
+        },
+        {
+          "type": "translation",
+          "prompt": "Can you call me tomorrow?",
+          "answer": "Kan du ringa mig imorgon?"
+        },
+        {
+          "type": "translation",
+          "prompt": "My phone number is new.",
+          "answer": "Mitt telefonnummer är nytt."
+        },
+        {
+          "type": "translation",
+          "prompt": "Will you play with me?",
+          "answer": "Vill du spela med mig?"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a phone':",
+          "options": [
+            "en telefon",
+            "ett nummer",
+            "ringa",
+            "svara"
+          ],
+          "answer": "en telefon"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a number':",
+          "options": [
+            "ett nummer",
+            "ringa",
+            "svara",
+            "ett meddelande"
+          ],
+          "answer": "ett nummer"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to call':",
+          "options": [
+            "ringa",
+            "svara",
+            "ett meddelande",
+            "skicka"
+          ],
+          "answer": "ringa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to answer':",
+          "options": [
+            "svara",
+            "ett meddelande",
+            "skicka",
+            "ta emot"
+          ],
+          "answer": "svara"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a message':",
+          "options": [
+            "ett meddelande",
+            "skicka",
+            "ta emot",
+            "ett svar"
+          ],
+          "answer": "ett meddelande"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to send':",
+          "options": [
+            "skicka",
+            "ta emot",
+            "ett svar",
+            "en fråga"
+          ],
+          "answer": "skicka"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the phrase for 'to receive':",
+          "options": [
+            "ta emot",
+            "ett svar",
+            "en fråga",
+            "ett mejl"
+          ],
+          "answer": "ta emot"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'an answer':",
+          "options": [
+            "ett svar",
+            "en fråga",
+            "ett mejl",
+            "ett foto"
+          ],
+          "answer": "ett svar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ mig ikväll !",
+          "answer": "Ring"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Skicka ___ ett meddelande !",
+          "answer": "mig"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag ___ min vän varje dag.",
+          "answer": "ringer"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hon ___ på min fråga.",
+          "answer": "svarar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag skickar ett ___ till dig.",
+          "answer": "mejl"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Telefonen är på ___.",
+          "answer": "bordet"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag ringer fel ___.",
+          "answer": "nummer"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag läser ___ på kvällen.",
+          "answer": "nyheterna"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Stories and Experiences",
+      "level_hint": "intermediate",
+      "vocabulary": [
+        {
+          "word": "en historia",
+          "translation": "a story",
+          "accepted_translations": ["a tale"],
+          "pos": "noun",
+          "example": "Min mormor berättar vackra historier."
+        },
+        {
+          "word": "ett äventyr",
+          "translation": "an adventure",
+          "pos": "noun",
+          "example": "Boken berättar om ett stort äventyr."
+        },
+        {
+          "word": "ett minne",
+          "translation": "a memory",
+          "accepted_translations": ["a souvenir"],
+          "pos": "noun",
+          "example": "Det är ett fint minne."
+        },
+        {
+          "word": "en barndom",
+          "translation": "a childhood",
+          "pos": "noun",
+          "example": "Han berättar om sin barndom."
+        },
+        {
+          "word": "en semester",
+          "translation": "a vacation",
+          "accepted_translations": ["a holiday"],
+          "pos": "noun",
+          "example": "Semestern börjar i juli."
+        },
+        {
+          "word": "en resa",
+          "translation": "a trip",
+          "accepted_translations": ["a journey", "travel"],
+          "pos": "noun",
+          "example": "Det var en vacker resa."
+        },
+        {
+          "word": "ett hav",
+          "translation": "a sea",
+          "pos": "noun",
+          "example": "På sommaren åker vi till havet."
+        },
+        {
+          "word": "en strand",
+          "translation": "a beach",
+          "pos": "noun",
+          "example": "Barnen leker på stranden."
+        },
+        {
+          "word": "ett berg",
+          "translation": "a mountain",
+          "pos": "noun",
+          "example": "Berget är vackert på vintern."
+        },
+        {
+          "word": "en present",
+          "translation": "a gift",
+          "accepted_translations": ["a present"],
+          "pos": "noun",
+          "example": "Presenten ligger på bordet."
+        },
+        {
+          "word": "en gång",
+          "translation": "a time",
+          "accepted_translations": ["an occasion", "once"],
+          "pos": "noun",
+          "example": "Jag besöker min vän en gång i veckan."
+        },
+        {
+          "word": "aldrig",
+          "translation": "never",
+          "pos": "adverb",
+          "example": "Han dricker aldrig te."
+        },
+        {
+          "word": "sann",
+          "translation": "true",
+          "pos": "adjective",
+          "example": "Är det sant?"
+        },
+        {
+          "word": "berätta",
+          "translation": "to tell",
+          "pos": "verb",
+          "example": "Han berättar en historia för sin mamma."
+        },
+        {
+          "word": "tänka",
+          "translation": "to think",
+          "pos": "verb",
+          "example": "Jag tänker på min familj."
+        },
+        {
+          "word": "glad",
+          "translation": "happy",
+          "accepted_translations": ["glad"],
+          "pos": "adjective",
+          "example": "De är mycket glada."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "en historia",
+          "answer": "a story",
+          "accepted_answers": ["a tale"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ett äventyr",
+          "answer": "an adventure"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett minne",
+          "answer": "a memory",
+          "accepted_answers": ["a souvenir"]
+        },
+        {
+          "type": "translation",
+          "prompt": "en barndom",
+          "answer": "a childhood"
+        },
+        {
+          "type": "translation",
+          "prompt": "en semester",
+          "answer": "a vacation",
+          "accepted_answers": ["a holiday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "en resa",
+          "answer": "a trip",
+          "accepted_answers": ["a journey", "travel"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ett hav",
+          "answer": "a sea"
+        },
+        {
+          "type": "translation",
+          "prompt": "en strand",
+          "answer": "a beach"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett berg",
+          "answer": "a mountain"
+        },
+        {
+          "type": "translation",
+          "prompt": "en present",
+          "answer": "a gift",
+          "accepted_answers": ["a present"]
+        },
+        {
+          "type": "translation",
+          "prompt": "en gång",
+          "answer": "a time",
+          "accepted_answers": ["an occasion", "once"]
+        },
+        {
+          "type": "translation",
+          "prompt": "aldrig",
+          "answer": "never"
+        },
+        {
+          "type": "translation",
+          "prompt": "sann",
+          "answer": "true"
+        },
+        {
+          "type": "translation",
+          "prompt": "berätta",
+          "answer": "to tell"
+        },
+        {
+          "type": "translation",
+          "prompt": "tänka",
+          "answer": "to think"
+        },
+        {
+          "type": "translation",
+          "prompt": "glad",
+          "answer": "happy",
+          "accepted_answers": ["glad"]
+        },
+        {
+          "type": "translation",
+          "prompt": "När jag var liten bodde jag i Uppsala.",
+          "answer": "When I was little, I lived in Uppsala.",
+          "accepted_answers": ["When I was small, I lived in Uppsala", "When I was a child, I lived in Uppsala"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vi spelade fotboll varje söndag.",
+          "answer": "We played soccer every Sunday.",
+          "accepted_answers": ["We used to play soccer every Sunday", "We played football every Sunday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Min mormor berättade historier.",
+          "answer": "My grandmother told stories."
+        },
+        {
+          "type": "translation",
+          "prompt": "Förra sommaren åkte vi till havet.",
+          "answer": "Last summer, we went to the sea.",
+          "accepted_answers": ["Last summer we went to the sea"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Det snöade på min födelsedag.",
+          "answer": "It was snowing on my birthday.",
+          "accepted_answers": ["It snowed on my birthday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vilket vackert äventyr!",
+          "answer": "What a beautiful adventure!",
+          "accepted_answers": ["What a great adventure"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Det var min första resa till Sverige.",
+          "answer": "It was my first trip to Sweden."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag tänkte ofta på min mormor.",
+          "answer": "I often thought about my grandmother.",
+          "accepted_answers": ["I used to think often about my grandmother"]
+        },
+        {
+          "type": "translation",
+          "prompt": "We were happy.",
+          "answer": "Vi var glada."
+        },
+        {
+          "type": "translation",
+          "prompt": "It was a beautiful memory.",
+          "answer": "Det var ett vackert minne."
+        },
+        {
+          "type": "translation",
+          "prompt": "I never drink coffee.",
+          "answer": "Jag dricker aldrig kaffe."
+        },
+        {
+          "type": "translation",
+          "prompt": "My grandfather told a story.",
+          "answer": "Min farfar berättade en historia."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a story':",
+          "options": [
+            "en historia",
+            "ett äventyr",
+            "ett minne",
+            "en barndom"
+          ],
+          "answer": "en historia"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'an adventure':",
+          "options": [
+            "ett äventyr",
+            "ett minne",
+            "en barndom",
+            "en semester"
+          ],
+          "answer": "ett äventyr"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a memory':",
+          "options": [
+            "ett minne",
+            "en barndom",
+            "en semester",
+            "en resa"
+          ],
+          "answer": "ett minne"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a childhood':",
+          "options": [
+            "en barndom",
+            "en semester",
+            "en resa",
+            "ett hav"
+          ],
+          "answer": "en barndom"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a vacation':",
+          "options": [
+            "en semester",
+            "en resa",
+            "ett hav",
+            "en strand"
+          ],
+          "answer": "en semester"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a trip':",
+          "options": [
+            "en resa",
+            "ett hav",
+            "en strand",
+            "ett berg"
+          ],
+          "answer": "en resa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a sea':",
+          "options": [
+            "ett hav",
+            "en strand",
+            "ett berg",
+            "en present"
+          ],
+          "answer": "ett hav"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'a beach':",
+          "options": [
+            "en strand",
+            "ett berg",
+            "en present",
+            "en gång"
+          ],
+          "answer": "en strand"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag har ___ mycket i år.",
+          "answer": "arbetat"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vi har ___ en film.",
+          "answer": "sett"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hon har ___ ett brev.",
+          "answer": "skrivit"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Har du ___ boken?",
+          "answer": "läst"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag har aldrig ___ i Rom.",
+          "answer": "varit"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vi har ___ god mat.",
+          "answer": "ätit"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nästa år ___ jag resa till Spanien.",
+          "answer": "ska"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Berätta en ___ !",
+          "answer": "historia"
+        }
+      ]
     }
   ]
 }
