@@ -35,7 +35,7 @@
 - **Terminal-native.** Git-style subcommands: `termocab start french`, `termocab review french`. No menus, no TUI, no mouse.
 - **Offline and private.** All 13 courses are compiled into a single binary. No account, no network, nothing to sync.
 - **Plain text everywhere.** Courses are JSON. Progress and review state are small text files you can read, diff and back up.
-- **Real spaced repetition.** Leitner boxes (1 / 2 / 4 / 8 / 16 / 32 days) bring words back right before you forget them.
+- **Real spaced repetition.** Leitner boxes (1 / 2 / 4 / 8 / 16 / 32 days) bring words back right before you forget them — 20 cards a sitting, oldest due first, so a backlog never lands on you all at once.
 - **Forgiving where it should be.** Case, spacing and missing accents never cost you a point: `perche` is accepted for `perché`, and shows you the right spelling.
 - **Small.** Rust, standard library plus `serde`. No CLI framework, no time library.
 
@@ -106,7 +106,7 @@ Needs Rust 1.78 or newer, on Linux or macOS. If your shell says `termocab: comma
 | Command | What it does |
 | --- | --- |
 | `termocab start [--no-shuffle \| --seed <n>] <lang> [stage]` | Run the next uncompleted stage, or a specific one. Exercises shuffle by default; `--seed` makes the order reproducible. |
-| `termocab review <lang>` | Review the words that are due today. |
+| `termocab review [--limit <n> \| --no-limit] <lang>` | Review the words that are due today — oldest due first, at most 20 per session. `--limit` picks another size, `--no-limit` reviews everything. |
 | `termocab progress <lang>` | Completed stages, streak and due reviews. |
 | `termocab stats <lang>` | Leitner boxes and 14-day charts as sparklines. |
 | `termocab streak <lang>` | Print the current streak in days. |
@@ -116,7 +116,7 @@ Needs Rust 1.78 or newer, on Linux or macOS. If your shell says `termocab: comma
 | `termocab check <file>` | Validate a `stages.json` file without installing it. |
 | `termocab --version` · `termocab help` | Print the version / show usage. |
 
-**The rules.** Stages unlock in order, and a finished stage can be replayed any time. A stage is passed with **80% or more correct** in one run. Reviews follow the Leitner boxes above.
+**The rules.** Stages unlock in order, and a finished stage can be replayed any time. A stage is passed with **80% or more correct** in one run. Reviews follow the Leitner boxes above, oldest due first, 20 cards a sitting — the queue continues on the next `review` when cards are left over.
 
 **Good citizen.** Colour (green / red feedback) only appears on a terminal, pipes stay plain, and `$NO_COLOR` turns it off everywhere. Exit codes follow git: `0` success, `1` runtime failure, `2` usage error. A closed pipe (`termocab list-words french | head`) ends quietly with `141`, like `cat` does.
 
