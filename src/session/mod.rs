@@ -40,8 +40,8 @@ pub struct ReviewOutcome {
 /// same sequence — so stages shuffle by default. A named seed makes
 /// the order reproducible (`--seed N`, for tests and for comparing two
 /// runs); `InOrder` is the authored content order (`--no-shuffle`).
-/// Reviews are deliberately not shuffled: their order follows due
-/// dates and stays deterministic (§7).
+/// Reviews are deliberately not shuffled: they follow due dates,
+/// oldest first, capped by [`ReviewCap`] (D21).
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum ExerciseOrder {
     /// Content order, exactly as authored.
@@ -94,6 +94,46 @@ impl Default for RunOptions {
     fn default() -> Self {
         Self {
             order: ExerciseOrder::InOrder,
+            color: Color::Plain,
+        }
+    }
+}
+
+/// How many due cards one review session shows by default (D21).
+/// Twenty single-word recalls is a two-to-four-minute sitting — enough
+/// to move a day's schedule forward, small enough that a learner
+/// returning after weeks is not handed a finished course's whole card
+/// deck (233 words) in one run. `--limit <n>` picks another size,
+/// `--no-limit` lifts the cap entirely.
+pub const DEFAULT_REVIEW_LIMIT: usize = 20;
+
+/// How many due cards one review session shows (D21). The cap takes the
+/// FRONT of `due_on`'s oldest-first queue, so the words that have
+/// waited longest are the ones reviewed — see `srs::SrsState::due_on`.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum ReviewCap {
+    /// Every due card — `--no-limit`, and every review before D21.
+    All,
+    /// At most this many cards — the default is
+    /// [`DEFAULT_REVIEW_LIMIT`], `--limit <n>` chooses another.
+    AtMost(usize),
+}
+
+/// How a session presents a review: the card cap and feedback color.
+/// Both are presentation concerns resolved at the CLI edge (flags,
+/// stdout type, $NO_COLOR) and injected here, so the runner stays pure
+/// and testable — the same split as [`RunOptions`] for stage runs.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub struct ReviewOptions {
+    pub cap: ReviewCap,
+    pub color: Color,
+}
+
+impl Default for ReviewOptions {
+    /// The shape tests script against: every due card, plain text.
+    fn default() -> Self {
+        Self {
+            cap: ReviewCap::All,
             color: Color::Plain,
         }
     }
@@ -322,11 +362,15 @@ pub fn run_and_record<T: Terminal>(
     Ok(outcome)
 }
 
-/// Runs one spaced-repetition review: every card due on `today` is
-/// shown as a plain translation prompt — the foreign word, the learner
-/// types its translation — graded with the same case-insensitive rule
-/// as stage exercises, and rescheduled through `srs::`. Pure with
-/// respect to storage: the caller decides what to do with the outcome.
+/// Runs one spaced-repetition review: the cards due on `today` — at
+/// most `opts.cap` of them, oldest due date first (D21) — are shown as
+/// plain translation prompts: the foreign word, the learner types its
+/// translation, graded with the same case-insensitive rule as stage
+/// exercises, and rescheduled through `srs::`. Pure with respect to
+/// storage: the caller decides what to do with the outcome; the caller
+/// also learns, by asking `srs::due_on` again after the run, whether
+/// cards are still due (the cap held some back, or the session stopped
+/// early) and says so.
 ///
 /// A card whose word is missing from `vocabulary` (the content changed
 /// under it) is skipped and left untouched, rather than crashing or
@@ -336,20 +380,34 @@ pub fn run_review<T: Terminal>(
     srs: &mut crate::srs::SrsState,
     vocabulary: &[&crate::engine::Vocabulary],
     today: &str,
-    color: Color,
+    opts: &ReviewOptions,
 ) -> Result<ReviewOutcome, io::Error> {
     let due: Vec<String> = srs
         .due_on(today)
         .into_iter()
         .map(|(w, _)| w.to_string())
         .collect();
-    let total = due.len();
+    let due_total = due.len();
+    // The cap takes the front of the oldest-first queue (D21): the
+    // words that have waited longest are the ones reviewed, and what
+    // the cap holds back is the freshest material.
+    let session_len = match opts.cap {
+        ReviewCap::All => due_total,
+        ReviewCap::AtMost(n) => n.min(due_total),
+    };
+    let session: Vec<String> = due.into_iter().take(session_len).collect();
     let mut outcome = ReviewOutcome::default();
 
-    term.print(&format!("— review: {total} word(s) —"))?;
+    if session_len < due_total {
+        term.print(&format!(
+            "— review: {session_len} of {due_total} due word(s) —"
+        ))?;
+    } else {
+        term.print(&format!("— review: {session_len} word(s) —"))?;
+    }
     term.print("give the translation of each word, then press Enter.")?;
 
-    for (i, word) in due.iter().enumerate() {
+    for (i, word) in session.iter().enumerate() {
         let Some(v) = vocabulary.iter().find(|v| v.word == *word) else {
             term.print(&format!(
                 "skipping '{word}' — no longer in the loaded content."
@@ -357,7 +415,7 @@ pub fn run_review<T: Terminal>(
             continue;
         };
         term.print("")?;
-        term.print(&format!("[{}/{}] {}", i + 1, total, v.word))?;
+        term.print(&format!("[{}/{}] {}", i + 1, session_len, v.word))?;
         let attempt = match term.read_line() {
             Input::Line(line) => line,
             Input::Closed => {
@@ -395,19 +453,19 @@ pub fn run_review<T: Terminal>(
         match srs.answer(word, right, today) {
             Some(s) if right => term.print(&green(
                 &format!("correct{hint} — box {}, due {}.", s.box_number, s.due),
-                color,
+                opts.color,
             ))?,
             Some(s) => term.print(&red(
                 &format!(
                     "not quite — expected: {}. back to box {}, due {}.",
                     v.translation, s.box_number, s.due
                 ),
-                color,
+                opts.color,
             ))?,
-            None if right => term.print(&green(&format!("correct{hint}."), color))?,
+            None if right => term.print(&green(&format!("correct{hint}."), opts.color))?,
             None => term.print(&red(
                 &format!("not quite — expected: {}.", v.translation),
-                color,
+                opts.color,
             ))?,
         }
     }
@@ -642,7 +700,14 @@ mod tests {
         let vocabulary = [&v1, &v2];
 
         let mut t = Scripted::new(&["hello", "nope"]);
-        let out = run_review(&mut t, &mut srs, &vocabulary, "2026-10-30", Color::Plain).unwrap();
+        let out = run_review(
+            &mut t,
+            &mut srs,
+            &vocabulary,
+            "2026-10-30",
+            &ReviewOptions::default(),
+        )
+        .unwrap();
 
         assert_eq!(
             out,
@@ -665,7 +730,14 @@ mod tests {
         let v = vocab("bonjour", "hello");
 
         let mut t = Scripted::new(&["  HeLLo "]);
-        let out = run_review(&mut t, &mut srs, &[&v], "2026-10-30", Color::Plain).unwrap();
+        let out = run_review(
+            &mut t,
+            &mut srs,
+            &[&v],
+            "2026-10-30",
+            &ReviewOptions::default(),
+        )
+        .unwrap();
         assert_eq!(
             out,
             ReviewOutcome {
@@ -684,7 +756,14 @@ mod tests {
 
         // only one answer scripted: the second read hits EOF and stops
         let mut t = Scripted::new(&["hello"]);
-        let out = run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30", Color::Plain).unwrap();
+        let out = run_review(
+            &mut t,
+            &mut srs,
+            &[&v1, &v2],
+            "2026-10-30",
+            &ReviewOptions::default(),
+        )
+        .unwrap();
         assert_eq!(
             out,
             ReviewOutcome {
@@ -726,7 +805,14 @@ mod tests {
             Input::Line("hello".into()),
             Input::Unreadable("stream did not contain valid UTF-8".into()),
         ]);
-        let out = run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30", Color::Plain).unwrap();
+        let out = run_review(
+            &mut t,
+            &mut srs,
+            &[&v1, &v2],
+            "2026-10-30",
+            &ReviewOptions::default(),
+        )
+        .unwrap();
         assert_eq!(
             out,
             ReviewOutcome {
@@ -749,7 +835,14 @@ mod tests {
         v.accepted_translations = vec!["hello".into()];
 
         let mut t = Scripted::new(&["hello"]);
-        let out = run_review(&mut t, &mut srs, &[&v], "2026-10-30", Color::Plain).unwrap();
+        let out = run_review(
+            &mut t,
+            &mut srs,
+            &[&v],
+            "2026-10-30",
+            &ReviewOptions::default(),
+        )
+        .unwrap();
         assert_eq!(
             out,
             ReviewOutcome {
@@ -766,7 +859,14 @@ mod tests {
         let mut srs = crate::srs::SrsState::new();
         srs.introduce(&["salut".into()], "2026-10-30");
         let mut t = Scripted::new(&["  HeLLo "]);
-        let out = run_review(&mut t, &mut srs, &[&v], "2026-10-30", Color::Plain).unwrap();
+        let out = run_review(
+            &mut t,
+            &mut srs,
+            &[&v],
+            "2026-10-30",
+            &ReviewOptions::default(),
+        )
+        .unwrap();
         assert_eq!(out.correct, 1);
     }
 
@@ -776,9 +876,96 @@ mod tests {
         srs.introduce(&["orphelin".into()], "2026-10-30");
 
         let mut t = Scripted::new(&[]);
-        let out = run_review(&mut t, &mut srs, &[], "2026-10-30", Color::Plain).unwrap();
+        let out = run_review(
+            &mut t,
+            &mut srs,
+            &[],
+            "2026-10-30",
+            &ReviewOptions::default(),
+        )
+        .unwrap();
         assert_eq!(out, ReviewOutcome::default());
         assert!(t.printed.iter().any(|l| l.contains("skipping 'orphelin'")));
+    }
+
+    #[test]
+    fn a_capped_review_shows_the_split_and_leaves_the_rest_untouched() {
+        // three cards due; the cap admits two of them
+        let mut srs = crate::srs::SrsState::new();
+        srs.introduce(
+            &["alpha".into(), "beta".into(), "gamma".into()],
+            "2026-10-30",
+        );
+        let (va, vb, vc) = (vocab("alpha", "a"), vocab("beta", "b"), vocab("gamma", "c"));
+        let vocabulary = [&va, &vb, &vc];
+
+        let mut t = Scripted::new(&["a", "b"]);
+        let opts = ReviewOptions {
+            cap: ReviewCap::AtMost(2),
+            ..ReviewOptions::default()
+        };
+        let out = run_review(&mut t, &mut srs, &vocabulary, "2026-10-30", &opts).unwrap();
+
+        // the header names the split, and only two cards were answered
+        assert!(t
+            .printed
+            .iter()
+            .any(|l| *l == "— review: 2 of 3 due word(s) —"));
+        assert_eq!(
+            out,
+            ReviewOutcome {
+                answered: 2,
+                correct: 2
+            }
+        );
+        // the card the cap held back keeps its schedule, untouched
+        assert_eq!(card_of(&srs, "gamma").due, "2026-10-30");
+        assert_eq!(card_of(&srs, "gamma").box_number, 1);
+    }
+
+    #[test]
+    fn a_cap_at_or_above_the_due_count_is_not_a_split() {
+        let (va, vb) = (vocab("alpha", "a"), vocab("beta", "b"));
+        let vocabulary = [&va, &vb];
+
+        for cap in [ReviewCap::AtMost(2), ReviewCap::AtMost(999)] {
+            // a fresh schedule per cap: an answered card leaves the
+            // due set, so the second run would have nothing to show
+            let mut srs = crate::srs::SrsState::new();
+            srs.introduce(&["alpha".into(), "beta".into()], "2026-10-30");
+            let mut t = Scripted::new(&["a", "b"]);
+            let opts = ReviewOptions {
+                cap,
+                ..ReviewOptions::default()
+            };
+            let out = run_review(&mut t, &mut srs, &vocabulary, "2026-10-30", &opts).unwrap();
+            // the plain header — nothing was held back, so no "of"
+            assert!(t.printed.iter().any(|l| *l == "— review: 2 word(s) —"));
+            assert_eq!(out.answered, 2);
+        }
+    }
+
+    #[test]
+    fn a_capped_review_takes_the_oldest_cards_first() {
+        // a backlog in two vintages: gamma has waited longest, so the
+        // cap of one admits gamma, not the alphabetically-first alpha
+        let mut srs = crate::srs::SrsState::from_parts(vec![
+            ("alpha".to_string(), 1, "2026-10-20".to_string()),
+            ("gamma".to_string(), 1, "2026-10-10".to_string()),
+        ]);
+        let (va, vg) = (vocab("alpha", "a"), vocab("gamma", "c"));
+        let vocabulary = [&va, &vg];
+
+        let mut t = Scripted::new(&["c"]);
+        let opts = ReviewOptions {
+            cap: ReviewCap::AtMost(1),
+            ..ReviewOptions::default()
+        };
+        let out = run_review(&mut t, &mut srs, &vocabulary, "2026-10-30", &opts).unwrap();
+        assert_eq!(out.answered, 1);
+        assert!(t.printed.iter().any(|l| *l == "[1/1] gamma"));
+        // alpha was never shown and keeps its schedule
+        assert_eq!(card_of(&srs, "alpha").due, "2026-10-20");
     }
 
     #[test]
@@ -810,8 +997,14 @@ mod tests {
 
         // the pipe survives the header but dies on the first card
         let mut t = ClosedPipe { prints_left: 3 };
-        let err =
-            run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30", Color::Plain).unwrap_err();
+        let err = run_review(
+            &mut t,
+            &mut srs,
+            &[&v1, &v2],
+            "2026-10-30",
+            &ReviewOptions::default(),
+        )
+        .unwrap_err();
         assert_eq!(err.kind(), io::ErrorKind::BrokenPipe);
         // no card was answered, so the caller must not save the srs
         // state — the cards are still due today, untouched
@@ -971,7 +1164,17 @@ mod tests {
         let v2 = vocab("merci", "thank you");
 
         let mut t = Scripted::new(&["hello", "nope"]);
-        run_review(&mut t, &mut srs, &[&v1, &v2], "2026-10-30", Color::Ansi).unwrap();
+        run_review(
+            &mut t,
+            &mut srs,
+            &[&v1, &v2],
+            "2026-10-30",
+            &ReviewOptions {
+                color: Color::Ansi,
+                ..ReviewOptions::default()
+            },
+        )
+        .unwrap();
         assert!(t
             .printed
             .iter()

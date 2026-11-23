@@ -1,12 +1,15 @@
 //! CLI — git-style direct subcommands, hand-rolled from std::env::args().
 //!
-//! No CLI-parsing crate: with nine verbs and two flags, a match
+//! No CLI-parsing crate: with nine verbs and three flags, a match
 //! over the argument list is clearer than a dependency (§6 of the
 //! handoff). Verbs:
 //!   termocab start [--no-shuffle|--seed <n>] <lang> [stage]
 //!                                 run the next (or a given) stage —
 //!                                 exercises shuffle by default (D7)
-//!   termocab review <lang>          spaced-repetition review of due words
+//!   termocab review [--limit <n>|--no-limit] <lang>
+//!                                 spaced-repetition review of due words —
+//!                                 oldest due first, 20 cards a session
+//!                                 unless --limit/--no-limit (D21)
 //!   termocab list-words <lang>      all vocabulary in a language
 //!   termocab list-langs             every available language and where
 //!                                 each one comes from (D16)
@@ -32,7 +35,10 @@ use crate::content;
 use crate::engine::Vocabulary;
 use crate::lang::LangId;
 use crate::progress::LanguageProgress;
-use crate::session::{self, Color, ExerciseOrder, RunOptions, StdioTerminal};
+use crate::session::{
+    self, Color, ExerciseOrder, ReviewCap, ReviewOptions, RunOptions, StdioTerminal,
+    DEFAULT_REVIEW_LIMIT,
+};
 use crate::srs;
 use crate::storage;
 use std::io::{self, IsTerminal, Write};
@@ -48,7 +54,9 @@ commands:
   start [--no-shuffle|--seed <n>] <lang> [stage]
                             run the next uncompleted stage (or a specific one);
                             exercises shuffle by default
-  review <lang>            review due vocabulary with spaced repetition
+  review [--limit <n>|--no-limit] <lang>
+                            review due vocabulary with spaced repetition;
+                            sessions run oldest-due-first, 20 cards by default
   list-words <lang>         list all vocabulary in a language's stages
   list-langs                list available languages and where each comes from
   progress <lang>           show completed stages, streak and due reviews
@@ -209,6 +217,65 @@ fn os_seed() -> u64 {
         .map(|d| d.as_nanos() as u64)
         .unwrap_or(0);
     nanos ^ (u64::from(std::process::id()) << 32)
+}
+
+/// Extracts `--limit <n>` / `--no-limit` from a `review` argument list
+/// (any position, like start's order flags) and returns the session
+/// cap plus the remaining positional arguments. Unknown `--` options
+/// are usage errors rather than being eaten as language names.
+/// Without either flag the cap is [`DEFAULT_REVIEW_LIMIT`] — 20 cards,
+/// D21's default; `--no-limit` restores the review-everything session
+/// reviews ran as before D21.
+fn parse_review_flags(rest: &[String]) -> Result<(ReviewCap, Vec<String>), CliError> {
+    const USAGE_LINE: &str = "usage: termocab review [--limit <n>|--no-limit] <lang>";
+    let mut positional = Vec::new();
+    let mut cap: Option<ReviewCap> = None;
+    let mut i = 0;
+    while i < rest.len() {
+        match rest[i].as_str() {
+            "--no-limit" => {
+                if cap.is_some() {
+                    return Err(usage(format!(
+                        "--limit and --no-limit say opposite things\n{USAGE_LINE}"
+                    )));
+                }
+                cap = Some(ReviewCap::All);
+            }
+            "--limit" => {
+                let Some(value) = rest.get(i + 1) else {
+                    return Err(usage(format!(
+                        "'--limit' needs a number: --limit <n>\n{USAGE_LINE}"
+                    )));
+                };
+                let n = value.parse::<usize>().map_err(|_| {
+                    usage(format!(
+                        "--limit wants a number, not {value:?}\n{USAGE_LINE}"
+                    ))
+                })?;
+                if n == 0 {
+                    return Err(usage(format!(
+                        "--limit 0 would review nothing — use a number >= 1\n{USAGE_LINE}"
+                    )));
+                }
+                if cap.is_some() {
+                    return Err(usage(format!(
+                        "--limit and --no-limit say opposite things\n{USAGE_LINE}"
+                    )));
+                }
+                cap = Some(ReviewCap::AtMost(n));
+                i += 1; // the limit value is consumed, not positional
+            }
+            other if other.starts_with("--") => {
+                return Err(usage(format!("unknown option: {other}\n{USAGE_LINE}")));
+            }
+            other => positional.push(other.to_string()),
+        }
+        i += 1;
+    }
+    Ok((
+        cap.unwrap_or(ReviewCap::AtMost(DEFAULT_REVIEW_LIMIT)),
+        positional,
+    ))
 }
 
 /// Whether session feedback gets ANSI color: stdout must be a
@@ -518,13 +585,24 @@ fn due_reviews(
     Ok((srs, due))
 }
 
-/// review <lang> — spaced-repetition session over the vocabulary of
-/// completed stages (Leitner boxes, see `srs/`). Any answered card
+/// review [--limit <n> | --no-limit] <lang> — spaced-repetition session
+/// over the vocabulary of completed stages (Leitner boxes, see `srs/`).
+/// The session shows at most 20 due cards, oldest due date first (D21):
+/// a learner returning after weeks is handed a sitting-sized queue, not
+/// a finished course's whole card deck, and the words that have waited
+/// longest come first. `--limit <n>` picks another size, `--no-limit`
+/// reviews everything due, the pre-D21 behavior. Any answered card
 /// records the day in progress, so a review keeps the streak alive
 /// exactly like a completed stage does. Nothing is written when there
 /// was nothing to answer.
 fn review(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
-    let lang = expect_lang(rest, "review")?;
+    let (cap, rest) = parse_review_flags(rest)?;
+    if rest.len() != 1 {
+        return Err(usage(
+            "'review' takes a language, plus --limit <n> or --no-limit\nusage: termocab review [--limit <n>|--no-limit] <lang>",
+        ));
+    }
+    let lang = parse_lang(&rest[0])?;
     let stages = load_lang(&lang)?;
     let root = config_root()?;
     let mut prog = storage::load(&root, &lang).map_err(|e| runtime(e.to_string()))?;
@@ -547,7 +625,11 @@ fn review(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
 
     let vocabulary = reviewable_words(&stages, &prog);
     let mut term = StdioTerminal;
-    let outcome = session::run_review(&mut term, &mut srs, &vocabulary, &today, colors_enabled())
+    let opts = ReviewOptions {
+        cap,
+        color: colors_enabled(),
+    };
+    let outcome = session::run_review(&mut term, &mut srs, &vocabulary, &today, &opts)
         .map_err(stdout_error)?;
 
     if outcome.answered > 0 {
@@ -562,6 +644,15 @@ fn review(rest: &[String], clock: &dyn Clock) -> Result<(), CliError> {
             storage::save(&root, &lang, &prog).map_err(|e| runtime(e.to_string()))?;
         }
         say("review saved.")?;
+    }
+    // D21: cards still due after the run — the cap held some back, or
+    // the session stopped early. Recomputed from the state rather than
+    // counted, so aborts, orphan skips and caps all report the truth.
+    let still_due = srs.due_on(&today).len();
+    if still_due > 0 {
+        say(&format!(
+            "{still_due} word(s) still due — run 'termocab review {lang}' to continue."
+        ))?;
     }
     Ok(())
 }
@@ -1089,6 +1180,63 @@ mod tests {
     }
 
     #[test]
+    fn review_limit_flags_are_usage_checked() {
+        // parse_review_flags runs before any state or environment is
+        // touched, so the whole surface is unit-testable through run()
+        for (cmd_line, fragment) in [
+            (
+                vec!["review", "--limit", "2", "--no-limit", "test"],
+                "--limit and --no-limit say opposite things",
+            ),
+            (vec!["review", "--limit"], "'--limit' needs a number"),
+            (
+                vec!["review", "--limit", "x", "test"],
+                "--limit wants a number, not \"x\"",
+            ),
+            (
+                vec!["review", "--limit", "0", "test"],
+                "--limit 0 would review nothing",
+            ),
+            (
+                vec!["review", "--no-shuffle", "test"],
+                "unknown option: --no-shuffle",
+            ),
+        ] {
+            let err = run(&args(&cmd_line)).unwrap_err();
+            assert_eq!(err.exit_code(), 2, "{cmd_line:?}");
+            assert!(
+                err.message().contains(fragment),
+                "{cmd_line:?}: {}",
+                err.message()
+            );
+            assert!(
+                err.message()
+                    .contains("termocab review [--limit <n>|--no-limit] <lang>"),
+                "{cmd_line:?}: {}",
+                err.message()
+            );
+        }
+    }
+
+    #[test]
+    fn review_flags_parse_in_any_position() {
+        for cmd_line in [
+            vec!["review", "--limit", "5", "test"],
+            vec!["review", "test", "--limit", "5"],
+        ] {
+            let (cap, rest) = parse_review_flags(&args(&cmd_line[1..]).to_vec()).unwrap();
+            assert_eq!(cap, ReviewCap::AtMost(5), "{cmd_line:?}");
+            assert_eq!(rest, vec!["test".to_string()], "{cmd_line:?}");
+        }
+        let (cap, rest) = parse_review_flags(&args(&["test"])).unwrap();
+        assert_eq!(cap, ReviewCap::AtMost(DEFAULT_REVIEW_LIMIT));
+        assert_eq!(rest, vec!["test".to_string()]);
+        let (cap, rest) = parse_review_flags(&args(&["--no-limit", "test"])).unwrap();
+        assert_eq!(cap, ReviewCap::All);
+        assert_eq!(rest, vec!["test".to_string()]);
+    }
+
+    #[test]
     fn arity_errors_name_the_usage_line() {
         for (cmd_line, fragment) in [
             (
@@ -1096,7 +1244,10 @@ mod tests {
                 "termocab progress <lang>",
             ),
             (vec!["streak", "french", "junk"], "termocab streak <lang>"),
-            (vec!["review", "french", "junk"], "termocab review <lang>"),
+            (
+                vec!["review", "french", "junk"],
+                "termocab review [--limit <n>|--no-limit] <lang>",
+            ),
             (
                 vec!["list-words", "french", "junk"],
                 "termocab list-words <lang>",
