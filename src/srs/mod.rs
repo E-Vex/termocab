@@ -44,7 +44,9 @@ pub struct Schedule {
 
 /// All scheduled words for one language, keyed by word. A `BTreeMap`
 /// keeps the word order stable, so serialized state files are
-/// diff-friendly and review sessions run in a deterministic order.
+/// diff-friendly, and `due_on`'s oldest-first order is a deterministic
+/// function of the state — review sessions never depend on hash or
+/// insertion order.
 #[derive(Debug, Default, Clone)]
 pub struct SrsState {
     cards: BTreeMap<String, Card>,
@@ -92,14 +94,23 @@ impl SrsState {
     }
 
     /// Cards due on or before `date`: everything overdue plus what is
-    /// due today. Word order is alphabetical, which makes review
-    /// sessions deterministic.
+    /// due today, **oldest due date first**, ties alphabetical by word.
+    /// This is the drain order for review sessions (D21): the words
+    /// that have waited longest come first, so a capped session reviews
+    /// the most overdue material and a backlog clears in a fair,
+    /// predictable queue. It is also the order D7 always documented
+    /// for reviews ("due-date order"); the alphabetical iteration it
+    /// replaced only ever differed when a backlog existed — exactly
+    /// when the order matters.
     pub fn due_on(&self, date: &str) -> Vec<(&str, &Card)> {
-        self.cards
+        let mut due: Vec<(&str, &Card)> = self
+            .cards
             .iter()
             .filter(|(_, c)| c.due.as_str() <= date)
             .map(|(w, c)| (w.as_str(), c))
-            .collect()
+            .collect();
+        due.sort_by(|a, b| a.1.due.cmp(&b.1.due).then_with(|| a.0.cmp(b.0)));
+        due
     }
 
     /// Applies one review result. Correct promotes one box (capped at
@@ -296,6 +307,32 @@ mod tests {
         ]);
         let due: Vec<&str> = s.due_on("2026-10-30").into_iter().map(|(w, _)| w).collect();
         assert_eq!(due, vec!["aaa", "bbb"]);
+    }
+
+    #[test]
+    fn due_on_orders_oldest_due_first_then_word() {
+        // a backlog in three vintages: the drain order is oldest due
+        // date first, whatever the word order in the state
+        let s = SrsState::from_parts(vec![
+            ("young".to_string(), 3, "2026-11-20".to_string()),
+            ("old".to_string(), 1, "2026-10-01".to_string()),
+            ("middle".to_string(), 2, "2026-11-01".to_string()),
+        ]);
+        let due: Vec<&str> = s.due_on("2026-11-23").into_iter().map(|(w, _)| w).collect();
+        assert_eq!(due, vec!["old", "middle", "young"]);
+    }
+
+    #[test]
+    fn due_on_breaks_date_ties_alphabetically() {
+        // everything due the same day — the steady daily case — keeps
+        // the alphabetical order reviews have always run in
+        let s = SrsState::from_parts(vec![
+            ("sí".to_string(), 1, "2026-10-30".to_string()),
+            ("mañana".to_string(), 2, "2026-10-30".to_string()),
+            ("adiós".to_string(), 3, "2026-10-30".to_string()),
+        ]);
+        let due: Vec<&str> = s.due_on("2026-10-30").into_iter().map(|(w, _)| w).collect();
+        assert_eq!(due, vec!["adiós", "mañana", "sí"]);
     }
 
     #[test]
