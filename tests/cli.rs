@@ -132,12 +132,64 @@ fn two_stage_course() -> String {
 /// commands find it through $HOME alone, which is the whole point: an
 /// installed binary must not depend on the current directory.
 fn install_course(scratch: &Scratch) {
-    let file = scratch.stages_file("course.json", &two_stage_course());
+    install(scratch, &two_stage_course());
+}
+
+/// Installs any course json as `test`, same real add-lang path as
+/// [`install_course`].
+fn install(scratch: &Scratch, json: &str) {
+    let file = scratch.stages_file("course.json", json);
     let out = termocab(scratch)
         .args(["add-lang", "test", file.to_str().unwrap()])
         .output()
         .expect("add-lang");
     assert!(out.status.success(), "add-lang failed: {}", stderr(&out));
+}
+
+/// A three-word course: stage 1 teaches alpha/beta/gamma (translations
+/// a/b/c) through four exercises — three translations and a multiple
+/// choice — so one passing run schedules all three words for review.
+fn three_word_course() -> String {
+    r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Three", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "alpha", "translation": "a", "pos": "x", "example": "alpha" },
+              { "word": "beta", "translation": "b", "pos": "x", "example": "beta" },
+              { "word": "gamma", "translation": "c", "pos": "x", "example": "gamma" }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "alpha", "answer": "a" },
+              { "type": "translation", "prompt": "beta", "answer": "b" },
+              { "type": "translation", "prompt": "gamma", "answer": "c" },
+              { "type": "multiple_choice", "prompt": "pick the first",
+                "options": ["a", "b", "c"], "answer": "a" }
+            ] }
+       ] }"#
+        .to_string()
+}
+
+/// An n-word course for cap tests: vocabulary w01..w0n, every
+/// translation "a", and one exercise — enough to complete the stage
+/// and schedule the whole vocabulary at once. Words sort zero-padded
+/// so w10 follows w09, not w02.
+fn many_word_course(n: usize) -> String {
+    let vocab: Vec<String> = (1..=n)
+        .map(|i| {
+            format!(
+                "{{ \"word\": \"w{i:02}\", \"translation\": \"a\", \"pos\": \"x\", \"example\": \"w{i:02}\" }}"
+            )
+        })
+        .collect();
+    format!(
+        r#"{{ "language": "test", "stages": [
+            {{ "id": 1, "title": "Many", "level_hint": "beginner",
+               "vocabulary": [{}],
+               "exercises": [
+                 {{ "type": "translation", "prompt": "w01", "answer": "a" }}
+               ] }}
+       ] }}"#,
+        vocab.join(",\n               ")
+    )
 }
 
 #[test]
@@ -698,6 +750,144 @@ fn review_flows_end_to_end() {
     cmd.args(["review", "test"]);
     let out = feed(&mut cmd, "");
     assert!(stdout(&out).contains("no cards due today"));
+}
+
+/// D21 end to end: a capped review shows the split in its header,
+/// answers only the cards the cap admitted, tells the learner the
+/// queue is not empty, and the next run continues where this one
+/// stopped. The three words were all scheduled due-today by the same
+/// stage completion, so the oldest-first order degenerates to
+/// alphabetical and the cap strands gamma.
+#[test]
+fn review_limits_sessions_and_the_queue_continues() {
+    let scratch = Scratch::new("review-limit");
+    install(&scratch, &three_word_course());
+
+    // complete stage 1 -> alpha, beta and gamma are due immediately.
+    // --no-shuffle: the scripted answers follow the authored order
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "--no-shuffle", "test"]);
+    feed(&mut cmd, "a\nb\nc\na\n");
+
+    // a capped session: two of the three cards
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "--limit", "2", "test"]);
+    let out = feed(&mut cmd, "a\nb\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("— review: 2 of 3 due word(s) —"), "{text}");
+    assert!(text.contains("[1/2] alpha"), "{text}");
+    assert!(text.contains("[2/2] beta"), "{text}");
+    assert!(!text.contains("[3/3] gamma"), "{text}");
+    assert!(text.contains("review saved."), "{text}");
+    assert!(
+        text.contains("1 word(s) still due — run 'termocab review test' to continue."),
+        "{text}"
+    );
+
+    // the capped run persisted exactly what it answered: alpha and
+    // beta moved up a box, gamma was never shown and keeps box 1
+    let srs_text = std::fs::read_to_string(scratch.home().join(".config/termocab/srs/test.txt"))
+        .expect("srs file");
+    assert!(srs_text.contains("word alpha box 2"), "{srs_text}");
+    assert!(srs_text.contains("word beta box 2"), "{srs_text}");
+    assert!(srs_text.contains("word gamma box 1"), "{srs_text}");
+
+    // the next session continues the queue with the stranded card
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(&mut cmd, "c\n");
+    let text = stdout(&out);
+    assert!(text.contains("[1/1] gamma"), "{text}");
+    assert!(!text.contains("still due"), "{text}");
+}
+
+/// D21's default: 20 cards a session. A learner who completes a stage
+/// holding 25 words is handed 20 of them, and told about the rest.
+#[test]
+fn review_defaults_to_twenty_cards_a_session() {
+    let scratch = Scratch::new("review-default-cap");
+    install(&scratch, &many_word_course(25));
+
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "test"]);
+    feed(&mut cmd, "a\n");
+
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(&mut cmd, &"a\n".repeat(20));
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("— review: 20 of 25 due word(s) —"), "{text}");
+    assert!(text.contains("[20/20] w20"), "{text}");
+    assert!(
+        text.contains("5 word(s) still due — run 'termocab review test' to continue."),
+        "{text}"
+    );
+}
+
+/// --no-limit restores the pre-D21 session: every due card, the plain
+/// header, nothing left over.
+#[test]
+fn review_no_limit_shows_every_card() {
+    let scratch = Scratch::new("review-no-limit");
+    install(&scratch, &many_word_course(25));
+
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "test"]);
+    feed(&mut cmd, "a\n");
+
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "--no-limit", "test"]);
+    let out = feed(&mut cmd, &"a\n".repeat(25));
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("— review: 25 word(s) —"), "{text}");
+    assert!(text.contains("[25/25] w25"), "{text}");
+    assert!(!text.contains("still due"), "{text}");
+}
+
+/// D21's ordering, end to end: state files are plain text, so the
+/// test writes a backlog in three vintages by hand and checks the
+/// cap drains the oldest first — gamma (due 2025-01-01) before alpha
+/// (due 2025-10-01) before beta (due 2026-11-01), whatever the
+/// alphabetical order would say.
+#[test]
+fn stranded_cards_return_oldest_first() {
+    let scratch = Scratch::new("review-order");
+    install(&scratch, &three_word_course());
+
+    // stage 1 complete, three cards overdue by very different amounts
+    let config = scratch.home().join(".config/termocab");
+    std::fs::create_dir_all(config.join("progress")).expect("progress dir");
+    std::fs::create_dir_all(config.join("srs")).expect("srs dir");
+    std::fs::write(config.join("progress/test.txt"), "stage 1\n").expect("progress");
+    std::fs::write(
+        config.join("srs/test.txt"),
+        "word alpha box 2 due 2025-10-01\n\
+         word beta box 3 due 2026-11-01\n\
+         word gamma box 1 due 2025-01-01\n",
+    )
+    .expect("srs");
+
+    // the cap of two takes the two oldest: gamma, then alpha
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "--limit", "2", "test"]);
+    let out = feed(&mut cmd, "c\na\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("— review: 2 of 3 due word(s) —"), "{text}");
+    assert!(text.contains("[1/2] gamma"), "{text}");
+    assert!(text.contains("[2/2] alpha"), "{text}");
+    assert!(text.contains("1 word(s) still due"), "{text}");
+
+    // the continuation run drains the freshest vintage: beta
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(&mut cmd, "b\n");
+    let text = stdout(&out);
+    assert!(text.contains("[1/1] beta"), "{text}");
+    assert!(!text.contains("still due"), "{text}");
 }
 
 /// D8 end to end: a word whose translation is "hi" must accept the
