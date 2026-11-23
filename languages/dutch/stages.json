@@ -6019,6 +6019,1937 @@
           "answer": "cadeau"
         }
       ]
+    },
+    {
+      "id": 16,
+      "title": "City and Directions",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "het plein",
+          "translation": "square",
+          "pos": "noun",
+          "example": "Het plein van het dorp is groot."
+        },
+        {
+          "word": "het museum",
+          "translation": "museum",
+          "pos": "noun",
+          "example": "Het museum opent om negen uur."
+        },
+        {
+          "word": "de brug",
+          "translation": "bridge",
+          "pos": "noun",
+          "example": "Deze brug is heel oud."
+        },
+        {
+          "word": "de toren",
+          "translation": "tower",
+          "pos": "noun",
+          "example": "De toren staat aan het water."
+        },
+        {
+          "word": "de laan",
+          "translation": "avenue",
+          "pos": "noun",
+          "example": "Ik loop door de laan."
+        },
+        {
+          "word": "de wijk",
+          "translation": "neighborhood",
+          "accepted_translations": ["district"],
+          "pos": "noun",
+          "example": "Ik woon in een rustige wijk."
+        },
+        {
+          "word": "het verkeerslicht",
+          "translation": "traffic light",
+          "pos": "noun",
+          "example": "Wacht bij het verkeerslicht."
+        },
+        {
+          "word": "de hoek",
+          "translation": "corner",
+          "pos": "noun",
+          "example": "Het café is om de hoek."
+        },
+        {
+          "word": "de kaart",
+          "translation": "map",
+          "pos": "noun",
+          "example": "Ik koop een kaart van de stad."
+        },
+        {
+          "word": "links",
+          "translation": "left",
+          "pos": "adverb",
+          "example": "De bank is links."
+        },
+        {
+          "word": "rechts",
+          "translation": "right",
+          "pos": "adverb",
+          "example": "De bioscoop is rechts."
+        },
+        {
+          "word": "rechtdoor",
+          "translation": "straight ahead",
+          "pos": "adverb",
+          "example": "Ga rechtdoor tot de brug."
+        },
+        {
+          "word": "ver",
+          "translation": "far",
+          "pos": "adverb",
+          "example": "Het station is ver van hier."
+        },
+        {
+          "word": "afslaan",
+          "translation": "to turn",
+          "pos": "verb",
+          "example": "Sla links af bij het verkeerslicht."
+        },
+        {
+          "word": "oversteken",
+          "translation": "to cross",
+          "pos": "verb",
+          "example": "We steken de straat over."
+        },
+        {
+          "word": "verdwalen",
+          "translation": "to get lost",
+          "pos": "verb",
+          "example": "Ik verdwaal vaak in deze stad."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "het plein",
+          "answer": "square"
+        },
+        {
+          "type": "translation",
+          "prompt": "het museum",
+          "answer": "museum"
+        },
+        {
+          "type": "translation",
+          "prompt": "de brug",
+          "answer": "bridge"
+        },
+        {
+          "type": "translation",
+          "prompt": "de toren",
+          "answer": "tower"
+        },
+        {
+          "type": "translation",
+          "prompt": "de laan",
+          "answer": "avenue"
+        },
+        {
+          "type": "translation",
+          "prompt": "de wijk",
+          "answer": "neighborhood",
+          "accepted_answers": ["district"]
+        },
+        {
+          "type": "translation",
+          "prompt": "het verkeerslicht",
+          "answer": "traffic light"
+        },
+        {
+          "type": "translation",
+          "prompt": "de hoek",
+          "answer": "corner"
+        },
+        {
+          "type": "translation",
+          "prompt": "de kaart",
+          "answer": "map"
+        },
+        {
+          "type": "translation",
+          "prompt": "links",
+          "answer": "left"
+        },
+        {
+          "type": "translation",
+          "prompt": "rechts",
+          "answer": "right"
+        },
+        {
+          "type": "translation",
+          "prompt": "rechtdoor",
+          "answer": "straight ahead"
+        },
+        {
+          "type": "translation",
+          "prompt": "ver",
+          "answer": "far"
+        },
+        {
+          "type": "translation",
+          "prompt": "afslaan",
+          "answer": "to turn"
+        },
+        {
+          "type": "translation",
+          "prompt": "oversteken",
+          "answer": "to cross"
+        },
+        {
+          "type": "translation",
+          "prompt": "verdwalen",
+          "answer": "to get lost"
+        },
+        {
+          "type": "translation",
+          "prompt": "Het museum is om de hoek van de laan.",
+          "answer": "The museum is around the corner of the avenue.",
+          "accepted_answers": ["The museum is around the corner on the avenue."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Sla links af na de toren.",
+          "answer": "Turn left after the tower."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ga rechtdoor tot het verkeerslicht.",
+          "answer": "Go straight ahead to the traffic light.",
+          "accepted_answers": ["Go straight to the traffic light."]
+        },
+        {
+          "type": "translation",
+          "prompt": "We steken elke ochtend de brug over.",
+          "answer": "We cross the bridge every morning."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik woon al een jaar in deze wijk.",
+          "answer": "I have lived in this neighborhood for a year.",
+          "accepted_answers": ["I've lived in this neighborhood for a year."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Het station is ver, neem een taxi.",
+          "answer": "The station is far, take a taxi.",
+          "accepted_answers": ["The station is far away, take a taxi."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Verdwaal niet in de oude binnenstad.",
+          "answer": "Don't get lost in the old town."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik kijk op de kaart van de stad.",
+          "answer": "I am looking at the map of the city.",
+          "accepted_answers": ["I'm looking at the map of the city."]
+        },
+        {
+          "type": "translation",
+          "prompt": "The tower is near the bridge.",
+          "answer": "De toren is vlak bij de brug."
+        },
+        {
+          "type": "translation",
+          "prompt": "Turn right at the traffic light.",
+          "answer": "Sla rechts af bij het verkeerslicht."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't want to get lost.",
+          "answer": "Ik wil niet verdwalen."
+        },
+        {
+          "type": "translation",
+          "prompt": "My neighborhood is quiet.",
+          "answer": "Mijn wijk is rustig."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'square':",
+          "options": [
+            "het plein",
+            "de brug",
+            "de hoek",
+            "de wijk"
+          ],
+          "answer": "het plein"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'museum':",
+          "options": [
+            "het museum",
+            "de toren",
+            "de laan",
+            "de kaart"
+          ],
+          "answer": "het museum"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bridge':",
+          "options": [
+            "de brug",
+            "de toren",
+            "het plein",
+            "de laan"
+          ],
+          "answer": "de brug"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tower':",
+          "options": [
+            "de toren",
+            "het museum",
+            "de brug",
+            "de wijk"
+          ],
+          "answer": "de toren"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'neighborhood':",
+          "options": [
+            "de wijk",
+            "het plein",
+            "de hoek",
+            "de kaart"
+          ],
+          "answer": "de wijk"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'traffic light':",
+          "options": [
+            "het verkeerslicht",
+            "de hoek",
+            "de kaart",
+            "de toren"
+          ],
+          "answer": "het verkeerslicht"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'left':",
+          "options": [
+            "links",
+            "rechts",
+            "de hoek",
+            "de kaart"
+          ],
+          "answer": "links"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'straight ahead':",
+          "options": [
+            "rechtdoor",
+            "links",
+            "rechts",
+            "de kaart"
+          ],
+          "answer": "rechtdoor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "We gaan ___heen met de trein.",
+          "answer": "er"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ligt een kaart op tafel.",
+          "answer": "Er"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ staat een toren aan het water.",
+          "answer": "Er"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik denk ___ vaak aan.",
+          "answer": "er"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ links af bij het verkeerslicht.",
+          "answer": "Sla"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ga ___ door tot de brug.",
+          "answer": "recht"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Steek over bij het ___.",
+          "answer": "verkeerslicht"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Het station is ___, neem een taxi.",
+          "answer": "ver"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Money and Services",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "de kosten",
+          "translation": "cost",
+          "accepted_translations": ["costs", "price"],
+          "pos": "noun",
+          "example": "De kosten zijn hoog."
+        },
+        {
+          "word": "het bonnetje",
+          "translation": "receipt",
+          "pos": "noun",
+          "example": "Bewaar het bonnetje, alstublieft."
+        },
+        {
+          "word": "de rekening",
+          "translation": "bill",
+          "accepted_translations": ["account"],
+          "pos": "noun",
+          "example": "De rekening is al betaald."
+        },
+        {
+          "word": "de korting",
+          "translation": "discount",
+          "pos": "noun",
+          "example": "Er is korting voor studenten."
+        },
+        {
+          "word": "contant",
+          "translation": "cash",
+          "accepted_translations": ["in cash"],
+          "pos": "adjective",
+          "example": "Ik betaal contant."
+        },
+        {
+          "word": "de pinpas",
+          "translation": "bank card",
+          "accepted_translations": ["card"],
+          "pos": "noun",
+          "example": "Ik betaal met de pinpas."
+        },
+        {
+          "word": "afrekenen",
+          "translation": "to pay",
+          "accepted_translations": ["to settle up"],
+          "pos": "verb",
+          "example": "Ik reken af aan de kassa."
+        },
+        {
+          "word": "opnemen",
+          "translation": "to withdraw",
+          "accepted_translations": ["to take out"],
+          "pos": "verb",
+          "example": "Ik neem geld op uit de automaat."
+        },
+        {
+          "word": "uitgeven",
+          "translation": "to spend",
+          "pos": "verb",
+          "example": "Ik geef te veel geld uit."
+        },
+        {
+          "word": "sparen",
+          "translation": "to save",
+          "pos": "verb",
+          "example": "Ik spaar voor een reis."
+        },
+        {
+          "word": "gratis",
+          "translation": "free",
+          "pos": "adjective",
+          "example": "De entree is gratis op zondag."
+        },
+        {
+          "word": "het formulier",
+          "translation": "form",
+          "pos": "noun",
+          "example": "Vul dit formulier in, alstublieft."
+        },
+        {
+          "word": "ondertekenen",
+          "translation": "to sign",
+          "pos": "verb",
+          "example": "Onderteken hier, alstublieft."
+        },
+        {
+          "word": "de klant",
+          "translation": "customer",
+          "pos": "noun",
+          "example": "De klant wacht bij de kassa."
+        },
+        {
+          "word": "de service",
+          "translation": "service",
+          "pos": "noun",
+          "example": "De service is inbegrepen."
+        },
+        {
+          "word": "het advies",
+          "translation": "advice",
+          "accepted_translations": ["tip"],
+          "pos": "noun",
+          "example": "Zij geeft me een goed advies."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "de kosten",
+          "answer": "cost",
+          "accepted_answers": ["costs", "price"]
+        },
+        {
+          "type": "translation",
+          "prompt": "het bonnetje",
+          "answer": "receipt"
+        },
+        {
+          "type": "translation",
+          "prompt": "de rekening",
+          "answer": "bill",
+          "accepted_answers": ["account"]
+        },
+        {
+          "type": "translation",
+          "prompt": "de korting",
+          "answer": "discount"
+        },
+        {
+          "type": "translation",
+          "prompt": "contant",
+          "answer": "cash",
+          "accepted_answers": ["in cash"]
+        },
+        {
+          "type": "translation",
+          "prompt": "de pinpas",
+          "answer": "bank card",
+          "accepted_answers": ["card"]
+        },
+        {
+          "type": "translation",
+          "prompt": "afrekenen",
+          "answer": "to pay",
+          "accepted_answers": ["to settle up"]
+        },
+        {
+          "type": "translation",
+          "prompt": "opnemen",
+          "answer": "to withdraw",
+          "accepted_answers": ["to take out"]
+        },
+        {
+          "type": "translation",
+          "prompt": "uitgeven",
+          "answer": "to spend"
+        },
+        {
+          "type": "translation",
+          "prompt": "sparen",
+          "answer": "to save"
+        },
+        {
+          "type": "translation",
+          "prompt": "gratis",
+          "answer": "free"
+        },
+        {
+          "type": "translation",
+          "prompt": "het formulier",
+          "answer": "form"
+        },
+        {
+          "type": "translation",
+          "prompt": "ondertekenen",
+          "answer": "to sign"
+        },
+        {
+          "type": "translation",
+          "prompt": "de klant",
+          "answer": "customer"
+        },
+        {
+          "type": "translation",
+          "prompt": "de service",
+          "answer": "service"
+        },
+        {
+          "type": "translation",
+          "prompt": "het advies",
+          "answer": "advice",
+          "accepted_answers": ["tip"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Betaal ik contant of met de pinpas ?",
+          "answer": "Do I pay in cash or by card?",
+          "accepted_answers": ["Should I pay in cash or by card?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik heb honderd euro opgenomen uit de automaat.",
+          "answer": "I withdrew a hundred euros from the ATM.",
+          "accepted_answers": ["I took out a hundred euros from the ATM."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Er is korting voor studenten.",
+          "answer": "There is a discount for students.",
+          "accepted_answers": ["There's a discount for students."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vul dit formulier in en onderteken onderaan.",
+          "answer": "Fill out this form and sign at the bottom.",
+          "accepted_answers": ["Fill in this form and sign at the bottom."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Dit museum is gratis op de eerste zondag van de maand.",
+          "answer": "This museum is free on the first Sunday of the month.",
+          "accepted_answers": ["This museum is free the first Sunday of the month."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Zij spaart om een auto te kopen.",
+          "answer": "She is saving to buy a car.",
+          "accepted_answers": ["She's saving to buy a car.", "She is saving to buy a car."]
+        },
+        {
+          "type": "translation",
+          "prompt": "De service zit al in de prijs.",
+          "answer": "The service is already included in the price.",
+          "accepted_answers": ["Service is already included in the price."]
+        },
+        {
+          "type": "translation",
+          "prompt": "De klant vraagt om een bonnetje.",
+          "answer": "The customer asks for a receipt."
+        },
+        {
+          "type": "translation",
+          "prompt": "I want to open an account.",
+          "answer": "Ik wil een rekening openen."
+        },
+        {
+          "type": "translation",
+          "prompt": "You spend too much money.",
+          "answer": "Je geeft te veel geld uit."
+        },
+        {
+          "type": "translation",
+          "prompt": "Can you give me some advice?",
+          "answer": "Kun je me een advies geven ?"
+        },
+        {
+          "type": "translation",
+          "prompt": "I pay by card.",
+          "answer": "Ik betaal met de pinpas."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cost':",
+          "options": [
+            "de kosten",
+            "het bonnetje",
+            "de rekening",
+            "de korting"
+          ],
+          "answer": "de kosten"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'receipt':",
+          "options": [
+            "het bonnetje",
+            "de kosten",
+            "de rekening",
+            "de service"
+          ],
+          "answer": "het bonnetje"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bill':",
+          "options": [
+            "de rekening",
+            "de kosten",
+            "de korting",
+            "de service"
+          ],
+          "answer": "de rekening"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'discount':",
+          "options": [
+            "de korting",
+            "de kosten",
+            "het bonnetje",
+            "het formulier"
+          ],
+          "answer": "de korting"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cash':",
+          "options": [
+            "contant",
+            "de kosten",
+            "het bonnetje",
+            "de pinpas"
+          ],
+          "answer": "contant"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'free':",
+          "options": [
+            "gratis",
+            "de klant",
+            "de service",
+            "het bonnetje"
+          ],
+          "answer": "gratis"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'customer':",
+          "options": [
+            "de klant",
+            "de service",
+            "het bonnetje",
+            "de kosten"
+          ],
+          "answer": "de klant"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'advice':",
+          "options": [
+            "het advies",
+            "de service",
+            "de klant",
+            "de korting"
+          ],
+          "answer": "het advies"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik laat mijn haar ___.",
+          "answer": "knippen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hij laat de auto ___.",
+          "answer": "repareren"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ af, alstublieft.",
+          "answer": "Reken"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik wil geld ___ bij de automaat.",
+          "answer": "opnemen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ je contant of met de pinpas ?",
+          "answer": "Betalen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Heeft u een ___ voor studenten ?",
+          "answer": "korting"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De ___ zijn al in de prijs begrepen.",
+          "answer": "kosten"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vul dit ___ in, alstublieft.",
+          "answer": "formulier"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Nature and the Environment",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "de natuur",
+          "translation": "nature",
+          "pos": "noun",
+          "example": "Ik hou van de natuur."
+        },
+        {
+          "word": "het bos",
+          "translation": "forest",
+          "pos": "noun",
+          "example": "Het bos is stil in de ochtend."
+        },
+        {
+          "word": "de rivier",
+          "translation": "river",
+          "pos": "noun",
+          "example": "De rivier stroomt door het bos."
+        },
+        {
+          "word": "het meer",
+          "translation": "lake",
+          "pos": "noun",
+          "example": "We zwemmen in het meer."
+        },
+        {
+          "word": "de boom",
+          "translation": "tree",
+          "pos": "noun",
+          "example": "Deze boom is heel oud."
+        },
+        {
+          "word": "de bloem",
+          "translation": "flower",
+          "pos": "noun",
+          "example": "Deze bloem is prachtig."
+        },
+        {
+          "word": "het dier",
+          "translation": "animal",
+          "pos": "noun",
+          "example": "Het dier slaapt onder de boom."
+        },
+        {
+          "word": "de vogel",
+          "translation": "bird",
+          "pos": "noun",
+          "example": "De vogel zingt in de ochtend."
+        },
+        {
+          "word": "de lucht",
+          "translation": "sky",
+          "accepted_translations": ["air"],
+          "pos": "noun",
+          "example": "De lucht is vandaag blauw."
+        },
+        {
+          "word": "de ster",
+          "translation": "star",
+          "pos": "noun",
+          "example": "Ik kijk 's nachts naar de sterren."
+        },
+        {
+          "word": "de aarde",
+          "translation": "earth",
+          "accepted_translations": ["soil", "the earth"],
+          "pos": "noun",
+          "example": "De aarde draait om de zon."
+        },
+        {
+          "word": "het klimaat",
+          "translation": "climate",
+          "pos": "noun",
+          "example": "Het klimaat verandert overal."
+        },
+        {
+          "word": "de vervuiling",
+          "translation": "pollution",
+          "pos": "noun",
+          "example": "Vervuiling van de lucht is een probleem."
+        },
+        {
+          "word": "beschermen",
+          "translation": "to protect",
+          "pos": "verb",
+          "example": "We moeten het bos beschermen."
+        },
+        {
+          "word": "recyclen",
+          "translation": "to recycle",
+          "pos": "verb",
+          "example": "Ik recycle papier en glas."
+        },
+        {
+          "word": "planten",
+          "translation": "to plant",
+          "pos": "verb",
+          "example": "Ze planten een boom in de tuin."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "de natuur",
+          "answer": "nature"
+        },
+        {
+          "type": "translation",
+          "prompt": "het bos",
+          "answer": "forest"
+        },
+        {
+          "type": "translation",
+          "prompt": "de rivier",
+          "answer": "river"
+        },
+        {
+          "type": "translation",
+          "prompt": "het meer",
+          "answer": "lake"
+        },
+        {
+          "type": "translation",
+          "prompt": "de boom",
+          "answer": "tree"
+        },
+        {
+          "type": "translation",
+          "prompt": "de bloem",
+          "answer": "flower"
+        },
+        {
+          "type": "translation",
+          "prompt": "het dier",
+          "answer": "animal"
+        },
+        {
+          "type": "translation",
+          "prompt": "de vogel",
+          "answer": "bird"
+        },
+        {
+          "type": "translation",
+          "prompt": "de lucht",
+          "answer": "sky",
+          "accepted_answers": ["air"]
+        },
+        {
+          "type": "translation",
+          "prompt": "de ster",
+          "answer": "star"
+        },
+        {
+          "type": "translation",
+          "prompt": "de aarde",
+          "answer": "earth",
+          "accepted_answers": ["soil", "the earth"]
+        },
+        {
+          "type": "translation",
+          "prompt": "het klimaat",
+          "answer": "climate"
+        },
+        {
+          "type": "translation",
+          "prompt": "de vervuiling",
+          "answer": "pollution"
+        },
+        {
+          "type": "translation",
+          "prompt": "beschermen",
+          "answer": "to protect"
+        },
+        {
+          "type": "translation",
+          "prompt": "recyclen",
+          "answer": "to recycle"
+        },
+        {
+          "type": "translation",
+          "prompt": "planten",
+          "answer": "to plant"
+        },
+        {
+          "type": "translation",
+          "prompt": "We moeten de natuur beschermen.",
+          "answer": "We must protect nature.",
+          "accepted_answers": ["We have to protect nature."]
+        },
+        {
+          "type": "translation",
+          "prompt": "De vogels zingen in het bos.",
+          "answer": "The birds sing in the forest."
+        },
+        {
+          "type": "translation",
+          "prompt": "Het meer is kouder dan de rivier.",
+          "answer": "The lake is colder than the river."
+        },
+        {
+          "type": "translation",
+          "prompt": "Dit is de oudste boom van het park.",
+          "answer": "This is the oldest tree in the park."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vervuiling in steden is een groot probleem.",
+          "answer": "Pollution in cities is a big problem.",
+          "accepted_answers": ["The pollution in cities is a big problem."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik kijk naar de sterren als de lucht helder is.",
+          "answer": "I look at the stars when the sky is clear.",
+          "accepted_answers": ["I watch the stars when the sky is clear."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Het klimaat van deze regio is mild.",
+          "answer": "The climate of this region is mild.",
+          "accepted_answers": ["The climate in this region is mild."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Zij plant in de lente bloemen.",
+          "answer": "She plants flowers in spring.",
+          "accepted_answers": ["She plants flowers in the spring."]
+        },
+        {
+          "type": "translation",
+          "prompt": "The river is behind the mountain.",
+          "answer": "De rivier is achter de berg."
+        },
+        {
+          "type": "translation",
+          "prompt": "This bird is beautiful.",
+          "answer": "Deze vogel is mooi."
+        },
+        {
+          "type": "translation",
+          "prompt": "We recycle glass and paper.",
+          "answer": "We recycelen glas en papier."
+        },
+        {
+          "type": "translation",
+          "prompt": "The earth is our home.",
+          "answer": "De aarde is ons thuis."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'nature':",
+          "options": [
+            "de natuur",
+            "het bos",
+            "het meer",
+            "de rivier"
+          ],
+          "answer": "de natuur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'forest':",
+          "options": [
+            "het bos",
+            "de natuur",
+            "het meer",
+            "de boom"
+          ],
+          "answer": "het bos"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'river':",
+          "options": [
+            "de rivier",
+            "het meer",
+            "het bos",
+            "de vervuiling"
+          ],
+          "answer": "de rivier"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'lake':",
+          "options": [
+            "het meer",
+            "de rivier",
+            "het bos",
+            "de lucht"
+          ],
+          "answer": "het meer"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tree':",
+          "options": [
+            "de boom",
+            "het bos",
+            "de bloem",
+            "het meer"
+          ],
+          "answer": "de boom"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'flower':",
+          "options": [
+            "de bloem",
+            "de boom",
+            "het bos",
+            "de natuur"
+          ],
+          "answer": "de bloem"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bird':",
+          "options": [
+            "de vogel",
+            "het dier",
+            "de boom",
+            "de lucht"
+          ],
+          "answer": "de vogel"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'pollution':",
+          "options": [
+            "de vervuiling",
+            "het klimaat",
+            "de natuur",
+            "de lucht"
+          ],
+          "answer": "de vervuiling"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Amsterdam is groter ___ Brussel.",
+          "answer": "dan"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "goed, beter, ___",
+          "answer": "best"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "groot, groter, ___",
+          "answer": "grootst"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Deze bloem is zo mooi ___ die.",
+          "answer": "als"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dit is de hoogste boom ___ het park.",
+          "answer": "van"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "We moeten het bos ___.",
+          "answer": "beschermen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ papier en glas is belangrijk.",
+          "answer": "Recyclen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "In de lente ___ we bloemen.",
+          "answer": "planten"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Opinions and News",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "de krant",
+          "translation": "newspaper",
+          "pos": "noun",
+          "example": "Ik lees elke ochtend de krant."
+        },
+        {
+          "word": "het artikel",
+          "translation": "article",
+          "pos": "noun",
+          "example": "Dit artikel is heel interessant."
+        },
+        {
+          "word": "de radio",
+          "translation": "radio",
+          "pos": "noun",
+          "example": "Ik luister in de auto naar de radio."
+        },
+        {
+          "word": "de televisie",
+          "translation": "television",
+          "accepted_translations": ["TV"],
+          "pos": "noun",
+          "example": "De televisie staat in de woonkamer."
+        },
+        {
+          "word": "de mening",
+          "translation": "opinion",
+          "pos": "noun",
+          "example": "Iedereen heeft zijn eigen mening."
+        },
+        {
+          "word": "geloven",
+          "translation": "to believe",
+          "pos": "verb",
+          "example": "Ik geloof dit verhaal niet."
+        },
+        {
+          "word": "instemmen",
+          "translation": "to agree",
+          "pos": "verb",
+          "example": "Ik stem met je in."
+        },
+        {
+          "word": "belangrijk",
+          "translation": "important",
+          "pos": "adjective",
+          "example": "Dit is belangrijk nieuws."
+        },
+        {
+          "word": "waarschijnlijk",
+          "translation": "probably",
+          "pos": "adverb",
+          "example": "Hij komt waarschijnlijk morgen."
+        },
+        {
+          "word": "bespreken",
+          "translation": "to discuss",
+          "pos": "verb",
+          "example": "We bespreken het artikel."
+        },
+        {
+          "word": "de journalist",
+          "translation": "journalist",
+          "pos": "noun",
+          "example": "De journalist interviewt de burgemeester."
+        },
+        {
+          "word": "de samenleving",
+          "translation": "society",
+          "pos": "noun",
+          "example": "De samenleving verandert snel."
+        },
+        {
+          "word": "de gebeurtenis",
+          "translation": "event",
+          "pos": "noun",
+          "example": "Dit is een belangrijke gebeurtenis."
+        },
+        {
+          "word": "de leugen",
+          "translation": "lie",
+          "accepted_translations": ["falsehood"],
+          "pos": "noun",
+          "example": "Vertel geen leugens."
+        },
+        {
+          "word": "lijken",
+          "translation": "to seem",
+          "pos": "verb",
+          "example": "Je lijkt moe."
+        },
+        {
+          "word": "het feit",
+          "translation": "fact",
+          "pos": "noun",
+          "example": "Dit is een feit, geen mening."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "de krant",
+          "answer": "newspaper"
+        },
+        {
+          "type": "translation",
+          "prompt": "het artikel",
+          "answer": "article"
+        },
+        {
+          "type": "translation",
+          "prompt": "de radio",
+          "answer": "radio"
+        },
+        {
+          "type": "translation",
+          "prompt": "de televisie",
+          "answer": "television",
+          "accepted_answers": ["TV"]
+        },
+        {
+          "type": "translation",
+          "prompt": "de mening",
+          "answer": "opinion"
+        },
+        {
+          "type": "translation",
+          "prompt": "geloven",
+          "answer": "to believe"
+        },
+        {
+          "type": "translation",
+          "prompt": "instemmen",
+          "answer": "to agree"
+        },
+        {
+          "type": "translation",
+          "prompt": "belangrijk",
+          "answer": "important"
+        },
+        {
+          "type": "translation",
+          "prompt": "waarschijnlijk",
+          "answer": "probably"
+        },
+        {
+          "type": "translation",
+          "prompt": "bespreken",
+          "answer": "to discuss"
+        },
+        {
+          "type": "translation",
+          "prompt": "de journalist",
+          "answer": "journalist"
+        },
+        {
+          "type": "translation",
+          "prompt": "de samenleving",
+          "answer": "society"
+        },
+        {
+          "type": "translation",
+          "prompt": "de gebeurtenis",
+          "answer": "event"
+        },
+        {
+          "type": "translation",
+          "prompt": "de leugen",
+          "answer": "lie",
+          "accepted_answers": ["falsehood"]
+        },
+        {
+          "type": "translation",
+          "prompt": "lijken",
+          "answer": "to seem"
+        },
+        {
+          "type": "translation",
+          "prompt": "het feit",
+          "answer": "fact"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik stem met je in.",
+          "answer": "I agree with you."
+        },
+        {
+          "type": "translation",
+          "prompt": "De journalist schrijft een artikel over de samenleving.",
+          "answer": "The journalist writes an article about society.",
+          "accepted_answers": ["The journalist is writing an article about society."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Naar mijn mening is dit artikel heel goed.",
+          "answer": "In my opinion, this article is very good."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hij zegt niet altijd de waarheid.",
+          "answer": "He doesn't always tell the truth.",
+          "accepted_answers": ["He does not always tell the truth."]
+        },
+        {
+          "type": "translation",
+          "prompt": "We bespreken de gebeurtenissen van de dag.",
+          "answer": "We discuss the events of the day.",
+          "accepted_answers": ["We're discussing the events of the day."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Deze gebeurtenis lijkt belangrijk.",
+          "answer": "This event seems important."
+        },
+        {
+          "type": "translation",
+          "prompt": "Waarschijnlijk heeft hij gelijk.",
+          "answer": "He is probably right.",
+          "accepted_answers": ["Probably he is right."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik geloof dat de televisie soms liegt.",
+          "answer": "I believe that television sometimes lies.",
+          "accepted_answers": ["I think that television sometimes lies."]
+        },
+        {
+          "type": "translation",
+          "prompt": "I read the newspaper every morning.",
+          "answer": "Ik lees elke ochtend de krant."
+        },
+        {
+          "type": "translation",
+          "prompt": "We must discuss this event.",
+          "answer": "We moeten deze gebeurtenis bespreken."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's an important fact.",
+          "answer": "Dit is een belangrijk feit."
+        },
+        {
+          "type": "translation",
+          "prompt": "I listen to the radio in the car.",
+          "answer": "Ik luister in de auto naar de radio."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'newspaper':",
+          "options": [
+            "de krant",
+            "het artikel",
+            "de radio",
+            "de televisie"
+          ],
+          "answer": "de krant"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'article':",
+          "options": [
+            "het artikel",
+            "de krant",
+            "de radio",
+            "het feit"
+          ],
+          "answer": "het artikel"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'radio':",
+          "options": [
+            "de radio",
+            "de televisie",
+            "de krant",
+            "het artikel"
+          ],
+          "answer": "de radio"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'television':",
+          "options": [
+            "de televisie",
+            "de radio",
+            "de krant",
+            "de journalist"
+          ],
+          "answer": "de televisie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'opinion':",
+          "options": [
+            "de mening",
+            "de leugen",
+            "het feit",
+            "de samenleving"
+          ],
+          "answer": "de mening"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'journalist':",
+          "options": [
+            "de journalist",
+            "de samenleving",
+            "de leugen",
+            "de mening"
+          ],
+          "answer": "de journalist"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'lie':",
+          "options": [
+            "de leugen",
+            "het feit",
+            "de mening",
+            "de samenleving"
+          ],
+          "answer": "de leugen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fact':",
+          "options": [
+            "het feit",
+            "de leugen",
+            "de mening",
+            "de gebeurtenis"
+          ],
+          "answer": "het feit"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ je mij willen helpen ?",
+          "answer": "Zou"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik ___ het wel doen.",
+          "answer": "zou"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wat ___ jij doen ?",
+          "answer": "zou"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wij ___ graag komen.",
+          "answer": "zouden"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik stem niet ___ met je mening.",
+          "answer": "in"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Naar mijn ___ is dit het beste artikel.",
+          "answer": "mening"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hij vertelt geen ___.",
+          "answer": "leugens"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dat is een ___, geen mening.",
+          "answer": "feit"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Future and Dreams",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "de toekomst",
+          "translation": "future",
+          "accepted_translations": ["the future"],
+          "pos": "noun",
+          "example": "De toekomst is onzeker."
+        },
+        {
+          "word": "de droom",
+          "translation": "dream",
+          "pos": "noun",
+          "example": "Ik had een mooie droom."
+        },
+        {
+          "word": "de hoop",
+          "translation": "hope",
+          "pos": "noun",
+          "example": "Ik heb hoop om te winnen."
+        },
+        {
+          "word": "het plan",
+          "translation": "plan",
+          "pos": "noun",
+          "example": "Mijn plan is om te reizen."
+        },
+        {
+          "word": "het doel",
+          "translation": "goal",
+          "accepted_translations": ["aim"],
+          "pos": "noun",
+          "example": "Mijn doel is Nederlands leren."
+        },
+        {
+          "word": "de wens",
+          "translation": "wish",
+          "pos": "noun",
+          "example": "Ik doe een wens."
+        },
+        {
+          "word": "misschien",
+          "translation": "maybe",
+          "accepted_translations": ["perhaps"],
+          "pos": "adverb",
+          "example": "Misschien regent het morgen."
+        },
+        {
+          "word": "op een dag",
+          "translation": "one day",
+          "accepted_translations": ["someday"],
+          "pos": "adverb",
+          "example": "Op een dag bezoek ik Japan."
+        },
+        {
+          "word": "het succes",
+          "translation": "success",
+          "pos": "noun",
+          "example": "Ik wens je veel succes."
+        },
+        {
+          "word": "de kans",
+          "translation": "chance",
+          "accepted_translations": ["opportunity"],
+          "pos": "noun",
+          "example": "Dit is een goede kans."
+        },
+        {
+          "word": "hopen",
+          "translation": "to hope",
+          "pos": "verb",
+          "example": "Ik hoop je snel te zien."
+        },
+        {
+          "word": "plannen",
+          "translation": "to plan",
+          "pos": "verb",
+          "example": "We plannen een reis."
+        },
+        {
+          "word": "beloven",
+          "translation": "to promise",
+          "pos": "verb",
+          "example": "Ik beloof te komen."
+        },
+        {
+          "word": "het geluk",
+          "translation": "luck",
+          "accepted_translations": ["happiness", "fortune"],
+          "pos": "noun",
+          "example": "Veel geluk met het examen !"
+        },
+        {
+          "word": "slagen",
+          "translation": "to succeed",
+          "accepted_translations": ["to pass"],
+          "pos": "verb",
+          "example": "Je zult slagen, ik weet het."
+        },
+        {
+          "word": "bereiken",
+          "translation": "to achieve",
+          "accepted_translations": ["to reach"],
+          "pos": "verb",
+          "example": "Je zult je doel bereiken."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "de toekomst",
+          "answer": "future",
+          "accepted_answers": ["the future"]
+        },
+        {
+          "type": "translation",
+          "prompt": "de droom",
+          "answer": "dream"
+        },
+        {
+          "type": "translation",
+          "prompt": "de hoop",
+          "answer": "hope"
+        },
+        {
+          "type": "translation",
+          "prompt": "het plan",
+          "answer": "plan"
+        },
+        {
+          "type": "translation",
+          "prompt": "het doel",
+          "answer": "goal",
+          "accepted_answers": ["aim"]
+        },
+        {
+          "type": "translation",
+          "prompt": "de wens",
+          "answer": "wish"
+        },
+        {
+          "type": "translation",
+          "prompt": "misschien",
+          "answer": "maybe",
+          "accepted_answers": ["perhaps"]
+        },
+        {
+          "type": "translation",
+          "prompt": "op een dag",
+          "answer": "one day",
+          "accepted_answers": ["someday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "het succes",
+          "answer": "success"
+        },
+        {
+          "type": "translation",
+          "prompt": "de kans",
+          "answer": "chance",
+          "accepted_answers": ["opportunity"]
+        },
+        {
+          "type": "translation",
+          "prompt": "hopen",
+          "answer": "to hope"
+        },
+        {
+          "type": "translation",
+          "prompt": "plannen",
+          "answer": "to plan"
+        },
+        {
+          "type": "translation",
+          "prompt": "beloven",
+          "answer": "to promise"
+        },
+        {
+          "type": "translation",
+          "prompt": "het geluk",
+          "answer": "luck",
+          "accepted_answers": ["happiness", "fortune"]
+        },
+        {
+          "type": "translation",
+          "prompt": "slagen",
+          "answer": "to succeed",
+          "accepted_answers": ["to pass"]
+        },
+        {
+          "type": "translation",
+          "prompt": "bereiken",
+          "answer": "to achieve",
+          "accepted_answers": ["to reach"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Op een dag reis ik de wereld rond.",
+          "answer": "One day I will travel around the world.",
+          "accepted_answers": ["Someday I will travel around the world."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Morgen gaan we naar zee.",
+          "answer": "Tomorrow we will go to the sea."
+        },
+        {
+          "type": "translation",
+          "prompt": "Je zult slagen, ik weet het zeker.",
+          "answer": "You will make it, I'm sure.",
+          "accepted_answers": ["You will make it, I am sure."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Het regent waarschijnlijk morgen.",
+          "answer": "It will probably rain tomorrow."
+        },
+        {
+          "type": "translation",
+          "prompt": "Als ik geld heb, koop ik een huis.",
+          "answer": "When I have money, I will buy a house."
+        },
+        {
+          "type": "translation",
+          "prompt": "Zij hoopt arts te worden.",
+          "answer": "She hopes to become a doctor."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik beloof dat ik je niet zal vergeten.",
+          "answer": "I promise you that I will not forget you.",
+          "accepted_answers": ["I promise you that I won't forget you."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Geluk is niet te koop.",
+          "answer": "Happiness cannot be bought.",
+          "accepted_answers": ["You can't buy happiness.", "Happiness can't be bought."]
+        },
+        {
+          "type": "translation",
+          "prompt": "I hope to see you soon.",
+          "answer": "Ik hoop je snel te zien."
+        },
+        {
+          "type": "translation",
+          "prompt": "One day I will speak Dutch very well.",
+          "answer": "Op een dag spreek ik heel goed Nederlands."
+        },
+        {
+          "type": "translation",
+          "prompt": "My goal is to succeed.",
+          "answer": "Mijn doel is om te slagen."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's a real chance.",
+          "answer": "Dit is een echte kans."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'future':",
+          "options": [
+            "de toekomst",
+            "de droom",
+            "de hoop",
+            "het plan"
+          ],
+          "answer": "de toekomst"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'dream':",
+          "options": [
+            "de droom",
+            "de hoop",
+            "de toekomst",
+            "het geluk"
+          ],
+          "answer": "de droom"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hope':",
+          "options": [
+            "de hoop",
+            "de droom",
+            "de toekomst",
+            "het geluk"
+          ],
+          "answer": "de hoop"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'plan':",
+          "options": [
+            "het plan",
+            "het doel",
+            "de toekomst",
+            "de kans"
+          ],
+          "answer": "het plan"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'goal':",
+          "options": [
+            "het doel",
+            "het plan",
+            "de droom",
+            "het succes"
+          ],
+          "answer": "het doel"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'success':",
+          "options": [
+            "het succes",
+            "de kans",
+            "de hoop",
+            "het geluk"
+          ],
+          "answer": "het succes"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'chance':",
+          "options": [
+            "de kans",
+            "het succes",
+            "het doel",
+            "de hoop"
+          ],
+          "answer": "de kans"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'luck':",
+          "options": [
+            "het geluk",
+            "de droom",
+            "de hoop",
+            "het succes"
+          ],
+          "answer": "het geluk"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Morgen ___ ik komen.",
+          "answer": "zal"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wij ___ het zien.",
+          "answer": "zullen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Je ___ slagen, ik weet het.",
+          "answer": "zult"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Zij ___ volgende week komen.",
+          "answer": "zullen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Het ___ morgen regenen.",
+          "answer": "zal"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mijn droom ___ waar.",
+          "answer": "wordt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De toekomst ziet er ___ uit.",
+          "answer": "goed"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dit is mijn grote ___.",
+          "answer": "droom"
+        }
+      ]
     }
   ]
 }
