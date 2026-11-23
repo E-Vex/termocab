@@ -83,8 +83,8 @@ Your numbers, one command away:
 
 ```text
 $ termocab stats french
-french — 1/15 stage(s) complete, streak 1 day(s)
-words: 233 in content, 12 scheduled, 12 due today
+french — 1/20 stage(s) complete, streak 1 day(s)
+words: 313 in content, 12 scheduled, 12 due today
 boxes 1-6: █▁▁▁▁▁  (12 0 0 0 0 0)
 reviews due, next 14 days (today first): █▁▁▁▁▁▁▁▁▁▁▁▁▁
 active days, last 14 (oldest first): ▁▁▁▁▁▁▁▁▁▁▁▁▁█
@@ -122,23 +122,23 @@ Needs Rust 1.78 or newer, on Linux or macOS. If your shell says `termocab: comma
 
 ## Courses
 
-Thirteen courses ship inside the binary. Every course has 15 stages in three waves, **beginner** (1–5), **elementary** (6–10) and **intermediate** (11–15), and runs on the same engine with the same rules.
+Thirteen courses ship inside the binary. Every course has 20 stages in four waves, **beginner** (1–5), **elementary** (6–10), **intermediate** (11–15) and **upper-intermediate** (16–20), and runs on the same engine with the same rules.
 
 | Course | Stages | Words | Exercises |
 | --- | :---: | :---: | :---: |
-| French | 15 | 233 | 617 |
-| Spanish | 15 | 233 | 637 |
-| German | 15 | 233 | 656 |
-| Italian | 15 | 233 | 658 |
-| Polish | 15 | 233 | 658 |
-| Romanian | 15 | 233 | 658 |
-| Portuguese (Brazilian) | 15 | 233 | 658 |
-| Swedish | 15 | 233 | 658 |
-| Hungarian | 15 | 233 | 658 |
-| Turkish | 15 | 233 | 658 |
-| Icelandic | 15 | 233 | 658 |
-| Catalan | 15 | 233 | 658 |
-| Dutch | 15 | 233 | 658 |
+| French | 20 | 313 | 837 |
+| Spanish | 20 | 313 | 857 |
+| German | 20 | 313 | 876 |
+| Italian | 20 | 313 | 878 |
+| Polish | 20 | 313 | 878 |
+| Romanian | 20 | 313 | 878 |
+| Portuguese (Brazilian) | 20 | 313 | 878 |
+| Swedish | 20 | 313 | 878 |
+| Hungarian | 20 | 313 | 878 |
+| Turkish | 20 | 313 | 878 |
+| Icelandic | 20 | 313 | 878 |
+| Catalan | 20 | 313 | 878 |
+| Dutch | 20 | 313 | 878 |
 
 Each course keeps its own signature drills: articles blanked where they live in Romanian, Swedish and Icelandic, vowel harmony in Hungarian and Turkish, the separable verbs of Dutch, and more. See [docs/courses.md](docs/courses.md).
 
