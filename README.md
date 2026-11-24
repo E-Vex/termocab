@@ -83,8 +83,8 @@ Your numbers, one command away:
 
 ```text
 $ termocab stats french
-french — 1/20 stage(s) complete, streak 1 day(s)
-words: 313 in content, 12 scheduled, 12 due today
+french — 1/25 stage(s) complete, streak 1 day(s)
+words: 393 in content, 12 scheduled, 12 due today
 boxes 1-6: █▁▁▁▁▁  (12 0 0 0 0 0)
 reviews due, next 14 days (today first): █▁▁▁▁▁▁▁▁▁▁▁▁▁
 active days, last 14 (oldest first): ▁▁▁▁▁▁▁▁▁▁▁▁▁█
@@ -122,23 +122,23 @@ Needs Rust 1.78 or newer, on Linux or macOS. If your shell says `termocab: comma
 
 ## Courses
 
-Thirteen courses ship inside the binary. Every course has 20 stages in four waves, **beginner** (1–5), **elementary** (6–10), **intermediate** (11–15) and **upper-intermediate** (16–20), and runs on the same engine with the same rules.
+Thirteen courses ship inside the binary. Every course has 25 stages in five waves, **beginner** (1–5), **elementary** (6–10), **intermediate** (11–15), **upper-intermediate** (16–20) and **advanced** (21–25), and runs on the same engine with the same rules.
 
 | Course | Stages | Words | Exercises |
 | --- | :---: | :---: | :---: |
-| French | 20 | 313 | 837 |
-| Spanish | 20 | 313 | 857 |
-| German | 20 | 313 | 876 |
-| Italian | 20 | 313 | 878 |
-| Polish | 20 | 313 | 878 |
-| Romanian | 20 | 313 | 878 |
-| Portuguese (Brazilian) | 20 | 313 | 878 |
-| Swedish | 20 | 313 | 878 |
-| Hungarian | 20 | 313 | 878 |
-| Turkish | 20 | 313 | 878 |
-| Icelandic | 20 | 313 | 878 |
-| Catalan | 20 | 313 | 878 |
-| Dutch | 20 | 313 | 878 |
+| French | 25 | 393 | 1057 |
+| Spanish | 25 | 393 | 1077 |
+| German | 25 | 393 | 1096 |
+| Italian | 25 | 393 | 1098 |
+| Polish | 25 | 393 | 1098 |
+| Romanian | 25 | 393 | 1098 |
+| Portuguese (Brazilian) | 25 | 393 | 1098 |
+| Swedish | 25 | 393 | 1098 |
+| Hungarian | 25 | 393 | 1098 |
+| Turkish | 25 | 393 | 1098 |
+| Icelandic | 25 | 393 | 1098 |
+| Catalan | 25 | 393 | 1098 |
+| Dutch | 25 | 393 | 1098 |
 
 Each course keeps its own signature drills: articles blanked where they live in Romanian, Swedish and Icelandic, vowel harmony in Hungarian and Turkish, the separable verbs of Dutch, and more. See [docs/courses.md](docs/courses.md).
 
