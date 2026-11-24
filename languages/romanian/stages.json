@@ -7812,6 +7812,1962 @@
           "answer": "realitate"
         }
       ]
+    },
+    {
+      "id": 21,
+      "title": "Culture and the Arts",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "artă",
+          "translation": "art",
+          "accepted_translations": ["the arts"],
+          "pos": "noun",
+          "example": "Arta modernă mă fascinează."
+        },
+        {
+          "word": "pictură",
+          "translation": "painting",
+          "pos": "noun",
+          "example": "Această pictură este foarte veche."
+        },
+        {
+          "word": "sculptură",
+          "translation": "sculpture",
+          "pos": "noun",
+          "example": "Sculptura este din marmură."
+        },
+        {
+          "word": "expoziție",
+          "translation": "exhibition",
+          "accepted_translations": ["exhibit"],
+          "pos": "noun",
+          "example": "Expoziția se deschide sâmbătă."
+        },
+        {
+          "word": "roman",
+          "translation": "novel",
+          "pos": "noun",
+          "example": "Citesc un roman polițist."
+        },
+        {
+          "word": "teatru",
+          "translation": "theater",
+          "accepted_translations": ["theatre"],
+          "pos": "noun",
+          "example": "Mergem diseară la teatru."
+        },
+        {
+          "word": "concert",
+          "translation": "concert",
+          "pos": "noun",
+          "example": "Concertul începe la ora opt."
+        },
+        {
+          "word": "scenă",
+          "translation": "stage",
+          "pos": "noun",
+          "example": "Ea urcă pe scenă."
+        },
+        {
+          "word": "public",
+          "translation": "audience",
+          "accepted_translations": ["the public"],
+          "pos": "noun",
+          "example": "Publicul aplaudă tare."
+        },
+        {
+          "word": "artist",
+          "translation": "artist",
+          "pos": "noun",
+          "example": "Acest artist pictează portrete."
+        },
+        {
+          "word": "muzician",
+          "translation": "musician",
+          "pos": "noun",
+          "example": "Muzicianul își acordează vioara."
+        },
+        {
+          "word": "scriitor",
+          "translation": "writer",
+          "accepted_translations": ["author"],
+          "pos": "noun",
+          "example": "Scriitorul își termină cartea."
+        },
+        {
+          "word": "actor",
+          "translation": "actor",
+          "pos": "noun",
+          "example": "Actorul repetă rolul."
+        },
+        {
+          "word": "capodoperă",
+          "translation": "masterpiece",
+          "pos": "noun",
+          "example": "Acest tablou este o capodoperă."
+        },
+        {
+          "word": "spectacol",
+          "translation": "show",
+          "accepted_translations": ["performance"],
+          "pos": "noun",
+          "example": "Spectacolul începe la șapte."
+        },
+        {
+          "word": "a aplauda",
+          "translation": "to applaud",
+          "accepted_translations": ["to clap"],
+          "pos": "verb",
+          "example": "Aplaudăm la final."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "artă",
+          "answer": "art",
+          "accepted_answers": [
+            "the arts"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "pictură",
+          "answer": "painting"
+        },
+        {
+          "type": "translation",
+          "prompt": "sculptură",
+          "answer": "sculpture"
+        },
+        {
+          "type": "translation",
+          "prompt": "expoziție",
+          "answer": "exhibition",
+          "accepted_answers": [
+            "exhibit"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "roman",
+          "answer": "novel"
+        },
+        {
+          "type": "translation",
+          "prompt": "teatru",
+          "answer": "theater",
+          "accepted_answers": [
+            "theatre"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "concert",
+          "answer": "concert"
+        },
+        {
+          "type": "translation",
+          "prompt": "scenă",
+          "answer": "stage"
+        },
+        {
+          "type": "translation",
+          "prompt": "public",
+          "answer": "audience",
+          "accepted_answers": [
+            "the public"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "artist",
+          "answer": "artist"
+        },
+        {
+          "type": "translation",
+          "prompt": "muzician",
+          "answer": "musician"
+        },
+        {
+          "type": "translation",
+          "prompt": "scriitor",
+          "answer": "writer",
+          "accepted_answers": [
+            "author"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "actor",
+          "answer": "actor"
+        },
+        {
+          "type": "translation",
+          "prompt": "capodoperă",
+          "answer": "masterpiece"
+        },
+        {
+          "type": "translation",
+          "prompt": "spectacol",
+          "answer": "show",
+          "accepted_answers": [
+            "performance"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "a aplauda",
+          "answer": "to applaud",
+          "accepted_answers": [
+            "to clap"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Trebuie să vezi această expoziție.",
+          "answer": "You have to see this exhibition."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vreau să citești acest roman.",
+          "answer": "I want you to read this novel."
+        },
+        {
+          "type": "translation",
+          "prompt": "Publicul a aplaudat zece minute.",
+          "answer": "The audience applauded for ten minutes."
+        },
+        {
+          "type": "translation",
+          "prompt": "Scriitorul își semnează romanul la librărie.",
+          "answer": "The writer signs his novel at the bookstore."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ea joacă rolul principal la teatru.",
+          "answer": "She plays the main role in the theater.",
+          "accepted_answers": [
+            "She plays the main role in the theatre."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Acest roman este o capodoperă a literaturii române.",
+          "answer": "This novel is a masterpiece of Romanian literature."
+        },
+        {
+          "type": "translation",
+          "prompt": "Muzicianul cântă la pian la concert.",
+          "answer": "The musician plays the piano at the concert."
+        },
+        {
+          "type": "translation",
+          "prompt": "Expoziția de artă modernă se deschide sâmbătă.",
+          "answer": "The modern art exhibition opens on Saturday."
+        },
+        {
+          "type": "translation",
+          "prompt": "The concert starts at eight.",
+          "answer": "Concertul începe la ora opt."
+        },
+        {
+          "type": "translation",
+          "prompt": "We applauded after the concert.",
+          "answer": "Am aplaudat după concert."
+        },
+        {
+          "type": "translation",
+          "prompt": "This sculpture is a masterpiece.",
+          "answer": "Această sculptură este o capodoperă."
+        },
+        {
+          "type": "translation",
+          "prompt": "The writer finishes his novel.",
+          "answer": "Scriitorul își termină romanul."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'art':",
+          "options": [
+            "artă",
+            "pictură",
+            "expoziție",
+            "teatru"
+          ],
+          "answer": "artă"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'painting':",
+          "options": [
+            "sculptură",
+            "roman",
+            "concert",
+            "pictură"
+          ],
+          "answer": "pictură"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sculpture':",
+          "options": [
+            "teatru",
+            "scenă",
+            "sculptură",
+            "expoziție"
+          ],
+          "answer": "sculptură"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'exhibition':",
+          "options": [
+            "public",
+            "expoziție",
+            "roman",
+            "concert"
+          ],
+          "answer": "expoziție"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'novel':",
+          "options": [
+            "roman",
+            "teatru",
+            "scenă",
+            "artist"
+          ],
+          "answer": "roman"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'theater':",
+          "options": [
+            "concert",
+            "public",
+            "muzician",
+            "teatru"
+          ],
+          "answer": "teatru"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'audience':",
+          "options": [
+            "scriitor",
+            "capodoperă",
+            "public",
+            "artist"
+          ],
+          "answer": "public"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'masterpiece':",
+          "options": [
+            "sculptură",
+            "capodoperă",
+            "spectacol",
+            "artă"
+          ],
+          "answer": "capodoperă"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "E important să ___ punctual. (a fi)",
+          "answer": "fii"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vreau să ___ la teatru. (a merge)",
+          "answer": "mergi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Trebuie să ___ romanul. (a citi)",
+          "answer": "citești"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vreau să ___ capodopera. (a vedea)",
+          "answer": "văd"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "E important să ___ arta. (a proteja)",
+          "answer": "protejăm"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Publicul ___ la final. (a aplauda)",
+          "answer": "aplaudă"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Expoziția se ___ sâmbătă. (a deschide)",
+          "answer": "deschide"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ea urcă pe ___.",
+          "answer": "scenă"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Science and Technology",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "știință",
+          "translation": "science",
+          "pos": "noun",
+          "example": "Știința explică universul."
+        },
+        {
+          "word": "cercetător",
+          "translation": "researcher",
+          "accepted_translations": ["scientist"],
+          "pos": "noun",
+          "example": "Cercetătorul lucrează în laborator."
+        },
+        {
+          "word": "experiment",
+          "translation": "experiment",
+          "pos": "noun",
+          "example": "Experimentul a durat un an."
+        },
+        {
+          "word": "descoperire",
+          "translation": "discovery",
+          "pos": "noun",
+          "example": "Descoperirea a schimbat medicina."
+        },
+        {
+          "word": "invenție",
+          "translation": "invention",
+          "pos": "noun",
+          "example": "Invenția telefonului."
+        },
+        {
+          "word": "cercetare",
+          "translation": "research",
+          "pos": "noun",
+          "example": "Cercetarea avansează încet."
+        },
+        {
+          "word": "laborator",
+          "translation": "laboratory",
+          "accepted_translations": ["lab"],
+          "pos": "noun",
+          "example": "Laboratorul este închis luni."
+        },
+        {
+          "word": "date",
+          "translation": "data",
+          "pos": "noun",
+          "example": "Datele confirmă ipoteza."
+        },
+        {
+          "word": "software",
+          "translation": "software",
+          "pos": "noun",
+          "example": "Software-ul calculează totul."
+        },
+        {
+          "word": "rețea",
+          "translation": "network",
+          "pos": "noun",
+          "example": "Rețeaua s-a oprit azi-dimineață."
+        },
+        {
+          "word": "energie",
+          "translation": "energy",
+          "pos": "noun",
+          "example": "Energia solară este curată."
+        },
+        {
+          "word": "satelit",
+          "translation": "satellite",
+          "pos": "noun",
+          "example": "Satelitul fotografiază Pământul."
+        },
+        {
+          "word": "robot",
+          "translation": "robot",
+          "pos": "noun",
+          "example": "Robotul asamblează mașinile."
+        },
+        {
+          "word": "a inventa",
+          "translation": "to invent",
+          "pos": "verb",
+          "example": "Ea inventează un motor nou."
+        },
+        {
+          "word": "a descoperi",
+          "translation": "to discover",
+          "pos": "verb",
+          "example": "Descoperim o peșteră."
+        },
+        {
+          "word": "a calcula",
+          "translation": "to calculate",
+          "pos": "verb",
+          "example": "Calculatorul calculează foarte repede."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "știință",
+          "answer": "science"
+        },
+        {
+          "type": "translation",
+          "prompt": "cercetător",
+          "answer": "researcher",
+          "accepted_answers": [
+            "scientist"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "experiment",
+          "answer": "experiment"
+        },
+        {
+          "type": "translation",
+          "prompt": "descoperire",
+          "answer": "discovery"
+        },
+        {
+          "type": "translation",
+          "prompt": "invenție",
+          "answer": "invention"
+        },
+        {
+          "type": "translation",
+          "prompt": "cercetare",
+          "answer": "research"
+        },
+        {
+          "type": "translation",
+          "prompt": "laborator",
+          "answer": "laboratory",
+          "accepted_answers": [
+            "lab"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "date",
+          "answer": "data"
+        },
+        {
+          "type": "translation",
+          "prompt": "software",
+          "answer": "software"
+        },
+        {
+          "type": "translation",
+          "prompt": "rețea",
+          "answer": "network"
+        },
+        {
+          "type": "translation",
+          "prompt": "energie",
+          "answer": "energy"
+        },
+        {
+          "type": "translation",
+          "prompt": "satelit",
+          "answer": "satellite"
+        },
+        {
+          "type": "translation",
+          "prompt": "robot",
+          "answer": "robot"
+        },
+        {
+          "type": "translation",
+          "prompt": "a inventa",
+          "answer": "to invent"
+        },
+        {
+          "type": "translation",
+          "prompt": "a descoperi",
+          "answer": "to discover"
+        },
+        {
+          "type": "translation",
+          "prompt": "a calcula",
+          "answer": "to calculate"
+        },
+        {
+          "type": "translation",
+          "prompt": "Satelitul trimite date pe Pământ.",
+          "answer": "The satellite sends data to the Earth."
+        },
+        {
+          "type": "translation",
+          "prompt": "Cercetătorii fac un experiment în laborator.",
+          "answer": "The researchers do an experiment in the laboratory."
+        },
+        {
+          "type": "translation",
+          "prompt": "Descoperirea a schimbat știința.",
+          "answer": "The discovery changed science."
+        },
+        {
+          "type": "translation",
+          "prompt": "Software-ul calculează rezultatele într-o secundă.",
+          "answer": "The software calculates the results in one second."
+        },
+        {
+          "type": "translation",
+          "prompt": "A fost invenția care a schimbat lumea.",
+          "answer": "It was the invention that changed the world."
+        },
+        {
+          "type": "translation",
+          "prompt": "Robotul lucrează în fabrică.",
+          "answer": "The robot works in the factory."
+        },
+        {
+          "type": "translation",
+          "prompt": "Cercetarea despre energia solară progresează.",
+          "answer": "Research on solar energy is progressing."
+        },
+        {
+          "type": "translation",
+          "prompt": "Descoperim cum funcționează rețeaua.",
+          "answer": "We are discovering how the network works."
+        },
+        {
+          "type": "translation",
+          "prompt": "The scientist discovered a new planet.",
+          "answer": "Omul de știință a descoperit o planetă nouă."
+        },
+        {
+          "type": "translation",
+          "prompt": "This invention changed the world.",
+          "answer": "Această invenție a schimbat lumea."
+        },
+        {
+          "type": "translation",
+          "prompt": "The robot works in the laboratory.",
+          "answer": "Robotul lucrează în laborator."
+        },
+        {
+          "type": "translation",
+          "prompt": "Energy is important for the future.",
+          "answer": "Energia este importantă pentru viitor."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'science':",
+          "options": [
+            "știință",
+            "cercetător",
+            "descoperire",
+            "cercetare"
+          ],
+          "answer": "știință"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'researcher':",
+          "options": [
+            "experiment",
+            "invenție",
+            "laborator",
+            "cercetător"
+          ],
+          "answer": "cercetător"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'discovery':",
+          "options": [
+            "laborator",
+            "software",
+            "descoperire",
+            "invenție"
+          ],
+          "answer": "descoperire"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'research':",
+          "options": [
+            "energie",
+            "cercetare",
+            "laborator",
+            "software"
+          ],
+          "answer": "cercetare"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'energy':",
+          "options": [
+            "energie",
+            "satelit",
+            "a inventa",
+            "a calcula"
+          ],
+          "answer": "energie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'satellite':",
+          "options": [
+            "robot",
+            "a descoperi",
+            "știință",
+            "satelit"
+          ],
+          "answer": "satelit"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'robot':",
+          "options": [
+            "a calcula",
+            "cercetător",
+            "robot",
+            "a inventa"
+          ],
+          "answer": "robot"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to discover':",
+          "options": [
+            "descoperire",
+            "a descoperi",
+            "a calcula",
+            "cercetător"
+          ],
+          "answer": "a descoperi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Romanul ___ îl citesc e lung.",
+          "answer": "care"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Romanul pe ___ îl citesc e lung.",
+          "answer": "care"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cercetătorul ___ lucrează aici e celebru.",
+          "answer": "care"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Experimentul pe ___ l-am făcut a reușit.",
+          "answer": "care"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Satelitul ___ trimite date e nou.",
+          "answer": "care"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Calculatorul ___ foarte repede. (a calcula)",
+          "answer": "calculează"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Robotul lucrează în ___ .",
+          "answer": "laborator"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ este importantă pentru viitor.",
+          "answer": "Energia"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Society and Politics",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "lege",
+          "translation": "law",
+          "pos": "noun",
+          "example": "Parlamentul votează o lege."
+        },
+        {
+          "word": "drept",
+          "translation": "right",
+          "pos": "noun",
+          "example": "Fiecare cetățean are drepturi."
+        },
+        {
+          "word": "guvern",
+          "translation": "government",
+          "pos": "noun",
+          "example": "Guvernul decide bugetul."
+        },
+        {
+          "word": "alegeri",
+          "translation": "elections",
+          "pos": "noun",
+          "example": "Alegerile au loc în mai."
+        },
+        {
+          "word": "cetățean",
+          "translation": "citizen",
+          "pos": "noun",
+          "example": "Cetățeanul votează liber."
+        },
+        {
+          "word": "politică",
+          "translation": "politics",
+          "accepted_translations": ["policy"],
+          "pos": "noun",
+          "example": "Politica mă interesează."
+        },
+        {
+          "word": "dezbatere",
+          "translation": "debate",
+          "pos": "noun",
+          "example": "Dezbaterea a durat trei ore."
+        },
+        {
+          "word": "libertate",
+          "translation": "freedom",
+          "accepted_translations": ["liberty"],
+          "pos": "noun",
+          "example": "Libertatea presei este esențială."
+        },
+        {
+          "word": "justiție",
+          "translation": "justice",
+          "pos": "noun",
+          "example": "Justiția trebuie să fie egală pentru toți."
+        },
+        {
+          "word": "impozit",
+          "translation": "tax",
+          "accepted_translations": ["taxes"],
+          "pos": "noun",
+          "example": "Plătim impozitul în fiecare an."
+        },
+        {
+          "word": "manifestare",
+          "translation": "demonstration",
+          "accepted_translations": ["protest", "march"],
+          "pos": "noun",
+          "example": "Manifestarea a traversat orașul."
+        },
+        {
+          "word": "parlament",
+          "translation": "parliament",
+          "pos": "noun",
+          "example": "Parlamentul reprezintă poporul."
+        },
+        {
+          "word": "democrație",
+          "translation": "democracy",
+          "pos": "noun",
+          "example": "Democrația protejează drepturile."
+        },
+        {
+          "word": "popor",
+          "translation": "the people",
+          "pos": "noun",
+          "example": "În democrație decide poporul."
+        },
+        {
+          "word": "a vota",
+          "translation": "to vote",
+          "pos": "verb",
+          "example": "Voi vota duminică."
+        },
+        {
+          "word": "a decide",
+          "translation": "to decide",
+          "pos": "verb",
+          "example": "Tu decizi asupra viitorului tău."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "lege",
+          "answer": "law"
+        },
+        {
+          "type": "translation",
+          "prompt": "drept",
+          "answer": "right"
+        },
+        {
+          "type": "translation",
+          "prompt": "guvern",
+          "answer": "government"
+        },
+        {
+          "type": "translation",
+          "prompt": "alegeri",
+          "answer": "elections"
+        },
+        {
+          "type": "translation",
+          "prompt": "cetățean",
+          "answer": "citizen"
+        },
+        {
+          "type": "translation",
+          "prompt": "politică",
+          "answer": "politics",
+          "accepted_answers": [
+            "policy"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "dezbatere",
+          "answer": "debate"
+        },
+        {
+          "type": "translation",
+          "prompt": "libertate",
+          "answer": "freedom",
+          "accepted_answers": [
+            "liberty"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "justiție",
+          "answer": "justice"
+        },
+        {
+          "type": "translation",
+          "prompt": "impozit",
+          "answer": "tax",
+          "accepted_answers": [
+            "taxes"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "manifestare",
+          "answer": "demonstration",
+          "accepted_answers": [
+            "protest",
+            "march"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "parlament",
+          "answer": "parliament"
+        },
+        {
+          "type": "translation",
+          "prompt": "democrație",
+          "answer": "democracy"
+        },
+        {
+          "type": "translation",
+          "prompt": "popor",
+          "answer": "the people"
+        },
+        {
+          "type": "translation",
+          "prompt": "a vota",
+          "answer": "to vote"
+        },
+        {
+          "type": "translation",
+          "prompt": "a decide",
+          "answer": "to decide"
+        },
+        {
+          "type": "translation",
+          "prompt": "Cetățenii votează la alegeri.",
+          "answer": "Citizens vote in the elections."
+        },
+        {
+          "type": "translation",
+          "prompt": "Parlamentul votează o nouă lege.",
+          "answer": "Parliament votes on a new law."
+        },
+        {
+          "type": "translation",
+          "prompt": "Libertatea presei este importantă.",
+          "answer": "Freedom of the press is important."
+        },
+        {
+          "type": "translation",
+          "prompt": "Dezbaterea a durat trei ore.",
+          "answer": "The debate lasted three hours."
+        },
+        {
+          "type": "translation",
+          "prompt": "Plătim impozite în fiecare an.",
+          "answer": "We pay taxes every year."
+        },
+        {
+          "type": "translation",
+          "prompt": "Manifestația a adunat o mie de oameni.",
+          "answer": "The demonstration gathered a thousand people.",
+          "accepted_answers": [
+            "The protest gathered a thousand people.",
+            "The march gathered a thousand people."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "În democrație, poporul decide.",
+          "answer": "In a democracy, the people decide."
+        },
+        {
+          "type": "translation",
+          "prompt": "Fiecare cetățean are dreptul de a vota.",
+          "answer": "Every citizen has the right to vote."
+        },
+        {
+          "type": "translation",
+          "prompt": "The government must decide.",
+          "answer": "Guvernul trebuie să decidă."
+        },
+        {
+          "type": "translation",
+          "prompt": "Freedom and justice are important values.",
+          "answer": "Libertatea și justiția sunt valori importante."
+        },
+        {
+          "type": "translation",
+          "prompt": "The vote took place on Sunday.",
+          "answer": "Votul a avut loc duminică."
+        },
+        {
+          "type": "translation",
+          "prompt": "Citizens demonstrated for justice.",
+          "answer": "Cetățenii au manifestat pentru justiție."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'law':",
+          "options": [
+            "lege",
+            "drept",
+            "alegeri",
+            "politică"
+          ],
+          "answer": "lege"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'right':",
+          "options": [
+            "guvern",
+            "cetățean",
+            "dezbatere",
+            "drept"
+          ],
+          "answer": "drept"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'government':",
+          "options": [
+            "politică",
+            "libertate",
+            "guvern",
+            "alegeri"
+          ],
+          "answer": "guvern"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'elections':",
+          "options": [
+            "justiție",
+            "alegeri",
+            "cetățean",
+            "dezbatere"
+          ],
+          "answer": "alegeri"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'citizen':",
+          "options": [
+            "cetățean",
+            "politică",
+            "libertate",
+            "impozit"
+          ],
+          "answer": "cetățean"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'politics':",
+          "options": [
+            "dezbatere",
+            "justiție",
+            "manifestare",
+            "politică"
+          ],
+          "answer": "politică"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'freedom':",
+          "options": [
+            "manifestare",
+            "democrație",
+            "libertate",
+            "justiție"
+          ],
+          "answer": "libertate"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'justice':",
+          "options": [
+            "popor",
+            "justiție",
+            "impozit",
+            "parlament"
+          ],
+          "answer": "justiție"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "L-___ văzut ieri la teatru. (a avea)",
+          "answer": "am"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I-___ spus adevărul. (a spune)",
+          "answer": "am"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ne-___ întâlnit la concert. (a se întâlni)",
+          "answer": "am"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Le-___ trimis un mesaj. (a trimite)",
+          "answer": "am"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ați ___ legea? (a vota)",
+          "answer": "votat"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Parlamentul votează o ___ .",
+          "answer": "lege"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Plătim ___ în fiecare an.",
+          "answer": "impozit"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "În democrație decide ___ .",
+          "answer": "poporul"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Feelings and Idioms",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "rușine",
+          "translation": "shame",
+          "pos": "noun",
+          "example": "Îmi este rușine de greșeala mea."
+        },
+        {
+          "word": "mândrie",
+          "translation": "pride",
+          "pos": "noun",
+          "example": "Simt o mândrie mare."
+        },
+        {
+          "word": "gelozie",
+          "translation": "jealousy",
+          "pos": "noun",
+          "example": "Gelozia distruge prietenia."
+        },
+        {
+          "word": "ușurare",
+          "translation": "relief",
+          "pos": "noun",
+          "example": "Vestea a fost o ușurare."
+        },
+        {
+          "word": "vină",
+          "translation": "guilt",
+          "accepted_translations": ["fault"],
+          "pos": "noun",
+          "example": "Vina nu-l lasă să doarmă."
+        },
+        {
+          "word": "singurătate",
+          "translation": "loneliness",
+          "pos": "noun",
+          "example": "Singurătatea apasă iarna."
+        },
+        {
+          "word": "răbdare",
+          "translation": "patience",
+          "pos": "noun",
+          "example": "Răbdarea este o virtute."
+        },
+        {
+          "word": "curaj",
+          "translation": "courage",
+          "accepted_translations": ["bravery"],
+          "pos": "noun",
+          "example": "A avut curajul să vorbească."
+        },
+        {
+          "word": "recunoștință",
+          "translation": "gratitude",
+          "accepted_translations": ["thankfulness"],
+          "pos": "noun",
+          "example": "Îi datorez recunoștință."
+        },
+        {
+          "word": "bunătate",
+          "translation": "kindness",
+          "pos": "noun",
+          "example": "Mulțumesc pentru bunătatea ta."
+        },
+        {
+          "word": "invidie",
+          "translation": "envy",
+          "pos": "noun",
+          "example": "Invidia nu duce nicăieri."
+        },
+        {
+          "word": "a se certa",
+          "translation": "to argue",
+          "accepted_translations": ["to quarrel"],
+          "pos": "verb",
+          "example": "Se ceartă pentru nimicuri."
+        },
+        {
+          "word": "a-și cere scuze",
+          "translation": "to apologize",
+          "pos": "verb",
+          "example": "Își cere scuze pentru întârziere."
+        },
+        {
+          "word": "a ierta",
+          "translation": "to forgive",
+          "pos": "verb",
+          "example": "A ierta te eliberează."
+        },
+        {
+          "word": "a avea dreptate",
+          "translation": "to be right",
+          "pos": "verb",
+          "example": "Tu ai dreptate, ca de obicei."
+        },
+        {
+          "word": "a se înșela",
+          "translation": "to be wrong",
+          "accepted_translations": ["to be mistaken"],
+          "pos": "verb",
+          "example": "M-am înșelat în privința asta."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "rușine",
+          "answer": "shame"
+        },
+        {
+          "type": "translation",
+          "prompt": "mândrie",
+          "answer": "pride"
+        },
+        {
+          "type": "translation",
+          "prompt": "gelozie",
+          "answer": "jealousy"
+        },
+        {
+          "type": "translation",
+          "prompt": "ușurare",
+          "answer": "relief"
+        },
+        {
+          "type": "translation",
+          "prompt": "vină",
+          "answer": "guilt",
+          "accepted_answers": [
+            "fault"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "singurătate",
+          "answer": "loneliness"
+        },
+        {
+          "type": "translation",
+          "prompt": "răbdare",
+          "answer": "patience"
+        },
+        {
+          "type": "translation",
+          "prompt": "curaj",
+          "answer": "courage",
+          "accepted_answers": [
+            "bravery"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "recunoștință",
+          "answer": "gratitude",
+          "accepted_answers": [
+            "thankfulness"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "bunătate",
+          "answer": "kindness"
+        },
+        {
+          "type": "translation",
+          "prompt": "invidie",
+          "answer": "envy"
+        },
+        {
+          "type": "translation",
+          "prompt": "a se certa",
+          "answer": "to argue",
+          "accepted_answers": [
+            "to quarrel"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "a-și cere scuze",
+          "answer": "to apologize"
+        },
+        {
+          "type": "translation",
+          "prompt": "a ierta",
+          "answer": "to forgive"
+        },
+        {
+          "type": "translation",
+          "prompt": "a avea dreptate",
+          "answer": "to be right"
+        },
+        {
+          "type": "translation",
+          "prompt": "a se înșela",
+          "answer": "to be wrong",
+          "accepted_answers": [
+            "to be mistaken"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Sunt mândru de tine.",
+          "answer": "I am proud of you."
+        },
+        {
+          "type": "translation",
+          "prompt": "A avut curajul să spună adevărul.",
+          "answer": "He had the courage to tell the truth."
+        },
+        {
+          "type": "translation",
+          "prompt": "Își cere scuze pentru întârziere.",
+          "answer": "She apologizes for being late."
+        },
+        {
+          "type": "translation",
+          "prompt": "Singurătatea este grea iarna.",
+          "answer": "Loneliness is difficult in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ai dreptate, ca de obicei.",
+          "answer": "You are right, as always."
+        },
+        {
+          "type": "translation",
+          "prompt": "Nu fi gelos pe succesul ei.",
+          "answer": "Don't be jealous of her success."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mulțumesc pentru bunătatea ta.",
+          "answer": "Thank you for your kindness."
+        },
+        {
+          "type": "translation",
+          "prompt": "Se ceartă pentru lucruri mici.",
+          "answer": "They argue about small things."
+        },
+        {
+          "type": "translation",
+          "prompt": "I was wrong, you were right.",
+          "answer": "M-am înșelat, tu aveai dreptate."
+        },
+        {
+          "type": "translation",
+          "prompt": "Please forgive me.",
+          "answer": "Iartă-mă, te rog."
+        },
+        {
+          "type": "translation",
+          "prompt": "Patience is a great quality.",
+          "answer": "Răbdarea este o calitate mare."
+        },
+        {
+          "type": "translation",
+          "prompt": "Shame and guilt are difficult feelings.",
+          "answer": "Rușinea și vina sunt sentimente dificile."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'shame':",
+          "options": [
+            "rușine",
+            "mândrie",
+            "ușurare",
+            "singurătate"
+          ],
+          "answer": "rușine"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'pride':",
+          "options": [
+            "gelozie",
+            "vină",
+            "răbdare",
+            "mândrie"
+          ],
+          "answer": "mândrie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'relief':",
+          "options": [
+            "răbdare",
+            "recunoștință",
+            "ușurare",
+            "vină"
+          ],
+          "answer": "ușurare"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'patience':",
+          "options": [
+            "a se certa",
+            "răbdare",
+            "curaj",
+            "bunătate"
+          ],
+          "answer": "răbdare"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'gratitude':",
+          "options": [
+            "recunoștință",
+            "bunătate",
+            "a se certa",
+            "a ierta"
+          ],
+          "answer": "recunoștință"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to apologize':",
+          "options": [
+            "a ierta",
+            "a se înșela",
+            "mândrie",
+            "a-și cere scuze"
+          ],
+          "answer": "a-și cere scuze"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to forgive':",
+          "options": [
+            "rușine",
+            "gelozie",
+            "a ierta",
+            "a avea dreptate"
+          ],
+          "answer": "a ierta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to be wrong':",
+          "options": [
+            "vină",
+            "a se înșela",
+            "rușine",
+            "gelozie"
+          ],
+          "answer": "a se înșela"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Îmi ___ dor de tine. (a fi)",
+          "answer": "e"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Îmi pare ___ că întârzii.",
+          "answer": "rău"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sunt ___ de tine. (mândru)",
+          "answer": "mândru"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Îmi ___ rușine de greșeala mea. (a fi)",
+          "answer": "e"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El mereu are ___. (dreptate)",
+          "answer": "dreptate"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Am ___ de înălțimi. (frică)",
+          "answer": "frică"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Simt o mare ___ după examen. (ușurare)",
+          "answer": "ușurare"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Trebuie să ne ___ . (a ierta)",
+          "answer": "iertăm"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Memories and Reflections",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "memorie",
+          "translation": "memory",
+          "pos": "noun",
+          "example": "Memoria păstrează chipurile."
+        },
+        {
+          "word": "tinerețe",
+          "translation": "youth",
+          "pos": "noun",
+          "example": "Povestește despre tinerețea lui."
+        },
+        {
+          "word": "trecut",
+          "translation": "past",
+          "pos": "noun",
+          "example": "Trecutul explică prezentul."
+        },
+        {
+          "word": "regret",
+          "translation": "regret",
+          "pos": "noun",
+          "example": "Regretul meu cel mai mare."
+        },
+        {
+          "word": "înțelepciune",
+          "translation": "wisdom",
+          "pos": "noun",
+          "example": "Anii aduc înțelepciune."
+        },
+        {
+          "word": "eșec",
+          "translation": "failure",
+          "pos": "noun",
+          "example": "Eșecul este o lecție."
+        },
+        {
+          "word": "decizie",
+          "translation": "decision",
+          "accepted_translations": ["choice"],
+          "pos": "noun",
+          "example": "Decizia asta mi-a schimbat viața."
+        },
+        {
+          "word": "tăcere",
+          "translation": "silence",
+          "pos": "noun",
+          "example": "Ea păstrează tăcerea."
+        },
+        {
+          "word": "promisiune",
+          "translation": "promise",
+          "pos": "noun",
+          "example": "Și-a ținut promisiunea."
+        },
+        {
+          "word": "efort",
+          "translation": "effort",
+          "pos": "noun",
+          "example": "Efortul merită întotdeauna."
+        },
+        {
+          "word": "destin",
+          "translation": "destiny",
+          "accepted_translations": ["fate"],
+          "pos": "noun",
+          "example": "Nu cred în destin."
+        },
+        {
+          "word": "ambiție",
+          "translation": "ambition",
+          "pos": "noun",
+          "example": "Ambiția ei nu are limite."
+        },
+        {
+          "word": "a-și aminti",
+          "translation": "to remember",
+          "pos": "verb",
+          "example": "Îmi amintesc de tine."
+        },
+        {
+          "word": "a uita",
+          "translation": "to forget",
+          "pos": "verb",
+          "example": "Cu timpul se uită."
+        },
+        {
+          "word": "a crește",
+          "translation": "to grow up",
+          "pos": "verb",
+          "example": "Copiii cresc repede."
+        },
+        {
+          "word": "a se maturiza",
+          "translation": "to mature",
+          "pos": "verb",
+          "example": "Cu anii te maturizezi."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "memorie",
+          "answer": "memory"
+        },
+        {
+          "type": "translation",
+          "prompt": "tinerețe",
+          "answer": "youth"
+        },
+        {
+          "type": "translation",
+          "prompt": "trecut",
+          "answer": "past"
+        },
+        {
+          "type": "translation",
+          "prompt": "regret",
+          "answer": "regret"
+        },
+        {
+          "type": "translation",
+          "prompt": "înțelepciune",
+          "answer": "wisdom"
+        },
+        {
+          "type": "translation",
+          "prompt": "eșec",
+          "answer": "failure"
+        },
+        {
+          "type": "translation",
+          "prompt": "decizie",
+          "answer": "decision",
+          "accepted_answers": [
+            "choice"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "tăcere",
+          "answer": "silence"
+        },
+        {
+          "type": "translation",
+          "prompt": "promisiune",
+          "answer": "promise"
+        },
+        {
+          "type": "translation",
+          "prompt": "efort",
+          "answer": "effort"
+        },
+        {
+          "type": "translation",
+          "prompt": "destin",
+          "answer": "destiny",
+          "accepted_answers": [
+            "fate"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "ambiție",
+          "answer": "ambition"
+        },
+        {
+          "type": "translation",
+          "prompt": "a-și aminti",
+          "answer": "to remember"
+        },
+        {
+          "type": "translation",
+          "prompt": "a uita",
+          "answer": "to forget"
+        },
+        {
+          "type": "translation",
+          "prompt": "a crește",
+          "answer": "to grow up"
+        },
+        {
+          "type": "translation",
+          "prompt": "a se maturiza",
+          "answer": "to mature"
+        },
+        {
+          "type": "translation",
+          "prompt": "Dacă aș fi știut, aș fi luat altă decizie.",
+          "answer": "If I had known, I would have made a different decision."
+        },
+        {
+          "type": "translation",
+          "prompt": "Când îmi amintesc tinerețea, zâmbesc.",
+          "answer": "When I remember my youth, I smile."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ea tace despre trecutul ei.",
+          "answer": "She keeps quiet about her past."
+        },
+        {
+          "type": "translation",
+          "prompt": "Regret că nu am călătorit.",
+          "answer": "I regret not having traveled."
+        },
+        {
+          "type": "translation",
+          "prompt": "Eșecul este o lecție, nu un final.",
+          "answer": "Failure is a lesson, not an end."
+        },
+        {
+          "type": "translation",
+          "prompt": "Îmi amintesc prima noastră întâlnire.",
+          "answer": "I remember our first meeting."
+        },
+        {
+          "type": "translation",
+          "prompt": "Cu timpul, uiți amintirile rele.",
+          "answer": "With time, you forget the bad memories.",
+          "accepted_answers": [
+            "With time, one forgets the bad memories."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "A făcut eforturi și s-a maturizat.",
+          "answer": "He made efforts and he matured."
+        },
+        {
+          "type": "translation",
+          "prompt": "If I had been there, I would have helped you.",
+          "answer": "Dacă aș fi fost acolo, te-aș fi ajutat."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't remember her name.",
+          "answer": "Nu-mi amintesc numele ei."
+        },
+        {
+          "type": "translation",
+          "prompt": "You have to grow up one day.",
+          "answer": "Trebuie să crești într-o zi."
+        },
+        {
+          "type": "translation",
+          "prompt": "The past explains the present.",
+          "answer": "Trecutul explică prezentul."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'memory':",
+          "options": [
+            "memorie",
+            "tinerețe",
+            "regret",
+            "eșec"
+          ],
+          "answer": "memorie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'youth':",
+          "options": [
+            "trecut",
+            "înțelepciune",
+            "decizie",
+            "tinerețe"
+          ],
+          "answer": "tinerețe"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'past':",
+          "options": [
+            "eșec",
+            "tăcere",
+            "trecut",
+            "regret"
+          ],
+          "answer": "trecut"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'regret':",
+          "options": [
+            "promisiune",
+            "regret",
+            "înțelepciune",
+            "decizie"
+          ],
+          "answer": "regret"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'decision':",
+          "options": [
+            "decizie",
+            "tăcere",
+            "efort",
+            "ambiție"
+          ],
+          "answer": "decizie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'silence':",
+          "options": [
+            "promisiune",
+            "destin",
+            "a-și aminti",
+            "tăcere"
+          ],
+          "answer": "tăcere"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to remember':",
+          "options": [
+            "a se maturiza",
+            "tinerețe",
+            "a-și aminti",
+            "a uita"
+          ],
+          "answer": "a-și aminti"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to grow up':",
+          "options": [
+            "regret",
+            "a crește",
+            "a se maturiza",
+            "tinerețe"
+          ],
+          "answer": "a crește"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dacă aș fi știut, ___ fi cumpărat casa. (a avea)",
+          "answer": "aș"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dacă ai fi venit, ___ fi văzut capodopera. (a avea)",
+          "answer": "ai"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dacă am fi avut timp, ___ fi călătorit. (a avea)",
+          "answer": "am"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ar ___ venit dacă nu era bolnavă. (a fi)",
+          "answer": "fi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Aș ___ vrut să vin. (a vrea)",
+          "answer": "fi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Îmi ___ tinerețea cu drag. (a-și aminti)",
+          "answer": "amintesc"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Trebuie să ___ pentru a te maturiza. (a crește)",
+          "answer": "crești"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ explică prezentul.",
+          "answer": "Trecutul"
+        }
+      ]
     }
   ]
 }
