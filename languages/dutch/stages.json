@@ -7950,6 +7950,1954 @@
           "answer": "droom"
         }
       ]
+    },
+    {
+      "id": 21,
+      "title": "Culture and the Arts",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "de kunst",
+          "translation": "art",
+          "accepted_translations": ["the arts"],
+          "pos": "noun",
+          "example": "Moderne kunst fascineert me."
+        },
+        {
+          "word": "het schilderij",
+          "translation": "painting",
+          "pos": "noun",
+          "example": "Dit schilderij is heel oud."
+        },
+        {
+          "word": "de sculptuur",
+          "translation": "sculpture",
+          "pos": "noun",
+          "example": "De sculptuur is van marmer."
+        },
+        {
+          "word": "de tentoonstelling",
+          "translation": "exhibition",
+          "accepted_translations": ["exhibit"],
+          "pos": "noun",
+          "example": "De tentoonstelling opent zaterdag."
+        },
+        {
+          "word": "de roman",
+          "translation": "novel",
+          "pos": "noun",
+          "example": "Ik lees een detective."
+        },
+        {
+          "word": "het theater",
+          "translation": "theater",
+          "accepted_translations": ["theatre"],
+          "pos": "noun",
+          "example": "We gaan vanavond naar het theater."
+        },
+        {
+          "word": "het concert",
+          "translation": "concert",
+          "pos": "noun",
+          "example": "Het concert begint om acht uur."
+        },
+        {
+          "word": "het podium",
+          "translation": "stage",
+          "pos": "noun",
+          "example": "Zij stapt het podium op."
+        },
+        {
+          "word": "het publiek",
+          "translation": "audience",
+          "accepted_translations": ["the public"],
+          "pos": "noun",
+          "example": "Het publiek applaudisseert luid."
+        },
+        {
+          "word": "de kunstenaar",
+          "translation": "artist",
+          "pos": "noun",
+          "example": "De kunstenaar schildert portretten."
+        },
+        {
+          "word": "de musicus",
+          "translation": "musician",
+          "pos": "noun",
+          "example": "De musicus stemt zijn viool."
+        },
+        {
+          "word": "de schrijver",
+          "translation": "writer",
+          "accepted_translations": ["author"],
+          "pos": "noun",
+          "example": "De schrijver maakt zijn boek af."
+        },
+        {
+          "word": "de acteur",
+          "translation": "actor",
+          "pos": "noun",
+          "example": "De acteur repeteert zijn rol."
+        },
+        {
+          "word": "het meesterwerk",
+          "translation": "masterpiece",
+          "pos": "noun",
+          "example": "Dit schilderij is een meesterwerk."
+        },
+        {
+          "word": "optreden",
+          "translation": "to perform",
+          "pos": "verb",
+          "example": "De band treedt vanavond op."
+        },
+        {
+          "word": "applaudisseren",
+          "translation": "to applaud",
+          "accepted_translations": ["to clap"],
+          "pos": "verb",
+          "example": "Wij applaudisseren aan het einde."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "de kunst",
+          "answer": "art",
+          "accepted_answers": [
+            "the arts"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "het schilderij",
+          "answer": "painting"
+        },
+        {
+          "type": "translation",
+          "prompt": "de sculptuur",
+          "answer": "sculpture"
+        },
+        {
+          "type": "translation",
+          "prompt": "de tentoonstelling",
+          "answer": "exhibition",
+          "accepted_answers": [
+            "exhibit"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "de roman",
+          "answer": "novel"
+        },
+        {
+          "type": "translation",
+          "prompt": "het theater",
+          "answer": "theater",
+          "accepted_answers": [
+            "theatre"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "het concert",
+          "answer": "concert"
+        },
+        {
+          "type": "translation",
+          "prompt": "het podium",
+          "answer": "stage"
+        },
+        {
+          "type": "translation",
+          "prompt": "het publiek",
+          "answer": "audience",
+          "accepted_answers": [
+            "the public"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "de kunstenaar",
+          "answer": "artist"
+        },
+        {
+          "type": "translation",
+          "prompt": "de musicus",
+          "answer": "musician"
+        },
+        {
+          "type": "translation",
+          "prompt": "de schrijver",
+          "answer": "writer",
+          "accepted_answers": [
+            "author"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "de acteur",
+          "answer": "actor"
+        },
+        {
+          "type": "translation",
+          "prompt": "het meesterwerk",
+          "answer": "masterpiece"
+        },
+        {
+          "type": "translation",
+          "prompt": "optreden",
+          "answer": "to perform"
+        },
+        {
+          "type": "translation",
+          "prompt": "applaudisseren",
+          "answer": "to applaud",
+          "accepted_answers": [
+            "to clap"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Het boek dat ik lees is een meesterwerk.",
+          "answer": "The book I am reading is a masterpiece."
+        },
+        {
+          "type": "translation",
+          "prompt": "Het museum opent een tentoonstelling van moderne kunst.",
+          "answer": "The museum opens an exhibition of modern art."
+        },
+        {
+          "type": "translation",
+          "prompt": "Het publiek applaudisseerde tien minuten.",
+          "answer": "The audience applauded for ten minutes."
+        },
+        {
+          "type": "translation",
+          "prompt": "De schrijver ondertekent zijn roman in de boekhandel.",
+          "answer": "The writer signs his novel at the bookstore."
+        },
+        {
+          "type": "translation",
+          "prompt": "Zij speelt de hoofdrol in het theater.",
+          "answer": "She plays the main role in the theater.",
+          "accepted_answers": [
+            "She plays the main role in the theatre."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Deze roman is een meesterwerk van de Nederlandse literatuur.",
+          "answer": "This novel is a masterpiece of Dutch literature."
+        },
+        {
+          "type": "translation",
+          "prompt": "De musicus speelt piano op het concert.",
+          "answer": "The musician plays the piano at the concert."
+        },
+        {
+          "type": "translation",
+          "prompt": "De band treedt vanavond op.",
+          "answer": "The band performs tonight."
+        },
+        {
+          "type": "translation",
+          "prompt": "The concert starts at eight.",
+          "answer": "Het concert begint om acht uur."
+        },
+        {
+          "type": "translation",
+          "prompt": "We applauded after the concert.",
+          "answer": "Wij applaudisseerden na het concert."
+        },
+        {
+          "type": "translation",
+          "prompt": "This sculpture is a masterpiece.",
+          "answer": "Deze sculptuur is een meesterwerk."
+        },
+        {
+          "type": "translation",
+          "prompt": "The writer finishes his novel.",
+          "answer": "De schrijver maakt zijn roman af."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'art':",
+          "options": [
+            "de kunst",
+            "het schilderij",
+            "de tentoonstelling",
+            "het theater"
+          ],
+          "answer": "de kunst"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'painting':",
+          "options": [
+            "de sculptuur",
+            "de roman",
+            "het concert",
+            "het schilderij"
+          ],
+          "answer": "het schilderij"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sculpture':",
+          "options": [
+            "het theater",
+            "het podium",
+            "de sculptuur",
+            "de tentoonstelling"
+          ],
+          "answer": "de sculptuur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'exhibition':",
+          "options": [
+            "het publiek",
+            "de tentoonstelling",
+            "de roman",
+            "het concert"
+          ],
+          "answer": "de tentoonstelling"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'novel':",
+          "options": [
+            "de roman",
+            "het theater",
+            "het podium",
+            "de kunstenaar"
+          ],
+          "answer": "de roman"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'theater':",
+          "options": [
+            "het concert",
+            "het publiek",
+            "de musicus",
+            "het theater"
+          ],
+          "answer": "het theater"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'audience':",
+          "options": [
+            "de schrijver",
+            "het meesterwerk",
+            "het publiek",
+            "de kunstenaar"
+          ],
+          "answer": "het publiek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'masterpiece':",
+          "options": [
+            "de sculptuur",
+            "het meesterwerk",
+            "optreden",
+            "de kunst"
+          ],
+          "answer": "het meesterwerk"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Het boek ___ ik lees is lang.",
+          "answer": "dat"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Het schilderij ___ ik zag is beroemd.",
+          "answer": "dat"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De schrijver ___ we ontmoetten is aardig.",
+          "answer": "die"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De roman ___ hij schreef werd beroemd.",
+          "answer": "die"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Het concert ___ je wilt zien begint om acht uur.",
+          "answer": "dat"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Het publiek ___ na het concert. (applaudisseren)",
+          "answer": "applaudisseerde"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De band ___ vanavond op. (optreden)",
+          "answer": "treedt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dit schilderij is een ___ .",
+          "answer": "meesterwerk"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Science and Technology",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "de wetenschap",
+          "translation": "science",
+          "pos": "noun",
+          "example": "De wetenschap verklaart het universum."
+        },
+        {
+          "word": "de wetenschapper",
+          "translation": "scientist",
+          "pos": "noun",
+          "example": "De wetenschapper werkt in een laboratorium."
+        },
+        {
+          "word": "het experiment",
+          "translation": "experiment",
+          "pos": "noun",
+          "example": "Het experiment duurde een jaar."
+        },
+        {
+          "word": "de ontdekking",
+          "translation": "discovery",
+          "pos": "noun",
+          "example": "De ontdekking veranderde de geneeskunde."
+        },
+        {
+          "word": "de uitvinding",
+          "translation": "invention",
+          "pos": "noun",
+          "example": "De uitvinding van de telefoon."
+        },
+        {
+          "word": "het onderzoek",
+          "translation": "research",
+          "pos": "noun",
+          "example": "Het onderzoek vordert langzaam."
+        },
+        {
+          "word": "het laboratorium",
+          "translation": "laboratory",
+          "accepted_translations": ["lab"],
+          "pos": "noun",
+          "example": "Het laboratorium is maandag gesloten."
+        },
+        {
+          "word": "de gegevens",
+          "translation": "data",
+          "pos": "noun",
+          "example": "De gegevens bevestigen de hypothese."
+        },
+        {
+          "word": "de software",
+          "translation": "software",
+          "pos": "noun",
+          "example": "De software berekent alles."
+        },
+        {
+          "word": "het netwerk",
+          "translation": "network",
+          "pos": "noun",
+          "example": "Het netwerk viel vanochtend uit."
+        },
+        {
+          "word": "de energie",
+          "translation": "energy",
+          "pos": "noun",
+          "example": "Zonne-energie is schoon."
+        },
+        {
+          "word": "de satelliet",
+          "translation": "satellite",
+          "pos": "noun",
+          "example": "De satelliet fotografeert de aarde."
+        },
+        {
+          "word": "de robot",
+          "translation": "robot",
+          "pos": "noun",
+          "example": "De robot monteert de auto's."
+        },
+        {
+          "word": "uitvinden",
+          "translation": "to invent",
+          "pos": "verb",
+          "example": "Zij vindt een nieuwe motor uit."
+        },
+        {
+          "word": "ontdekken",
+          "translation": "to discover",
+          "pos": "verb",
+          "example": "Wij ontdekken een grot."
+        },
+        {
+          "word": "berekenen",
+          "translation": "to calculate",
+          "pos": "verb",
+          "example": "De computer berekent heel snel."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "de wetenschap",
+          "answer": "science"
+        },
+        {
+          "type": "translation",
+          "prompt": "de wetenschapper",
+          "answer": "scientist"
+        },
+        {
+          "type": "translation",
+          "prompt": "het experiment",
+          "answer": "experiment"
+        },
+        {
+          "type": "translation",
+          "prompt": "de ontdekking",
+          "answer": "discovery"
+        },
+        {
+          "type": "translation",
+          "prompt": "de uitvinding",
+          "answer": "invention"
+        },
+        {
+          "type": "translation",
+          "prompt": "het onderzoek",
+          "answer": "research"
+        },
+        {
+          "type": "translation",
+          "prompt": "het laboratorium",
+          "answer": "laboratory",
+          "accepted_answers": [
+            "lab"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "de gegevens",
+          "answer": "data"
+        },
+        {
+          "type": "translation",
+          "prompt": "de software",
+          "answer": "software"
+        },
+        {
+          "type": "translation",
+          "prompt": "het netwerk",
+          "answer": "network"
+        },
+        {
+          "type": "translation",
+          "prompt": "de energie",
+          "answer": "energy"
+        },
+        {
+          "type": "translation",
+          "prompt": "de satelliet",
+          "answer": "satellite"
+        },
+        {
+          "type": "translation",
+          "prompt": "de robot",
+          "answer": "robot"
+        },
+        {
+          "type": "translation",
+          "prompt": "uitvinden",
+          "answer": "to invent"
+        },
+        {
+          "type": "translation",
+          "prompt": "ontdekken",
+          "answer": "to discover"
+        },
+        {
+          "type": "translation",
+          "prompt": "berekenen",
+          "answer": "to calculate"
+        },
+        {
+          "type": "translation",
+          "prompt": "De satelliet stuurt data naar de aarde.",
+          "answer": "The satellite sends data to the Earth."
+        },
+        {
+          "type": "translation",
+          "prompt": "De wetenschappers doen een experiment in het laboratorium.",
+          "answer": "The scientists do an experiment in the laboratory."
+        },
+        {
+          "type": "translation",
+          "prompt": "De ontdekking veranderde de wetenschap.",
+          "answer": "The discovery changed science."
+        },
+        {
+          "type": "translation",
+          "prompt": "De software berekent de resultaten in één seconde.",
+          "answer": "The software calculates the results in one second."
+        },
+        {
+          "type": "translation",
+          "prompt": "Het was de uitvinding die de wereld veranderde.",
+          "answer": "It was the invention that changed the world."
+        },
+        {
+          "type": "translation",
+          "prompt": "De robot werkt in de fabriek.",
+          "answer": "The robot works in the factory."
+        },
+        {
+          "type": "translation",
+          "prompt": "Het onderzoek naar zonne-energie vordert.",
+          "answer": "Research on solar energy is progressing."
+        },
+        {
+          "type": "translation",
+          "prompt": "Wij ontdekken hoe het netwerk werkt.",
+          "answer": "We are discovering how the network works."
+        },
+        {
+          "type": "translation",
+          "prompt": "The scientist discovered a new planet.",
+          "answer": "De wetenschapper ontdekte een nieuwe planeet."
+        },
+        {
+          "type": "translation",
+          "prompt": "This invention changed the world.",
+          "answer": "Deze uitvinding veranderde de wereld."
+        },
+        {
+          "type": "translation",
+          "prompt": "The robot works in the laboratory.",
+          "answer": "De robot werkt in het laboratorium."
+        },
+        {
+          "type": "translation",
+          "prompt": "Energy is important for the future.",
+          "answer": "Energie is belangrijk voor de toekomst."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'science':",
+          "options": [
+            "de wetenschap",
+            "de wetenschapper",
+            "de ontdekking",
+            "het onderzoek"
+          ],
+          "answer": "de wetenschap"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'scientist':",
+          "options": [
+            "het experiment",
+            "de uitvinding",
+            "het laboratorium",
+            "de wetenschapper"
+          ],
+          "answer": "de wetenschapper"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'discovery':",
+          "options": [
+            "het laboratorium",
+            "de software",
+            "de ontdekking",
+            "de uitvinding"
+          ],
+          "answer": "de ontdekking"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'research':",
+          "options": [
+            "de energie",
+            "het onderzoek",
+            "het laboratorium",
+            "de software"
+          ],
+          "answer": "het onderzoek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'energy':",
+          "options": [
+            "de energie",
+            "de satelliet",
+            "uitvinden",
+            "berekenen"
+          ],
+          "answer": "de energie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'satellite':",
+          "options": [
+            "de robot",
+            "ontdekken",
+            "de wetenschap",
+            "de satelliet"
+          ],
+          "answer": "de satelliet"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'robot':",
+          "options": [
+            "berekenen",
+            "de wetenschapper",
+            "de robot",
+            "uitvinden"
+          ],
+          "answer": "de robot"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to discover':",
+          "options": [
+            "de ontdekking",
+            "ontdekken",
+            "berekenen",
+            "de wetenschapper"
+          ],
+          "answer": "ontdekken"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Het experiment ___ in het laboratorium gedaan. (worden)",
+          "answer": "wordt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De resultaten ___ door de software berekend. (worden)",
+          "answer": "worden"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De auto's ___ door robots gebouwd. (worden)",
+          "answer": "worden"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De wetenschap ___ door de ontdekking veranderd. (worden)",
+          "answer": "wordt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De gegevens ___ naar de aarde gestuurd. (worden)",
+          "answer": "worden"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De robot ___ de auto's in elkaar. (zetten)",
+          "answer": "zet"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De satelliet ___ data naar de aarde. (sturen)",
+          "answer": "stuurt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ is belangrijk voor de toekomst.",
+          "answer": "Energie"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Society and Politics",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "de wet",
+          "translation": "law",
+          "pos": "noun",
+          "example": "Het parlement stemt over een wet."
+        },
+        {
+          "word": "het recht",
+          "translation": "right",
+          "pos": "noun",
+          "example": "Elke burger heeft rechten."
+        },
+        {
+          "word": "de regering",
+          "translation": "government",
+          "pos": "noun",
+          "example": "De regering beslist over de begroting."
+        },
+        {
+          "word": "de verkiezingen",
+          "translation": "elections",
+          "pos": "noun",
+          "example": "De verkiezingen zijn in mei."
+        },
+        {
+          "word": "de burger",
+          "translation": "citizen",
+          "pos": "noun",
+          "example": "De burger stemt vrij."
+        },
+        {
+          "word": "de politiek",
+          "translation": "politics",
+          "accepted_translations": ["policy"],
+          "pos": "noun",
+          "example": "Politiek interesseert me."
+        },
+        {
+          "word": "het debat",
+          "translation": "debate",
+          "pos": "noun",
+          "example": "Het debat duurde drie uur."
+        },
+        {
+          "word": "de vrijheid",
+          "translation": "freedom",
+          "accepted_translations": ["liberty"],
+          "pos": "noun",
+          "example": "Persvrijheid is belangrijk."
+        },
+        {
+          "word": "de gerechtigheid",
+          "translation": "justice",
+          "pos": "noun",
+          "example": "Gerechtigheid moet voor iedereen gelden."
+        },
+        {
+          "word": "de belasting",
+          "translation": "tax",
+          "accepted_translations": ["taxes"],
+          "pos": "noun",
+          "example": "Wij betalen elk jaar belasting."
+        },
+        {
+          "word": "de demonstratie",
+          "translation": "demonstration",
+          "accepted_translations": ["protest", "march"],
+          "pos": "noun",
+          "example": "De demonstratie trok door de stad."
+        },
+        {
+          "word": "het parlement",
+          "translation": "parliament",
+          "pos": "noun",
+          "example": "Het parlement vertegenwoordigt het volk."
+        },
+        {
+          "word": "de democratie",
+          "translation": "democracy",
+          "pos": "noun",
+          "example": "De democratie beschermt de rechten."
+        },
+        {
+          "word": "het volk",
+          "translation": "the people",
+          "pos": "noun",
+          "example": "In een democratie beslist het volk."
+        },
+        {
+          "word": "stemmen",
+          "translation": "to vote",
+          "pos": "verb",
+          "example": "Ik stem op zondag."
+        },
+        {
+          "word": "besluiten",
+          "translation": "to decide",
+          "pos": "verb",
+          "example": "Jij beslist over je toekomst."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "de wet",
+          "answer": "law"
+        },
+        {
+          "type": "translation",
+          "prompt": "het recht",
+          "answer": "right"
+        },
+        {
+          "type": "translation",
+          "prompt": "de regering",
+          "answer": "government"
+        },
+        {
+          "type": "translation",
+          "prompt": "de verkiezingen",
+          "answer": "elections"
+        },
+        {
+          "type": "translation",
+          "prompt": "de burger",
+          "answer": "citizen"
+        },
+        {
+          "type": "translation",
+          "prompt": "de politiek",
+          "answer": "politics",
+          "accepted_answers": [
+            "policy"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "het debat",
+          "answer": "debate"
+        },
+        {
+          "type": "translation",
+          "prompt": "de vrijheid",
+          "answer": "freedom",
+          "accepted_answers": [
+            "liberty"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "de gerechtigheid",
+          "answer": "justice"
+        },
+        {
+          "type": "translation",
+          "prompt": "de belasting",
+          "answer": "tax",
+          "accepted_answers": [
+            "taxes"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "de demonstratie",
+          "answer": "demonstration",
+          "accepted_answers": [
+            "protest",
+            "march"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "het parlement",
+          "answer": "parliament"
+        },
+        {
+          "type": "translation",
+          "prompt": "de democratie",
+          "answer": "democracy"
+        },
+        {
+          "type": "translation",
+          "prompt": "het volk",
+          "answer": "the people"
+        },
+        {
+          "type": "translation",
+          "prompt": "stemmen",
+          "answer": "to vote"
+        },
+        {
+          "type": "translation",
+          "prompt": "besluiten",
+          "answer": "to decide"
+        },
+        {
+          "type": "translation",
+          "prompt": "De burgers stemmen bij de verkiezingen.",
+          "answer": "Citizens vote in the elections."
+        },
+        {
+          "type": "translation",
+          "prompt": "Het parlement stemt over een nieuwe wet.",
+          "answer": "Parliament votes on a new law."
+        },
+        {
+          "type": "translation",
+          "prompt": "Persvrijheid is belangrijk.",
+          "answer": "Freedom of the press is important."
+        },
+        {
+          "type": "translation",
+          "prompt": "Het debat duurde drie uur.",
+          "answer": "The debate lasted three hours."
+        },
+        {
+          "type": "translation",
+          "prompt": "Wij betalen elk jaar belasting.",
+          "answer": "We pay taxes every year."
+        },
+        {
+          "type": "translation",
+          "prompt": "De demonstratie verzamelde duizend mensen.",
+          "answer": "The demonstration gathered a thousand people.",
+          "accepted_answers": [
+            "The protest gathered a thousand people.",
+            "The march gathered a thousand people."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "In een democratie beslist het volk.",
+          "answer": "In a democracy, the people decide."
+        },
+        {
+          "type": "translation",
+          "prompt": "Elke burger heeft stemrecht.",
+          "answer": "Every citizen has the right to vote."
+        },
+        {
+          "type": "translation",
+          "prompt": "The government must decide.",
+          "answer": "De regering moet besluiten."
+        },
+        {
+          "type": "translation",
+          "prompt": "Freedom and justice are important values.",
+          "answer": "Vrijheid en gerechtigheid zijn belangrijke waarden."
+        },
+        {
+          "type": "translation",
+          "prompt": "The vote took place on Sunday.",
+          "answer": "De stemming vond plaats op zondag."
+        },
+        {
+          "type": "translation",
+          "prompt": "Citizens demonstrated for justice.",
+          "answer": "De burgers demonstreerden voor gerechtigheid."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'law':",
+          "options": [
+            "de wet",
+            "het recht",
+            "de verkiezingen",
+            "de politiek"
+          ],
+          "answer": "de wet"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'right':",
+          "options": [
+            "de regering",
+            "de burger",
+            "het debat",
+            "het recht"
+          ],
+          "answer": "het recht"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'government':",
+          "options": [
+            "de politiek",
+            "de vrijheid",
+            "de regering",
+            "de verkiezingen"
+          ],
+          "answer": "de regering"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'elections':",
+          "options": [
+            "de gerechtigheid",
+            "de verkiezingen",
+            "de burger",
+            "het debat"
+          ],
+          "answer": "de verkiezingen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'citizen':",
+          "options": [
+            "de burger",
+            "de politiek",
+            "de vrijheid",
+            "de belasting"
+          ],
+          "answer": "de burger"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'politics':",
+          "options": [
+            "het debat",
+            "de gerechtigheid",
+            "de demonstratie",
+            "de politiek"
+          ],
+          "answer": "de politiek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'freedom':",
+          "options": [
+            "de demonstratie",
+            "de democratie",
+            "de vrijheid",
+            "de gerechtigheid"
+          ],
+          "answer": "de vrijheid"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'justice':",
+          "options": [
+            "het volk",
+            "de gerechtigheid",
+            "de belasting",
+            "het parlement"
+          ],
+          "answer": "de gerechtigheid"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De wet ___ gisteren aangenomen. (worden)",
+          "answer": "werd"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De verkiezingen ___ in mei gehouden. (worden)",
+          "answer": "werden"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Het parlementsgebouw ___ vorig jaar gebouwd. (worden)",
+          "answer": "werd"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De belasting ___ verhoogd. (worden)",
+          "answer": "werd"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ zegt dat de regering valt. (men)",
+          "answer": "Men"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Het volk ___ in de verkiezingen. (stemmen)",
+          "answer": "stemt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wij betalen elk jaar ___ .",
+          "answer": "belasting"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "In een democratie beslist ___ .",
+          "answer": "het volk"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Feelings and Idioms",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "de schaamte",
+          "translation": "shame",
+          "pos": "noun",
+          "example": "Ik schaam me voor mijn fout."
+        },
+        {
+          "word": "de trots",
+          "translation": "pride",
+          "pos": "noun",
+          "example": "Ik voel grote trots."
+        },
+        {
+          "word": "de jaloezie",
+          "translation": "jealousy",
+          "pos": "noun",
+          "example": "Jaloezie vernielt vriendschap."
+        },
+        {
+          "word": "de opluchting",
+          "translation": "relief",
+          "pos": "noun",
+          "example": "Het bericht was een opluchting."
+        },
+        {
+          "word": "de schuld",
+          "translation": "guilt",
+          "accepted_translations": ["fault"],
+          "pos": "noun",
+          "example": "De schuld laat hem niet slapen."
+        },
+        {
+          "word": "de eenzaamheid",
+          "translation": "loneliness",
+          "pos": "noun",
+          "example": "Eenzaamheid weegt zwaar in de winter."
+        },
+        {
+          "word": "het geduld",
+          "translation": "patience",
+          "pos": "noun",
+          "example": "Geduld is een deugd."
+        },
+        {
+          "word": "de moed",
+          "translation": "courage",
+          "accepted_translations": ["bravery"],
+          "pos": "noun",
+          "example": "Hij had de moed om te spreken."
+        },
+        {
+          "word": "de dankbaarheid",
+          "translation": "gratitude",
+          "accepted_translations": ["thankfulness"],
+          "pos": "noun",
+          "example": "Ik ben haar dankbaarheid verschuldigd."
+        },
+        {
+          "word": "de vriendelijkheid",
+          "translation": "kindness",
+          "pos": "noun",
+          "example": "Dank voor je vriendelijkheid."
+        },
+        {
+          "word": "de afgunst",
+          "translation": "envy",
+          "pos": "noun",
+          "example": "Afgunst leidt nergens toe."
+        },
+        {
+          "word": "ruziemaken",
+          "translation": "to argue",
+          "accepted_translations": ["to quarrel"],
+          "pos": "verb",
+          "example": "Zij maken ruzie om kleine dingen."
+        },
+        {
+          "word": "zich verontschuldigen",
+          "translation": "to apologize",
+          "pos": "verb",
+          "example": "Zij verontschuldigt zich voor de vertraging."
+        },
+        {
+          "word": "vergeven",
+          "translation": "to forgive",
+          "pos": "verb",
+          "example": "Vergeven bevrijdt."
+        },
+        {
+          "word": "gelijk hebben",
+          "translation": "to be right",
+          "pos": "verb",
+          "example": "Jij hebt gelijk, zoals altijd."
+        },
+        {
+          "word": "ongelijk hebben",
+          "translation": "to be wrong",
+          "pos": "verb",
+          "example": "Ik had ongelijk in dat punt."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "de schaamte",
+          "answer": "shame"
+        },
+        {
+          "type": "translation",
+          "prompt": "de trots",
+          "answer": "pride"
+        },
+        {
+          "type": "translation",
+          "prompt": "de jaloezie",
+          "answer": "jealousy"
+        },
+        {
+          "type": "translation",
+          "prompt": "de opluchting",
+          "answer": "relief"
+        },
+        {
+          "type": "translation",
+          "prompt": "de schuld",
+          "answer": "guilt",
+          "accepted_answers": [
+            "fault"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "de eenzaamheid",
+          "answer": "loneliness"
+        },
+        {
+          "type": "translation",
+          "prompt": "het geduld",
+          "answer": "patience"
+        },
+        {
+          "type": "translation",
+          "prompt": "de moed",
+          "answer": "courage",
+          "accepted_answers": [
+            "bravery"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "de dankbaarheid",
+          "answer": "gratitude",
+          "accepted_answers": [
+            "thankfulness"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "de vriendelijkheid",
+          "answer": "kindness"
+        },
+        {
+          "type": "translation",
+          "prompt": "de afgunst",
+          "answer": "envy"
+        },
+        {
+          "type": "translation",
+          "prompt": "ruziemaken",
+          "answer": "to argue",
+          "accepted_answers": [
+            "to quarrel"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "zich verontschuldigen",
+          "answer": "to apologize"
+        },
+        {
+          "type": "translation",
+          "prompt": "vergeven",
+          "answer": "to forgive"
+        },
+        {
+          "type": "translation",
+          "prompt": "gelijk hebben",
+          "answer": "to be right"
+        },
+        {
+          "type": "translation",
+          "prompt": "ongelijk hebben",
+          "answer": "to be wrong"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik ben trots op jou.",
+          "answer": "I am proud of you."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hij had de moed om de waarheid te zeggen.",
+          "answer": "He had the courage to tell the truth."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ze biedt haar excuses aan voor de vertraging.",
+          "answer": "She apologizes for the delay."
+        },
+        {
+          "type": "translation",
+          "prompt": "Eenzaamheid is moeilijk in de winter.",
+          "answer": "Loneliness is difficult in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jij hebt gelijk, zoals altijd.",
+          "answer": "You are right, as always."
+        },
+        {
+          "type": "translation",
+          "prompt": "Wees niet jaloers op haar succes.",
+          "answer": "Don't be jealous of her success."
+        },
+        {
+          "type": "translation",
+          "prompt": "Dank voor je vriendelijkheid.",
+          "answer": "Thank you for your kindness."
+        },
+        {
+          "type": "translation",
+          "prompt": "Zij maken ruzie om kleine dingen.",
+          "answer": "They argue about small things."
+        },
+        {
+          "type": "translation",
+          "prompt": "I was wrong, you were right.",
+          "answer": "Ik had ongelijk, jij had gelijk."
+        },
+        {
+          "type": "translation",
+          "prompt": "Please forgive me.",
+          "answer": "Vergeef me alsjeblieft."
+        },
+        {
+          "type": "translation",
+          "prompt": "Patience is a great quality.",
+          "answer": "Geduld is een grote deugd."
+        },
+        {
+          "type": "translation",
+          "prompt": "Shame and guilt are difficult feelings.",
+          "answer": "Schaamte en schuld zijn moeilijke gevoelens."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'shame':",
+          "options": [
+            "de schaamte",
+            "de trots",
+            "de opluchting",
+            "de eenzaamheid"
+          ],
+          "answer": "de schaamte"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'pride':",
+          "options": [
+            "de jaloezie",
+            "de schuld",
+            "het geduld",
+            "de trots"
+          ],
+          "answer": "de trots"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'relief':",
+          "options": [
+            "het geduld",
+            "de dankbaarheid",
+            "de opluchting",
+            "de schuld"
+          ],
+          "answer": "de opluchting"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'patience':",
+          "options": [
+            "ruziemaken",
+            "het geduld",
+            "de moed",
+            "de vriendelijkheid"
+          ],
+          "answer": "het geduld"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'gratitude':",
+          "options": [
+            "de dankbaarheid",
+            "de vriendelijkheid",
+            "ruziemaken",
+            "vergeven"
+          ],
+          "answer": "de dankbaarheid"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to apologize':",
+          "options": [
+            "vergeven",
+            "ongelijk hebben",
+            "de trots",
+            "zich verontschuldigen"
+          ],
+          "answer": "zich verontschuldigen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to forgive':",
+          "options": [
+            "de schaamte",
+            "de jaloezie",
+            "vergeven",
+            "gelijk hebben"
+          ],
+          "answer": "vergeven"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to be wrong':",
+          "options": [
+            "de schuld",
+            "ongelijk hebben",
+            "de schaamte",
+            "de jaloezie"
+          ],
+          "answer": "ongelijk hebben"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hij voelt zich ___ . (eenzaam)",
+          "answer": "eenzaam"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ me dat ik te laat ben. (het spijt)",
+          "answer": "Het spijt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik ben trots ___ jou. (op)",
+          "answer": "op"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hij heeft altijd ___ .",
+          "answer": "gelijk"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jij hebt nu ___ .",
+          "answer": "ongelijk"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Zij ___ ruzie om kleine dingen. (maken)",
+          "answer": "maken"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Zij ___ zich voor de fout. (verontschuldigen)",
+          "answer": "verontschuldigt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Je moet leren ___ . (vergeven)",
+          "answer": "vergeven"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Memories and Reflections",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "het geheugen",
+          "translation": "memory",
+          "pos": "noun",
+          "example": "Het geheugen bewaart gezichten."
+        },
+        {
+          "word": "het verleden",
+          "translation": "past",
+          "pos": "noun",
+          "example": "Het verleden verklaart het heden."
+        },
+        {
+          "word": "de spijt",
+          "translation": "regret",
+          "pos": "noun",
+          "example": "Mijn grootste spijt."
+        },
+        {
+          "word": "de wijsheid",
+          "translation": "wisdom",
+          "pos": "noun",
+          "example": "De jaren brengen wijsheid."
+        },
+        {
+          "word": "de mislukking",
+          "translation": "failure",
+          "pos": "noun",
+          "example": "Mislukking is een les."
+        },
+        {
+          "word": "de keuze",
+          "translation": "choice",
+          "accepted_translations": ["decision"],
+          "pos": "noun",
+          "example": "Deze keuze veranderde mijn leven."
+        },
+        {
+          "word": "de stilte",
+          "translation": "silence",
+          "pos": "noun",
+          "example": "Zij bewaart de stilte."
+        },
+        {
+          "word": "de belofte",
+          "translation": "promise",
+          "pos": "noun",
+          "example": "Hij hield zijn belofte."
+        },
+        {
+          "word": "de inspanning",
+          "translation": "effort",
+          "pos": "noun",
+          "example": "De inspanning is altijd de moeite waard."
+        },
+        {
+          "word": "het lot",
+          "translation": "destiny",
+          "accepted_translations": ["fate"],
+          "pos": "noun",
+          "example": "Ik geloof niet in het lot."
+        },
+        {
+          "word": "de ambitie",
+          "translation": "ambition",
+          "pos": "noun",
+          "example": "Zijn ambitie kent geen grenzen."
+        },
+        {
+          "word": "de levensles",
+          "translation": "life lesson",
+          "pos": "noun",
+          "example": "Elke mislukking is een levensles."
+        },
+        {
+          "word": "zich herinneren",
+          "translation": "to remember",
+          "pos": "verb",
+          "example": "Ik herinner me die dag."
+        },
+        {
+          "word": "vergeten",
+          "translation": "to forget",
+          "pos": "verb",
+          "example": "Met de tijd vergeet je."
+        },
+        {
+          "word": "opgroeien",
+          "translation": "to grow up",
+          "pos": "verb",
+          "example": "Kinderen groeien snel op."
+        },
+        {
+          "word": "rijpen",
+          "translation": "to mature",
+          "accepted_translations": ["to ripen"],
+          "pos": "verb",
+          "example": "Met de jaren rijp je."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "het geheugen",
+          "answer": "memory"
+        },
+        {
+          "type": "translation",
+          "prompt": "het verleden",
+          "answer": "past"
+        },
+        {
+          "type": "translation",
+          "prompt": "de spijt",
+          "answer": "regret"
+        },
+        {
+          "type": "translation",
+          "prompt": "de wijsheid",
+          "answer": "wisdom"
+        },
+        {
+          "type": "translation",
+          "prompt": "de mislukking",
+          "answer": "failure"
+        },
+        {
+          "type": "translation",
+          "prompt": "de keuze",
+          "answer": "choice",
+          "accepted_answers": [
+            "decision"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "de stilte",
+          "answer": "silence"
+        },
+        {
+          "type": "translation",
+          "prompt": "de belofte",
+          "answer": "promise"
+        },
+        {
+          "type": "translation",
+          "prompt": "de inspanning",
+          "answer": "effort"
+        },
+        {
+          "type": "translation",
+          "prompt": "het lot",
+          "answer": "destiny",
+          "accepted_answers": [
+            "fate"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "de ambitie",
+          "answer": "ambition"
+        },
+        {
+          "type": "translation",
+          "prompt": "de levensles",
+          "answer": "life lesson"
+        },
+        {
+          "type": "translation",
+          "prompt": "zich herinneren",
+          "answer": "to remember"
+        },
+        {
+          "type": "translation",
+          "prompt": "vergeten",
+          "answer": "to forget"
+        },
+        {
+          "type": "translation",
+          "prompt": "opgroeien",
+          "answer": "to grow up"
+        },
+        {
+          "type": "translation",
+          "prompt": "rijpen",
+          "answer": "to mature",
+          "accepted_answers": [
+            "to ripen"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Als ik het had geweten, had ik anders gekozen.",
+          "answer": "If I had known, I would have chosen differently."
+        },
+        {
+          "type": "translation",
+          "prompt": "Als ik aan mijn jeugd denk, glimlach ik.",
+          "answer": "When I think of my youth, I smile."
+        },
+        {
+          "type": "translation",
+          "prompt": "Zij zwijgt over haar verleden.",
+          "answer": "She keeps quiet about her past."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik heb er spijt van dat ik niet heb gereisd.",
+          "answer": "I regret not having traveled."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mislukking is een les, geen einde.",
+          "answer": "Failure is a lesson, not an end."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ik herinner me onze eerste ontmoeting.",
+          "answer": "I remember our first meeting."
+        },
+        {
+          "type": "translation",
+          "prompt": "Met de tijd vergeet je slechte herinneringen.",
+          "answer": "With time, you forget bad memories.",
+          "accepted_answers": [
+            "With time, one forgets the bad memories."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hij deed moeite en werd volwassen.",
+          "answer": "He made an effort and he matured."
+        },
+        {
+          "type": "translation",
+          "prompt": "If I had been there, I would have helped you.",
+          "answer": "Als ik er was geweest, had ik je geholpen."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't remember her name.",
+          "answer": "Ik herinner me haar naam niet."
+        },
+        {
+          "type": "translation",
+          "prompt": "You have to grow up one day.",
+          "answer": "Je moet een keer opgroeien."
+        },
+        {
+          "type": "translation",
+          "prompt": "The past explains the present.",
+          "answer": "Het verleden verklaart het heden."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'memory':",
+          "options": [
+            "het geheugen",
+            "het verleden",
+            "de wijsheid",
+            "de keuze"
+          ],
+          "answer": "het geheugen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'past':",
+          "options": [
+            "de spijt",
+            "de mislukking",
+            "de stilte",
+            "het verleden"
+          ],
+          "answer": "het verleden"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'regret':",
+          "options": [
+            "de keuze",
+            "de belofte",
+            "de spijt",
+            "de wijsheid"
+          ],
+          "answer": "de spijt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'wisdom':",
+          "options": [
+            "de inspanning",
+            "de wijsheid",
+            "de mislukking",
+            "de stilte"
+          ],
+          "answer": "de wijsheid"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'silence':",
+          "options": [
+            "de stilte",
+            "de belofte",
+            "het lot",
+            "de levensles"
+          ],
+          "answer": "de stilte"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'promise':",
+          "options": [
+            "de inspanning",
+            "de ambitie",
+            "zich herinneren",
+            "de belofte"
+          ],
+          "answer": "de belofte"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to remember':",
+          "options": [
+            "rijpen",
+            "het verleden",
+            "zich herinneren",
+            "vergeten"
+          ],
+          "answer": "zich herinneren"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to grow up':",
+          "options": [
+            "de wijsheid",
+            "opgroeien",
+            "rijpen",
+            "het verleden"
+          ],
+          "answer": "opgroeien"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Als ik het had geweten, ___ ik geholpen. (hebben)",
+          "answer": "had"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Als je was gekomen, ___ je het meesterwerk gezien. (hebben)",
+          "answer": "had"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hij ___ hebben gedanst, maar hij was ziek. (zullen)",
+          "answer": "zou"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Wij ___ het museum bezocht als het open was geweest. (zullen)",
+          "answer": "zouden"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Toen ik aankwam, was de trein al ___ . (vertrekken)",
+          "answer": "vertrokken"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ze zei dat ze het concert al gezien ___ . (hebben)",
+          "answer": "had"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ik ___ me mijn jeugd met plezier. (herinneren)",
+          "answer": "herinner"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Je moet een keer ___ . (opgroeien)",
+          "answer": "opgroeien"
+        }
+      ]
     }
   ]
 }

@@ -7,6 +7,27 @@ state is a MAJOR bump; defect fixes that touch no contract are PATCH bumps.
 History before 0.18.0 lives in the git log and in HANDOFF.md §2, one
 paragraph per session.
 
+## [0.21.0] — 2026-11-24
+
+### Added
+
+- The stages 21–25 wave (D23): every one of the thirteen courses grows
+  its fifth band — five advanced stages (Culture and the Arts /
+  Science and Technology / Society and Politics / Feelings and Idioms
+  / Memories and Reflections), 80 words and 220 exercises per course,
+  the same shared skeleton with each course's own drill identity
+  continuing (French the subjunctive after *il faut que*, the
+  relatives *qui/que* and *ce qui/ce que*, and the past
+  counterfactual as its fourth narrative form; German the relative
+  clauses and the Konjunktiv II; Polish the instrumental and the
+  *gdybym … -łbym* past conditional; Turkish the *-dik* relative
+  participle and the *keşke* past; Icelandic the *hefði* of the unmet
+  past; Hungarian the *volna* counterfactual; and every course's
+  stage 25 closes its narrative arc). Courses now run to twenty-five
+  stages and 393 words; `level_hint: "advanced"` is the fifth band.
+  Additive content, so a MINOR bump per the semver policy in
+  RELEASE.md.
+
 ## [0.20.0] — 2026-11-23
 
 ### Added

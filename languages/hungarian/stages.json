@@ -7890,6 +7890,1954 @@
           "answer": "álmok"
         }
       ]
+    },
+    {
+      "id": 21,
+      "title": "Culture and the Arts",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "művészet",
+          "translation": "art",
+          "accepted_translations": ["the arts"],
+          "pos": "noun",
+          "example": "A modern művészet lenyűgöz."
+        },
+        {
+          "word": "festmény",
+          "translation": "painting",
+          "pos": "noun",
+          "example": "Ez a festmény nagyon régi."
+        },
+        {
+          "word": "szobor",
+          "translation": "sculpture",
+          "pos": "noun",
+          "example": "A szobor márványból van."
+        },
+        {
+          "word": "kiállítás",
+          "translation": "exhibition",
+          "accepted_translations": ["exhibit"],
+          "pos": "noun",
+          "example": "A kiállítás szombaton nyílik."
+        },
+        {
+          "word": "regény",
+          "translation": "novel",
+          "pos": "noun",
+          "example": "Egy krimi regényt olvasok."
+        },
+        {
+          "word": "színház",
+          "translation": "theater",
+          "accepted_translations": ["theatre"],
+          "pos": "noun",
+          "example": "Ma este színházba megyünk."
+        },
+        {
+          "word": "koncert",
+          "translation": "concert",
+          "pos": "noun",
+          "example": "A koncert nyolckor kezdődik."
+        },
+        {
+          "word": "színpad",
+          "translation": "stage",
+          "pos": "noun",
+          "example": "A színész a színpadra lép."
+        },
+        {
+          "word": "közönség",
+          "translation": "audience",
+          "accepted_translations": ["the public"],
+          "pos": "noun",
+          "example": "A közönség hangosan tapsol."
+        },
+        {
+          "word": "művész",
+          "translation": "artist",
+          "pos": "noun",
+          "example": "A művész portrékat fest."
+        },
+        {
+          "word": "zenész",
+          "translation": "musician",
+          "pos": "noun",
+          "example": "A zenész hangolja a hegedűjét."
+        },
+        {
+          "word": "író",
+          "translation": "writer",
+          "accepted_translations": ["author"],
+          "pos": "noun",
+          "example": "Az író befejezi a könyvét."
+        },
+        {
+          "word": "színész",
+          "translation": "actor",
+          "pos": "noun",
+          "example": "A színész próbálja a szerepét."
+        },
+        {
+          "word": "remekmű",
+          "translation": "masterpiece",
+          "pos": "noun",
+          "example": "Ez a festmény remekmű."
+        },
+        {
+          "word": "fellépni",
+          "translation": "to perform",
+          "pos": "verb",
+          "example": "A zenekar ma este lép fel."
+        },
+        {
+          "word": "tapsolni",
+          "translation": "to applaud",
+          "accepted_translations": ["to clap"],
+          "pos": "verb",
+          "example": "A végén tapsolunk."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "művészet",
+          "answer": "art",
+          "accepted_answers": [
+            "the arts"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "festmény",
+          "answer": "painting"
+        },
+        {
+          "type": "translation",
+          "prompt": "szobor",
+          "answer": "sculpture"
+        },
+        {
+          "type": "translation",
+          "prompt": "kiállítás",
+          "answer": "exhibition",
+          "accepted_answers": [
+            "exhibit"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "regény",
+          "answer": "novel"
+        },
+        {
+          "type": "translation",
+          "prompt": "színház",
+          "answer": "theater",
+          "accepted_answers": [
+            "theatre"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "koncert",
+          "answer": "concert"
+        },
+        {
+          "type": "translation",
+          "prompt": "színpad",
+          "answer": "stage"
+        },
+        {
+          "type": "translation",
+          "prompt": "közönség",
+          "answer": "audience",
+          "accepted_answers": [
+            "the public"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "művész",
+          "answer": "artist"
+        },
+        {
+          "type": "translation",
+          "prompt": "zenész",
+          "answer": "musician"
+        },
+        {
+          "type": "translation",
+          "prompt": "író",
+          "answer": "writer",
+          "accepted_answers": [
+            "author"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "színész",
+          "answer": "actor"
+        },
+        {
+          "type": "translation",
+          "prompt": "remekmű",
+          "answer": "masterpiece"
+        },
+        {
+          "type": "translation",
+          "prompt": "fellépni",
+          "answer": "to perform"
+        },
+        {
+          "type": "translation",
+          "prompt": "tapsolni",
+          "answer": "to applaud",
+          "accepted_answers": [
+            "to clap"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Tegnap megnéztem egy kiállítást a múzeumban.",
+          "answer": "Yesterday I saw an exhibition at the museum."
+        },
+        {
+          "type": "translation",
+          "prompt": "A regény, amit olvasok, remekmű.",
+          "answer": "The novel I am reading is a masterpiece."
+        },
+        {
+          "type": "translation",
+          "prompt": "A közönség tíz percig tapsolt.",
+          "answer": "The audience applauded for ten minutes."
+        },
+        {
+          "type": "translation",
+          "prompt": "Az író aláírja a regényét a könyvesboltban.",
+          "answer": "The writer signs his novel at the bookstore."
+        },
+        {
+          "type": "translation",
+          "prompt": "A színész a főszerepet játssza a színházban.",
+          "answer": "The actor plays the main role in the theater.",
+          "accepted_answers": [
+            "The actor plays the main role in the theatre."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ez a regény a magyar irodalom remekműve.",
+          "answer": "This novel is a masterpiece of Hungarian literature."
+        },
+        {
+          "type": "translation",
+          "prompt": "A zenész zongorán játszik a koncerten.",
+          "answer": "The musician plays the piano at the concert."
+        },
+        {
+          "type": "translation",
+          "prompt": "A zenekar ma este lép fel.",
+          "answer": "The band performs tonight."
+        },
+        {
+          "type": "translation",
+          "prompt": "The concert starts at eight.",
+          "answer": "A koncert nyolckor kezdődik."
+        },
+        {
+          "type": "translation",
+          "prompt": "We applauded after the concert.",
+          "answer": "A koncert után tapsoltunk."
+        },
+        {
+          "type": "translation",
+          "prompt": "This sculpture is a masterpiece.",
+          "answer": "Ez a szobor remekmű."
+        },
+        {
+          "type": "translation",
+          "prompt": "The writer finishes his novel.",
+          "answer": "Az író befejezi a regényét."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'art':",
+          "options": [
+            "művészet",
+            "festmény",
+            "kiállítás",
+            "színház"
+          ],
+          "answer": "művészet"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'painting':",
+          "options": [
+            "szobor",
+            "regény",
+            "koncert",
+            "festmény"
+          ],
+          "answer": "festmény"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sculpture':",
+          "options": [
+            "színház",
+            "színpad",
+            "szobor",
+            "kiállítás"
+          ],
+          "answer": "szobor"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'exhibition':",
+          "options": [
+            "közönség",
+            "kiállítás",
+            "regény",
+            "koncert"
+          ],
+          "answer": "kiállítás"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'novel':",
+          "options": [
+            "regény",
+            "színház",
+            "színpad",
+            "művész"
+          ],
+          "answer": "regény"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'theater':",
+          "options": [
+            "koncert",
+            "közönség",
+            "zenész",
+            "színház"
+          ],
+          "answer": "színház"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'audience':",
+          "options": [
+            "író",
+            "remekmű",
+            "közönség",
+            "művész"
+          ],
+          "answer": "közönség"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'masterpiece':",
+          "options": [
+            "szobor",
+            "remekmű",
+            "fellépni",
+            "művészet"
+          ],
+          "answer": "remekmű"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tegnap ___ egy kiállítást. (megnézni)",
+          "answer": "megnéztem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A múlt héten ___ egy regényt. (olvasni)",
+          "answer": "olvastam"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tegnap ___ a koncertre. (menni)",
+          "answer": "mentem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az író ___ egy remekművet. (írni)",
+          "answer": "írt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A közönség sokat ___. (tapsolni)",
+          "answer": "tapsolt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A zenész ___ a színpadra. (lépni)",
+          "answer": "lépett"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A színház ___ este nyolckor. (kezdődni)",
+          "answer": "kezdődött"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ez a festmény egy ___ .",
+          "answer": "remekmű"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Science and Technology",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "tudomány",
+          "translation": "science",
+          "pos": "noun",
+          "example": "A tudomány magyarázza a világot."
+        },
+        {
+          "word": "tudós",
+          "translation": "scientist",
+          "pos": "noun",
+          "example": "A tudós laboratóriumban dolgozik."
+        },
+        {
+          "word": "kísérlet",
+          "translation": "experiment",
+          "pos": "noun",
+          "example": "A kísérlet egy évig tartott."
+        },
+        {
+          "word": "felfedezés",
+          "translation": "discovery",
+          "pos": "noun",
+          "example": "A felfedezés megváltoztatta az orvoslást."
+        },
+        {
+          "word": "találmány",
+          "translation": "invention",
+          "pos": "noun",
+          "example": "A telefon találmánya."
+        },
+        {
+          "word": "kutatás",
+          "translation": "research",
+          "pos": "noun",
+          "example": "A kutatás lassan halad előre."
+        },
+        {
+          "word": "laboratórium",
+          "translation": "laboratory",
+          "accepted_translations": ["lab"],
+          "pos": "noun",
+          "example": "A laboratórium hétfőn zárva."
+        },
+        {
+          "word": "adat",
+          "translation": "data",
+          "pos": "noun",
+          "example": "Az adatok megerősítik a hipotézist."
+        },
+        {
+          "word": "szoftver",
+          "translation": "software",
+          "pos": "noun",
+          "example": "A szoftver mindent kiszámol."
+        },
+        {
+          "word": "hálózat",
+          "translation": "network",
+          "pos": "noun",
+          "example": "A hálózat ma reggel leállt."
+        },
+        {
+          "word": "energia",
+          "translation": "energy",
+          "pos": "noun",
+          "example": "A napenergia tiszta."
+        },
+        {
+          "word": "műhold",
+          "translation": "satellite",
+          "pos": "noun",
+          "example": "A műhold fotózza a Földet."
+        },
+        {
+          "word": "robot",
+          "translation": "robot",
+          "pos": "noun",
+          "example": "A robot összeszereli a kocsikat."
+        },
+        {
+          "word": "feltalálni",
+          "translation": "to invent",
+          "pos": "verb",
+          "example": "Egy új motort talál fel."
+        },
+        {
+          "word": "felfedezni",
+          "translation": "to discover",
+          "pos": "verb",
+          "example": "Egy barlangot fedezünk fel."
+        },
+        {
+          "word": "számolni",
+          "translation": "to calculate",
+          "pos": "verb",
+          "example": "A számítógép nagyon gyorsan számol."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "tudomány",
+          "answer": "science"
+        },
+        {
+          "type": "translation",
+          "prompt": "tudós",
+          "answer": "scientist"
+        },
+        {
+          "type": "translation",
+          "prompt": "kísérlet",
+          "answer": "experiment"
+        },
+        {
+          "type": "translation",
+          "prompt": "felfedezés",
+          "answer": "discovery"
+        },
+        {
+          "type": "translation",
+          "prompt": "találmány",
+          "answer": "invention"
+        },
+        {
+          "type": "translation",
+          "prompt": "kutatás",
+          "answer": "research"
+        },
+        {
+          "type": "translation",
+          "prompt": "laboratórium",
+          "answer": "laboratory",
+          "accepted_answers": [
+            "lab"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "adat",
+          "answer": "data"
+        },
+        {
+          "type": "translation",
+          "prompt": "szoftver",
+          "answer": "software"
+        },
+        {
+          "type": "translation",
+          "prompt": "hálózat",
+          "answer": "network"
+        },
+        {
+          "type": "translation",
+          "prompt": "energia",
+          "answer": "energy"
+        },
+        {
+          "type": "translation",
+          "prompt": "műhold",
+          "answer": "satellite"
+        },
+        {
+          "type": "translation",
+          "prompt": "robot",
+          "answer": "robot"
+        },
+        {
+          "type": "translation",
+          "prompt": "feltalálni",
+          "answer": "to invent"
+        },
+        {
+          "type": "translation",
+          "prompt": "felfedezni",
+          "answer": "to discover"
+        },
+        {
+          "type": "translation",
+          "prompt": "számolni",
+          "answer": "to calculate"
+        },
+        {
+          "type": "translation",
+          "prompt": "A műhold adatokat küld a Földre.",
+          "answer": "The satellite sends data to the Earth."
+        },
+        {
+          "type": "translation",
+          "prompt": "A tudósok kísérletet csinálnak a laboratóriumban.",
+          "answer": "The scientists do an experiment in the laboratory."
+        },
+        {
+          "type": "translation",
+          "prompt": "A felfedezés megváltoztatta a tudományt.",
+          "answer": "The discovery changed science."
+        },
+        {
+          "type": "translation",
+          "prompt": "A szoftver egy másodperc alatt kiszámolja az eredményeket.",
+          "answer": "The software calculates the results in one second."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ez volt a találmány, ami megváltoztatta a világot.",
+          "answer": "It was the invention that changed the world."
+        },
+        {
+          "type": "translation",
+          "prompt": "A robot a gyárban dolgozik.",
+          "answer": "The robot works in the factory."
+        },
+        {
+          "type": "translation",
+          "prompt": "A napenergia-kutatás előrehalad.",
+          "answer": "Research on solar energy is advancing."
+        },
+        {
+          "type": "translation",
+          "prompt": "Felfedezzük, hogyan működik a hálózat.",
+          "answer": "We are discovering how the network works."
+        },
+        {
+          "type": "translation",
+          "prompt": "The scientist discovered a new planet.",
+          "answer": "A tudós egy új bolygót fedezett fel."
+        },
+        {
+          "type": "translation",
+          "prompt": "This invention changed the world.",
+          "answer": "Ez a találmány megváltoztatta a világot."
+        },
+        {
+          "type": "translation",
+          "prompt": "The robot works in the laboratory.",
+          "answer": "A robot a laboratóriumban dolgozik."
+        },
+        {
+          "type": "translation",
+          "prompt": "Energy is important for the future.",
+          "answer": "Az energia fontos a jövő számára."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'science':",
+          "options": [
+            "tudomány",
+            "tudós",
+            "felfedezés",
+            "kutatás"
+          ],
+          "answer": "tudomány"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'scientist':",
+          "options": [
+            "kísérlet",
+            "találmány",
+            "laboratórium",
+            "tudós"
+          ],
+          "answer": "tudós"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'discovery':",
+          "options": [
+            "laboratórium",
+            "szoftver",
+            "felfedezés",
+            "találmány"
+          ],
+          "answer": "felfedezés"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'research':",
+          "options": [
+            "energia",
+            "kutatás",
+            "laboratórium",
+            "szoftver"
+          ],
+          "answer": "kutatás"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'energy':",
+          "options": [
+            "energia",
+            "műhold",
+            "feltalálni",
+            "számolni"
+          ],
+          "answer": "energia"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'satellite':",
+          "options": [
+            "robot",
+            "felfedezni",
+            "tudomány",
+            "műhold"
+          ],
+          "answer": "műhold"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'robot':",
+          "options": [
+            "számolni",
+            "tudós",
+            "robot",
+            "feltalálni"
+          ],
+          "answer": "robot"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to discover':",
+          "options": [
+            "felfedezés",
+            "felfedezni",
+            "számolni",
+            "tudós"
+          ],
+          "answer": "felfedezni"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Írok ___ . (toll)",
+          "answer": "tollal"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A tudós dolgozik ___ . (számítógép)",
+          "answer": "számítógéppel"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A robot ___ a kocsikat. (építeni)",
+          "answer": "építi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Találkoztam ___ . (barát)",
+          "answer": "baráttal"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Utazom ___ . (vonat)",
+          "answer": "vonattal"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A tudós ___ kísérletezik. (műszer)",
+          "answer": "műszerrel"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A műhold ___ adatokat. (küldeni)",
+          "answer": "küld"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az ___ tiszta.",
+          "answer": "energia"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Society and Politics",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "törvény",
+          "translation": "law",
+          "pos": "noun",
+          "example": "A parlament elfogad egy törvényt."
+        },
+        {
+          "word": "jog",
+          "translation": "right",
+          "pos": "noun",
+          "example": "Minden polgárnak joga van."
+        },
+        {
+          "word": "kormány",
+          "translation": "government",
+          "pos": "noun",
+          "example": "A kormány dönt a költségvetésről."
+        },
+        {
+          "word": "választás",
+          "translation": "election",
+          "pos": "noun",
+          "example": "A választás májusban lesz."
+        },
+        {
+          "word": "polgár",
+          "translation": "citizen",
+          "pos": "noun",
+          "example": "A polgár szabadon szavaz."
+        },
+        {
+          "word": "politika",
+          "translation": "politics",
+          "accepted_translations": ["policy"],
+          "pos": "noun",
+          "example": "A politika érdekel."
+        },
+        {
+          "word": "vita",
+          "translation": "debate",
+          "pos": "noun",
+          "example": "A vita három óráig tartott."
+        },
+        {
+          "word": "szabadság",
+          "translation": "freedom",
+          "accepted_translations": ["liberty"],
+          "pos": "noun",
+          "example": "A sajtószabadság fontos."
+        },
+        {
+          "word": "igazságosság",
+          "translation": "justice",
+          "pos": "noun",
+          "example": "Az igazságosság mindenkinek járjon."
+        },
+        {
+          "word": "adó",
+          "translation": "tax",
+          "accepted_translations": ["taxes"],
+          "pos": "noun",
+          "example": "Minden évben adót fizetünk."
+        },
+        {
+          "word": "tüntetés",
+          "translation": "demonstration",
+          "accepted_translations": ["protest", "march"],
+          "pos": "noun",
+          "example": "A tüntetés átvonult a városon."
+        },
+        {
+          "word": "parlament",
+          "translation": "parliament",
+          "pos": "noun",
+          "example": "A parlament képviseli a népet."
+        },
+        {
+          "word": "demokrácia",
+          "translation": "democracy",
+          "pos": "noun",
+          "example": "A demokrácia védi a jogokat."
+        },
+        {
+          "word": "nép",
+          "translation": "the people",
+          "pos": "noun",
+          "example": "Demokráciában a nép dönt."
+        },
+        {
+          "word": "szavazni",
+          "translation": "to vote",
+          "pos": "verb",
+          "example": "Vasnap szavazni fogok."
+        },
+        {
+          "word": "dönteni",
+          "translation": "to decide",
+          "pos": "verb",
+          "example": "Te döntöd el a jövődet."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "törvény",
+          "answer": "law"
+        },
+        {
+          "type": "translation",
+          "prompt": "jog",
+          "answer": "right"
+        },
+        {
+          "type": "translation",
+          "prompt": "kormány",
+          "answer": "government"
+        },
+        {
+          "type": "translation",
+          "prompt": "választás",
+          "answer": "election"
+        },
+        {
+          "type": "translation",
+          "prompt": "polgár",
+          "answer": "citizen"
+        },
+        {
+          "type": "translation",
+          "prompt": "politika",
+          "answer": "politics",
+          "accepted_answers": [
+            "policy"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "vita",
+          "answer": "debate"
+        },
+        {
+          "type": "translation",
+          "prompt": "szabadság",
+          "answer": "freedom",
+          "accepted_answers": [
+            "liberty"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "igazságosság",
+          "answer": "justice"
+        },
+        {
+          "type": "translation",
+          "prompt": "adó",
+          "answer": "tax",
+          "accepted_answers": [
+            "taxes"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "tüntetés",
+          "answer": "demonstration",
+          "accepted_answers": [
+            "protest",
+            "march"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "parlament",
+          "answer": "parliament"
+        },
+        {
+          "type": "translation",
+          "prompt": "demokrácia",
+          "answer": "democracy"
+        },
+        {
+          "type": "translation",
+          "prompt": "nép",
+          "answer": "the people"
+        },
+        {
+          "type": "translation",
+          "prompt": "szavazni",
+          "answer": "to vote"
+        },
+        {
+          "type": "translation",
+          "prompt": "dönteni",
+          "answer": "to decide"
+        },
+        {
+          "type": "translation",
+          "prompt": "A polgárok szavaznak a választáson.",
+          "answer": "Citizens vote in the election."
+        },
+        {
+          "type": "translation",
+          "prompt": "A parlament elfogad egy új törvényt.",
+          "answer": "Parliament passes a new law."
+        },
+        {
+          "type": "translation",
+          "prompt": "A sajtószabadság fontos.",
+          "answer": "Freedom of the press is important."
+        },
+        {
+          "type": "translation",
+          "prompt": "A vita három óráig tartott.",
+          "answer": "The debate lasted three hours."
+        },
+        {
+          "type": "translation",
+          "prompt": "Minden évben adót fizetünk.",
+          "answer": "We pay taxes every year."
+        },
+        {
+          "type": "translation",
+          "prompt": "A tüntetés ezer embert vonzott.",
+          "answer": "The demonstration attracted a thousand people.",
+          "accepted_answers": [
+            "The protest attracted a thousand people.",
+            "The march attracted a thousand people."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Demokráciában a nép dönt.",
+          "answer": "In a democracy, the people decide."
+        },
+        {
+          "type": "translation",
+          "prompt": "Minden polgárnak joga van szavazni.",
+          "answer": "Every citizen has the right to vote."
+        },
+        {
+          "type": "translation",
+          "prompt": "The government must decide.",
+          "answer": "A kormánynak döntenie kell."
+        },
+        {
+          "type": "translation",
+          "prompt": "Freedom and justice are important values.",
+          "answer": "A szabadság és az igazságosság fontos értékek."
+        },
+        {
+          "type": "translation",
+          "prompt": "The vote took place on Sunday.",
+          "answer": "A szavazás vasnap történt."
+        },
+        {
+          "type": "translation",
+          "prompt": "Citizens demonstrated for justice.",
+          "answer": "A polgárok az igazságosságért tüntettek."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'law':",
+          "options": [
+            "törvény",
+            "jog",
+            "választás",
+            "politika"
+          ],
+          "answer": "törvény"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'right':",
+          "options": [
+            "kormány",
+            "polgár",
+            "vita",
+            "jog"
+          ],
+          "answer": "jog"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'government':",
+          "options": [
+            "politika",
+            "szabadság",
+            "kormány",
+            "választás"
+          ],
+          "answer": "kormány"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'election':",
+          "options": [
+            "igazságosság",
+            "választás",
+            "polgár",
+            "vita"
+          ],
+          "answer": "választás"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'citizen':",
+          "options": [
+            "polgár",
+            "politika",
+            "szabadság",
+            "adó"
+          ],
+          "answer": "polgár"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'politics':",
+          "options": [
+            "vita",
+            "igazságosság",
+            "tüntetés",
+            "politika"
+          ],
+          "answer": "politika"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'freedom':",
+          "options": [
+            "tüntetés",
+            "demokrácia",
+            "szabadság",
+            "igazságosság"
+          ],
+          "answer": "szabadság"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'justice':",
+          "options": [
+            "nép",
+            "igazságosság",
+            "adó",
+            "parlament"
+          ],
+          "answer": "igazságosság"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tudom, ___ jön. (hogy)",
+          "answer": "hogy"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nem megyek, ___ beteg vagyok. (mert)",
+          "answer": "mert"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Azt mondják, ___ az adó magas. (hogy)",
+          "answer": "hogy"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Szavazok, ___ hiszek a demokráciában. (mert)",
+          "answer": "mert"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A vita azért volt hosszú, ___ mindenki beszélt. (mert)",
+          "answer": "mert"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A kormány ___ a törvényt. (elfogadni)",
+          "answer": "elfogadta"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A polgárok ___ az utcán. (tüntetni)",
+          "answer": "tüntettek"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A nép ___ a választáson. (szavazni)",
+          "answer": "szavaz"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Feelings and Idioms",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "szégyen",
+          "translation": "shame",
+          "pos": "noun",
+          "example": "Szégyellem a hibámat."
+        },
+        {
+          "word": "büszkeség",
+          "translation": "pride",
+          "pos": "noun",
+          "example": "Nagy büszkeséget érzek."
+        },
+        {
+          "word": "féltékenység",
+          "translation": "jealousy",
+          "pos": "noun",
+          "example": "A féltékenység tönkreteszi a barátságot."
+        },
+        {
+          "word": "megkönnyebbülés",
+          "translation": "relief",
+          "pos": "noun",
+          "example": "A hír megkönnyebbülés volt."
+        },
+        {
+          "word": "bűntudat",
+          "translation": "guilt",
+          "pos": "noun",
+          "example": "A bűntudat nem hagyja aludni."
+        },
+        {
+          "word": "magány",
+          "translation": "loneliness",
+          "pos": "noun",
+          "example": "A magány télen nehéz."
+        },
+        {
+          "word": "türelem",
+          "translation": "patience",
+          "pos": "noun",
+          "example": "A türelem erény."
+        },
+        {
+          "word": "bátorság",
+          "translation": "courage",
+          "accepted_translations": ["bravery"],
+          "pos": "noun",
+          "example": "Volt bátorsága beszélni."
+        },
+        {
+          "word": "hála",
+          "translation": "gratitude",
+          "accepted_translations": ["thankfulness"],
+          "pos": "noun",
+          "example": "Hálával tartozom neki."
+        },
+        {
+          "word": "kedvesség",
+          "translation": "kindness",
+          "pos": "noun",
+          "example": "Köszönöm a kedvességedet."
+        },
+        {
+          "word": "irigység",
+          "translation": "envy",
+          "pos": "noun",
+          "example": "Az irigység sehová nem vezet."
+        },
+        {
+          "word": "veszekedni",
+          "translation": "to argue",
+          "accepted_translations": ["to quarrel"],
+          "pos": "verb",
+          "example": "Apróságokon veszekednek."
+        },
+        {
+          "word": "bocsánatot kérni",
+          "translation": "to apologize",
+          "pos": "verb",
+          "example": "Bocsánatot kér a késésért."
+        },
+        {
+          "word": "megbocsátani",
+          "translation": "to forgive",
+          "pos": "verb",
+          "example": "A megbocsátás felszabadít."
+        },
+        {
+          "word": "igaza van",
+          "translation": "to be right",
+          "pos": "verb",
+          "example": "Igazad van, mint mindig."
+        },
+        {
+          "word": "tévedni",
+          "translation": "to be wrong",
+          "accepted_translations": ["to be mistaken"],
+          "pos": "verb",
+          "example": "Ebben tévedtem."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "szégyen",
+          "answer": "shame"
+        },
+        {
+          "type": "translation",
+          "prompt": "büszkeség",
+          "answer": "pride"
+        },
+        {
+          "type": "translation",
+          "prompt": "féltékenység",
+          "answer": "jealousy"
+        },
+        {
+          "type": "translation",
+          "prompt": "megkönnyebbülés",
+          "answer": "relief"
+        },
+        {
+          "type": "translation",
+          "prompt": "bűntudat",
+          "answer": "guilt"
+        },
+        {
+          "type": "translation",
+          "prompt": "magány",
+          "answer": "loneliness"
+        },
+        {
+          "type": "translation",
+          "prompt": "türelem",
+          "answer": "patience"
+        },
+        {
+          "type": "translation",
+          "prompt": "bátorság",
+          "answer": "courage",
+          "accepted_answers": [
+            "bravery"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "hála",
+          "answer": "gratitude",
+          "accepted_answers": [
+            "thankfulness"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "kedvesség",
+          "answer": "kindness"
+        },
+        {
+          "type": "translation",
+          "prompt": "irigység",
+          "answer": "envy"
+        },
+        {
+          "type": "translation",
+          "prompt": "veszekedni",
+          "answer": "to argue",
+          "accepted_answers": [
+            "to quarrel"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "bocsánatot kérni",
+          "answer": "to apologize"
+        },
+        {
+          "type": "translation",
+          "prompt": "megbocsátani",
+          "answer": "to forgive"
+        },
+        {
+          "type": "translation",
+          "prompt": "igaza van",
+          "answer": "to be right"
+        },
+        {
+          "type": "translation",
+          "prompt": "tévedni",
+          "answer": "to be wrong",
+          "accepted_answers": [
+            "to be mistaken"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Büszke vagyok rád.",
+          "answer": "I am proud of you."
+        },
+        {
+          "type": "translation",
+          "prompt": "Volt bátorsága az igazságot mondani.",
+          "answer": "He had the courage to tell the truth."
+        },
+        {
+          "type": "translation",
+          "prompt": "Elnézést kér a késésért.",
+          "answer": "She apologizes for being late."
+        },
+        {
+          "type": "translation",
+          "prompt": "A magány télen nehéz.",
+          "answer": "Loneliness is difficult in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Igazad van, mint mindig.",
+          "answer": "You are right, as always."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ne légy irigy a sikerére.",
+          "answer": "Don't envy her success."
+        },
+        {
+          "type": "translation",
+          "prompt": "Köszönöm a kedvességedet.",
+          "answer": "Thank you for your kindness."
+        },
+        {
+          "type": "translation",
+          "prompt": "Apróságokon veszekednek.",
+          "answer": "They argue about small things."
+        },
+        {
+          "type": "translation",
+          "prompt": "I was wrong, you were right.",
+          "answer": "Én tévedtem, neked igazad volt."
+        },
+        {
+          "type": "translation",
+          "prompt": "Please forgive me.",
+          "answer": "Bocsáss meg, kérlek."
+        },
+        {
+          "type": "translation",
+          "prompt": "Patience is a great quality.",
+          "answer": "A türelem nagy erény."
+        },
+        {
+          "type": "translation",
+          "prompt": "Shame and guilt are difficult feelings.",
+          "answer": "A szégyen és a bűntudat nehéz érzések."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'shame':",
+          "options": [
+            "szégyen",
+            "büszkeség",
+            "megkönnyebbülés",
+            "magány"
+          ],
+          "answer": "szégyen"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'pride':",
+          "options": [
+            "féltékenység",
+            "bűntudat",
+            "türelem",
+            "büszkeség"
+          ],
+          "answer": "büszkeség"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'relief':",
+          "options": [
+            "türelem",
+            "hála",
+            "megkönnyebbülés",
+            "bűntudat"
+          ],
+          "answer": "megkönnyebbülés"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'patience':",
+          "options": [
+            "veszekedni",
+            "türelem",
+            "bátorság",
+            "kedvesség"
+          ],
+          "answer": "türelem"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'gratitude':",
+          "options": [
+            "hála",
+            "kedvesség",
+            "veszekedni",
+            "megbocsátani"
+          ],
+          "answer": "hála"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to apologize':",
+          "options": [
+            "megbocsátani",
+            "tévedni",
+            "büszkeség",
+            "bocsánatot kérni"
+          ],
+          "answer": "bocsánatot kérni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to forgive':",
+          "options": [
+            "szégyen",
+            "féltékenység",
+            "megbocsátani",
+            "igaza van"
+          ],
+          "answer": "megbocsátani"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to be wrong':",
+          "options": [
+            "bűntudat",
+            "tévedni",
+            "szégyen",
+            "féltékenység"
+          ],
+          "answer": "tévedni"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Büszke vagyok ___ . (te)",
+          "answer": "rád"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Irigy vagyok ___ . (ő)",
+          "answer": "tőle"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Örülök ___ . (te)",
+          "answer": "neked"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Félek ___ . (ő)",
+          "answer": "tőle"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ettől lettem ___ . (boldog)",
+          "answer": "boldog"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Örülök, hogy ___ . (jönni)",
+          "answer": "jössz"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A tüntetés ___ volt. (békés)",
+          "answer": "békés"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bocsánatot ___ a késésért. (kérni)",
+          "answer": "kérek"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Memories and Reflections",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "emlékezet",
+          "translation": "memory",
+          "pos": "noun",
+          "example": "Az emlékezet őrzi az arcokat."
+        },
+        {
+          "word": "ifjúság",
+          "translation": "youth",
+          "pos": "noun",
+          "example": "Mesél az ifjúságáról."
+        },
+        {
+          "word": "múlt",
+          "translation": "past",
+          "pos": "noun",
+          "example": "A múlt megmagyarázza a jelent."
+        },
+        {
+          "word": "megbánni",
+          "translation": "to regret",
+          "pos": "verb",
+          "example": "Megbánja, hogy nem utazott."
+        },
+        {
+          "word": "bölcsesség",
+          "translation": "wisdom",
+          "pos": "noun",
+          "example": "Az évek bölcsességet hoznak."
+        },
+        {
+          "word": "kudarc",
+          "translation": "failure",
+          "pos": "noun",
+          "example": "A kudarc lecke, nem vég."
+        },
+        {
+          "word": "döntés",
+          "translation": "decision",
+          "accepted_translations": ["choice"],
+          "pos": "noun",
+          "example": "Ez a döntés megváltoztatta az életem."
+        },
+        {
+          "word": "csend",
+          "translation": "silence",
+          "pos": "noun",
+          "example": "Csendben marad."
+        },
+        {
+          "word": "ígéret",
+          "translation": "promise",
+          "pos": "noun",
+          "example": "Megtartotta az ígéretét."
+        },
+        {
+          "word": "erőfeszítés",
+          "translation": "effort",
+          "pos": "noun",
+          "example": "Az erőfeszítés mindig megéri."
+        },
+        {
+          "word": "sors",
+          "translation": "destiny",
+          "accepted_translations": ["fate"],
+          "pos": "noun",
+          "example": "Nem hiszek a sorsban."
+        },
+        {
+          "word": "ambíció",
+          "translation": "ambition",
+          "pos": "noun",
+          "example": "Az ambíciója határtalan."
+        },
+        {
+          "word": "emlékezni",
+          "translation": "to remember",
+          "pos": "verb",
+          "example": "Emlékszem arra a napra."
+        },
+        {
+          "word": "elfelejteni",
+          "translation": "to forget",
+          "pos": "verb",
+          "example": "Az idővel az ember elfelejti."
+        },
+        {
+          "word": "felnőni",
+          "translation": "to grow up",
+          "pos": "verb",
+          "example": "A gyerekek gyorsan felnőnek."
+        },
+        {
+          "word": "érni",
+          "translation": "to mature",
+          "accepted_translations": ["to ripen"],
+          "pos": "verb",
+          "example": "Az évekkel megérett."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "emlékezet",
+          "answer": "memory"
+        },
+        {
+          "type": "translation",
+          "prompt": "ifjúság",
+          "answer": "youth"
+        },
+        {
+          "type": "translation",
+          "prompt": "múlt",
+          "answer": "past"
+        },
+        {
+          "type": "translation",
+          "prompt": "megbánni",
+          "answer": "to regret"
+        },
+        {
+          "type": "translation",
+          "prompt": "bölcsesség",
+          "answer": "wisdom"
+        },
+        {
+          "type": "translation",
+          "prompt": "kudarc",
+          "answer": "failure"
+        },
+        {
+          "type": "translation",
+          "prompt": "döntés",
+          "answer": "decision",
+          "accepted_answers": [
+            "choice"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "csend",
+          "answer": "silence"
+        },
+        {
+          "type": "translation",
+          "prompt": "ígéret",
+          "answer": "promise"
+        },
+        {
+          "type": "translation",
+          "prompt": "erőfeszítés",
+          "answer": "effort"
+        },
+        {
+          "type": "translation",
+          "prompt": "sors",
+          "answer": "destiny",
+          "accepted_answers": [
+            "fate"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "ambíció",
+          "answer": "ambition"
+        },
+        {
+          "type": "translation",
+          "prompt": "emlékezni",
+          "answer": "to remember"
+        },
+        {
+          "type": "translation",
+          "prompt": "elfelejteni",
+          "answer": "to forget"
+        },
+        {
+          "type": "translation",
+          "prompt": "felnőni",
+          "answer": "to grow up"
+        },
+        {
+          "type": "translation",
+          "prompt": "érni",
+          "answer": "to mature",
+          "accepted_answers": [
+            "to ripen"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ha tudtam volna, másként döntöttem volna.",
+          "answer": "If I had known, I would have decided differently."
+        },
+        {
+          "type": "translation",
+          "prompt": "Amikor az ifjúságomra gondolok, elmosolyodom.",
+          "answer": "When I think of my youth, I smile."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ő hallgat a múltjáról.",
+          "answer": "She keeps quiet about her past."
+        },
+        {
+          "type": "translation",
+          "prompt": "Sajnálom, hogy nem utaztam.",
+          "answer": "I regret not having traveled."
+        },
+        {
+          "type": "translation",
+          "prompt": "A kudarc lecke, nem vég.",
+          "answer": "Failure is a lesson, not an end."
+        },
+        {
+          "type": "translation",
+          "prompt": "Emlékszem az első találkozásunkra.",
+          "answer": "I remember our first meeting."
+        },
+        {
+          "type": "translation",
+          "prompt": "Az idő múlásával elfelejtjük a rossz emlékeket.",
+          "answer": "With time, we forget the bad memories.",
+          "accepted_answers": [
+            "With time, one forgets the bad memories."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Tett egy erőfeszítést, és megérett.",
+          "answer": "He made an effort and he matured."
+        },
+        {
+          "type": "translation",
+          "prompt": "If I had been there, I would have helped you.",
+          "answer": "Ha ott lettem volna, segítettem volna neked."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't remember her name.",
+          "answer": "Nem emlékszem a nevére."
+        },
+        {
+          "type": "translation",
+          "prompt": "You have to grow up one day.",
+          "answer": "Egyszer fel kell nőni."
+        },
+        {
+          "type": "translation",
+          "prompt": "The past explains the present.",
+          "answer": "A múlt megmagyarázza a jelent."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'memory':",
+          "options": [
+            "emlékezet",
+            "ifjúság",
+            "megbánni",
+            "kudarc"
+          ],
+          "answer": "emlékezet"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'youth':",
+          "options": [
+            "múlt",
+            "bölcsesség",
+            "döntés",
+            "ifjúság"
+          ],
+          "answer": "ifjúság"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'past':",
+          "options": [
+            "kudarc",
+            "csend",
+            "múlt",
+            "megbánni"
+          ],
+          "answer": "múlt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to regret':",
+          "options": [
+            "ígéret",
+            "megbánni",
+            "bölcsesség",
+            "döntés"
+          ],
+          "answer": "megbánni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'decision':",
+          "options": [
+            "döntés",
+            "csend",
+            "erőfeszítés",
+            "ambíció"
+          ],
+          "answer": "döntés"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'silence':",
+          "options": [
+            "ígéret",
+            "sors",
+            "emlékezni",
+            "csend"
+          ],
+          "answer": "csend"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to remember':",
+          "options": [
+            "érni",
+            "ifjúság",
+            "emlékezni",
+            "elfelejteni"
+          ],
+          "answer": "emlékezni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to grow up':",
+          "options": [
+            "megbánni",
+            "felnőni",
+            "érni",
+            "ifjúság"
+          ],
+          "answer": "felnőni"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kellett ___ mennem. (volna)",
+          "answer": "volna"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Szerettem ___ jönni. (volna)",
+          "answer": "volna"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ha tudtam ___, segítettem volna. (volna)",
+          "answer": "volna"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bárcsak ___ ott! (lenni)",
+          "answer": "lettem volna"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az ___ a legjobb tanár. (múlt)",
+          "answer": "múlt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az idő ___ , és mindent elfelejtünk. (múlni)",
+          "answer": "múlik"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az ember ___ a hibáiból. (tanulni)",
+          "answer": "tanul"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Egyszer fel kell ___ . (nőni)",
+          "answer": "nőni"
+        }
+      ]
     }
   ]
 }

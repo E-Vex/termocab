@@ -7826,6 +7826,1946 @@
           "answer": "reste"
         }
       ]
+    },
+    {
+      "id": 21,
+      "title": "Culture and the Arts",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "en konst",
+          "translation": "art",
+          "accepted_translations": ["the arts"],
+          "pos": "noun",
+          "example": "Modern konst fascinerar mig."
+        },
+        {
+          "word": "en målning",
+          "translation": "painting",
+          "pos": "noun",
+          "example": "Den här målningen är mycket gammal."
+        },
+        {
+          "word": "en skulptur",
+          "translation": "sculpture",
+          "pos": "noun",
+          "example": "Skulpturen är i marmor."
+        },
+        {
+          "word": "en utställning",
+          "translation": "exhibition",
+          "accepted_translations": ["exhibit"],
+          "pos": "noun",
+          "example": "Utställningen öppnar på lördag."
+        },
+        {
+          "word": "en roman",
+          "translation": "novel",
+          "pos": "noun",
+          "example": "Jag läser en deckare."
+        },
+        {
+          "word": "en teater",
+          "translation": "theater",
+          "accepted_translations": ["theatre"],
+          "pos": "noun",
+          "example": "Vi går på teater ikväll."
+        },
+        {
+          "word": "en konsert",
+          "translation": "concert",
+          "pos": "noun",
+          "example": "Konserten börjar klockan åtta."
+        },
+        {
+          "word": "en scen",
+          "translation": "stage",
+          "pos": "noun",
+          "example": "Hon kliver upp på scenen."
+        },
+        {
+          "word": "en publik",
+          "translation": "audience",
+          "accepted_translations": ["the public"],
+          "pos": "noun",
+          "example": "Publiken applåderar högt."
+        },
+        {
+          "word": "en konstnär",
+          "translation": "artist",
+          "pos": "noun",
+          "example": "Konstnären målar porträtt."
+        },
+        {
+          "word": "en musiker",
+          "translation": "musician",
+          "pos": "noun",
+          "example": "Musikern stämmer sin fiol."
+        },
+        {
+          "word": "en författare",
+          "translation": "writer",
+          "accepted_translations": ["author"],
+          "pos": "noun",
+          "example": "Författaren avslutar sin bok."
+        },
+        {
+          "word": "en skådespelare",
+          "translation": "actor",
+          "pos": "noun",
+          "example": "Skådespelaren repeterar sin roll."
+        },
+        {
+          "word": "ett mästerverk",
+          "translation": "masterpiece",
+          "pos": "noun",
+          "example": "Den här tavlan är ett mästerverk."
+        },
+        {
+          "word": "uppträda",
+          "translation": "to perform",
+          "pos": "verb",
+          "example": "Bandet uppträder ikväll."
+        },
+        {
+          "word": "applådera",
+          "translation": "to applaud",
+          "accepted_translations": ["to clap"],
+          "pos": "verb",
+          "example": "Vi applåderar på slutet."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "en konst",
+          "answer": "art",
+          "accepted_answers": [
+            "the arts"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "en målning",
+          "answer": "painting"
+        },
+        {
+          "type": "translation",
+          "prompt": "en skulptur",
+          "answer": "sculpture"
+        },
+        {
+          "type": "translation",
+          "prompt": "en utställning",
+          "answer": "exhibition",
+          "accepted_answers": [
+            "exhibit"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "en roman",
+          "answer": "novel"
+        },
+        {
+          "type": "translation",
+          "prompt": "en teater",
+          "answer": "theater",
+          "accepted_answers": [
+            "theatre"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "en konsert",
+          "answer": "concert"
+        },
+        {
+          "type": "translation",
+          "prompt": "en scen",
+          "answer": "stage"
+        },
+        {
+          "type": "translation",
+          "prompt": "en publik",
+          "answer": "audience",
+          "accepted_answers": [
+            "the public"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "en konstnär",
+          "answer": "artist"
+        },
+        {
+          "type": "translation",
+          "prompt": "en musiker",
+          "answer": "musician"
+        },
+        {
+          "type": "translation",
+          "prompt": "en författare",
+          "answer": "writer",
+          "accepted_answers": [
+            "author"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "en skådespelare",
+          "answer": "actor"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett mästerverk",
+          "answer": "masterpiece"
+        },
+        {
+          "type": "translation",
+          "prompt": "uppträda",
+          "answer": "to perform"
+        },
+        {
+          "type": "translation",
+          "prompt": "applådera",
+          "answer": "to applaud",
+          "accepted_answers": [
+            "to clap"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Romanen som jag läser är ett mästerverk.",
+          "answer": "The novel I am reading is a masterpiece."
+        },
+        {
+          "type": "translation",
+          "prompt": "Museet visar en utställning av modern konst.",
+          "answer": "The museum shows an exhibition of modern art."
+        },
+        {
+          "type": "translation",
+          "prompt": "Publiken applåderade i tio minuter.",
+          "answer": "The audience applauded for ten minutes."
+        },
+        {
+          "type": "translation",
+          "prompt": "Författaren skriver under sin roman i bokhandeln.",
+          "answer": "The writer signs his novel at the bookstore."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hon spelar huvudrollen på teatern.",
+          "answer": "She plays the main role in the theater.",
+          "accepted_answers": [
+            "She plays the main role in the theatre."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Den här romanen är ett mästerverk i svensk litteratur.",
+          "answer": "This novel is a masterpiece of Swedish literature."
+        },
+        {
+          "type": "translation",
+          "prompt": "Musikern spelar piano på konserten.",
+          "answer": "The musician plays the piano at the concert."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bandet uppträder ikväll.",
+          "answer": "The band performs tonight."
+        },
+        {
+          "type": "translation",
+          "prompt": "The concert starts at eight.",
+          "answer": "Konserten börjar klockan åtta."
+        },
+        {
+          "type": "translation",
+          "prompt": "We applauded after the concert.",
+          "answer": "Vi applåderade efter konserten."
+        },
+        {
+          "type": "translation",
+          "prompt": "This sculpture is a masterpiece.",
+          "answer": "Den här skulpturen är ett mästerverk."
+        },
+        {
+          "type": "translation",
+          "prompt": "The writer finishes his novel.",
+          "answer": "Författaren avslutar sin roman."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'art':",
+          "options": [
+            "en konst",
+            "en målning",
+            "en utställning",
+            "en teater"
+          ],
+          "answer": "en konst"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'painting':",
+          "options": [
+            "en skulptur",
+            "en roman",
+            "en konsert",
+            "en målning"
+          ],
+          "answer": "en målning"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sculpture':",
+          "options": [
+            "en teater",
+            "en scen",
+            "en skulptur",
+            "en utställning"
+          ],
+          "answer": "en skulptur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'exhibition':",
+          "options": [
+            "en publik",
+            "en utställning",
+            "en roman",
+            "en konsert"
+          ],
+          "answer": "en utställning"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'novel':",
+          "options": [
+            "en roman",
+            "en teater",
+            "en scen",
+            "en konstnär"
+          ],
+          "answer": "en roman"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'theater':",
+          "options": [
+            "en konsert",
+            "en publik",
+            "en musiker",
+            "en teater"
+          ],
+          "answer": "en teater"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'audience':",
+          "options": [
+            "en författare",
+            "ett mästerverk",
+            "en publik",
+            "en konstnär"
+          ],
+          "answer": "en publik"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'masterpiece':",
+          "options": [
+            "en skulptur",
+            "ett mästerverk",
+            "uppträda",
+            "en konst"
+          ],
+          "answer": "ett mästerverk"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Boken ___ jag läser är lång.",
+          "answer": "som"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Målningen ___ jag såg är berömd.",
+          "answer": "som"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Författaren ___ vi träffade är trevlig.",
+          "answer": "som"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Konserten ___ du vill höra börjar klockan åtta.",
+          "answer": "som"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Romanen ___ han skrev blev en succé.",
+          "answer": "som"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Publiken ___ efter konserten. (applådera)",
+          "answer": "applåderar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hon kliver upp på ___.",
+          "answer": "scenen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Författaren ___ sin bok. (avsluta)",
+          "answer": "avslutar"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Science and Technology",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "en vetenskap",
+          "translation": "science",
+          "pos": "noun",
+          "example": "Vetenskapen förklarar universum."
+        },
+        {
+          "word": "en forskare",
+          "translation": "scientist",
+          "pos": "noun",
+          "example": "Forskaren arbetar på ett laboratorium."
+        },
+        {
+          "word": "ett experiment",
+          "translation": "experiment",
+          "pos": "noun",
+          "example": "Experimentet varade i ett år."
+        },
+        {
+          "word": "en upptäckt",
+          "translation": "discovery",
+          "pos": "noun",
+          "example": "Upptäckten förändrade medicinen."
+        },
+        {
+          "word": "en uppfinning",
+          "translation": "invention",
+          "pos": "noun",
+          "example": "Uppfinningen av telefonen."
+        },
+        {
+          "word": "en forskning",
+          "translation": "research",
+          "pos": "noun",
+          "example": "Forskningen går långsamt framåt."
+        },
+        {
+          "word": "ett laboratorium",
+          "translation": "laboratory",
+          "accepted_translations": ["lab"],
+          "pos": "noun",
+          "example": "Laboratoriet är stängt på måndagar."
+        },
+        {
+          "word": "data",
+          "translation": "data",
+          "pos": "noun",
+          "example": "Data bekräftar hypotesen."
+        },
+        {
+          "word": "en programvara",
+          "translation": "software",
+          "pos": "noun",
+          "example": "Programvaran räknar ut allt."
+        },
+        {
+          "word": "ett nätverk",
+          "translation": "network",
+          "pos": "noun",
+          "example": "Nätverket föll idag på morgonen."
+        },
+        {
+          "word": "en energi",
+          "translation": "energy",
+          "pos": "noun",
+          "example": "Solenergi är rent."
+        },
+        {
+          "word": "en satellit",
+          "translation": "satellite",
+          "pos": "noun",
+          "example": "Satelliten fotograferar jorden."
+        },
+        {
+          "word": "en robot",
+          "translation": "robot",
+          "pos": "noun",
+          "example": "Roboten bygger bilarna."
+        },
+        {
+          "word": "uppfinna",
+          "translation": "to invent",
+          "pos": "verb",
+          "example": "Hon uppfinnar en ny motor."
+        },
+        {
+          "word": "upptäcka",
+          "translation": "to discover",
+          "pos": "verb",
+          "example": "Vi upptäcker en grotta."
+        },
+        {
+          "word": "beräkna",
+          "translation": "to calculate",
+          "pos": "verb",
+          "example": "Datorn beräknar mycket snabbt."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "en vetenskap",
+          "answer": "science"
+        },
+        {
+          "type": "translation",
+          "prompt": "en forskare",
+          "answer": "scientist"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett experiment",
+          "answer": "experiment"
+        },
+        {
+          "type": "translation",
+          "prompt": "en upptäckt",
+          "answer": "discovery"
+        },
+        {
+          "type": "translation",
+          "prompt": "en uppfinning",
+          "answer": "invention"
+        },
+        {
+          "type": "translation",
+          "prompt": "en forskning",
+          "answer": "research"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett laboratorium",
+          "answer": "laboratory",
+          "accepted_answers": [
+            "lab"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "data",
+          "answer": "data"
+        },
+        {
+          "type": "translation",
+          "prompt": "en programvara",
+          "answer": "software"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett nätverk",
+          "answer": "network"
+        },
+        {
+          "type": "translation",
+          "prompt": "en energi",
+          "answer": "energy"
+        },
+        {
+          "type": "translation",
+          "prompt": "en satellit",
+          "answer": "satellite"
+        },
+        {
+          "type": "translation",
+          "prompt": "en robot",
+          "answer": "robot"
+        },
+        {
+          "type": "translation",
+          "prompt": "uppfinna",
+          "answer": "to invent"
+        },
+        {
+          "type": "translation",
+          "prompt": "upptäcka",
+          "answer": "to discover"
+        },
+        {
+          "type": "translation",
+          "prompt": "beräkna",
+          "answer": "to calculate"
+        },
+        {
+          "type": "translation",
+          "prompt": "Satelliten skickar data till jorden.",
+          "answer": "The satellite sends data to the Earth."
+        },
+        {
+          "type": "translation",
+          "prompt": "Forskarna gör ett experiment på laboratoriet.",
+          "answer": "The scientists do an experiment in the laboratory."
+        },
+        {
+          "type": "translation",
+          "prompt": "Upptäckten förändrade vetenskapen.",
+          "answer": "The discovery changed science."
+        },
+        {
+          "type": "translation",
+          "prompt": "Programvaran beräknar resultaten på en sekund.",
+          "answer": "The software calculates the results in one second."
+        },
+        {
+          "type": "translation",
+          "prompt": "Det var uppfinningen som förändrade världen.",
+          "answer": "It was the invention that changed the world."
+        },
+        {
+          "type": "translation",
+          "prompt": "Roboten arbetar i fabriken.",
+          "answer": "The robot works in the factory."
+        },
+        {
+          "type": "translation",
+          "prompt": "Forskning om solenergi gör framsteg.",
+          "answer": "Research on solar energy is making progress."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vi upptäcker hur nätverket fungerar.",
+          "answer": "We are discovering how the network works."
+        },
+        {
+          "type": "translation",
+          "prompt": "The scientist discovered a new planet.",
+          "answer": "Forskaren upptäckte en ny planet."
+        },
+        {
+          "type": "translation",
+          "prompt": "This invention changed the world.",
+          "answer": "Den här uppfinningen förändrade världen."
+        },
+        {
+          "type": "translation",
+          "prompt": "The robot works in the laboratory.",
+          "answer": "Roboten arbetar på laboratoriet."
+        },
+        {
+          "type": "translation",
+          "prompt": "Energy is important for the future.",
+          "answer": "Energi är viktigt för framtiden."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'science':",
+          "options": [
+            "en vetenskap",
+            "en forskare",
+            "en upptäckt",
+            "en forskning"
+          ],
+          "answer": "en vetenskap"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'scientist':",
+          "options": [
+            "ett experiment",
+            "en uppfinning",
+            "ett laboratorium",
+            "en forskare"
+          ],
+          "answer": "en forskare"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'discovery':",
+          "options": [
+            "ett laboratorium",
+            "en programvara",
+            "en upptäckt",
+            "en uppfinning"
+          ],
+          "answer": "en upptäckt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'research':",
+          "options": [
+            "en energi",
+            "en forskning",
+            "ett laboratorium",
+            "en programvara"
+          ],
+          "answer": "en forskning"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'energy':",
+          "options": [
+            "en energi",
+            "en satellit",
+            "uppfinna",
+            "beräkna"
+          ],
+          "answer": "en energi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'satellite':",
+          "options": [
+            "en robot",
+            "upptäcka",
+            "en vetenskap",
+            "en satellit"
+          ],
+          "answer": "en satellit"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'robot':",
+          "options": [
+            "beräkna",
+            "en forskare",
+            "en robot",
+            "uppfinna"
+          ],
+          "answer": "en robot"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to discover':",
+          "options": [
+            "en upptäckt",
+            "upptäcka",
+            "beräkna",
+            "en forskare"
+          ],
+          "answer": "upptäcka"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag studerar ___ att bli forskare. (för)",
+          "answer": "för"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vi går till laboratoriet ___ att göra experimentet. (för)",
+          "answer": "för"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hon sparar pengar ___ att köpa en dator. (för)",
+          "answer": "för"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Han ringde ___ att boka biljetter. (för)",
+          "answer": "för"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Det ___ att regna imorgon. (komma)",
+          "answer": "kommer"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Satelliten ___ data till jorden. (skicka)",
+          "answer": "skickar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Roboten ___ bilarna. (bygga)",
+          "answer": "bygger"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ förklarar universum.",
+          "answer": "Vetenskapen"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Society and Politics",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "en lag",
+          "translation": "law",
+          "pos": "noun",
+          "example": "Riksdagen röstar om en lag."
+        },
+        {
+          "word": "en rättighet",
+          "translation": "right",
+          "pos": "noun",
+          "example": "Varje medborgare har rättigheter."
+        },
+        {
+          "word": "en regering",
+          "translation": "government",
+          "pos": "noun",
+          "example": "Regeringen bestämmer budgeten."
+        },
+        {
+          "word": "ett val",
+          "translation": "election",
+          "pos": "noun",
+          "example": "Valet äger rum i maj."
+        },
+        {
+          "word": "en medborgare",
+          "translation": "citizen",
+          "pos": "noun",
+          "example": "Medborgaren röstar fritt."
+        },
+        {
+          "word": "en politik",
+          "translation": "politics",
+          "accepted_translations": ["policy"],
+          "pos": "noun",
+          "example": "Politik intresserar mig."
+        },
+        {
+          "word": "en debatt",
+          "translation": "debate",
+          "pos": "noun",
+          "example": "Debatten varade i tre timmar."
+        },
+        {
+          "word": "en frihet",
+          "translation": "freedom",
+          "accepted_translations": ["liberty"],
+          "pos": "noun",
+          "example": "Tryckfriheten är viktig."
+        },
+        {
+          "word": "en rättvisa",
+          "translation": "justice",
+          "pos": "noun",
+          "example": "Rättvisan måste gälla alla."
+        },
+        {
+          "word": "en skatt",
+          "translation": "tax",
+          "accepted_translations": ["taxes"],
+          "pos": "noun",
+          "example": "Vi betalar skatt varje år."
+        },
+        {
+          "word": "en demonstration",
+          "translation": "demonstration",
+          "accepted_translations": ["protest", "march"],
+          "pos": "noun",
+          "example": "Demonstrationen gick genom stan."
+        },
+        {
+          "word": "en riksdag",
+          "translation": "parliament",
+          "pos": "noun",
+          "example": "Riksdagen representerar folket."
+        },
+        {
+          "word": "en demokrati",
+          "translation": "democracy",
+          "pos": "noun",
+          "example": "Demokratin skyddar rättigheterna."
+        },
+        {
+          "word": "ett folk",
+          "translation": "the people",
+          "pos": "noun",
+          "example": "I en demokrati bestämmer folket."
+        },
+        {
+          "word": "rösta",
+          "translation": "to vote",
+          "pos": "verb",
+          "example": "Jag röstar på söndagen."
+        },
+        {
+          "word": "besluta",
+          "translation": "to decide",
+          "pos": "verb",
+          "example": "Du bestämmer din framtid."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "en lag",
+          "answer": "law"
+        },
+        {
+          "type": "translation",
+          "prompt": "en rättighet",
+          "answer": "right"
+        },
+        {
+          "type": "translation",
+          "prompt": "en regering",
+          "answer": "government"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett val",
+          "answer": "election"
+        },
+        {
+          "type": "translation",
+          "prompt": "en medborgare",
+          "answer": "citizen"
+        },
+        {
+          "type": "translation",
+          "prompt": "en politik",
+          "answer": "politics",
+          "accepted_answers": [
+            "policy"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "en debatt",
+          "answer": "debate"
+        },
+        {
+          "type": "translation",
+          "prompt": "en frihet",
+          "answer": "freedom",
+          "accepted_answers": [
+            "liberty"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "en rättvisa",
+          "answer": "justice"
+        },
+        {
+          "type": "translation",
+          "prompt": "en skatt",
+          "answer": "tax",
+          "accepted_answers": [
+            "taxes"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "en demonstration",
+          "answer": "demonstration",
+          "accepted_answers": [
+            "protest",
+            "march"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "en riksdag",
+          "answer": "parliament"
+        },
+        {
+          "type": "translation",
+          "prompt": "en demokrati",
+          "answer": "democracy"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett folk",
+          "answer": "the people"
+        },
+        {
+          "type": "translation",
+          "prompt": "rösta",
+          "answer": "to vote"
+        },
+        {
+          "type": "translation",
+          "prompt": "besluta",
+          "answer": "to decide"
+        },
+        {
+          "type": "translation",
+          "prompt": "Medborgarna röstar i valet.",
+          "answer": "Citizens vote in the election."
+        },
+        {
+          "type": "translation",
+          "prompt": "Riksdagen röstar om en ny lag.",
+          "answer": "Parliament votes on a new law."
+        },
+        {
+          "type": "translation",
+          "prompt": "Tryckfriheten är viktig.",
+          "answer": "Freedom of the press is important."
+        },
+        {
+          "type": "translation",
+          "prompt": "Debatten varade i tre timmar.",
+          "answer": "The debate lasted three hours."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vi betalar skatt varje år.",
+          "answer": "We pay taxes every year."
+        },
+        {
+          "type": "translation",
+          "prompt": "Demonstrationen samlade tusen människor.",
+          "answer": "The demonstration gathered a thousand people.",
+          "accepted_answers": [
+            "The protest gathered a thousand people.",
+            "The march gathered a thousand people."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "I en demokrati bestämmer folket.",
+          "answer": "In a democracy, the people decide."
+        },
+        {
+          "type": "translation",
+          "prompt": "Varje medborgare har rätt att rösta.",
+          "answer": "Every citizen has the right to vote."
+        },
+        {
+          "type": "translation",
+          "prompt": "The government must decide.",
+          "answer": "Regeringen måste bestämma."
+        },
+        {
+          "type": "translation",
+          "prompt": "Freedom and justice are important values.",
+          "answer": "Frihet och rättvisa är viktiga värderingar."
+        },
+        {
+          "type": "translation",
+          "prompt": "The vote took place on Sunday.",
+          "answer": "Omröstningen ägde rum på söndagen."
+        },
+        {
+          "type": "translation",
+          "prompt": "Citizens demonstrated for justice.",
+          "answer": "Medborgarna demonstrerade för rättvisa."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'law':",
+          "options": [
+            "en lag",
+            "en rättighet",
+            "ett val",
+            "en politik"
+          ],
+          "answer": "en lag"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'right':",
+          "options": [
+            "en regering",
+            "en medborgare",
+            "en debatt",
+            "en rättighet"
+          ],
+          "answer": "en rättighet"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'government':",
+          "options": [
+            "en politik",
+            "en frihet",
+            "en regering",
+            "ett val"
+          ],
+          "answer": "en regering"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'election':",
+          "options": [
+            "en rättvisa",
+            "ett val",
+            "en medborgare",
+            "en debatt"
+          ],
+          "answer": "ett val"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'citizen':",
+          "options": [
+            "en medborgare",
+            "en politik",
+            "en frihet",
+            "en skatt"
+          ],
+          "answer": "en medborgare"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'politics':",
+          "options": [
+            "en debatt",
+            "en rättvisa",
+            "en demonstration",
+            "en politik"
+          ],
+          "answer": "en politik"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'freedom':",
+          "options": [
+            "en demonstration",
+            "en demokrati",
+            "en frihet",
+            "en rättvisa"
+          ],
+          "answer": "en frihet"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'justice':",
+          "options": [
+            "ett folk",
+            "en rättvisa",
+            "en skatt",
+            "en riksdag"
+          ],
+          "answer": "en rättvisa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Boken ___ av många. (läsa)",
+          "answer": "läses"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Huset ___ förra året. (bygga)",
+          "answer": "byggdes"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Lagen ___ av riksdagen. (besluta)",
+          "answer": "beslutas"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Biljetterna ___ på dörren. (sälja)",
+          "answer": "säljs"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Resultatet ___ imorgon. (presentera)",
+          "answer": "presenteras"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Medborgarna ___ i valet. (rösta)",
+          "answer": "röstar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vi betalar ___ varje år.",
+          "answer": "skatt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Riksdagen representerar ___ .",
+          "answer": "folket"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Feelings and Idioms",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "en skam",
+          "translation": "shame",
+          "pos": "noun",
+          "example": "Jag skäms över mitt misstag."
+        },
+        {
+          "word": "en stolthet",
+          "translation": "pride",
+          "pos": "noun",
+          "example": "Jag känner stor stolthet."
+        },
+        {
+          "word": "en svartsjuka",
+          "translation": "jealousy",
+          "pos": "noun",
+          "example": "Svartsjukan förstör vänskap."
+        },
+        {
+          "word": "en lättnad",
+          "translation": "relief",
+          "pos": "noun",
+          "example": "Beskedet var en lättnad."
+        },
+        {
+          "word": "en skuld",
+          "translation": "guilt",
+          "pos": "noun",
+          "example": "Skulden låter hon inte sova."
+        },
+        {
+          "word": "en ensamhet",
+          "translation": "loneliness",
+          "pos": "noun",
+          "example": "Ensamheten känns tung på vintern."
+        },
+        {
+          "word": "ett tålamod",
+          "translation": "patience",
+          "pos": "noun",
+          "example": "Tålamod är en dygd."
+        },
+        {
+          "word": "ett mod",
+          "translation": "courage",
+          "accepted_translations": ["bravery"],
+          "pos": "noun",
+          "example": "Han hade modet att tala."
+        },
+        {
+          "word": "en tacksamhet",
+          "translation": "gratitude",
+          "accepted_translations": ["thankfulness"],
+          "pos": "noun",
+          "example": "Jag är full av tacksamhet."
+        },
+        {
+          "word": "en vänlighet",
+          "translation": "kindness",
+          "pos": "noun",
+          "example": "Tack för din vänlighet."
+        },
+        {
+          "word": "en avund",
+          "translation": "envy",
+          "pos": "noun",
+          "example": "Avunden leder ingenstans."
+        },
+        {
+          "word": "bråka",
+          "translation": "to argue",
+          "accepted_translations": ["to quarrel"],
+          "pos": "verb",
+          "example": "De bråkar om småsaker."
+        },
+        {
+          "word": "be om ursäkt",
+          "translation": "to apologize",
+          "pos": "verb",
+          "example": "Han ber om ursäkt för förseningen."
+        },
+        {
+          "word": "förlåta",
+          "translation": "to forgive",
+          "pos": "verb",
+          "example": "Att förlåta befriar."
+        },
+        {
+          "word": "ha rätt",
+          "translation": "to be right",
+          "pos": "verb",
+          "example": "Du har rätt, som alltid."
+        },
+        {
+          "word": "ha fel",
+          "translation": "to be wrong",
+          "pos": "verb",
+          "example": "Jag hade fel om det."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "en skam",
+          "answer": "shame"
+        },
+        {
+          "type": "translation",
+          "prompt": "en stolthet",
+          "answer": "pride"
+        },
+        {
+          "type": "translation",
+          "prompt": "en svartsjuka",
+          "answer": "jealousy"
+        },
+        {
+          "type": "translation",
+          "prompt": "en lättnad",
+          "answer": "relief"
+        },
+        {
+          "type": "translation",
+          "prompt": "en skuld",
+          "answer": "guilt"
+        },
+        {
+          "type": "translation",
+          "prompt": "en ensamhet",
+          "answer": "loneliness"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett tålamod",
+          "answer": "patience"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett mod",
+          "answer": "courage",
+          "accepted_answers": [
+            "bravery"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "en tacksamhet",
+          "answer": "gratitude",
+          "accepted_answers": [
+            "thankfulness"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "en vänlighet",
+          "answer": "kindness"
+        },
+        {
+          "type": "translation",
+          "prompt": "en avund",
+          "answer": "envy"
+        },
+        {
+          "type": "translation",
+          "prompt": "bråka",
+          "answer": "to argue",
+          "accepted_answers": [
+            "to quarrel"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "be om ursäkt",
+          "answer": "to apologize"
+        },
+        {
+          "type": "translation",
+          "prompt": "förlåta",
+          "answer": "to forgive"
+        },
+        {
+          "type": "translation",
+          "prompt": "ha rätt",
+          "answer": "to be right"
+        },
+        {
+          "type": "translation",
+          "prompt": "ha fel",
+          "answer": "to be wrong"
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag är stolt över dig.",
+          "answer": "I am proud of you."
+        },
+        {
+          "type": "translation",
+          "prompt": "Han hade modet att säga sanningen.",
+          "answer": "He had the courage to tell the truth."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hon ber om ursäkt för förseningen.",
+          "answer": "She apologizes for being late."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ensamhet är svårt på vintern.",
+          "answer": "Loneliness is difficult in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Du har rätt, som alltid.",
+          "answer": "You are right, as always."
+        },
+        {
+          "type": "translation",
+          "prompt": "Var inte avundsjuk på hennes framgång.",
+          "answer": "Don't be jealous of her success."
+        },
+        {
+          "type": "translation",
+          "prompt": "Tack för din vänlighet.",
+          "answer": "Thank you for your kindness."
+        },
+        {
+          "type": "translation",
+          "prompt": "De bråkar om småsaker.",
+          "answer": "They argue about small things."
+        },
+        {
+          "type": "translation",
+          "prompt": "I was wrong, you were right.",
+          "answer": "Jag hade fel, du hade rätt."
+        },
+        {
+          "type": "translation",
+          "prompt": "Please forgive me.",
+          "answer": "Förlåt mig, snälla."
+        },
+        {
+          "type": "translation",
+          "prompt": "Patience is a great quality.",
+          "answer": "Tålamod är en stor egenskap."
+        },
+        {
+          "type": "translation",
+          "prompt": "Shame and guilt are difficult feelings.",
+          "answer": "Skam och skuld är svåra känslor."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'shame':",
+          "options": [
+            "en skam",
+            "en stolthet",
+            "en lättnad",
+            "en ensamhet"
+          ],
+          "answer": "en skam"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'pride':",
+          "options": [
+            "en svartsjuka",
+            "en skuld",
+            "ett tålamod",
+            "en stolthet"
+          ],
+          "answer": "en stolthet"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'relief':",
+          "options": [
+            "ett tålamod",
+            "en tacksamhet",
+            "en lättnad",
+            "en skuld"
+          ],
+          "answer": "en lättnad"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'patience':",
+          "options": [
+            "bråka",
+            "ett tålamod",
+            "ett mod",
+            "en vänlighet"
+          ],
+          "answer": "ett tålamod"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'gratitude':",
+          "options": [
+            "en tacksamhet",
+            "en vänlighet",
+            "bråka",
+            "förlåta"
+          ],
+          "answer": "en tacksamhet"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to apologize':",
+          "options": [
+            "förlåta",
+            "ha fel",
+            "en stolthet",
+            "be om ursäkt"
+          ],
+          "answer": "be om ursäkt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to forgive':",
+          "options": [
+            "en skam",
+            "en svartsjuka",
+            "förlåta",
+            "ha rätt"
+          ],
+          "answer": "förlåta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to be wrong':",
+          "options": [
+            "en skuld",
+            "ha fel",
+            "en skam",
+            "en svartsjuka"
+          ],
+          "answer": "ha fel"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Det ___ bra att hjälpa. (kännas)",
+          "answer": "känns"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag ___ efter dig. (längta)",
+          "answer": "längtar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag ___ dig. (sakna)",
+          "answer": "saknar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Det var ___ att du missade konserten.",
+          "answer": "synd"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag är ___ över dig. (stolt)",
+          "answer": "stolt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Han har alltid ___.",
+          "answer": "rätt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Du har ___ den här gången.",
+          "answer": "fel"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hon bad om ___ .",
+          "answer": "ursäkt"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Memories and Reflections",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "ett liv",
+          "translation": "life",
+          "pos": "noun",
+          "example": "Livet är långt och lärorikt."
+        },
+        {
+          "word": "en ungdom",
+          "translation": "youth",
+          "pos": "noun",
+          "example": "Han berättar om sin ungdom."
+        },
+        {
+          "word": "det förflutna",
+          "translation": "the past",
+          "pos": "noun",
+          "example": "Det förflutna förklarar nuet."
+        },
+        {
+          "word": "en ånger",
+          "translation": "regret",
+          "pos": "noun",
+          "example": "Min största ånger."
+        },
+        {
+          "word": "en visdom",
+          "translation": "wisdom",
+          "pos": "noun",
+          "example": "Åren ger visdom."
+        },
+        {
+          "word": "ett misslyckande",
+          "translation": "failure",
+          "pos": "noun",
+          "example": "Misslyckande är en läxa."
+        },
+        {
+          "word": "ett beslut",
+          "translation": "decision",
+          "accepted_translations": ["choice"],
+          "pos": "noun",
+          "example": "Beslutet förändrade mitt liv."
+        },
+        {
+          "word": "en tystnad",
+          "translation": "silence",
+          "pos": "noun",
+          "example": "Hon behåller tystnaden."
+        },
+        {
+          "word": "ett löfte",
+          "translation": "promise",
+          "pos": "noun",
+          "example": "Han höll sitt löfte."
+        },
+        {
+          "word": "en ansträngning",
+          "translation": "effort",
+          "pos": "noun",
+          "example": "Ansträngningen är alltid värd det."
+        },
+        {
+          "word": "ett öde",
+          "translation": "destiny",
+          "accepted_translations": ["fate"],
+          "pos": "noun",
+          "example": "Jag tror inte på ödet."
+        },
+        {
+          "word": "en ambition",
+          "translation": "ambition",
+          "pos": "noun",
+          "example": "Hans ambition saknar gränser."
+        },
+        {
+          "word": "minnas",
+          "translation": "to remember",
+          "pos": "verb",
+          "example": "Jag minns den dagen."
+        },
+        {
+          "word": "glömma",
+          "translation": "to forget",
+          "pos": "verb",
+          "example": "Med tiden glömmer man."
+        },
+        {
+          "word": "växa upp",
+          "translation": "to grow up",
+          "pos": "verb",
+          "example": "Barn växer upp snabbt."
+        },
+        {
+          "word": "mogna",
+          "translation": "to mature",
+          "pos": "verb",
+          "example": "Med åren mognar man."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ett liv",
+          "answer": "life"
+        },
+        {
+          "type": "translation",
+          "prompt": "en ungdom",
+          "answer": "youth"
+        },
+        {
+          "type": "translation",
+          "prompt": "det förflutna",
+          "answer": "the past"
+        },
+        {
+          "type": "translation",
+          "prompt": "en ånger",
+          "answer": "regret"
+        },
+        {
+          "type": "translation",
+          "prompt": "en visdom",
+          "answer": "wisdom"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett misslyckande",
+          "answer": "failure"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett beslut",
+          "answer": "decision",
+          "accepted_answers": [
+            "choice"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "en tystnad",
+          "answer": "silence"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett löfte",
+          "answer": "promise"
+        },
+        {
+          "type": "translation",
+          "prompt": "en ansträngning",
+          "answer": "effort"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett öde",
+          "answer": "destiny",
+          "accepted_answers": [
+            "fate"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "en ambition",
+          "answer": "ambition"
+        },
+        {
+          "type": "translation",
+          "prompt": "minnas",
+          "answer": "to remember"
+        },
+        {
+          "type": "translation",
+          "prompt": "glömma",
+          "answer": "to forget"
+        },
+        {
+          "type": "translation",
+          "prompt": "växa upp",
+          "answer": "to grow up"
+        },
+        {
+          "type": "translation",
+          "prompt": "mogna",
+          "answer": "to mature"
+        },
+        {
+          "type": "translation",
+          "prompt": "Om jag hade vetat, hade jag valt annorlunda.",
+          "answer": "If I had known, I would have chosen differently."
+        },
+        {
+          "type": "translation",
+          "prompt": "När jag minns min ungdom ler jag.",
+          "answer": "When I remember my youth, I smile."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hon tiger om sitt förflutna.",
+          "answer": "She keeps quiet about her past."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag ångrar att jag inte reste.",
+          "answer": "I regret not having traveled."
+        },
+        {
+          "type": "translation",
+          "prompt": "Misslyckande är en läxa, inte ett slut.",
+          "answer": "Failure is a lesson, not an end."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag minns vårt första möte.",
+          "answer": "I remember our first meeting."
+        },
+        {
+          "type": "translation",
+          "prompt": "Med tiden glömmer man dåliga minnen.",
+          "answer": "With time, you forget bad memories.",
+          "accepted_answers": [
+            "With time, one forgets the bad memories."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Han ansträngde sig och mognade.",
+          "answer": "He made an effort and he matured."
+        },
+        {
+          "type": "translation",
+          "prompt": "If I had been there, I would have helped you.",
+          "answer": "Om jag hade varit där hade jag hjälpt dig."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't remember her name.",
+          "answer": "Jag minns inte hennes namn."
+        },
+        {
+          "type": "translation",
+          "prompt": "You have to grow up one day.",
+          "answer": "Man måste växa upp en dag."
+        },
+        {
+          "type": "translation",
+          "prompt": "The past explains the present.",
+          "answer": "Det förflutna förklarar nuet."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'life':",
+          "options": [
+            "ett liv",
+            "en ungdom",
+            "en ånger",
+            "ett misslyckande"
+          ],
+          "answer": "ett liv"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'youth':",
+          "options": [
+            "det förflutna",
+            "en visdom",
+            "ett beslut",
+            "en ungdom"
+          ],
+          "answer": "en ungdom"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the past':",
+          "options": [
+            "ett misslyckande",
+            "en tystnad",
+            "det förflutna",
+            "en ånger"
+          ],
+          "answer": "det förflutna"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'regret':",
+          "options": [
+            "ett löfte",
+            "en ånger",
+            "en visdom",
+            "ett beslut"
+          ],
+          "answer": "en ånger"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'decision':",
+          "options": [
+            "ett beslut",
+            "en tystnad",
+            "en ansträngning",
+            "en ambition"
+          ],
+          "answer": "ett beslut"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'silence':",
+          "options": [
+            "ett löfte",
+            "ett öde",
+            "minnas",
+            "en tystnad"
+          ],
+          "answer": "en tystnad"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to remember':",
+          "options": [
+            "mogna",
+            "en ungdom",
+            "minnas",
+            "glömma"
+          ],
+          "answer": "minnas"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to grow up':",
+          "options": [
+            "en ånger",
+            "växa upp",
+            "mogna",
+            "en ungdom"
+          ],
+          "answer": "växa upp"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Om jag hade vetat, ___ jag köpt huset. (ha)",
+          "answer": "hade"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Om du hade kommit, ___ du sett mästerverket. (ha)",
+          "answer": "hade"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Han ___ ha dansat, men han var sjuk. (skulle)",
+          "answer": "skulle"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vi ___ ha besökt museet om det hade varit öppet. (skulle)",
+          "answer": "skulle"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "När jag kom hade tåget redan ___. (åka)",
+          "answer": "åkt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hon sa att hon ___ redan sett konserten. (ha)",
+          "answer": "hade"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag ___ min ungdom med glädje. (minnas)",
+          "answer": "minns"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Man måste ___ för att mogna. (växa upp)",
+          "answer": "växa upp"
+        }
+      ]
     }
   ]
 }
