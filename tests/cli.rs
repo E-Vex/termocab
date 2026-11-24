@@ -2534,3 +2534,154 @@ fn stages_eleven_to_fifteen_unlock_review_and_report_their_level() {
         assert!(!srs.contains(&format!("word mot{n} ")), "{srs}");
     }
 }
+
+/// The stages 16-20 wave end to end. Twenty stages exercise the whole
+/// ladder the wave grew: the upper-intermediate level_hint shows in
+/// `progress` beside the three older bands, the unlock ladder keeps
+/// climbing past fifteen exactly like it did past five and ten, a stage
+/// past the file's end stays the "no stage" runtime error, and every
+/// completed stage's vocabulary keeps feeding the review pool stage by
+/// stage — now sixteen cards deep — while locked stages 17-20 stay out
+/// of it.
+#[test]
+fn stages_sixteen_to_twenty_unlock_review_and_report_their_level() {
+    let scratch = Scratch::new("wave20");
+
+    // twenty tiny stages: one word and one fill-blank each, five
+    // beginner, five elementary, five intermediate, five
+    // upper-intermediate — the field the stages 16-20 wave put to work
+    let stages: Vec<String> = (1..=20)
+        .map(|n| {
+            let level = if n <= 5 {
+                "beginner"
+            } else if n <= 10 {
+                "elementary"
+            } else if n <= 15 {
+                "intermediate"
+            } else {
+                "upper-intermediate"
+            };
+            format!(
+                r#"{{ "id": {n}, "title": "Stage {n}", "level_hint": "{level}",
+                     "vocabulary": [
+                       {{ "word": "mot{n}", "translation": "word{n}",
+                          "pos": "noun", "example": "Mot {n}." }}
+                     ],
+                     "exercises": [
+                       {{ "type": "fill_blank", "prompt": "___ is stage {n}.",
+                          "answer": "mot{n}" }}
+                     ] }}"#
+            )
+        })
+        .collect();
+    let course = format!(
+        r#"{{ "language": "test", "stages": [{}] }}"#,
+        stages.join(", ")
+    );
+    let file = scratch.stages_file("wave20.json", &course);
+
+    let out = termocab(&scratch)
+        .args(["check", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+    assert!(stdout(&out).contains("ok: 20 stage(s)"), "{}", stdout(&out));
+
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    // the ladder climbs in order across all four bands: stage 16 is
+    // locked before stage 1 completes, with the same message stage 2
+    // always got
+    let out = termocab(&scratch)
+        .args(["start", "test", "16"])
+        .output()
+        .unwrap();
+    assert_eq!(out.status.code(), Some(1));
+    assert!(stderr(&out).contains("complete stage 1 first"));
+
+    // progress shows all twenty stages, each band's hint where its
+    // stages live
+    let out = termocab(&scratch)
+        .args(["progress", "test"])
+        .output()
+        .unwrap();
+    let text = stdout(&out);
+    assert!(text.contains("0/20 stage(s) complete"), "{text}");
+    assert!(text.contains("[ ] Stage 1 — Stage 1 [beginner]"), "{text}");
+    assert!(
+        text.contains("[ ] Stage 6 — Stage 6 [elementary]"),
+        "{text}"
+    );
+    assert!(
+        text.contains("[ ] Stage 11 — Stage 11 [intermediate]"),
+        "{text}"
+    );
+    assert!(
+        text.contains("[ ] Stage 16 — Stage 16 [upper-intermediate]"),
+        "{text}"
+    );
+    assert!(
+        text.contains("[ ] Stage 20 — Stage 20 [upper-intermediate]"),
+        "{text}"
+    );
+
+    // climbing the ladder: stages 1 through 16, one answer each — the
+    // stage-15 boundary the previous wave ended at is not special
+    for n in 1..=16 {
+        let mut cmd = termocab(&scratch);
+        cmd.args(["start", "--no-shuffle", "test", &n.to_string()]);
+        let out = feed(&mut cmd, &format!("mot{n}\n"));
+        assert!(out.status.success(), "{}", stderr(&out));
+        assert!(stdout(&out).contains("1/1"), "stage {n}: {}", stdout(&out));
+    }
+
+    let out = termocab(&scratch)
+        .args(["progress", "test"])
+        .output()
+        .unwrap();
+    let text = stdout(&out);
+    assert!(text.contains("16/20 stage(s) complete"), "{text}");
+    assert!(
+        text.contains("[x] Stage 16 — Stage 16 [upper-intermediate]"),
+        "{text}"
+    );
+    assert!(
+        text.contains("[ ] Stage 17 — Stage 17 [upper-intermediate]"),
+        "{text}"
+    );
+
+    // a stage past the file's end stays the runtime error it has
+    // always been — the wave grew the courses, not the sky
+    let out = termocab(&scratch)
+        .args(["start", "test", "21"])
+        .output()
+        .unwrap();
+    assert_eq!(out.status.code(), Some(1));
+    assert!(stderr(&out).contains("no stage 21 in test"));
+
+    // the review pool grows with every completed stage: exactly sixteen
+    // cards, the words of stages 1-16, none from the locked 17-20
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    // reviews present due cards in alphabetical word order, and
+    // alphabetically mot10 through mot16 sort before mot2
+    let order = [1, 10, 11, 12, 13, 14, 15, 16, 2, 3, 4, 5, 6, 7, 8, 9];
+    let answers: String = order.iter().map(|n| format!("word{n}\n")).collect();
+    let out = feed(&mut cmd, &answers);
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("16/16"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    let srs = scratch.home().join(".config/termocab/srs/test.txt");
+    let srs = std::fs::read_to_string(&srs).expect("srs file");
+    for n in 1..=16 {
+        assert!(srs.contains(&format!("word mot{n} box 2")), "{srs}");
+    }
+    for n in 17..=20 {
+        assert!(!srs.contains(&format!("word mot{n} ")), "{srs}");
+    }
+}

@@ -5487,6 +5487,1928 @@
           "answer": "aventura"
         }
       ]
+    },
+    {
+      "id": 16,
+      "title": "City and Directions",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "plaza",
+          "translation": "square",
+          "pos": "noun",
+          "example": "La plaza del pueblo es grande."
+        },
+        {
+          "word": "museo",
+          "translation": "museum",
+          "pos": "noun",
+          "example": "El museo abre a nueve."
+        },
+        {
+          "word": "puente",
+          "translation": "bridge",
+          "pos": "noun",
+          "example": "Este puente es muy viejo."
+        },
+        {
+          "word": "iglesia",
+          "translation": "church",
+          "pos": "noun",
+          "example": "La iglesia está cerca del puente."
+        },
+        {
+          "word": "avenida",
+          "translation": "avenue",
+          "pos": "noun",
+          "example": "Camino por la avenida."
+        },
+        {
+          "word": "barrio",
+          "translation": "neighborhood",
+          "accepted_translations": ["district"],
+          "pos": "noun",
+          "example": "Vivo en un barrio tranquilo."
+        },
+        {
+          "word": "semáforo",
+          "translation": "traffic light",
+          "pos": "noun",
+          "example": "Espera en el semáforo."
+        },
+        {
+          "word": "esquina",
+          "translation": "corner",
+          "pos": "noun",
+          "example": "El café está en la esquina."
+        },
+        {
+          "word": "mapa",
+          "translation": "map",
+          "pos": "noun",
+          "example": "Compro un mapa de la ciudad."
+        },
+        {
+          "word": "izquierda",
+          "translation": "left",
+          "pos": "noun",
+          "example": "El banco está a la izquierda."
+        },
+        {
+          "word": "derecha",
+          "translation": "right",
+          "pos": "noun",
+          "example": "El cine está a la derecha."
+        },
+        {
+          "word": "todo recto",
+          "translation": "straight ahead",
+          "pos": "adverb",
+          "example": "Sigue todo recto hasta el puente."
+        },
+        {
+          "word": "lejos",
+          "translation": "far",
+          "pos": "adverb",
+          "example": "La estación está lejos de aquí."
+        },
+        {
+          "word": "girar",
+          "translation": "to turn",
+          "pos": "verb",
+          "example": "Gira a la izquierda en el semáforo."
+        },
+        {
+          "word": "cruzar",
+          "translation": "to cross",
+          "pos": "verb",
+          "example": "Cruzamos la calle."
+        },
+        {
+          "word": "perderse",
+          "translation": "to get lost",
+          "pos": "verb",
+          "example": "Me pierdo a menudo en esta ciudad."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "plaza",
+          "answer": "square"
+        },
+        {
+          "type": "translation",
+          "prompt": "museo",
+          "answer": "museum"
+        },
+        {
+          "type": "translation",
+          "prompt": "puente",
+          "answer": "bridge"
+        },
+        {
+          "type": "translation",
+          "prompt": "iglesia",
+          "answer": "church"
+        },
+        {
+          "type": "translation",
+          "prompt": "avenida",
+          "answer": "avenue"
+        },
+        {
+          "type": "translation",
+          "prompt": "barrio",
+          "answer": "neighborhood",
+          "accepted_answers": ["district"]
+        },
+        {
+          "type": "translation",
+          "prompt": "semáforo",
+          "answer": "traffic light"
+        },
+        {
+          "type": "translation",
+          "prompt": "esquina",
+          "answer": "corner"
+        },
+        {
+          "type": "translation",
+          "prompt": "mapa",
+          "answer": "map"
+        },
+        {
+          "type": "translation",
+          "prompt": "izquierda",
+          "answer": "left"
+        },
+        {
+          "type": "translation",
+          "prompt": "derecha",
+          "answer": "right"
+        },
+        {
+          "type": "translation",
+          "prompt": "todo recto",
+          "answer": "straight ahead"
+        },
+        {
+          "type": "translation",
+          "prompt": "lejos",
+          "answer": "far"
+        },
+        {
+          "type": "translation",
+          "prompt": "girar",
+          "answer": "to turn"
+        },
+        {
+          "type": "translation",
+          "prompt": "cruzar",
+          "answer": "to cross"
+        },
+        {
+          "type": "translation",
+          "prompt": "perderse",
+          "answer": "to get lost"
+        },
+        {
+          "type": "translation",
+          "prompt": "El museo está en la esquina de la avenida.",
+          "answer": "The museum is at the corner of the avenue.",
+          "accepted_answers": ["The museum is on the corner of the avenue."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Gira a la izquierda después de la iglesia.",
+          "answer": "Turn left after the church."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ve todo recto hasta el semáforo.",
+          "answer": "Go straight ahead to the traffic light.",
+          "accepted_answers": ["Go straight to the traffic light."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Cruzamos el puente cada mañana.",
+          "answer": "We cross the bridge every morning."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vivo en este barrio desde hace un año.",
+          "answer": "I have lived in this neighborhood for a year.",
+          "accepted_answers": ["I've lived in this neighborhood for a year."]
+        },
+        {
+          "type": "translation",
+          "prompt": "La estación está lejos, toma un taxi.",
+          "answer": "The station is far, take a taxi.",
+          "accepted_answers": ["The station is far away, take a taxi."]
+        },
+        {
+          "type": "translation",
+          "prompt": "No te pierdas en el casco antiguo.",
+          "answer": "Don't get lost in the old town."
+        },
+        {
+          "type": "translation",
+          "prompt": "Miro el mapa de la ciudad.",
+          "answer": "I am looking at the map of the city.",
+          "accepted_answers": ["I'm looking at the map of the city.", "I look at the map of the city."]
+        },
+        {
+          "type": "translation",
+          "prompt": "The church is near the bridge.",
+          "answer": "La iglesia está cerca del puente."
+        },
+        {
+          "type": "translation",
+          "prompt": "Turn right at the traffic light.",
+          "answer": "Gira a la derecha en el semáforo."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't want to get lost.",
+          "answer": "No quiero perderme."
+        },
+        {
+          "type": "translation",
+          "prompt": "My neighborhood is quiet.",
+          "answer": "Mi barrio es tranquilo."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'square':",
+          "options": [
+            "plaza",
+            "puente",
+            "esquina",
+            "barrio"
+          ],
+          "answer": "plaza"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'museum':",
+          "options": [
+            "museo",
+            "iglesia",
+            "avenida",
+            "mapa"
+          ],
+          "answer": "museo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bridge':",
+          "options": [
+            "puente",
+            "iglesia",
+            "plaza",
+            "avenida"
+          ],
+          "answer": "puente"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'church':",
+          "options": [
+            "iglesia",
+            "museo",
+            "puente",
+            "barrio"
+          ],
+          "answer": "iglesia"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'neighborhood':",
+          "options": [
+            "barrio",
+            "plaza",
+            "esquina",
+            "mapa"
+          ],
+          "answer": "barrio"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'traffic light':",
+          "options": [
+            "semáforo",
+            "esquina",
+            "mapa",
+            "iglesia"
+          ],
+          "answer": "semáforo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'left':",
+          "options": [
+            "izquierda",
+            "derecha",
+            "esquina",
+            "mapa"
+          ],
+          "answer": "izquierda"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'straight ahead':",
+          "options": [
+            "todo recto",
+            "izquierda",
+            "derecha",
+            "mapa"
+          ],
+          "answer": "todo recto"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ a la izquierda en el semáforo, luego sigue todo recto.",
+          "answer": "Gira"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ todo recto hasta el puente.",
+          "answer": "Sigue",
+          "accepted_answers": ["Ve"]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La iglesia está a la ___ del cine, no a la derecha.",
+          "answer": "izquierda"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El café está en la ___ de la calle.",
+          "answer": "esquina"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La estación está ___, tomo un taxi.",
+          "answer": "lejos"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ la calle en el semáforo, no aquí.",
+          "answer": "Cruza"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El banco está ___ de aquí, no lejos.",
+          "answer": "cerca"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Miro el ___ de la ciudad.",
+          "answer": "mapa"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Money and Services",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "precio",
+          "translation": "price",
+          "pos": "noun",
+          "example": "El precio del billete es alto."
+        },
+        {
+          "word": "recibo",
+          "translation": "receipt",
+          "pos": "noun",
+          "example": "Guarde el recibo, por favor."
+        },
+        {
+          "word": "cuenta",
+          "translation": "account",
+          "pos": "noun",
+          "example": "Abro una cuenta en el banco."
+        },
+        {
+          "word": "descuento",
+          "translation": "discount",
+          "pos": "noun",
+          "example": "Hay un descuento para estudiantes."
+        },
+        {
+          "word": "efectivo",
+          "translation": "cash",
+          "pos": "noun",
+          "example": "Pago en efectivo."
+        },
+        {
+          "word": "tarjeta",
+          "translation": "card",
+          "accepted_translations": ["bank card", "credit card"],
+          "pos": "noun",
+          "example": "Pago con tarjeta."
+        },
+        {
+          "word": "pagar",
+          "translation": "to pay",
+          "pos": "verb",
+          "example": "Pago el café."
+        },
+        {
+          "word": "sacar",
+          "translation": "to withdraw",
+          "accepted_translations": ["to take out"],
+          "pos": "verb",
+          "example": "Saco dinero del cajero."
+        },
+        {
+          "word": "gastar",
+          "translation": "to spend",
+          "pos": "verb",
+          "example": "Gasto demasiado dinero."
+        },
+        {
+          "word": "ahorrar",
+          "translation": "to save",
+          "pos": "verb",
+          "example": "Ahorro para un viaje."
+        },
+        {
+          "word": "gratis",
+          "translation": "free",
+          "pos": "adjective",
+          "example": "La entrada es gratis los domingos."
+        },
+        {
+          "word": "formulario",
+          "translation": "form",
+          "pos": "noun",
+          "example": "Rellena este formulario, por favor."
+        },
+        {
+          "word": "firmar",
+          "translation": "to sign",
+          "pos": "verb",
+          "example": "Firme aquí, por favor."
+        },
+        {
+          "word": "cliente",
+          "translation": "customer",
+          "pos": "noun",
+          "example": "El cliente espera en la caja."
+        },
+        {
+          "word": "servicio",
+          "translation": "service",
+          "pos": "noun",
+          "example": "El servicio está incluido en el precio."
+        },
+        {
+          "word": "consejo",
+          "translation": "advice",
+          "accepted_translations": ["tip"],
+          "pos": "noun",
+          "example": "Me da un buen consejo."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "precio",
+          "answer": "price"
+        },
+        {
+          "type": "translation",
+          "prompt": "recibo",
+          "answer": "receipt"
+        },
+        {
+          "type": "translation",
+          "prompt": "cuenta",
+          "answer": "account"
+        },
+        {
+          "type": "translation",
+          "prompt": "descuento",
+          "answer": "discount"
+        },
+        {
+          "type": "translation",
+          "prompt": "efectivo",
+          "answer": "cash"
+        },
+        {
+          "type": "translation",
+          "prompt": "tarjeta",
+          "answer": "card",
+          "accepted_answers": ["bank card", "credit card"]
+        },
+        {
+          "type": "translation",
+          "prompt": "pagar",
+          "answer": "to pay"
+        },
+        {
+          "type": "translation",
+          "prompt": "sacar",
+          "answer": "to withdraw",
+          "accepted_answers": ["to take out"]
+        },
+        {
+          "type": "translation",
+          "prompt": "gastar",
+          "answer": "to spend"
+        },
+        {
+          "type": "translation",
+          "prompt": "ahorrar",
+          "answer": "to save"
+        },
+        {
+          "type": "translation",
+          "prompt": "gratis",
+          "answer": "free"
+        },
+        {
+          "type": "translation",
+          "prompt": "formulario",
+          "answer": "form"
+        },
+        {
+          "type": "translation",
+          "prompt": "firmar",
+          "answer": "to sign"
+        },
+        {
+          "type": "translation",
+          "prompt": "cliente",
+          "answer": "customer"
+        },
+        {
+          "type": "translation",
+          "prompt": "servicio",
+          "answer": "service"
+        },
+        {
+          "type": "translation",
+          "prompt": "consejo",
+          "answer": "advice",
+          "accepted_answers": ["tip"]
+        },
+        {
+          "type": "translation",
+          "prompt": "¿Pago en efectivo o con tarjeta?",
+          "answer": "Do I pay in cash or by card?",
+          "accepted_answers": ["Should I pay in cash or by card?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Saqué cien euros del cajero.",
+          "answer": "I withdrew a hundred euros from the ATM.",
+          "accepted_answers": ["I took out a hundred euros from the ATM."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hay un descuento para estudiantes.",
+          "answer": "There is a discount for students.",
+          "accepted_answers": ["There's a discount for students."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Rellene este formulario y firme abajo.",
+          "answer": "Fill out this form and sign at the bottom.",
+          "accepted_answers": ["Fill in this form and sign at the bottom."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Este museo es gratis el primer domingo del mes.",
+          "answer": "This museum is free on the first Sunday of the month.",
+          "accepted_answers": ["This museum is free the first Sunday of the month."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ella ahorra para comprar un coche.",
+          "answer": "She is saving to buy a car.",
+          "accepted_answers": ["She's saving to buy a car.", "She is saving up to buy a car."]
+        },
+        {
+          "type": "translation",
+          "prompt": "El servicio ya está incluido en el precio.",
+          "answer": "The service is already included in the price.",
+          "accepted_answers": ["Service is already included in the price."]
+        },
+        {
+          "type": "translation",
+          "prompt": "El cliente pide un recibo.",
+          "answer": "The customer asks for a receipt."
+        },
+        {
+          "type": "translation",
+          "prompt": "I want to open an account.",
+          "answer": "Quiero abrir una cuenta."
+        },
+        {
+          "type": "translation",
+          "prompt": "You spend too much money.",
+          "answer": "Gastas demasiado dinero."
+        },
+        {
+          "type": "translation",
+          "prompt": "Can you give me some advice?",
+          "answer": "¿Puedes darme un consejo?"
+        },
+        {
+          "type": "translation",
+          "prompt": "I pay by card.",
+          "answer": "Pago con tarjeta."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'price':",
+          "options": [
+            "precio",
+            "recibo",
+            "cuenta",
+            "descuento"
+          ],
+          "answer": "precio"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'receipt':",
+          "options": [
+            "recibo",
+            "precio",
+            "cuenta",
+            "servicio"
+          ],
+          "answer": "recibo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'account':",
+          "options": [
+            "cuenta",
+            "precio",
+            "descuento",
+            "servicio"
+          ],
+          "answer": "cuenta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'discount':",
+          "options": [
+            "descuento",
+            "precio",
+            "recibo",
+            "formulario"
+          ],
+          "answer": "descuento"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cash':",
+          "options": [
+            "efectivo",
+            "precio",
+            "recibo",
+            "tarjeta"
+          ],
+          "answer": "efectivo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'free':",
+          "options": [
+            "gratis",
+            "cliente",
+            "servicio",
+            "recibo"
+          ],
+          "answer": "gratis"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'customer':",
+          "options": [
+            "cliente",
+            "servicio",
+            "recibo",
+            "precio"
+          ],
+          "answer": "cliente"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'advice':",
+          "options": [
+            "consejo",
+            "servicio",
+            "cliente",
+            "descuento"
+          ],
+          "answer": "consejo"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Me ___ las flores de esta plaza.",
+          "answer": "gustan"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Me ___ el precio de este café.",
+          "answer": "gusta"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "¿Te ___ los descuentos de esta tienda?",
+          "answer": "gustan"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Me ___ este barrio, es perfecto.",
+          "answer": "encanta"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A ella ___ la ciudad de noche.",
+          "answer": "encanta"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hay un ___ para estudiantes hoy.",
+          "answer": "descuento"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El museo es ___ los domingos.",
+          "answer": "gratis"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Pago veinte euros en ___.",
+          "answer": "efectivo"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Nature and the Environment",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "naturaleza",
+          "translation": "nature",
+          "pos": "noun",
+          "example": "Me gusta la naturaleza."
+        },
+        {
+          "word": "bosque",
+          "translation": "forest",
+          "pos": "noun",
+          "example": "El bosque está tranquilo por la mañana."
+        },
+        {
+          "word": "río",
+          "translation": "river",
+          "pos": "noun",
+          "example": "El río cruza el bosque."
+        },
+        {
+          "word": "lago",
+          "translation": "lake",
+          "pos": "noun",
+          "example": "Nadamos en el lago."
+        },
+        {
+          "word": "árbol",
+          "translation": "tree",
+          "pos": "noun",
+          "example": "Este árbol es muy viejo."
+        },
+        {
+          "word": "flor",
+          "translation": "flower",
+          "pos": "noun",
+          "example": "Esta flor es preciosa."
+        },
+        {
+          "word": "animal",
+          "translation": "animal",
+          "pos": "noun",
+          "example": "El animal duerme bajo el árbol."
+        },
+        {
+          "word": "pájaro",
+          "translation": "bird",
+          "pos": "noun",
+          "example": "El pájaro canta por la mañana."
+        },
+        {
+          "word": "cielo",
+          "translation": "sky",
+          "pos": "noun",
+          "example": "El cielo está azul hoy."
+        },
+        {
+          "word": "estrella",
+          "translation": "star",
+          "pos": "noun",
+          "example": "Miro las estrellas por la noche."
+        },
+        {
+          "word": "Tierra",
+          "translation": "Earth",
+          "accepted_translations": ["the earth", "the planet"],
+          "pos": "noun",
+          "example": "La Tierra gira alrededor del sol."
+        },
+        {
+          "word": "clima",
+          "translation": "climate",
+          "pos": "noun",
+          "example": "El clima cambia en todas partes."
+        },
+        {
+          "word": "contaminación",
+          "translation": "pollution",
+          "pos": "noun",
+          "example": "La contaminación del aire es un problema."
+        },
+        {
+          "word": "proteger",
+          "translation": "to protect",
+          "pos": "verb",
+          "example": "Debemos proteger el bosque."
+        },
+        {
+          "word": "reciclar",
+          "translation": "to recycle",
+          "pos": "verb",
+          "example": "Reciclo el papel y el vidrio."
+        },
+        {
+          "word": "plantar",
+          "translation": "to plant",
+          "pos": "verb",
+          "example": "Plantan un árbol en el jardín."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "naturaleza",
+          "answer": "nature"
+        },
+        {
+          "type": "translation",
+          "prompt": "bosque",
+          "answer": "forest"
+        },
+        {
+          "type": "translation",
+          "prompt": "río",
+          "answer": "river"
+        },
+        {
+          "type": "translation",
+          "prompt": "lago",
+          "answer": "lake"
+        },
+        {
+          "type": "translation",
+          "prompt": "árbol",
+          "answer": "tree"
+        },
+        {
+          "type": "translation",
+          "prompt": "flor",
+          "answer": "flower"
+        },
+        {
+          "type": "translation",
+          "prompt": "animal",
+          "answer": "animal"
+        },
+        {
+          "type": "translation",
+          "prompt": "pájaro",
+          "answer": "bird"
+        },
+        {
+          "type": "translation",
+          "prompt": "cielo",
+          "answer": "sky"
+        },
+        {
+          "type": "translation",
+          "prompt": "estrella",
+          "answer": "star"
+        },
+        {
+          "type": "translation",
+          "prompt": "Tierra",
+          "answer": "Earth",
+          "accepted_answers": ["the earth", "the planet"]
+        },
+        {
+          "type": "translation",
+          "prompt": "clima",
+          "answer": "climate"
+        },
+        {
+          "type": "translation",
+          "prompt": "contaminación",
+          "answer": "pollution"
+        },
+        {
+          "type": "translation",
+          "prompt": "proteger",
+          "answer": "to protect"
+        },
+        {
+          "type": "translation",
+          "prompt": "reciclar",
+          "answer": "to recycle"
+        },
+        {
+          "type": "translation",
+          "prompt": "plantar",
+          "answer": "to plant"
+        },
+        {
+          "type": "translation",
+          "prompt": "Debemos proteger la naturaleza.",
+          "answer": "We must protect nature.",
+          "accepted_answers": ["We have to protect nature."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Los pájaros cantan en el bosque.",
+          "answer": "The birds sing in the forest."
+        },
+        {
+          "type": "translation",
+          "prompt": "El lago es más frío que el río.",
+          "answer": "The lake is colder than the river."
+        },
+        {
+          "type": "translation",
+          "prompt": "Es el árbol más viejo del parque.",
+          "answer": "It is the oldest tree in the park.",
+          "accepted_answers": ["It's the oldest tree in the park."]
+        },
+        {
+          "type": "translation",
+          "prompt": "La contaminación de las ciudades es un gran problema.",
+          "answer": "Pollution in cities is a big problem.",
+          "accepted_answers": ["The pollution in cities is a big problem."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Miro las estrellas cuando el cielo está despejado.",
+          "answer": "I look at the stars when the sky is clear.",
+          "accepted_answers": ["I watch the stars when the sky is clear."]
+        },
+        {
+          "type": "translation",
+          "prompt": "El clima de esta región es suave.",
+          "answer": "The climate of this region is mild.",
+          "accepted_answers": ["The climate in this region is mild."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ella planta flores en primavera.",
+          "answer": "She plants flowers in spring.",
+          "accepted_answers": ["She plants flowers in the spring."]
+        },
+        {
+          "type": "translation",
+          "prompt": "The river is behind the mountain.",
+          "answer": "El río está detrás de la montaña."
+        },
+        {
+          "type": "translation",
+          "prompt": "This bird is beautiful.",
+          "answer": "Este pájaro es bonito."
+        },
+        {
+          "type": "translation",
+          "prompt": "We recycle glass and paper.",
+          "answer": "Reciclamos vidrio y papel."
+        },
+        {
+          "type": "translation",
+          "prompt": "The Earth is our home.",
+          "answer": "La Tierra es nuestro hogar."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'nature':",
+          "options": [
+            "naturaleza",
+            "bosque",
+            "lago",
+            "río"
+          ],
+          "answer": "naturaleza"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'forest':",
+          "options": [
+            "bosque",
+            "naturaleza",
+            "lago",
+            "árbol"
+          ],
+          "answer": "bosque"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'river':",
+          "options": [
+            "río",
+            "lago",
+            "bosque",
+            "contaminación"
+          ],
+          "answer": "río"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'lake':",
+          "options": [
+            "lago",
+            "río",
+            "bosque",
+            "cielo"
+          ],
+          "answer": "lago"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tree':",
+          "options": [
+            "árbol",
+            "bosque",
+            "flor",
+            "lago"
+          ],
+          "answer": "árbol"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'flower':",
+          "options": [
+            "flor",
+            "árbol",
+            "bosque",
+            "naturaleza"
+          ],
+          "answer": "flor"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bird':",
+          "options": [
+            "pájaro",
+            "animal",
+            "árbol",
+            "cielo"
+          ],
+          "answer": "pájaro"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'pollution':",
+          "options": [
+            "contaminación",
+            "clima",
+            "naturaleza",
+            "cielo"
+          ],
+          "answer": "contaminación"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Madrid es más grande ___ Barcelona.",
+          "answer": "que"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El bosque es tan bonito ___ el lago.",
+          "answer": "como"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El Amazonas es el río ___ largo del mundo.",
+          "answer": "más"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Este es el árbol más viejo ___ parque.",
+          "answer": "del"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hay que ___ la naturaleza.",
+          "answer": "proteger"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ el papel y el vidrio, por favor.",
+          "answer": "Recicla"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ un árbol cada año.",
+          "answer": "Plantamos"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La ___ del aire es un problema grave.",
+          "answer": "contaminación"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Opinions and News",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "periódico",
+          "translation": "newspaper",
+          "pos": "noun",
+          "example": "Leo el periódico cada mañana."
+        },
+        {
+          "word": "artículo",
+          "translation": "article",
+          "pos": "noun",
+          "example": "Este artículo es muy interesante."
+        },
+        {
+          "word": "radio",
+          "translation": "radio",
+          "pos": "noun",
+          "example": "Escucho la radio en el coche."
+        },
+        {
+          "word": "televisión",
+          "translation": "television",
+          "accepted_translations": ["TV"],
+          "pos": "noun",
+          "example": "La televisión está en el salón."
+        },
+        {
+          "word": "opinión",
+          "translation": "opinion",
+          "pos": "noun",
+          "example": "Cada uno tiene su opinión."
+        },
+        {
+          "word": "creer",
+          "translation": "to believe",
+          "pos": "verb",
+          "example": "No creo esta historia."
+        },
+        {
+          "word": "estar de acuerdo",
+          "translation": "to agree",
+          "pos": "verb",
+          "example": "Estoy de acuerdo contigo."
+        },
+        {
+          "word": "importante",
+          "translation": "important",
+          "pos": "adjective",
+          "example": "Es una noticia importante."
+        },
+        {
+          "word": "probablemente",
+          "translation": "probably",
+          "pos": "adverb",
+          "example": "Vendrá probablemente mañana."
+        },
+        {
+          "word": "discutir",
+          "translation": "to discuss",
+          "pos": "verb",
+          "example": "Discutimos sobre el artículo."
+        },
+        {
+          "word": "periodista",
+          "translation": "journalist",
+          "pos": "noun",
+          "example": "El periodista entrevista al alcalde."
+        },
+        {
+          "word": "sociedad",
+          "translation": "society",
+          "pos": "noun",
+          "example": "La sociedad cambia rápido."
+        },
+        {
+          "word": "evento",
+          "translation": "event",
+          "pos": "noun",
+          "example": "Es un evento importante."
+        },
+        {
+          "word": "mentira",
+          "translation": "lie",
+          "accepted_translations": ["falsehood"],
+          "pos": "noun",
+          "example": "No digas mentiras."
+        },
+        {
+          "word": "parecer",
+          "translation": "to seem",
+          "pos": "verb",
+          "example": "Pareces cansado."
+        },
+        {
+          "word": "hecho",
+          "translation": "fact",
+          "pos": "noun",
+          "example": "Es un hecho, no una opinión."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "periódico",
+          "answer": "newspaper"
+        },
+        {
+          "type": "translation",
+          "prompt": "artículo",
+          "answer": "article"
+        },
+        {
+          "type": "translation",
+          "prompt": "radio",
+          "answer": "radio"
+        },
+        {
+          "type": "translation",
+          "prompt": "televisión",
+          "answer": "television",
+          "accepted_answers": ["TV"]
+        },
+        {
+          "type": "translation",
+          "prompt": "opinión",
+          "answer": "opinion"
+        },
+        {
+          "type": "translation",
+          "prompt": "creer",
+          "answer": "to believe"
+        },
+        {
+          "type": "translation",
+          "prompt": "estar de acuerdo",
+          "answer": "to agree"
+        },
+        {
+          "type": "translation",
+          "prompt": "importante",
+          "answer": "important"
+        },
+        {
+          "type": "translation",
+          "prompt": "probablemente",
+          "answer": "probably"
+        },
+        {
+          "type": "translation",
+          "prompt": "discutir",
+          "answer": "to discuss"
+        },
+        {
+          "type": "translation",
+          "prompt": "periodista",
+          "answer": "journalist"
+        },
+        {
+          "type": "translation",
+          "prompt": "sociedad",
+          "answer": "society"
+        },
+        {
+          "type": "translation",
+          "prompt": "evento",
+          "answer": "event"
+        },
+        {
+          "type": "translation",
+          "prompt": "mentira",
+          "answer": "lie",
+          "accepted_answers": ["falsehood"]
+        },
+        {
+          "type": "translation",
+          "prompt": "parecer",
+          "answer": "to seem"
+        },
+        {
+          "type": "translation",
+          "prompt": "hecho",
+          "answer": "fact"
+        },
+        {
+          "type": "translation",
+          "prompt": "Estoy de acuerdo contigo.",
+          "answer": "I agree with you."
+        },
+        {
+          "type": "translation",
+          "prompt": "El periodista escribe un artículo sobre la sociedad.",
+          "answer": "The journalist writes an article about society.",
+          "accepted_answers": ["The journalist is writing an article about society."]
+        },
+        {
+          "type": "translation",
+          "prompt": "En mi opinión, este artículo es muy bueno.",
+          "answer": "In my opinion, this article is very good."
+        },
+        {
+          "type": "translation",
+          "prompt": "No siempre dice la verdad.",
+          "answer": "He doesn't always tell the truth.",
+          "accepted_answers": ["He does not always tell the truth."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Discutimos los eventos del día.",
+          "answer": "We discuss the events of the day.",
+          "accepted_answers": ["We're discussing the events of the day."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Este evento parece importante.",
+          "answer": "This event seems important."
+        },
+        {
+          "type": "translation",
+          "prompt": "Probablemente tiene razón.",
+          "answer": "He is probably right.",
+          "accepted_answers": ["Probably he is right.", "He probably is right."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Creo que la televisión a veces miente.",
+          "answer": "I believe that television sometimes lies.",
+          "accepted_answers": ["I think that television sometimes lies."]
+        },
+        {
+          "type": "translation",
+          "prompt": "I read the newspaper every morning.",
+          "answer": "Leo el periódico cada mañana."
+        },
+        {
+          "type": "translation",
+          "prompt": "We must discuss this event.",
+          "answer": "Debemos discutir este evento."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's an important fact.",
+          "answer": "Es un hecho importante."
+        },
+        {
+          "type": "translation",
+          "prompt": "I listen to the radio in the car.",
+          "answer": "Escucho la radio en el coche."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'newspaper':",
+          "options": [
+            "periódico",
+            "artículo",
+            "radio",
+            "televisión"
+          ],
+          "answer": "periódico"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'article':",
+          "options": [
+            "artículo",
+            "periódico",
+            "radio",
+            "hecho"
+          ],
+          "answer": "artículo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'radio':",
+          "options": [
+            "radio",
+            "televisión",
+            "periódico",
+            "artículo"
+          ],
+          "answer": "radio"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'television':",
+          "options": [
+            "televisión",
+            "radio",
+            "periódico",
+            "periodista"
+          ],
+          "answer": "televisión"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'opinion':",
+          "options": [
+            "opinión",
+            "mentira",
+            "hecho",
+            "sociedad"
+          ],
+          "answer": "opinión"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'journalist':",
+          "options": [
+            "periodista",
+            "sociedad",
+            "mentira",
+            "opinión"
+          ],
+          "answer": "periodista"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'lie':",
+          "options": [
+            "mentira",
+            "hecho",
+            "opinión",
+            "sociedad"
+          ],
+          "answer": "mentira"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fact':",
+          "options": [
+            "hecho",
+            "mentira",
+            "opinión",
+            "evento"
+          ],
+          "answer": "hecho"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Estoy totalmente de acuerdo ___ ti.",
+          "answer": "contigo"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "No estoy de acuerdo ___ el periodista.",
+          "answer": "con"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ mi opinión, este artículo es muy bueno.",
+          "answer": "En"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Me ___ que el artículo es interesante.",
+          "answer": "parece"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Es un ___, no una opinión.",
+          "answer": "hecho"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Creo ___ el periodista tiene razón.",
+          "answer": "que"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "No dice la verdad, dice ___.",
+          "answer": "mentiras"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El ___ entrevista al alcalde.",
+          "answer": "periodista"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Future and Dreams",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "futuro",
+          "translation": "future",
+          "accepted_translations": ["the future"],
+          "pos": "noun",
+          "example": "El futuro es incierto."
+        },
+        {
+          "word": "sueño",
+          "translation": "dream",
+          "pos": "noun",
+          "example": "Tuve un sueño bonito."
+        },
+        {
+          "word": "esperanza",
+          "translation": "hope",
+          "pos": "noun",
+          "example": "Tengo esperanza de ganar."
+        },
+        {
+          "word": "plan",
+          "translation": "plan",
+          "pos": "noun",
+          "example": "Mi plan es viajar."
+        },
+        {
+          "word": "meta",
+          "translation": "goal",
+          "accepted_translations": ["aim"],
+          "pos": "noun",
+          "example": "Mi meta es aprender español."
+        },
+        {
+          "word": "deseo",
+          "translation": "wish",
+          "pos": "noun",
+          "example": "Pido un deseo."
+        },
+        {
+          "word": "quizás",
+          "translation": "maybe",
+          "accepted_translations": ["perhaps"],
+          "pos": "adverb",
+          "example": "Quizás llueva mañana."
+        },
+        {
+          "word": "algún día",
+          "translation": "one day",
+          "accepted_translations": ["someday"],
+          "pos": "adverb",
+          "example": "Algún día visitaré Japón."
+        },
+        {
+          "word": "éxito",
+          "translation": "success",
+          "pos": "noun",
+          "example": "Te deseo mucho éxito."
+        },
+        {
+          "word": "oportunidad",
+          "translation": "opportunity",
+          "accepted_translations": ["chance"],
+          "pos": "noun",
+          "example": "Es una buena oportunidad."
+        },
+        {
+          "word": "esperar",
+          "translation": "to hope",
+          "accepted_translations": ["to wait"],
+          "pos": "verb",
+          "example": "Espero verte pronto."
+        },
+        {
+          "word": "planear",
+          "translation": "to plan",
+          "pos": "verb",
+          "example": "Planeamos un viaje."
+        },
+        {
+          "word": "prometer",
+          "translation": "to promise",
+          "pos": "verb",
+          "example": "Te prometo venir."
+        },
+        {
+          "word": "suerte",
+          "translation": "luck",
+          "pos": "noun",
+          "example": "¡Buena suerte en el examen!"
+        },
+        {
+          "word": "felicidad",
+          "translation": "happiness",
+          "pos": "noun",
+          "example": "La felicidad es sencilla."
+        },
+        {
+          "word": "lograr",
+          "translation": "to achieve",
+          "accepted_translations": ["to succeed"],
+          "pos": "verb",
+          "example": "Vas a lograrlo, lo sé."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "futuro",
+          "answer": "future",
+          "accepted_answers": ["the future"]
+        },
+        {
+          "type": "translation",
+          "prompt": "sueño",
+          "answer": "dream"
+        },
+        {
+          "type": "translation",
+          "prompt": "esperanza",
+          "answer": "hope"
+        },
+        {
+          "type": "translation",
+          "prompt": "plan",
+          "answer": "plan"
+        },
+        {
+          "type": "translation",
+          "prompt": "meta",
+          "answer": "goal",
+          "accepted_answers": ["aim"]
+        },
+        {
+          "type": "translation",
+          "prompt": "deseo",
+          "answer": "wish"
+        },
+        {
+          "type": "translation",
+          "prompt": "quizás",
+          "answer": "maybe",
+          "accepted_answers": ["perhaps"]
+        },
+        {
+          "type": "translation",
+          "prompt": "algún día",
+          "answer": "one day",
+          "accepted_answers": ["someday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "éxito",
+          "answer": "success"
+        },
+        {
+          "type": "translation",
+          "prompt": "oportunidad",
+          "answer": "opportunity",
+          "accepted_answers": ["chance"]
+        },
+        {
+          "type": "translation",
+          "prompt": "esperar",
+          "answer": "to hope",
+          "accepted_answers": ["to wait"]
+        },
+        {
+          "type": "translation",
+          "prompt": "planear",
+          "answer": "to plan"
+        },
+        {
+          "type": "translation",
+          "prompt": "prometer",
+          "answer": "to promise"
+        },
+        {
+          "type": "translation",
+          "prompt": "suerte",
+          "answer": "luck"
+        },
+        {
+          "type": "translation",
+          "prompt": "felicidad",
+          "answer": "happiness"
+        },
+        {
+          "type": "translation",
+          "prompt": "lograr",
+          "answer": "to achieve",
+          "accepted_answers": ["to succeed"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Algún día haré un viaje por el mundo.",
+          "answer": "One day I will travel around the world.",
+          "accepted_answers": ["Someday I will travel around the world."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mañana iremos al mar.",
+          "answer": "Tomorrow we will go to the sea."
+        },
+        {
+          "type": "translation",
+          "prompt": "Lo lograrás, estoy seguro.",
+          "answer": "You will make it, I'm sure.",
+          "accepted_answers": ["You will achieve it, I am sure."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Probablemente lloverá mañana.",
+          "answer": "It will probably rain tomorrow."
+        },
+        {
+          "type": "translation",
+          "prompt": "Cuando tenga dinero, compraré una casa.",
+          "answer": "When I have money, I will buy a house."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ella espera ser médica.",
+          "answer": "She hopes to be a doctor.",
+          "accepted_answers": ["She hopes to become a doctor."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Te prometo que no te olvidaré.",
+          "answer": "I promise you that I will not forget you.",
+          "accepted_answers": ["I promise you that I won't forget you."]
+        },
+        {
+          "type": "translation",
+          "prompt": "La felicidad no se compra.",
+          "answer": "Happiness cannot be bought.",
+          "accepted_answers": ["You can't buy happiness.", "Happiness can't be bought."]
+        },
+        {
+          "type": "translation",
+          "prompt": "I hope to see you soon.",
+          "answer": "Espero verte pronto."
+        },
+        {
+          "type": "translation",
+          "prompt": "One day I will speak Spanish very well.",
+          "answer": "Algún día hablaré muy bien español."
+        },
+        {
+          "type": "translation",
+          "prompt": "My goal is to succeed.",
+          "answer": "Mi meta es tener éxito."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's a real opportunity.",
+          "answer": "Es una oportunidad verdadera."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'future':",
+          "options": [
+            "futuro",
+            "sueño",
+            "esperanza",
+            "plan"
+          ],
+          "answer": "futuro"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'dream':",
+          "options": [
+            "sueño",
+            "esperanza",
+            "futuro",
+            "felicidad"
+          ],
+          "answer": "sueño"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hope':",
+          "options": [
+            "esperanza",
+            "sueño",
+            "futuro",
+            "felicidad"
+          ],
+          "answer": "esperanza"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'plan':",
+          "options": [
+            "plan",
+            "meta",
+            "futuro",
+            "oportunidad"
+          ],
+          "answer": "plan"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'goal':",
+          "options": [
+            "meta",
+            "plan",
+            "sueño",
+            "éxito"
+          ],
+          "answer": "meta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'success':",
+          "options": [
+            "éxito",
+            "oportunidad",
+            "esperanza",
+            "felicidad"
+          ],
+          "answer": "éxito"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'opportunity':",
+          "options": [
+            "oportunidad",
+            "éxito",
+            "meta",
+            "esperanza"
+          ],
+          "answer": "oportunidad"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'happiness':",
+          "options": [
+            "felicidad",
+            "sueño",
+            "esperanza",
+            "éxito"
+          ],
+          "answer": "felicidad"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mañana ___ una carta a mi madre.",
+          "answer": "escribiré"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La semana que viene ___ al museo.",
+          "answer": "iremos"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Algún día ___ el mundo.",
+          "answer": "viajaré"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Con trabajo, ___ mucho éxito.",
+          "answer": "tendrás"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El año que viene nosotros ___ una casa.",
+          "answer": "compraremos"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vosotros ___ el examen sin problema.",
+          "answer": "aprobaréis"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ella ___ muy feliz con la noticia.",
+          "answer": "estará"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Yo no ___ tarde, lo prometo.",
+          "answer": "llegaré"
+        }
+      ]
     }
   ]
 }

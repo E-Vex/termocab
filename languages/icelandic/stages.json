@@ -5845,6 +5845,1933 @@
           "answer": "gjöf"
         }
       ]
+    },
+    {
+      "id": 16,
+      "title": "City and Directions",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "torg",
+          "translation": "square",
+          "pos": "noun",
+          "example": "Torgið í þorpinu er stórt."
+        },
+        {
+          "word": "safn",
+          "translation": "museum",
+          "pos": "noun",
+          "example": "Safnið opnar klukkan níu."
+        },
+        {
+          "word": "brú",
+          "translation": "bridge",
+          "pos": "noun",
+          "example": "Þessi brú er mjög gömul."
+        },
+        {
+          "word": "turn",
+          "translation": "tower",
+          "pos": "noun",
+          "example": "Turninn er á torginu."
+        },
+        {
+          "word": "hverfi",
+          "translation": "neighborhood",
+          "accepted_translations": ["district"],
+          "pos": "noun",
+          "example": "Ég bý í rólegu hverfi."
+        },
+        {
+          "word": "umferðarljós",
+          "translation": "traffic light",
+          "pos": "noun",
+          "example": "Bíddu við umferðarljósið."
+        },
+        {
+          "word": "horn",
+          "translation": "corner",
+          "pos": "noun",
+          "example": "Kaffihúsið er í horninu."
+        },
+        {
+          "word": "kort",
+          "translation": "map",
+          "pos": "noun",
+          "example": "Ég kaupi kort af borginni."
+        },
+        {
+          "word": "vinstri",
+          "translation": "left",
+          "pos": "adverb",
+          "example": "Bankinn er til vinstri."
+        },
+        {
+          "word": "hægri",
+          "translation": "right",
+          "pos": "adverb",
+          "example": "Bíóin er til hægri."
+        },
+        {
+          "word": "beint áfram",
+          "translation": "straight ahead",
+          "pos": "adverb",
+          "example": "Gakktu beint áfram að brúnni."
+        },
+        {
+          "word": "langt",
+          "translation": "far",
+          "pos": "adverb",
+          "example": "Stöðin er langt héðan."
+        },
+        {
+          "word": "beygja",
+          "translation": "to turn",
+          "pos": "verb",
+          "example": "Beygðu til vinstri við ljósið."
+        },
+        {
+          "word": "fara yfir",
+          "translation": "to cross",
+          "accepted_translations": ["to go across"],
+          "pos": "verb",
+          "example": "Við förum yfir götuna."
+        },
+        {
+          "word": "villast",
+          "translation": "to get lost",
+          "pos": "verb",
+          "example": "Ég villist oft í þessari borg."
+        },
+        {
+          "word": "norður",
+          "translation": "north",
+          "pos": "adverb",
+          "example": "Akureyri er á norður landsins."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "torg",
+          "answer": "square"
+        },
+        {
+          "type": "translation",
+          "prompt": "safn",
+          "answer": "museum"
+        },
+        {
+          "type": "translation",
+          "prompt": "brú",
+          "answer": "bridge"
+        },
+        {
+          "type": "translation",
+          "prompt": "turn",
+          "answer": "tower"
+        },
+        {
+          "type": "translation",
+          "prompt": "hverfi",
+          "answer": "neighborhood",
+          "accepted_answers": ["district"]
+        },
+        {
+          "type": "translation",
+          "prompt": "umferðarljós",
+          "answer": "traffic light"
+        },
+        {
+          "type": "translation",
+          "prompt": "horn",
+          "answer": "corner"
+        },
+        {
+          "type": "translation",
+          "prompt": "kort",
+          "answer": "map"
+        },
+        {
+          "type": "translation",
+          "prompt": "vinstri",
+          "answer": "left"
+        },
+        {
+          "type": "translation",
+          "prompt": "hægri",
+          "answer": "right"
+        },
+        {
+          "type": "translation",
+          "prompt": "beint áfram",
+          "answer": "straight ahead"
+        },
+        {
+          "type": "translation",
+          "prompt": "langt",
+          "answer": "far"
+        },
+        {
+          "type": "translation",
+          "prompt": "beygja",
+          "answer": "to turn"
+        },
+        {
+          "type": "translation",
+          "prompt": "fara yfir",
+          "answer": "to cross",
+          "accepted_answers": ["to go across"]
+        },
+        {
+          "type": "translation",
+          "prompt": "villast",
+          "answer": "to get lost"
+        },
+        {
+          "type": "translation",
+          "prompt": "norður",
+          "answer": "north"
+        },
+        {
+          "type": "translation",
+          "prompt": "Safnið er í horninu á götunni.",
+          "answer": "The museum is at the corner of the street.",
+          "accepted_answers": ["The museum is on the corner of the street."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Beygðu til vinstri eftir kirkjuna.",
+          "answer": "Turn left after the church."
+        },
+        {
+          "type": "translation",
+          "prompt": "Gakktu beint áfram að umferðarljósinu.",
+          "answer": "Go straight ahead to the traffic light.",
+          "accepted_answers": ["Go straight to the traffic light."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Við förum yfir brúna hverja morgun.",
+          "answer": "We cross the bridge every morning."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég hef búið í þessu hverfi í ár.",
+          "answer": "I have lived in this neighborhood for a year.",
+          "accepted_answers": ["I've lived in this neighborhood for a year."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Stöðin er langt, taktu leigubíl.",
+          "answer": "The station is far, take a taxi.",
+          "accepted_answers": ["The station is far away, take a taxi."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Villist ekki í gamla bænum.",
+          "answer": "Don't get lost in the old town."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég er að skoða kortið af borginni.",
+          "answer": "I am looking at the map of the city.",
+          "accepted_answers": ["I'm looking at the map of the city."]
+        },
+        {
+          "type": "translation",
+          "prompt": "The tower is near the bridge.",
+          "answer": "Turninn er nálægt brúnni."
+        },
+        {
+          "type": "translation",
+          "prompt": "Turn right at the traffic light.",
+          "answer": "Beygðu til hægri við umferðarljósið."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't want to get lost.",
+          "answer": "Ég vil ekki villast."
+        },
+        {
+          "type": "translation",
+          "prompt": "My neighborhood is quiet.",
+          "answer": "Hverfið mitt er rólegt."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'square':",
+          "options": [
+            "torg",
+            "brú",
+            "horn",
+            "hverfi"
+          ],
+          "answer": "torg"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'museum':",
+          "options": [
+            "safn",
+            "turn",
+            "kort",
+            "hverfi"
+          ],
+          "answer": "safn"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bridge':",
+          "options": [
+            "brú",
+            "turn",
+            "torg",
+            "horn"
+          ],
+          "answer": "brú"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tower':",
+          "options": [
+            "turn",
+            "safn",
+            "brú",
+            "hverfi"
+          ],
+          "answer": "turn"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'neighborhood':",
+          "options": [
+            "hverfi",
+            "torg",
+            "horn",
+            "kort"
+          ],
+          "answer": "hverfi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'traffic light':",
+          "options": [
+            "umferðarljós",
+            "horn",
+            "kort",
+            "safn"
+          ],
+          "answer": "umferðarljós"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'left':",
+          "options": [
+            "vinstri",
+            "hægri",
+            "horn",
+            "kort"
+          ],
+          "answer": "vinstri"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'straight ahead':",
+          "options": [
+            "beint áfram",
+            "vinstri",
+            "hægri",
+            "kort"
+          ],
+          "answer": "beint áfram"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ býrðu ?",
+          "answer": "Hvar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ertu að fara ?",
+          "answer": "Hvert"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég fer ___ læknis.",
+          "answer": "til"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gakktu ___ áfram um tvo götur.",
+          "answer": "beint"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Beygðu ___ við umferðarljósið, ekki til hægri.",
+          "answer": "vinstri"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kaffihúsið er til ___, ekki til vinstri.",
+          "answer": "hægri"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mig vantar kort, við ___ alltaf.",
+          "answer": "týnumst"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ísland er fyrir ___ um Frakkland.",
+          "answer": "norður"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Money and Services",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "verð",
+          "translation": "price",
+          "pos": "noun",
+          "example": "Verðið á miðanum er hátt."
+        },
+        {
+          "word": "kvittun",
+          "translation": "receipt",
+          "pos": "noun",
+          "example": "Geymið kvittunina, vinsamlegast."
+        },
+        {
+          "word": "reikningur",
+          "translation": "account",
+          "accepted_translations": ["bill"],
+          "pos": "noun",
+          "example": "Ég opna reikning hjá bankanum."
+        },
+        {
+          "word": "afsláttur",
+          "translation": "discount",
+          "pos": "noun",
+          "example": "Það er afsláttur fyrir nemendur."
+        },
+        {
+          "word": "reiðufé",
+          "translation": "cash",
+          "pos": "noun",
+          "example": "Ég greiði með reiðufé."
+        },
+        {
+          "word": "greiðslukort",
+          "translation": "card",
+          "accepted_translations": ["bank card", "credit card"],
+          "pos": "noun",
+          "example": "Ég greiði með greiðslukorti."
+        },
+        {
+          "word": "greiða",
+          "translation": "to pay",
+          "pos": "verb",
+          "example": "Ég greiði fyrir kaffið."
+        },
+        {
+          "word": "taka út",
+          "translation": "to withdraw",
+          "accepted_translations": ["to take out"],
+          "pos": "verb",
+          "example": "Ég tek út peninga í hraðbanka."
+        },
+        {
+          "word": "eyða",
+          "translation": "to spend",
+          "pos": "verb",
+          "example": "Ég eyði of miklum pening."
+        },
+        {
+          "word": "spara",
+          "translation": "to save",
+          "pos": "verb",
+          "example": "Ég spara í ferðalag."
+        },
+        {
+          "word": "ókeypis",
+          "translation": "free",
+          "pos": "adjective",
+          "example": "Aðgangur er ókeypis á sunnudögum."
+        },
+        {
+          "word": "eyðublað",
+          "translation": "form",
+          "pos": "noun",
+          "example": "Fylltu út þetta eyðublað, vinsamlegast."
+        },
+        {
+          "word": "undirrita",
+          "translation": "to sign",
+          "pos": "verb",
+          "example": "Undirritaðu hér, vinsamlegast."
+        },
+        {
+          "word": "viðskiptavinur",
+          "translation": "customer",
+          "pos": "noun",
+          "example": "Viðskiptavinurinn bíður við högguna."
+        },
+        {
+          "word": "þjónusta",
+          "translation": "service",
+          "pos": "noun",
+          "example": "Þjónustan er innifalin í verðinu."
+        },
+        {
+          "word": "ráð",
+          "translation": "advice",
+          "accepted_translations": ["tip"],
+          "pos": "noun",
+          "example": "Hún gefur mér gott ráð."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "verð",
+          "answer": "price"
+        },
+        {
+          "type": "translation",
+          "prompt": "kvittun",
+          "answer": "receipt"
+        },
+        {
+          "type": "translation",
+          "prompt": "reikningur",
+          "answer": "account",
+          "accepted_answers": ["bill"]
+        },
+        {
+          "type": "translation",
+          "prompt": "afsláttur",
+          "answer": "discount"
+        },
+        {
+          "type": "translation",
+          "prompt": "reiðufé",
+          "answer": "cash"
+        },
+        {
+          "type": "translation",
+          "prompt": "greiðslukort",
+          "answer": "card",
+          "accepted_answers": ["bank card", "credit card"]
+        },
+        {
+          "type": "translation",
+          "prompt": "greiða",
+          "answer": "to pay"
+        },
+        {
+          "type": "translation",
+          "prompt": "taka út",
+          "answer": "to withdraw",
+          "accepted_answers": ["to take out"]
+        },
+        {
+          "type": "translation",
+          "prompt": "eyða",
+          "answer": "to spend"
+        },
+        {
+          "type": "translation",
+          "prompt": "spara",
+          "answer": "to save"
+        },
+        {
+          "type": "translation",
+          "prompt": "ókeypis",
+          "answer": "free"
+        },
+        {
+          "type": "translation",
+          "prompt": "eyðublað",
+          "answer": "form"
+        },
+        {
+          "type": "translation",
+          "prompt": "undirrita",
+          "answer": "to sign"
+        },
+        {
+          "type": "translation",
+          "prompt": "viðskiptavinur",
+          "answer": "customer"
+        },
+        {
+          "type": "translation",
+          "prompt": "þjónusta",
+          "answer": "service"
+        },
+        {
+          "type": "translation",
+          "prompt": "ráð",
+          "answer": "advice",
+          "accepted_answers": ["tip"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Greiði ég með reiðufé eða greiðslukorti ?",
+          "answer": "Do I pay in cash or by card?",
+          "accepted_answers": ["Should I pay in cash or by card?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég tók út hundrað evrur úr hraðbankanum.",
+          "answer": "I withdrew a hundred euros from the ATM.",
+          "accepted_answers": ["I took out a hundred euros from the ATM."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Það er afsláttur fyrir nemendur.",
+          "answer": "There is a discount for students.",
+          "accepted_answers": ["There's a discount for students."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Fylltu út þetta eyðublað og undirritaðu neðst.",
+          "answer": "Fill out this form and sign at the bottom.",
+          "accepted_answers": ["Fill in this form and sign at the bottom."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Þetta safn er ókeypis fyrsta sunnudag mánaðarins.",
+          "answer": "This museum is free on the first Sunday of the month.",
+          "accepted_answers": ["This museum is free the first Sunday of the month."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hún sparar til að kaupa bíl.",
+          "answer": "She is saving to buy a car.",
+          "accepted_answers": ["She's saving to buy a car.", "She is saving to buy a car."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Þjónustan er þegar innifalin í verðinu.",
+          "answer": "The service is already included in the price.",
+          "accepted_answers": ["Service is already included in the price."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Viðskiptavinurinn biður um kvittun.",
+          "answer": "The customer asks for a receipt."
+        },
+        {
+          "type": "translation",
+          "prompt": "I want to open an account.",
+          "answer": "Ég vil opna reikning."
+        },
+        {
+          "type": "translation",
+          "prompt": "You spend too much money.",
+          "answer": "Þú eyðir of miklum pening."
+        },
+        {
+          "type": "translation",
+          "prompt": "Can you give me some advice?",
+          "answer": "Geturðu gefið mér ráð ?"
+        },
+        {
+          "type": "translation",
+          "prompt": "I pay by card.",
+          "answer": "Ég greiði með greiðslukorti."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'price':",
+          "options": [
+            "verð",
+            "kvittun",
+            "reikningur",
+            "afsláttur"
+          ],
+          "answer": "verð"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'receipt':",
+          "options": [
+            "kvittun",
+            "verð",
+            "reikningur",
+            "þjónusta"
+          ],
+          "answer": "kvittun"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'account':",
+          "options": [
+            "reikningur",
+            "verð",
+            "afsláttur",
+            "þjónusta"
+          ],
+          "answer": "reikningur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'discount':",
+          "options": [
+            "afsláttur",
+            "verð",
+            "kvittun",
+            "eyðublað"
+          ],
+          "answer": "afsláttur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cash':",
+          "options": [
+            "reiðufé",
+            "verð",
+            "kvittun",
+            "greiðslukort"
+          ],
+          "answer": "reiðufé"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'free':",
+          "options": [
+            "ókeypis",
+            "viðskiptavinur",
+            "þjónusta",
+            "kvittun"
+          ],
+          "answer": "ókeypis"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'customer':",
+          "options": [
+            "viðskiptavinur",
+            "þjónusta",
+            "kvittun",
+            "verð"
+          ],
+          "answer": "viðskiptavinur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'advice':",
+          "options": [
+            "ráð",
+            "þjónusta",
+            "viðskiptavinur",
+            "afsláttur"
+          ],
+          "answer": "ráð"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ég fá kvittun ?",
+          "answer": "Má"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég ___ afslátt í gær.",
+          "answer": "fékk"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hvað ___ þetta ?",
+          "answer": "kostar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Get ég greitt með greiðslu___ ?",
+          "answer": "korti"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þú verður að ___ eyðublaðið.",
+          "answer": "fylla út"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Verðið er of hátt — get ég fengið ___ ?",
+          "answer": "afslátt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þjónustan er ___ í verðinu.",
+          "answer": "innifalin"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég greiði með ___ .",
+          "answer": "reiðufé"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Nature and the Environment",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "náttúra",
+          "translation": "nature",
+          "pos": "noun",
+          "example": "Ég elsk náttúruna."
+        },
+        {
+          "word": "skógur",
+          "translation": "forest",
+          "pos": "noun",
+          "example": "Skógurinn er hljól á morgnana."
+        },
+        {
+          "word": "á",
+          "translation": "river",
+          "pos": "noun",
+          "example": "Áin rennur um skóginn."
+        },
+        {
+          "word": "stöðuvatn",
+          "translation": "lake",
+          "pos": "noun",
+          "example": "Við syntum í stöðuvatninu."
+        },
+        {
+          "word": "dalur",
+          "translation": "valley",
+          "pos": "noun",
+          "example": "Dalurinn er grænn og fallegur."
+        },
+        {
+          "word": "tré",
+          "translation": "tree",
+          "pos": "noun",
+          "example": "Þetta tré er mjög gamalt."
+        },
+        {
+          "word": "blóm",
+          "translation": "flower",
+          "pos": "noun",
+          "example": "Þetta blóm er fallegt."
+        },
+        {
+          "word": "fugl",
+          "translation": "bird",
+          "pos": "noun",
+          "example": "Fuglinn syngur á morgnana."
+        },
+        {
+          "word": "himinn",
+          "translation": "sky",
+          "pos": "noun",
+          "example": "Himininn er blár í dag."
+        },
+        {
+          "word": "stjarna",
+          "translation": "star",
+          "pos": "noun",
+          "example": "Ég horfi á stjörnurnar á nóttu."
+        },
+        {
+          "word": "jörð",
+          "translation": "earth",
+          "accepted_translations": ["soil", "the earth"],
+          "pos": "noun",
+          "example": "Jörðin snerist um sólu."
+        },
+        {
+          "word": "loftslag",
+          "translation": "climate",
+          "pos": "noun",
+          "example": "Loftslagið breytist alls staðar."
+        },
+        {
+          "word": "mengun",
+          "translation": "pollution",
+          "pos": "noun",
+          "example": "Mengun loftsins er vandamál."
+        },
+        {
+          "word": "vernda",
+          "translation": "to protect",
+          "pos": "verb",
+          "example": "Við verðum að vernda skóginn."
+        },
+        {
+          "word": "endurvinna",
+          "translation": "to recycle",
+          "pos": "verb",
+          "example": "Ég endurvin pappír og gler."
+        },
+        {
+          "word": "planta",
+          "translation": "to plant",
+          "pos": "verb",
+          "example": "Þau plöntuðu tré í garðinum."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "náttúra",
+          "answer": "nature"
+        },
+        {
+          "type": "translation",
+          "prompt": "skógur",
+          "answer": "forest"
+        },
+        {
+          "type": "translation",
+          "prompt": "á",
+          "answer": "river"
+        },
+        {
+          "type": "translation",
+          "prompt": "stöðuvatn",
+          "answer": "lake"
+        },
+        {
+          "type": "translation",
+          "prompt": "dalur",
+          "answer": "valley"
+        },
+        {
+          "type": "translation",
+          "prompt": "tré",
+          "answer": "tree"
+        },
+        {
+          "type": "translation",
+          "prompt": "blóm",
+          "answer": "flower"
+        },
+        {
+          "type": "translation",
+          "prompt": "fugl",
+          "answer": "bird"
+        },
+        {
+          "type": "translation",
+          "prompt": "himinn",
+          "answer": "sky"
+        },
+        {
+          "type": "translation",
+          "prompt": "stjarna",
+          "answer": "star"
+        },
+        {
+          "type": "translation",
+          "prompt": "jörð",
+          "answer": "earth",
+          "accepted_answers": ["soil", "the earth"]
+        },
+        {
+          "type": "translation",
+          "prompt": "loftslag",
+          "answer": "climate"
+        },
+        {
+          "type": "translation",
+          "prompt": "mengun",
+          "answer": "pollution"
+        },
+        {
+          "type": "translation",
+          "prompt": "vernda",
+          "answer": "to protect"
+        },
+        {
+          "type": "translation",
+          "prompt": "endurvinna",
+          "answer": "to recycle"
+        },
+        {
+          "type": "translation",
+          "prompt": "planta",
+          "answer": "to plant"
+        },
+        {
+          "type": "translation",
+          "prompt": "Við verðum að vernda náttúruna.",
+          "answer": "We must protect nature.",
+          "accepted_answers": ["We have to protect nature."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Fuglarnir syngja í skóginum.",
+          "answer": "The birds sing in the forest."
+        },
+        {
+          "type": "translation",
+          "prompt": "Stöðuvatnið er kaldara en áin.",
+          "answer": "The lake is colder than the river."
+        },
+        {
+          "type": "translation",
+          "prompt": "Þetta er elsta tréið í garðinum.",
+          "answer": "This is the oldest tree in the park."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mengun í borgum er stórt vandamál.",
+          "answer": "Pollution in cities is a big problem.",
+          "accepted_answers": ["The pollution in cities is a big problem."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég horfi á stjörnurnar þegar himinninn er skýr.",
+          "answer": "I look at the stars when the sky is clear.",
+          "accepted_answers": ["I watch the stars when the sky is clear."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Loftslag þessa svæðis er milt.",
+          "answer": "The climate of this region is mild.",
+          "accepted_answers": ["The climate in this region is mild."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hún plantar blóm á vorin.",
+          "answer": "She plants flowers in spring.",
+          "accepted_answers": ["She plants flowers in the spring."]
+        },
+        {
+          "type": "translation",
+          "prompt": "The river is behind the mountain.",
+          "answer": "Áin er á bak við fjallið."
+        },
+        {
+          "type": "translation",
+          "prompt": "This bird is beautiful.",
+          "answer": "Þessi fugl er fallegur."
+        },
+        {
+          "type": "translation",
+          "prompt": "We recycle glass and paper.",
+          "answer": "Við endurvinnum gler og pappír."
+        },
+        {
+          "type": "translation",
+          "prompt": "The earth is our home.",
+          "answer": "Jörðin er heimili okkar."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'nature':",
+          "options": [
+            "náttúra",
+            "skógur",
+            "stöðuvatn",
+            "á"
+          ],
+          "answer": "náttúra"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'forest':",
+          "options": [
+            "skógur",
+            "náttúra",
+            "stöðuvatn",
+            "tré"
+          ],
+          "answer": "skógur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'river':",
+          "options": [
+            "á",
+            "stöðuvatn",
+            "skógur",
+            "mengun"
+          ],
+          "answer": "á"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'lake':",
+          "options": [
+            "stöðuvatn",
+            "á",
+            "skógur",
+            "himinn"
+          ],
+          "answer": "stöðuvatn"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'valley':",
+          "options": [
+            "dalur",
+            "stöðuvatn",
+            "á",
+            "skógur"
+          ],
+          "answer": "dalur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'flower':",
+          "options": [
+            "blóm",
+            "tré",
+            "skógur",
+            "náttúra"
+          ],
+          "answer": "blóm"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bird':",
+          "options": [
+            "fugl",
+            "tré",
+            "himinn",
+            "dalur"
+          ],
+          "answer": "fugl"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'pollution':",
+          "options": [
+            "mengun",
+            "loftslag",
+            "náttúra",
+            "himinn"
+          ],
+          "answer": "mengun"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þetta er dýra ___ ég hélt.",
+          "answer": "en"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "stór, stærri, ___",
+          "answer": "stærstur"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "fallegur, fallegri, ___",
+          "answer": "fallegastur"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þetta er fallegasta borgin ___ heiminum.",
+          "answer": "í"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Við verðum að ___ skóginn.",
+          "answer": "vernda"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ pappír og gler er mikilvægt.",
+          "answer": "Að endurvinna"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Á vorin ___ við blóm.",
+          "answer": "plöntum"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ er stórt vandamál í borgum.",
+          "answer": "Mengun"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Opinions and News",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "blað",
+          "translation": "newspaper",
+          "accepted_translations": ["paper", "magazine"],
+          "pos": "noun",
+          "example": "Ég les blaðið hverja morgun."
+        },
+        {
+          "word": "pistill",
+          "translation": "column",
+          "accepted_translations": ["opinion piece"],
+          "pos": "noun",
+          "example": "Ég les pistilinn hans hverja viku."
+        },
+        {
+          "word": "útvarp",
+          "translation": "radio",
+          "pos": "noun",
+          "example": "Ég hlusta á útvarp í bílnum."
+        },
+        {
+          "word": "sjónvarp",
+          "translation": "television",
+          "accepted_translations": ["TV"],
+          "pos": "noun",
+          "example": "Sjónvarpið er í stofunni."
+        },
+        {
+          "word": "skoðun",
+          "translation": "opinion",
+          "pos": "noun",
+          "example": "Hver hefur sína skoðun."
+        },
+        {
+          "word": "halda",
+          "translation": "to hold",
+          "accepted_translations": ["to believe", "to think"],
+          "pos": "verb",
+          "example": "Ég held að þetta sé satt."
+        },
+        {
+          "word": "sammála",
+          "translation": "of the same opinion",
+          "accepted_translations": ["in agreement", "agreeing"],
+          "pos": "adjective",
+          "example": "Ég er sammála með þér."
+        },
+        {
+          "word": "mikilvægur",
+          "translation": "important",
+          "pos": "adjective",
+          "example": "Þetta er mikilvæg frétt."
+        },
+        {
+          "word": "líklega",
+          "translation": "probably",
+          "pos": "adverb",
+          "example": "Hann kemur líklega á morgun."
+        },
+        {
+          "word": "ræða",
+          "translation": "to discuss",
+          "accepted_translations": ["to talk"],
+          "pos": "verb",
+          "example": "Við ræðum málið."
+        },
+        {
+          "word": "blaðamaður",
+          "translation": "journalist",
+          "pos": "noun",
+          "example": "Blaðamaðurinn talar við borgarstjóra."
+        },
+        {
+          "word": "samfélag",
+          "translation": "society",
+          "pos": "noun",
+          "example": "Samfélagið breytist hratt."
+        },
+        {
+          "word": "atburður",
+          "translation": "event",
+          "pos": "noun",
+          "example": "Þetta er mikilvægur atburður."
+        },
+        {
+          "word": "sannleikur",
+          "translation": "truth",
+          "pos": "noun",
+          "example": "Hann segir alltaf sannleikann."
+        },
+        {
+          "word": "virðast",
+          "translation": "to seem",
+          "pos": "verb",
+          "example": "Þú virðist þreyttur."
+        },
+        {
+          "word": "staðreynd",
+          "translation": "fact",
+          "pos": "noun",
+          "example": "Þetta er staðreynd, ekki skoðun."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "blað",
+          "answer": "newspaper",
+          "accepted_answers": ["paper", "magazine"]
+        },
+        {
+          "type": "translation",
+          "prompt": "pistill",
+          "answer": "column",
+          "accepted_answers": ["opinion piece"]
+        },
+        {
+          "type": "translation",
+          "prompt": "útvarp",
+          "answer": "radio"
+        },
+        {
+          "type": "translation",
+          "prompt": "sjónvarp",
+          "answer": "television",
+          "accepted_answers": ["TV"]
+        },
+        {
+          "type": "translation",
+          "prompt": "skoðun",
+          "answer": "opinion"
+        },
+        {
+          "type": "translation",
+          "prompt": "halda",
+          "answer": "to hold",
+          "accepted_answers": ["to believe", "to think"]
+        },
+        {
+          "type": "translation",
+          "prompt": "sammála",
+          "answer": "of the same opinion",
+          "accepted_answers": ["in agreement", "agreeing"]
+        },
+        {
+          "type": "translation",
+          "prompt": "mikilvægur",
+          "answer": "important"
+        },
+        {
+          "type": "translation",
+          "prompt": "líklega",
+          "answer": "probably"
+        },
+        {
+          "type": "translation",
+          "prompt": "ræða",
+          "answer": "to discuss",
+          "accepted_answers": ["to talk"]
+        },
+        {
+          "type": "translation",
+          "prompt": "blaðamaður",
+          "answer": "journalist"
+        },
+        {
+          "type": "translation",
+          "prompt": "samfélag",
+          "answer": "society"
+        },
+        {
+          "type": "translation",
+          "prompt": "atburður",
+          "answer": "event"
+        },
+        {
+          "type": "translation",
+          "prompt": "sannleikur",
+          "answer": "truth"
+        },
+        {
+          "type": "translation",
+          "prompt": "virðast",
+          "answer": "to seem"
+        },
+        {
+          "type": "translation",
+          "prompt": "staðreynd",
+          "answer": "fact"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég er sammála með þér.",
+          "answer": "I agree with you."
+        },
+        {
+          "type": "translation",
+          "prompt": "Blaðamaðurinn skrifar grein um samfélagið.",
+          "answer": "The journalist writes an article about society.",
+          "accepted_answers": ["The journalist is writing an article about society."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Eftir mína skoðun er þessi grein mjög góð.",
+          "answer": "In my opinion, this article is very good."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hann segir ekki alltaf sannleikann.",
+          "answer": "He doesn't always tell the truth.",
+          "accepted_answers": ["He does not always tell the truth."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Við ræðum atburði dagsins.",
+          "answer": "We discuss the events of the day.",
+          "accepted_answers": ["We're discussing the events of the day."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Þessi atburður virðist mikilvægur.",
+          "answer": "This event seems important."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hann hefur líklega rétt fyrir sér.",
+          "answer": "He is probably right.",
+          "accepted_answers": ["Probably he is right."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég held að sjónvarpið ljúgi stundum.",
+          "answer": "I believe that television sometimes lies.",
+          "accepted_answers": ["I think that television sometimes lies."]
+        },
+        {
+          "type": "translation",
+          "prompt": "I read the newspaper every morning.",
+          "answer": "Ég les blaðið hverja morgun."
+        },
+        {
+          "type": "translation",
+          "prompt": "We must discuss this event.",
+          "answer": "Við verðum að ræða þennan atburð."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's an important fact.",
+          "answer": "Þetta er mikilvæg staðreynd."
+        },
+        {
+          "type": "translation",
+          "prompt": "I listen to the radio in the car.",
+          "answer": "Ég hlusta á útvarp í bílnum."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'newspaper':",
+          "options": [
+            "blað",
+            "pistill",
+            "útvarp",
+            "sjónvarp"
+          ],
+          "answer": "blað"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'column':",
+          "options": [
+            "pistill",
+            "blað",
+            "útvarp",
+            "staðreynd"
+          ],
+          "answer": "pistill"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'radio':",
+          "options": [
+            "útvarp",
+            "sjónvarp",
+            "blað",
+            "pistill"
+          ],
+          "answer": "útvarp"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'television':",
+          "options": [
+            "sjónvarp",
+            "útvarp",
+            "blað",
+            "blaðamaður"
+          ],
+          "answer": "sjónvarp"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'opinion':",
+          "options": [
+            "skoðun",
+            "sannleikur",
+            "staðreynd",
+            "samfélag"
+          ],
+          "answer": "skoðun"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'journalist':",
+          "options": [
+            "blaðamaður",
+            "samfélag",
+            "sannleikur",
+            "skoðun"
+          ],
+          "answer": "blaðamaður"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'truth':",
+          "options": [
+            "sannleikur",
+            "staðreynd",
+            "skoðun",
+            "samfélag"
+          ],
+          "answer": "sannleikur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fact':",
+          "options": [
+            "staðreynd",
+            "sannleikur",
+            "skoðun",
+            "atburður"
+          ],
+          "answer": "staðreynd"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ finnst þetta gott.",
+          "answer": "Mér"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hvernig finnst ___ þetta ?",
+          "answer": "þér"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég er ___ með þér.",
+          "answer": "sammála"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég held að hún hafi ___.",
+          "answer": "rétt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég trúi þessu ___.",
+          "answer": "ekki"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þetta er mikilvægasti ___ mánaðarins.",
+          "answer": "atburður"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sannleikurinn kemur alltaf ___ ljós.",
+          "answer": "í"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þetta er staðreynd, ekki ___.",
+          "answer": "skoðun"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Future and Dreams",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "framtíð",
+          "translation": "future",
+          "accepted_translations": ["the future"],
+          "pos": "noun",
+          "example": "Framtíðin er óviss."
+        },
+        {
+          "word": "draumur",
+          "translation": "dream",
+          "pos": "noun",
+          "example": "Ég hafði fallegan draum."
+        },
+        {
+          "word": "von",
+          "translation": "hope",
+          "pos": "noun",
+          "example": "Ég hef von um að vinna."
+        },
+        {
+          "word": "áætlun",
+          "translation": "plan",
+          "pos": "noun",
+          "example": "Áætlunin mín er að ferðast."
+        },
+        {
+          "word": "markmið",
+          "translation": "goal",
+          "accepted_translations": ["aim"],
+          "pos": "noun",
+          "example": "Markmiðið mitt er að læra íslensku."
+        },
+        {
+          "word": "ósk",
+          "translation": "wish",
+          "pos": "noun",
+          "example": "Ég óska mér eitthvað."
+        },
+        {
+          "word": "kannski",
+          "translation": "maybe",
+          "accepted_translations": ["perhaps"],
+          "pos": "adverb",
+          "example": "Kannski rignir á morgun."
+        },
+        {
+          "word": "einn daginn",
+          "translation": "one day",
+          "accepted_translations": ["someday"],
+          "pos": "adverb",
+          "example": "Einn daginn heimsæki ég Japan."
+        },
+        {
+          "word": "árangur",
+          "translation": "success",
+          "pos": "noun",
+          "example": "Ég óska þér góðs árangurs."
+        },
+        {
+          "word": "tækifæri",
+          "translation": "opportunity",
+          "accepted_translations": ["chance"],
+          "pos": "noun",
+          "example": "Þetta er gott tækifæri."
+        },
+        {
+          "word": "vona",
+          "translation": "to hope",
+          "pos": "verb",
+          "example": "Ég vona að sjá þig bráðum."
+        },
+        {
+          "word": "skipuleggja",
+          "translation": "to plan",
+          "pos": "verb",
+          "example": "Við skipuleggjum ferðalag."
+        },
+        {
+          "word": "lofa",
+          "translation": "to promise",
+          "pos": "verb",
+          "example": "Ég lofa að koma."
+        },
+        {
+          "word": "heppni",
+          "translation": "luck",
+          "pos": "noun",
+          "example": "Góða heppni í prófinu !"
+        },
+        {
+          "word": "hamingja",
+          "translation": "happiness",
+          "pos": "noun",
+          "example": "Hamingjan er einföld."
+        },
+        {
+          "word": "takast",
+          "translation": "to succeed",
+          "pos": "verb",
+          "example": "Þetta mun takast, ég veit það."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "framtíð",
+          "answer": "future",
+          "accepted_answers": ["the future"]
+        },
+        {
+          "type": "translation",
+          "prompt": "draumur",
+          "answer": "dream"
+        },
+        {
+          "type": "translation",
+          "prompt": "von",
+          "answer": "hope"
+        },
+        {
+          "type": "translation",
+          "prompt": "áætlun",
+          "answer": "plan"
+        },
+        {
+          "type": "translation",
+          "prompt": "markmið",
+          "answer": "goal",
+          "accepted_answers": ["aim"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ósk",
+          "answer": "wish"
+        },
+        {
+          "type": "translation",
+          "prompt": "kannski",
+          "answer": "maybe",
+          "accepted_answers": ["perhaps"]
+        },
+        {
+          "type": "translation",
+          "prompt": "einn daginn",
+          "answer": "one day",
+          "accepted_answers": ["someday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "árangur",
+          "answer": "success"
+        },
+        {
+          "type": "translation",
+          "prompt": "tækifæri",
+          "answer": "opportunity",
+          "accepted_answers": ["chance"]
+        },
+        {
+          "type": "translation",
+          "prompt": "vona",
+          "answer": "to hope"
+        },
+        {
+          "type": "translation",
+          "prompt": "skipuleggja",
+          "answer": "to plan"
+        },
+        {
+          "type": "translation",
+          "prompt": "lofa",
+          "answer": "to promise"
+        },
+        {
+          "type": "translation",
+          "prompt": "heppni",
+          "answer": "luck"
+        },
+        {
+          "type": "translation",
+          "prompt": "hamingja",
+          "answer": "happiness"
+        },
+        {
+          "type": "translation",
+          "prompt": "takast",
+          "answer": "to succeed"
+        },
+        {
+          "type": "translation",
+          "prompt": "Einn daginn ferðast ég um allan heim.",
+          "answer": "One day I will travel around the world.",
+          "accepted_answers": ["Someday I will travel around the world."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Á morgun förum við til sævar.",
+          "answer": "Tomorrow we will go to the sea."
+        },
+        {
+          "type": "translation",
+          "prompt": "Þér mun takast, ég er viss.",
+          "answer": "You will make it, I'm sure.",
+          "accepted_answers": ["You will make it, I am sure."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Það rignir líklega á morgun.",
+          "answer": "It will probably rain tomorrow."
+        },
+        {
+          "type": "translation",
+          "prompt": "Þegar ég á pening kaupi ég hús.",
+          "answer": "When I have money, I will buy a house."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hún vonar að verða læknir.",
+          "answer": "She hopes to become a doctor."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég lofa að gleyma þér ekki.",
+          "answer": "I promise you that I will not forget you.",
+          "accepted_answers": ["I promise you that I won't forget you."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hamingjuna má ekki kaupa með pening.",
+          "answer": "Happiness cannot be bought.",
+          "accepted_answers": ["You can't buy happiness.", "Happiness can't be bought."]
+        },
+        {
+          "type": "translation",
+          "prompt": "I hope to see you soon.",
+          "answer": "Ég vona að sjá þig bráðum."
+        },
+        {
+          "type": "translation",
+          "prompt": "One day I will speak Icelandic very well.",
+          "answer": "Einn daginn tala ég mjög vel íslensku."
+        },
+        {
+          "type": "translation",
+          "prompt": "My goal is to succeed.",
+          "answer": "Markmiðið mitt er að takast."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's a real opportunity.",
+          "answer": "Þetta er raunverulegt tækifæri."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'future':",
+          "options": [
+            "framtíð",
+            "draumur",
+            "von",
+            "áætlun"
+          ],
+          "answer": "framtíð"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'dream':",
+          "options": [
+            "draumur",
+            "von",
+            "framtíð",
+            "hamingja"
+          ],
+          "answer": "draumur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hope':",
+          "options": [
+            "von",
+            "draumur",
+            "framtíð",
+            "hamingja"
+          ],
+          "answer": "von"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'plan':",
+          "options": [
+            "áætlun",
+            "markmið",
+            "framtíð",
+            "tækifæri"
+          ],
+          "answer": "áætlun"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'goal':",
+          "options": [
+            "markmið",
+            "áætlun",
+            "draumur",
+            "árangur"
+          ],
+          "answer": "markmið"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'success':",
+          "options": [
+            "árangur",
+            "tækifæri",
+            "von",
+            "hamingja"
+          ],
+          "answer": "árangur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'opportunity':",
+          "options": [
+            "tækifæri",
+            "árangur",
+            "markmið",
+            "von"
+          ],
+          "answer": "tækifæri"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'happiness':",
+          "options": [
+            "hamingja",
+            "draumur",
+            "von",
+            "árangur"
+          ],
+          "answer": "hamingja"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég ___ vilja fara til Íslands.",
+          "answer": "myndi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Það ___ gaman að sjá hann.",
+          "answer": "væri"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Við ___ vilja koma.",
+          "answer": "myndum"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þið ___ geta hjálpað okkur.",
+          "answer": "mynduð"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ef ég hefði pening, ___ ég keypt hús.",
+          "answer": "myndi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ef þú kæmir, ___ það gaman.",
+          "answer": "væri"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hann ___ að koma á morgun.",
+          "answer": "lofar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég hafði fallegan ___ í nótt.",
+          "answer": "draum"
+        }
+      ]
     }
   ]
 }

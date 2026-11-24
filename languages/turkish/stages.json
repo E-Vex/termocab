@@ -5983,6 +5983,1927 @@
           "answer": "güzel"
         }
       ]
+    },
+    {
+      "id": 16,
+      "title": "City and Directions",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "meydan",
+          "translation": "square",
+          "pos": "noun",
+          "example": "Şehrin meydanı büyük."
+        },
+        {
+          "word": "müze",
+          "translation": "museum",
+          "pos": "noun",
+          "example": "Müze dokuzda açılır."
+        },
+        {
+          "word": "köprü",
+          "translation": "bridge",
+          "pos": "noun",
+          "example": "Bu köprü çok eski."
+        },
+        {
+          "word": "kilise",
+          "translation": "church",
+          "pos": "noun",
+          "example": "Kilise köprünün yanında."
+        },
+        {
+          "word": "cadde",
+          "translation": "avenue",
+          "pos": "noun",
+          "example": "Cadde boyunca yürüyorum."
+        },
+        {
+          "word": "semt",
+          "translation": "neighborhood",
+          "accepted_translations": ["district"],
+          "pos": "noun",
+          "example": "Sakin bir semtte oturuyorum."
+        },
+        {
+          "word": "trafik ışığı",
+          "translation": "traffic light",
+          "pos": "noun",
+          "example": "Trafik ışığında bekle."
+        },
+        {
+          "word": "köşe",
+          "translation": "corner",
+          "pos": "noun",
+          "example": "Kahvehane köşede."
+        },
+        {
+          "word": "harita",
+          "translation": "map",
+          "pos": "noun",
+          "example": "Şehrin haritasını alıyorum."
+        },
+        {
+          "word": "sol",
+          "translation": "left",
+          "pos": "noun",
+          "example": "Banka solda."
+        },
+        {
+          "word": "sağ",
+          "translation": "right",
+          "pos": "noun",
+          "example": "Sinema sağda."
+        },
+        {
+          "word": "dosdoğru",
+          "translation": "straight ahead",
+          "pos": "adverb",
+          "example": "Köprüye kadar dosdoğru git."
+        },
+        {
+          "word": "uzak",
+          "translation": "far",
+          "pos": "adjective",
+          "example": "Gar buradan uzak."
+        },
+        {
+          "word": "dönmek",
+          "translation": "to turn",
+          "pos": "verb",
+          "example": "Trafik ışığında sola dön."
+        },
+        {
+          "word": "geçmek",
+          "translation": "to cross",
+          "accepted_translations": ["to pass"],
+          "pos": "verb",
+          "example": "Caddeden geçiyoruz."
+        },
+        {
+          "word": "kaybolmak",
+          "translation": "to get lost",
+          "pos": "verb",
+          "example": "Bu şehirde sık kaybolurum."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "meydan",
+          "answer": "square"
+        },
+        {
+          "type": "translation",
+          "prompt": "müze",
+          "answer": "museum"
+        },
+        {
+          "type": "translation",
+          "prompt": "köprü",
+          "answer": "bridge"
+        },
+        {
+          "type": "translation",
+          "prompt": "kilise",
+          "answer": "church"
+        },
+        {
+          "type": "translation",
+          "prompt": "cadde",
+          "answer": "avenue"
+        },
+        {
+          "type": "translation",
+          "prompt": "semt",
+          "answer": "neighborhood",
+          "accepted_answers": ["district"]
+        },
+        {
+          "type": "translation",
+          "prompt": "trafik ışığı",
+          "answer": "traffic light"
+        },
+        {
+          "type": "translation",
+          "prompt": "köşe",
+          "answer": "corner"
+        },
+        {
+          "type": "translation",
+          "prompt": "harita",
+          "answer": "map"
+        },
+        {
+          "type": "translation",
+          "prompt": "sol",
+          "answer": "left"
+        },
+        {
+          "type": "translation",
+          "prompt": "sağ",
+          "answer": "right"
+        },
+        {
+          "type": "translation",
+          "prompt": "dosdoğru",
+          "answer": "straight ahead"
+        },
+        {
+          "type": "translation",
+          "prompt": "uzak",
+          "answer": "far"
+        },
+        {
+          "type": "translation",
+          "prompt": "dönmek",
+          "answer": "to turn"
+        },
+        {
+          "type": "translation",
+          "prompt": "geçmek",
+          "answer": "to cross",
+          "accepted_answers": ["to pass"]
+        },
+        {
+          "type": "translation",
+          "prompt": "kaybolmak",
+          "answer": "to get lost"
+        },
+        {
+          "type": "translation",
+          "prompt": "Müze caddenin köşesinde.",
+          "answer": "The museum is at the corner of the avenue.",
+          "accepted_answers": ["The museum is on the corner of the avenue."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Kiliseden sonra sola dön.",
+          "answer": "Turn left after the church."
+        },
+        {
+          "type": "translation",
+          "prompt": "Trafik ışığına kadar dosdoğru git.",
+          "answer": "Go straight ahead to the traffic light.",
+          "accepted_answers": ["Go straight to the traffic light."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Her sabah köprüden geçiyoruz.",
+          "answer": "We cross the bridge every morning."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bir yıldır bu semtte oturuyorum.",
+          "answer": "I have lived in this neighborhood for a year.",
+          "accepted_answers": ["I've lived in this neighborhood for a year."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Gar uzak, taksiye bin.",
+          "answer": "The station is far, take a taxi.",
+          "accepted_answers": ["The station is far away, take a taxi."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Eski şehirde kaybolma.",
+          "answer": "Don't get lost in the old town."
+        },
+        {
+          "type": "translation",
+          "prompt": "Şehrin haritasına bakıyorum.",
+          "answer": "I am looking at the map of the city.",
+          "accepted_answers": ["I'm looking at the map of the city."]
+        },
+        {
+          "type": "translation",
+          "prompt": "The church is near the bridge.",
+          "answer": "Kilise köprünün yakınında."
+        },
+        {
+          "type": "translation",
+          "prompt": "Turn right at the traffic light.",
+          "answer": "Trafik ışığında sağa dön."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't want to get lost.",
+          "answer": "Kaybolmak istemiyorum."
+        },
+        {
+          "type": "translation",
+          "prompt": "My neighborhood is quiet.",
+          "answer": "Benim semtim sakin."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'square':",
+          "options": [
+            "meydan",
+            "köprü",
+            "köşe",
+            "semt"
+          ],
+          "answer": "meydan"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'museum':",
+          "options": [
+            "müze",
+            "kilise",
+            "cadde",
+            "harita"
+          ],
+          "answer": "müze"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bridge':",
+          "options": [
+            "köprü",
+            "kilise",
+            "meydan",
+            "cadde"
+          ],
+          "answer": "köprü"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'church':",
+          "options": [
+            "kilise",
+            "müze",
+            "köprü",
+            "semt"
+          ],
+          "answer": "kilise"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'neighborhood':",
+          "options": [
+            "semt",
+            "meydan",
+            "köşe",
+            "harita"
+          ],
+          "answer": "semt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'traffic light':",
+          "options": [
+            "trafik ışığı",
+            "köşe",
+            "harita",
+            "kilise"
+          ],
+          "answer": "trafik ışığı"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'left':",
+          "options": [
+            "sol",
+            "sağ",
+            "köşe",
+            "harita"
+          ],
+          "answer": "sol"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'straight ahead':",
+          "options": [
+            "dosdoğru",
+            "sol",
+            "sağ",
+            "harita"
+          ],
+          "answer": "dosdoğru"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Müz___ gidiyorum.",
+          "answer": "yeye"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bank___ gidiyorum.",
+          "answer": "aya"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ev___ gidiyorum.",
+          "answer": "e"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kilise___ gidiyoruz.",
+          "answer": "ye"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ dön, sola değil.",
+          "answer": "Sağa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kayboldum, ___ bakıyorum.",
+          "answer": "haritaya"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dosdoğru gidin, sonra köşe___ dönün.",
+          "answer": "ye"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Havalimanı çok ___, taksi alacağım.",
+          "answer": "uzak"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Money and Services",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "fiyat",
+          "translation": "price",
+          "pos": "noun",
+          "example": "Biletin fiyatı yüksek."
+        },
+        {
+          "word": "makbuz",
+          "translation": "receipt",
+          "pos": "noun",
+          "example": "Makbuzu saklayın lütfen."
+        },
+        {
+          "word": "hesap",
+          "translation": "account",
+          "accepted_translations": ["bill"],
+          "pos": "noun",
+          "example": "Bankada hesap açıyorum."
+        },
+        {
+          "word": "indirim",
+          "translation": "discount",
+          "pos": "noun",
+          "example": "Öğrencilere indirim var."
+        },
+        {
+          "word": "nakit",
+          "translation": "cash",
+          "pos": "noun",
+          "example": "Nakit ödüyorum."
+        },
+        {
+          "word": "kart",
+          "translation": "card",
+          "accepted_translations": ["bank card", "credit card"],
+          "pos": "noun",
+          "example": "Kartla ödüyorum."
+        },
+        {
+          "word": "ödemek",
+          "translation": "to pay",
+          "pos": "verb",
+          "example": "Kahveyi ödüyorum."
+        },
+        {
+          "word": "çekmek",
+          "translation": "to withdraw",
+          "pos": "verb",
+          "example": "Bankamattan para çekiyorum."
+        },
+        {
+          "word": "harcamak",
+          "translation": "to spend",
+          "pos": "verb",
+          "example": "Çok para harcıyorum."
+        },
+        {
+          "word": "biriktirmek",
+          "translation": "to save",
+          "pos": "verb",
+          "example": "Gezi için para biriktiriyorum."
+        },
+        {
+          "word": "ücretsiz",
+          "translation": "free",
+          "pos": "adjective",
+          "example": "Giriş pazar günleri ücretsiz."
+        },
+        {
+          "word": "form",
+          "translation": "form",
+          "pos": "noun",
+          "example": "Bu formu doldurun lütfen."
+        },
+        {
+          "word": "imzalamak",
+          "translation": "to sign",
+          "pos": "verb",
+          "example": "Buraya imza atın lütfen."
+        },
+        {
+          "word": "müşteri",
+          "translation": "customer",
+          "pos": "noun",
+          "example": "Müşteri kasada bekliyor."
+        },
+        {
+          "word": "servis",
+          "translation": "service",
+          "pos": "noun",
+          "example": "Servis fiyatın içinde."
+        },
+        {
+          "word": "tavsiye",
+          "translation": "advice",
+          "accepted_translations": ["tip"],
+          "pos": "noun",
+          "example": "Bana iyi bir tavsiye veriyor."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "fiyat",
+          "answer": "price"
+        },
+        {
+          "type": "translation",
+          "prompt": "makbuz",
+          "answer": "receipt"
+        },
+        {
+          "type": "translation",
+          "prompt": "hesap",
+          "answer": "account",
+          "accepted_answers": ["bill"]
+        },
+        {
+          "type": "translation",
+          "prompt": "indirim",
+          "answer": "discount"
+        },
+        {
+          "type": "translation",
+          "prompt": "nakit",
+          "answer": "cash"
+        },
+        {
+          "type": "translation",
+          "prompt": "kart",
+          "answer": "card",
+          "accepted_answers": ["bank card", "credit card"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ödemek",
+          "answer": "to pay"
+        },
+        {
+          "type": "translation",
+          "prompt": "çekmek",
+          "answer": "to withdraw"
+        },
+        {
+          "type": "translation",
+          "prompt": "harcamak",
+          "answer": "to spend"
+        },
+        {
+          "type": "translation",
+          "prompt": "biriktirmek",
+          "answer": "to save"
+        },
+        {
+          "type": "translation",
+          "prompt": "ücretsiz",
+          "answer": "free"
+        },
+        {
+          "type": "translation",
+          "prompt": "form",
+          "answer": "form"
+        },
+        {
+          "type": "translation",
+          "prompt": "imzalamak",
+          "answer": "to sign"
+        },
+        {
+          "type": "translation",
+          "prompt": "müşteri",
+          "answer": "customer"
+        },
+        {
+          "type": "translation",
+          "prompt": "servis",
+          "answer": "service"
+        },
+        {
+          "type": "translation",
+          "prompt": "tavsiye",
+          "answer": "advice",
+          "accepted_answers": ["tip"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Nakit mi kartla mı ödeyeyim ?",
+          "answer": "Do I pay in cash or by card?",
+          "accepted_answers": ["Should I pay in cash or by card?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bankamattan yüz euro çektim.",
+          "answer": "I withdrew a hundred euros from the ATM.",
+          "accepted_answers": ["I took out a hundred euros from the ATM."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Öğrencilere indirim var.",
+          "answer": "There is a discount for students.",
+          "accepted_answers": ["There's a discount for students."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu formu doldurun ve aşağıya imza atın.",
+          "answer": "Fill out this form and sign at the bottom.",
+          "accepted_answers": ["Fill in this form and sign at the bottom."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu müze ayın ilk pazarı ücretsiz.",
+          "answer": "This museum is free on the first Sunday of the month.",
+          "accepted_answers": ["This museum is free the first Sunday of the month."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Araba almak için para biriktiriyor.",
+          "answer": "She is saving to buy a car.",
+          "accepted_answers": ["She's saving to buy a car.", "She is saving to buy a car."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Servis zaten fiyatın içinde.",
+          "answer": "The service is already included in the price.",
+          "accepted_answers": ["Service is already included in the price."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Müşteri makbuz istiyor.",
+          "answer": "The customer asks for a receipt."
+        },
+        {
+          "type": "translation",
+          "prompt": "I want to open an account.",
+          "answer": "Hesap açmak istiyorum."
+        },
+        {
+          "type": "translation",
+          "prompt": "You spend too much money.",
+          "answer": "Çok fazla para harcıyorsun."
+        },
+        {
+          "type": "translation",
+          "prompt": "Can you give me some advice?",
+          "answer": "Bana bir tavsiye verebilir misin ?"
+        },
+        {
+          "type": "translation",
+          "prompt": "I pay by card.",
+          "answer": "Kartla ödüyorum."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'price':",
+          "options": [
+            "fiyat",
+            "makbuz",
+            "hesap",
+            "indirim"
+          ],
+          "answer": "fiyat"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'receipt':",
+          "options": [
+            "makbuz",
+            "fiyat",
+            "hesap",
+            "servis"
+          ],
+          "answer": "makbuz"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'account':",
+          "options": [
+            "hesap",
+            "fiyat",
+            "indirim",
+            "servis"
+          ],
+          "answer": "hesap"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'discount':",
+          "options": [
+            "indirim",
+            "fiyat",
+            "makbuz",
+            "form"
+          ],
+          "answer": "indirim"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cash':",
+          "options": [
+            "nakit",
+            "fiyat",
+            "makbuz",
+            "kart"
+          ],
+          "answer": "nakit"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'free':",
+          "options": [
+            "ücretsiz",
+            "müşteri",
+            "servis",
+            "makbuz"
+          ],
+          "answer": "ücretsiz"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'customer':",
+          "options": [
+            "müşteri",
+            "servis",
+            "makbuz",
+            "fiyat"
+          ],
+          "answer": "müşteri"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'advice':",
+          "options": [
+            "tavsiye",
+            "servis",
+            "müşteri",
+            "indirim"
+          ],
+          "answer": "tavsiye"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bank___ para çektim.",
+          "answer": "tan"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Otobüs___ indim.",
+          "answer": "ten"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ev___ çıktım.",
+          "answer": "den"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Müz___ çıktık.",
+          "answer": "den"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bu ay çok para ___.",
+          "answer": "harcadım"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Küçük bir ___ istiyorum.",
+          "answer": "indirim"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "İade için ___ gerekli.",
+          "answer": "makbuz"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kartla mı ___ mı ?",
+          "answer": "nakit"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Nature and the Environment",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "doğa",
+          "translation": "nature",
+          "pos": "noun",
+          "example": "Doğayı seviyorum."
+        },
+        {
+          "word": "orman",
+          "translation": "forest",
+          "pos": "noun",
+          "example": "Orman sabahleyin sessiz."
+        },
+        {
+          "word": "nehir",
+          "translation": "river",
+          "pos": "noun",
+          "example": "Nehir ormandan geçer."
+        },
+        {
+          "word": "göl",
+          "translation": "lake",
+          "pos": "noun",
+          "example": "Gölde yüzüyoruz."
+        },
+        {
+          "word": "ağaç",
+          "translation": "tree",
+          "pos": "noun",
+          "example": "Bu ağaç çok yaşlı."
+        },
+        {
+          "word": "çiçek",
+          "translation": "flower",
+          "pos": "noun",
+          "example": "Bu çiçek çok güzel."
+        },
+        {
+          "word": "hayvan",
+          "translation": "animal",
+          "pos": "noun",
+          "example": "Hayvan ağacın altında uyuyor."
+        },
+        {
+          "word": "kuş",
+          "translation": "bird",
+          "pos": "noun",
+          "example": "Kuş sabahleyin ötüyor."
+        },
+        {
+          "word": "gökyüzü",
+          "translation": "sky",
+          "pos": "noun",
+          "example": "Gökyüzü bugün mavi."
+        },
+        {
+          "word": "yıldız",
+          "translation": "star",
+          "pos": "noun",
+          "example": "Geceleri yıldızlara bakıyorum."
+        },
+        {
+          "word": "dünya",
+          "translation": "world",
+          "accepted_translations": ["Earth", "the earth"],
+          "pos": "noun",
+          "example": "Dünya Güneş'in etrafında döner."
+        },
+        {
+          "word": "iklim",
+          "translation": "climate",
+          "pos": "noun",
+          "example": "İklim her yerde değişiyor."
+        },
+        {
+          "word": "kirlilik",
+          "translation": "pollution",
+          "pos": "noun",
+          "example": "Hava kirliliği bir sorun."
+        },
+        {
+          "word": "korumak",
+          "translation": "to protect",
+          "pos": "verb",
+          "example": "Ormanı korumalıyız."
+        },
+        {
+          "word": "geri dönüşüm",
+          "translation": "recycling",
+          "pos": "noun",
+          "example": "Geri dönüşüm önemlidir."
+        },
+        {
+          "word": "dikmek",
+          "translation": "to plant",
+          "pos": "verb",
+          "example": "Bahçeye ağaç diyorlar."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "doğa",
+          "answer": "nature"
+        },
+        {
+          "type": "translation",
+          "prompt": "orman",
+          "answer": "forest"
+        },
+        {
+          "type": "translation",
+          "prompt": "nehir",
+          "answer": "river"
+        },
+        {
+          "type": "translation",
+          "prompt": "göl",
+          "answer": "lake"
+        },
+        {
+          "type": "translation",
+          "prompt": "ağaç",
+          "answer": "tree"
+        },
+        {
+          "type": "translation",
+          "prompt": "çiçek",
+          "answer": "flower"
+        },
+        {
+          "type": "translation",
+          "prompt": "hayvan",
+          "answer": "animal"
+        },
+        {
+          "type": "translation",
+          "prompt": "kuş",
+          "answer": "bird"
+        },
+        {
+          "type": "translation",
+          "prompt": "gökyüzü",
+          "answer": "sky"
+        },
+        {
+          "type": "translation",
+          "prompt": "yıldız",
+          "answer": "star"
+        },
+        {
+          "type": "translation",
+          "prompt": "dünya",
+          "answer": "world",
+          "accepted_answers": ["Earth", "the earth"]
+        },
+        {
+          "type": "translation",
+          "prompt": "iklim",
+          "answer": "climate"
+        },
+        {
+          "type": "translation",
+          "prompt": "kirlilik",
+          "answer": "pollution"
+        },
+        {
+          "type": "translation",
+          "prompt": "korumak",
+          "answer": "to protect"
+        },
+        {
+          "type": "translation",
+          "prompt": "geri dönüşüm",
+          "answer": "recycling"
+        },
+        {
+          "type": "translation",
+          "prompt": "dikmek",
+          "answer": "to plant"
+        },
+        {
+          "type": "translation",
+          "prompt": "Doğayı korumalıyız.",
+          "answer": "We must protect nature.",
+          "accepted_answers": ["We have to protect nature."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Kuşlar ormanda ötüyor.",
+          "answer": "The birds sing in the forest."
+        },
+        {
+          "type": "translation",
+          "prompt": "Göl, nehirden daha soğuk.",
+          "answer": "The lake is colder than the river."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu parktaki en yaşlı ağaç bu.",
+          "answer": "This is the oldest tree in the park."
+        },
+        {
+          "type": "translation",
+          "prompt": "Şehirlerdeki kirlilik büyük bir sorun.",
+          "answer": "Pollution in cities is a big problem.",
+          "accepted_answers": ["The pollution in cities is a big problem."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Gökyüzü açıkken yıldızlara bakıyorum.",
+          "answer": "I look at the stars when the sky is clear.",
+          "accepted_answers": ["I watch the stars when the sky is clear."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu bölgenin iklimi ılıman.",
+          "answer": "The climate of this region is mild.",
+          "accepted_answers": ["The climate in this region is mild."]
+        },
+        {
+          "type": "translation",
+          "prompt": "İlkbaharda çiçek diker.",
+          "answer": "She plants flowers in spring.",
+          "accepted_answers": ["She plants flowers in the spring."]
+        },
+        {
+          "type": "translation",
+          "prompt": "The river is behind the mountain.",
+          "answer": "Nehir dağın arkasında."
+        },
+        {
+          "type": "translation",
+          "prompt": "This bird is beautiful.",
+          "answer": "Bu kuş güzel."
+        },
+        {
+          "type": "translation",
+          "prompt": "We recycle glass and paper.",
+          "answer": "Cam ve kâğıdı geri dönüştürüyoruz."
+        },
+        {
+          "type": "translation",
+          "prompt": "The world is our home.",
+          "answer": "Dünya bizim evimiz."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'nature':",
+          "options": [
+            "doğa",
+            "orman",
+            "göl",
+            "nehir"
+          ],
+          "answer": "doğa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'forest':",
+          "options": [
+            "orman",
+            "doğa",
+            "göl",
+            "ağaç"
+          ],
+          "answer": "orman"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'river':",
+          "options": [
+            "nehir",
+            "göl",
+            "orman",
+            "kirlilik"
+          ],
+          "answer": "nehir"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'lake':",
+          "options": [
+            "göl",
+            "nehir",
+            "orman",
+            "gökyüzü"
+          ],
+          "answer": "göl"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tree':",
+          "options": [
+            "ağaç",
+            "orman",
+            "çiçek",
+            "göl"
+          ],
+          "answer": "ağaç"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'flower':",
+          "options": [
+            "çiçek",
+            "ağaç",
+            "orman",
+            "doğa"
+          ],
+          "answer": "çiçek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bird':",
+          "options": [
+            "kuş",
+            "hayvan",
+            "ağaç",
+            "gökyüzü"
+          ],
+          "answer": "kuş"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'pollution':",
+          "options": [
+            "kirlilik",
+            "iklim",
+            "doğa",
+            "gökyüzü"
+          ],
+          "answer": "kirlilik"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "İstanbul, Ankara'dan ___ büyüktür.",
+          "answer": "daha"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bu, Türkiye'nin ___ güzel gölüdür.",
+          "answer": "en"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kirlilik, iklim için ___ büyük tehlike.",
+          "answer": "en"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bu oda ___ sessiz, öteki gürültülü.",
+          "answer": "daha"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ormanı ___ !",
+          "answer": "koruyun"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Geri ___ çok önemli.",
+          "answer": "dönüşüm"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bahçeye çiçek ___.",
+          "answer": "dikelim"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gökyüzünde bin ___ parlıyor.",
+          "answer": "yıldız"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Opinions and News",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "gazete",
+          "translation": "newspaper",
+          "pos": "noun",
+          "example": "Her sabah gazete okuyorum."
+        },
+        {
+          "word": "makale",
+          "translation": "article",
+          "pos": "noun",
+          "example": "Bu makale çok ilginç."
+        },
+        {
+          "word": "radyo",
+          "translation": "radio",
+          "pos": "noun",
+          "example": "Arabada radyo dinliyorum."
+        },
+        {
+          "word": "televizyon",
+          "translation": "television",
+          "accepted_translations": ["TV"],
+          "pos": "noun",
+          "example": "Televizyon salonda."
+        },
+        {
+          "word": "fikir",
+          "translation": "opinion",
+          "accepted_translations": ["idea"],
+          "pos": "noun",
+          "example": "Herkesin kendi fikri var."
+        },
+        {
+          "word": "inanmak",
+          "translation": "to believe",
+          "pos": "verb",
+          "example": "Bu hikâyeye inanmıyorum."
+        },
+        {
+          "word": "katılmak",
+          "translation": "to agree",
+          "accepted_translations": ["to join", "to participate"],
+          "pos": "verb",
+          "example": "Sana katılıyorum."
+        },
+        {
+          "word": "önemli",
+          "translation": "important",
+          "pos": "adjective",
+          "example": "Bu önemli bir haber."
+        },
+        {
+          "word": "muhtemelen",
+          "translation": "probably",
+          "pos": "adverb",
+          "example": "Muhtemelen yarın gelir."
+        },
+        {
+          "word": "tartışmak",
+          "translation": "to discuss",
+          "pos": "verb",
+          "example": "Makaleyi tartışıyoruz."
+        },
+        {
+          "word": "gazeteci",
+          "translation": "journalist",
+          "pos": "noun",
+          "example": "Gazeteci belediye başkanıyla görüşüyor."
+        },
+        {
+          "word": "toplum",
+          "translation": "society",
+          "pos": "noun",
+          "example": "Toplum hızla değişiyor."
+        },
+        {
+          "word": "olay",
+          "translation": "event",
+          "pos": "noun",
+          "example": "Bu önemli bir olay."
+        },
+        {
+          "word": "gerçek",
+          "translation": "truth",
+          "accepted_translations": ["the truth"],
+          "pos": "noun",
+          "example": "Her zaman gerçeği söyler."
+        },
+        {
+          "word": "görünmek",
+          "translation": "to seem",
+          "pos": "verb",
+          "example": "Yorgun görünüyorsun."
+        },
+        {
+          "word": "olgu",
+          "translation": "fact",
+          "pos": "noun",
+          "example": "Bu bir olgu, fikir değil."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "gazete",
+          "answer": "newspaper"
+        },
+        {
+          "type": "translation",
+          "prompt": "makale",
+          "answer": "article"
+        },
+        {
+          "type": "translation",
+          "prompt": "radyo",
+          "answer": "radio"
+        },
+        {
+          "type": "translation",
+          "prompt": "televizyon",
+          "answer": "television",
+          "accepted_answers": ["TV"]
+        },
+        {
+          "type": "translation",
+          "prompt": "fikir",
+          "answer": "opinion",
+          "accepted_answers": ["idea"]
+        },
+        {
+          "type": "translation",
+          "prompt": "inanmak",
+          "answer": "to believe"
+        },
+        {
+          "type": "translation",
+          "prompt": "katılmak",
+          "answer": "to agree",
+          "accepted_answers": ["to join", "to participate"]
+        },
+        {
+          "type": "translation",
+          "prompt": "önemli",
+          "answer": "important"
+        },
+        {
+          "type": "translation",
+          "prompt": "muhtemelen",
+          "answer": "probably"
+        },
+        {
+          "type": "translation",
+          "prompt": "tartışmak",
+          "answer": "to discuss"
+        },
+        {
+          "type": "translation",
+          "prompt": "gazeteci",
+          "answer": "journalist"
+        },
+        {
+          "type": "translation",
+          "prompt": "toplum",
+          "answer": "society"
+        },
+        {
+          "type": "translation",
+          "prompt": "olay",
+          "answer": "event"
+        },
+        {
+          "type": "translation",
+          "prompt": "gerçek",
+          "answer": "truth",
+          "accepted_answers": ["the truth"]
+        },
+        {
+          "type": "translation",
+          "prompt": "görünmek",
+          "answer": "to seem"
+        },
+        {
+          "type": "translation",
+          "prompt": "olgu",
+          "answer": "fact"
+        },
+        {
+          "type": "translation",
+          "prompt": "Sana katılıyorum.",
+          "answer": "I agree with you."
+        },
+        {
+          "type": "translation",
+          "prompt": "Gazeteci toplum hakkında bir makale yazıyor.",
+          "answer": "The journalist writes an article about society.",
+          "accepted_answers": ["The journalist is writing an article about society."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bence bu makale çok iyi.",
+          "answer": "In my opinion, this article is very good."
+        },
+        {
+          "type": "translation",
+          "prompt": "O her zaman gerçeği söylemez.",
+          "answer": "He doesn't always tell the truth.",
+          "accepted_answers": ["He does not always tell the truth."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Günün olaylarını tartışıyoruz.",
+          "answer": "We discuss the events of the day.",
+          "accepted_answers": ["We're discussing the events of the day."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu olay önemli görünüyor.",
+          "answer": "This event seems important."
+        },
+        {
+          "type": "translation",
+          "prompt": "Muhtemelen haklıdır.",
+          "answer": "He is probably right.",
+          "accepted_answers": ["Probably he is right."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Televizyonun bazen yalan söylediğini düşünüyorum.",
+          "answer": "I believe that television sometimes lies.",
+          "accepted_answers": ["I think that television sometimes lies."]
+        },
+        {
+          "type": "translation",
+          "prompt": "I read the newspaper every morning.",
+          "answer": "Her sabah gazete okuyorum."
+        },
+        {
+          "type": "translation",
+          "prompt": "We must discuss this event.",
+          "answer": "Bu olayı tartışmalıyız."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's an important fact.",
+          "answer": "Bu önemli bir olgu."
+        },
+        {
+          "type": "translation",
+          "prompt": "I listen to the radio in the car.",
+          "answer": "Arabada radyo dinliyorum."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'newspaper':",
+          "options": [
+            "gazete",
+            "makale",
+            "radyo",
+            "televizyon"
+          ],
+          "answer": "gazete"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'article':",
+          "options": [
+            "makale",
+            "gazete",
+            "radyo",
+            "olgu"
+          ],
+          "answer": "makale"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'radio':",
+          "options": [
+            "radyo",
+            "televizyon",
+            "gazete",
+            "makale"
+          ],
+          "answer": "radyo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'television':",
+          "options": [
+            "televizyon",
+            "radyo",
+            "gazete",
+            "gazeteci"
+          ],
+          "answer": "televizyon"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'opinion':",
+          "options": [
+            "fikir",
+            "gerçek",
+            "olgu",
+            "toplum"
+          ],
+          "answer": "fikir"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'journalist':",
+          "options": [
+            "gazeteci",
+            "toplum",
+            "gerçek",
+            "fikir"
+          ],
+          "answer": "gazeteci"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'truth':",
+          "options": [
+            "gerçek",
+            "olgu",
+            "fikir",
+            "toplum"
+          ],
+          "answer": "gerçek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fact':",
+          "options": [
+            "olgu",
+            "gerçek",
+            "fikir",
+            "olay"
+          ],
+          "answer": "olgu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sen dinlen___sin.",
+          "answer": "melisin"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ali çalış___.",
+          "answer": "malı"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hasta, doktora git___.",
+          "answer": "meli"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Onlar da gel___.",
+          "answer": "meli"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bence haklısın, sana katılı___.",
+          "answer": "yorum"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bu habere ___mıyorum.",
+          "answer": "inan"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gazete___ bu olayı yazdı.",
+          "answer": "ci"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bu bir ___, sadece bir fikir değil.",
+          "answer": "gerçek"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Future and Dreams",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "gelecek",
+          "translation": "future",
+          "accepted_translations": ["the future"],
+          "pos": "noun",
+          "example": "Gelecek belirsiz."
+        },
+        {
+          "word": "rüya",
+          "translation": "dream",
+          "pos": "noun",
+          "example": "Güzel bir rüya gördüm."
+        },
+        {
+          "word": "umut",
+          "translation": "hope",
+          "pos": "noun",
+          "example": "Kazanma umudum var."
+        },
+        {
+          "word": "plan",
+          "translation": "plan",
+          "pos": "noun",
+          "example": "Planım gezmek."
+        },
+        {
+          "word": "amaç",
+          "translation": "goal",
+          "accepted_translations": ["aim", "purpose"],
+          "pos": "noun",
+          "example": "Amacım Türkçe öğrenmek."
+        },
+        {
+          "word": "dilek",
+          "translation": "wish",
+          "pos": "noun",
+          "example": "Bir dilek tutuyorum."
+        },
+        {
+          "word": "belki",
+          "translation": "maybe",
+          "accepted_translations": ["perhaps"],
+          "pos": "adverb",
+          "example": "Belki yarın yağmur yağar."
+        },
+        {
+          "word": "bir gün",
+          "translation": "one day",
+          "accepted_translations": ["someday"],
+          "pos": "adverb",
+          "example": "Bir gün Japonya'ya gideceğim."
+        },
+        {
+          "word": "başarı",
+          "translation": "success",
+          "pos": "noun",
+          "example": "Sana başarılar dilerim !"
+        },
+        {
+          "word": "fırsat",
+          "translation": "opportunity",
+          "accepted_translations": ["chance"],
+          "pos": "noun",
+          "example": "Bu iyi bir fırsat."
+        },
+        {
+          "word": "ummak",
+          "translation": "to hope",
+          "pos": "verb",
+          "example": "Umarım seni yakında görürüm."
+        },
+        {
+          "word": "planlamak",
+          "translation": "to plan",
+          "pos": "verb",
+          "example": "Bir gezi planlıyoruz."
+        },
+        {
+          "word": "söz vermek",
+          "translation": "to promise",
+          "pos": "verb",
+          "example": "Geleceğime söz veriyorum."
+        },
+        {
+          "word": "şans",
+          "translation": "luck",
+          "pos": "noun",
+          "example": "Sınavda şans !"
+        },
+        {
+          "word": "mutluluk",
+          "translation": "happiness",
+          "pos": "noun",
+          "example": "Mutluluk basittir."
+        },
+        {
+          "word": "başarmak",
+          "translation": "to succeed",
+          "pos": "verb",
+          "example": "Başaracaksın, biliyorum."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "gelecek",
+          "answer": "future",
+          "accepted_answers": ["the future"]
+        },
+        {
+          "type": "translation",
+          "prompt": "rüya",
+          "answer": "dream"
+        },
+        {
+          "type": "translation",
+          "prompt": "umut",
+          "answer": "hope"
+        },
+        {
+          "type": "translation",
+          "prompt": "plan",
+          "answer": "plan"
+        },
+        {
+          "type": "translation",
+          "prompt": "amaç",
+          "answer": "goal",
+          "accepted_answers": ["aim", "purpose"]
+        },
+        {
+          "type": "translation",
+          "prompt": "dilek",
+          "answer": "wish"
+        },
+        {
+          "type": "translation",
+          "prompt": "belki",
+          "answer": "maybe",
+          "accepted_answers": ["perhaps"]
+        },
+        {
+          "type": "translation",
+          "prompt": "bir gün",
+          "answer": "one day",
+          "accepted_answers": ["someday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "başarı",
+          "answer": "success"
+        },
+        {
+          "type": "translation",
+          "prompt": "fırsat",
+          "answer": "opportunity",
+          "accepted_answers": ["chance"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ummak",
+          "answer": "to hope"
+        },
+        {
+          "type": "translation",
+          "prompt": "planlamak",
+          "answer": "to plan"
+        },
+        {
+          "type": "translation",
+          "prompt": "söz vermek",
+          "answer": "to promise"
+        },
+        {
+          "type": "translation",
+          "prompt": "şans",
+          "answer": "luck"
+        },
+        {
+          "type": "translation",
+          "prompt": "mutluluk",
+          "answer": "happiness"
+        },
+        {
+          "type": "translation",
+          "prompt": "başarmak",
+          "answer": "to succeed"
+        },
+        {
+          "type": "translation",
+          "prompt": "Bir gün dünyayı gezeceğim.",
+          "answer": "One day I will travel around the world.",
+          "accepted_answers": ["Someday I will travel around the world."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Yarın denize gideceğiz.",
+          "answer": "Tomorrow we will go to the sea."
+        },
+        {
+          "type": "translation",
+          "prompt": "Başaracaksın, eminim.",
+          "answer": "You will make it, I'm sure.",
+          "accepted_answers": ["You will make it, I am sure."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Muhtemelen yarın yağmur yağacak.",
+          "answer": "It will probably rain tomorrow."
+        },
+        {
+          "type": "translation",
+          "prompt": "Param olunca ev alacağım.",
+          "answer": "When I have money, I will buy a house."
+        },
+        {
+          "type": "translation",
+          "prompt": "Doktor olmayı umuyor.",
+          "answer": "She hopes to become a doctor."
+        },
+        {
+          "type": "translation",
+          "prompt": "Seni unutmayacağıma söz veriyorum.",
+          "answer": "I promise you that I will not forget you.",
+          "accepted_answers": ["I promise you that I won't forget you."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mutluluk parayla satın alınamaz.",
+          "answer": "Happiness cannot be bought.",
+          "accepted_answers": ["You can't buy happiness.", "Happiness can't be bought."]
+        },
+        {
+          "type": "translation",
+          "prompt": "I hope to see you soon.",
+          "answer": "Umarım seni yakında görürüm."
+        },
+        {
+          "type": "translation",
+          "prompt": "One day I will speak Turkish very well.",
+          "answer": "Bir gün çok iyi Türkçe konuşacağım."
+        },
+        {
+          "type": "translation",
+          "prompt": "My goal is to succeed.",
+          "answer": "Amacım başarmak."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's a real opportunity.",
+          "answer": "Bu gerçek bir fırsat."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'future':",
+          "options": [
+            "gelecek",
+            "rüya",
+            "umut",
+            "plan"
+          ],
+          "answer": "gelecek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'dream':",
+          "options": [
+            "rüya",
+            "umut",
+            "gelecek",
+            "mutluluk"
+          ],
+          "answer": "rüya"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hope':",
+          "options": [
+            "umut",
+            "rüya",
+            "gelecek",
+            "mutluluk"
+          ],
+          "answer": "umut"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'plan':",
+          "options": [
+            "plan",
+            "amaç",
+            "gelecek",
+            "fırsat"
+          ],
+          "answer": "plan"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'goal':",
+          "options": [
+            "amaç",
+            "plan",
+            "rüya",
+            "başarı"
+          ],
+          "answer": "amaç"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'success':",
+          "options": [
+            "başarı",
+            "fırsat",
+            "umut",
+            "mutluluk"
+          ],
+          "answer": "başarı"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'opportunity':",
+          "options": [
+            "fırsat",
+            "başarı",
+            "amaç",
+            "umut"
+          ],
+          "answer": "fırsat"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'happiness':",
+          "options": [
+            "mutluluk",
+            "rüya",
+            "umut",
+            "başarı"
+          ],
+          "answer": "mutluluk"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Keşke gels___.",
+          "answer": "e"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Keşke gits___.",
+          "answer": "e"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Keşke kal___.",
+          "answer": "sa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Keşke yaps___.",
+          "answer": "a"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Keşke burada ___.",
+          "answer": "olsa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bir gün dünyayı ___.",
+          "answer": "gezeceğim"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bu büyük bir ___.",
+          "answer": "fırsat"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sınavda ___ dilerim.",
+          "answer": "başarı"
+        }
+      ]
     }
   ]
 }

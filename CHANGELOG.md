@@ -7,6 +7,24 @@ state is a MAJOR bump; defect fixes that touch no contract are PATCH bumps.
 History before 0.18.0 lives in the git log and in HANDOFF.md §2, one
 paragraph per session.
 
+## [0.20.0] — 2026-11-23
+
+### Added
+
+- The stages 16–20 wave (D22): every one of the thirteen courses grows
+  its fourth band — five upper-intermediate stages (City and Directions /
+  Money and Services / Nature and the Environment / Opinions and News /
+  Future and Dreams), 80 words and 220 exercises per course, the same
+  shared skeleton with each course's own drill identity continuing
+  (French the pronouns y, en and lui/leur; German the two-way
+  prepositions and the passive; Hungarian the potential -hat/-het and
+  the conditional -nék; Turkish the dative and ablative cases and keşke
+  + -se; Icelandic mér finnst and the myndi/væri conditional; and every
+  course's stage 20 adds its third narrative form). Courses now run to
+  twenty stages and 313 words; `level_hint: "upper-intermediate"` is the
+  fourth band. Additive content, so a MINOR bump per the semver policy
+  in RELEASE.md.
+
 ## [0.19.0] — 2026-11-23
 
 ### Added

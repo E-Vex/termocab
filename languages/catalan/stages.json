@@ -5775,6 +5775,1926 @@
           "answer": "muntanya"
         }
       ]
+    },
+    {
+      "id": 16,
+      "title": "City and Directions",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "la plaça",
+          "translation": "square",
+          "pos": "noun",
+          "example": "La plaça del poble és gran."
+        },
+        {
+          "word": "el museu",
+          "translation": "museum",
+          "pos": "noun",
+          "example": "El museu obre a les nou."
+        },
+        {
+          "word": "el pont",
+          "translation": "bridge",
+          "pos": "noun",
+          "example": "Aquest pont és molt vell."
+        },
+        {
+          "word": "l'església",
+          "translation": "church",
+          "pos": "noun",
+          "example": "L'església és a prop del pont."
+        },
+        {
+          "word": "l'avinguda",
+          "translation": "avenue",
+          "pos": "noun",
+          "example": "Camino per l'avinguda."
+        },
+        {
+          "word": "el barri",
+          "translation": "neighborhood",
+          "accepted_translations": ["district"],
+          "pos": "noun",
+          "example": "Visc en un barri tranquil."
+        },
+        {
+          "word": "el semàfor",
+          "translation": "traffic light",
+          "pos": "noun",
+          "example": "Espera al semàfor."
+        },
+        {
+          "word": "la cantonada",
+          "translation": "corner",
+          "pos": "noun",
+          "example": "El cafè és a la cantonada."
+        },
+        {
+          "word": "el mapa",
+          "translation": "map",
+          "pos": "noun",
+          "example": "Compro un mapa de la ciutat."
+        },
+        {
+          "word": "l'esquerra",
+          "translation": "left",
+          "pos": "noun",
+          "example": "El banc és a l'esquerra."
+        },
+        {
+          "word": "la dreta",
+          "translation": "right",
+          "pos": "noun",
+          "example": "El cinema és a la dreta."
+        },
+        {
+          "word": "tot recte",
+          "translation": "straight ahead",
+          "pos": "adverb",
+          "example": "Segueix tot recte fins al pont."
+        },
+        {
+          "word": "lluny",
+          "translation": "far",
+          "pos": "adverb",
+          "example": "L'estació és lluny d'aquí."
+        },
+        {
+          "word": "girar",
+          "translation": "to turn",
+          "pos": "verb",
+          "example": "Gira a l'esquerra al semàfor."
+        },
+        {
+          "word": "travessar",
+          "translation": "to cross",
+          "pos": "verb",
+          "example": "Travessem el carrer."
+        },
+        {
+          "word": "perdre's",
+          "translation": "to get lost",
+          "pos": "verb",
+          "example": "Em perdo sovint en aquesta ciutat."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "la plaça",
+          "answer": "square"
+        },
+        {
+          "type": "translation",
+          "prompt": "el museu",
+          "answer": "museum"
+        },
+        {
+          "type": "translation",
+          "prompt": "el pont",
+          "answer": "bridge"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'església",
+          "answer": "church"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'avinguda",
+          "answer": "avenue"
+        },
+        {
+          "type": "translation",
+          "prompt": "el barri",
+          "answer": "neighborhood",
+          "accepted_answers": ["district"]
+        },
+        {
+          "type": "translation",
+          "prompt": "el semàfor",
+          "answer": "traffic light"
+        },
+        {
+          "type": "translation",
+          "prompt": "la cantonada",
+          "answer": "corner"
+        },
+        {
+          "type": "translation",
+          "prompt": "el mapa",
+          "answer": "map"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'esquerra",
+          "answer": "left"
+        },
+        {
+          "type": "translation",
+          "prompt": "la dreta",
+          "answer": "right"
+        },
+        {
+          "type": "translation",
+          "prompt": "tot recte",
+          "answer": "straight ahead"
+        },
+        {
+          "type": "translation",
+          "prompt": "lluny",
+          "answer": "far"
+        },
+        {
+          "type": "translation",
+          "prompt": "girar",
+          "answer": "to turn"
+        },
+        {
+          "type": "translation",
+          "prompt": "travessar",
+          "answer": "to cross"
+        },
+        {
+          "type": "translation",
+          "prompt": "perdre's",
+          "answer": "to get lost"
+        },
+        {
+          "type": "translation",
+          "prompt": "El museu és a la cantonada de l'avinguda.",
+          "answer": "The museum is at the corner of the avenue.",
+          "accepted_answers": ["The museum is on the corner of the avenue."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Gira a l'esquerra després de l'església.",
+          "answer": "Turn left after the church."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vés tot recte fins al semàfor.",
+          "answer": "Go straight ahead to the traffic light.",
+          "accepted_answers": ["Go straight to the traffic light."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Travessem el pont cada matí.",
+          "answer": "We cross the bridge every morning."
+        },
+        {
+          "type": "translation",
+          "prompt": "Visc en aquest barri des de fa un any.",
+          "answer": "I have lived in this neighborhood for a year.",
+          "accepted_answers": ["I've lived in this neighborhood for a year."]
+        },
+        {
+          "type": "translation",
+          "prompt": "L'estació és lluny, pren un taxi.",
+          "answer": "The station is far, take a taxi.",
+          "accepted_answers": ["The station is far away, take a taxi."]
+        },
+        {
+          "type": "translation",
+          "prompt": "No et perdis al barri vell.",
+          "answer": "Don't get lost in the old town."
+        },
+        {
+          "type": "translation",
+          "prompt": "Miro el mapa de la ciutat.",
+          "answer": "I am looking at the map of the city.",
+          "accepted_answers": ["I'm looking at the map of the city.", "I look at the map of the city."]
+        },
+        {
+          "type": "translation",
+          "prompt": "The church is near the bridge.",
+          "answer": "L'església és a prop del pont."
+        },
+        {
+          "type": "translation",
+          "prompt": "Turn right at the traffic light.",
+          "answer": "Gira a la dreta al semàfor."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't want to get lost.",
+          "answer": "No vull perdre'm."
+        },
+        {
+          "type": "translation",
+          "prompt": "My neighborhood is quiet.",
+          "answer": "El meu barri és tranquil."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'square':",
+          "options": [
+            "la plaça",
+            "el pont",
+            "la cantonada",
+            "el barri"
+          ],
+          "answer": "la plaça"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'museum':",
+          "options": [
+            "el museu",
+            "l'església",
+            "l'avinguda",
+            "el mapa"
+          ],
+          "answer": "el museu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bridge':",
+          "options": [
+            "el pont",
+            "l'església",
+            "la plaça",
+            "l'avinguda"
+          ],
+          "answer": "el pont"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'church':",
+          "options": [
+            "l'església",
+            "el museu",
+            "el pont",
+            "el barri"
+          ],
+          "answer": "l'església"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'neighborhood':",
+          "options": [
+            "el barri",
+            "la plaça",
+            "la cantonada",
+            "el mapa"
+          ],
+          "answer": "el barri"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'traffic light':",
+          "options": [
+            "el semàfor",
+            "la cantonada",
+            "el mapa",
+            "l'església"
+          ],
+          "answer": "el semàfor"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'left':",
+          "options": [
+            "l'esquerra",
+            "la dreta",
+            "la cantonada",
+            "el mapa"
+          ],
+          "answer": "l'esquerra"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'straight ahead':",
+          "options": [
+            "tot recte",
+            "l'esquerra",
+            "la dreta",
+            "el mapa"
+          ],
+          "answer": "tot recte"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ vaig anar ahir.",
+          "answer": "Hi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ha molta gent a la plaça.",
+          "answer": "Hi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nosaltres ___ anirem demà.",
+          "answer": "hi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "— Vols venir al museu ? — Sí, ___ vull anar.",
+          "answer": "hi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gira a l'___ al semàfor, no a la dreta.",
+          "answer": "esquerra"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El cafè és a la ___ del carrer.",
+          "answer": "cantonada"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Travessa el carrer al ___.",
+          "answer": "semàfor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "L'estació és ___, agafa un taxi.",
+          "answer": "lluny"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Money and Services",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "el preu",
+          "translation": "price",
+          "pos": "noun",
+          "example": "El preu del bitllet és alt."
+        },
+        {
+          "word": "el rebut",
+          "translation": "receipt",
+          "pos": "noun",
+          "example": "Guarda el rebut, si us plau."
+        },
+        {
+          "word": "el compte",
+          "translation": "account",
+          "accepted_translations": ["bill"],
+          "pos": "noun",
+          "example": "Obro un compte al banc."
+        },
+        {
+          "word": "el descompte",
+          "translation": "discount",
+          "pos": "noun",
+          "example": "Hi ha descompte per a estudiants."
+        },
+        {
+          "word": "l'efectiu",
+          "translation": "cash",
+          "pos": "noun",
+          "example": "Pago en efectiu."
+        },
+        {
+          "word": "la targeta",
+          "translation": "card",
+          "accepted_translations": ["bank card", "credit card"],
+          "pos": "noun",
+          "example": "Pago amb targeta."
+        },
+        {
+          "word": "pagar",
+          "translation": "to pay",
+          "pos": "verb",
+          "example": "Pago el cafè."
+        },
+        {
+          "word": "treure",
+          "translation": "to withdraw",
+          "accepted_translations": ["to take out"],
+          "pos": "verb",
+          "example": "Trec diners del caixer."
+        },
+        {
+          "word": "gastar",
+          "translation": "to spend",
+          "pos": "verb",
+          "example": "Gasto massa diners."
+        },
+        {
+          "word": "estalviar",
+          "translation": "to save",
+          "pos": "verb",
+          "example": "Estalvio per a un viatge."
+        },
+        {
+          "word": "gratuït",
+          "translation": "free",
+          "pos": "adjective",
+          "example": "L'entrada és gratuïta els diumenges."
+        },
+        {
+          "word": "el formulari",
+          "translation": "form",
+          "pos": "noun",
+          "example": "Omple aquest formulari, si us plau."
+        },
+        {
+          "word": "firmar",
+          "translation": "to sign",
+          "pos": "verb",
+          "example": "Firmi aquí, si us plau."
+        },
+        {
+          "word": "el client",
+          "translation": "customer",
+          "pos": "noun",
+          "example": "El client espera a la caixa."
+        },
+        {
+          "word": "el servei",
+          "translation": "service",
+          "pos": "noun",
+          "example": "El servei està inclòs al preu."
+        },
+        {
+          "word": "el consell",
+          "translation": "advice",
+          "accepted_translations": ["tip"],
+          "pos": "noun",
+          "example": "Em dóna un bon consell."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "el preu",
+          "answer": "price"
+        },
+        {
+          "type": "translation",
+          "prompt": "el rebut",
+          "answer": "receipt"
+        },
+        {
+          "type": "translation",
+          "prompt": "el compte",
+          "answer": "account",
+          "accepted_answers": ["bill"]
+        },
+        {
+          "type": "translation",
+          "prompt": "el descompte",
+          "answer": "discount"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'efectiu",
+          "answer": "cash"
+        },
+        {
+          "type": "translation",
+          "prompt": "la targeta",
+          "answer": "card",
+          "accepted_answers": ["bank card", "credit card"]
+        },
+        {
+          "type": "translation",
+          "prompt": "pagar",
+          "answer": "to pay"
+        },
+        {
+          "type": "translation",
+          "prompt": "treure",
+          "answer": "to withdraw",
+          "accepted_answers": ["to take out"]
+        },
+        {
+          "type": "translation",
+          "prompt": "gastar",
+          "answer": "to spend"
+        },
+        {
+          "type": "translation",
+          "prompt": "estalviar",
+          "answer": "to save"
+        },
+        {
+          "type": "translation",
+          "prompt": "gratuït",
+          "answer": "free"
+        },
+        {
+          "type": "translation",
+          "prompt": "el formulari",
+          "answer": "form"
+        },
+        {
+          "type": "translation",
+          "prompt": "firmar",
+          "answer": "to sign"
+        },
+        {
+          "type": "translation",
+          "prompt": "el client",
+          "answer": "customer"
+        },
+        {
+          "type": "translation",
+          "prompt": "el servei",
+          "answer": "service"
+        },
+        {
+          "type": "translation",
+          "prompt": "el consell",
+          "answer": "advice",
+          "accepted_answers": ["tip"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Pago en efectiu o amb targeta ?",
+          "answer": "Do I pay in cash or by card?",
+          "accepted_answers": ["Should I pay in cash or by card?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vaig treure cent euros del caixer.",
+          "answer": "I withdrew a hundred euros from the ATM.",
+          "accepted_answers": ["I took out a hundred euros from the ATM."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hi ha descompte per a estudiants.",
+          "answer": "There is a discount for students.",
+          "accepted_answers": ["There's a discount for students."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ompli aquest formulari i firma a baix.",
+          "answer": "Fill out this form and sign at the bottom.",
+          "accepted_answers": ["Fill in this form and sign at the bottom."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Aquest museu és gratuït el primer diumenge del mes.",
+          "answer": "This museum is free on the first Sunday of the month.",
+          "accepted_answers": ["This museum is free the first Sunday of the month."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ella estalvia per comprar un cotxe.",
+          "answer": "She is saving to buy a car.",
+          "accepted_answers": ["She's saving to buy a car.", "She is saving to buy a car."]
+        },
+        {
+          "type": "translation",
+          "prompt": "El servei ja està inclòs al preu.",
+          "answer": "The service is already included in the price.",
+          "accepted_answers": ["Service is already included in the price."]
+        },
+        {
+          "type": "translation",
+          "prompt": "El client demana un rebut.",
+          "answer": "The customer asks for a receipt."
+        },
+        {
+          "type": "translation",
+          "prompt": "I want to open an account.",
+          "answer": "Vull obrir un compte."
+        },
+        {
+          "type": "translation",
+          "prompt": "You spend too much money.",
+          "answer": "Gastes massa diners."
+        },
+        {
+          "type": "translation",
+          "prompt": "Can you give me some advice?",
+          "answer": "Em pots donar un consell ?"
+        },
+        {
+          "type": "translation",
+          "prompt": "I pay by card.",
+          "answer": "Pago amb targeta."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'price':",
+          "options": [
+            "el preu",
+            "el rebut",
+            "el compte",
+            "el descompte"
+          ],
+          "answer": "el preu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'receipt':",
+          "options": [
+            "el rebut",
+            "el preu",
+            "el compte",
+            "el servei"
+          ],
+          "answer": "el rebut"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'account':",
+          "options": [
+            "el compte",
+            "el preu",
+            "el descompte",
+            "el servei"
+          ],
+          "answer": "el compte"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'discount':",
+          "options": [
+            "el descompte",
+            "el preu",
+            "el rebut",
+            "el formulari"
+          ],
+          "answer": "el descompte"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cash':",
+          "options": [
+            "l'efectiu",
+            "el preu",
+            "el rebut",
+            "la targeta"
+          ],
+          "answer": "l'efectiu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'free':",
+          "options": [
+            "gratuït",
+            "el client",
+            "el servei",
+            "el rebut"
+          ],
+          "answer": "gratuït"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'customer':",
+          "options": [
+            "el client",
+            "el servei",
+            "el rebut",
+            "el preu"
+          ],
+          "answer": "el client"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'advice':",
+          "options": [
+            "el consell",
+            "el servei",
+            "el client",
+            "el descompte"
+          ],
+          "answer": "el consell"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "— Quantes targetes tens ? — ___ tinc dos.",
+          "answer": "En"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "— Vols pa ? — Sí, ___ vull.",
+          "answer": "en"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ necessito un.",
+          "answer": "En"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ tinc prou.",
+          "answer": "En"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Puc pagar amb la ___ ?",
+          "answer": "targeta"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vull obrir un ___ al banc.",
+          "answer": "compte"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Omple aquest ___, si us plau.",
+          "answer": "formulari"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El museu és ___ els diumenges.",
+          "answer": "gratuït"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Nature and the Environment",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "la natura",
+          "translation": "nature",
+          "pos": "noun",
+          "example": "M'encanta la natura."
+        },
+        {
+          "word": "el bosc",
+          "translation": "forest",
+          "pos": "noun",
+          "example": "El bosc és tranquil al matí."
+        },
+        {
+          "word": "el riu",
+          "translation": "river",
+          "pos": "noun",
+          "example": "El riu passa pel bosc."
+        },
+        {
+          "word": "el llac",
+          "translation": "lake",
+          "pos": "noun",
+          "example": "Nedem al llac."
+        },
+        {
+          "word": "l'arbre",
+          "translation": "tree",
+          "pos": "noun",
+          "example": "Aquest arbre és molt vell."
+        },
+        {
+          "word": "la flor",
+          "translation": "flower",
+          "pos": "noun",
+          "example": "Aquesta flor és preciosa."
+        },
+        {
+          "word": "l'animal",
+          "translation": "animal",
+          "pos": "noun",
+          "example": "L'animal dorm sota l'arbre."
+        },
+        {
+          "word": "l'ocell",
+          "translation": "bird",
+          "pos": "noun",
+          "example": "L'ocell canta al matí."
+        },
+        {
+          "word": "el cel",
+          "translation": "sky",
+          "pos": "noun",
+          "example": "El cel és blau avui."
+        },
+        {
+          "word": "l'estrella",
+          "translation": "star",
+          "pos": "noun",
+          "example": "Miro les estrelles de nit."
+        },
+        {
+          "word": "la Terra",
+          "translation": "Earth",
+          "accepted_translations": ["the earth", "the planet"],
+          "pos": "noun",
+          "example": "La Terra gira al voltant del sol."
+        },
+        {
+          "word": "el clima",
+          "translation": "climate",
+          "pos": "noun",
+          "example": "El clima canvia a tot arreu."
+        },
+        {
+          "word": "la contaminació",
+          "translation": "pollution",
+          "pos": "noun",
+          "example": "La contaminació de l'aire és un problema."
+        },
+        {
+          "word": "protegir",
+          "translation": "to protect",
+          "pos": "verb",
+          "example": "Hem de protegir el bosc."
+        },
+        {
+          "word": "reciclar",
+          "translation": "to recycle",
+          "pos": "verb",
+          "example": "Reciclo paper i vidre."
+        },
+        {
+          "word": "plantar",
+          "translation": "to plant",
+          "pos": "verb",
+          "example": "Planten un arbre al jardí."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "la natura",
+          "answer": "nature"
+        },
+        {
+          "type": "translation",
+          "prompt": "el bosc",
+          "answer": "forest"
+        },
+        {
+          "type": "translation",
+          "prompt": "el riu",
+          "answer": "river"
+        },
+        {
+          "type": "translation",
+          "prompt": "el llac",
+          "answer": "lake"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'arbre",
+          "answer": "tree"
+        },
+        {
+          "type": "translation",
+          "prompt": "la flor",
+          "answer": "flower"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'animal",
+          "answer": "animal"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'ocell",
+          "answer": "bird"
+        },
+        {
+          "type": "translation",
+          "prompt": "el cel",
+          "answer": "sky"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'estrella",
+          "answer": "star"
+        },
+        {
+          "type": "translation",
+          "prompt": "la Terra",
+          "answer": "Earth",
+          "accepted_answers": ["the earth", "the planet"]
+        },
+        {
+          "type": "translation",
+          "prompt": "el clima",
+          "answer": "climate"
+        },
+        {
+          "type": "translation",
+          "prompt": "la contaminació",
+          "answer": "pollution"
+        },
+        {
+          "type": "translation",
+          "prompt": "protegir",
+          "answer": "to protect"
+        },
+        {
+          "type": "translation",
+          "prompt": "reciclar",
+          "answer": "to recycle"
+        },
+        {
+          "type": "translation",
+          "prompt": "plantar",
+          "answer": "to plant"
+        },
+        {
+          "type": "translation",
+          "prompt": "Hem de protegir la natura.",
+          "answer": "We must protect nature.",
+          "accepted_answers": ["We have to protect nature."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Els ocells canten al bosc.",
+          "answer": "The birds sing in the forest."
+        },
+        {
+          "type": "translation",
+          "prompt": "El llac és més fred que el riu.",
+          "answer": "The lake is colder than the river."
+        },
+        {
+          "type": "translation",
+          "prompt": "És l'arbre més vell del parc.",
+          "answer": "It is the oldest tree in the park.",
+          "accepted_answers": ["It's the oldest tree in the park."]
+        },
+        {
+          "type": "translation",
+          "prompt": "La contaminació de les ciutats és un gran problema.",
+          "answer": "Pollution in cities is a big problem.",
+          "accepted_answers": ["The pollution in cities is a big problem."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Miro les estrelles quan el cel és clar.",
+          "answer": "I look at the stars when the sky is clear.",
+          "accepted_answers": ["I watch the stars when the sky is clear."]
+        },
+        {
+          "type": "translation",
+          "prompt": "El clima d'aquesta regió és suau.",
+          "answer": "The climate of this region is mild.",
+          "accepted_answers": ["The climate in this region is mild."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ella planta flors a la primavera.",
+          "answer": "She plants flowers in spring.",
+          "accepted_answers": ["She plants flowers in the spring."]
+        },
+        {
+          "type": "translation",
+          "prompt": "The river is behind the mountain.",
+          "answer": "El riu és darrere la muntanya."
+        },
+        {
+          "type": "translation",
+          "prompt": "This bird is beautiful.",
+          "answer": "Aquest ocell és bonic."
+        },
+        {
+          "type": "translation",
+          "prompt": "We recycle glass and paper.",
+          "answer": "Reciclem vidre i paper."
+        },
+        {
+          "type": "translation",
+          "prompt": "The Earth is our home.",
+          "answer": "La Terra és la nostra casa."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'nature':",
+          "options": [
+            "la natura",
+            "el bosc",
+            "el llac",
+            "el riu"
+          ],
+          "answer": "la natura"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'forest':",
+          "options": [
+            "el bosc",
+            "la natura",
+            "el llac",
+            "l'arbre"
+          ],
+          "answer": "el bosc"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'river':",
+          "options": [
+            "el riu",
+            "el llac",
+            "el bosc",
+            "la contaminació"
+          ],
+          "answer": "el riu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'lake':",
+          "options": [
+            "el llac",
+            "el riu",
+            "el bosc",
+            "el cel"
+          ],
+          "answer": "el llac"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tree':",
+          "options": [
+            "l'arbre",
+            "el bosc",
+            "la flor",
+            "el llac"
+          ],
+          "answer": "l'arbre"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'flower':",
+          "options": [
+            "la flor",
+            "l'arbre",
+            "el bosc",
+            "la natura"
+          ],
+          "answer": "la flor"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bird':",
+          "options": [
+            "l'ocell",
+            "l'animal",
+            "l'arbre",
+            "el cel"
+          ],
+          "answer": "l'ocell"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'pollution':",
+          "options": [
+            "la contaminació",
+            "el clima",
+            "la natura",
+            "el cel"
+          ],
+          "answer": "la contaminació"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "L'Ebre és més llarg ___ el Llobregat.",
+          "answer": "que"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Aquesta és la ciutat ___ gran de Catalunya.",
+          "answer": "més"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El bosc és tan bonic ___ el llac.",
+          "answer": "com"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "És l'arbre més vell ___ parc.",
+          "answer": "del"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hem de ___ la natura.",
+          "answer": "protegir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ paper i vidre, si us plau.",
+          "answer": "Recicla"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A la primavera ___ flors.",
+          "answer": "plantem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La ___ de l'aire és un problema greu.",
+          "answer": "contaminació"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Opinions and News",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "el diari",
+          "translation": "newspaper",
+          "pos": "noun",
+          "example": "Llegeixo el diari cada matí."
+        },
+        {
+          "word": "l'article",
+          "translation": "article",
+          "pos": "noun",
+          "example": "Aquest article és molt interessant."
+        },
+        {
+          "word": "la ràdio",
+          "translation": "radio",
+          "pos": "noun",
+          "example": "Escolto la ràdio al cotxe."
+        },
+        {
+          "word": "la televisió",
+          "translation": "television",
+          "accepted_translations": ["TV"],
+          "pos": "noun",
+          "example": "La televisió és al menjador."
+        },
+        {
+          "word": "l'opinió",
+          "translation": "opinion",
+          "pos": "noun",
+          "example": "Cadascú té la seva opinió."
+        },
+        {
+          "word": "creure",
+          "translation": "to believe",
+          "pos": "verb",
+          "example": "No crec aquesta història."
+        },
+        {
+          "word": "estar d'acord",
+          "translation": "to agree",
+          "pos": "verb",
+          "example": "Estic d'acord amb tu."
+        },
+        {
+          "word": "important",
+          "translation": "important",
+          "pos": "adjective",
+          "example": "És una notícia important."
+        },
+        {
+          "word": "probablement",
+          "translation": "probably",
+          "pos": "adverb",
+          "example": "Vindrá probablement demà."
+        },
+        {
+          "word": "discutir",
+          "translation": "to discuss",
+          "pos": "verb",
+          "example": "Discutim sobre l'article."
+        },
+        {
+          "word": "el periodista",
+          "translation": "journalist",
+          "pos": "noun",
+          "example": "El periodista entrevista l'alcalde."
+        },
+        {
+          "word": "la societat",
+          "translation": "society",
+          "pos": "noun",
+          "example": "La societat canvia ràpid."
+        },
+        {
+          "word": "l'esdeveniment",
+          "translation": "event",
+          "pos": "noun",
+          "example": "És un esdeveniment important."
+        },
+        {
+          "word": "la mentida",
+          "translation": "lie",
+          "accepted_translations": ["falsehood"],
+          "pos": "noun",
+          "example": "No diguis mentides."
+        },
+        {
+          "word": "semblar",
+          "translation": "to seem",
+          "pos": "verb",
+          "example": "Sembla cansat."
+        },
+        {
+          "word": "el fet",
+          "translation": "fact",
+          "pos": "noun",
+          "example": "És un fet, no una opinió."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "el diari",
+          "answer": "newspaper"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'article",
+          "answer": "article"
+        },
+        {
+          "type": "translation",
+          "prompt": "la ràdio",
+          "answer": "radio"
+        },
+        {
+          "type": "translation",
+          "prompt": "la televisió",
+          "answer": "television",
+          "accepted_answers": ["TV"]
+        },
+        {
+          "type": "translation",
+          "prompt": "l'opinió",
+          "answer": "opinion"
+        },
+        {
+          "type": "translation",
+          "prompt": "creure",
+          "answer": "to believe"
+        },
+        {
+          "type": "translation",
+          "prompt": "estar d'acord",
+          "answer": "to agree"
+        },
+        {
+          "type": "translation",
+          "prompt": "important",
+          "answer": "important"
+        },
+        {
+          "type": "translation",
+          "prompt": "probablement",
+          "answer": "probably"
+        },
+        {
+          "type": "translation",
+          "prompt": "discutir",
+          "answer": "to discuss"
+        },
+        {
+          "type": "translation",
+          "prompt": "el periodista",
+          "answer": "journalist"
+        },
+        {
+          "type": "translation",
+          "prompt": "la societat",
+          "answer": "society"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'esdeveniment",
+          "answer": "event"
+        },
+        {
+          "type": "translation",
+          "prompt": "la mentida",
+          "answer": "lie",
+          "accepted_answers": ["falsehood"]
+        },
+        {
+          "type": "translation",
+          "prompt": "semblar",
+          "answer": "to seem"
+        },
+        {
+          "type": "translation",
+          "prompt": "el fet",
+          "answer": "fact"
+        },
+        {
+          "type": "translation",
+          "prompt": "Estic d'acord amb tu.",
+          "answer": "I agree with you."
+        },
+        {
+          "type": "translation",
+          "prompt": "El periodista escriu un article sobre la societat.",
+          "answer": "The journalist writes an article about society.",
+          "accepted_answers": ["The journalist is writing an article about society."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Segons la meva opinió, aquest article és molt bo.",
+          "answer": "In my opinion, this article is very good."
+        },
+        {
+          "type": "translation",
+          "prompt": "No sempre diu la veritat.",
+          "answer": "He doesn't always tell the truth.",
+          "accepted_answers": ["He does not always tell the truth."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Discutim els esdeveniments del dia.",
+          "answer": "We discuss the events of the day.",
+          "accepted_answers": ["We're discussing the events of the day."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Aquest esdeveniment sembla important.",
+          "answer": "This event seems important."
+        },
+        {
+          "type": "translation",
+          "prompt": "Probablement té raó.",
+          "answer": "He is probably right.",
+          "accepted_answers": ["Probably he is right."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Crec que la televisió de vegades menteix.",
+          "answer": "I believe that television sometimes lies.",
+          "accepted_answers": ["I think that television sometimes lies."]
+        },
+        {
+          "type": "translation",
+          "prompt": "I read the newspaper every morning.",
+          "answer": "Llegeixo el diari cada matí."
+        },
+        {
+          "type": "translation",
+          "prompt": "We must discuss this event.",
+          "answer": "Hem de discutir aquest esdeveniment."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's an important fact.",
+          "answer": "És un fet important."
+        },
+        {
+          "type": "translation",
+          "prompt": "I listen to the radio in the car.",
+          "answer": "Escolto la ràdio al cotxe."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'newspaper':",
+          "options": [
+            "el diari",
+            "l'article",
+            "la ràdio",
+            "la televisió"
+          ],
+          "answer": "el diari"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'article':",
+          "options": [
+            "l'article",
+            "el diari",
+            "la ràdio",
+            "el fet"
+          ],
+          "answer": "l'article"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'radio':",
+          "options": [
+            "la ràdio",
+            "la televisió",
+            "el diari",
+            "l'article"
+          ],
+          "answer": "la ràdio"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'television':",
+          "options": [
+            "la televisió",
+            "la ràdio",
+            "el diari",
+            "el periodista"
+          ],
+          "answer": "la televisió"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'opinion':",
+          "options": [
+            "l'opinió",
+            "la mentida",
+            "el fet",
+            "la societat"
+          ],
+          "answer": "l'opinió"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'journalist':",
+          "options": [
+            "el periodista",
+            "la societat",
+            "la mentida",
+            "l'opinió"
+          ],
+          "answer": "el periodista"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'lie':",
+          "options": [
+            "la mentida",
+            "el fet",
+            "l'opinió",
+            "la societat"
+          ],
+          "answer": "la mentida"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fact':",
+          "options": [
+            "el fet",
+            "la mentida",
+            "l'opinió",
+            "l'esdeveniment"
+          ],
+          "answer": "el fet"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tu ___ de llegir aquest article.",
+          "answer": "hauries"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nosaltres ___ d'estalviar.",
+          "answer": "hauríem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jo ___ de descansar més.",
+          "answer": "hauria"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ells ___ de discutir-ho.",
+          "answer": "haurien"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vosaltres ___ de venir.",
+          "answer": "hauríeu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Estic d'___ amb tu.",
+          "answer": "acord"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ la meva opinió, l'article és bo.",
+          "answer": "Segons"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "És un ___, no una opinió.",
+          "answer": "fet"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Future and Dreams",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "el futur",
+          "translation": "future",
+          "accepted_translations": ["the future"],
+          "pos": "noun",
+          "example": "El futur és incert."
+        },
+        {
+          "word": "el somni",
+          "translation": "dream",
+          "pos": "noun",
+          "example": "Vaig tenir un somni bonic."
+        },
+        {
+          "word": "l'esperança",
+          "translation": "hope",
+          "pos": "noun",
+          "example": "Tinc esperança de guanyar."
+        },
+        {
+          "word": "el pla",
+          "translation": "plan",
+          "pos": "noun",
+          "example": "El meu pla és viatjar."
+        },
+        {
+          "word": "l'objectiu",
+          "translation": "goal",
+          "accepted_translations": ["aim"],
+          "pos": "noun",
+          "example": "El meu objectiu és aprendre català."
+        },
+        {
+          "word": "el desig",
+          "translation": "wish",
+          "pos": "noun",
+          "example": "Faig un desig."
+        },
+        {
+          "word": "potser",
+          "translation": "maybe",
+          "accepted_translations": ["perhaps"],
+          "pos": "adverb",
+          "example": "Potser plourà demà."
+        },
+        {
+          "word": "un dia",
+          "translation": "one day",
+          "accepted_translations": ["someday"],
+          "pos": "adverb",
+          "example": "Un dia visitaré el Japó."
+        },
+        {
+          "word": "l'èxit",
+          "translation": "success",
+          "pos": "noun",
+          "example": "Et desitjo molt èxit."
+        },
+        {
+          "word": "l'oportunitat",
+          "translation": "opportunity",
+          "accepted_translations": ["chance"],
+          "pos": "noun",
+          "example": "És una bona oportunitat."
+        },
+        {
+          "word": "esperar",
+          "translation": "to hope",
+          "pos": "verb",
+          "example": "Espero veure't aviat."
+        },
+        {
+          "word": "planejar",
+          "translation": "to plan",
+          "pos": "verb",
+          "example": "Planegem un viatge."
+        },
+        {
+          "word": "prometre",
+          "translation": "to promise",
+          "pos": "verb",
+          "example": "Et prometo venir."
+        },
+        {
+          "word": "la sort",
+          "translation": "luck",
+          "pos": "noun",
+          "example": "Bona sort a l'examen !"
+        },
+        {
+          "word": "la felicitat",
+          "translation": "happiness",
+          "pos": "noun",
+          "example": "La felicitat és simple."
+        },
+        {
+          "word": "aconseguir",
+          "translation": "to achieve",
+          "accepted_translations": ["to get"],
+          "pos": "verb",
+          "example": "Ho aconseguiràs, ho sé."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "el futur",
+          "answer": "future",
+          "accepted_answers": ["the future"]
+        },
+        {
+          "type": "translation",
+          "prompt": "el somni",
+          "answer": "dream"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'esperança",
+          "answer": "hope"
+        },
+        {
+          "type": "translation",
+          "prompt": "el pla",
+          "answer": "plan"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'objectiu",
+          "answer": "goal",
+          "accepted_answers": ["aim"]
+        },
+        {
+          "type": "translation",
+          "prompt": "el desig",
+          "answer": "wish"
+        },
+        {
+          "type": "translation",
+          "prompt": "potser",
+          "answer": "maybe",
+          "accepted_answers": ["perhaps"]
+        },
+        {
+          "type": "translation",
+          "prompt": "un dia",
+          "answer": "one day",
+          "accepted_answers": ["someday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "l'èxit",
+          "answer": "success"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'oportunitat",
+          "answer": "opportunity",
+          "accepted_answers": ["chance"]
+        },
+        {
+          "type": "translation",
+          "prompt": "esperar",
+          "answer": "to hope"
+        },
+        {
+          "type": "translation",
+          "prompt": "planejar",
+          "answer": "to plan"
+        },
+        {
+          "type": "translation",
+          "prompt": "prometre",
+          "answer": "to promise"
+        },
+        {
+          "type": "translation",
+          "prompt": "la sort",
+          "answer": "luck"
+        },
+        {
+          "type": "translation",
+          "prompt": "la felicitat",
+          "answer": "happiness"
+        },
+        {
+          "type": "translation",
+          "prompt": "aconseguir",
+          "answer": "to achieve",
+          "accepted_answers": ["to get"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Un dia faré la volta al món.",
+          "answer": "One day I will travel around the world.",
+          "accepted_answers": ["Someday I will travel around the world."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Demà anirem al mar.",
+          "answer": "Tomorrow we will go to the sea."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ho aconseguiràs, n'estic segur.",
+          "answer": "You will make it, I'm sure.",
+          "accepted_answers": ["You will make it, I am sure."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Probablement plourà demà.",
+          "answer": "It will probably rain tomorrow."
+        },
+        {
+          "type": "translation",
+          "prompt": "Quan tingui diners, compraré una casa.",
+          "answer": "When I have money, I will buy a house."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ella espera ser metgessa.",
+          "answer": "She hopes to become a doctor."
+        },
+        {
+          "type": "translation",
+          "prompt": "Et prometto que no t'oblidaré.",
+          "answer": "I promise you that I will not forget you.",
+          "accepted_answers": ["I promise you that I won't forget you."]
+        },
+        {
+          "type": "translation",
+          "prompt": "La felicitat no es pot comprar.",
+          "answer": "Happiness cannot be bought.",
+          "accepted_answers": ["You can't buy happiness.", "Happiness can't be bought."]
+        },
+        {
+          "type": "translation",
+          "prompt": "I hope to see you soon.",
+          "answer": "Espero veure't aviat."
+        },
+        {
+          "type": "translation",
+          "prompt": "One day I will speak Catalan very well.",
+          "answer": "Un dia parlaré molt bé català."
+        },
+        {
+          "type": "translation",
+          "prompt": "My goal is to succeed.",
+          "answer": "El meu objectiu és tenir èxit."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's a real opportunity.",
+          "answer": "És una oportunitat real."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'future':",
+          "options": [
+            "el futur",
+            "el somni",
+            "l'esperança",
+            "el pla"
+          ],
+          "answer": "el futur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'dream':",
+          "options": [
+            "el somni",
+            "l'esperança",
+            "el futur",
+            "la felicitat"
+          ],
+          "answer": "el somni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hope':",
+          "options": [
+            "l'esperança",
+            "el somni",
+            "el futur",
+            "la felicitat"
+          ],
+          "answer": "l'esperança"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'plan':",
+          "options": [
+            "el pla",
+            "l'objectiu",
+            "el futur",
+            "l'oportunitat"
+          ],
+          "answer": "el pla"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'goal':",
+          "options": [
+            "l'objectiu",
+            "el pla",
+            "el somni",
+            "l'èxit"
+          ],
+          "answer": "l'objectiu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'success':",
+          "options": [
+            "l'èxit",
+            "l'oportunitat",
+            "l'esperança",
+            "la felicitat"
+          ],
+          "answer": "l'èxit"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'opportunity':",
+          "options": [
+            "l'oportunitat",
+            "l'èxit",
+            "l'objectiu",
+            "l'esperança"
+          ],
+          "answer": "l'oportunitat"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'happiness':",
+          "options": [
+            "la felicitat",
+            "el somni",
+            "l'esperança",
+            "l'èxit"
+          ],
+          "answer": "la felicitat"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Demà ___ al museu.",
+          "answer": "anirem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Un dia ___ el món.",
+          "answer": "viatjaré"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tu ___ un regal.",
+          "answer": "tindràs"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ella ___ metgessa.",
+          "answer": "serà"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nosaltres ___ una casa.",
+          "answer": "comprarem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vosaltres ___ l'examen.",
+          "answer": "passareu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jo no ___ arribar tard, ho prometo.",
+          "answer": "arribaré"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Un dia els somnis es faran ___.",
+          "answer": "realitat"
+        }
+      ]
     }
   ]
 }

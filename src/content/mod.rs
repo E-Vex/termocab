@@ -189,7 +189,7 @@ pub fn builtin_languages() -> &'static [(&'static str, &'static str)] {
     // The thirteen shipped courses (Nov 2026): french, spanish, german,
     // italian, polish, romanian, portuguese, swedish, hungarian,
     // turkish, icelandic, catalan, dutch — same engine, same rules,
-    // each ten stages, 153 words.
+    // each twenty stages, 313 words.
     &[
         ("french", include_str!("../../languages/french/stages.json")),
         (

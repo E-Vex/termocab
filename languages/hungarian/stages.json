@@ -5969,6 +5969,1927 @@
           "answer": "son"
         }
       ]
+    },
+    {
+      "id": 16,
+      "title": "City and Directions",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "tér",
+          "translation": "square",
+          "pos": "noun",
+          "example": "A város tere nagy."
+        },
+        {
+          "word": "múzeum",
+          "translation": "museum",
+          "pos": "noun",
+          "example": "A múzeum kilenckor nyit."
+        },
+        {
+          "word": "híd",
+          "translation": "bridge",
+          "pos": "noun",
+          "example": "Ez a híd nagyon régi."
+        },
+        {
+          "word": "templom",
+          "translation": "church",
+          "pos": "noun",
+          "example": "A templom a híd közelében van."
+        },
+        {
+          "word": "sugárút",
+          "translation": "avenue",
+          "pos": "noun",
+          "example": "A sugárúton sétálok."
+        },
+        {
+          "word": "kerület",
+          "translation": "neighborhood",
+          "accepted_translations": ["district"],
+          "pos": "noun",
+          "example": "Nyugodt kerületben lakom."
+        },
+        {
+          "word": "jelzőlámpa",
+          "translation": "traffic light",
+          "pos": "noun",
+          "example": "Várj a jelzőlámpánál."
+        },
+        {
+          "word": "sarok",
+          "translation": "corner",
+          "pos": "noun",
+          "example": "A kávézó az utca sarkán van."
+        },
+        {
+          "word": "térkép",
+          "translation": "map",
+          "pos": "noun",
+          "example": "Veszek egy térképet a városról."
+        },
+        {
+          "word": "balra",
+          "translation": "left",
+          "accepted_translations": ["to the left"],
+          "pos": "adverb",
+          "example": "A bank balra van."
+        },
+        {
+          "word": "jobbra",
+          "translation": "right",
+          "accepted_translations": ["to the right"],
+          "pos": "adverb",
+          "example": "A mozi jobbra van."
+        },
+        {
+          "word": "egyenesen",
+          "translation": "straight ahead",
+          "pos": "adverb",
+          "example": "Menj egyenesen a hídig."
+        },
+        {
+          "word": "messze",
+          "translation": "far",
+          "pos": "adverb",
+          "example": "Az állomás messze van innen."
+        },
+        {
+          "word": "bekanyarodni",
+          "translation": "to turn",
+          "pos": "verb",
+          "example": "Fordulj balra a jelzőlámpánál."
+        },
+        {
+          "word": "átkelni",
+          "translation": "to cross",
+          "pos": "verb",
+          "example": "Átkelünk az utcán."
+        },
+        {
+          "word": "elveszni",
+          "translation": "to get lost",
+          "pos": "verb",
+          "example": "Gyakran elveszem ebben a városban."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "tér",
+          "answer": "square"
+        },
+        {
+          "type": "translation",
+          "prompt": "múzeum",
+          "answer": "museum"
+        },
+        {
+          "type": "translation",
+          "prompt": "híd",
+          "answer": "bridge"
+        },
+        {
+          "type": "translation",
+          "prompt": "templom",
+          "answer": "church"
+        },
+        {
+          "type": "translation",
+          "prompt": "sugárút",
+          "answer": "avenue"
+        },
+        {
+          "type": "translation",
+          "prompt": "kerület",
+          "answer": "neighborhood",
+          "accepted_answers": ["district"]
+        },
+        {
+          "type": "translation",
+          "prompt": "jelzőlámpa",
+          "answer": "traffic light"
+        },
+        {
+          "type": "translation",
+          "prompt": "sarok",
+          "answer": "corner"
+        },
+        {
+          "type": "translation",
+          "prompt": "térkép",
+          "answer": "map"
+        },
+        {
+          "type": "translation",
+          "prompt": "balra",
+          "answer": "left",
+          "accepted_answers": ["to the left"]
+        },
+        {
+          "type": "translation",
+          "prompt": "jobbra",
+          "answer": "right",
+          "accepted_answers": ["to the right"]
+        },
+        {
+          "type": "translation",
+          "prompt": "egyenesen",
+          "answer": "straight ahead"
+        },
+        {
+          "type": "translation",
+          "prompt": "messze",
+          "answer": "far"
+        },
+        {
+          "type": "translation",
+          "prompt": "bekanyarodni",
+          "answer": "to turn"
+        },
+        {
+          "type": "translation",
+          "prompt": "átkelni",
+          "answer": "to cross"
+        },
+        {
+          "type": "translation",
+          "prompt": "elveszni",
+          "answer": "to get lost"
+        },
+        {
+          "type": "translation",
+          "prompt": "A múzeum a sugárút sarkán van.",
+          "answer": "The museum is at the corner of the avenue.",
+          "accepted_answers": ["The museum is on the corner of the avenue."]
+        },
+        {
+          "type": "translation",
+          "prompt": "A templom után fordulj balra.",
+          "answer": "Turn left after the church."
+        },
+        {
+          "type": "translation",
+          "prompt": "Menj egyenesen a jelzőlámpáig.",
+          "answer": "Go straight ahead to the traffic light.",
+          "accepted_answers": ["Go straight to the traffic light."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Minden reggel átkelünk a hídon.",
+          "answer": "We cross the bridge every morning."
+        },
+        {
+          "type": "translation",
+          "prompt": "Egy éve lakom ebben a kerületben.",
+          "answer": "I have lived in this neighborhood for a year.",
+          "accepted_answers": ["I've lived in this neighborhood for a year."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Az állomás messze van, hívj taxit.",
+          "answer": "The station is far, call a taxi.",
+          "accepted_answers": ["The station is far away, call a taxi."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ne vessz el a óvárosban.",
+          "answer": "Don't get lost in the old town."
+        },
+        {
+          "type": "translation",
+          "prompt": "A város térképét nézem.",
+          "answer": "I am looking at the map of the city.",
+          "accepted_answers": ["I'm looking at the map of the city."]
+        },
+        {
+          "type": "translation",
+          "prompt": "The church is near the bridge.",
+          "answer": "A templom a híd közelében van."
+        },
+        {
+          "type": "translation",
+          "prompt": "Turn right at the traffic light.",
+          "answer": "Fordulj jobbra a jelzőlámpánál."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't want to get lost.",
+          "answer": "Nem akarok elveszni."
+        },
+        {
+          "type": "translation",
+          "prompt": "My neighborhood is quiet.",
+          "answer": "Az én kerületem nyugodt."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'square':",
+          "options": [
+            "tér",
+            "híd",
+            "sarok",
+            "kerület"
+          ],
+          "answer": "tér"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'museum':",
+          "options": [
+            "múzeum",
+            "templom",
+            "sugárút",
+            "térkép"
+          ],
+          "answer": "múzeum"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bridge':",
+          "options": [
+            "híd",
+            "templom",
+            "tér",
+            "sugárút"
+          ],
+          "answer": "híd"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'church':",
+          "options": [
+            "templom",
+            "múzeum",
+            "híd",
+            "kerület"
+          ],
+          "answer": "templom"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'neighborhood':",
+          "options": [
+            "kerület",
+            "tér",
+            "sarok",
+            "térkép"
+          ],
+          "answer": "kerület"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'traffic light':",
+          "options": [
+            "jelzőlámpa",
+            "sarok",
+            "térkép",
+            "templom"
+          ],
+          "answer": "jelzőlámpa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'left':",
+          "options": [
+            "balra",
+            "jobbra",
+            "sarok",
+            "térkép"
+          ],
+          "answer": "balra"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'straight ahead':",
+          "options": [
+            "egyenesen",
+            "balra",
+            "jobbra",
+            "térkép"
+          ],
+          "answer": "egyenesen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Megyek a város___ .",
+          "answer": "ba"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A múzeum a tér___ van.",
+          "answer": "en"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A kerület___ lakom.",
+          "answer": "ben"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az orvos___ megyek.",
+          "answer": "hoz"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Fordulj ___ a jelzőlámpánál !",
+          "answer": "balra"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Menj ___ a hídig !",
+          "answer": "egyenesen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nézzük meg a ___et !",
+          "answer": "térkép"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Várj a jelzőlámpa___ !",
+          "answer": "nál"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Money and Services",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "ár",
+          "translation": "price",
+          "pos": "noun",
+          "example": "A jegy ára magas."
+        },
+        {
+          "word": "nyugta",
+          "translation": "receipt",
+          "pos": "noun",
+          "example": "Tartsa meg a nyugtát, kérem."
+        },
+        {
+          "word": "bankszámla",
+          "translation": "account",
+          "accepted_translations": ["bank account"],
+          "pos": "noun",
+          "example": "Számlát nyitok a bankban."
+        },
+        {
+          "word": "kedvezmény",
+          "translation": "discount",
+          "pos": "noun",
+          "example": "Diákoknak kedvezmény jár."
+        },
+        {
+          "word": "készpénz",
+          "translation": "cash",
+          "pos": "noun",
+          "example": "Készpénzzel fizetek."
+        },
+        {
+          "word": "kártya",
+          "translation": "card",
+          "accepted_translations": ["bank card", "credit card"],
+          "pos": "noun",
+          "example": "Kártyával fizetek."
+        },
+        {
+          "word": "fizetni",
+          "translation": "to pay",
+          "pos": "verb",
+          "example": "Kifizetem a kávét."
+        },
+        {
+          "word": "kivenni",
+          "translation": "to withdraw",
+          "accepted_translations": ["to take out"],
+          "pos": "verb",
+          "example": "Pénzt veszek ki a bankautomatából."
+        },
+        {
+          "word": "költeni",
+          "translation": "to spend",
+          "pos": "verb",
+          "example": "Túl sok pénzt költek."
+        },
+        {
+          "word": "spórolni",
+          "translation": "to save",
+          "pos": "verb",
+          "example": "Utazásra spórolok."
+        },
+        {
+          "word": "ingyenes",
+          "translation": "free",
+          "pos": "adjective",
+          "example": "A belépés vasárnap ingyenes."
+        },
+        {
+          "word": "űrlap",
+          "translation": "form",
+          "pos": "noun",
+          "example": "Töltse ki ezt az űrlapot, kérem."
+        },
+        {
+          "word": "aláírni",
+          "translation": "to sign",
+          "pos": "verb",
+          "example": "Írja alá itt, kérem."
+        },
+        {
+          "word": "ügyfél",
+          "translation": "customer",
+          "pos": "noun",
+          "example": "Az ügyfél a pénztárnál vár."
+        },
+        {
+          "word": "kiszolgálás",
+          "translation": "service",
+          "pos": "noun",
+          "example": "A kiszolgálás benne van az árban."
+        },
+        {
+          "word": "tanács",
+          "translation": "advice",
+          "accepted_translations": ["tip"],
+          "pos": "noun",
+          "example": "Jó tanácsot ad nekem."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ár",
+          "answer": "price"
+        },
+        {
+          "type": "translation",
+          "prompt": "nyugta",
+          "answer": "receipt"
+        },
+        {
+          "type": "translation",
+          "prompt": "bankszámla",
+          "answer": "account",
+          "accepted_answers": ["bank account"]
+        },
+        {
+          "type": "translation",
+          "prompt": "kedvezmény",
+          "answer": "discount"
+        },
+        {
+          "type": "translation",
+          "prompt": "készpénz",
+          "answer": "cash"
+        },
+        {
+          "type": "translation",
+          "prompt": "kártya",
+          "answer": "card",
+          "accepted_answers": ["bank card", "credit card"]
+        },
+        {
+          "type": "translation",
+          "prompt": "fizetni",
+          "answer": "to pay"
+        },
+        {
+          "type": "translation",
+          "prompt": "kivenni",
+          "answer": "to withdraw",
+          "accepted_answers": ["to take out"]
+        },
+        {
+          "type": "translation",
+          "prompt": "költeni",
+          "answer": "to spend"
+        },
+        {
+          "type": "translation",
+          "prompt": "spórolni",
+          "answer": "to save"
+        },
+        {
+          "type": "translation",
+          "prompt": "ingyenes",
+          "answer": "free"
+        },
+        {
+          "type": "translation",
+          "prompt": "űrlap",
+          "answer": "form"
+        },
+        {
+          "type": "translation",
+          "prompt": "aláírni",
+          "answer": "to sign"
+        },
+        {
+          "type": "translation",
+          "prompt": "ügyfél",
+          "answer": "customer"
+        },
+        {
+          "type": "translation",
+          "prompt": "kiszolgálás",
+          "answer": "service"
+        },
+        {
+          "type": "translation",
+          "prompt": "tanács",
+          "answer": "advice",
+          "accepted_answers": ["tip"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Készpénzzel vagy kártyával fizetek ?",
+          "answer": "Do I pay in cash or by card?",
+          "accepted_answers": ["Should I pay in cash or by card?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Száz eurót vettem ki a bankautomatából.",
+          "answer": "I withdrew a hundred euros from the ATM.",
+          "accepted_answers": ["I took out a hundred euros from the ATM."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Diákoknak kedvezmény jár.",
+          "answer": "There is a discount for students.",
+          "accepted_answers": ["There's a discount for students."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Töltse ki ezt az űrlapot, és írja alá alul.",
+          "answer": "Fill out this form and sign at the bottom.",
+          "accepted_answers": ["Fill in this form and sign at the bottom."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ez a múzeum a hónap első vasárnapján ingyenes.",
+          "answer": "This museum is free on the first Sunday of the month.",
+          "accepted_answers": ["This museum is free the first Sunday of the month."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Autóra spórol, mert autót akar venni.",
+          "answer": "She is saving to buy a car.",
+          "accepted_answers": ["She's saving to buy a car.", "She is saving to buy a car."]
+        },
+        {
+          "type": "translation",
+          "prompt": "A kiszolgálás már benne van az árban.",
+          "answer": "The service is already included in the price.",
+          "accepted_answers": ["Service is already included in the price."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Az ügyfél nyugtát kér.",
+          "answer": "The customer asks for a receipt."
+        },
+        {
+          "type": "translation",
+          "prompt": "I want to open an account.",
+          "answer": "Számlát akarok nyitni."
+        },
+        {
+          "type": "translation",
+          "prompt": "You spend too much money.",
+          "answer": "Túl sok pénzt költesz."
+        },
+        {
+          "type": "translation",
+          "prompt": "Can you give me some advice?",
+          "answer": "Adhatsz egy tanácsot ?"
+        },
+        {
+          "type": "translation",
+          "prompt": "I pay by card.",
+          "answer": "Kártyával fizetek."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'price':",
+          "options": [
+            "ár",
+            "nyugta",
+            "bankszámla",
+            "kedvezmény"
+          ],
+          "answer": "ár"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'receipt':",
+          "options": [
+            "nyugta",
+            "ár",
+            "bankszámla",
+            "kiszolgálás"
+          ],
+          "answer": "nyugta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'account':",
+          "options": [
+            "bankszámla",
+            "ár",
+            "kedvezmény",
+            "kiszolgálás"
+          ],
+          "answer": "bankszámla"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'discount':",
+          "options": [
+            "kedvezmény",
+            "ár",
+            "nyugta",
+            "űrlap"
+          ],
+          "answer": "kedvezmény"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cash':",
+          "options": [
+            "készpénz",
+            "ár",
+            "nyugta",
+            "kártya"
+          ],
+          "answer": "készpénz"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'free':",
+          "options": [
+            "ingyenes",
+            "ügyfél",
+            "kiszolgálás",
+            "nyugta"
+          ],
+          "answer": "ingyenes"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'customer':",
+          "options": [
+            "ügyfél",
+            "kiszolgálás",
+            "nyugta",
+            "ár"
+          ],
+          "answer": "ügyfél"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'advice':",
+          "options": [
+            "tanács",
+            "kiszolgálás",
+            "ügyfél",
+            "kedvezmény"
+          ],
+          "answer": "tanács"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ van pénzre.",
+          "answer": "Szükségem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Szükségem ___ egy térképre.",
+          "answer": "van"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Pénz___ van szükségem.",
+          "answer": "re"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kávé___ van szükségem.",
+          "answer": "ra"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tanács___ van szükséged ?",
+          "answer": "ra"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Készpénzzel ___, kártyával nem.",
+          "answer": "fizetek"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az ügyfél a pénztárnál ___.",
+          "answer": "vár"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az űrlapot ___ kell írni.",
+          "answer": "alá"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Nature and the Environment",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "természet",
+          "translation": "nature",
+          "pos": "noun",
+          "example": "Szeretem a természetet."
+        },
+        {
+          "word": "erdő",
+          "translation": "forest",
+          "pos": "noun",
+          "example": "Az erdő reggel csendes."
+        },
+        {
+          "word": "folyó",
+          "translation": "river",
+          "pos": "noun",
+          "example": "A folyó átfolyik az erdőn."
+        },
+        {
+          "word": "tó",
+          "translation": "lake",
+          "pos": "noun",
+          "example": "Úszunk a tóban."
+        },
+        {
+          "word": "fa",
+          "translation": "tree",
+          "accepted_translations": ["wood"],
+          "pos": "noun",
+          "example": "Ez a fa nagyon öreg."
+        },
+        {
+          "word": "virág",
+          "translation": "flower",
+          "pos": "noun",
+          "example": "Ez a virág gyönyörű."
+        },
+        {
+          "word": "állat",
+          "translation": "animal",
+          "pos": "noun",
+          "example": "Az állat a fa alatt alszik."
+        },
+        {
+          "word": "madár",
+          "translation": "bird",
+          "pos": "noun",
+          "example": "A madár reggel énekel."
+        },
+        {
+          "word": "ég",
+          "translation": "sky",
+          "pos": "noun",
+          "example": "Az ég ma kék."
+        },
+        {
+          "word": "csillag",
+          "translation": "star",
+          "pos": "noun",
+          "example": "Éjjel a csillagokat nézem."
+        },
+        {
+          "word": "föld",
+          "translation": "earth",
+          "accepted_translations": ["soil", "the earth"],
+          "pos": "noun",
+          "example": "A föld a nap körül kering."
+        },
+        {
+          "word": "éghajlat",
+          "translation": "climate",
+          "pos": "noun",
+          "example": "Az éghajlat mindenhol változik."
+        },
+        {
+          "word": "szennyezés",
+          "translation": "pollution",
+          "pos": "noun",
+          "example": "A levegő szennyezése probléma."
+        },
+        {
+          "word": "védeni",
+          "translation": "to protect",
+          "pos": "verb",
+          "example": "Védenünk kell az erdőt."
+        },
+        {
+          "word": "újrahasznosítani",
+          "translation": "to recycle",
+          "pos": "verb",
+          "example": "Újrahasznosítom a papírt és az üveget."
+        },
+        {
+          "word": "ültetni",
+          "translation": "to plant",
+          "pos": "verb",
+          "example": "Fát ültetnek a kertben."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "természet",
+          "answer": "nature"
+        },
+        {
+          "type": "translation",
+          "prompt": "erdő",
+          "answer": "forest"
+        },
+        {
+          "type": "translation",
+          "prompt": "folyó",
+          "answer": "river"
+        },
+        {
+          "type": "translation",
+          "prompt": "tó",
+          "answer": "lake"
+        },
+        {
+          "type": "translation",
+          "prompt": "fa",
+          "answer": "tree",
+          "accepted_answers": ["wood"]
+        },
+        {
+          "type": "translation",
+          "prompt": "virág",
+          "answer": "flower"
+        },
+        {
+          "type": "translation",
+          "prompt": "állat",
+          "answer": "animal"
+        },
+        {
+          "type": "translation",
+          "prompt": "madár",
+          "answer": "bird"
+        },
+        {
+          "type": "translation",
+          "prompt": "ég",
+          "answer": "sky"
+        },
+        {
+          "type": "translation",
+          "prompt": "csillag",
+          "answer": "star"
+        },
+        {
+          "type": "translation",
+          "prompt": "föld",
+          "answer": "earth",
+          "accepted_answers": ["soil", "the earth"]
+        },
+        {
+          "type": "translation",
+          "prompt": "éghajlat",
+          "answer": "climate"
+        },
+        {
+          "type": "translation",
+          "prompt": "szennyezés",
+          "answer": "pollution"
+        },
+        {
+          "type": "translation",
+          "prompt": "védeni",
+          "answer": "to protect"
+        },
+        {
+          "type": "translation",
+          "prompt": "újrahasznosítani",
+          "answer": "to recycle"
+        },
+        {
+          "type": "translation",
+          "prompt": "ültetni",
+          "answer": "to plant"
+        },
+        {
+          "type": "translation",
+          "prompt": "Védenünk kell a természetet.",
+          "answer": "We must protect nature.",
+          "accepted_answers": ["We have to protect nature."]
+        },
+        {
+          "type": "translation",
+          "prompt": "A madarak énekelnek az erdőben.",
+          "answer": "The birds sing in the forest."
+        },
+        {
+          "type": "translation",
+          "prompt": "A tó hidegebb, mint a folyó.",
+          "answer": "The lake is colder than the river."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ez a legöregebb fa a parkban.",
+          "answer": "This is the oldest tree in the park."
+        },
+        {
+          "type": "translation",
+          "prompt": "A városok szennyezése nagy probléma.",
+          "answer": "Pollution in cities is a big problem.",
+          "accepted_answers": ["The pollution in cities is a big problem."]
+        },
+        {
+          "type": "translation",
+          "prompt": "A csillagokat nézem, ha az ég tiszta.",
+          "answer": "I look at the stars when the sky is clear.",
+          "accepted_answers": ["I watch the stars when the sky is clear."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ennek a régiónak az éghajlata enyhe.",
+          "answer": "The climate of this region is mild.",
+          "accepted_answers": ["The climate in this region is mild."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Virágokat ültet tavasszal.",
+          "answer": "She plants flowers in spring.",
+          "accepted_answers": ["She plants flowers in the spring."]
+        },
+        {
+          "type": "translation",
+          "prompt": "The river is behind the mountain.",
+          "answer": "A folyó a hegy mögött van."
+        },
+        {
+          "type": "translation",
+          "prompt": "This bird is beautiful.",
+          "answer": "Ez a madár szép."
+        },
+        {
+          "type": "translation",
+          "prompt": "We recycle glass and paper.",
+          "answer": "Üjrahasznosítjuk az üveget és a papírt."
+        },
+        {
+          "type": "translation",
+          "prompt": "The Earth is our home.",
+          "answer": "A Föld a mi otthonunk."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'nature':",
+          "options": [
+            "természet",
+            "erdő",
+            "tó",
+            "folyó"
+          ],
+          "answer": "természet"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'forest':",
+          "options": [
+            "erdő",
+            "természet",
+            "tó",
+            "fa"
+          ],
+          "answer": "erdő"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'river':",
+          "options": [
+            "folyó",
+            "tó",
+            "erdő",
+            "szennyezés"
+          ],
+          "answer": "folyó"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'lake':",
+          "options": [
+            "tó",
+            "folyó",
+            "erdő",
+            "ég"
+          ],
+          "answer": "tó"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tree':",
+          "options": [
+            "fa",
+            "erdő",
+            "virág",
+            "tó"
+          ],
+          "answer": "fa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'flower':",
+          "options": [
+            "virág",
+            "fa",
+            "erdő",
+            "természet"
+          ],
+          "answer": "virág"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bird':",
+          "options": [
+            "madár",
+            "állat",
+            "fa",
+            "ég"
+          ],
+          "answer": "madár"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'pollution':",
+          "options": [
+            "szennyezés",
+            "éghajlat",
+            "természet",
+            "ég"
+          ],
+          "answer": "szennyezés"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ez a ház nagy___ mint az.",
+          "answer": "obb"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A Duna hosszabb ___ a Tisza.",
+          "answer": "mint"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "szép, szebb, ___",
+          "answer": "legszebb"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "olcsó, olcsóbb, ___",
+          "answer": "legolcsóbb"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Védjük a ___et !",
+          "answer": "természet"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ a papírt és az üveget.",
+          "answer": "Újrahasznosítom"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tavasszal ___ ültetünk.",
+          "answer": "virágot"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A levegő___ nagy probléma a városokban.",
+          "answer": "szennyezése"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Opinions and News",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "újság",
+          "translation": "newspaper",
+          "pos": "noun",
+          "example": "Minden reggel újságot olvasok."
+        },
+        {
+          "word": "cikk",
+          "translation": "article",
+          "pos": "noun",
+          "example": "Ez a cikk nagyon érdekes."
+        },
+        {
+          "word": "rádió",
+          "translation": "radio",
+          "pos": "noun",
+          "example": "A kocsiban rádiót hallgatok."
+        },
+        {
+          "word": "televízió",
+          "translation": "television",
+          "accepted_translations": ["TV"],
+          "pos": "noun",
+          "example": "A televízió a nappaliban van."
+        },
+        {
+          "word": "vélemény",
+          "translation": "opinion",
+          "pos": "noun",
+          "example": "Mindenkinek megvan a maga véleménye."
+        },
+        {
+          "word": "hinni",
+          "translation": "to believe",
+          "pos": "verb",
+          "example": "Nem hiszek ebben a történetben."
+        },
+        {
+          "word": "egyetérteni",
+          "translation": "to agree",
+          "pos": "verb",
+          "example": "Egyetértek veled."
+        },
+        {
+          "word": "fontos",
+          "translation": "important",
+          "pos": "adjective",
+          "example": "Ez egy fontos hír."
+        },
+        {
+          "word": "valószínűleg",
+          "translation": "probably",
+          "pos": "adverb",
+          "example": "Valószínűleg holnap jön."
+        },
+        {
+          "word": "megvitatni",
+          "translation": "to discuss",
+          "pos": "verb",
+          "example": "Megvitjuk a cikket."
+        },
+        {
+          "word": "újságíró",
+          "translation": "journalist",
+          "pos": "noun",
+          "example": "Az újságíró interjút készít a polgármesterrel."
+        },
+        {
+          "word": "társadalom",
+          "translation": "society",
+          "pos": "noun",
+          "example": "A társadalom gyorsan változik."
+        },
+        {
+          "word": "esemény",
+          "translation": "event",
+          "pos": "noun",
+          "example": "Ez egy fontos esemény."
+        },
+        {
+          "word": "igazság",
+          "translation": "truth",
+          "pos": "noun",
+          "example": "Mindig az igazat mondja."
+        },
+        {
+          "word": "tűnni",
+          "translation": "to seem",
+          "pos": "verb",
+          "example": "Fáradtnak tűnsz."
+        },
+        {
+          "word": "tény",
+          "translation": "fact",
+          "pos": "noun",
+          "example": "Ez egy tény, nem egy vélemény."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "újság",
+          "answer": "newspaper"
+        },
+        {
+          "type": "translation",
+          "prompt": "cikk",
+          "answer": "article"
+        },
+        {
+          "type": "translation",
+          "prompt": "rádió",
+          "answer": "radio"
+        },
+        {
+          "type": "translation",
+          "prompt": "televízió",
+          "answer": "television",
+          "accepted_answers": ["TV"]
+        },
+        {
+          "type": "translation",
+          "prompt": "vélemény",
+          "answer": "opinion"
+        },
+        {
+          "type": "translation",
+          "prompt": "hinni",
+          "answer": "to believe"
+        },
+        {
+          "type": "translation",
+          "prompt": "egyetérteni",
+          "answer": "to agree"
+        },
+        {
+          "type": "translation",
+          "prompt": "fontos",
+          "answer": "important"
+        },
+        {
+          "type": "translation",
+          "prompt": "valószínűleg",
+          "answer": "probably"
+        },
+        {
+          "type": "translation",
+          "prompt": "megvitatni",
+          "answer": "to discuss"
+        },
+        {
+          "type": "translation",
+          "prompt": "újságíró",
+          "answer": "journalist"
+        },
+        {
+          "type": "translation",
+          "prompt": "társadalom",
+          "answer": "society"
+        },
+        {
+          "type": "translation",
+          "prompt": "esemény",
+          "answer": "event"
+        },
+        {
+          "type": "translation",
+          "prompt": "igazság",
+          "answer": "truth"
+        },
+        {
+          "type": "translation",
+          "prompt": "tűnni",
+          "answer": "to seem"
+        },
+        {
+          "type": "translation",
+          "prompt": "tény",
+          "answer": "fact"
+        },
+        {
+          "type": "translation",
+          "prompt": "Egyetértek veled.",
+          "answer": "I agree with you."
+        },
+        {
+          "type": "translation",
+          "prompt": "Az újságíró cikket ír a társadalomról.",
+          "answer": "The journalist writes an article about society.",
+          "accepted_answers": ["The journalist is writing an article about society."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Az én véleményem szerint ez a cikk nagyon jó.",
+          "answer": "In my opinion, this article is very good."
+        },
+        {
+          "type": "translation",
+          "prompt": "Nem mindig mond igazat.",
+          "answer": "He doesn't always tell the truth.",
+          "accepted_answers": ["He does not always tell the truth."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Megvitjuk a nap eseményeit.",
+          "answer": "We discuss the events of the day.",
+          "accepted_answers": ["We're discussing the events of the day."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ez az esemény fontosnak tűnik.",
+          "answer": "This event seems important."
+        },
+        {
+          "type": "translation",
+          "prompt": "Valószínűleg igaza van.",
+          "answer": "He is probably right.",
+          "accepted_answers": ["Probably he is right."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Úgy gondolom, a televízió néha hazudik.",
+          "answer": "I believe that television sometimes lies.",
+          "accepted_answers": ["I think that television sometimes lies."]
+        },
+        {
+          "type": "translation",
+          "prompt": "I read the newspaper every morning.",
+          "answer": "Minden reggel újságot olvasok."
+        },
+        {
+          "type": "translation",
+          "prompt": "We must discuss this event.",
+          "answer": "Meg kell vitatnunk ezt az eseményt."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's an important fact.",
+          "answer": "Ez egy fontos tény."
+        },
+        {
+          "type": "translation",
+          "prompt": "I listen to the radio in the car.",
+          "answer": "A kocsiban rádiót hallgatok."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'newspaper':",
+          "options": [
+            "újság",
+            "cikk",
+            "rádió",
+            "televízió"
+          ],
+          "answer": "újság"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'article':",
+          "options": [
+            "cikk",
+            "újság",
+            "rádió",
+            "tény"
+          ],
+          "answer": "cikk"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'radio':",
+          "options": [
+            "rádió",
+            "televízió",
+            "újság",
+            "cikk"
+          ],
+          "answer": "rádió"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'television':",
+          "options": [
+            "televízió",
+            "rádió",
+            "újság",
+            "újságíró"
+          ],
+          "answer": "televízió"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'opinion':",
+          "options": [
+            "vélemény",
+            "igazság",
+            "tény",
+            "társadalom"
+          ],
+          "answer": "vélemény"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'journalist':",
+          "options": [
+            "újságíró",
+            "társadalom",
+            "igazság",
+            "vélemény"
+          ],
+          "answer": "újságíró"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'truth':",
+          "options": [
+            "igazság",
+            "tény",
+            "vélemény",
+            "társadalom"
+          ],
+          "answer": "igazság"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fact':",
+          "options": [
+            "tény",
+            "igazság",
+            "vélemény",
+            "esemény"
+          ],
+          "answer": "tény"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Én megnéz___ a filmet.",
+          "answer": "hetem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Itt ___ dohányozni.",
+          "answer": "lehet"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Te eljö___ a buliba.",
+          "answer": "hetsz"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ő is eljö___ velünk.",
+          "answer": "het"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az újság___ cikket írt.",
+          "answer": "író"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az a véleményem, hogy ___ van.",
+          "answer": "igazad"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A társadalom gyorsan ___.",
+          "answer": "változik"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ez egy tény, nem egy ___.",
+          "answer": "vélemény"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Future and Dreams",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "jövő",
+          "translation": "future",
+          "accepted_translations": ["the future"],
+          "pos": "noun",
+          "example": "A jövő bizonytalan."
+        },
+        {
+          "word": "álom",
+          "translation": "dream",
+          "pos": "noun",
+          "example": "Szép álmom volt."
+        },
+        {
+          "word": "remény",
+          "translation": "hope",
+          "pos": "noun",
+          "example": "Reményem van a nyerésre."
+        },
+        {
+          "word": "terv",
+          "translation": "plan",
+          "pos": "noun",
+          "example": "A tervem az, hogy utazom."
+        },
+        {
+          "word": "cél",
+          "translation": "goal",
+          "accepted_translations": ["aim"],
+          "pos": "noun",
+          "example": "A célom a magyar nyelv megtanulása."
+        },
+        {
+          "word": "kívánság",
+          "translation": "wish",
+          "pos": "noun",
+          "example": "Kívánok valamit."
+        },
+        {
+          "word": "talán",
+          "translation": "maybe",
+          "accepted_translations": ["perhaps"],
+          "pos": "adverb",
+          "example": "Talán holnap esik."
+        },
+        {
+          "word": "egyszer",
+          "translation": "one day",
+          "accepted_translations": ["someday"],
+          "pos": "adverb",
+          "example": "Egyszer ellátogatok Japánba."
+        },
+        {
+          "word": "siker",
+          "translation": "success",
+          "pos": "noun",
+          "example": "Sok sikert kívánok !"
+        },
+        {
+          "word": "lehetőség",
+          "translation": "opportunity",
+          "accepted_translations": ["chance"],
+          "pos": "noun",
+          "example": "Ez egy jó lehetőség."
+        },
+        {
+          "word": "remélni",
+          "translation": "to hope",
+          "pos": "verb",
+          "example": "Remélem, hamarosan látlak."
+        },
+        {
+          "word": "tervezni",
+          "translation": "to plan",
+          "pos": "verb",
+          "example": "Utazást tervezünk."
+        },
+        {
+          "word": "ígérni",
+          "translation": "to promise",
+          "pos": "verb",
+          "example": "Megígérem, hogy jövök."
+        },
+        {
+          "word": "szerencse",
+          "translation": "luck",
+          "pos": "noun",
+          "example": "Sok szerencsét a vizsgára !"
+        },
+        {
+          "word": "boldogság",
+          "translation": "happiness",
+          "pos": "noun",
+          "example": "A boldogság egyszerű."
+        },
+        {
+          "word": "sikerülni",
+          "translation": "to succeed",
+          "pos": "verb",
+          "example": "Sikerülni fog, tudom."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "jövő",
+          "answer": "future",
+          "accepted_answers": ["the future"]
+        },
+        {
+          "type": "translation",
+          "prompt": "álom",
+          "answer": "dream"
+        },
+        {
+          "type": "translation",
+          "prompt": "remény",
+          "answer": "hope"
+        },
+        {
+          "type": "translation",
+          "prompt": "terv",
+          "answer": "plan"
+        },
+        {
+          "type": "translation",
+          "prompt": "cél",
+          "answer": "goal",
+          "accepted_answers": ["aim"]
+        },
+        {
+          "type": "translation",
+          "prompt": "kívánság",
+          "answer": "wish"
+        },
+        {
+          "type": "translation",
+          "prompt": "talán",
+          "answer": "maybe",
+          "accepted_answers": ["perhaps"]
+        },
+        {
+          "type": "translation",
+          "prompt": "egyszer",
+          "answer": "one day",
+          "accepted_answers": ["someday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "siker",
+          "answer": "success"
+        },
+        {
+          "type": "translation",
+          "prompt": "lehetőség",
+          "answer": "opportunity",
+          "accepted_answers": ["chance"]
+        },
+        {
+          "type": "translation",
+          "prompt": "remélni",
+          "answer": "to hope"
+        },
+        {
+          "type": "translation",
+          "prompt": "tervezni",
+          "answer": "to plan"
+        },
+        {
+          "type": "translation",
+          "prompt": "ígérni",
+          "answer": "to promise"
+        },
+        {
+          "type": "translation",
+          "prompt": "szerencse",
+          "answer": "luck"
+        },
+        {
+          "type": "translation",
+          "prompt": "boldogság",
+          "answer": "happiness"
+        },
+        {
+          "type": "translation",
+          "prompt": "sikerülni",
+          "answer": "to succeed"
+        },
+        {
+          "type": "translation",
+          "prompt": "Egyszer körbeutazom a világot.",
+          "answer": "One day I will travel around the world.",
+          "accepted_answers": ["Someday I will travel around the world."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Holnap a tengerpartra megyünk.",
+          "answer": "Tomorrow we will go to the sea."
+        },
+        {
+          "type": "translation",
+          "prompt": "Sikerülni fog, biztos vagyok benne.",
+          "answer": "You will make it, I'm sure.",
+          "accepted_answers": ["You will make it, I am sure."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Valószínűleg holnap esni fog.",
+          "answer": "It will probably rain tomorrow."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ha lesz pénzem, veszek egy házat.",
+          "answer": "When I have money, I will buy a house."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ő azért reménykedik, hogy orvos lesz.",
+          "answer": "She hopes to become a doctor."
+        },
+        {
+          "type": "translation",
+          "prompt": "Megígérem, hogy nem felejtelek el.",
+          "answer": "I promise you that I will not forget you.",
+          "accepted_answers": ["I promise you that I won't forget you."]
+        },
+        {
+          "type": "translation",
+          "prompt": "A boldogság nem megvásárolható.",
+          "answer": "Happiness cannot be bought.",
+          "accepted_answers": ["You can't buy happiness.", "Happiness can't be bought."]
+        },
+        {
+          "type": "translation",
+          "prompt": "I hope to see you soon.",
+          "answer": "Remélem, hamarosan látlak."
+        },
+        {
+          "type": "translation",
+          "prompt": "One day I will speak Hungarian very well.",
+          "answer": "Egyszer nagyon jól fogok magyarul beszélni."
+        },
+        {
+          "type": "translation",
+          "prompt": "My goal is to succeed.",
+          "answer": "A célom a siker."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's a real opportunity.",
+          "answer": "Ez egy igazi lehetőség."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'future':",
+          "options": [
+            "jövő",
+            "álom",
+            "remény",
+            "terv"
+          ],
+          "answer": "jövő"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'dream':",
+          "options": [
+            "álom",
+            "remény",
+            "jövő",
+            "boldogság"
+          ],
+          "answer": "álom"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hope':",
+          "options": [
+            "remény",
+            "álom",
+            "jövő",
+            "boldogság"
+          ],
+          "answer": "remény"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'plan':",
+          "options": [
+            "terv",
+            "cél",
+            "jövő",
+            "lehetőség"
+          ],
+          "answer": "terv"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'goal':",
+          "options": [
+            "cél",
+            "terv",
+            "álom",
+            "siker"
+          ],
+          "answer": "cél"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'success':",
+          "options": [
+            "siker",
+            "lehetőség",
+            "remény",
+            "boldogság"
+          ],
+          "answer": "siker"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'opportunity':",
+          "options": [
+            "lehetőség",
+            "siker",
+            "cél",
+            "remény"
+          ],
+          "answer": "lehetőség"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'happiness':",
+          "options": [
+            "boldogság",
+            "álom",
+            "remény",
+            "siker"
+          ],
+          "answer": "boldogság"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Szeret___ egy kávét.",
+          "answer": "nék"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "In___ egy teát.",
+          "answer": "nék"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jobb ___ itthon maradni.",
+          "answer": "lenne"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Megnéz___ a filmet ma este.",
+          "answer": "ném"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Te mit tenn___ ?",
+          "answer": "él"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ő is jön___ velünk.",
+          "answer": "ne"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ha lenne pénzem, ___ egy házat.",
+          "answer": "vennék"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Az ___ egyszer valóra válhatnak.",
+          "answer": "álmok"
+        }
+      ]
     }
   ]
 }

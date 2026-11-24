@@ -5910,6 +5910,1922 @@
           "answer": "historia"
         }
       ]
+    },
+    {
+      "id": 16,
+      "title": "City and Directions",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "ett torg",
+          "translation": "square",
+          "pos": "noun",
+          "example": "Torget i byn är stort."
+        },
+        {
+          "word": "ett museum",
+          "translation": "museum",
+          "pos": "noun",
+          "example": "Museet öppnar klockan nio."
+        },
+        {
+          "word": "en bro",
+          "translation": "bridge",
+          "pos": "noun",
+          "example": "Den här bron är mycket gammal."
+        },
+        {
+          "word": "en kyrka",
+          "translation": "church",
+          "pos": "noun",
+          "example": "Kyrkan ligger nära bron."
+        },
+        {
+          "word": "en aveny",
+          "translation": "avenue",
+          "pos": "noun",
+          "example": "Jag går längs avenyn."
+        },
+        {
+          "word": "en stadsdel",
+          "translation": "neighborhood",
+          "accepted_translations": ["district"],
+          "pos": "noun",
+          "example": "Jag bor i en lugn stadsdel."
+        },
+        {
+          "word": "ett trafikljus",
+          "translation": "traffic light",
+          "pos": "noun",
+          "example": "Vänta vid trafikljuset."
+        },
+        {
+          "word": "ett hörn",
+          "translation": "corner",
+          "pos": "noun",
+          "example": "Caféet ligger runt hörnet."
+        },
+        {
+          "word": "en karta",
+          "translation": "map",
+          "pos": "noun",
+          "example": "Jag köper en karta över stan."
+        },
+        {
+          "word": "vänster",
+          "translation": "left",
+          "pos": "adverb",
+          "example": "Banken ligger till vänster."
+        },
+        {
+          "word": "höger",
+          "translation": "right",
+          "pos": "adverb",
+          "example": "Bion ligger till höger."
+        },
+        {
+          "word": "rakt fram",
+          "translation": "straight ahead",
+          "pos": "adverb",
+          "example": "Gå rakt fram till bron."
+        },
+        {
+          "word": "långt bort",
+          "translation": "far",
+          "accepted_translations": ["far away"],
+          "pos": "adverb",
+          "example": "Stationen ligger långt bort."
+        },
+        {
+          "word": "svänga",
+          "translation": "to turn",
+          "pos": "verb",
+          "example": "Sväng vänster vid trafikljuset."
+        },
+        {
+          "word": "korsa",
+          "translation": "to cross",
+          "pos": "verb",
+          "example": "Vi korsar gatan."
+        },
+        {
+          "word": "gå vilse",
+          "translation": "to get lost",
+          "pos": "verb",
+          "example": "Jag går ofta vilse i den här stan."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ett torg",
+          "answer": "square"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett museum",
+          "answer": "museum"
+        },
+        {
+          "type": "translation",
+          "prompt": "en bro",
+          "answer": "bridge"
+        },
+        {
+          "type": "translation",
+          "prompt": "en kyrka",
+          "answer": "church"
+        },
+        {
+          "type": "translation",
+          "prompt": "en aveny",
+          "answer": "avenue"
+        },
+        {
+          "type": "translation",
+          "prompt": "en stadsdel",
+          "answer": "neighborhood",
+          "accepted_answers": ["district"]
+        },
+        {
+          "type": "translation",
+          "prompt": "ett trafikljus",
+          "answer": "traffic light"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett hörn",
+          "answer": "corner"
+        },
+        {
+          "type": "translation",
+          "prompt": "en karta",
+          "answer": "map"
+        },
+        {
+          "type": "translation",
+          "prompt": "vänster",
+          "answer": "left"
+        },
+        {
+          "type": "translation",
+          "prompt": "höger",
+          "answer": "right"
+        },
+        {
+          "type": "translation",
+          "prompt": "rakt fram",
+          "answer": "straight ahead"
+        },
+        {
+          "type": "translation",
+          "prompt": "långt bort",
+          "answer": "far",
+          "accepted_answers": ["far away"]
+        },
+        {
+          "type": "translation",
+          "prompt": "svänga",
+          "answer": "to turn"
+        },
+        {
+          "type": "translation",
+          "prompt": "korsa",
+          "answer": "to cross"
+        },
+        {
+          "type": "translation",
+          "prompt": "gå vilse",
+          "answer": "to get lost"
+        },
+        {
+          "type": "translation",
+          "prompt": "Museet ligger runt hörnet på avenyn.",
+          "answer": "The museum is around the corner of the avenue.",
+          "accepted_answers": ["The museum is around the corner on the avenue."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Sväng vänster efter kyrkan.",
+          "answer": "Turn left after the church."
+        },
+        {
+          "type": "translation",
+          "prompt": "Gå rakt fram till trafikljuset.",
+          "answer": "Go straight ahead to the traffic light.",
+          "accepted_answers": ["Go straight to the traffic light."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vi korsar bron varje morgon.",
+          "answer": "We cross the bridge every morning."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag har bott i den här stadsdelen i ett år.",
+          "answer": "I have lived in this neighborhood for a year.",
+          "accepted_answers": ["I've lived in this neighborhood for a year."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Stationen ligger långt bort, ta en taxi.",
+          "answer": "The station is far, take a taxi.",
+          "accepted_answers": ["The station is far away, take a taxi."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Gå inte vilse i gamla stan.",
+          "answer": "Don't get lost in the old town."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag tittar på kartan över stan.",
+          "answer": "I am looking at the map of the city.",
+          "accepted_answers": ["I'm looking at the map of the city.", "I look at the map of the city."]
+        },
+        {
+          "type": "translation",
+          "prompt": "The church is near the bridge.",
+          "answer": "Kyrkan ligger nära bron."
+        },
+        {
+          "type": "translation",
+          "prompt": "Turn right at the traffic light.",
+          "answer": "Sväng höger vid trafikljuset."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't want to get lost.",
+          "answer": "Jag vill inte gå vilse."
+        },
+        {
+          "type": "translation",
+          "prompt": "My neighborhood is quiet.",
+          "answer": "Min stadsdel är lugn."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'square':",
+          "options": [
+            "ett torg",
+            "en bro",
+            "ett hörn",
+            "en stadsdel"
+          ],
+          "answer": "ett torg"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'museum':",
+          "options": [
+            "ett museum",
+            "en kyrka",
+            "en aveny",
+            "en karta"
+          ],
+          "answer": "ett museum"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bridge':",
+          "options": [
+            "en bro",
+            "en kyrka",
+            "ett torg",
+            "en aveny"
+          ],
+          "answer": "en bro"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'church':",
+          "options": [
+            "en kyrka",
+            "ett museum",
+            "en bro",
+            "en stadsdel"
+          ],
+          "answer": "en kyrka"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'neighborhood':",
+          "options": [
+            "en stadsdel",
+            "ett torg",
+            "ett hörn",
+            "en karta"
+          ],
+          "answer": "en stadsdel"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'traffic light':",
+          "options": [
+            "ett trafikljus",
+            "ett hörn",
+            "en karta",
+            "en kyrka"
+          ],
+          "answer": "ett trafikljus"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'left':",
+          "options": [
+            "vänster",
+            "höger",
+            "ett hörn",
+            "en karta"
+          ],
+          "answer": "vänster"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'straight ahead':",
+          "options": [
+            "rakt fram",
+            "vänster",
+            "höger",
+            "en karta"
+          ],
+          "answer": "rakt fram"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ligger museet ?",
+          "answer": "Var"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag ___ till Göteborg med tåg.",
+          "answer": "åker"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gå ___ fram och sväng vänster.",
+          "answer": "rakt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sväng ___ vid trafikljuset, inte höger.",
+          "answer": "vänster"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gå över gatan vid trafik___.",
+          "answer": "ljuset"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Caféet ligger runt ___.",
+          "answer": "hörnet"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Man kan lätt ___ vilse här.",
+          "answer": "gå"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Titta på ___, vi är här.",
+          "answer": "kartan"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Money and Services",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "ett pris",
+          "translation": "price",
+          "pos": "noun",
+          "example": "Priset på biljetten är högt."
+        },
+        {
+          "word": "ett kvitto",
+          "translation": "receipt",
+          "pos": "noun",
+          "example": "Spara kvittot, tack."
+        },
+        {
+          "word": "ett konto",
+          "translation": "account",
+          "pos": "noun",
+          "example": "Jag öppnar ett konto på banken."
+        },
+        {
+          "word": "en rabatt",
+          "translation": "discount",
+          "pos": "noun",
+          "example": "Det finns en rabatt för studenter."
+        },
+        {
+          "word": "kontanter",
+          "translation": "cash",
+          "pos": "noun",
+          "example": "Jag betalar med kontanter."
+        },
+        {
+          "word": "ett kort",
+          "translation": "card",
+          "accepted_translations": ["bank card", "credit card"],
+          "pos": "noun",
+          "example": "Jag betalar med kort."
+        },
+        {
+          "word": "betala",
+          "translation": "to pay",
+          "pos": "verb",
+          "example": "Jag betalar för kaffet."
+        },
+        {
+          "word": "ta ut",
+          "translation": "to withdraw",
+          "accepted_translations": ["to take out"],
+          "pos": "verb",
+          "example": "Jag tar ut pengar i bankomaten."
+        },
+        {
+          "word": "spendera",
+          "translation": "to spend",
+          "pos": "verb",
+          "example": "Jag spenderar för mycket pengar."
+        },
+        {
+          "word": "spara",
+          "translation": "to save",
+          "pos": "verb",
+          "example": "Jag sparar till en resa."
+        },
+        {
+          "word": "gratis",
+          "translation": "free",
+          "pos": "adjective",
+          "example": "Entrén är gratis på söndagar."
+        },
+        {
+          "word": "en blankett",
+          "translation": "form",
+          "pos": "noun",
+          "example": "Fyll i den här blanketten, tack."
+        },
+        {
+          "word": "skriva under",
+          "translation": "to sign",
+          "pos": "verb",
+          "example": "Skriv under här, tack."
+        },
+        {
+          "word": "en kund",
+          "translation": "customer",
+          "pos": "noun",
+          "example": "Kunden väntar vid kassan."
+        },
+        {
+          "word": "en kundtjänst",
+          "translation": "customer service",
+          "pos": "noun",
+          "example": "Kundtjänsten hjälper kunden."
+        },
+        {
+          "word": "ett råd",
+          "translation": "advice",
+          "accepted_translations": ["tip"],
+          "pos": "noun",
+          "example": "Hon ger mig ett bra råd."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ett pris",
+          "answer": "price"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett kvitto",
+          "answer": "receipt"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett konto",
+          "answer": "account"
+        },
+        {
+          "type": "translation",
+          "prompt": "en rabatt",
+          "answer": "discount"
+        },
+        {
+          "type": "translation",
+          "prompt": "kontanter",
+          "answer": "cash"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett kort",
+          "answer": "card",
+          "accepted_answers": ["bank card", "credit card"]
+        },
+        {
+          "type": "translation",
+          "prompt": "betala",
+          "answer": "to pay"
+        },
+        {
+          "type": "translation",
+          "prompt": "ta ut",
+          "answer": "to withdraw",
+          "accepted_answers": ["to take out"]
+        },
+        {
+          "type": "translation",
+          "prompt": "spendera",
+          "answer": "to spend"
+        },
+        {
+          "type": "translation",
+          "prompt": "spara",
+          "answer": "to save"
+        },
+        {
+          "type": "translation",
+          "prompt": "gratis",
+          "answer": "free"
+        },
+        {
+          "type": "translation",
+          "prompt": "en blankett",
+          "answer": "form"
+        },
+        {
+          "type": "translation",
+          "prompt": "skriva under",
+          "answer": "to sign"
+        },
+        {
+          "type": "translation",
+          "prompt": "en kund",
+          "answer": "customer"
+        },
+        {
+          "type": "translation",
+          "prompt": "en kundtjänst",
+          "answer": "customer service"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett råd",
+          "answer": "advice",
+          "accepted_answers": ["tip"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Betalar jag med kontanter eller med kort ?",
+          "answer": "Do I pay in cash or by card?",
+          "accepted_answers": ["Should I pay in cash or by card?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag tog ut hundra kronor ur bankomaten.",
+          "answer": "I withdrew a hundred kronor from the ATM.",
+          "accepted_answers": ["I took out a hundred kronor from the ATM."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Det finns en rabatt för studenter.",
+          "answer": "There is a discount for students.",
+          "accepted_answers": ["There's a discount for students."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Fyll i den här blanketten och skriv under längst ner.",
+          "answer": "Fill out this form and sign at the bottom.",
+          "accepted_answers": ["Fill in this form and sign at the bottom."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Det här museet är gratis den första söndagen i månaden.",
+          "answer": "This museum is free on the first Sunday of the month.",
+          "accepted_answers": ["This museum is free the first Sunday of the month."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hon sparar för att köpa en bil.",
+          "answer": "She is saving to buy a car.",
+          "accepted_answers": ["She's saving to buy a car.", "She is saving to buy a car."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Servicen är redan inkluderad i priset.",
+          "answer": "The service is already included in the price.",
+          "accepted_answers": ["Service is already included in the price."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Kunden frågar efter ett kvitto.",
+          "answer": "The customer asks for a receipt."
+        },
+        {
+          "type": "translation",
+          "prompt": "I want to open an account.",
+          "answer": "Jag vill öppna ett konto."
+        },
+        {
+          "type": "translation",
+          "prompt": "You spend too much money.",
+          "answer": "Du spenderar för mycket pengar."
+        },
+        {
+          "type": "translation",
+          "prompt": "Can you give me some advice?",
+          "answer": "Kan du ge mig ett råd ?"
+        },
+        {
+          "type": "translation",
+          "prompt": "I pay by card.",
+          "answer": "Jag betalar med kort."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'price':",
+          "options": [
+            "ett pris",
+            "ett kvitto",
+            "ett konto",
+            "en rabatt"
+          ],
+          "answer": "ett pris"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'receipt':",
+          "options": [
+            "ett kvitto",
+            "ett pris",
+            "ett konto",
+            "en kundtjänst"
+          ],
+          "answer": "ett kvitto"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'account':",
+          "options": [
+            "ett konto",
+            "ett pris",
+            "en rabatt",
+            "en kundtjänst"
+          ],
+          "answer": "ett konto"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'discount':",
+          "options": [
+            "en rabatt",
+            "ett pris",
+            "ett kvitto",
+            "en blankett"
+          ],
+          "answer": "en rabatt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cash':",
+          "options": [
+            "kontanter",
+            "ett pris",
+            "ett kvitto",
+            "ett kort"
+          ],
+          "answer": "kontanter"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'free':",
+          "options": [
+            "gratis",
+            "en kund",
+            "en kundtjänst",
+            "ett kvitto"
+          ],
+          "answer": "gratis"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'customer':",
+          "options": [
+            "en kund",
+            "en kundtjänst",
+            "ett kvitto",
+            "ett pris"
+          ],
+          "answer": "en kund"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'advice':",
+          "options": [
+            "ett råd",
+            "en kundtjänst",
+            "en kund",
+            "en rabatt"
+          ],
+          "answer": "ett råd"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ jag låna ditt kort ?",
+          "answer": "Får"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Han ___ ett kvitto vid kassan.",
+          "answer": "fick"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Du ___ vänta här, jag kommer snart.",
+          "answer": "får"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kan jag ___ med kort ?",
+          "answer": "betala"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag måste ___ pengar.",
+          "answer": "ta ut"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag ___ pengar varje månad.",
+          "answer": "sparar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Inträdet är ___ på söndagar.",
+          "answer": "gratis"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Fyll i blanketten och ___ under.",
+          "answer": "skriv"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Nature and the Environment",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "natur",
+          "translation": "nature",
+          "pos": "noun",
+          "example": "Jag älskar naturen."
+        },
+        {
+          "word": "en skog",
+          "translation": "forest",
+          "pos": "noun",
+          "example": "Skogen är tyst på morgonen."
+        },
+        {
+          "word": "en flod",
+          "translation": "river",
+          "pos": "noun",
+          "example": "Floden rinner genom skogen."
+        },
+        {
+          "word": "en sjö",
+          "translation": "lake",
+          "pos": "noun",
+          "example": "Vi simmar i sjön."
+        },
+        {
+          "word": "ett träd",
+          "translation": "tree",
+          "pos": "noun",
+          "example": "Det här trädet är mycket gammalt."
+        },
+        {
+          "word": "en blomma",
+          "translation": "flower",
+          "pos": "noun",
+          "example": "Den här blomman är vacker."
+        },
+        {
+          "word": "ett djur",
+          "translation": "animal",
+          "pos": "noun",
+          "example": "Djuret sover under trädet."
+        },
+        {
+          "word": "en fågel",
+          "translation": "bird",
+          "pos": "noun",
+          "example": "Fågeln sjunger på morgonen."
+        },
+        {
+          "word": "en himmel",
+          "translation": "sky",
+          "pos": "noun",
+          "example": "Himlen är blå idag."
+        },
+        {
+          "word": "en stjärna",
+          "translation": "star",
+          "pos": "noun",
+          "example": "Jag tittar på stjärnorna på natten."
+        },
+        {
+          "word": "ett landskap",
+          "translation": "landscape",
+          "pos": "noun",
+          "example": "Landskapet här är vackert."
+        },
+        {
+          "word": "ett klimat",
+          "translation": "climate",
+          "pos": "noun",
+          "example": "Klimatet förändras överallt."
+        },
+        {
+          "word": "föroreningar",
+          "translation": "pollution",
+          "pos": "noun",
+          "example": "Föroreningar i luften är ett problem."
+        },
+        {
+          "word": "skydda",
+          "translation": "to protect",
+          "pos": "verb",
+          "example": "Vi måste skydda skogen."
+        },
+        {
+          "word": "återvinna",
+          "translation": "to recycle",
+          "pos": "verb",
+          "example": "Jag återvinner papper och glas."
+        },
+        {
+          "word": "plantera",
+          "translation": "to plant",
+          "pos": "verb",
+          "example": "De planterar ett träd i trädgården."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "natur",
+          "answer": "nature"
+        },
+        {
+          "type": "translation",
+          "prompt": "en skog",
+          "answer": "forest"
+        },
+        {
+          "type": "translation",
+          "prompt": "en flod",
+          "answer": "river"
+        },
+        {
+          "type": "translation",
+          "prompt": "en sjö",
+          "answer": "lake"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett träd",
+          "answer": "tree"
+        },
+        {
+          "type": "translation",
+          "prompt": "en blomma",
+          "answer": "flower"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett djur",
+          "answer": "animal"
+        },
+        {
+          "type": "translation",
+          "prompt": "en fågel",
+          "answer": "bird"
+        },
+        {
+          "type": "translation",
+          "prompt": "en himmel",
+          "answer": "sky"
+        },
+        {
+          "type": "translation",
+          "prompt": "en stjärna",
+          "answer": "star"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett landskap",
+          "answer": "landscape"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett klimat",
+          "answer": "climate"
+        },
+        {
+          "type": "translation",
+          "prompt": "föroreningar",
+          "answer": "pollution"
+        },
+        {
+          "type": "translation",
+          "prompt": "skydda",
+          "answer": "to protect"
+        },
+        {
+          "type": "translation",
+          "prompt": "återvinna",
+          "answer": "to recycle"
+        },
+        {
+          "type": "translation",
+          "prompt": "plantera",
+          "answer": "to plant"
+        },
+        {
+          "type": "translation",
+          "prompt": "Vi måste skydda naturen.",
+          "answer": "We must protect nature.",
+          "accepted_answers": ["We have to protect nature."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Fåglarna sjunger i skogen.",
+          "answer": "The birds sing in the forest."
+        },
+        {
+          "type": "translation",
+          "prompt": "Sjön är kallare än floden.",
+          "answer": "The lake is colder than the river."
+        },
+        {
+          "type": "translation",
+          "prompt": "Det är det äldsta trädet i parken.",
+          "answer": "It is the oldest tree in the park.",
+          "accepted_answers": ["It's the oldest tree in the park."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Föroreningar i städer är ett stort problem.",
+          "answer": "Pollution in cities is a big problem.",
+          "accepted_answers": ["The pollution in cities is a big problem."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag tittar på stjärnorna när himlen är klar.",
+          "answer": "I look at the stars when the sky is clear.",
+          "accepted_answers": ["I watch the stars when the sky is clear."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Klimatet i den här regionen är mildt.",
+          "answer": "The climate of this region is mild.",
+          "accepted_answers": ["The climate in this region is mild."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hon planterar blommor på våren.",
+          "answer": "She plants flowers in spring.",
+          "accepted_answers": ["She plants flowers in the spring."]
+        },
+        {
+          "type": "translation",
+          "prompt": "The river is behind the mountain.",
+          "answer": "Floden ligger bakom berget."
+        },
+        {
+          "type": "translation",
+          "prompt": "This bird is beautiful.",
+          "answer": "Den här fågeln är vacker."
+        },
+        {
+          "type": "translation",
+          "prompt": "We recycle glass and paper.",
+          "answer": "Vi återvinner glas och papper."
+        },
+        {
+          "type": "translation",
+          "prompt": "Nature is our home.",
+          "answer": "Naturen är vårt hem."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'nature':",
+          "options": [
+            "natur",
+            "en skog",
+            "en sjö",
+            "en flod"
+          ],
+          "answer": "natur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'forest':",
+          "options": [
+            "en skog",
+            "natur",
+            "en sjö",
+            "ett träd"
+          ],
+          "answer": "en skog"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'river':",
+          "options": [
+            "en flod",
+            "en sjö",
+            "en skog",
+            "föroreningar"
+          ],
+          "answer": "en flod"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'lake':",
+          "options": [
+            "en sjö",
+            "en flod",
+            "en skog",
+            "en himmel"
+          ],
+          "answer": "en sjö"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tree':",
+          "options": [
+            "ett träd",
+            "en skog",
+            "en blomma",
+            "en sjö"
+          ],
+          "answer": "ett träd"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'flower':",
+          "options": [
+            "en blomma",
+            "ett träd",
+            "en skog",
+            "natur"
+          ],
+          "answer": "en blomma"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bird':",
+          "options": [
+            "en fågel",
+            "ett djur",
+            "ett träd",
+            "en himmel"
+          ],
+          "answer": "en fågel"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'pollution':",
+          "options": [
+            "föroreningar",
+            "ett klimat",
+            "natur",
+            "en himmel"
+          ],
+          "answer": "föroreningar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Stockholm är större ___ Malmö.",
+          "answer": "än"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "snabb, snabbare, ___",
+          "answer": "snabbast"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "dyr, dyrare, ___",
+          "answer": "dyrast"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Det är den längsta gatan ___ stan.",
+          "answer": "i"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vi måste ___ skogen.",
+          "answer": "skydda"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ tidningar och glas, det är viktigt.",
+          "answer": "Återvinn"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "På våren ___ vi blommor.",
+          "answer": "planterar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ är ett stort problem i städer.",
+          "answer": "Föroreningar"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Opinions and News",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "en tidning",
+          "translation": "newspaper",
+          "pos": "noun",
+          "example": "Jag läser tidningen varje morgon."
+        },
+        {
+          "word": "en artikel",
+          "translation": "article",
+          "pos": "noun",
+          "example": "Den här artikeln är mycket intressant."
+        },
+        {
+          "word": "en radio",
+          "translation": "radio",
+          "pos": "noun",
+          "example": "Jag lyssnar på radion i bilen."
+        },
+        {
+          "word": "en teve",
+          "translation": "television",
+          "accepted_translations": ["TV"],
+          "pos": "noun",
+          "example": "Teven står i vardagsrummet."
+        },
+        {
+          "word": "en åsikt",
+          "translation": "opinion",
+          "pos": "noun",
+          "example": "Alla har sin egen åsikt."
+        },
+        {
+          "word": "tro",
+          "translation": "to believe",
+          "pos": "verb",
+          "example": "Jag tror inte på den historien."
+        },
+        {
+          "word": "hålla med",
+          "translation": "to agree",
+          "pos": "verb",
+          "example": "Jag håller med dig."
+        },
+        {
+          "word": "viktig",
+          "translation": "important",
+          "pos": "adjective",
+          "example": "Det är en viktig nyhet."
+        },
+        {
+          "word": "antagligen",
+          "translation": "probably",
+          "pos": "adverb",
+          "example": "Han kommer antagligen imorgon."
+        },
+        {
+          "word": "diskutera",
+          "translation": "to discuss",
+          "pos": "verb",
+          "example": "Vi diskuterar artikeln."
+        },
+        {
+          "word": "en journalist",
+          "translation": "journalist",
+          "pos": "noun",
+          "example": "Journalisten intervjuar borgmästaren."
+        },
+        {
+          "word": "ett samhälle",
+          "translation": "society",
+          "pos": "noun",
+          "example": "Samhället förändras snabbt."
+        },
+        {
+          "word": "en händelse",
+          "translation": "event",
+          "pos": "noun",
+          "example": "Det är en viktig händelse."
+        },
+        {
+          "word": "en lögn",
+          "translation": "lie",
+          "accepted_translations": ["falsehood"],
+          "pos": "noun",
+          "example": "Säg inga lögn."
+        },
+        {
+          "word": "verka",
+          "translation": "to seem",
+          "pos": "verb",
+          "example": "Du verkar trött."
+        },
+        {
+          "word": "ett faktum",
+          "translation": "fact",
+          "pos": "noun",
+          "example": "Det är ett faktum, inte en åsikt."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "en tidning",
+          "answer": "newspaper"
+        },
+        {
+          "type": "translation",
+          "prompt": "en artikel",
+          "answer": "article"
+        },
+        {
+          "type": "translation",
+          "prompt": "en radio",
+          "answer": "radio"
+        },
+        {
+          "type": "translation",
+          "prompt": "en teve",
+          "answer": "television",
+          "accepted_answers": ["TV"]
+        },
+        {
+          "type": "translation",
+          "prompt": "en åsikt",
+          "answer": "opinion"
+        },
+        {
+          "type": "translation",
+          "prompt": "tro",
+          "answer": "to believe"
+        },
+        {
+          "type": "translation",
+          "prompt": "hålla med",
+          "answer": "to agree"
+        },
+        {
+          "type": "translation",
+          "prompt": "viktig",
+          "answer": "important"
+        },
+        {
+          "type": "translation",
+          "prompt": "antagligen",
+          "answer": "probably"
+        },
+        {
+          "type": "translation",
+          "prompt": "diskutera",
+          "answer": "to discuss"
+        },
+        {
+          "type": "translation",
+          "prompt": "en journalist",
+          "answer": "journalist"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett samhälle",
+          "answer": "society"
+        },
+        {
+          "type": "translation",
+          "prompt": "en händelse",
+          "answer": "event"
+        },
+        {
+          "type": "translation",
+          "prompt": "en lögn",
+          "answer": "lie",
+          "accepted_answers": ["falsehood"]
+        },
+        {
+          "type": "translation",
+          "prompt": "verka",
+          "answer": "to seem"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett faktum",
+          "answer": "fact"
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag håller med dig.",
+          "answer": "I agree with you."
+        },
+        {
+          "type": "translation",
+          "prompt": "Journalisten skriver en artikel om samhället.",
+          "answer": "The journalist writes an article about society.",
+          "accepted_answers": ["The journalist is writing an article about society."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Enligt min åsikt är den här artikeln mycket bra.",
+          "answer": "In my opinion, this article is very good."
+        },
+        {
+          "type": "translation",
+          "prompt": "Han säger inte alltid sanningen.",
+          "answer": "He doesn't always tell the truth.",
+          "accepted_answers": ["He does not always tell the truth."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Vi diskuterar dagens händelser.",
+          "answer": "We discuss the events of the day.",
+          "accepted_answers": ["We're discussing the events of the day."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Den här händelsen verkar viktig.",
+          "answer": "This event seems important."
+        },
+        {
+          "type": "translation",
+          "prompt": "Antagligen har han rätt.",
+          "answer": "He is probably right.",
+          "accepted_answers": ["Probably he is right."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag tror att teven ljuger ibland.",
+          "answer": "I believe that television sometimes lies.",
+          "accepted_answers": ["I think that television sometimes lies."]
+        },
+        {
+          "type": "translation",
+          "prompt": "I read the newspaper every morning.",
+          "answer": "Jag läser tidningen varje morgon."
+        },
+        {
+          "type": "translation",
+          "prompt": "We must discuss this event.",
+          "answer": "Vi måste diskutera den här händelsen."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's an important fact.",
+          "answer": "Det är ett viktigt faktum."
+        },
+        {
+          "type": "translation",
+          "prompt": "I listen to the radio in the car.",
+          "answer": "Jag lyssnar på radion i bilen."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'newspaper':",
+          "options": [
+            "en tidning",
+            "en artikel",
+            "en radio",
+            "en teve"
+          ],
+          "answer": "en tidning"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'article':",
+          "options": [
+            "en artikel",
+            "en tidning",
+            "en radio",
+            "ett faktum"
+          ],
+          "answer": "en artikel"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'radio':",
+          "options": [
+            "en radio",
+            "en teve",
+            "en tidning",
+            "en artikel"
+          ],
+          "answer": "en radio"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'television':",
+          "options": [
+            "en teve",
+            "en radio",
+            "en tidning",
+            "en journalist"
+          ],
+          "answer": "en teve"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'opinion':",
+          "options": [
+            "en åsikt",
+            "en lögn",
+            "ett faktum",
+            "ett samhälle"
+          ],
+          "answer": "en åsikt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'journalist':",
+          "options": [
+            "en journalist",
+            "ett samhälle",
+            "en lögn",
+            "en åsikt"
+          ],
+          "answer": "en journalist"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'lie':",
+          "options": [
+            "en lögn",
+            "ett faktum",
+            "en åsikt",
+            "ett samhälle"
+          ],
+          "answer": "en lögn"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fact':",
+          "options": [
+            "ett faktum",
+            "en lögn",
+            "en åsikt",
+            "en händelse"
+          ],
+          "answer": "ett faktum"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag ___ vilja ha kaffe.",
+          "answer": "skulle"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ du kunna hjälpa mig ?",
+          "answer": "Skulle"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Han ___ vilja åka hem.",
+          "answer": "skulle"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Det verkar ___.",
+          "answer": "viktigt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag tror inte ___ honom.",
+          "answer": "på"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Antagligen har han ___.",
+          "answer": "rätt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "En ___ skriver artiklar.",
+          "answer": "journalist"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Det är ett ___, inte en åsikt.",
+          "answer": "faktum"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Future and Dreams",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "framtiden",
+          "translation": "the future",
+          "accepted_translations": ["future"],
+          "pos": "noun",
+          "example": "Framtiden är oviss."
+        },
+        {
+          "word": "en dröm",
+          "translation": "dream",
+          "pos": "noun",
+          "example": "Jag hade en fin dröm."
+        },
+        {
+          "word": "ett hopp",
+          "translation": "hope",
+          "pos": "noun",
+          "example": "Jag har hopp om att vinna."
+        },
+        {
+          "word": "en plan",
+          "translation": "plan",
+          "pos": "noun",
+          "example": "Min plan är att resa."
+        },
+        {
+          "word": "ett mål",
+          "translation": "goal",
+          "accepted_translations": ["aim"],
+          "pos": "noun",
+          "example": "Mitt mål är att lära mig svenska."
+        },
+        {
+          "word": "en önskan",
+          "translation": "wish",
+          "pos": "noun",
+          "example": "Jag önskar mig något."
+        },
+        {
+          "word": "kanske",
+          "translation": "maybe",
+          "accepted_translations": ["perhaps"],
+          "pos": "adverb",
+          "example": "Kanske regnar det imorgon."
+        },
+        {
+          "word": "någon gång",
+          "translation": "one day",
+          "accepted_translations": ["someday"],
+          "pos": "adverb",
+          "example": "Någon gång besöker jag Japan."
+        },
+        {
+          "word": "en framgång",
+          "translation": "success",
+          "pos": "noun",
+          "example": "Jag önskar dig stor framgång."
+        },
+        {
+          "word": "ett tillfälle",
+          "translation": "opportunity",
+          "accepted_translations": ["chance"],
+          "pos": "noun",
+          "example": "Det är ett bra tillfälle."
+        },
+        {
+          "word": "hoppas",
+          "translation": "to hope",
+          "pos": "verb",
+          "example": "Jag hoppas få se dig snart."
+        },
+        {
+          "word": "planera",
+          "translation": "to plan",
+          "pos": "verb",
+          "example": "Vi planerar en resa."
+        },
+        {
+          "word": "lova",
+          "translation": "to promise",
+          "pos": "verb",
+          "example": "Jag lovar att komma."
+        },
+        {
+          "word": "en tur",
+          "translation": "luck",
+          "pos": "noun",
+          "example": "Lycka till på provet !"
+        },
+        {
+          "word": "en lycka",
+          "translation": "happiness",
+          "pos": "noun",
+          "example": "Lyckan är enkel."
+        },
+        {
+          "word": "lyckas",
+          "translation": "to succeed",
+          "pos": "verb",
+          "example": "Du kommer att lyckas, jag vet det."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "framtiden",
+          "answer": "the future",
+          "accepted_answers": ["future"]
+        },
+        {
+          "type": "translation",
+          "prompt": "en dröm",
+          "answer": "dream"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett hopp",
+          "answer": "hope"
+        },
+        {
+          "type": "translation",
+          "prompt": "en plan",
+          "answer": "plan"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett mål",
+          "answer": "goal",
+          "accepted_answers": ["aim"]
+        },
+        {
+          "type": "translation",
+          "prompt": "en önskan",
+          "answer": "wish"
+        },
+        {
+          "type": "translation",
+          "prompt": "kanske",
+          "answer": "maybe",
+          "accepted_answers": ["perhaps"]
+        },
+        {
+          "type": "translation",
+          "prompt": "någon gång",
+          "answer": "one day",
+          "accepted_answers": ["someday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "en framgång",
+          "answer": "success"
+        },
+        {
+          "type": "translation",
+          "prompt": "ett tillfälle",
+          "answer": "opportunity",
+          "accepted_answers": ["chance"]
+        },
+        {
+          "type": "translation",
+          "prompt": "hoppas",
+          "answer": "to hope"
+        },
+        {
+          "type": "translation",
+          "prompt": "planera",
+          "answer": "to plan"
+        },
+        {
+          "type": "translation",
+          "prompt": "lova",
+          "answer": "to promise"
+        },
+        {
+          "type": "translation",
+          "prompt": "en tur",
+          "answer": "luck"
+        },
+        {
+          "type": "translation",
+          "prompt": "en lycka",
+          "answer": "happiness"
+        },
+        {
+          "type": "translation",
+          "prompt": "lyckas",
+          "answer": "to succeed"
+        },
+        {
+          "type": "translation",
+          "prompt": "Någon gång ska jag resa runt världen.",
+          "answer": "One day I will travel around the world.",
+          "accepted_answers": ["Someday I will travel around the world."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Imorgon åker vi till havet.",
+          "answer": "Tomorrow we will go to the sea."
+        },
+        {
+          "type": "translation",
+          "prompt": "Du kommer att lyckas, jag är säker.",
+          "answer": "You will make it, I'm sure.",
+          "accepted_answers": ["You will make it, I am sure."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Det kommer antagligen att regna imorgon.",
+          "answer": "It will probably rain tomorrow."
+        },
+        {
+          "type": "translation",
+          "prompt": "När jag har pengar köper jag ett hus.",
+          "answer": "When I have money, I will buy a house."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hon hoppas bli läkare.",
+          "answer": "She hopes to become a doctor."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jag lovar att jag inte glömmer dig.",
+          "answer": "I promise you that I will not forget you.",
+          "accepted_answers": ["I promise you that I won't forget you."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Lyckan går inte att köpa.",
+          "answer": "Happiness cannot be bought.",
+          "accepted_answers": ["You can't buy happiness.", "Happiness can't be bought."]
+        },
+        {
+          "type": "translation",
+          "prompt": "I hope to see you soon.",
+          "answer": "Jag hoppas få se dig snart."
+        },
+        {
+          "type": "translation",
+          "prompt": "One day I will speak Swedish very well.",
+          "answer": "Någon gång pratar jag svenska mycket bra."
+        },
+        {
+          "type": "translation",
+          "prompt": "My goal is to succeed.",
+          "answer": "Mitt mål är att lyckas."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's a real opportunity.",
+          "answer": "Det är ett verkligt tillfälle."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'the future':",
+          "options": [
+            "framtiden",
+            "en dröm",
+            "ett hopp",
+            "en plan"
+          ],
+          "answer": "framtiden"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'dream':",
+          "options": [
+            "en dröm",
+            "ett hopp",
+            "framtiden",
+            "en lycka"
+          ],
+          "answer": "en dröm"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hope':",
+          "options": [
+            "ett hopp",
+            "en dröm",
+            "framtiden",
+            "en lycka"
+          ],
+          "answer": "ett hopp"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'plan':",
+          "options": [
+            "en plan",
+            "ett mål",
+            "framtiden",
+            "ett tillfälle"
+          ],
+          "answer": "en plan"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'goal':",
+          "options": [
+            "ett mål",
+            "en plan",
+            "en dröm",
+            "en framgång"
+          ],
+          "answer": "ett mål"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'success':",
+          "options": [
+            "en framgång",
+            "ett tillfälle",
+            "ett hopp",
+            "en lycka"
+          ],
+          "answer": "en framgång"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'opportunity':",
+          "options": [
+            "ett tillfälle",
+            "en framgång",
+            "ett mål",
+            "ett hopp"
+          ],
+          "answer": "ett tillfälle"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'happiness':",
+          "options": [
+            "en lycka",
+            "en dröm",
+            "ett hopp",
+            "en framgång"
+          ],
+          "answer": "en lycka"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Som barn ___ jag i Stockholm.",
+          "answer": "bodde"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Jag ___ tio år gammal.",
+          "answer": "var"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vi ___ till museet till fots.",
+          "answer": "gick"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Han ___ en dröm om framtiden.",
+          "answer": "hade"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hon ___ en bok hela kvällen.",
+          "answer": "läste"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "De ___ en film igår.",
+          "answer": "såg"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Han ___ mig ett löfte.",
+          "answer": "gav"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Förra året ___ vi till Italien.",
+          "answer": "reste"
+        }
+      ]
     }
   ]
 }

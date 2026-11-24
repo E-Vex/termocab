@@ -5890,6 +5890,1928 @@
           "answer": "plajă"
         }
       ]
+    },
+    {
+      "id": 16,
+      "title": "City and Directions",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "intersecție",
+          "translation": "intersection",
+          "accepted_translations": ["crossroads"],
+          "pos": "noun",
+          "example": "Intersecția este aglomerată."
+        },
+        {
+          "word": "muzeu",
+          "translation": "museum",
+          "pos": "noun",
+          "example": "Muzeul se deschide la nouă."
+        },
+        {
+          "word": "pod",
+          "translation": "bridge",
+          "pos": "noun",
+          "example": "Acest pod este foarte vechi."
+        },
+        {
+          "word": "biserică",
+          "translation": "church",
+          "pos": "noun",
+          "example": "Biserica este lângă pod."
+        },
+        {
+          "word": "bulevard",
+          "translation": "avenue",
+          "pos": "noun",
+          "example": "Merg pe bulevard."
+        },
+        {
+          "word": "cartier",
+          "translation": "neighborhood",
+          "accepted_translations": ["district"],
+          "pos": "noun",
+          "example": "Locuiesc într-un cartier liniștit."
+        },
+        {
+          "word": "semafor",
+          "translation": "traffic light",
+          "pos": "noun",
+          "example": "Așteaptă la semafor."
+        },
+        {
+          "word": "colț",
+          "translation": "corner",
+          "pos": "noun",
+          "example": "Cafeaua este la colțul străzii."
+        },
+        {
+          "word": "hartă",
+          "translation": "map",
+          "pos": "noun",
+          "example": "Cumpăr o hartă a orașului."
+        },
+        {
+          "word": "stânga",
+          "translation": "left",
+          "pos": "noun",
+          "example": "Banca este la stânga."
+        },
+        {
+          "word": "dreapta",
+          "translation": "right",
+          "pos": "noun",
+          "example": "Cinematograful este la dreapta."
+        },
+        {
+          "word": "înainte",
+          "translation": "straight ahead",
+          "accepted_translations": ["forward", "ahead"],
+          "pos": "adverb",
+          "example": "Mergeți înainte până la pod."
+        },
+        {
+          "word": "departe",
+          "translation": "far",
+          "pos": "adverb",
+          "example": "Gara este departe de aici."
+        },
+        {
+          "word": "a coti",
+          "translation": "to turn",
+          "pos": "verb",
+          "example": "Cotește la stânga la semafor."
+        },
+        {
+          "word": "a traversa",
+          "translation": "to cross",
+          "pos": "verb",
+          "example": "Traversăm strada."
+        },
+        {
+          "word": "a se rătăci",
+          "translation": "to get lost",
+          "pos": "verb",
+          "example": "Mă rătăcesc des în acest oraș."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "intersecție",
+          "answer": "intersection",
+          "accepted_answers": ["crossroads"]
+        },
+        {
+          "type": "translation",
+          "prompt": "muzeu",
+          "answer": "museum"
+        },
+        {
+          "type": "translation",
+          "prompt": "pod",
+          "answer": "bridge"
+        },
+        {
+          "type": "translation",
+          "prompt": "biserică",
+          "answer": "church"
+        },
+        {
+          "type": "translation",
+          "prompt": "bulevard",
+          "answer": "avenue"
+        },
+        {
+          "type": "translation",
+          "prompt": "cartier",
+          "answer": "neighborhood",
+          "accepted_answers": ["district"]
+        },
+        {
+          "type": "translation",
+          "prompt": "semafor",
+          "answer": "traffic light"
+        },
+        {
+          "type": "translation",
+          "prompt": "colț",
+          "answer": "corner"
+        },
+        {
+          "type": "translation",
+          "prompt": "hartă",
+          "answer": "map"
+        },
+        {
+          "type": "translation",
+          "prompt": "stânga",
+          "answer": "left"
+        },
+        {
+          "type": "translation",
+          "prompt": "dreapta",
+          "answer": "right"
+        },
+        {
+          "type": "translation",
+          "prompt": "înainte",
+          "answer": "straight ahead",
+          "accepted_answers": ["forward", "ahead"]
+        },
+        {
+          "type": "translation",
+          "prompt": "departe",
+          "answer": "far"
+        },
+        {
+          "type": "translation",
+          "prompt": "a coti",
+          "answer": "to turn"
+        },
+        {
+          "type": "translation",
+          "prompt": "a traversa",
+          "answer": "to cross"
+        },
+        {
+          "type": "translation",
+          "prompt": "a se rătăci",
+          "answer": "to get lost"
+        },
+        {
+          "type": "translation",
+          "prompt": "Muzeul este la colțul bulevardului.",
+          "answer": "The museum is at the corner of the avenue.",
+          "accepted_answers": ["The museum is on the corner of the avenue."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Cotește la stânga după biserică.",
+          "answer": "Turn left after the church."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mergeți înainte până la semafor.",
+          "answer": "Go straight ahead to the traffic light.",
+          "accepted_answers": ["Go straight to the traffic light."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Traversăm podul în fiecare dimineață.",
+          "answer": "We cross the bridge every morning."
+        },
+        {
+          "type": "translation",
+          "prompt": "Locuiesc în acest cartier de un an.",
+          "answer": "I have lived in this neighborhood for a year.",
+          "accepted_answers": ["I've lived in this neighborhood for a year."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Gara este departe, ia un taxi.",
+          "answer": "The station is far, take a taxi.",
+          "accepted_answers": ["The station is far away, take a taxi."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Nu te rătăci în orașul vechi.",
+          "answer": "Don't get lost in the old town."
+        },
+        {
+          "type": "translation",
+          "prompt": "Privesc harta orașului.",
+          "answer": "I am looking at the map of the city.",
+          "accepted_answers": ["I'm looking at the map of the city.", "I look at the map of the city."]
+        },
+        {
+          "type": "translation",
+          "prompt": "The church is near the bridge.",
+          "answer": "Biserica este lângă pod."
+        },
+        {
+          "type": "translation",
+          "prompt": "Turn right at the traffic light.",
+          "answer": "Cotește la dreapta la semafor."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't want to get lost.",
+          "answer": "Nu vreau să mă rătăcesc."
+        },
+        {
+          "type": "translation",
+          "prompt": "My neighborhood is quiet.",
+          "answer": "Cartierul meu este liniștit."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'intersection':",
+          "options": [
+            "intersecție",
+            "pod",
+            "colț",
+            "cartier"
+          ],
+          "answer": "intersecție"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'museum':",
+          "options": [
+            "muzeu",
+            "biserică",
+            "bulevard",
+            "hartă"
+          ],
+          "answer": "muzeu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bridge':",
+          "options": [
+            "pod",
+            "biserică",
+            "intersecție",
+            "bulevard"
+          ],
+          "answer": "pod"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'church':",
+          "options": [
+            "biserică",
+            "muzeu",
+            "pod",
+            "cartier"
+          ],
+          "answer": "biserică"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'neighborhood':",
+          "options": [
+            "cartier",
+            "intersecție",
+            "colț",
+            "hartă"
+          ],
+          "answer": "cartier"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'traffic light':",
+          "options": [
+            "semafor",
+            "colț",
+            "hartă",
+            "biserică"
+          ],
+          "answer": "semafor"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'left':",
+          "options": [
+            "stânga",
+            "dreapta",
+            "colț",
+            "hartă"
+          ],
+          "answer": "stânga"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'straight ahead':",
+          "options": [
+            "înainte",
+            "stânga",
+            "dreapta",
+            "hartă"
+          ],
+          "answer": "înainte"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mergi ___ la semafor, apoi la dreapta.",
+          "answer": "până"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tocmai am venit ___ la bancă.",
+          "answer": "de"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Piața este în ___ bisericii.",
+          "answer": "fața"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Muzeul este ___ de biserică, nu departe.",
+          "answer": "aproape"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cotește ___ stânga la semafor.",
+          "answer": "la"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cotește la ___, nu la stânga.",
+          "answer": "dreapta"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ strada când e verde.",
+          "answer": "Traversează"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "M-am rătăcit, am nevoie de o ___.",
+          "answer": "hartă"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Money and Services",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "preț",
+          "translation": "price",
+          "pos": "noun",
+          "example": "Prețul biletului este mare."
+        },
+        {
+          "word": "chitanță",
+          "translation": "receipt",
+          "pos": "noun",
+          "example": "Păstrați chitanța, vă rog."
+        },
+        {
+          "word": "cont",
+          "translation": "account",
+          "pos": "noun",
+          "example": "Deschid un cont la bancă."
+        },
+        {
+          "word": "reducere",
+          "translation": "discount",
+          "pos": "noun",
+          "example": "Există o reducere pentru studenți."
+        },
+        {
+          "word": "numerar",
+          "translation": "cash",
+          "pos": "noun",
+          "example": "Plătesc în numerar."
+        },
+        {
+          "word": "card",
+          "translation": "card",
+          "accepted_translations": ["bank card", "credit card"],
+          "pos": "noun",
+          "example": "Plătesc cu cardul."
+        },
+        {
+          "word": "a plăti",
+          "translation": "to pay",
+          "pos": "verb",
+          "example": "Plătesc cafeaua."
+        },
+        {
+          "word": "a retrage",
+          "translation": "to withdraw",
+          "accepted_translations": ["to take out"],
+          "pos": "verb",
+          "example": "Retrag bani de la bancomat."
+        },
+        {
+          "word": "a cheltui",
+          "translation": "to spend",
+          "pos": "verb",
+          "example": "Cheltuiesc prea mulți bani."
+        },
+        {
+          "word": "a economisi",
+          "translation": "to save",
+          "pos": "verb",
+          "example": "Economisesc pentru o călătorie."
+        },
+        {
+          "word": "gratuit",
+          "translation": "free",
+          "pos": "adjective",
+          "example": "Intrarea este gratuită duminica."
+        },
+        {
+          "word": "formular",
+          "translation": "form",
+          "pos": "noun",
+          "example": "Completează acest formular, te rog."
+        },
+        {
+          "word": "a semna",
+          "translation": "to sign",
+          "pos": "verb",
+          "example": "Semnați aici, vă rog."
+        },
+        {
+          "word": "client",
+          "translation": "customer",
+          "pos": "noun",
+          "example": "Clientul așteaptă la casă."
+        },
+        {
+          "word": "ghișeu",
+          "translation": "counter",
+          "accepted_translations": ["service desk"],
+          "pos": "noun",
+          "example": "Clientul așteaptă la ghișeu."
+        },
+        {
+          "word": "sfat",
+          "translation": "advice",
+          "accepted_translations": ["tip"],
+          "pos": "noun",
+          "example": "Îmi dă un sfat bun."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "preț",
+          "answer": "price"
+        },
+        {
+          "type": "translation",
+          "prompt": "chitanță",
+          "answer": "receipt"
+        },
+        {
+          "type": "translation",
+          "prompt": "cont",
+          "answer": "account"
+        },
+        {
+          "type": "translation",
+          "prompt": "reducere",
+          "answer": "discount"
+        },
+        {
+          "type": "translation",
+          "prompt": "numerar",
+          "answer": "cash"
+        },
+        {
+          "type": "translation",
+          "prompt": "card",
+          "answer": "card",
+          "accepted_answers": ["bank card", "credit card"]
+        },
+        {
+          "type": "translation",
+          "prompt": "a plăti",
+          "answer": "to pay"
+        },
+        {
+          "type": "translation",
+          "prompt": "a retrage",
+          "answer": "to withdraw",
+          "accepted_answers": ["to take out"]
+        },
+        {
+          "type": "translation",
+          "prompt": "a cheltui",
+          "answer": "to spend"
+        },
+        {
+          "type": "translation",
+          "prompt": "a economisi",
+          "answer": "to save"
+        },
+        {
+          "type": "translation",
+          "prompt": "gratuit",
+          "answer": "free"
+        },
+        {
+          "type": "translation",
+          "prompt": "formular",
+          "answer": "form"
+        },
+        {
+          "type": "translation",
+          "prompt": "a semna",
+          "answer": "to sign"
+        },
+        {
+          "type": "translation",
+          "prompt": "client",
+          "answer": "customer"
+        },
+        {
+          "type": "translation",
+          "prompt": "ghișeu",
+          "answer": "counter",
+          "accepted_answers": ["service desk"]
+        },
+        {
+          "type": "translation",
+          "prompt": "sfat",
+          "answer": "advice",
+          "accepted_answers": ["tip"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Plătesc în numerar sau cu cardul ?",
+          "answer": "Do I pay in cash or by card?",
+          "accepted_answers": ["Should I pay in cash or by card?"]
+        },
+        {
+          "type": "translation",
+          "prompt": "Am retras o sută de lei de la bancomat.",
+          "answer": "I withdrew a hundred lei from the ATM.",
+          "accepted_answers": ["I took out a hundred lei from the ATM."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Există o reducere pentru studenți.",
+          "answer": "There is a discount for students.",
+          "accepted_answers": ["There's a discount for students."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Completați acest formular și semnați jos.",
+          "answer": "Fill out this form and sign at the bottom.",
+          "accepted_answers": ["Fill in this form and sign at the bottom."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Acest muzeu este gratuit în prima duminică a lunii.",
+          "answer": "This museum is free on the first Sunday of the month.",
+          "accepted_answers": ["This museum is free the first Sunday of the month."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ea economisește ca să cumpere o mașină.",
+          "answer": "She is saving to buy a car.",
+          "accepted_answers": ["She's saving to buy a car.", "She is saving to buy a car."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Serviciul este deja inclus în preț.",
+          "answer": "The service is already included in the price.",
+          "accepted_answers": ["Service is already included in the price."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Clientul cere o chitanță.",
+          "answer": "The customer asks for a receipt."
+        },
+        {
+          "type": "translation",
+          "prompt": "I want to open an account.",
+          "answer": "Vreau să deschid un cont."
+        },
+        {
+          "type": "translation",
+          "prompt": "You spend too much money.",
+          "answer": "Cheltuiești prea mulți bani."
+        },
+        {
+          "type": "translation",
+          "prompt": "Can you give me some advice?",
+          "answer": "Îmi poți da un sfat ?"
+        },
+        {
+          "type": "translation",
+          "prompt": "I pay by card.",
+          "answer": "Plătesc cu cardul."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'price':",
+          "options": [
+            "preț",
+            "chitanță",
+            "cont",
+            "reducere"
+          ],
+          "answer": "preț"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'receipt':",
+          "options": [
+            "chitanță",
+            "preț",
+            "cont",
+            "ghișeu"
+          ],
+          "answer": "chitanță"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'account':",
+          "options": [
+            "cont",
+            "preț",
+            "reducere",
+            "ghișeu"
+          ],
+          "answer": "cont"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'discount':",
+          "options": [
+            "reducere",
+            "preț",
+            "chitanță",
+            "formular"
+          ],
+          "answer": "reducere"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'cash':",
+          "options": [
+            "numerar",
+            "preț",
+            "chitanță",
+            "card"
+          ],
+          "answer": "numerar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'free':",
+          "options": [
+            "gratuit",
+            "client",
+            "ghișeu",
+            "chitanță"
+          ],
+          "answer": "gratuit"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'customer':",
+          "options": [
+            "client",
+            "ghișeu",
+            "chitanță",
+            "preț"
+          ],
+          "answer": "client"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'advice':",
+          "options": [
+            "sfat",
+            "ghișeu",
+            "client",
+            "reducere"
+          ],
+          "answer": "sfat"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ trebuie bani.",
+          "answer": "Îmi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Am ___ de un formular.",
+          "answer": "nevoie"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Îmi ___ o hartă nouă.",
+          "answer": "trebuie"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Am nevoie de un ___ nou.",
+          "answer": "cont"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Plătesc în ___.",
+          "answer": "numerar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Există o ___ pentru studenți ?",
+          "answer": "reducere"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Clientul așteaptă la ___.",
+          "answer": "ghișeu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Formularul trebuie ___.",
+          "answer": "semnat"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Nature and the Environment",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "natură",
+          "translation": "nature",
+          "pos": "noun",
+          "example": "Iubesc natura."
+        },
+        {
+          "word": "pădure",
+          "translation": "forest",
+          "pos": "noun",
+          "example": "Pădurea este liniștită dimineața."
+        },
+        {
+          "word": "râu",
+          "translation": "river",
+          "pos": "noun",
+          "example": "Râul trece prin pădure."
+        },
+        {
+          "word": "lac",
+          "translation": "lake",
+          "pos": "noun",
+          "example": "Înotăm în lac."
+        },
+        {
+          "word": "copac",
+          "translation": "tree",
+          "pos": "noun",
+          "example": "Acest copac este foarte bătrân."
+        },
+        {
+          "word": "floare",
+          "translation": "flower",
+          "pos": "noun",
+          "example": "Această floare este superbă."
+        },
+        {
+          "word": "animal",
+          "translation": "animal",
+          "pos": "noun",
+          "example": "Animalul doarme sub copac."
+        },
+        {
+          "word": "pasăre",
+          "translation": "bird",
+          "pos": "noun",
+          "example": "Pasărea cântă dimineața."
+        },
+        {
+          "word": "cer",
+          "translation": "sky",
+          "pos": "noun",
+          "example": "Cerul este albastru azi."
+        },
+        {
+          "word": "stea",
+          "translation": "star",
+          "pos": "noun",
+          "example": "Privesc stelele noaptea."
+        },
+        {
+          "word": "pământ",
+          "translation": "earth",
+          "accepted_translations": ["soil", "the earth"],
+          "pos": "noun",
+          "example": "Pământul se rotește în jurul soarelui."
+        },
+        {
+          "word": "climă",
+          "translation": "climate",
+          "pos": "noun",
+          "example": "Clima se schimbă peste tot."
+        },
+        {
+          "word": "poluare",
+          "translation": "pollution",
+          "pos": "noun",
+          "example": "Poluarea aerului este o problemă."
+        },
+        {
+          "word": "a proteja",
+          "translation": "to protect",
+          "pos": "verb",
+          "example": "Trebuie să protejăm pădurea."
+        },
+        {
+          "word": "a recicla",
+          "translation": "to recycle",
+          "pos": "verb",
+          "example": "Reciclez hârtia și sticla."
+        },
+        {
+          "word": "a planta",
+          "translation": "to plant",
+          "pos": "verb",
+          "example": "Plantează un copac în grădină."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "natură",
+          "answer": "nature"
+        },
+        {
+          "type": "translation",
+          "prompt": "pădure",
+          "answer": "forest"
+        },
+        {
+          "type": "translation",
+          "prompt": "râu",
+          "answer": "river"
+        },
+        {
+          "type": "translation",
+          "prompt": "lac",
+          "answer": "lake"
+        },
+        {
+          "type": "translation",
+          "prompt": "copac",
+          "answer": "tree"
+        },
+        {
+          "type": "translation",
+          "prompt": "floare",
+          "answer": "flower"
+        },
+        {
+          "type": "translation",
+          "prompt": "animal",
+          "answer": "animal"
+        },
+        {
+          "type": "translation",
+          "prompt": "pasăre",
+          "answer": "bird"
+        },
+        {
+          "type": "translation",
+          "prompt": "cer",
+          "answer": "sky"
+        },
+        {
+          "type": "translation",
+          "prompt": "stea",
+          "answer": "star"
+        },
+        {
+          "type": "translation",
+          "prompt": "pământ",
+          "answer": "earth",
+          "accepted_answers": ["soil", "the earth"]
+        },
+        {
+          "type": "translation",
+          "prompt": "climă",
+          "answer": "climate"
+        },
+        {
+          "type": "translation",
+          "prompt": "poluare",
+          "answer": "pollution"
+        },
+        {
+          "type": "translation",
+          "prompt": "a proteja",
+          "answer": "to protect"
+        },
+        {
+          "type": "translation",
+          "prompt": "a recicla",
+          "answer": "to recycle"
+        },
+        {
+          "type": "translation",
+          "prompt": "a planta",
+          "answer": "to plant"
+        },
+        {
+          "type": "translation",
+          "prompt": "Trebuie să protejăm natura.",
+          "answer": "We must protect nature.",
+          "accepted_answers": ["We have to protect nature."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Păsările cântă în pădure.",
+          "answer": "The birds sing in the forest."
+        },
+        {
+          "type": "translation",
+          "prompt": "Lacul este mai rece decât râul.",
+          "answer": "The lake is colder than the river."
+        },
+        {
+          "type": "translation",
+          "prompt": "Este cel mai bătrân copac din parc.",
+          "answer": "It is the oldest tree in the park.",
+          "accepted_answers": ["It's the oldest tree in the park."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Poluarea orașelor este o problemă mare.",
+          "answer": "Pollution in cities is a big problem.",
+          "accepted_answers": ["The pollution in cities is a big problem."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Privesc stelele când cerul este senin.",
+          "answer": "I look at the stars when the sky is clear.",
+          "accepted_answers": ["I watch the stars when the sky is clear."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Clima acestei regiuni este blândă.",
+          "answer": "The climate of this region is mild.",
+          "accepted_answers": ["The climate in this region is mild."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ea plantează flori primăvara.",
+          "answer": "She plants flowers in spring.",
+          "accepted_answers": ["She plants flowers in the spring."]
+        },
+        {
+          "type": "translation",
+          "prompt": "The river is behind the mountain.",
+          "answer": "Râul este în spatele muntelui."
+        },
+        {
+          "type": "translation",
+          "prompt": "This bird is beautiful.",
+          "answer": "Această pasăre este frumoasă."
+        },
+        {
+          "type": "translation",
+          "prompt": "We recycle glass and paper.",
+          "answer": "Reciclăm sticlă și hârtie."
+        },
+        {
+          "type": "translation",
+          "prompt": "The Earth is our home.",
+          "answer": "Pământul este casa noastră."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'nature':",
+          "options": [
+            "natură",
+            "pădure",
+            "lac",
+            "râu"
+          ],
+          "answer": "natură"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'forest':",
+          "options": [
+            "pădure",
+            "natură",
+            "lac",
+            "copac"
+          ],
+          "answer": "pădure"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'river':",
+          "options": [
+            "râu",
+            "lac",
+            "pădure",
+            "poluare"
+          ],
+          "answer": "râu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'lake':",
+          "options": [
+            "lac",
+            "râu",
+            "pădure",
+            "cer"
+          ],
+          "answer": "lac"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'tree':",
+          "options": [
+            "copac",
+            "pădure",
+            "floare",
+            "lac"
+          ],
+          "answer": "copac"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'flower':",
+          "options": [
+            "floare",
+            "copac",
+            "pădure",
+            "natură"
+          ],
+          "answer": "floare"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'bird':",
+          "options": [
+            "pasăre",
+            "animal",
+            "copac",
+            "cer"
+          ],
+          "answer": "pasăre"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'pollution':",
+          "options": [
+            "poluare",
+            "climă",
+            "natură",
+            "cer"
+          ],
+          "answer": "poluare"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Acest râu este mai lung ___ acela.",
+          "answer": "decât"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El este cel ___ bun din clasă.",
+          "answer": "mai"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ea este la fel de mare ___ mine.",
+          "answer": "ca"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Este cel mai mare lac ___ țară.",
+          "answer": "din"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Trebuie să ___ natura.",
+          "answer": "protejăm"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ hârtia și sticla, te rog.",
+          "answer": "Reciclează"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Primăvara ___ flori.",
+          "answer": "plantăm"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ aerului este o problemă gravă.",
+          "answer": "Poluarea"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Opinions and News",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "ziar",
+          "translation": "newspaper",
+          "pos": "noun",
+          "example": "Citesc ziarul în fiecare dimineață."
+        },
+        {
+          "word": "articol",
+          "translation": "article",
+          "pos": "noun",
+          "example": "Acest articol este foarte interesant."
+        },
+        {
+          "word": "radio",
+          "translation": "radio",
+          "pos": "noun",
+          "example": "Ascult radioul în mașină."
+        },
+        {
+          "word": "televiziune",
+          "translation": "television",
+          "accepted_translations": ["TV"],
+          "pos": "noun",
+          "example": "Televiziunea este în sufragerie."
+        },
+        {
+          "word": "opinie",
+          "translation": "opinion",
+          "pos": "noun",
+          "example": "Fiecare are proprierea opinie."
+        },
+        {
+          "word": "a crede",
+          "translation": "to believe",
+          "pos": "verb",
+          "example": "Nu cred povestea asta."
+        },
+        {
+          "word": "a fi de acord",
+          "translation": "to agree",
+          "pos": "verb",
+          "example": "Sunt de acord cu tine."
+        },
+        {
+          "word": "important",
+          "translation": "important",
+          "pos": "adjective",
+          "example": "Este o știre importantă."
+        },
+        {
+          "word": "probabil",
+          "translation": "probably",
+          "pos": "adverb",
+          "example": "Probabil vine mâine."
+        },
+        {
+          "word": "a discuta",
+          "translation": "to discuss",
+          "pos": "verb",
+          "example": "Discutăm despre articol."
+        },
+        {
+          "word": "jurnalist",
+          "translation": "journalist",
+          "pos": "noun",
+          "example": "Jurnalistul intervievează primarul."
+        },
+        {
+          "word": "societate",
+          "translation": "society",
+          "pos": "noun",
+          "example": "Societatea se schimbă repede."
+        },
+        {
+          "word": "eveniment",
+          "translation": "event",
+          "pos": "noun",
+          "example": "Este un eveniment important."
+        },
+        {
+          "word": "minciună",
+          "translation": "lie",
+          "accepted_translations": ["falsehood"],
+          "pos": "noun",
+          "example": "Nu spune minciuni."
+        },
+        {
+          "word": "a părea",
+          "translation": "to seem",
+          "pos": "verb",
+          "example": "Pari obosit."
+        },
+        {
+          "word": "fapt",
+          "translation": "fact",
+          "pos": "noun",
+          "example": "Este un fapt, nu o opinie."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "ziar",
+          "answer": "newspaper"
+        },
+        {
+          "type": "translation",
+          "prompt": "articol",
+          "answer": "article"
+        },
+        {
+          "type": "translation",
+          "prompt": "radio",
+          "answer": "radio"
+        },
+        {
+          "type": "translation",
+          "prompt": "televiziune",
+          "answer": "television",
+          "accepted_answers": ["TV"]
+        },
+        {
+          "type": "translation",
+          "prompt": "opinie",
+          "answer": "opinion"
+        },
+        {
+          "type": "translation",
+          "prompt": "a crede",
+          "answer": "to believe"
+        },
+        {
+          "type": "translation",
+          "prompt": "a fi de acord",
+          "answer": "to agree"
+        },
+        {
+          "type": "translation",
+          "prompt": "important",
+          "answer": "important"
+        },
+        {
+          "type": "translation",
+          "prompt": "probabil",
+          "answer": "probably"
+        },
+        {
+          "type": "translation",
+          "prompt": "a discuta",
+          "answer": "to discuss"
+        },
+        {
+          "type": "translation",
+          "prompt": "jurnalist",
+          "answer": "journalist"
+        },
+        {
+          "type": "translation",
+          "prompt": "societate",
+          "answer": "society"
+        },
+        {
+          "type": "translation",
+          "prompt": "eveniment",
+          "answer": "event"
+        },
+        {
+          "type": "translation",
+          "prompt": "minciună",
+          "answer": "lie",
+          "accepted_answers": ["falsehood"]
+        },
+        {
+          "type": "translation",
+          "prompt": "a părea",
+          "answer": "to seem"
+        },
+        {
+          "type": "translation",
+          "prompt": "fapt",
+          "answer": "fact"
+        },
+        {
+          "type": "translation",
+          "prompt": "Sunt de acord cu tine.",
+          "answer": "I agree with you."
+        },
+        {
+          "type": "translation",
+          "prompt": "Jurnalistul scrie un articol despre societate.",
+          "answer": "The journalist writes an article about society.",
+          "accepted_answers": ["The journalist is writing an article about society."]
+        },
+        {
+          "type": "translation",
+          "prompt": "În opinia mea, acest articol este foarte bun.",
+          "answer": "In my opinion, this article is very good."
+        },
+        {
+          "type": "translation",
+          "prompt": "El nu spune întotdeauna adevărul.",
+          "answer": "He doesn't always tell the truth.",
+          "accepted_answers": ["He does not always tell the truth."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Discutăm despre evenimentele zilei.",
+          "answer": "We discuss the events of the day.",
+          "accepted_answers": ["We're discussing the events of the day."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Acest eveniment pare important.",
+          "answer": "This event seems important."
+        },
+        {
+          "type": "translation",
+          "prompt": "Probabil are dreptate.",
+          "answer": "He is probably right.",
+          "accepted_answers": ["Probably he is right."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Cred că televiziunea minte uneori.",
+          "answer": "I believe that television sometimes lies.",
+          "accepted_answers": ["I think that television sometimes lies."]
+        },
+        {
+          "type": "translation",
+          "prompt": "I read the newspaper every morning.",
+          "answer": "Citesc ziarul în fiecare dimineață."
+        },
+        {
+          "type": "translation",
+          "prompt": "We must discuss this event.",
+          "answer": "Trebuie să discutăm acest eveniment."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's an important fact.",
+          "answer": "Este un fapt important."
+        },
+        {
+          "type": "translation",
+          "prompt": "I listen to the radio in the car.",
+          "answer": "Ascult radioul în mașină."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'newspaper':",
+          "options": [
+            "ziar",
+            "articol",
+            "radio",
+            "televiziune"
+          ],
+          "answer": "ziar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'article':",
+          "options": [
+            "articol",
+            "ziar",
+            "radio",
+            "fapt"
+          ],
+          "answer": "articol"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'radio':",
+          "options": [
+            "radio",
+            "televiziune",
+            "ziar",
+            "articol"
+          ],
+          "answer": "radio"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'television':",
+          "options": [
+            "televiziune",
+            "radio",
+            "ziar",
+            "jurnalist"
+          ],
+          "answer": "televiziune"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'opinion':",
+          "options": [
+            "opinie",
+            "minciună",
+            "fapt",
+            "societate"
+          ],
+          "answer": "opinie"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'journalist':",
+          "options": [
+            "jurnalist",
+            "societate",
+            "minciună",
+            "opinie"
+          ],
+          "answer": "jurnalist"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'lie':",
+          "options": [
+            "minciună",
+            "fapt",
+            "opinie",
+            "societate"
+          ],
+          "answer": "minciună"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'fact':",
+          "options": [
+            "fapt",
+            "minciună",
+            "opinie",
+            "eveniment"
+          ],
+          "answer": "fapt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ vrea să te ajut.",
+          "answer": "Aș"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tu ___ putea veni mâine ?",
+          "answer": "ai"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El ___ trebui să plece.",
+          "answer": "ar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Noi ___ merge la mare.",
+          "answer": "am"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Voi ___ face o pauză.",
+          "answer": "ați"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ele ___ dori o cafea.",
+          "answer": "ar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nu sunt de ___ cu tine.",
+          "answer": "acord"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ziaristul scrie un ___ despre societate.",
+          "answer": "articol"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Future and Dreams",
+      "level_hint": "upper-intermediate",
+      "vocabulary": [
+        {
+          "word": "viitor",
+          "translation": "future",
+          "accepted_translations": ["the future"],
+          "pos": "noun",
+          "example": "Viitorul este incert."
+        },
+        {
+          "word": "vis",
+          "translation": "dream",
+          "pos": "noun",
+          "example": "Am avut un vis frumos."
+        },
+        {
+          "word": "speranță",
+          "translation": "hope",
+          "pos": "noun",
+          "example": "Am speranța să câștig."
+        },
+        {
+          "word": "plan",
+          "translation": "plan",
+          "pos": "noun",
+          "example": "Planul meu este să călătoresc."
+        },
+        {
+          "word": "obiectiv",
+          "translation": "goal",
+          "accepted_translations": ["aim"],
+          "pos": "noun",
+          "example": "Obiectivul meu este să învăț română."
+        },
+        {
+          "word": "dorință",
+          "translation": "wish",
+          "pos": "noun",
+          "example": "Îmi fac o dorință."
+        },
+        {
+          "word": "poate",
+          "translation": "maybe",
+          "accepted_translations": ["perhaps"],
+          "pos": "adverb",
+          "example": "Poate plouă mâine."
+        },
+        {
+          "word": "într-o zi",
+          "translation": "one day",
+          "accepted_translations": ["someday"],
+          "pos": "adverb",
+          "example": "Într-o zi voi vizita Japonia."
+        },
+        {
+          "word": "succes",
+          "translation": "success",
+          "pos": "noun",
+          "example": "Îți doresc mult succes."
+        },
+        {
+          "word": "oportunitate",
+          "translation": "opportunity",
+          "accepted_translations": ["chance"],
+          "pos": "noun",
+          "example": "Este o oportunitate bună."
+        },
+        {
+          "word": "a spera",
+          "translation": "to hope",
+          "pos": "verb",
+          "example": "Sper să te văd curând."
+        },
+        {
+          "word": "a plănui",
+          "translation": "to plan",
+          "pos": "verb",
+          "example": "Plănuim o călătorie."
+        },
+        {
+          "word": "a promite",
+          "translation": "to promise",
+          "pos": "verb",
+          "example": "Îți promit că vin."
+        },
+        {
+          "word": "noroc",
+          "translation": "luck",
+          "pos": "noun",
+          "example": "Noroc la examen !"
+        },
+        {
+          "word": "fericire",
+          "translation": "happiness",
+          "pos": "noun",
+          "example": "Fericirea este simplă."
+        },
+        {
+          "word": "a reuși",
+          "translation": "to succeed",
+          "pos": "verb",
+          "example": "Vei reuși, știu asta."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "viitor",
+          "answer": "future",
+          "accepted_answers": ["the future"]
+        },
+        {
+          "type": "translation",
+          "prompt": "vis",
+          "answer": "dream"
+        },
+        {
+          "type": "translation",
+          "prompt": "speranță",
+          "answer": "hope"
+        },
+        {
+          "type": "translation",
+          "prompt": "plan",
+          "answer": "plan"
+        },
+        {
+          "type": "translation",
+          "prompt": "obiectiv",
+          "answer": "goal",
+          "accepted_answers": ["aim"]
+        },
+        {
+          "type": "translation",
+          "prompt": "dorință",
+          "answer": "wish"
+        },
+        {
+          "type": "translation",
+          "prompt": "poate",
+          "answer": "maybe",
+          "accepted_answers": ["perhaps"]
+        },
+        {
+          "type": "translation",
+          "prompt": "într-o zi",
+          "answer": "one day",
+          "accepted_answers": ["someday"]
+        },
+        {
+          "type": "translation",
+          "prompt": "succes",
+          "answer": "success"
+        },
+        {
+          "type": "translation",
+          "prompt": "oportunitate",
+          "answer": "opportunity",
+          "accepted_answers": ["chance"]
+        },
+        {
+          "type": "translation",
+          "prompt": "a spera",
+          "answer": "to hope"
+        },
+        {
+          "type": "translation",
+          "prompt": "a plănui",
+          "answer": "to plan"
+        },
+        {
+          "type": "translation",
+          "prompt": "a promite",
+          "answer": "to promise"
+        },
+        {
+          "type": "translation",
+          "prompt": "noroc",
+          "answer": "luck"
+        },
+        {
+          "type": "translation",
+          "prompt": "fericire",
+          "answer": "happiness"
+        },
+        {
+          "type": "translation",
+          "prompt": "a reuși",
+          "answer": "to succeed"
+        },
+        {
+          "type": "translation",
+          "prompt": "Într-o zi voi face un drum în jurul lumii.",
+          "answer": "One day I will travel around the world.",
+          "accepted_answers": ["Someday I will travel around the world."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Mâine vom merge la mare.",
+          "answer": "Tomorrow we will go to the sea."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vei reuși, sunt sigur.",
+          "answer": "You will make it, I'm sure.",
+          "accepted_answers": ["You will make it, I am sure."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Probabil va ploua mâine.",
+          "answer": "It will probably rain tomorrow."
+        },
+        {
+          "type": "translation",
+          "prompt": "Când voi avea bani, voi cumpăra o casă.",
+          "answer": "When I have money, I will buy a house."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ea speră să devină doctor.",
+          "answer": "She hopes to become a doctor."
+        },
+        {
+          "type": "translation",
+          "prompt": "Îți promit că nu te voi uita.",
+          "answer": "I promise you that I will not forget you.",
+          "accepted_answers": ["I promise you that I won't forget you."]
+        },
+        {
+          "type": "translation",
+          "prompt": "Fericirea nu se cumpără.",
+          "answer": "Happiness cannot be bought.",
+          "accepted_answers": ["You can't buy happiness.", "Happiness can't be bought."]
+        },
+        {
+          "type": "translation",
+          "prompt": "I hope to see you soon.",
+          "answer": "Sper să te văd curând."
+        },
+        {
+          "type": "translation",
+          "prompt": "One day I will speak Romanian very well.",
+          "answer": "Într-o zi voi vorbi foarte bine română."
+        },
+        {
+          "type": "translation",
+          "prompt": "My goal is to succeed.",
+          "answer": "Obiectivul meu este să reușesc."
+        },
+        {
+          "type": "translation",
+          "prompt": "It's a real opportunity.",
+          "answer": "Este o oportunitate reală."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'future':",
+          "options": [
+            "viitor",
+            "vis",
+            "speranță",
+            "plan"
+          ],
+          "answer": "viitor"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'dream':",
+          "options": [
+            "vis",
+            "speranță",
+            "viitor",
+            "fericire"
+          ],
+          "answer": "vis"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'hope':",
+          "options": [
+            "speranță",
+            "vis",
+            "viitor",
+            "fericire"
+          ],
+          "answer": "speranță"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'plan':",
+          "options": [
+            "plan",
+            "obiectiv",
+            "viitor",
+            "oportunitate"
+          ],
+          "answer": "plan"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'goal':",
+          "options": [
+            "obiectiv",
+            "plan",
+            "vis",
+            "succes"
+          ],
+          "answer": "obiectiv"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'success':",
+          "options": [
+            "succes",
+            "oportunitate",
+            "speranță",
+            "fericire"
+          ],
+          "answer": "succes"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'opportunity':",
+          "options": [
+            "oportunitate",
+            "succes",
+            "obiectiv",
+            "speranță"
+          ],
+          "answer": "oportunitate"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'happiness':",
+          "options": [
+            "fericire",
+            "vis",
+            "speranță",
+            "succes"
+          ],
+          "answer": "fericire"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Noi ___ merge la piață mâine.",
+          "answer": "vom"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tu ___ primi un cadou.",
+          "answer": "vei"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ei ___ fi acolo.",
+          "answer": "vor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Eu ___ călători într-o zi.",
+          "answer": "voi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Voi ___ reuși, știu asta.",
+          "answer": "veți"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ea ___ doctor mai târziu.",
+          "answer": "va"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Îți ___ că nu te voi uita.",
+          "answer": "promit"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Un vis poate deveni ___.",
+          "answer": "realitate"
+        }
+      ]
     }
   ]
 }
