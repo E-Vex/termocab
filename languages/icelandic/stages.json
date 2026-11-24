@@ -7772,6 +7772,1955 @@
           "answer": "draum"
         }
       ]
+    },
+    {
+      "id": 21,
+      "title": "Culture and the Arts",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "list",
+          "translation": "art",
+          "accepted_translations": ["the arts"],
+          "pos": "noun",
+          "example": "Nútímalist heillar mig."
+        },
+        {
+          "word": "málverk",
+          "translation": "painting",
+          "pos": "noun",
+          "example": "Þetta málverk er mjög gamalt."
+        },
+        {
+          "word": "höggmynd",
+          "translation": "sculpture",
+          "pos": "noun",
+          "example": "Höggmyndin er úr marmara."
+        },
+        {
+          "word": "sýning",
+          "translation": "exhibition",
+          "accepted_translations": ["exhibit"],
+          "pos": "noun",
+          "example": "Sýningin opnar á laugardaginn."
+        },
+        {
+          "word": "skáldsaga",
+          "translation": "novel",
+          "pos": "noun",
+          "example": "Ég er að lesa spennusögu."
+        },
+        {
+          "word": "leikhús",
+          "translation": "theater",
+          "accepted_translations": ["theatre"],
+          "pos": "noun",
+          "example": "Við förum í leikhús í kvöld."
+        },
+        {
+          "word": "tónleikar",
+          "translation": "concert",
+          "pos": "noun",
+          "example": "Tónleikarnir byrja klukkan átta."
+        },
+        {
+          "word": "svið",
+          "translation": "stage",
+          "pos": "noun",
+          "example": "Leikarinn kemur á svið."
+        },
+        {
+          "word": "áhorfendur",
+          "translation": "audience",
+          "accepted_translations": ["spectators", "the public"],
+          "pos": "noun",
+          "example": "Áhorfendur klappa hljótt."
+        },
+        {
+          "word": "listamaður",
+          "translation": "artist",
+          "pos": "noun",
+          "example": "Listamaðurinn málar portrétt."
+        },
+        {
+          "word": "tónlistarmaður",
+          "translation": "musician",
+          "pos": "noun",
+          "example": "Tónlistarmaðurinn stillir fióluna sína."
+        },
+        {
+          "word": "rithöfundur",
+          "translation": "writer",
+          "accepted_translations": ["author"],
+          "pos": "noun",
+          "example": "Rithöfundurinn klárar bókina sína."
+        },
+        {
+          "word": "leikari",
+          "translation": "actor",
+          "pos": "noun",
+          "example": "Leikarinn æfir hlutverk sitt."
+        },
+        {
+          "word": "meistaraverk",
+          "translation": "masterpiece",
+          "pos": "noun",
+          "example": "Þetta málverk er meistaraverk."
+        },
+        {
+          "word": "koma fram",
+          "translation": "to perform",
+          "pos": "verb",
+          "example": "Hljómsveitin kemur fram í kvöld."
+        },
+        {
+          "word": "klappa",
+          "translation": "to applaud",
+          "accepted_translations": ["to clap"],
+          "pos": "verb",
+          "example": "Við klöppum að loknum tónleikum."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "list",
+          "answer": "art",
+          "accepted_answers": [
+            "the arts"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "málverk",
+          "answer": "painting"
+        },
+        {
+          "type": "translation",
+          "prompt": "höggmynd",
+          "answer": "sculpture"
+        },
+        {
+          "type": "translation",
+          "prompt": "sýning",
+          "answer": "exhibition",
+          "accepted_answers": [
+            "exhibit"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "skáldsaga",
+          "answer": "novel"
+        },
+        {
+          "type": "translation",
+          "prompt": "leikhús",
+          "answer": "theater",
+          "accepted_answers": [
+            "theatre"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "tónleikar",
+          "answer": "concert"
+        },
+        {
+          "type": "translation",
+          "prompt": "svið",
+          "answer": "stage"
+        },
+        {
+          "type": "translation",
+          "prompt": "áhorfendur",
+          "answer": "audience",
+          "accepted_answers": [
+            "spectators",
+            "the public"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "listamaður",
+          "answer": "artist"
+        },
+        {
+          "type": "translation",
+          "prompt": "tónlistarmaður",
+          "answer": "musician"
+        },
+        {
+          "type": "translation",
+          "prompt": "rithöfundur",
+          "answer": "writer",
+          "accepted_answers": [
+            "author"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "leikari",
+          "answer": "actor"
+        },
+        {
+          "type": "translation",
+          "prompt": "meistaraverk",
+          "answer": "masterpiece"
+        },
+        {
+          "type": "translation",
+          "prompt": "koma fram",
+          "answer": "to perform"
+        },
+        {
+          "type": "translation",
+          "prompt": "klappa",
+          "answer": "to applaud",
+          "accepted_answers": [
+            "to clap"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Safnið opnar sýningu á nútímalist.",
+          "answer": "The museum opens an exhibition of modern art."
+        },
+        {
+          "type": "translation",
+          "prompt": "Skáldsagan sem ég er að lesa er meistaraverk.",
+          "answer": "The novel I am reading is a masterpiece."
+        },
+        {
+          "type": "translation",
+          "prompt": "Áhorfendur klöppuðu í tíu mínútur.",
+          "answer": "The audience applauded for ten minutes."
+        },
+        {
+          "type": "translation",
+          "prompt": "Rithöfundurinn undirritar skáldsöguna sína í bókabúðinni.",
+          "answer": "The writer signs his novel at the bookstore."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hún leikur aðalhlutverkið í leikhúsinu.",
+          "answer": "She plays the main role in the theater.",
+          "accepted_answers": [
+            "She plays the main role in the theatre."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Þetta er meistaraverk í íslenskri bókmenntum.",
+          "answer": "This is a masterpiece of Icelandic literature."
+        },
+        {
+          "type": "translation",
+          "prompt": "Tónlistarmaðurinn spilar píanó á tónleikunum.",
+          "answer": "The musician plays the piano at the concert."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hljómsveitin kemur fram í kvöld.",
+          "answer": "The band performs tonight."
+        },
+        {
+          "type": "translation",
+          "prompt": "The concert starts at eight.",
+          "answer": "Tónleikarnir byrja klukkan átta."
+        },
+        {
+          "type": "translation",
+          "prompt": "We applauded after the concert.",
+          "answer": "Við klöppuðum eftir tónleikana."
+        },
+        {
+          "type": "translation",
+          "prompt": "This sculpture is a masterpiece.",
+          "answer": "Þessi höggmynd er meistaraverk."
+        },
+        {
+          "type": "translation",
+          "prompt": "The writer finishes his novel.",
+          "answer": "Rithöfundurinn klárar skáldsöguna sína."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'art':",
+          "options": [
+            "list",
+            "málverk",
+            "sýning",
+            "leikhús"
+          ],
+          "answer": "list"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'painting':",
+          "options": [
+            "höggmynd",
+            "skáldsaga",
+            "tónleikar",
+            "málverk"
+          ],
+          "answer": "málverk"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sculpture':",
+          "options": [
+            "leikhús",
+            "svið",
+            "höggmynd",
+            "sýning"
+          ],
+          "answer": "höggmynd"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'exhibition':",
+          "options": [
+            "áhorfendur",
+            "sýning",
+            "skáldsaga",
+            "tónleikar"
+          ],
+          "answer": "sýning"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'novel':",
+          "options": [
+            "skáldsaga",
+            "leikhús",
+            "svið",
+            "listamaður"
+          ],
+          "answer": "skáldsaga"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'theater':",
+          "options": [
+            "tónleikar",
+            "áhorfendur",
+            "tónlistarmaður",
+            "leikhús"
+          ],
+          "answer": "leikhús"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'audience':",
+          "options": [
+            "rithöfundur",
+            "meistaraverk",
+            "áhorfendur",
+            "listamaður"
+          ],
+          "answer": "áhorfendur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'masterpiece':",
+          "options": [
+            "höggmynd",
+            "meistaraverk",
+            "koma fram",
+            "list"
+          ],
+          "answer": "meistaraverk"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bókin ___ ég les er löng.",
+          "answer": "sem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Málverkið ___ ég sá er frægt.",
+          "answer": "sem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Rithöfundurinn ___ við hittum er góður.",
+          "answer": "sem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tónleikarnir ___ þú vilt fara á byrja klukkan átta.",
+          "answer": "sem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Skáldsagan ___ hann skrifaði varð fræg.",
+          "answer": "sem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Áhorfendur ___ eftir tónleikana. (klappa)",
+          "answer": "klöppuðu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Leikarinn ___ á sviðið. (fara)",
+          "answer": "fer"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hún kemur ___ í kvöld.",
+          "answer": "fram"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Science and Technology",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "vísindi",
+          "translation": "science",
+          "pos": "noun",
+          "example": "Vísindin skýra alheiminn."
+        },
+        {
+          "word": "vísindamaður",
+          "translation": "scientist",
+          "pos": "noun",
+          "example": "Vísindamaðurinn vinnur í rannsóknarstofu."
+        },
+        {
+          "word": "tilraun",
+          "translation": "experiment",
+          "pos": "noun",
+          "example": "Tilraunin varði í eitt ár."
+        },
+        {
+          "word": "uppgötvun",
+          "translation": "discovery",
+          "pos": "noun",
+          "example": "Uppgötvunin breytti læknisfræðinni."
+        },
+        {
+          "word": "uppfinning",
+          "translation": "invention",
+          "pos": "noun",
+          "example": "Uppfinning símans."
+        },
+        {
+          "word": "rannsókn",
+          "translation": "research",
+          "pos": "noun",
+          "example": "Rannsóknin gengur hægt fram."
+        },
+        {
+          "word": "rannsóknarstofa",
+          "translation": "laboratory",
+          "accepted_translations": ["lab"],
+          "pos": "noun",
+          "example": "Rannsóknarstofan er lokuð á mánudögum."
+        },
+        {
+          "word": "gögn",
+          "translation": "data",
+          "pos": "noun",
+          "example": "Gögnin staðfestu tilgátuna."
+        },
+        {
+          "word": "hugbúnaður",
+          "translation": "software",
+          "pos": "noun",
+          "example": "Hugbúnaðurinn reiknar allt út."
+        },
+        {
+          "word": "netkerfi",
+          "translation": "network",
+          "pos": "noun",
+          "example": "Netkerfið datt út í nótt."
+        },
+        {
+          "word": "orka",
+          "translation": "energy",
+          "pos": "noun",
+          "example": "Sólarorka er hrein."
+        },
+        {
+          "word": "gervihnöttur",
+          "translation": "satellite",
+          "pos": "noun",
+          "example": "Gervihnetturinn ljósmyndar jörðina."
+        },
+        {
+          "word": "vélmenni",
+          "translation": "robot",
+          "pos": "noun",
+          "example": "Vélmennið setur saman bíla."
+        },
+        {
+          "word": "finna upp",
+          "translation": "to invent",
+          "pos": "verb",
+          "example": "Hún finnur upp nýjan vél."
+        },
+        {
+          "word": "uppgötva",
+          "translation": "to discover",
+          "pos": "verb",
+          "example": "Við uppgötvum helli."
+        },
+        {
+          "word": "reikna",
+          "translation": "to calculate",
+          "pos": "verb",
+          "example": "Tölvan reiknar mjög hratt."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "vísindi",
+          "answer": "science"
+        },
+        {
+          "type": "translation",
+          "prompt": "vísindamaður",
+          "answer": "scientist"
+        },
+        {
+          "type": "translation",
+          "prompt": "tilraun",
+          "answer": "experiment"
+        },
+        {
+          "type": "translation",
+          "prompt": "uppgötvun",
+          "answer": "discovery"
+        },
+        {
+          "type": "translation",
+          "prompt": "uppfinning",
+          "answer": "invention"
+        },
+        {
+          "type": "translation",
+          "prompt": "rannsókn",
+          "answer": "research"
+        },
+        {
+          "type": "translation",
+          "prompt": "rannsóknarstofa",
+          "answer": "laboratory",
+          "accepted_answers": [
+            "lab"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "gögn",
+          "answer": "data"
+        },
+        {
+          "type": "translation",
+          "prompt": "hugbúnaður",
+          "answer": "software"
+        },
+        {
+          "type": "translation",
+          "prompt": "netkerfi",
+          "answer": "network"
+        },
+        {
+          "type": "translation",
+          "prompt": "orka",
+          "answer": "energy"
+        },
+        {
+          "type": "translation",
+          "prompt": "gervihnöttur",
+          "answer": "satellite"
+        },
+        {
+          "type": "translation",
+          "prompt": "vélmenni",
+          "answer": "robot"
+        },
+        {
+          "type": "translation",
+          "prompt": "finna upp",
+          "answer": "to invent"
+        },
+        {
+          "type": "translation",
+          "prompt": "uppgötva",
+          "answer": "to discover"
+        },
+        {
+          "type": "translation",
+          "prompt": "reikna",
+          "answer": "to calculate"
+        },
+        {
+          "type": "translation",
+          "prompt": "Gervihnötturinn sendir gögn til jarðar.",
+          "answer": "The satellite sends data to the Earth."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vísindamenn gera tilraun í rannsóknarstofunni.",
+          "answer": "The scientists do an experiment in the laboratory."
+        },
+        {
+          "type": "translation",
+          "prompt": "Uppgötvunin breytti vísindunum.",
+          "answer": "The discovery changed science."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hugbúnaðurinn reiknar út niðurstöðurnar á einni sekúndu.",
+          "answer": "The software calculates the results in one second."
+        },
+        {
+          "type": "translation",
+          "prompt": "Það var uppfinningin sem breytti heiminum.",
+          "answer": "It was the invention that changed the world."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vélmennið vinnur í verksmiðjunni.",
+          "answer": "The robot works in the factory."
+        },
+        {
+          "type": "translation",
+          "prompt": "Rannsókn á sólarorku er að fara fram.",
+          "answer": "Research on solar energy is taking place."
+        },
+        {
+          "type": "translation",
+          "prompt": "Við erum að uppgötva hvernig netkerfið virkar.",
+          "answer": "We are discovering how the network works."
+        },
+        {
+          "type": "translation",
+          "prompt": "The scientist discovered a new planet.",
+          "answer": "Vísindamaðurinn uppgötvaði nýja plánetu."
+        },
+        {
+          "type": "translation",
+          "prompt": "This invention changed the world.",
+          "answer": "Þessi uppfinning breytti heiminum."
+        },
+        {
+          "type": "translation",
+          "prompt": "The robot works in the laboratory.",
+          "answer": "Vélmennið vinnur í rannsóknarstofunni."
+        },
+        {
+          "type": "translation",
+          "prompt": "Energy is important for the future.",
+          "answer": "Orka er mikilvæg fyrir framtíðina."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'science':",
+          "options": [
+            "vísindi",
+            "vísindamaður",
+            "uppgötvun",
+            "rannsókn"
+          ],
+          "answer": "vísindi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'scientist':",
+          "options": [
+            "tilraun",
+            "uppfinning",
+            "rannsóknarstofa",
+            "vísindamaður"
+          ],
+          "answer": "vísindamaður"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'discovery':",
+          "options": [
+            "rannsóknarstofa",
+            "hugbúnaður",
+            "uppgötvun",
+            "uppfinning"
+          ],
+          "answer": "uppgötvun"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'research':",
+          "options": [
+            "orka",
+            "rannsókn",
+            "rannsóknarstofa",
+            "hugbúnaður"
+          ],
+          "answer": "rannsókn"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'energy':",
+          "options": [
+            "orka",
+            "gervihnöttur",
+            "finna upp",
+            "reikna"
+          ],
+          "answer": "orka"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'satellite':",
+          "options": [
+            "vélmenni",
+            "uppgötva",
+            "vísindi",
+            "gervihnöttur"
+          ],
+          "answer": "gervihnöttur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'robot':",
+          "options": [
+            "reikna",
+            "vísindamaður",
+            "vélmenni",
+            "finna upp"
+          ],
+          "answer": "vélmenni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to discover':",
+          "options": [
+            "uppgötvun",
+            "uppgötva",
+            "reikna",
+            "vísindamaður"
+          ],
+          "answer": "uppgötva"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég kaupi bókina ___ að læra. (til)",
+          "answer": "til"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Við förum í rannsóknarstofuna ___ að gera tilraunina. (til)",
+          "answer": "til"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hún sparaði peninga ___ að kaupa tölvu. (til)",
+          "answer": "til"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hann hringdi ___ að panta miða. (til)",
+          "answer": "til"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég ætla ___ að rannsaka netkerfið. (að)",
+          "answer": "að"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vísindamaðurinn ___ tilraunina. (gera)",
+          "answer": "gerir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gervihnetturinn ___ gögn til jarðar. (senda)",
+          "answer": "sendir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vélmennið _____ . (reikna)",
+          "answer": "reiknar"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Society and Politics",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "lög",
+          "translation": "law",
+          "pos": "noun",
+          "example": "Þingið kýs um lög."
+        },
+        {
+          "word": "réttindi",
+          "translation": "rights",
+          "pos": "noun",
+          "example": "Hver borgari hefur réttindi."
+        },
+        {
+          "word": "ríkisstjórn",
+          "translation": "government",
+          "pos": "noun",
+          "example": "Ríkisstjórnin ákveður fjárlögin."
+        },
+        {
+          "word": "kosningar",
+          "translation": "elections",
+          "pos": "noun",
+          "example": "Kosningarnar fara fram í maí."
+        },
+        {
+          "word": "borgari",
+          "translation": "citizen",
+          "pos": "noun",
+          "example": "Borgarinn kýs frjálst."
+        },
+        {
+          "word": "stjórnmál",
+          "translation": "politics",
+          "accepted_translations": ["policy"],
+          "pos": "noun",
+          "example": "Stjórnmál tengja mig."
+        },
+        {
+          "word": "umræður",
+          "translation": "debate",
+          "pos": "noun",
+          "example": "Umræðurnar stóðu í þrjár klukkustundir."
+        },
+        {
+          "word": "frelsi",
+          "translation": "freedom",
+          "accepted_translations": ["liberty"],
+          "pos": "noun",
+          "example": "Frelsi fjölmiðla er mikilvægt."
+        },
+        {
+          "word": "réttlæti",
+          "translation": "justice",
+          "pos": "noun",
+          "example": "Réttlæti á að gilda alla."
+        },
+        {
+          "word": "skattur",
+          "translation": "tax",
+          "accepted_translations": ["taxes"],
+          "pos": "noun",
+          "example": "Við borgum skatt á hverju ári."
+        },
+        {
+          "word": "mótmæli",
+          "translation": "demonstration",
+          "accepted_translations": ["protest", "march"],
+          "pos": "noun",
+          "example": "Mótmælin fóru um bæinn."
+        },
+        {
+          "word": "þing",
+          "translation": "parliament",
+          "pos": "noun",
+          "example": "Þingið fulltrúar fólkið."
+        },
+        {
+          "word": "lýðræði",
+          "translation": "democracy",
+          "pos": "noun",
+          "example": "Lýðræðið ver réttindin."
+        },
+        {
+          "word": "fólk",
+          "translation": "the people",
+          "pos": "noun",
+          "example": "Í lýðræði ákveður fólkið."
+        },
+        {
+          "word": "kjósa",
+          "translation": "to vote",
+          "accepted_translations": ["to elect"],
+          "pos": "verb",
+          "example": "Ég kjó á sunnudaginn."
+        },
+        {
+          "word": "ákveða",
+          "translation": "to decide",
+          "pos": "verb",
+          "example": "Þú ákveður framtíð þína."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "lög",
+          "answer": "law"
+        },
+        {
+          "type": "translation",
+          "prompt": "réttindi",
+          "answer": "rights"
+        },
+        {
+          "type": "translation",
+          "prompt": "ríkisstjórn",
+          "answer": "government"
+        },
+        {
+          "type": "translation",
+          "prompt": "kosningar",
+          "answer": "elections"
+        },
+        {
+          "type": "translation",
+          "prompt": "borgari",
+          "answer": "citizen"
+        },
+        {
+          "type": "translation",
+          "prompt": "stjórnmál",
+          "answer": "politics",
+          "accepted_answers": [
+            "policy"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "umræður",
+          "answer": "debate"
+        },
+        {
+          "type": "translation",
+          "prompt": "frelsi",
+          "answer": "freedom",
+          "accepted_answers": [
+            "liberty"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "réttlæti",
+          "answer": "justice"
+        },
+        {
+          "type": "translation",
+          "prompt": "skattur",
+          "answer": "tax",
+          "accepted_answers": [
+            "taxes"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "mótmæli",
+          "answer": "demonstration",
+          "accepted_answers": [
+            "protest",
+            "march"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "þing",
+          "answer": "parliament"
+        },
+        {
+          "type": "translation",
+          "prompt": "lýðræði",
+          "answer": "democracy"
+        },
+        {
+          "type": "translation",
+          "prompt": "fólk",
+          "answer": "the people"
+        },
+        {
+          "type": "translation",
+          "prompt": "kjósa",
+          "answer": "to vote",
+          "accepted_answers": [
+            "to elect"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "ákveða",
+          "answer": "to decide"
+        },
+        {
+          "type": "translation",
+          "prompt": "Borgararnir kjósa í kosningunum.",
+          "answer": "Citizens vote in the elections."
+        },
+        {
+          "type": "translation",
+          "prompt": "Þingið kýs um ný lög.",
+          "answer": "Parliament votes on new laws."
+        },
+        {
+          "type": "translation",
+          "prompt": "Frelsi fjölmiðla er mikilvægt.",
+          "answer": "Freedom of the media is important."
+        },
+        {
+          "type": "translation",
+          "prompt": "Umræðurnar stóðu í þrjár klukkustundir.",
+          "answer": "The debate lasted three hours."
+        },
+        {
+          "type": "translation",
+          "prompt": "Við borgum skatt á hverju ári.",
+          "answer": "We pay taxes every year."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mótmælin söfnuðu þúsund manns.",
+          "answer": "The demonstration gathered a thousand people.",
+          "accepted_answers": [
+            "The protest gathered a thousand people.",
+            "The march gathered a thousand people."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Í lýðræði ákveður fólkið.",
+          "answer": "In a democracy, the people decide."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hver borgari hefur rétt til að kjósa.",
+          "answer": "Every citizen has the right to vote."
+        },
+        {
+          "type": "translation",
+          "prompt": "The government must decide.",
+          "answer": "Ríkisstjórnin verður að ákveða."
+        },
+        {
+          "type": "translation",
+          "prompt": "Freedom and justice are important values.",
+          "answer": "Frelsi og réttlæti eru mikilvæg gildi."
+        },
+        {
+          "type": "translation",
+          "prompt": "The vote took place on Sunday.",
+          "answer": "Kjörið fór fram á sunnudegi."
+        },
+        {
+          "type": "translation",
+          "prompt": "Citizens demonstrated for justice.",
+          "answer": "Borgararnir gengu í mótmælum fyrir réttlæti."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'law':",
+          "options": [
+            "lög",
+            "réttindi",
+            "kosningar",
+            "stjórnmál"
+          ],
+          "answer": "lög"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'rights':",
+          "options": [
+            "ríkisstjórn",
+            "borgari",
+            "umræður",
+            "réttindi"
+          ],
+          "answer": "réttindi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'government':",
+          "options": [
+            "stjórnmál",
+            "frelsi",
+            "ríkisstjórn",
+            "kosningar"
+          ],
+          "answer": "ríkisstjórn"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'elections':",
+          "options": [
+            "réttlæti",
+            "kosningar",
+            "borgari",
+            "umræður"
+          ],
+          "answer": "kosningar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'citizen':",
+          "options": [
+            "borgari",
+            "stjórnmál",
+            "frelsi",
+            "skattur"
+          ],
+          "answer": "borgari"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'politics':",
+          "options": [
+            "umræður",
+            "réttlæti",
+            "mótmæli",
+            "stjórnmál"
+          ],
+          "answer": "stjórnmál"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'freedom':",
+          "options": [
+            "mótmæli",
+            "lýðræði",
+            "frelsi",
+            "réttlæti"
+          ],
+          "answer": "frelsi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'justice':",
+          "options": [
+            "fólk",
+            "réttlæti",
+            "skattur",
+            "þing"
+          ],
+          "answer": "réttlæti"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þingið ___ ný lög. (samþykkja)",
+          "answer": "samþykkti"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kosningarnar ___ fram í maí. (fara)",
+          "answer": "fóru"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ríkisstjórnin ___ skatta. (hækka)",
+          "answer": "hækkaði"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þúsundir manna ___ á mótmælin. (koma)",
+          "answer": "komu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Borgararnir ___ í kosningunum. (kjósa)",
+          "answer": "kusu"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Við ___ skatt á hverju ári. (borga)",
+          "answer": "borgum"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Fólkið ___ forsetann. (kjósa)",
+          "answer": "kýs"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Lýðræði verndar ___ .",
+          "answer": "réttindin"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Feelings and Idioms",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "skömm",
+          "translation": "shame",
+          "pos": "noun",
+          "example": "Mér skömm fyrir mistökin mín."
+        },
+        {
+          "word": "stolt",
+          "translation": "pride",
+          "pos": "noun",
+          "example": "Ég finn fyrir miklu stolpi."
+        },
+        {
+          "word": "öfund",
+          "translation": "jealousy",
+          "pos": "noun",
+          "example": "Öfund eyðileggur vináttu."
+        },
+        {
+          "word": "léttir",
+          "translation": "relief",
+          "pos": "noun",
+          "example": "Fréttin var mikil léttir."
+        },
+        {
+          "word": "sektarkenning",
+          "translation": "guilt",
+          "pos": "noun",
+          "example": "Sektarkenningin lætur hann ekki sofa."
+        },
+        {
+          "word": "einsemd",
+          "translation": "loneliness",
+          "pos": "noun",
+          "example": "Einsemdin þyngist á veturna."
+        },
+        {
+          "word": "þolinmæði",
+          "translation": "patience",
+          "pos": "noun",
+          "example": "Þolinmæði er dyggð."
+        },
+        {
+          "word": "hugrekki",
+          "translation": "courage",
+          "accepted_translations": ["bravery"],
+          "pos": "noun",
+          "example": "Hann hafði hugrekki til að tala."
+        },
+        {
+          "word": "þakklæti",
+          "translation": "gratitude",
+          "accepted_translations": ["thankfulness"],
+          "pos": "noun",
+          "example": "Ég skulda henni þakklæti."
+        },
+        {
+          "word": "góðvild",
+          "translation": "kindness",
+          "pos": "noun",
+          "example": "Þakka þér fyrir góðvildina."
+        },
+        {
+          "word": "kvíði",
+          "translation": "anxiety",
+          "accepted_translations": ["worry"],
+          "pos": "noun",
+          "example": "Kvíðinn kemur fyrir prófum."
+        },
+        {
+          "word": "rífast",
+          "translation": "to argue",
+          "accepted_translations": ["to quarrel"],
+          "pos": "verb",
+          "example": "Þau rífast um smáhluti."
+        },
+        {
+          "word": "biðjast afsökunar",
+          "translation": "to apologize",
+          "pos": "verb",
+          "example": "Hún biðst afsökunar fyrir seinkun."
+        },
+        {
+          "word": "fyrirgefa",
+          "translation": "to forgive",
+          "pos": "verb",
+          "example": "Að fyrirgefa frelsar."
+        },
+        {
+          "word": "hafa rétt fyrir sér",
+          "translation": "to be right",
+          "pos": "verb",
+          "example": "Þú hefur rétt fyrir þér, eins og alltaf."
+        },
+        {
+          "word": "hafa rangt fyrir sér",
+          "translation": "to be wrong",
+          "pos": "verb",
+          "example": "Ég hafði rangt fyrir mér."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "skömm",
+          "answer": "shame"
+        },
+        {
+          "type": "translation",
+          "prompt": "stolt",
+          "answer": "pride"
+        },
+        {
+          "type": "translation",
+          "prompt": "öfund",
+          "answer": "jealousy"
+        },
+        {
+          "type": "translation",
+          "prompt": "léttir",
+          "answer": "relief"
+        },
+        {
+          "type": "translation",
+          "prompt": "sektarkenning",
+          "answer": "guilt"
+        },
+        {
+          "type": "translation",
+          "prompt": "einsemd",
+          "answer": "loneliness"
+        },
+        {
+          "type": "translation",
+          "prompt": "þolinmæði",
+          "answer": "patience"
+        },
+        {
+          "type": "translation",
+          "prompt": "hugrekki",
+          "answer": "courage",
+          "accepted_answers": [
+            "bravery"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "þakklæti",
+          "answer": "gratitude",
+          "accepted_answers": [
+            "thankfulness"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "góðvild",
+          "answer": "kindness"
+        },
+        {
+          "type": "translation",
+          "prompt": "kvíði",
+          "answer": "anxiety",
+          "accepted_answers": [
+            "worry"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "rífast",
+          "answer": "to argue",
+          "accepted_answers": [
+            "to quarrel"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "biðjast afsökunar",
+          "answer": "to apologize"
+        },
+        {
+          "type": "translation",
+          "prompt": "fyrirgefa",
+          "answer": "to forgive"
+        },
+        {
+          "type": "translation",
+          "prompt": "hafa rétt fyrir sér",
+          "answer": "to be right"
+        },
+        {
+          "type": "translation",
+          "prompt": "hafa rangt fyrir sér",
+          "answer": "to be wrong"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég er stoltur af þér.",
+          "answer": "I am proud of you."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hann hafði hugrekki til að segja sannleikann.",
+          "answer": "He had the courage to tell the truth."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hún biðst afsökunar fyrir seinkunina.",
+          "answer": "She apologizes for being late."
+        },
+        {
+          "type": "translation",
+          "prompt": "Einsemd er þung á veturna.",
+          "answer": "Loneliness is difficult in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Þú hefur rétt fyrir þér, eins og alltaf.",
+          "answer": "You are right, as always."
+        },
+        {
+          "type": "translation",
+          "prompt": "Vertu ekki öfundsjúk á gæfu hennar.",
+          "answer": "Don't be jealous of her fortune."
+        },
+        {
+          "type": "translation",
+          "prompt": "Þakka þér fyrir góðvildina.",
+          "answer": "Thank you for your kindness."
+        },
+        {
+          "type": "translation",
+          "prompt": "Þau rífast um litla hluti.",
+          "answer": "They argue about small things."
+        },
+        {
+          "type": "translation",
+          "prompt": "I was wrong, you were right.",
+          "answer": "Ég hafði rangt fyrir mér, þú hafðir rétt fyrir þér."
+        },
+        {
+          "type": "translation",
+          "prompt": "Please forgive me.",
+          "answer": "Fyrirgefðu mér, vinsamlegast."
+        },
+        {
+          "type": "translation",
+          "prompt": "Patience is a great quality.",
+          "answer": "Þolinmæði er mikil dyggð."
+        },
+        {
+          "type": "translation",
+          "prompt": "Shame and guilt are difficult feelings.",
+          "answer": "Skömm og sektarkenning eru erfið tilfinningar."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'shame':",
+          "options": [
+            "skömm",
+            "stolt",
+            "léttir",
+            "einsemd"
+          ],
+          "answer": "skömm"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'pride':",
+          "options": [
+            "öfund",
+            "sektarkenning",
+            "þolinmæði",
+            "stolt"
+          ],
+          "answer": "stolt"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'relief':",
+          "options": [
+            "þolinmæði",
+            "þakklæti",
+            "léttir",
+            "sektarkenning"
+          ],
+          "answer": "léttir"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'patience':",
+          "options": [
+            "rífast",
+            "þolinmæði",
+            "hugrekki",
+            "góðvild"
+          ],
+          "answer": "þolinmæði"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'gratitude':",
+          "options": [
+            "þakklæti",
+            "góðvild",
+            "rífast",
+            "fyrirgefa"
+          ],
+          "answer": "þakklæti"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to apologize':",
+          "options": [
+            "fyrirgefa",
+            "hafa rangt fyrir sér",
+            "stolt",
+            "biðjast afsökunar"
+          ],
+          "answer": "biðjast afsökunar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to forgive':",
+          "options": [
+            "skömm",
+            "öfund",
+            "fyrirgefa",
+            "hafa rétt fyrir sér"
+          ],
+          "answer": "fyrirgefa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to be wrong':",
+          "options": [
+            "sektarkenning",
+            "hafa rangt fyrir sér",
+            "skömm",
+            "öfund"
+          ],
+          "answer": "hafa rangt fyrir sér"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég hlakka ___ að sjá þig. (til)",
+          "answer": "til"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Það er ___ að þú fórst ekki. (synd)",
+          "answer": "synd"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég er stoltur ___ þín. (af)",
+          "answer": "af"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hann hefur alltaf ___ fyrir sér. (rétt)",
+          "answer": "rétt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þú hefur ___ fyrir þér í þetta skipti. (rangt)",
+          "answer": "rangt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég ____ afsökunar. (biðjast)",
+          "answer": "biðst"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Það var mikil ___ að heyra fréttina. (léttir)",
+          "answer": "léttir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þolinmæði er ___ . (dyggð)",
+          "answer": "dyggð"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Memories and Reflections",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "minni",
+          "translation": "memory",
+          "pos": "noun",
+          "example": "Minnið geymir andlit."
+        },
+        {
+          "word": "ungdómur",
+          "translation": "youth",
+          "pos": "noun",
+          "example": "Hann segir frá ungæsku sinni."
+        },
+        {
+          "word": "fortíð",
+          "translation": "past",
+          "pos": "noun",
+          "example": "Fortíðin skýrir nútíðina."
+        },
+        {
+          "word": "iðrun",
+          "translation": "regret",
+          "pos": "noun",
+          "example": "Mín mesta iðrun."
+        },
+        {
+          "word": "speki",
+          "translation": "wisdom",
+          "pos": "noun",
+          "example": "Árin flytja speki."
+        },
+        {
+          "word": "misheppnun",
+          "translation": "failure",
+          "pos": "noun",
+          "example": "Misheppnun er kennsla, ekki endir."
+        },
+        {
+          "word": "val",
+          "translation": "choice",
+          "accepted_translations": ["decision"],
+          "pos": "noun",
+          "example": "Þetta val breytti lífi mínu."
+        },
+        {
+          "word": "þögn",
+          "translation": "silence",
+          "pos": "noun",
+          "example": "Hún heldur þögn um málið."
+        },
+        {
+          "word": "loforð",
+          "translation": "promise",
+          "pos": "noun",
+          "example": "Hann hélt loforði sínu."
+        },
+        {
+          "word": "átak",
+          "translation": "effort",
+          "pos": "noun",
+          "example": "Átakið er alltaf verðugt."
+        },
+        {
+          "word": "örlög",
+          "translation": "destiny",
+          "accepted_translations": ["fate"],
+          "pos": "noun",
+          "example": "Ég trúi ekki á örlögin."
+        },
+        {
+          "word": "metnaður",
+          "translation": "ambition",
+          "pos": "noun",
+          "example": "Metnaður hans hefur engin takmörk."
+        },
+        {
+          "word": "muna",
+          "translation": "to remember",
+          "pos": "verb",
+          "example": "Ég man eftir þeim degi."
+        },
+        {
+          "word": "gleyma",
+          "translation": "to forget",
+          "pos": "verb",
+          "example": "Með tímanum gleymist."
+        },
+        {
+          "word": "alast upp",
+          "translation": "to grow up",
+          "pos": "verb",
+          "example": "Börnin alast upp hratt."
+        },
+        {
+          "word": "þroskast",
+          "translation": "to mature",
+          "pos": "verb",
+          "example": "Með árunum þroskast maður."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "minni",
+          "answer": "memory"
+        },
+        {
+          "type": "translation",
+          "prompt": "ungdómur",
+          "answer": "youth"
+        },
+        {
+          "type": "translation",
+          "prompt": "fortíð",
+          "answer": "past"
+        },
+        {
+          "type": "translation",
+          "prompt": "iðrun",
+          "answer": "regret"
+        },
+        {
+          "type": "translation",
+          "prompt": "speki",
+          "answer": "wisdom"
+        },
+        {
+          "type": "translation",
+          "prompt": "misheppnun",
+          "answer": "failure"
+        },
+        {
+          "type": "translation",
+          "prompt": "val",
+          "answer": "choice",
+          "accepted_answers": [
+            "decision"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "þögn",
+          "answer": "silence"
+        },
+        {
+          "type": "translation",
+          "prompt": "loforð",
+          "answer": "promise"
+        },
+        {
+          "type": "translation",
+          "prompt": "átak",
+          "answer": "effort"
+        },
+        {
+          "type": "translation",
+          "prompt": "örlög",
+          "answer": "destiny",
+          "accepted_answers": [
+            "fate"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "metnaður",
+          "answer": "ambition"
+        },
+        {
+          "type": "translation",
+          "prompt": "muna",
+          "answer": "to remember"
+        },
+        {
+          "type": "translation",
+          "prompt": "gleyma",
+          "answer": "to forget"
+        },
+        {
+          "type": "translation",
+          "prompt": "alast upp",
+          "answer": "to grow up"
+        },
+        {
+          "type": "translation",
+          "prompt": "þroskast",
+          "answer": "to mature"
+        },
+        {
+          "type": "translation",
+          "prompt": "Ef ég hefði vitað hefði ég tekið aðra ákvörðun.",
+          "answer": "If I had known, I would have made a different decision."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég bros þegar ég minnist ungdóms míns.",
+          "answer": "When I remember my youth, I smile."
+        },
+        {
+          "type": "translation",
+          "prompt": "Hún heldur þögn um fortíð sína.",
+          "answer": "She keeps quiet about her past."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég iðrast þess að hafa ekki ferðast.",
+          "answer": "I regret not having traveled."
+        },
+        {
+          "type": "translation",
+          "prompt": "Misheppnun er kennsla, ekki endir.",
+          "answer": "Failure is a lesson, not an end."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ég man eftir fyrsta fundinum okkar.",
+          "answer": "I remember our first meeting."
+        },
+        {
+          "type": "translation",
+          "prompt": "Með tímanum gleymast slæmu minningarnar.",
+          "answer": "With time, the bad memories are forgotten.",
+          "accepted_answers": [
+            "With time, one forgets the bad memories."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Hann tók sig til og þroskaðist.",
+          "answer": "He made an effort and he matured."
+        },
+        {
+          "type": "translation",
+          "prompt": "If I had been there, I would have helped you.",
+          "answer": "Ef ég hefði verið þar hefði ég hjálpað þér."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't remember her name.",
+          "answer": "Ég man ekki eftir nafninu hennar."
+        },
+        {
+          "type": "translation",
+          "prompt": "You have to grow up one day.",
+          "answer": "Þú verður að alast upp einn daginn."
+        },
+        {
+          "type": "translation",
+          "prompt": "The past explains the present.",
+          "answer": "Fortíðin skýrir nútíðina."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'memory':",
+          "options": [
+            "minni",
+            "ungdómur",
+            "iðrun",
+            "misheppnun"
+          ],
+          "answer": "minni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'youth':",
+          "options": [
+            "fortíð",
+            "speki",
+            "val",
+            "ungdómur"
+          ],
+          "answer": "ungdómur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'past':",
+          "options": [
+            "misheppnun",
+            "þögn",
+            "fortíð",
+            "iðrun"
+          ],
+          "answer": "fortíð"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'regret':",
+          "options": [
+            "loforð",
+            "iðrun",
+            "speki",
+            "val"
+          ],
+          "answer": "iðrun"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'choice':",
+          "options": [
+            "val",
+            "þögn",
+            "átak",
+            "metnaður"
+          ],
+          "answer": "val"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'silence':",
+          "options": [
+            "loforð",
+            "örlög",
+            "muna",
+            "þögn"
+          ],
+          "answer": "þögn"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to remember':",
+          "options": [
+            "þroskast",
+            "ungdómur",
+            "muna",
+            "gleyma"
+          ],
+          "answer": "muna"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to grow up':",
+          "options": [
+            "iðrun",
+            "alast upp",
+            "þroskast",
+            "ungdómur"
+          ],
+          "answer": "alast upp"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég ___ keypt húsið. (hefði)",
+          "answer": "hefði"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ef ég hefði vitað, ___ ég komið. (hefði)",
+          "answer": "hefði"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þú ___ getað hjálpað okkur. (hefðir)",
+          "answer": "hefðir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Við ___ verið farin heim ef þú hefðir komið. (vera)",
+          "answer": "verið"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Þegar ég kom, var lestin ___ . (fara)",
+          "answer": "farin"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ég ___ ekki eftir nafninu hennar. (muna)",
+          "answer": "man"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Allt gleymist ___ tímanum. (með)",
+          "answer": "með"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Börnin ___ hratt upp. (vaxa)",
+          "answer": "vaxa"
+        }
+      ]
     }
   ]
 }
