@@ -7904,6 +7904,1957 @@
           "answer": "başarı"
         }
       ]
+    },
+    {
+      "id": 21,
+      "title": "Culture and the Arts",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "sanat",
+          "translation": "art",
+          "accepted_translations": ["the arts"],
+          "pos": "noun",
+          "example": "Modern sanat beni büyülüyor."
+        },
+        {
+          "word": "tablo",
+          "translation": "painting",
+          "pos": "noun",
+          "example": "Bu tablo çok eski."
+        },
+        {
+          "word": "heykel",
+          "translation": "sculpture",
+          "pos": "noun",
+          "example": "Heykel mermerden yapılmış."
+        },
+        {
+          "word": "sergi",
+          "translation": "exhibition",
+          "accepted_translations": ["exhibit"],
+          "pos": "noun",
+          "example": "Sergi cumartesi açılıyor."
+        },
+        {
+          "word": "roman",
+          "translation": "novel",
+          "pos": "noun",
+          "example": "Polisiye roman okuyorum."
+        },
+        {
+          "word": "tiyatro",
+          "translation": "theater",
+          "accepted_translations": ["theatre"],
+          "pos": "noun",
+          "example": "Bu akşam tiyatroya gidiyoruz."
+        },
+        {
+          "word": "konser",
+          "translation": "concert",
+          "pos": "noun",
+          "example": "Konser sekizde başlıyor."
+        },
+        {
+          "word": "sahne",
+          "translation": "stage",
+          "pos": "noun",
+          "example": "Oyuncu sahneye çıkıyor."
+        },
+        {
+          "word": "seyirci",
+          "translation": "audience",
+          "accepted_translations": ["spectator", "the public"],
+          "pos": "noun",
+          "example": "Seyirciler alkışlıyor."
+        },
+        {
+          "word": "sanatçı",
+          "translation": "artist",
+          "pos": "noun",
+          "example": "Sanatçı portre çiziyor."
+        },
+        {
+          "word": "müzisyen",
+          "translation": "musician",
+          "pos": "noun",
+          "example": "Müzisyen kemanını akort ediyor."
+        },
+        {
+          "word": "yazar",
+          "translation": "writer",
+          "accepted_translations": ["author"],
+          "pos": "noun",
+          "example": "Yazar kitabını bitiriyor."
+        },
+        {
+          "word": "aktör",
+          "translation": "actor",
+          "pos": "noun",
+          "example": "Aktör rolünü prova ediyor."
+        },
+        {
+          "word": "başyapıt",
+          "translation": "masterpiece",
+          "pos": "noun",
+          "example": "Bu tablo bir başyapıt."
+        },
+        {
+          "word": "sahne almak",
+          "translation": "to perform",
+          "pos": "verb",
+          "example": "Grup bu akşam sahne alıyor."
+        },
+        {
+          "word": "alkışlamak",
+          "translation": "to applaud",
+          "accepted_translations": ["to clap"],
+          "pos": "verb",
+          "example": "Sonda alkışlıyoruz."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "sanat",
+          "answer": "art",
+          "accepted_answers": [
+            "the arts"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "tablo",
+          "answer": "painting"
+        },
+        {
+          "type": "translation",
+          "prompt": "heykel",
+          "answer": "sculpture"
+        },
+        {
+          "type": "translation",
+          "prompt": "sergi",
+          "answer": "exhibition",
+          "accepted_answers": [
+            "exhibit"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "roman",
+          "answer": "novel"
+        },
+        {
+          "type": "translation",
+          "prompt": "tiyatro",
+          "answer": "theater",
+          "accepted_answers": [
+            "theatre"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "konser",
+          "answer": "concert"
+        },
+        {
+          "type": "translation",
+          "prompt": "sahne",
+          "answer": "stage"
+        },
+        {
+          "type": "translation",
+          "prompt": "seyirci",
+          "answer": "audience",
+          "accepted_answers": [
+            "spectator",
+            "the public"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "sanatçı",
+          "answer": "artist"
+        },
+        {
+          "type": "translation",
+          "prompt": "müzisyen",
+          "answer": "musician"
+        },
+        {
+          "type": "translation",
+          "prompt": "yazar",
+          "answer": "writer",
+          "accepted_answers": [
+            "author"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "aktör",
+          "answer": "actor"
+        },
+        {
+          "type": "translation",
+          "prompt": "başyapıt",
+          "answer": "masterpiece"
+        },
+        {
+          "type": "translation",
+          "prompt": "sahne almak",
+          "answer": "to perform"
+        },
+        {
+          "type": "translation",
+          "prompt": "alkışlamak",
+          "answer": "to applaud",
+          "accepted_answers": [
+            "to clap"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Okuduğum roman bir başyapıt.",
+          "answer": "The novel I am reading is a masterpiece."
+        },
+        {
+          "type": "translation",
+          "prompt": "Müze modern sanat sergisi açıyor.",
+          "answer": "The museum is opening a modern art exhibition."
+        },
+        {
+          "type": "translation",
+          "prompt": "Seyirciler on dakika alkışladı.",
+          "answer": "The audience applauded for ten minutes."
+        },
+        {
+          "type": "translation",
+          "prompt": "Yazar kitabını kitapçıda imzalıyor.",
+          "answer": "The writer signs his book at the bookstore."
+        },
+        {
+          "type": "translation",
+          "prompt": "O tiyatroda başrolü oynuyor.",
+          "answer": "She plays the main role in the theater.",
+          "accepted_answers": [
+            "She plays the main role in the theatre."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bu roman Türk edebiyatının bir başyapıtı.",
+          "answer": "This novel is a masterpiece of Turkish literature."
+        },
+        {
+          "type": "translation",
+          "prompt": "Müzisyen konserde piyano çalıyor.",
+          "answer": "The musician plays the piano at the concert."
+        },
+        {
+          "type": "translation",
+          "prompt": "Grup bu akşam sahne alıyor.",
+          "answer": "The band performs tonight."
+        },
+        {
+          "type": "translation",
+          "prompt": "The concert starts at eight.",
+          "answer": "Konser saat sekizde başlıyor."
+        },
+        {
+          "type": "translation",
+          "prompt": "We applauded after the concert.",
+          "answer": "Konserden sonra alkışladık."
+        },
+        {
+          "type": "translation",
+          "prompt": "This sculpture is a masterpiece.",
+          "answer": "Bu heykel bir başyapıt."
+        },
+        {
+          "type": "translation",
+          "prompt": "The writer finishes his novel.",
+          "answer": "Yazar romanını bitiriyor."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'art':",
+          "options": [
+            "sanat",
+            "tablo",
+            "sergi",
+            "tiyatro"
+          ],
+          "answer": "sanat"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'painting':",
+          "options": [
+            "heykel",
+            "roman",
+            "konser",
+            "tablo"
+          ],
+          "answer": "tablo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sculpture':",
+          "options": [
+            "tiyatro",
+            "sahne",
+            "heykel",
+            "sergi"
+          ],
+          "answer": "heykel"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'exhibition':",
+          "options": [
+            "seyirci",
+            "sergi",
+            "roman",
+            "konser"
+          ],
+          "answer": "sergi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'novel':",
+          "options": [
+            "roman",
+            "tiyatro",
+            "sahne",
+            "sanatçı"
+          ],
+          "answer": "roman"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'theater':",
+          "options": [
+            "konser",
+            "seyirci",
+            "müzisyen",
+            "tiyatro"
+          ],
+          "answer": "tiyatro"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'audience':",
+          "options": [
+            "yazar",
+            "başyapıt",
+            "seyirci",
+            "sanatçı"
+          ],
+          "answer": "seyirci"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'masterpiece':",
+          "options": [
+            "heykel",
+            "başyapıt",
+            "sahne almak",
+            "sanat"
+          ],
+          "answer": "başyapıt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ kitap uzun. (okumak)",
+          "answer": "okuduğum"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ tablo ünlü. (görmek)",
+          "answer": "gördüğüm"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Beğendi___ roman bir başyapıt. (beğenmek)",
+          "answer": "ğim"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Seyirci ___ şarkı çok güzeldi. (dinlemek)",
+          "answer": "dinlediğim"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sanatçı ___ tablo satıyor. (çizmek)",
+          "answer": "çizdiği"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Seyirciler ___ . (alkışlamak)",
+          "answer": "alkışlıyor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Konser sekizde ___ . (başlamak)",
+          "answer": "başlıyor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bu heykel bir ___ .",
+          "answer": "başyapıt"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Science and Technology",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "bilim",
+          "translation": "science",
+          "pos": "noun",
+          "example": "Bilim evreni açıklıyor."
+        },
+        {
+          "word": "bilim insanı",
+          "translation": "scientist",
+          "pos": "noun",
+          "example": "Bilim insanı laboratuvarda çalışıyor."
+        },
+        {
+          "word": "deney",
+          "translation": "experiment",
+          "pos": "noun",
+          "example": "Deney bir yıl sürdü."
+        },
+        {
+          "word": "keşif",
+          "translation": "discovery",
+          "pos": "noun",
+          "example": "Keşif tıbı değiştirdi."
+        },
+        {
+          "word": "buluş",
+          "translation": "invention",
+          "pos": "noun",
+          "example": "Telefonun buluşu."
+        },
+        {
+          "word": "araştırma",
+          "translation": "research",
+          "pos": "noun",
+          "example": "Araştırma yavaş ilerliyor."
+        },
+        {
+          "word": "laboratuvar",
+          "translation": "laboratory",
+          "accepted_translations": ["lab"],
+          "pos": "noun",
+          "example": "Laboratuvar pazartesi kapalı."
+        },
+        {
+          "word": "veri",
+          "translation": "data",
+          "pos": "noun",
+          "example": "Veriler hipotezi doğruluyor."
+        },
+        {
+          "word": "yazılım",
+          "translation": "software",
+          "pos": "noun",
+          "example": "Yazılım her şeyi hesaplıyor."
+        },
+        {
+          "word": "ağ",
+          "translation": "network",
+          "pos": "noun",
+          "example": "Ağ bugün sabah çöktü."
+        },
+        {
+          "word": "enerji",
+          "translation": "energy",
+          "pos": "noun",
+          "example": "Güneş enerjisi temizdir."
+        },
+        {
+          "word": "uydu",
+          "translation": "satellite",
+          "pos": "noun",
+          "example": "Uydu Dünya'yı fotoğraflıyor."
+        },
+        {
+          "word": "robot",
+          "translation": "robot",
+          "pos": "noun",
+          "example": "Robot arabaları monte ediyor."
+        },
+        {
+          "word": "icat etmek",
+          "translation": "to invent",
+          "pos": "verb",
+          "example": "Yeni bir motor icat ediyor."
+        },
+        {
+          "word": "keşfetmek",
+          "translation": "to discover",
+          "pos": "verb",
+          "example": "Bir mağara keşfediyoruz."
+        },
+        {
+          "word": "hesaplamak",
+          "translation": "to calculate",
+          "pos": "verb",
+          "example": "Bilgisayar çok hızlı hesaplıyor."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "bilim",
+          "answer": "science"
+        },
+        {
+          "type": "translation",
+          "prompt": "bilim insanı",
+          "answer": "scientist"
+        },
+        {
+          "type": "translation",
+          "prompt": "deney",
+          "answer": "experiment"
+        },
+        {
+          "type": "translation",
+          "prompt": "keşif",
+          "answer": "discovery"
+        },
+        {
+          "type": "translation",
+          "prompt": "buluş",
+          "answer": "invention"
+        },
+        {
+          "type": "translation",
+          "prompt": "araştırma",
+          "answer": "research"
+        },
+        {
+          "type": "translation",
+          "prompt": "laboratuvar",
+          "answer": "laboratory",
+          "accepted_answers": [
+            "lab"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "veri",
+          "answer": "data"
+        },
+        {
+          "type": "translation",
+          "prompt": "yazılım",
+          "answer": "software"
+        },
+        {
+          "type": "translation",
+          "prompt": "ağ",
+          "answer": "network"
+        },
+        {
+          "type": "translation",
+          "prompt": "enerji",
+          "answer": "energy"
+        },
+        {
+          "type": "translation",
+          "prompt": "uydu",
+          "answer": "satellite"
+        },
+        {
+          "type": "translation",
+          "prompt": "robot",
+          "answer": "robot"
+        },
+        {
+          "type": "translation",
+          "prompt": "icat etmek",
+          "answer": "to invent"
+        },
+        {
+          "type": "translation",
+          "prompt": "keşfetmek",
+          "answer": "to discover"
+        },
+        {
+          "type": "translation",
+          "prompt": "hesaplamak",
+          "answer": "to calculate"
+        },
+        {
+          "type": "translation",
+          "prompt": "Uydu Dünya'ya veri gönderiyor.",
+          "answer": "The satellite sends data to the Earth."
+        },
+        {
+          "type": "translation",
+          "prompt": "Bilim insanları laboratuvarda deney yapıyor.",
+          "answer": "The scientists do an experiment in the laboratory."
+        },
+        {
+          "type": "translation",
+          "prompt": "Keşif bilimi değiştirdi.",
+          "answer": "The discovery changed science."
+        },
+        {
+          "type": "translation",
+          "prompt": "Yazılım sonuçları bir saniyede hesaplıyor.",
+          "answer": "The software calculates the results in one second."
+        },
+        {
+          "type": "translation",
+          "prompt": "Dünyayı değiştiren buluş oydu.",
+          "answer": "It was the invention that changed the world."
+        },
+        {
+          "type": "translation",
+          "prompt": "Robot fabrikada çalışıyor.",
+          "answer": "The robot works in the factory."
+        },
+        {
+          "type": "translation",
+          "prompt": "Güneş enerjisi araştırması ilerliyor.",
+          "answer": "Research on solar energy is advancing."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ağın nasıl çalıştığını keşfediyoruz.",
+          "answer": "We are discovering how the network works."
+        },
+        {
+          "type": "translation",
+          "prompt": "The scientist discovered a new planet.",
+          "answer": "Bilim insanı yeni bir gezegen keşfetti."
+        },
+        {
+          "type": "translation",
+          "prompt": "This invention changed the world.",
+          "answer": "Bu buluş dünyayı değiştirdi."
+        },
+        {
+          "type": "translation",
+          "prompt": "The robot works in the laboratory.",
+          "answer": "Robot laboratuvarda çalışıyor."
+        },
+        {
+          "type": "translation",
+          "prompt": "Energy is important for the future.",
+          "answer": "Enerji gelecek için önemli."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'science':",
+          "options": [
+            "bilim",
+            "bilim insanı",
+            "keşif",
+            "araştırma"
+          ],
+          "answer": "bilim"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'scientist':",
+          "options": [
+            "deney",
+            "buluş",
+            "laboratuvar",
+            "bilim insanı"
+          ],
+          "answer": "bilim insanı"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'discovery':",
+          "options": [
+            "laboratuvar",
+            "yazılım",
+            "keşif",
+            "buluş"
+          ],
+          "answer": "keşif"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'research':",
+          "options": [
+            "enerji",
+            "araştırma",
+            "laboratuvar",
+            "yazılım"
+          ],
+          "answer": "araştırma"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'energy':",
+          "options": [
+            "enerji",
+            "uydu",
+            "icat etmek",
+            "hesaplamak"
+          ],
+          "answer": "enerji"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'satellite':",
+          "options": [
+            "robot",
+            "keşfetmek",
+            "bilim",
+            "uydu"
+          ],
+          "answer": "uydu"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'robot':",
+          "options": [
+            "hesaplamak",
+            "bilim insanı",
+            "robot",
+            "icat etmek"
+          ],
+          "answer": "robot"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to discover':",
+          "options": [
+            "keşif",
+            "keşfetmek",
+            "hesaplamak",
+            "bilim insanı"
+          ],
+          "answer": "keşfetmek"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Eve ___ dinlenirim. (varmak)",
+          "answer": "varınca"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "İşten ___ yemek yerim. (çıkmak)",
+          "answer": "çıkınca"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sabah ___ kahve içerim. (uyanmak)",
+          "answer": "uyanınca"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Filmi ___ ağladım. (izlemek)",
+          "answer": "izleyince"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Deneyi ___ sonuçları yazarım. (bitirmek)",
+          "answer": "bitirince"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Robot verileri ___ . (hesaplamak)",
+          "answer": "hesaplar"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Uydu, Dünya'nın fotoğraflarını ___ . (göndermek)",
+          "answer": "gönderir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ yeni bir gezegen keşfetti.",
+          "answer": "Bilim insanları"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Society and Politics",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "yasa",
+          "translation": "law",
+          "pos": "noun",
+          "example": "Meclis yasa kabul ediyor."
+        },
+        {
+          "word": "hak",
+          "translation": "right",
+          "pos": "noun",
+          "example": "Her vatandaşın hakları var."
+        },
+        {
+          "word": "hükümet",
+          "translation": "government",
+          "pos": "noun",
+          "example": "Hükümet bütçeyi kararlaştırıyor."
+        },
+        {
+          "word": "seçim",
+          "translation": "election",
+          "pos": "noun",
+          "example": "Seçim mayısta yapılacak."
+        },
+        {
+          "word": "vatandaş",
+          "translation": "citizen",
+          "pos": "noun",
+          "example": "Vatandaş özgürce oy veriyor."
+        },
+        {
+          "word": "siyaset",
+          "translation": "politics",
+          "accepted_translations": ["policy"],
+          "pos": "noun",
+          "example": "Siyaset ilgimi çekiyor."
+        },
+        {
+          "word": "tartışma",
+          "translation": "debate",
+          "pos": "noun",
+          "example": "Tartışma üç saat sürdü."
+        },
+        {
+          "word": "özgürlük",
+          "translation": "freedom",
+          "accepted_translations": ["liberty"],
+          "pos": "noun",
+          "example": "Basın özgürlüğü önemlidir."
+        },
+        {
+          "word": "adalet",
+          "translation": "justice",
+          "pos": "noun",
+          "example": "Adalet herkese eşit olmalı."
+        },
+        {
+          "word": "vergi",
+          "translation": "tax",
+          "accepted_translations": ["taxes"],
+          "pos": "noun",
+          "example": "Her yıl vergi ödüyoruz."
+        },
+        {
+          "word": "gösteri",
+          "translation": "demonstration",
+          "accepted_translations": ["protest", "march"],
+          "pos": "noun",
+          "example": "Gösteri şehri geçti."
+        },
+        {
+          "word": "meclis",
+          "translation": "parliament",
+          "pos": "noun",
+          "example": "Meclis halkı temsil eder."
+        },
+        {
+          "word": "demokrasi",
+          "translation": "democracy",
+          "pos": "noun",
+          "example": "Demokrasi hakları korur."
+        },
+        {
+          "word": "halk",
+          "translation": "the people",
+          "pos": "noun",
+          "example": "Demokraside halk karar verir."
+        },
+        {
+          "word": "oy vermek",
+          "translation": "to vote",
+          "pos": "verb",
+          "example": "Pazar günü oy vereceğim."
+        },
+        {
+          "word": "karar vermek",
+          "translation": "to decide",
+          "pos": "verb",
+          "example": "Geleceğine sen karar veriyorsun."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "yasa",
+          "answer": "law"
+        },
+        {
+          "type": "translation",
+          "prompt": "hak",
+          "answer": "right"
+        },
+        {
+          "type": "translation",
+          "prompt": "hükümet",
+          "answer": "government"
+        },
+        {
+          "type": "translation",
+          "prompt": "seçim",
+          "answer": "election"
+        },
+        {
+          "type": "translation",
+          "prompt": "vatandaş",
+          "answer": "citizen"
+        },
+        {
+          "type": "translation",
+          "prompt": "siyaset",
+          "answer": "politics",
+          "accepted_answers": [
+            "policy"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "tartışma",
+          "answer": "debate"
+        },
+        {
+          "type": "translation",
+          "prompt": "özgürlük",
+          "answer": "freedom",
+          "accepted_answers": [
+            "liberty"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "adalet",
+          "answer": "justice"
+        },
+        {
+          "type": "translation",
+          "prompt": "vergi",
+          "answer": "tax",
+          "accepted_answers": [
+            "taxes"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "gösteri",
+          "answer": "demonstration",
+          "accepted_answers": [
+            "protest",
+            "march"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "meclis",
+          "answer": "parliament"
+        },
+        {
+          "type": "translation",
+          "prompt": "demokrasi",
+          "answer": "democracy"
+        },
+        {
+          "type": "translation",
+          "prompt": "halk",
+          "answer": "the people"
+        },
+        {
+          "type": "translation",
+          "prompt": "oy vermek",
+          "answer": "to vote"
+        },
+        {
+          "type": "translation",
+          "prompt": "karar vermek",
+          "answer": "to decide"
+        },
+        {
+          "type": "translation",
+          "prompt": "Vatandaşlar seçimde oy veriyor.",
+          "answer": "Citizens vote in the election."
+        },
+        {
+          "type": "translation",
+          "prompt": "Meclis yeni bir yasa kabul ediyor.",
+          "answer": "Parliament passes a new law."
+        },
+        {
+          "type": "translation",
+          "prompt": "Basın özgürlüğü önemli.",
+          "answer": "Freedom of the press is important."
+        },
+        {
+          "type": "translation",
+          "prompt": "Tartışma üç saat sürdü.",
+          "answer": "The debate lasted three hours."
+        },
+        {
+          "type": "translation",
+          "prompt": "Her yıl vergi ödüyoruz.",
+          "answer": "We pay taxes every year."
+        },
+        {
+          "type": "translation",
+          "prompt": "Gösteri bin kişi topladı.",
+          "answer": "The demonstration gathered a thousand people.",
+          "accepted_answers": [
+            "The protest gathered a thousand people.",
+            "The march gathered a thousand people."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Demokraside halk karar verir.",
+          "answer": "In a democracy, the people decide."
+        },
+        {
+          "type": "translation",
+          "prompt": "Her vatandaşın oy verme hakkı var.",
+          "answer": "Every citizen has the right to vote."
+        },
+        {
+          "type": "translation",
+          "prompt": "The government must decide.",
+          "answer": "Hükümetin karar vermesi gerekiyor."
+        },
+        {
+          "type": "translation",
+          "prompt": "Freedom and justice are important values.",
+          "answer": "Özgürlük ve adalet önemli değerlerdir."
+        },
+        {
+          "type": "translation",
+          "prompt": "The vote took place on Sunday.",
+          "answer": "Oylama pazar günü yapıldı."
+        },
+        {
+          "type": "translation",
+          "prompt": "Citizens demonstrated for justice.",
+          "answer": "Vatandaşlar adalet için gösteri yaptı."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'law':",
+          "options": [
+            "yasa",
+            "hak",
+            "seçim",
+            "siyaset"
+          ],
+          "answer": "yasa"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'right':",
+          "options": [
+            "hükümet",
+            "vatandaş",
+            "tartışma",
+            "hak"
+          ],
+          "answer": "hak"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'government':",
+          "options": [
+            "siyaset",
+            "özgürlük",
+            "hükümet",
+            "seçim"
+          ],
+          "answer": "hükümet"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'election':",
+          "options": [
+            "adalet",
+            "seçim",
+            "vatandaş",
+            "tartışma"
+          ],
+          "answer": "seçim"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'citizen':",
+          "options": [
+            "vatandaş",
+            "siyaset",
+            "özgürlük",
+            "vergi"
+          ],
+          "answer": "vatandaş"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'politics':",
+          "options": [
+            "tartışma",
+            "adalet",
+            "gösteri",
+            "siyaset"
+          ],
+          "answer": "siyaset"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'freedom':",
+          "options": [
+            "gösteri",
+            "demokrasi",
+            "özgürlük",
+            "adalet"
+          ],
+          "answer": "özgürlük"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'justice':",
+          "options": [
+            "halk",
+            "adalet",
+            "vergi",
+            "meclis"
+          ],
+          "answer": "adalet"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gazetede okudum: seçim ___ . (ertelemek)",
+          "answer": "ertelenmiş"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Meclis yeni bir yasa ___ . (kabul etmek)",
+          "answer": "kabul etmiş"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hükümet vergiyi ___ . (artırmak)",
+          "answer": "artırmış"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Milyonlarca kişi gösteriye ___ . (katılmak)",
+          "answer": "katılmış"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vatandaşlar seçimde ___ . (oy vermek)",
+          "answer": "oy vermiş"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Herkes ___ önünde eşittir.",
+          "answer": "yasa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Halk seçimde ___ . (karar vermek)",
+          "answer": "karar verir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ halkın sesidir.",
+          "answer": "Meclis"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Feelings and Idioms",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "utanç",
+          "translation": "shame",
+          "pos": "noun",
+          "example": "Hatam için utanç duyuyorum."
+        },
+        {
+          "word": "gurur",
+          "translation": "pride",
+          "pos": "noun",
+          "example": "Büyük bir gurur duyuyorum."
+        },
+        {
+          "word": "kıskançlık",
+          "translation": "jealousy",
+          "pos": "noun",
+          "example": "Kıskançlık dostluğu yıkar."
+        },
+        {
+          "word": "rahatlama",
+          "translation": "relief",
+          "pos": "noun",
+          "example": "Haber bir rahatlama oldu."
+        },
+        {
+          "word": "suçluluk",
+          "translation": "guilt",
+          "pos": "noun",
+          "example": "Suçluluk onu uyutmuyor."
+        },
+        {
+          "word": "yalnızlık",
+          "translation": "loneliness",
+          "pos": "noun",
+          "example": "Yalnızlık kışın ağırdır."
+        },
+        {
+          "word": "sabır",
+          "translation": "patience",
+          "pos": "noun",
+          "example": "Sabır bir erdemdir."
+        },
+        {
+          "word": "cesaret",
+          "translation": "courage",
+          "accepted_translations": ["bravery"],
+          "pos": "noun",
+          "example": "Konuşma cesareti vardı."
+        },
+        {
+          "word": "şükran",
+          "translation": "gratitude",
+          "accepted_translations": ["thankfulness"],
+          "pos": "noun",
+          "example": "Sana şükran borçluyum."
+        },
+        {
+          "word": "nezaket",
+          "translation": "kindness",
+          "pos": "noun",
+          "example": "Nezaketin için teşekkürler."
+        },
+        {
+          "word": "kıskanmak",
+          "translation": "to envy",
+          "accepted_translations": ["to be jealous"],
+          "pos": "verb",
+          "example": "Başarısını kıskanma."
+        },
+        {
+          "word": "kavga etmek",
+          "translation": "to argue",
+          "accepted_translations": ["to quarrel", "to fight"],
+          "pos": "verb",
+          "example": "Önemsiz şeyler için kavga ediyorlar."
+        },
+        {
+          "word": "özür dilemek",
+          "translation": "to apologize",
+          "pos": "verb",
+          "example": "Gecikme için özür diliyor."
+        },
+        {
+          "word": "affetmek",
+          "translation": "to forgive",
+          "pos": "verb",
+          "example": "Affetmek özgürleştirir."
+        },
+        {
+          "word": "haklı olmak",
+          "translation": "to be right",
+          "pos": "verb",
+          "example": "Her zamanki gibi haklısın."
+        },
+        {
+          "word": "yanılmak",
+          "translation": "to be wrong",
+          "accepted_translations": ["to be mistaken"],
+          "pos": "verb",
+          "example": "Bu konuda yanıldım."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "utanç",
+          "answer": "shame"
+        },
+        {
+          "type": "translation",
+          "prompt": "gurur",
+          "answer": "pride"
+        },
+        {
+          "type": "translation",
+          "prompt": "kıskançlık",
+          "answer": "jealousy"
+        },
+        {
+          "type": "translation",
+          "prompt": "rahatlama",
+          "answer": "relief"
+        },
+        {
+          "type": "translation",
+          "prompt": "suçluluk",
+          "answer": "guilt"
+        },
+        {
+          "type": "translation",
+          "prompt": "yalnızlık",
+          "answer": "loneliness"
+        },
+        {
+          "type": "translation",
+          "prompt": "sabır",
+          "answer": "patience"
+        },
+        {
+          "type": "translation",
+          "prompt": "cesaret",
+          "answer": "courage",
+          "accepted_answers": [
+            "bravery"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "şükran",
+          "answer": "gratitude",
+          "accepted_answers": [
+            "thankfulness"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "nezaket",
+          "answer": "kindness"
+        },
+        {
+          "type": "translation",
+          "prompt": "kıskanmak",
+          "answer": "to envy",
+          "accepted_answers": [
+            "to be jealous"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "kavga etmek",
+          "answer": "to argue",
+          "accepted_answers": [
+            "to quarrel",
+            "to fight"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "özür dilemek",
+          "answer": "to apologize"
+        },
+        {
+          "type": "translation",
+          "prompt": "affetmek",
+          "answer": "to forgive"
+        },
+        {
+          "type": "translation",
+          "prompt": "haklı olmak",
+          "answer": "to be right"
+        },
+        {
+          "type": "translation",
+          "prompt": "yanılmak",
+          "answer": "to be wrong",
+          "accepted_answers": [
+            "to be mistaken"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Seninle gurur duyuyorum.",
+          "answer": "I am proud of you."
+        },
+        {
+          "type": "translation",
+          "prompt": "Doğruyu söyleyecek cesareti vardı.",
+          "answer": "He had the courage to tell the truth."
+        },
+        {
+          "type": "translation",
+          "prompt": "Gecikme için özür diliyor.",
+          "answer": "She apologizes for being late."
+        },
+        {
+          "type": "translation",
+          "prompt": "Yalnızlık kışın zordur.",
+          "answer": "Loneliness is difficult in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Haklısın, her zamanki gibi.",
+          "answer": "You are right, as always."
+        },
+        {
+          "type": "translation",
+          "prompt": "Başarısını kıskanma.",
+          "answer": "Don't envy her success."
+        },
+        {
+          "type": "translation",
+          "prompt": "Nezaketin için teşekkürler.",
+          "answer": "Thank you for your kindness."
+        },
+        {
+          "type": "translation",
+          "prompt": "Küçük şeyler için kavga ediyorlar.",
+          "answer": "They argue about small things."
+        },
+        {
+          "type": "translation",
+          "prompt": "I was wrong, you were right.",
+          "answer": "Ben yanıldım, sen haklıydın."
+        },
+        {
+          "type": "translation",
+          "prompt": "Please forgive me.",
+          "answer": "Beni affet, lütfen."
+        },
+        {
+          "type": "translation",
+          "prompt": "Patience is a great quality.",
+          "answer": "Sabır büyük bir erdemdir."
+        },
+        {
+          "type": "translation",
+          "prompt": "Shame and guilt are difficult feelings.",
+          "answer": "Utanç ve suçluluk zor duygulardır."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'shame':",
+          "options": [
+            "utanç",
+            "gurur",
+            "rahatlama",
+            "yalnızlık"
+          ],
+          "answer": "utanç"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'pride':",
+          "options": [
+            "kıskançlık",
+            "suçluluk",
+            "sabır",
+            "gurur"
+          ],
+          "answer": "gurur"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'relief':",
+          "options": [
+            "sabır",
+            "şükran",
+            "rahatlama",
+            "suçluluk"
+          ],
+          "answer": "rahatlama"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'patience':",
+          "options": [
+            "kavga etmek",
+            "sabır",
+            "cesaret",
+            "nezaket"
+          ],
+          "answer": "sabır"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'gratitude':",
+          "options": [
+            "şükran",
+            "nezaket",
+            "kavga etmek",
+            "affetmek"
+          ],
+          "answer": "şükran"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to apologize':",
+          "options": [
+            "affetmek",
+            "yanılmak",
+            "gurur",
+            "özür dilemek"
+          ],
+          "answer": "özür dilemek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to forgive':",
+          "options": [
+            "utanç",
+            "kıskançlık",
+            "affetmek",
+            "haklı olmak"
+          ],
+          "answer": "affetmek"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to be wrong':",
+          "options": [
+            "suçluluk",
+            "yanılmak",
+            "utanç",
+            "kıskançlık"
+          ],
+          "answer": "yanılmak"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Canım ___ . (sıkılmak)",
+          "answer": "sıkılıyor"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kendimi ___ hissediyorum. (yalnız)",
+          "answer": "yalnız"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Senin için ___ duyuyorum. (gurur)",
+          "answer": "gurur"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bütün gün ___ bekledim. (sabır)",
+          "answer": "sabırla"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Onun başarısına ___ oldum. (kıskanmak)",
+          "answer": "kıskandım"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Özür ___ için geldim. (dilemek)",
+          "answer": "dilemek"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Arkadaşı ___ kolay değil. (affetmek)",
+          "answer": "affetmek"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bu sefer ___ . (haklı olmak)",
+          "answer": "haklısın"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Memories and Reflections",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "hafıza",
+          "translation": "memory",
+          "pos": "noun",
+          "example": "Hafıza yüzleri saklar."
+        },
+        {
+          "word": "gençlik",
+          "translation": "youth",
+          "pos": "noun",
+          "example": "Gençliğinden bahsediyor."
+        },
+        {
+          "word": "geçmiş",
+          "translation": "past",
+          "pos": "noun",
+          "example": "Geçmiş, bugünü açıklar."
+        },
+        {
+          "word": "pişmanlık",
+          "translation": "regret",
+          "pos": "noun",
+          "example": "En büyük pişmanlığım."
+        },
+        {
+          "word": "bilgelik",
+          "translation": "wisdom",
+          "pos": "noun",
+          "example": "Yıllar bilgelik getirir."
+        },
+        {
+          "word": "başarısızlık",
+          "translation": "failure",
+          "pos": "noun",
+          "example": "Başarısızlık bir derstir."
+        },
+        {
+          "word": "tercih",
+          "translation": "choice",
+          "accepted_translations": ["decision", "preference"],
+          "pos": "noun",
+          "example": "Bu tercih hayatımı değiştirdi."
+        },
+        {
+          "word": "sessizlik",
+          "translation": "silence",
+          "pos": "noun",
+          "example": "Sessizliği koruyor."
+        },
+        {
+          "word": "söz",
+          "translation": "promise",
+          "pos": "noun",
+          "example": "Sözünü tuttu."
+        },
+        {
+          "word": "çaba",
+          "translation": "effort",
+          "pos": "noun",
+          "example": "Çaba her zaman değer."
+        },
+        {
+          "word": "kader",
+          "translation": "destiny",
+          "accepted_translations": ["fate"],
+          "pos": "noun",
+          "example": "Kadere inanmıyorum."
+        },
+        {
+          "word": "hırs",
+          "translation": "ambition",
+          "pos": "noun",
+          "example": "Hırsının sınırı yok."
+        },
+        {
+          "word": "hatırlamak",
+          "translation": "to remember",
+          "pos": "verb",
+          "example": "O günü hatırlıyorum."
+        },
+        {
+          "word": "unutmak",
+          "translation": "to forget",
+          "pos": "verb",
+          "example": "Zamanla insan unutur."
+        },
+        {
+          "word": "büyümek",
+          "translation": "to grow up",
+          "pos": "verb",
+          "example": "Çocuklar hızlı büyür."
+        },
+        {
+          "word": "olgunlaşmak",
+          "translation": "to mature",
+          "pos": "verb",
+          "example": "Yıllarla olgunlaşırsın."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "hafıza",
+          "answer": "memory"
+        },
+        {
+          "type": "translation",
+          "prompt": "gençlik",
+          "answer": "youth"
+        },
+        {
+          "type": "translation",
+          "prompt": "geçmiş",
+          "answer": "past"
+        },
+        {
+          "type": "translation",
+          "prompt": "pişmanlık",
+          "answer": "regret"
+        },
+        {
+          "type": "translation",
+          "prompt": "bilgelik",
+          "answer": "wisdom"
+        },
+        {
+          "type": "translation",
+          "prompt": "başarısızlık",
+          "answer": "failure"
+        },
+        {
+          "type": "translation",
+          "prompt": "tercih",
+          "answer": "choice",
+          "accepted_answers": [
+            "decision",
+            "preference"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "sessizlik",
+          "answer": "silence"
+        },
+        {
+          "type": "translation",
+          "prompt": "söz",
+          "answer": "promise"
+        },
+        {
+          "type": "translation",
+          "prompt": "çaba",
+          "answer": "effort"
+        },
+        {
+          "type": "translation",
+          "prompt": "kader",
+          "answer": "destiny",
+          "accepted_answers": [
+            "fate"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "hırs",
+          "answer": "ambition"
+        },
+        {
+          "type": "translation",
+          "prompt": "hatırlamak",
+          "answer": "to remember"
+        },
+        {
+          "type": "translation",
+          "prompt": "unutmak",
+          "answer": "to forget"
+        },
+        {
+          "type": "translation",
+          "prompt": "büyümek",
+          "answer": "to grow up"
+        },
+        {
+          "type": "translation",
+          "prompt": "olgunlaşmak",
+          "answer": "to mature"
+        },
+        {
+          "type": "translation",
+          "prompt": "Keşke bilseydim, farklı karar verirdim.",
+          "answer": "If I had known, I would have decided differently."
+        },
+        {
+          "type": "translation",
+          "prompt": "Gençliğimi hatırlayınca gülümsüyorum.",
+          "answer": "When I remember my youth, I smile."
+        },
+        {
+          "type": "translation",
+          "prompt": "Geçmişi hakkında konuşmuyor.",
+          "answer": "She doesn't talk about her past."
+        },
+        {
+          "type": "translation",
+          "prompt": "Seyahat etmediğime pişmanım.",
+          "answer": "I regret not having traveled."
+        },
+        {
+          "type": "translation",
+          "prompt": "Başarısızlık bir derstir, son değil.",
+          "answer": "Failure is a lesson, not an end."
+        },
+        {
+          "type": "translation",
+          "prompt": "İlk buluşmamızı hatırlıyorum.",
+          "answer": "I remember our first meeting."
+        },
+        {
+          "type": "translation",
+          "prompt": "Zamanla kötü anılar unutulur.",
+          "answer": "With time, bad memories are forgotten.",
+          "accepted_answers": [
+            "With time, one forgets the bad memories."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Çabaladı ve olgunlaştı.",
+          "answer": "He made an effort and he matured."
+        },
+        {
+          "type": "translation",
+          "prompt": "If I had been there, I would have helped you.",
+          "answer": "Orada olsaydım sana yardım ederdim."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't remember her name.",
+          "answer": "Adını hatırlamıyorum."
+        },
+        {
+          "type": "translation",
+          "prompt": "You have to grow up one day.",
+          "answer": "Bir gün büyümek gerekir."
+        },
+        {
+          "type": "translation",
+          "prompt": "The past explains the present.",
+          "answer": "Geçmiş, bugünü açıklar."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'memory':",
+          "options": [
+            "hafıza",
+            "gençlik",
+            "pişmanlık",
+            "başarısızlık"
+          ],
+          "answer": "hafıza"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'youth':",
+          "options": [
+            "geçmiş",
+            "bilgelik",
+            "tercih",
+            "gençlik"
+          ],
+          "answer": "gençlik"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'past':",
+          "options": [
+            "başarısızlık",
+            "sessizlik",
+            "geçmiş",
+            "pişmanlık"
+          ],
+          "answer": "geçmiş"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'regret':",
+          "options": [
+            "söz",
+            "pişmanlık",
+            "bilgelik",
+            "tercih"
+          ],
+          "answer": "pişmanlık"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'choice':",
+          "options": [
+            "tercih",
+            "sessizlik",
+            "çaba",
+            "hırs"
+          ],
+          "answer": "tercih"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'silence':",
+          "options": [
+            "söz",
+            "kader",
+            "hatırlamak",
+            "sessizlik"
+          ],
+          "answer": "sessizlik"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to remember':",
+          "options": [
+            "olgunlaşmak",
+            "gençlik",
+            "hatırlamak",
+            "unutmak"
+          ],
+          "answer": "hatırlamak"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to grow up':",
+          "options": [
+            "pişmanlık",
+            "büyümek",
+            "olgunlaşmak",
+            "gençlik"
+          ],
+          "answer": "büyümek"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Keşke o konsere ___ . (gitmek)",
+          "answer": "gitseydim"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Keşke seni ___ . (dinlemek)",
+          "answer": "dinleseydim"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Keşke gençliğimde seyahat ___ . (etmek)",
+          "answer": "etseydim"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Derslerime daha çok ___ . (çalışmak)",
+          "answer": "çalışsaydım"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Keşke sen de ___ . (gelmek)",
+          "answer": "gelseydin"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ unutulmaz.",
+          "answer": "Geçmiş"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "İnsan hatalarından ___ . (öğrenmek)",
+          "answer": "öğrenir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Zamanla her şey ___ . (olgunlaşmak)",
+          "answer": "olgunlaşır"
+        }
+      ]
     }
   ]
 }
