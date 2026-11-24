@@ -7695,6 +7695,1953 @@
           "answer": "realitat"
         }
       ]
+    },
+    {
+      "id": 21,
+      "title": "Culture and the Arts",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "l'art",
+          "translation": "art",
+          "accepted_translations": ["the arts"],
+          "pos": "noun",
+          "example": "L'art modern em fascina."
+        },
+        {
+          "word": "la pintura",
+          "translation": "painting",
+          "pos": "noun",
+          "example": "Aquesta pintura és molt antiga."
+        },
+        {
+          "word": "l'escultura",
+          "translation": "sculpture",
+          "pos": "noun",
+          "example": "L'escultura és de marbre."
+        },
+        {
+          "word": "l'exposició",
+          "translation": "exhibition",
+          "accepted_translations": ["exhibit"],
+          "pos": "noun",
+          "example": "L'exposició s'obre el dissabte."
+        },
+        {
+          "word": "la novel·la",
+          "translation": "novel",
+          "pos": "noun",
+          "example": "Llegeixo una novel·la policíaca."
+        },
+        {
+          "word": "el teatre",
+          "translation": "theater",
+          "accepted_translations": ["theatre"],
+          "pos": "noun",
+          "example": "Anem al teatre aquesta nit."
+        },
+        {
+          "word": "el concert",
+          "translation": "concert",
+          "pos": "noun",
+          "example": "El concert comença a les vuit."
+        },
+        {
+          "word": "l'escenari",
+          "translation": "stage",
+          "pos": "noun",
+          "example": "L'actor puja a l'escenari."
+        },
+        {
+          "word": "el públic",
+          "translation": "audience",
+          "accepted_translations": ["the public"],
+          "pos": "noun",
+          "example": "El públic aplaudeix fort."
+        },
+        {
+          "word": "l'artista",
+          "translation": "artist",
+          "pos": "noun",
+          "example": "Aquest artista pinta retrats."
+        },
+        {
+          "word": "el músic",
+          "translation": "musician",
+          "pos": "noun",
+          "example": "El músic afina el seu violí."
+        },
+        {
+          "word": "l'escriptor",
+          "translation": "writer",
+          "accepted_translations": ["author"],
+          "pos": "noun",
+          "example": "L'escriptor acaba el seu llibre."
+        },
+        {
+          "word": "l'actor",
+          "translation": "actor",
+          "pos": "noun",
+          "example": "L'actor assaja el seu paper."
+        },
+        {
+          "word": "l'obra mestra",
+          "translation": "masterpiece",
+          "pos": "noun",
+          "example": "Aquest quadre és una obra mestra."
+        },
+        {
+          "word": "actuar",
+          "translation": "to perform",
+          "pos": "verb",
+          "example": "El grup actua aquesta nit."
+        },
+        {
+          "word": "aplaudir",
+          "translation": "to applaud",
+          "accepted_translations": ["to clap"],
+          "pos": "verb",
+          "example": "Aplaudim al final."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "l'art",
+          "answer": "art",
+          "accepted_answers": [
+            "the arts"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "la pintura",
+          "answer": "painting"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'escultura",
+          "answer": "sculpture"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'exposició",
+          "answer": "exhibition",
+          "accepted_answers": [
+            "exhibit"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "la novel·la",
+          "answer": "novel"
+        },
+        {
+          "type": "translation",
+          "prompt": "el teatre",
+          "answer": "theater",
+          "accepted_answers": [
+            "theatre"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "el concert",
+          "answer": "concert"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'escenari",
+          "answer": "stage"
+        },
+        {
+          "type": "translation",
+          "prompt": "el públic",
+          "answer": "audience",
+          "accepted_answers": [
+            "the public"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "l'artista",
+          "answer": "artist"
+        },
+        {
+          "type": "translation",
+          "prompt": "el músic",
+          "answer": "musician"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'escriptor",
+          "answer": "writer",
+          "accepted_answers": [
+            "author"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "l'actor",
+          "answer": "actor"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'obra mestra",
+          "answer": "masterpiece"
+        },
+        {
+          "type": "translation",
+          "prompt": "actuar",
+          "answer": "to perform"
+        },
+        {
+          "type": "translation",
+          "prompt": "aplaudir",
+          "answer": "to applaud",
+          "accepted_answers": [
+            "to clap"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Cal que vegis aquesta exposició.",
+          "answer": "You have to see this exhibition."
+        },
+        {
+          "type": "translation",
+          "prompt": "L'artista exposa les seves pintures a Barcelona.",
+          "answer": "The artist exhibits his paintings in Barcelona."
+        },
+        {
+          "type": "translation",
+          "prompt": "El públic va aplaudir deu minuts.",
+          "answer": "The audience applauded for ten minutes."
+        },
+        {
+          "type": "translation",
+          "prompt": "L'escriptor firma la seva novel·la a la llibreria.",
+          "answer": "The writer signs his novel at the bookstore."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ella fa el paper principal al teatre.",
+          "answer": "She plays the main role in the theater.",
+          "accepted_answers": [
+            "She plays the main role in the theatre."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Aquesta novel·la és una obra mestra de la literatura catalana.",
+          "answer": "This novel is a masterpiece of Catalan literature."
+        },
+        {
+          "type": "translation",
+          "prompt": "El músic toca el piano al concert.",
+          "answer": "The musician plays the piano at the concert."
+        },
+        {
+          "type": "translation",
+          "prompt": "El grup actua aquesta nit.",
+          "answer": "The band performs tonight."
+        },
+        {
+          "type": "translation",
+          "prompt": "The exhibition opens on Saturday.",
+          "answer": "L'exposició s'obre el dissabte."
+        },
+        {
+          "type": "translation",
+          "prompt": "We applauded after the concert.",
+          "answer": "Vam aplaudir després del concert."
+        },
+        {
+          "type": "translation",
+          "prompt": "This sculpture is a masterpiece.",
+          "answer": "Aquesta escultura és una obra mestra."
+        },
+        {
+          "type": "translation",
+          "prompt": "The writer finishes his novel.",
+          "answer": "L'escriptor acaba la seva novel·la."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'art':",
+          "options": [
+            "l'art",
+            "la pintura",
+            "l'exposició",
+            "el teatre"
+          ],
+          "answer": "l'art"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'painting':",
+          "options": [
+            "l'escultura",
+            "la novel·la",
+            "el concert",
+            "la pintura"
+          ],
+          "answer": "la pintura"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sculpture':",
+          "options": [
+            "el teatre",
+            "l'escenari",
+            "l'escultura",
+            "l'exposició"
+          ],
+          "answer": "l'escultura"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'exhibition':",
+          "options": [
+            "el públic",
+            "l'exposició",
+            "la novel·la",
+            "el concert"
+          ],
+          "answer": "l'exposició"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'novel':",
+          "options": [
+            "la novel·la",
+            "el teatre",
+            "l'escenari",
+            "l'artista"
+          ],
+          "answer": "la novel·la"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'theater':",
+          "options": [
+            "el concert",
+            "el públic",
+            "el músic",
+            "el teatre"
+          ],
+          "answer": "el teatre"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'audience':",
+          "options": [
+            "l'escriptor",
+            "l'obra mestra",
+            "el públic",
+            "l'artista"
+          ],
+          "answer": "el públic"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'masterpiece':",
+          "options": [
+            "l'escultura",
+            "l'obra mestra",
+            "actuar",
+            "l'art"
+          ],
+          "answer": "l'obra mestra"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cal que ___ l'exposició. (veure)",
+          "answer": "vegis"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vull que ___ aquesta novel·la. (llegir)",
+          "answer": "llegeixis"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cal que l'artista ___ demà. (venir)",
+          "answer": "vingui"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "És important que el públic ___ . (callar)",
+          "answer": "calli"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cal que ___ l'obra mestra. (veure)",
+          "answer": "vegem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El públic ___ al final. (aplaudir)",
+          "answer": "aplaudeix"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "L'escriptor ___ la seva novel·la. (acabar)",
+          "answer": "acaba"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "L'actor puja a l'___ .",
+          "answer": "escenari"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Science and Technology",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "la ciència",
+          "translation": "science",
+          "pos": "noun",
+          "example": "La ciència explica l'univers."
+        },
+        {
+          "word": "el científic",
+          "translation": "scientist",
+          "pos": "noun",
+          "example": "El científic treballa al laboratori."
+        },
+        {
+          "word": "l'experiment",
+          "translation": "experiment",
+          "pos": "noun",
+          "example": "L'experiment va durar un any."
+        },
+        {
+          "word": "el descobriment",
+          "translation": "discovery",
+          "pos": "noun",
+          "example": "El descobriment va canviar la medicina."
+        },
+        {
+          "word": "la invenció",
+          "translation": "invention",
+          "pos": "noun",
+          "example": "La invenció del telèfon."
+        },
+        {
+          "word": "la recerca",
+          "translation": "research",
+          "pos": "noun",
+          "example": "La recerca avança a poc a poc."
+        },
+        {
+          "word": "el laboratori",
+          "translation": "laboratory",
+          "accepted_translations": ["lab"],
+          "pos": "noun",
+          "example": "El laboratori és tancat el dilluns."
+        },
+        {
+          "word": "les dades",
+          "translation": "data",
+          "pos": "noun",
+          "example": "Les dades confirmen la hipòtesi."
+        },
+        {
+          "word": "el programari",
+          "translation": "software",
+          "pos": "noun",
+          "example": "El programari calcula tot."
+        },
+        {
+          "word": "la xarxa",
+          "translation": "network",
+          "pos": "noun",
+          "example": "La xarxa va caure aquest matí."
+        },
+        {
+          "word": "l'energia",
+          "translation": "energy",
+          "pos": "noun",
+          "example": "L'energia solar és neta."
+        },
+        {
+          "word": "el satèl·lit",
+          "translation": "satellite",
+          "pos": "noun",
+          "example": "El satèl·lit fotografia la Terra."
+        },
+        {
+          "word": "el robot",
+          "translation": "robot",
+          "pos": "noun",
+          "example": "El robot munta els cotxes."
+        },
+        {
+          "word": "inventar",
+          "translation": "to invent",
+          "pos": "verb",
+          "example": "Ella inventa un motor nou."
+        },
+        {
+          "word": "descobrir",
+          "translation": "to discover",
+          "pos": "verb",
+          "example": "Descobrim una cova."
+        },
+        {
+          "word": "calcular",
+          "translation": "to calculate",
+          "pos": "verb",
+          "example": "L'ordinador calcula molt ràpid."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "la ciència",
+          "answer": "science"
+        },
+        {
+          "type": "translation",
+          "prompt": "el científic",
+          "answer": "scientist"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'experiment",
+          "answer": "experiment"
+        },
+        {
+          "type": "translation",
+          "prompt": "el descobriment",
+          "answer": "discovery"
+        },
+        {
+          "type": "translation",
+          "prompt": "la invenció",
+          "answer": "invention"
+        },
+        {
+          "type": "translation",
+          "prompt": "la recerca",
+          "answer": "research"
+        },
+        {
+          "type": "translation",
+          "prompt": "el laboratori",
+          "answer": "laboratory",
+          "accepted_answers": [
+            "lab"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "les dades",
+          "answer": "data"
+        },
+        {
+          "type": "translation",
+          "prompt": "el programari",
+          "answer": "software"
+        },
+        {
+          "type": "translation",
+          "prompt": "la xarxa",
+          "answer": "network"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'energia",
+          "answer": "energy"
+        },
+        {
+          "type": "translation",
+          "prompt": "el satèl·lit",
+          "answer": "satellite"
+        },
+        {
+          "type": "translation",
+          "prompt": "el robot",
+          "answer": "robot"
+        },
+        {
+          "type": "translation",
+          "prompt": "inventar",
+          "answer": "to invent"
+        },
+        {
+          "type": "translation",
+          "prompt": "descobrir",
+          "answer": "to discover"
+        },
+        {
+          "type": "translation",
+          "prompt": "calcular",
+          "answer": "to calculate"
+        },
+        {
+          "type": "translation",
+          "prompt": "El satèl·lit envia dades a la Terra.",
+          "answer": "The satellite sends data to the Earth."
+        },
+        {
+          "type": "translation",
+          "prompt": "Els científics fan un experiment al laboratori.",
+          "answer": "The scientists do an experiment in the laboratory."
+        },
+        {
+          "type": "translation",
+          "prompt": "El descobriment va canviar la ciència.",
+          "answer": "The discovery changed science."
+        },
+        {
+          "type": "translation",
+          "prompt": "El programari calcula els resultats en un segon.",
+          "answer": "The software calculates the results in one second."
+        },
+        {
+          "type": "translation",
+          "prompt": "Va ser la invenció que va canviar el món.",
+          "answer": "It was the invention that changed the world."
+        },
+        {
+          "type": "translation",
+          "prompt": "El robot treballa a la fàbrica.",
+          "answer": "The robot works in the factory."
+        },
+        {
+          "type": "translation",
+          "prompt": "La recerca sobre energia solar avança.",
+          "answer": "Research on solar energy is advancing."
+        },
+        {
+          "type": "translation",
+          "prompt": "Descobrim com funciona la xarxa.",
+          "answer": "We are discovering how the network works."
+        },
+        {
+          "type": "translation",
+          "prompt": "The scientist discovered a new planet.",
+          "answer": "El científic va descobrir un nou planeta."
+        },
+        {
+          "type": "translation",
+          "prompt": "This invention changed the world.",
+          "answer": "Aquesta invenció va canviar el món."
+        },
+        {
+          "type": "translation",
+          "prompt": "The robot works in the laboratory.",
+          "answer": "El robot treballa al laboratori."
+        },
+        {
+          "type": "translation",
+          "prompt": "Energy is important for the future.",
+          "answer": "L'energia és important per al futur."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'science':",
+          "options": [
+            "la ciència",
+            "el científic",
+            "el descobriment",
+            "la recerca"
+          ],
+          "answer": "la ciència"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'scientist':",
+          "options": [
+            "l'experiment",
+            "la invenció",
+            "el laboratori",
+            "el científic"
+          ],
+          "answer": "el científic"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'discovery':",
+          "options": [
+            "el laboratori",
+            "el programari",
+            "el descobriment",
+            "la invenció"
+          ],
+          "answer": "el descobriment"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'research':",
+          "options": [
+            "l'energia",
+            "la recerca",
+            "el laboratori",
+            "el programari"
+          ],
+          "answer": "la recerca"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'energy':",
+          "options": [
+            "l'energia",
+            "el satèl·lit",
+            "inventar",
+            "calcular"
+          ],
+          "answer": "l'energia"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'satellite':",
+          "options": [
+            "el robot",
+            "descobrir",
+            "la ciència",
+            "el satèl·lit"
+          ],
+          "answer": "el satèl·lit"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'robot':",
+          "options": [
+            "calcular",
+            "el científic",
+            "el robot",
+            "inventar"
+          ],
+          "answer": "el robot"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to discover':",
+          "options": [
+            "el descobriment",
+            "descobrir",
+            "calcular",
+            "el científic"
+          ],
+          "answer": "descobrir"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Aquest regal és ___ tu.",
+          "answer": "per"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gràcies ___ la teva ajuda.",
+          "answer": "per"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vaig al laboratori ___ l'experiment.",
+          "answer": "per"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El científic treballa ___ la universitat.",
+          "answer": "per"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vaig passar ___ el parc.",
+          "answer": "per"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Estudio ___ ser científica.",
+          "answer": "per"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El ___ envia dades a la Terra.",
+          "answer": "satèl·lit"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La ___ explica l'univers.",
+          "answer": "ciència"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Society and Politics",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "la llei",
+          "translation": "law",
+          "pos": "noun",
+          "example": "El parlament vota una llei."
+        },
+        {
+          "word": "el dret",
+          "translation": "right",
+          "pos": "noun",
+          "example": "Cada ciutadà té drets."
+        },
+        {
+          "word": "el govern",
+          "translation": "government",
+          "pos": "noun",
+          "example": "El govern decideix el pressupost."
+        },
+        {
+          "word": "les eleccions",
+          "translation": "elections",
+          "pos": "noun",
+          "example": "Les eleccions són al maig."
+        },
+        {
+          "word": "el ciutadà",
+          "translation": "citizen",
+          "pos": "noun",
+          "example": "El ciutadà vota lliurement."
+        },
+        {
+          "word": "la política",
+          "translation": "politics",
+          "accepted_translations": ["policy"],
+          "pos": "noun",
+          "example": "La política m'interessa."
+        },
+        {
+          "word": "el debat",
+          "translation": "debate",
+          "pos": "noun",
+          "example": "El debat va durar tres hores."
+        },
+        {
+          "word": "la llibertat",
+          "translation": "freedom",
+          "accepted_translations": ["liberty"],
+          "pos": "noun",
+          "example": "La llibertat de premsa és essencial."
+        },
+        {
+          "word": "la justícia",
+          "translation": "justice",
+          "pos": "noun",
+          "example": "La justícia ha de ser igual per a tothom."
+        },
+        {
+          "word": "l'impost",
+          "translation": "tax",
+          "accepted_translations": ["taxes"],
+          "pos": "noun",
+          "example": "Paguem l'impost cada any."
+        },
+        {
+          "word": "la manifestació",
+          "translation": "demonstration",
+          "accepted_translations": ["protest", "march"],
+          "pos": "noun",
+          "example": "La manifestació va travessar la ciutat."
+        },
+        {
+          "word": "el parlament",
+          "translation": "parliament",
+          "pos": "noun",
+          "example": "El parlament representa el poble."
+        },
+        {
+          "word": "la democràcia",
+          "translation": "democracy",
+          "pos": "noun",
+          "example": "La democràcia protegeix els drets."
+        },
+        {
+          "word": "el poble",
+          "translation": "the people",
+          "pos": "noun",
+          "example": "En democràcia decideix el poble."
+        },
+        {
+          "word": "votar",
+          "translation": "to vote",
+          "pos": "verb",
+          "example": "Votaré el diumenge."
+        },
+        {
+          "word": "decidir",
+          "translation": "to decide",
+          "pos": "verb",
+          "example": "Tu decideixes el teu futur."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "la llei",
+          "answer": "law"
+        },
+        {
+          "type": "translation",
+          "prompt": "el dret",
+          "answer": "right"
+        },
+        {
+          "type": "translation",
+          "prompt": "el govern",
+          "answer": "government"
+        },
+        {
+          "type": "translation",
+          "prompt": "les eleccions",
+          "answer": "elections"
+        },
+        {
+          "type": "translation",
+          "prompt": "el ciutadà",
+          "answer": "citizen"
+        },
+        {
+          "type": "translation",
+          "prompt": "la política",
+          "answer": "politics",
+          "accepted_answers": [
+            "policy"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "el debat",
+          "answer": "debate"
+        },
+        {
+          "type": "translation",
+          "prompt": "la llibertat",
+          "answer": "freedom",
+          "accepted_answers": [
+            "liberty"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "la justícia",
+          "answer": "justice"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'impost",
+          "answer": "tax",
+          "accepted_answers": [
+            "taxes"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "la manifestació",
+          "answer": "demonstration",
+          "accepted_answers": [
+            "protest",
+            "march"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "el parlament",
+          "answer": "parliament"
+        },
+        {
+          "type": "translation",
+          "prompt": "la democràcia",
+          "answer": "democracy"
+        },
+        {
+          "type": "translation",
+          "prompt": "el poble",
+          "answer": "the people"
+        },
+        {
+          "type": "translation",
+          "prompt": "votar",
+          "answer": "to vote"
+        },
+        {
+          "type": "translation",
+          "prompt": "decidir",
+          "answer": "to decide"
+        },
+        {
+          "type": "translation",
+          "prompt": "Els ciutadans voten a les eleccions.",
+          "answer": "Citizens vote in the elections."
+        },
+        {
+          "type": "translation",
+          "prompt": "El parlament vota una nova llei.",
+          "answer": "Parliament votes on a new law."
+        },
+        {
+          "type": "translation",
+          "prompt": "La llibertat de premsa és important.",
+          "answer": "Freedom of the press is important."
+        },
+        {
+          "type": "translation",
+          "prompt": "El debat va durar tres hores.",
+          "answer": "The debate lasted three hours."
+        },
+        {
+          "type": "translation",
+          "prompt": "Paguem impostos cada any.",
+          "answer": "We pay taxes every year."
+        },
+        {
+          "type": "translation",
+          "prompt": "La manifestació va reunir mil persones.",
+          "answer": "The demonstration gathered a thousand people.",
+          "accepted_answers": [
+            "The protest gathered a thousand people.",
+            "The march gathered a thousand people."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "En una democràcia, decideix el poble.",
+          "answer": "In a democracy, the people decide."
+        },
+        {
+          "type": "translation",
+          "prompt": "Cada ciutadà té dret a votar.",
+          "answer": "Every citizen has the right to vote."
+        },
+        {
+          "type": "translation",
+          "prompt": "The government must decide.",
+          "answer": "El govern ha de decidir."
+        },
+        {
+          "type": "translation",
+          "prompt": "Freedom and justice are important values.",
+          "answer": "La llibertat i la justícia són valors importants."
+        },
+        {
+          "type": "translation",
+          "prompt": "The vote took place on Sunday.",
+          "answer": "La votació va tenir lloc el diumenge."
+        },
+        {
+          "type": "translation",
+          "prompt": "Citizens demonstrated for justice.",
+          "answer": "Els ciutadans van manifestar per la justícia."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'law':",
+          "options": [
+            "la llei",
+            "el dret",
+            "les eleccions",
+            "la política"
+          ],
+          "answer": "la llei"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'right':",
+          "options": [
+            "el govern",
+            "el ciutadà",
+            "el debat",
+            "el dret"
+          ],
+          "answer": "el dret"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'government':",
+          "options": [
+            "la política",
+            "la llibertat",
+            "el govern",
+            "les eleccions"
+          ],
+          "answer": "el govern"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'elections':",
+          "options": [
+            "la justícia",
+            "les eleccions",
+            "el ciutadà",
+            "el debat"
+          ],
+          "answer": "les eleccions"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'citizen':",
+          "options": [
+            "el ciutadà",
+            "la política",
+            "la llibertat",
+            "l'impost"
+          ],
+          "answer": "el ciutadà"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'politics':",
+          "options": [
+            "el debat",
+            "la justícia",
+            "la manifestació",
+            "la política"
+          ],
+          "answer": "la política"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'freedom':",
+          "options": [
+            "la manifestació",
+            "la democràcia",
+            "la llibertat",
+            "la justícia"
+          ],
+          "answer": "la llibertat"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'justice':",
+          "options": [
+            "el poble",
+            "la justícia",
+            "l'impost",
+            "el parlament"
+          ],
+          "answer": "la justícia"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ parla català a molts països.",
+          "answer": "Es"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ven bitllets a la porta.",
+          "answer": "Es"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ construeix una biblioteca nova.",
+          "answer": "Es"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ respecta la llei aquí.",
+          "answer": "Es"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ prohibeix fumar en aquest edifici.",
+          "answer": "Es"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El poble ___ a les eleccions. (votar)",
+          "answer": "vota"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La ___ protegeix la llibertat.",
+          "answer": "justícia"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "El govern cobra ___ .",
+          "answer": "impostos"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Feelings and Idioms",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "la vergonya",
+          "translation": "shame",
+          "pos": "noun",
+          "example": "Sento vergonya pel meu error."
+        },
+        {
+          "word": "l'orgull",
+          "translation": "pride",
+          "pos": "noun",
+          "example": "Sento un gran orgull."
+        },
+        {
+          "word": "la gelosia",
+          "translation": "jealousy",
+          "pos": "noun",
+          "example": "La gelosia destrueix l'amistat."
+        },
+        {
+          "word": "l'alleujament",
+          "translation": "relief",
+          "pos": "noun",
+          "example": "La notícia va ser un alleujament."
+        },
+        {
+          "word": "la culpa",
+          "translation": "guilt",
+          "pos": "noun",
+          "example": "La culpa no el deixa dormir."
+        },
+        {
+          "word": "la solitud",
+          "translation": "loneliness",
+          "pos": "noun",
+          "example": "La solitud pesa a l'hivern."
+        },
+        {
+          "word": "la paciència",
+          "translation": "patience",
+          "pos": "noun",
+          "example": "La paciència és una virtut."
+        },
+        {
+          "word": "el coratge",
+          "translation": "courage",
+          "accepted_translations": ["bravery"],
+          "pos": "noun",
+          "example": "Va tenir coratge per parlar."
+        },
+        {
+          "word": "la gratitud",
+          "translation": "gratitude",
+          "accepted_translations": ["thankfulness"],
+          "pos": "noun",
+          "example": "Li dec gratitud."
+        },
+        {
+          "word": "la bondat",
+          "translation": "kindness",
+          "pos": "noun",
+          "example": "Gràcies per la teva bondat."
+        },
+        {
+          "word": "l'enveja",
+          "translation": "envy",
+          "pos": "noun",
+          "example": "L'enveja no porta enlloc."
+        },
+        {
+          "word": "barallar-se",
+          "translation": "to argue",
+          "accepted_translations": ["to quarrel"],
+          "pos": "verb",
+          "example": "Es barallen per bestieses."
+        },
+        {
+          "word": "demanar perdó",
+          "translation": "to apologize",
+          "pos": "verb",
+          "example": "Demana perdó pel retard."
+        },
+        {
+          "word": "perdonar",
+          "translation": "to forgive",
+          "pos": "verb",
+          "example": "Perdonar allibera."
+        },
+        {
+          "word": "tenir raó",
+          "translation": "to be right",
+          "pos": "verb",
+          "example": "Tens raó, com sempre."
+        },
+        {
+          "word": "equivocar-se",
+          "translation": "to be wrong",
+          "accepted_translations": ["to make a mistake"],
+          "pos": "verb",
+          "example": "M'he equivocat en això."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "la vergonya",
+          "answer": "shame"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'orgull",
+          "answer": "pride"
+        },
+        {
+          "type": "translation",
+          "prompt": "la gelosia",
+          "answer": "jealousy"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'alleujament",
+          "answer": "relief"
+        },
+        {
+          "type": "translation",
+          "prompt": "la culpa",
+          "answer": "guilt"
+        },
+        {
+          "type": "translation",
+          "prompt": "la solitud",
+          "answer": "loneliness"
+        },
+        {
+          "type": "translation",
+          "prompt": "la paciència",
+          "answer": "patience"
+        },
+        {
+          "type": "translation",
+          "prompt": "el coratge",
+          "answer": "courage",
+          "accepted_answers": [
+            "bravery"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "la gratitud",
+          "answer": "gratitude",
+          "accepted_answers": [
+            "thankfulness"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "la bondat",
+          "answer": "kindness"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'enveja",
+          "answer": "envy"
+        },
+        {
+          "type": "translation",
+          "prompt": "barallar-se",
+          "answer": "to argue",
+          "accepted_answers": [
+            "to quarrel"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "demanar perdó",
+          "answer": "to apologize"
+        },
+        {
+          "type": "translation",
+          "prompt": "perdonar",
+          "answer": "to forgive"
+        },
+        {
+          "type": "translation",
+          "prompt": "tenir raó",
+          "answer": "to be right"
+        },
+        {
+          "type": "translation",
+          "prompt": "equivocar-se",
+          "answer": "to be wrong",
+          "accepted_answers": [
+            "to make a mistake"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Estic orgullós de tu.",
+          "answer": "I am proud of you."
+        },
+        {
+          "type": "translation",
+          "prompt": "Va tenir el coratge de dir la veritat.",
+          "answer": "He had the courage to tell the truth."
+        },
+        {
+          "type": "translation",
+          "prompt": "Demana perdó per l'endarreriment.",
+          "answer": "She apologizes for being late."
+        },
+        {
+          "type": "translation",
+          "prompt": "La solitud és difícil a l'hivern.",
+          "answer": "Loneliness is difficult in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Tens raó, com sempre.",
+          "answer": "You are right, as always."
+        },
+        {
+          "type": "translation",
+          "prompt": "No tinguis enveja del seu èxit.",
+          "answer": "Don't envy her success."
+        },
+        {
+          "type": "translation",
+          "prompt": "Gràcies per la teva bondat.",
+          "answer": "Thank you for your kindness."
+        },
+        {
+          "type": "translation",
+          "prompt": "Es barallen per coses petites.",
+          "answer": "They argue about small things."
+        },
+        {
+          "type": "translation",
+          "prompt": "I was wrong, you were right.",
+          "answer": "M'he equivocat, tu tenies raó.",
+          "accepted_answers": [
+            "M'he equivocada, tu tenies raó."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Please forgive me.",
+          "answer": "Perdona'm, si us plau."
+        },
+        {
+          "type": "translation",
+          "prompt": "Patience is a great quality.",
+          "answer": "La paciència és una gran qualitat."
+        },
+        {
+          "type": "translation",
+          "prompt": "Shame and guilt are difficult feelings.",
+          "answer": "La vergonya i la culpa són sentiments difícils."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'shame':",
+          "options": [
+            "la vergonya",
+            "l'orgull",
+            "l'alleujament",
+            "la solitud"
+          ],
+          "answer": "la vergonya"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'pride':",
+          "options": [
+            "la gelosia",
+            "la culpa",
+            "la paciència",
+            "l'orgull"
+          ],
+          "answer": "l'orgull"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'relief':",
+          "options": [
+            "la paciència",
+            "la gratitud",
+            "l'alleujament",
+            "la culpa"
+          ],
+          "answer": "l'alleujament"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'patience':",
+          "options": [
+            "barallar-se",
+            "la paciència",
+            "el coratge",
+            "la bondat"
+          ],
+          "answer": "la paciència"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'gratitude':",
+          "options": [
+            "la gratitud",
+            "la bondat",
+            "barallar-se",
+            "perdonar"
+          ],
+          "answer": "la gratitud"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to apologize':",
+          "options": [
+            "perdonar",
+            "equivocar-se",
+            "l'orgull",
+            "demanar perdó"
+          ],
+          "answer": "demanar perdó"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to forgive':",
+          "options": [
+            "la vergonya",
+            "la gelosia",
+            "perdonar",
+            "tenir raó"
+          ],
+          "answer": "perdonar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to be wrong':",
+          "options": [
+            "la culpa",
+            "equivocar-se",
+            "la vergonya",
+            "la gelosia"
+          ],
+          "answer": "equivocar-se"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tinc ___ de veure aquella exposició.",
+          "answer": "ganes"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tinc ___ de parlar en públic.",
+          "answer": "por"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ell mai no té ___.",
+          "answer": "raó"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Està ___ del seu germà. (gelós)",
+          "answer": "gelós"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Tingui ___ i esperi.",
+          "answer": "paciència"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sento molta ___ pel meu error.",
+          "answer": "culpa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Vaig sentir un gran ___ després de l'examen.",
+          "answer": "alleujament"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cal ___ els amics. (perdonar)",
+          "answer": "perdonar"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Memories and Reflections",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "la memòria",
+          "translation": "memory",
+          "pos": "noun",
+          "example": "La memòria guarda les cares."
+        },
+        {
+          "word": "la joventut",
+          "translation": "youth",
+          "pos": "noun",
+          "example": "Explica històries de la seva joventut."
+        },
+        {
+          "word": "el passat",
+          "translation": "past",
+          "pos": "noun",
+          "example": "El passat explica el present."
+        },
+        {
+          "word": "el penediment",
+          "translation": "regret",
+          "pos": "noun",
+          "example": "El meu major penediment."
+        },
+        {
+          "word": "la saviesa",
+          "translation": "wisdom",
+          "pos": "noun",
+          "example": "Els anys porten saviesa."
+        },
+        {
+          "word": "el fracàs",
+          "translation": "failure",
+          "pos": "noun",
+          "example": "El fracàs és una lliçó."
+        },
+        {
+          "word": "la decisió",
+          "translation": "decision",
+          "accepted_translations": ["choice"],
+          "pos": "noun",
+          "example": "Aquesta decisió va canviar la meva vida."
+        },
+        {
+          "word": "el silenci",
+          "translation": "silence",
+          "pos": "noun",
+          "example": "Ella guarda silenci."
+        },
+        {
+          "word": "la promesa",
+          "translation": "promise",
+          "pos": "noun",
+          "example": "Va complir la seva promesa."
+        },
+        {
+          "word": "l'esforç",
+          "translation": "effort",
+          "pos": "noun",
+          "example": "L'esforç sempre val la pena."
+        },
+        {
+          "word": "el destí",
+          "translation": "destiny",
+          "accepted_translations": ["fate"],
+          "pos": "noun",
+          "example": "No crec en el destí."
+        },
+        {
+          "word": "l'ambició",
+          "translation": "ambition",
+          "pos": "noun",
+          "example": "La seva ambició no té límits."
+        },
+        {
+          "word": "l'aprenentatge",
+          "translation": "learning",
+          "pos": "noun",
+          "example": "L'aprenentatge dura tota la vida."
+        },
+        {
+          "word": "oblidar",
+          "translation": "to forget",
+          "pos": "verb",
+          "example": "Amb el temps s'oblida."
+        },
+        {
+          "word": "créixer",
+          "translation": "to grow up",
+          "pos": "verb",
+          "example": "Els nens creixen de pressa."
+        },
+        {
+          "word": "madurar",
+          "translation": "to mature",
+          "pos": "verb",
+          "example": "Amb els anys es madura."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "la memòria",
+          "answer": "memory"
+        },
+        {
+          "type": "translation",
+          "prompt": "la joventut",
+          "answer": "youth"
+        },
+        {
+          "type": "translation",
+          "prompt": "el passat",
+          "answer": "past"
+        },
+        {
+          "type": "translation",
+          "prompt": "el penediment",
+          "answer": "regret"
+        },
+        {
+          "type": "translation",
+          "prompt": "la saviesa",
+          "answer": "wisdom"
+        },
+        {
+          "type": "translation",
+          "prompt": "el fracàs",
+          "answer": "failure"
+        },
+        {
+          "type": "translation",
+          "prompt": "la decisió",
+          "answer": "decision",
+          "accepted_answers": [
+            "choice"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "el silenci",
+          "answer": "silence"
+        },
+        {
+          "type": "translation",
+          "prompt": "la promesa",
+          "answer": "promise"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'esforç",
+          "answer": "effort"
+        },
+        {
+          "type": "translation",
+          "prompt": "el destí",
+          "answer": "destiny",
+          "accepted_answers": [
+            "fate"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "l'ambició",
+          "answer": "ambition"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'aprenentatge",
+          "answer": "learning"
+        },
+        {
+          "type": "translation",
+          "prompt": "oblidar",
+          "answer": "to forget"
+        },
+        {
+          "type": "translation",
+          "prompt": "créixer",
+          "answer": "to grow up"
+        },
+        {
+          "type": "translation",
+          "prompt": "madurar",
+          "answer": "to mature"
+        },
+        {
+          "type": "translation",
+          "prompt": "Si hagués sabut, hauria pres una altra decisió.",
+          "answer": "If I had known, I would have made a different decision."
+        },
+        {
+          "type": "translation",
+          "prompt": "Quan recordo la meva joventut, somric.",
+          "answer": "When I remember my youth, I smile."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ella guarda silenci sobre el seu passat.",
+          "answer": "She keeps quiet about her past."
+        },
+        {
+          "type": "translation",
+          "prompt": "Em penedeixo de no haver viatjat.",
+          "answer": "I regret not having traveled."
+        },
+        {
+          "type": "translation",
+          "prompt": "El fracàs és una lliçó, no el final.",
+          "answer": "Failure is a lesson, not the end."
+        },
+        {
+          "type": "translation",
+          "prompt": "Recordo el nostre primer encontre.",
+          "answer": "I remember our first meeting."
+        },
+        {
+          "type": "translation",
+          "prompt": "Amb el temps, s'obliden els mals records.",
+          "answer": "With time, bad memories are forgotten.",
+          "accepted_answers": [
+            "With time, one forgets the bad memories."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Va fer un esforç i ha madurat.",
+          "answer": "He made an effort and he matured."
+        },
+        {
+          "type": "translation",
+          "prompt": "If I had been there, I would have helped you.",
+          "answer": "Si hagués estat allà, t'hauria ajudat."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't remember her name.",
+          "answer": "No recordo el seu nom."
+        },
+        {
+          "type": "translation",
+          "prompt": "You have to grow up one day.",
+          "answer": "Cal créixer algun dia."
+        },
+        {
+          "type": "translation",
+          "prompt": "The past explains the present.",
+          "answer": "El passat explica el present."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'memory':",
+          "options": [
+            "la memòria",
+            "la joventut",
+            "el penediment",
+            "el fracàs"
+          ],
+          "answer": "la memòria"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'youth':",
+          "options": [
+            "el passat",
+            "la saviesa",
+            "la decisió",
+            "la joventut"
+          ],
+          "answer": "la joventut"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'past':",
+          "options": [
+            "el fracàs",
+            "el silenci",
+            "el passat",
+            "el penediment"
+          ],
+          "answer": "el passat"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'regret':",
+          "options": [
+            "la promesa",
+            "el penediment",
+            "la saviesa",
+            "la decisió"
+          ],
+          "answer": "el penediment"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'decision':",
+          "options": [
+            "la decisió",
+            "el silenci",
+            "l'esforç",
+            "l'ambició"
+          ],
+          "answer": "la decisió"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'silence':",
+          "options": [
+            "la promesa",
+            "el destí",
+            "l'aprenentatge",
+            "el silenci"
+          ],
+          "answer": "el silenci"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to forget':",
+          "options": [
+            "la memòria",
+            "el passat",
+            "oblidar",
+            "créixer"
+          ],
+          "answer": "oblidar"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to grow up':",
+          "options": [
+            "el penediment",
+            "créixer",
+            "madurar",
+            "la joventut"
+          ],
+          "answer": "créixer"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Si hagués sabut, ___ comprat la casa. (haver)",
+          "answer": "hauria"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Si haguessis vingut, ___ gaudit del concert. (haver)",
+          "answer": "hauries"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Si haguéssim tingut temps, ___ viatjat. (haver)",
+          "answer": "hauríem"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hauria vingut si no ___ estat malalta. (estar)",
+          "answer": "hagués"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hauria acceptat si me l'haguessis ___. (demanar)",
+          "answer": "demanat"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ és la millor mestressa.",
+          "answer": "El passat"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Amb el temps, tot s'___ . (oblidar)",
+          "answer": "oblida"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cal créixer per ___ . (madurar)",
+          "answer": "madurar"
+        }
+      ]
     }
   ]
 }
