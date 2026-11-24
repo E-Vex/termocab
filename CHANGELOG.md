@@ -7,6 +7,28 @@ state is a MAJOR bump; defect fixes that touch no contract are PATCH bumps.
 History before 0.18.0 lives in the git log and in HANDOFF.md §2, one
 paragraph per session.
 
+## [0.22.0] — 2026-11-25
+
+### Added
+
+- Norwegian (Bokmål), the fourteenth course (D24): twenty-five stages
+  on the shared five-band skeleton, 393 words, 1098 exercises — and
+  **zero engine changes**: å rides the Latin-1 accent fold D9 wrote,
+  æ rides the ligature tier it shares with Icelandic and Dutch, and ø
+  stays closed exactly as D9 ruled — the ruling's own example word
+  was *smør*, and the language it was written for arrives to collect
+  it. The course is Bokmål as written in Norway: nouns carry their
+  *en*/*ei*/*et* articles (the three-gender drill, richer than
+  Swedish's two), the enclitic definite article is blanked at the end
+  of the noun with the feminine taking her own *-a* (the ending that
+  separates Bokmål from its Scandinavian siblings), *vil*/*kunne* +
+  infinitive, the V2 word order after fronted adverbs, homonym
+  translations on *time* (an hour, also a lesson), *lære* (to learn,
+  also to teach) and *stemme* (to vote, also a voice), and stage 25
+  closes the arc with the past counterfactual (*om jeg hadde visst,
+  ville jeg ha valgt annerledes*). Additive content, so a MINOR bump
+  per the semver policy in RELEASE.md.
+
 ## [0.21.0] — 2026-11-24
 
 ### Added
