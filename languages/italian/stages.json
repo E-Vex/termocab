@@ -7820,6 +7820,1950 @@
           "answer": "realizzerò"
         }
       ]
+    },
+    {
+      "id": 21,
+      "title": "Culture and the Arts",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "l'arte",
+          "translation": "art",
+          "accepted_translations": ["the arts"],
+          "pos": "noun",
+          "example": "L'arte moderna mi affascina."
+        },
+        {
+          "word": "la pittura",
+          "translation": "painting",
+          "pos": "noun",
+          "example": "Questa pittura è molto antica."
+        },
+        {
+          "word": "la scultura",
+          "translation": "sculpture",
+          "pos": "noun",
+          "example": "La scultura è di marmo."
+        },
+        {
+          "word": "la mostra",
+          "translation": "exhibition",
+          "accepted_translations": ["exhibit"],
+          "pos": "noun",
+          "example": "La mostra apre sabato."
+        },
+        {
+          "word": "il romanzo",
+          "translation": "novel",
+          "pos": "noun",
+          "example": "Leggo un romanzo giallo."
+        },
+        {
+          "word": "il teatro",
+          "translation": "theater",
+          "accepted_translations": ["theatre"],
+          "pos": "noun",
+          "example": "Andiamo a teatro stasera."
+        },
+        {
+          "word": "il concerto",
+          "translation": "concert",
+          "pos": "noun",
+          "example": "Il concerto inizia alle otto."
+        },
+        {
+          "word": "il palcoscenico",
+          "translation": "stage",
+          "pos": "noun",
+          "example": "Lei sale sul palcoscenico."
+        },
+        {
+          "word": "il pubblico",
+          "translation": "audience",
+          "accepted_translations": ["the public"],
+          "pos": "noun",
+          "example": "Il pubblico applaude forte."
+        },
+        {
+          "word": "l'artista",
+          "translation": "artist",
+          "pos": "noun",
+          "example": "Questo artista dipinge ritratti."
+        },
+        {
+          "word": "il musicista",
+          "translation": "musician",
+          "pos": "noun",
+          "example": "Il musicista accorda il violino."
+        },
+        {
+          "word": "lo scrittore",
+          "translation": "writer",
+          "accepted_translations": ["author"],
+          "pos": "noun",
+          "example": "Lo scrittore finisce il suo libro."
+        },
+        {
+          "word": "l'attore",
+          "translation": "actor",
+          "pos": "noun",
+          "example": "L'attore prova la sua parte."
+        },
+        {
+          "word": "il capolavoro",
+          "translation": "masterpiece",
+          "pos": "noun",
+          "example": "Questo quadro è un capolavoro."
+        },
+        {
+          "word": "esibirsi",
+          "translation": "to perform",
+          "pos": "verb",
+          "example": "Il gruppo si esibisce stasera."
+        },
+        {
+          "word": "applaudire",
+          "translation": "to applaud",
+          "accepted_translations": ["to clap"],
+          "pos": "verb",
+          "example": "Applaudiamo alla fine."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "l'arte",
+          "answer": "art",
+          "accepted_answers": [
+            "the arts"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "la pittura",
+          "answer": "painting"
+        },
+        {
+          "type": "translation",
+          "prompt": "la scultura",
+          "answer": "sculpture"
+        },
+        {
+          "type": "translation",
+          "prompt": "la mostra",
+          "answer": "exhibition",
+          "accepted_answers": [
+            "exhibit"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "il romanzo",
+          "answer": "novel"
+        },
+        {
+          "type": "translation",
+          "prompt": "il teatro",
+          "answer": "theater",
+          "accepted_answers": [
+            "theatre"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "il concerto",
+          "answer": "concert"
+        },
+        {
+          "type": "translation",
+          "prompt": "il palcoscenico",
+          "answer": "stage"
+        },
+        {
+          "type": "translation",
+          "prompt": "il pubblico",
+          "answer": "audience",
+          "accepted_answers": [
+            "the public"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "l'artista",
+          "answer": "artist"
+        },
+        {
+          "type": "translation",
+          "prompt": "il musicista",
+          "answer": "musician"
+        },
+        {
+          "type": "translation",
+          "prompt": "lo scrittore",
+          "answer": "writer",
+          "accepted_answers": [
+            "author"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "l'attore",
+          "answer": "actor"
+        },
+        {
+          "type": "translation",
+          "prompt": "il capolavoro",
+          "answer": "masterpiece"
+        },
+        {
+          "type": "translation",
+          "prompt": "esibirsi",
+          "answer": "to perform"
+        },
+        {
+          "type": "translation",
+          "prompt": "applaudire",
+          "answer": "to applaud",
+          "accepted_answers": [
+            "to clap"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Bisogna che tu veda questa mostra.",
+          "answer": "You have to see this exhibition."
+        },
+        {
+          "type": "translation",
+          "prompt": "Penso che il concerto sia fantastico.",
+          "answer": "I think the concert is fantastic."
+        },
+        {
+          "type": "translation",
+          "prompt": "L'artista espone le sue pitture a Roma.",
+          "answer": "The artist exhibits his paintings in Rome."
+        },
+        {
+          "type": "translation",
+          "prompt": "Il pubblico ha applaudito per dieci minuti.",
+          "answer": "The audience applauded for ten minutes."
+        },
+        {
+          "type": "translation",
+          "prompt": "Lo scrittore firma il suo romanzo in libreria.",
+          "answer": "The writer signs his novel at the bookstore."
+        },
+        {
+          "type": "translation",
+          "prompt": "Lei recita nel teatro comunale.",
+          "answer": "She performs in the municipal theater.",
+          "accepted_answers": [
+            "She performs in the municipal theatre."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Questo romanzo è un capolavoro della letteratura italiana.",
+          "answer": "This novel is a masterpiece of Italian literature."
+        },
+        {
+          "type": "translation",
+          "prompt": "Il musicista suona il piano al concerto.",
+          "answer": "The musician plays the piano at the concert."
+        },
+        {
+          "type": "translation",
+          "prompt": "The exhibition opens on Saturday.",
+          "answer": "La mostra apre sabato."
+        },
+        {
+          "type": "translation",
+          "prompt": "We applauded after the concert.",
+          "answer": "Abbiamo applaudito dopo il concerto."
+        },
+        {
+          "type": "translation",
+          "prompt": "This sculpture is a masterpiece.",
+          "answer": "Questa scultura è un capolavoro."
+        },
+        {
+          "type": "translation",
+          "prompt": "The writer finishes his novel.",
+          "answer": "Lo scrittore finisce il suo romanzo."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'art':",
+          "options": [
+            "l'arte",
+            "la pittura",
+            "la mostra",
+            "il teatro"
+          ],
+          "answer": "l'arte"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'painting':",
+          "options": [
+            "la scultura",
+            "il romanzo",
+            "il concerto",
+            "la pittura"
+          ],
+          "answer": "la pittura"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'sculpture':",
+          "options": [
+            "il teatro",
+            "il palcoscenico",
+            "la scultura",
+            "la mostra"
+          ],
+          "answer": "la scultura"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'exhibition':",
+          "options": [
+            "il pubblico",
+            "la mostra",
+            "il romanzo",
+            "il concerto"
+          ],
+          "answer": "la mostra"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'novel':",
+          "options": [
+            "il romanzo",
+            "il teatro",
+            "il palcoscenico",
+            "l'artista"
+          ],
+          "answer": "il romanzo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'theater':",
+          "options": [
+            "il concerto",
+            "il pubblico",
+            "il musicista",
+            "il teatro"
+          ],
+          "answer": "il teatro"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'audience':",
+          "options": [
+            "lo scrittore",
+            "il capolavoro",
+            "il pubblico",
+            "l'artista"
+          ],
+          "answer": "il pubblico"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'masterpiece':",
+          "options": [
+            "la scultura",
+            "il capolavoro",
+            "esibirsi",
+            "l'arte"
+          ],
+          "answer": "il capolavoro"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bisogna che tu ___ questa mostra. (vedere)",
+          "answer": "veda"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Penso che il concerto ___ bellissimo. (essere)",
+          "answer": "sia"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Voglio che tu ___ questo romanzo. (leggere)",
+          "answer": "legga"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Spero che l'artista ___ domani. (venire)",
+          "answer": "venga"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "È importante che l'arte ___ libera. (essere)",
+          "answer": "sia"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Il pubblico ___ alla fine. (applaudire)",
+          "answer": "applaudisce"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Questa scultura è un ___.",
+          "answer": "capolavoro"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Lo scrittore ___ il suo libro. (finire)",
+          "answer": "finisce"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Science and Technology",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "la scienza",
+          "translation": "science",
+          "pos": "noun",
+          "example": "La scienza spiega l'universo."
+        },
+        {
+          "word": "lo scienziato",
+          "translation": "scientist",
+          "pos": "noun",
+          "example": "Lo scienziato lavora in laboratorio."
+        },
+        {
+          "word": "l'esperimento",
+          "translation": "experiment",
+          "pos": "noun",
+          "example": "L'esperimento è durato un anno."
+        },
+        {
+          "word": "la scoperta",
+          "translation": "discovery",
+          "pos": "noun",
+          "example": "La scoperta ha cambiato la medicina."
+        },
+        {
+          "word": "l'invenzione",
+          "translation": "invention",
+          "pos": "noun",
+          "example": "L'invenzione del telefono."
+        },
+        {
+          "word": "la ricerca",
+          "translation": "research",
+          "pos": "noun",
+          "example": "La ricerca avanza lentamente."
+        },
+        {
+          "word": "il laboratorio",
+          "translation": "laboratory",
+          "accepted_translations": ["lab"],
+          "pos": "noun",
+          "example": "Il laboratorio è chiuso il lunedì."
+        },
+        {
+          "word": "i dati",
+          "translation": "data",
+          "pos": "noun",
+          "example": "I dati confermano l'ipotesi."
+        },
+        {
+          "word": "il software",
+          "translation": "software",
+          "pos": "noun",
+          "example": "Il software calcola tutto."
+        },
+        {
+          "word": "la rete",
+          "translation": "network",
+          "pos": "noun",
+          "example": "La rete si è bloccata stamattina."
+        },
+        {
+          "word": "l'energia",
+          "translation": "energy",
+          "pos": "noun",
+          "example": "L'energia solare è pulita."
+        },
+        {
+          "word": "il satellite",
+          "translation": "satellite",
+          "pos": "noun",
+          "example": "Il satellite fotografa la Terra."
+        },
+        {
+          "word": "il robot",
+          "translation": "robot",
+          "pos": "noun",
+          "example": "Il robot assembla le macchine."
+        },
+        {
+          "word": "inventare",
+          "translation": "to invent",
+          "pos": "verb",
+          "example": "Lei inventa un nuovo motore."
+        },
+        {
+          "word": "scoprire",
+          "translation": "to discover",
+          "pos": "verb",
+          "example": "Scopriamo una grotta."
+        },
+        {
+          "word": "calcolare",
+          "translation": "to calculate",
+          "pos": "verb",
+          "example": "Il computer calcola velocissimo."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "la scienza",
+          "answer": "science"
+        },
+        {
+          "type": "translation",
+          "prompt": "lo scienziato",
+          "answer": "scientist"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'esperimento",
+          "answer": "experiment"
+        },
+        {
+          "type": "translation",
+          "prompt": "la scoperta",
+          "answer": "discovery"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'invenzione",
+          "answer": "invention"
+        },
+        {
+          "type": "translation",
+          "prompt": "la ricerca",
+          "answer": "research"
+        },
+        {
+          "type": "translation",
+          "prompt": "il laboratorio",
+          "answer": "laboratory",
+          "accepted_answers": [
+            "lab"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "i dati",
+          "answer": "data"
+        },
+        {
+          "type": "translation",
+          "prompt": "il software",
+          "answer": "software"
+        },
+        {
+          "type": "translation",
+          "prompt": "la rete",
+          "answer": "network"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'energia",
+          "answer": "energy"
+        },
+        {
+          "type": "translation",
+          "prompt": "il satellite",
+          "answer": "satellite"
+        },
+        {
+          "type": "translation",
+          "prompt": "il robot",
+          "answer": "robot"
+        },
+        {
+          "type": "translation",
+          "prompt": "inventare",
+          "answer": "to invent"
+        },
+        {
+          "type": "translation",
+          "prompt": "scoprire",
+          "answer": "to discover"
+        },
+        {
+          "type": "translation",
+          "prompt": "calcolare",
+          "answer": "to calculate"
+        },
+        {
+          "type": "translation",
+          "prompt": "Il satellite invia dati alla Terra.",
+          "answer": "The satellite sends data to the Earth."
+        },
+        {
+          "type": "translation",
+          "prompt": "Gli scienziati fanno un esperimento in laboratorio.",
+          "answer": "The scientists do an experiment in the laboratory."
+        },
+        {
+          "type": "translation",
+          "prompt": "La scoperta ha cambiato la scienza.",
+          "answer": "The discovery changed science."
+        },
+        {
+          "type": "translation",
+          "prompt": "Il software calcola i risultati in un secondo.",
+          "answer": "The software calculates the results in one second."
+        },
+        {
+          "type": "translation",
+          "prompt": "È stata l'invenzione che ha cambiato il mondo.",
+          "answer": "It was the invention that changed the world."
+        },
+        {
+          "type": "translation",
+          "prompt": "Il robot lavora in fabbrica.",
+          "answer": "The robot works in the factory."
+        },
+        {
+          "type": "translation",
+          "prompt": "La ricerca sull'energia solare avanza.",
+          "answer": "Research on solar energy is advancing."
+        },
+        {
+          "type": "translation",
+          "prompt": "Scopriamo come funziona la rete.",
+          "answer": "We are discovering how the network works."
+        },
+        {
+          "type": "translation",
+          "prompt": "The scientist discovered a new planet.",
+          "answer": "Lo scienziato ha scoperto un nuovo pianeta."
+        },
+        {
+          "type": "translation",
+          "prompt": "This invention changed the world.",
+          "answer": "Questa invenzione ha cambiato il mondo."
+        },
+        {
+          "type": "translation",
+          "prompt": "The robot works in the laboratory.",
+          "answer": "Il robot lavora in laboratorio."
+        },
+        {
+          "type": "translation",
+          "prompt": "Energy is important for the future.",
+          "answer": "L'energia è importante per il futuro."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'science':",
+          "options": [
+            "la scienza",
+            "lo scienziato",
+            "la scoperta",
+            "la ricerca"
+          ],
+          "answer": "la scienza"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'scientist':",
+          "options": [
+            "l'esperimento",
+            "l'invenzione",
+            "il laboratorio",
+            "lo scienziato"
+          ],
+          "answer": "lo scienziato"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'discovery':",
+          "options": [
+            "il laboratorio",
+            "il software",
+            "la scoperta",
+            "l'invenzione"
+          ],
+          "answer": "la scoperta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'research':",
+          "options": [
+            "l'energia",
+            "la ricerca",
+            "il laboratorio",
+            "il software"
+          ],
+          "answer": "la ricerca"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'energy':",
+          "options": [
+            "l'energia",
+            "il satellite",
+            "inventare",
+            "calcolare"
+          ],
+          "answer": "l'energia"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'satellite':",
+          "options": [
+            "il robot",
+            "scoprire",
+            "la scienza",
+            "il satellite"
+          ],
+          "answer": "il satellite"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'robot':",
+          "options": [
+            "calcolare",
+            "lo scienziato",
+            "il robot",
+            "inventare"
+          ],
+          "answer": "il robot"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to discover':",
+          "options": [
+            "la scoperta",
+            "scoprire",
+            "calcolare",
+            "lo scienziato"
+          ],
+          "answer": "scoprire"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Il romanzo ___ ho letto è lungo.",
+          "answer": "che"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La persona con ___ parlo è uno scienziato.",
+          "answer": "cui"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Il software ___ uso è gratuito.",
+          "answer": "che"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La scoperta ___ ha cambiato il mondo è recente.",
+          "answer": "che"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Il robot ___ abbiamo visto lavora qui.",
+          "answer": "che"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Il ___ invia dati alla Terra.",
+          "answer": "satellite"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La ___ spiega l'universo.",
+          "answer": "scienza"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I ___ confermano l'ipotesi.",
+          "answer": "dati"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Society and Politics",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "la legge",
+          "translation": "law",
+          "pos": "noun",
+          "example": "Il parlamento vota una legge."
+        },
+        {
+          "word": "il diritto",
+          "translation": "right",
+          "pos": "noun",
+          "example": "Ogni cittadino ha dei diritti."
+        },
+        {
+          "word": "il governo",
+          "translation": "government",
+          "pos": "noun",
+          "example": "Il governo decide il bilancio."
+        },
+        {
+          "word": "le elezioni",
+          "translation": "elections",
+          "pos": "noun",
+          "example": "Le elezioni si tengono a maggio."
+        },
+        {
+          "word": "il cittadino",
+          "translation": "citizen",
+          "pos": "noun",
+          "example": "Il cittadino vota liberamente."
+        },
+        {
+          "word": "la politica",
+          "translation": "politics",
+          "accepted_translations": ["policy"],
+          "pos": "noun",
+          "example": "La politica mi interessa."
+        },
+        {
+          "word": "il dibattito",
+          "translation": "debate",
+          "pos": "noun",
+          "example": "Il dibattito è durato tre ore."
+        },
+        {
+          "word": "la libertà",
+          "translation": "freedom",
+          "accepted_translations": ["liberty"],
+          "pos": "noun",
+          "example": "La libertà di stampa è essenziale."
+        },
+        {
+          "word": "la giustizia",
+          "translation": "justice",
+          "pos": "noun",
+          "example": "La giustizia deve essere uguale per tutti."
+        },
+        {
+          "word": "la tassa",
+          "translation": "tax",
+          "accepted_translations": ["taxes"],
+          "pos": "noun",
+          "example": "Paghiamo la tassa ogni anno."
+        },
+        {
+          "word": "la manifestazione",
+          "translation": "demonstration",
+          "accepted_translations": ["protest", "march"],
+          "pos": "noun",
+          "example": "La manifestazione ha attraversato la città."
+        },
+        {
+          "word": "il parlamento",
+          "translation": "parliament",
+          "pos": "noun",
+          "example": "Il parlamento rappresenta il popolo."
+        },
+        {
+          "word": "la democrazia",
+          "translation": "democracy",
+          "pos": "noun",
+          "example": "La democrazia protegge i diritti."
+        },
+        {
+          "word": "il popolo",
+          "translation": "the people",
+          "pos": "noun",
+          "example": "In democrazia decide il popolo."
+        },
+        {
+          "word": "votare",
+          "translation": "to vote",
+          "pos": "verb",
+          "example": "Voterò domenica."
+        },
+        {
+          "word": "decidere",
+          "translation": "to decide",
+          "pos": "verb",
+          "example": "Sei tu che decidi."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "la legge",
+          "answer": "law"
+        },
+        {
+          "type": "translation",
+          "prompt": "il diritto",
+          "answer": "right"
+        },
+        {
+          "type": "translation",
+          "prompt": "il governo",
+          "answer": "government"
+        },
+        {
+          "type": "translation",
+          "prompt": "le elezioni",
+          "answer": "elections"
+        },
+        {
+          "type": "translation",
+          "prompt": "il cittadino",
+          "answer": "citizen"
+        },
+        {
+          "type": "translation",
+          "prompt": "la politica",
+          "answer": "politics",
+          "accepted_answers": [
+            "policy"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "il dibattito",
+          "answer": "debate"
+        },
+        {
+          "type": "translation",
+          "prompt": "la libertà",
+          "answer": "freedom",
+          "accepted_answers": [
+            "liberty"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "la giustizia",
+          "answer": "justice"
+        },
+        {
+          "type": "translation",
+          "prompt": "la tassa",
+          "answer": "tax",
+          "accepted_answers": [
+            "taxes"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "la manifestazione",
+          "answer": "demonstration",
+          "accepted_answers": [
+            "protest",
+            "march"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "il parlamento",
+          "answer": "parliament"
+        },
+        {
+          "type": "translation",
+          "prompt": "la democrazia",
+          "answer": "democracy"
+        },
+        {
+          "type": "translation",
+          "prompt": "il popolo",
+          "answer": "the people"
+        },
+        {
+          "type": "translation",
+          "prompt": "votare",
+          "answer": "to vote"
+        },
+        {
+          "type": "translation",
+          "prompt": "decidere",
+          "answer": "to decide"
+        },
+        {
+          "type": "translation",
+          "prompt": "I cittadini votano alle elezioni.",
+          "answer": "Citizens vote in the elections."
+        },
+        {
+          "type": "translation",
+          "prompt": "Il parlamento vota una nuova legge.",
+          "answer": "Parliament votes on a new law."
+        },
+        {
+          "type": "translation",
+          "prompt": "La libertà di stampa è importante.",
+          "answer": "Freedom of the press is important."
+        },
+        {
+          "type": "translation",
+          "prompt": "Il dibattito è durato tre ore.",
+          "answer": "The debate lasted three hours."
+        },
+        {
+          "type": "translation",
+          "prompt": "Paghiamo le tasse ogni anno.",
+          "answer": "We pay taxes every year."
+        },
+        {
+          "type": "translation",
+          "prompt": "La manifestazione ha riunito mille persone.",
+          "answer": "The demonstration gathered a thousand people.",
+          "accepted_answers": [
+            "The protest gathered a thousand people.",
+            "The march gathered a thousand people."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "In democrazia decide il popolo.",
+          "answer": "In a democracy, the people decide."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ogni cittadino ha il diritto di votare.",
+          "answer": "Every citizen has the right to vote."
+        },
+        {
+          "type": "translation",
+          "prompt": "The government must decide.",
+          "answer": "Il governo deve decidere."
+        },
+        {
+          "type": "translation",
+          "prompt": "Freedom and justice are important values.",
+          "answer": "La libertà e la giustizia sono valori importanti."
+        },
+        {
+          "type": "translation",
+          "prompt": "The vote took place on Sunday.",
+          "answer": "Il voto si è tenuto domenica."
+        },
+        {
+          "type": "translation",
+          "prompt": "Citizens demonstrated for justice.",
+          "answer": "I cittadini sono scesi in piazza per la giustizia."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'law':",
+          "options": [
+            "la legge",
+            "il diritto",
+            "le elezioni",
+            "la politica"
+          ],
+          "answer": "la legge"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'right':",
+          "options": [
+            "il governo",
+            "il cittadino",
+            "il dibattito",
+            "il diritto"
+          ],
+          "answer": "il diritto"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'government':",
+          "options": [
+            "la politica",
+            "la libertà",
+            "il governo",
+            "le elezioni"
+          ],
+          "answer": "il governo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'elections':",
+          "options": [
+            "la giustizia",
+            "le elezioni",
+            "il cittadino",
+            "il dibattito"
+          ],
+          "answer": "le elezioni"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'citizen':",
+          "options": [
+            "il cittadino",
+            "la politica",
+            "la libertà",
+            "la tassa"
+          ],
+          "answer": "il cittadino"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'politics':",
+          "options": [
+            "il dibattito",
+            "la giustizia",
+            "la manifestazione",
+            "la politica"
+          ],
+          "answer": "la politica"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'freedom':",
+          "options": [
+            "la manifestazione",
+            "la democrazia",
+            "la libertà",
+            "la giustizia"
+          ],
+          "answer": "la libertà"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'justice':",
+          "options": [
+            "il popolo",
+            "la giustizia",
+            "la tassa",
+            "il parlamento"
+          ],
+          "answer": "la giustizia"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ parla italiano in molti paesi.",
+          "answer": "Si"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ vende biglietti all'ingresso.",
+          "answer": "Si"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ costruisce una nuova biblioteca.",
+          "answer": "Si"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ rispetta la legge qui.",
+          "answer": "Si"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ discute molto di politica.",
+          "answer": "Si"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Il parlamento vota una ___.",
+          "answer": "legge"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La ___ deve essere uguale per tutti.",
+          "answer": "giustizia"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Il popolo ___ alle elezioni. (votare)",
+          "answer": "vota"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Feelings and Idioms",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "la vergogna",
+          "translation": "shame",
+          "pos": "noun",
+          "example": "Sento vergogna per il mio errore."
+        },
+        {
+          "word": "l'orgoglio",
+          "translation": "pride",
+          "pos": "noun",
+          "example": "Sento un grande orgoglio per te."
+        },
+        {
+          "word": "la gelosia",
+          "translation": "jealousy",
+          "pos": "noun",
+          "example": "La gelosia distrugge l'amicizia."
+        },
+        {
+          "word": "il sollievo",
+          "translation": "relief",
+          "pos": "noun",
+          "example": "Ho sentito un grande sollievo."
+        },
+        {
+          "word": "la colpa",
+          "translation": "guilt",
+          "accepted_translations": ["fault"],
+          "pos": "noun",
+          "example": "La colpa non lo fa dormire."
+        },
+        {
+          "word": "la solitudine",
+          "translation": "loneliness",
+          "pos": "noun",
+          "example": "La solitudine pesa d'inverno."
+        },
+        {
+          "word": "la pazienza",
+          "translation": "patience",
+          "pos": "noun",
+          "example": "La pazienza è una virtù."
+        },
+        {
+          "word": "il coraggio",
+          "translation": "courage",
+          "accepted_translations": ["bravery"],
+          "pos": "noun",
+          "example": "Ha avuto il coraggio di parlare."
+        },
+        {
+          "word": "la gratitudine",
+          "translation": "gratitude",
+          "accepted_translations": ["thankfulness"],
+          "pos": "noun",
+          "example": "Le devo tutta la mia gratitudine."
+        },
+        {
+          "word": "la gentilezza",
+          "translation": "kindness",
+          "pos": "noun",
+          "example": "Grazie per la tua gentilezza."
+        },
+        {
+          "word": "l'invidia",
+          "translation": "envy",
+          "pos": "noun",
+          "example": "L'invidia non porta da nessuna parte."
+        },
+        {
+          "word": "litigare",
+          "translation": "to argue",
+          "accepted_translations": ["to quarrel"],
+          "pos": "verb",
+          "example": "Litigano per piccole cose."
+        },
+        {
+          "word": "scusarsi",
+          "translation": "to apologize",
+          "pos": "verb",
+          "example": "Si scusa per il ritardo."
+        },
+        {
+          "word": "perdonare",
+          "translation": "to forgive",
+          "pos": "verb",
+          "example": "Perdonare libera."
+        },
+        {
+          "word": "avere ragione",
+          "translation": "to be right",
+          "pos": "verb",
+          "example": "Tu hai ragione, come sempre."
+        },
+        {
+          "word": "avere torto",
+          "translation": "to be wrong",
+          "pos": "verb",
+          "example": "Io avevo torto su questo."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "la vergogna",
+          "answer": "shame"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'orgoglio",
+          "answer": "pride"
+        },
+        {
+          "type": "translation",
+          "prompt": "la gelosia",
+          "answer": "jealousy"
+        },
+        {
+          "type": "translation",
+          "prompt": "il sollievo",
+          "answer": "relief"
+        },
+        {
+          "type": "translation",
+          "prompt": "la colpa",
+          "answer": "guilt",
+          "accepted_answers": [
+            "fault"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "la solitudine",
+          "answer": "loneliness"
+        },
+        {
+          "type": "translation",
+          "prompt": "la pazienza",
+          "answer": "patience"
+        },
+        {
+          "type": "translation",
+          "prompt": "il coraggio",
+          "answer": "courage",
+          "accepted_answers": [
+            "bravery"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "la gratitudine",
+          "answer": "gratitude",
+          "accepted_answers": [
+            "thankfulness"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "la gentilezza",
+          "answer": "kindness"
+        },
+        {
+          "type": "translation",
+          "prompt": "l'invidia",
+          "answer": "envy"
+        },
+        {
+          "type": "translation",
+          "prompt": "litigare",
+          "answer": "to argue",
+          "accepted_answers": [
+            "to quarrel"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "scusarsi",
+          "answer": "to apologize"
+        },
+        {
+          "type": "translation",
+          "prompt": "perdonare",
+          "answer": "to forgive"
+        },
+        {
+          "type": "translation",
+          "prompt": "avere ragione",
+          "answer": "to be right"
+        },
+        {
+          "type": "translation",
+          "prompt": "avere torto",
+          "answer": "to be wrong"
+        },
+        {
+          "type": "translation",
+          "prompt": "Sono orgoglioso di te.",
+          "answer": "I am proud of you."
+        },
+        {
+          "type": "translation",
+          "prompt": "Ha avuto il coraggio di dire la verità.",
+          "answer": "He had the courage to tell the truth."
+        },
+        {
+          "type": "translation",
+          "prompt": "Si scusa per il ritardo.",
+          "answer": "She apologizes for being late."
+        },
+        {
+          "type": "translation",
+          "prompt": "La solitudine è difficile d'inverno.",
+          "answer": "Loneliness is difficult in winter."
+        },
+        {
+          "type": "translation",
+          "prompt": "Tu hai ragione, come sempre.",
+          "answer": "You are right, as always."
+        },
+        {
+          "type": "translation",
+          "prompt": "Non essere geloso del suo successo.",
+          "answer": "Don't be jealous of her success."
+        },
+        {
+          "type": "translation",
+          "prompt": "Grazie per la tua gentilezza.",
+          "answer": "Thank you for your kindness."
+        },
+        {
+          "type": "translation",
+          "prompt": "Litigano per piccole cose.",
+          "answer": "They argue about small things."
+        },
+        {
+          "type": "translation",
+          "prompt": "Avevo torto, tu avevi ragione.",
+          "answer": "I was wrong, you were right."
+        },
+        {
+          "type": "translation",
+          "prompt": "Please forgive me.",
+          "answer": "Perdonami, per favore."
+        },
+        {
+          "type": "translation",
+          "prompt": "Patience is a great quality.",
+          "answer": "La pazienza è una grande qualità."
+        },
+        {
+          "type": "translation",
+          "prompt": "Shame and guilt are difficult feelings.",
+          "answer": "La vergogna e la colpa sono sentimenti difficili."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'shame':",
+          "options": [
+            "la vergogna",
+            "l'orgoglio",
+            "il sollievo",
+            "la solitudine"
+          ],
+          "answer": "la vergogna"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'pride':",
+          "options": [
+            "la gelosia",
+            "la colpa",
+            "la pazienza",
+            "l'orgoglio"
+          ],
+          "answer": "l'orgoglio"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'relief':",
+          "options": [
+            "la pazienza",
+            "la gratitudine",
+            "il sollievo",
+            "la colpa"
+          ],
+          "answer": "il sollievo"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'patience':",
+          "options": [
+            "litigare",
+            "la pazienza",
+            "il coraggio",
+            "la gentilezza"
+          ],
+          "answer": "la pazienza"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'gratitude':",
+          "options": [
+            "la gratitudine",
+            "la gentilezza",
+            "litigare",
+            "perdonare"
+          ],
+          "answer": "la gratitudine"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to apologize':",
+          "options": [
+            "perdonare",
+            "avere torto",
+            "l'orgoglio",
+            "scusarsi"
+          ],
+          "answer": "scusarsi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to forgive':",
+          "options": [
+            "la vergogna",
+            "la gelosia",
+            "perdonare",
+            "avere ragione"
+          ],
+          "answer": "perdonare"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to be wrong':",
+          "options": [
+            "la colpa",
+            "avere torto",
+            "la vergogna",
+            "la gelosia"
+          ],
+          "answer": "avere torto"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ho ___ di vedere quella mostra. (voglia)",
+          "answer": "voglia"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ho ___ di parlare in pubblico. (paura)",
+          "answer": "paura"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sono ___ di te. (orgoglioso)",
+          "answer": "orgoglioso"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Lui non ha mai ___. (ragione)",
+          "answer": "ragione"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sentivo molta ___ per il mio errore. (colpa)",
+          "answer": "colpa"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sento un grande ___ dopo l'esame. (sollievo)",
+          "answer": "sollievo"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "La ___ pesa in inverno. (solitudine)",
+          "answer": "solitudine"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bisogna avere ___ per perdonare. (coraggio)",
+          "answer": "coraggio"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Memories and Reflections",
+      "level_hint": "advanced",
+      "vocabulary": [
+        {
+          "word": "la memoria",
+          "translation": "memory",
+          "pos": "noun",
+          "example": "La memoria custodisce i volti."
+        },
+        {
+          "word": "la gioventù",
+          "translation": "youth",
+          "pos": "noun",
+          "example": "Racconta storie della sua gioventù."
+        },
+        {
+          "word": "il passato",
+          "translation": "past",
+          "pos": "noun",
+          "example": "Il passato spiega il presente."
+        },
+        {
+          "word": "il rimpianto",
+          "translation": "regret",
+          "pos": "noun",
+          "example": "Il mio più grande rimpianto."
+        },
+        {
+          "word": "la saggezza",
+          "translation": "wisdom",
+          "pos": "noun",
+          "example": "Gli anni portano la saggezza."
+        },
+        {
+          "word": "il fallimento",
+          "translation": "failure",
+          "pos": "noun",
+          "example": "Il fallimento è una lezione."
+        },
+        {
+          "word": "la scelta",
+          "translation": "choice",
+          "accepted_translations": ["decision"],
+          "pos": "noun",
+          "example": "Quella scelta ha cambiato la mia vita."
+        },
+        {
+          "word": "il silenzio",
+          "translation": "silence",
+          "pos": "noun",
+          "example": "Lei mantiene il silenzio."
+        },
+        {
+          "word": "la promessa",
+          "translation": "promise",
+          "pos": "noun",
+          "example": "Ha mantenuto la sua promessa."
+        },
+        {
+          "word": "lo sforzo",
+          "translation": "effort",
+          "pos": "noun",
+          "example": "Lo sforzo vale sempre."
+        },
+        {
+          "word": "il destino",
+          "translation": "destiny",
+          "accepted_translations": ["fate"],
+          "pos": "noun",
+          "example": "Non credo nel destino."
+        },
+        {
+          "word": "l'ambizione",
+          "translation": "ambition",
+          "pos": "noun",
+          "example": "La sua ambizione non ha limiti."
+        },
+        {
+          "word": "ricordarsi",
+          "translation": "to remember",
+          "pos": "verb",
+          "example": "Mi ricordo di te."
+        },
+        {
+          "word": "dimenticare",
+          "translation": "to forget",
+          "pos": "verb",
+          "example": "Col tempo si dimentica."
+        },
+        {
+          "word": "crescere",
+          "translation": "to grow up",
+          "pos": "verb",
+          "example": "I bambini crescono in fretta."
+        },
+        {
+          "word": "maturare",
+          "translation": "to mature",
+          "pos": "verb",
+          "example": "Con gli anni si matura."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "translation",
+          "prompt": "la memoria",
+          "answer": "memory"
+        },
+        {
+          "type": "translation",
+          "prompt": "la gioventù",
+          "answer": "youth"
+        },
+        {
+          "type": "translation",
+          "prompt": "il passato",
+          "answer": "past"
+        },
+        {
+          "type": "translation",
+          "prompt": "il rimpianto",
+          "answer": "regret"
+        },
+        {
+          "type": "translation",
+          "prompt": "la saggezza",
+          "answer": "wisdom"
+        },
+        {
+          "type": "translation",
+          "prompt": "il fallimento",
+          "answer": "failure"
+        },
+        {
+          "type": "translation",
+          "prompt": "la scelta",
+          "answer": "choice",
+          "accepted_answers": [
+            "decision"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "il silenzio",
+          "answer": "silence"
+        },
+        {
+          "type": "translation",
+          "prompt": "la promessa",
+          "answer": "promise"
+        },
+        {
+          "type": "translation",
+          "prompt": "lo sforzo",
+          "answer": "effort"
+        },
+        {
+          "type": "translation",
+          "prompt": "il destino",
+          "answer": "destiny",
+          "accepted_answers": [
+            "fate"
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "l'ambizione",
+          "answer": "ambition"
+        },
+        {
+          "type": "translation",
+          "prompt": "ricordarsi",
+          "answer": "to remember"
+        },
+        {
+          "type": "translation",
+          "prompt": "dimenticare",
+          "answer": "to forget"
+        },
+        {
+          "type": "translation",
+          "prompt": "crescere",
+          "answer": "to grow up"
+        },
+        {
+          "type": "translation",
+          "prompt": "maturare",
+          "answer": "to mature"
+        },
+        {
+          "type": "translation",
+          "prompt": "Se l'avessi saputo, avrei fatto un'altra scelta.",
+          "answer": "If I had known, I would have made a different choice."
+        },
+        {
+          "type": "translation",
+          "prompt": "Quando ripenso alla mia gioventù, sorrido.",
+          "answer": "When I think back on my youth, I smile."
+        },
+        {
+          "type": "translation",
+          "prompt": "Lei mantiene il silenzio sul suo passato.",
+          "answer": "She keeps quiet about her past."
+        },
+        {
+          "type": "translation",
+          "prompt": "Il mio più grande rimpianto è non aver viaggiato.",
+          "answer": "My biggest regret is not having traveled."
+        },
+        {
+          "type": "translation",
+          "prompt": "Il fallimento è una lezione, non la fine.",
+          "answer": "Failure is a lesson, not the end."
+        },
+        {
+          "type": "translation",
+          "prompt": "Mi ricordo del nostro primo incontro.",
+          "answer": "I remember our first meeting."
+        },
+        {
+          "type": "translation",
+          "prompt": "Col tempo si dimenticano i brutti ricordi.",
+          "answer": "With time, you forget the bad memories.",
+          "accepted_answers": [
+            "With time, one forgets the bad memories."
+          ]
+        },
+        {
+          "type": "translation",
+          "prompt": "Ha fatto degli sforzi ed è maturato.",
+          "answer": "He made efforts and he matured."
+        },
+        {
+          "type": "translation",
+          "prompt": "If I had been there, I would have helped you.",
+          "answer": "Se fossi stato lì, ti avrei aiutato."
+        },
+        {
+          "type": "translation",
+          "prompt": "I don't remember her name.",
+          "answer": "Non mi ricordo il suo nome."
+        },
+        {
+          "type": "translation",
+          "prompt": "You have to grow up one day.",
+          "answer": "Bisogna crescere un giorno."
+        },
+        {
+          "type": "translation",
+          "prompt": "The past explains the present.",
+          "answer": "Il passato spiega il presente."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'memory':",
+          "options": [
+            "la memoria",
+            "la gioventù",
+            "il rimpianto",
+            "il fallimento"
+          ],
+          "answer": "la memoria"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'youth':",
+          "options": [
+            "il passato",
+            "la saggezza",
+            "la scelta",
+            "la gioventù"
+          ],
+          "answer": "la gioventù"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'past':",
+          "options": [
+            "il fallimento",
+            "il silenzio",
+            "il passato",
+            "il rimpianto"
+          ],
+          "answer": "il passato"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'regret':",
+          "options": [
+            "la promessa",
+            "il rimpianto",
+            "la saggezza",
+            "la scelta"
+          ],
+          "answer": "il rimpianto"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'choice':",
+          "options": [
+            "la scelta",
+            "il silenzio",
+            "lo sforzo",
+            "l'ambizione"
+          ],
+          "answer": "la scelta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'silence':",
+          "options": [
+            "la promessa",
+            "il destino",
+            "ricordarsi",
+            "il silenzio"
+          ],
+          "answer": "il silenzio"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to remember':",
+          "options": [
+            "maturare",
+            "la gioventù",
+            "ricordarsi",
+            "dimenticare"
+          ],
+          "answer": "ricordarsi"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word for 'to grow up':",
+          "options": [
+            "il rimpianto",
+            "crescere",
+            "maturare",
+            "la gioventù"
+          ],
+          "answer": "crescere"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Se avessi saputo, ___ comprato la casa. (avere)",
+          "answer": "avrei"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Se fossi venuto, ___ goduto del concerto. (avere)",
+          "answer": "avresti"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Se avessimo avuto tempo, ___ potuto visitare il museo. (potere)",
+          "answer": "avremmo"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sarebbe venuta se non ___ stata male. (essere)",
+          "answer": "fosse"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Avrei accettato se me lo ___ chiesto. (avere)",
+          "answer": "avessi"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Io ___ la mia gioventù con affetto. (ricordarsi)",
+          "answer": "ricordo"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Bisogna ___ per maturare. (crescere)",
+          "answer": "crescere"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Il ___ spiega il presente.",
+          "answer": "passato"
+        }
+      ]
     }
   ]
 }
