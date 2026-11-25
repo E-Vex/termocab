@@ -186,10 +186,10 @@ pub fn parse_language(
 /// installed file, an override dir or a dev checkout still wins, so
 /// contributors and custom-content authors are unaffected.
 pub fn builtin_languages() -> &'static [(&'static str, &'static str)] {
-    // The thirteen shipped courses (Nov 2026): french, spanish, german,
+    // The fourteen shipped courses (Nov 2026): french, spanish, german,
     // italian, polish, romanian, portuguese, swedish, hungarian,
-    // turkish, icelandic, catalan, dutch — same engine, same rules,
-    // each twenty-five stages, 393 words.
+    // turkish, icelandic, catalan, dutch, norwegian — same engine,
+    // same rules, each twenty-five stages, 393 words.
     &[
         ("french", include_str!("../../languages/french/stages.json")),
         (
@@ -231,6 +231,10 @@ pub fn builtin_languages() -> &'static [(&'static str, &'static str)] {
             include_str!("../../languages/catalan/stages.json"),
         ),
         ("dutch", include_str!("../../languages/dutch/stages.json")),
+        (
+            "norwegian",
+            include_str!("../../languages/norwegian/stages.json"),
+        ),
     ]
 }
 

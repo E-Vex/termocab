@@ -507,6 +507,7 @@ fn builtin_courses_work_with_zero_setup() {
         "icelandic",
         "catalan",
         "dutch",
+        "norwegian",
     ] {
         let out = termocab(&scratch)
             .args(["progress", lang])
@@ -580,6 +581,7 @@ fn list_langs_shows_builtins_installed_and_overrides() {
         "icelandic",
         "catalan",
         "dutch",
+        "norwegian",
     ] {
         let stages = std::fs::read_to_string(
             PathBuf::from(env!("CARGO_MANIFEST_DIR"))
@@ -1212,6 +1214,7 @@ fn shipped_courses_validate() {
         "icelandic",
         "catalan",
         "dutch",
+        "norwegian",
     ] {
         let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
             .join("languages")
@@ -2862,4 +2865,103 @@ fn stages_twentyone_to_twentyfive_unlock_review_and_report_their_level() {
     for n in 22..=25 {
         assert!(!srs.contains(&format!("word mot{n} ")), "{srs}");
     }
+}
+
+/// The fourteenth language end to end, in a Norwegian course. Zero
+/// engine changes — every letter was already adjudicated before the
+/// language arrived: å rides D9's accent fold ("ar" counts with "år"
+/// as the hint), æ rides the ligature tier it shares with Icelandic
+/// and Dutch ("vaer" counts with "vær"), and ø stays closed exactly
+/// the way D9 ruled when it wrote its example on a Nordic word —
+/// "smør" is not "smor", the ruling arrives with its language and
+/// collects, and "høy" is not "hoy" the same way. The course is
+/// Norwegian through and through: the gender drill is the three-way
+/// en/ei/et split, and the enclitic definite article is blanked at
+/// the end of the noun — with the feminine taking her own -a, the
+/// ending that separates Bokmål from its Scandinavian siblings. The
+/// review then keeps the srs keys verbatim, ø included.
+#[test]
+fn norwegian_closed_o_slash_and_the_a_endings_grade_end_to_end() {
+    let scratch = Scratch::new("norwegian");
+    let course = r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Norsk", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "år", "translation": "year",
+                "pos": "noun", "example": "Et år har tolv måneder." },
+              { "word": "vær", "translation": "weather",
+                "pos": "noun", "example": "Hvordan er været i dag?" },
+              { "word": "trær", "translation": "trees",
+                "pos": "noun", "example": "Trærne er grønne." },
+              { "word": "smør", "translation": "butter",
+                "pos": "noun", "example": "Brød med smør, takk." },
+              { "word": "høy", "translation": "tall",
+                "accepted_translations": ["high"],
+                "pos": "adjective", "example": "Fjellet er høyt." },
+              { "word": "fjord", "translation": "fjord",
+                "pos": "noun", "example": "Vi bor ved fjorden." }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "year", "answer": "år" },
+              { "type": "translation", "prompt": "weather", "answer": "vær" },
+              { "type": "translation", "prompt": "trees", "answer": "trær" },
+              { "type": "translation", "prompt": "butter", "answer": "smør" },
+              { "type": "translation", "prompt": "tall", "answer": "høy" },
+              { "type": "translation", "prompt": "fjord", "answer": "fjord" },
+              { "type": "fill_blank", "prompt": "Gut___ heter Ola.", "answer": "en" },
+              { "type": "fill_blank", "prompt": "Hus___ er hvitt.", "answer": "et" },
+              { "type": "fill_blank", "prompt": "Jent___ leser en bok.", "answer": "a" },
+              { "type": "fill_blank", "prompt": "Jeg ___ ha en kaffe.", "answer": "vil" }
+            ] }
+       ] }"#;
+    let file = scratch.stages_file("norwegian.json", course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    // typed the way a learner without a Scandinavian keyboard types:
+    // the foldable letters folded — "ar" for "år", "vaer" for "vær",
+    // "traer" for "trær", all correct with the properly spelled forms
+    // as the hints — and the closed letter typed plain, "smor" for
+    // "smør" and "hoy" for "høy", which are misses that count against
+    // the pass bar exactly like Icelandic's "godur" for "góður". The
+    // run lands at 8/10, exactly on the 80% bar, and passes.
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "--no-shuffle", "test"]);
+    let out = feed(
+        &mut cmd,
+        "ar\nvaer\ntraer\nsmor\nhoy\nfjord\nen\net\na\nvil\n",
+    );
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("watch the accents: år"), "{text}");
+    assert!(text.contains("watch the accents: vær"), "{text}");
+    assert!(text.contains("watch the accents: trær"), "{text}");
+    assert!(text.contains("not quite — expected: smør"), "{text}");
+    assert!(text.contains("not quite — expected: høy"), "{text}");
+    assert!(!text.contains("watch the accents: smør"), "{text}");
+    assert!(!text.contains("watch the accents: høy"), "{text}");
+    assert!(text.contains("8/10"), "{text}");
+    assert!(text.contains("stage complete"), "{text}");
+
+    // review: due cards come alphabetical (fjord, høy, smør, trær,
+    // vær, år — byte order, ø after the ASCII letters and before ð),
+    // the accepted alternative "high" counts for høy, and the srs
+    // keys keep every letter verbatim — the closed ø included
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(&mut cmd, "fjord\ntall\nbutter\ntrees\nweather\nyear\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("correct"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    let srs = scratch.home().join(".config/termocab/srs/test.txt");
+    let srs = std::fs::read_to_string(&srs).expect("srs file");
+    assert!(srs.contains("word år box 2"), "{srs}");
+    assert!(srs.contains("word vær box 2"), "{srs}");
+    assert!(srs.contains("word trær box 2"), "{srs}");
+    assert!(srs.contains("word smør box 2"), "{srs}");
+    assert!(srs.contains("word høy box 2"), "{srs}");
+    assert!(srs.contains("word fjord box 2"), "{srs}");
 }
