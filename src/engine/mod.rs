@@ -148,15 +148,28 @@ use std::iter::once;
 /// ø þ ð in the closed club (D9) — "hayır" is not "hayir" — and
 /// capital İ needs no entry either: to_lowercase leaves "i" +
 /// U+0307 behind and the loose pass drops the dot, so "istanbul"
-/// counts with "İstanbul" through the existing machinery.
+/// counts with "İstanbul" through the existing machinery. The Czech
+/// caron set (D25) is the fifth extension a language has forced, and
+/// the largest: č ď ě ň ř š ť ž (all Extended-A, all decomposing to
+/// base letter + the caron U+030C) plus ů (u + the ring above — the
+/// very mark å already carries). ř is the table's first letter that
+/// exists in no other language, and ě and ř are both phonemes of
+/// their own, but the D15 ruling already settled what that means:
+/// the fold is a keyboard kindness, not a phonology claim — ğ is
+/// phonemically its own letter in Turkish and still folds, because
+/// it decomposes and the loose pass drops the mark. The same logic
+/// takes every caron; no Czech letter joins the closed club, because
+/// none of them is a letter in its own right the way ø þ ð ı are —
+/// they all decompose. ů rides the å rule on a new base letter: ú
+/// and ů spell the same sound twice, and both fold to "u".
 /// Decomposing (rather than stripping) in the strict
 /// pass makes precomposed "é" equal to "e" + U+0301 typed on a macOS
 /// keyboard — same letter, same accent, different encoding. Hand-
-/// written on purpose: forty-two entries beat a Unicode-normalization
+/// written on purpose: fifty-one entries beat a Unicode-normalization
 /// crate, and §6 asks for justification before any dependency. The
 /// Nordic letters stay closed — "smør" is not "smor". Lowercase
 /// only: [`normalize_strict`] lowercases before it looks here (D9).
-const ACCENTED: [(char, &str); 42] = [
+const ACCENTED: [(char, &str); 51] = [
     ('à', "a\u{0300}"),
     ('á', "a\u{0301}"),
     ('â', "a\u{0302}"),
@@ -228,6 +241,27 @@ const ACCENTED: [(char, &str); 42] = [
     // drops the dot, so "istanbul" counts with "İstanbul" as the
     // hint through machinery that already exists.
     ('ğ', "g\u{0306}"),
+    // Czech (D25): the caron — háček, the mark Czech's own word for
+    // it carries — is a combining mark like any other, and it was
+    // already waiting inside the U+0300..U+036F window the loose
+    // pass drops; the entries only teach the strict pass that the
+    // precomposed letters decompose. ř is the marquee: a letter no
+    // other language spells, and the whole reason the roadmap put
+    // Czech first among the table-forcing candidates. ů takes the å
+    // rule to a new base letter — u + ring above — so both of Czech's
+    // spellings of the same long u, ú at the beginning of a word and
+    // ů after it, fold the same way. The fifth extension a language
+    // has forced, and the largest single wave: nine entries, every
+    // one of them decomposable, none of them closed.
+    ('č', "c\u{030C}"),
+    ('ď', "d\u{030C}"),
+    ('ě', "e\u{030C}"),
+    ('ň', "n\u{030C}"),
+    ('ř', "r\u{030C}"),
+    ('š', "s\u{030C}"),
+    ('ť', "t\u{030C}"),
+    ('ž', "z\u{030C}"),
+    ('ů', "u\u{030A}"),
 ];
 
 /// The ligatures open up only in the loose pass — "œuvre" and
@@ -877,6 +911,94 @@ mod tests {
         let een = translation("één", &[]);
         assert_eq!(een.grade("een"), Grade::CorrectWithHint("één".into()));
         assert!(een.is_correct("ÉÉN"));
+    }
+
+    #[test]
+    fn the_czech_carons_ride_the_accent_tier() {
+        // The fifteenth-language wave (D25) is the caron wave, the
+        // fifth ACCENTED extension and the largest single one: nine
+        // entries, every one decomposable. The caron was already
+        // inside the U+0300..U+036F window the loose pass drops —
+        // the entries only teach the strict pass that the
+        // precomposed letters decompose, exactly the D10 shape. The
+        // three behaviors every newcomer set gets:
+        // 1. the plain spelling counts, with the caron form as the
+        //    hint — a learner without a Czech keyboard types "cesky"
+        //    for "česky", "dekuji" for "děkuji", and "zena" for
+        //    "žena"
+        let cesky = translation("česky", &[]);
+        assert_eq!(cesky.grade("cesky"), Grade::CorrectWithHint("česky".into()));
+        let dekuji = translation("děkuji", &[]);
+        assert_eq!(
+            dekuji.grade("dekuji"),
+            Grade::CorrectWithHint("děkuji".into())
+        );
+        let zena = translation("žena", &[]);
+        assert_eq!(zena.grade("zena"), Grade::CorrectWithHint("žena".into()));
+        // 2. the properly spelled word is a full match — the caron
+        //    survives the strict pass — and case round-trips
+        assert_eq!(cesky.grade("česky"), Grade::Correct);
+        assert!(cesky.is_correct("ČESKY"));
+        assert!(dekuji.is_correct("DĚKUJI"));
+        assert!(zena.is_correct("ŽENA"));
+        // 3. composition folds both ways: a caron typed as a
+        //    combining mark on the same base letter equals the
+        //    precomposed letter, no hint — the macOS keyboard case
+        assert_eq!(cesky.grade("c\u{030C}esky"), Grade::Correct);
+        assert_eq!(dekuji.grade("de\u{030C}kuji"), Grade::Correct);
+        // …and a wrong letter is still wrong — the caron is not a
+        // wildcard, and a doubled word is a miss
+        assert!(!cesky.is_correct("ceska"));
+        assert!(!zena.is_correct("zenaa"));
+        // ř — the marquee letter, the one no other language spells —
+        // rides the same tier despite being a phoneme of its own,
+        // exactly as ğ did (D15): the fold is a keyboard kindness,
+        // not a phonology claim. "rek" counts with "řek", "řeka"
+        // round-trips, and the plain spelling of the famous word
+        // itself — "řeřicha" or better "řada" — hints the caron
+        let reka = translation("řeka", &[]);
+        assert_eq!(reka.grade("reka"), Grade::CorrectWithHint("řeka".into()));
+        assert_eq!(reka.grade("řeka"), Grade::Correct);
+        assert!(reka.is_correct("ŘEKA"));
+        assert!(!reka.is_correct("reky"));
+        // ů takes the å rule to a new base letter: u + ring above,
+        // so "dum" counts with "dům" — and Czech's two spellings of
+        // the same long u, ú and ů, both fold to plain u, which
+        // makes "hul" count with "hůl" and "urad" with "úřad" alike
+        let dum = translation("dům", &[]);
+        assert_eq!(dum.grade("dum"), Grade::CorrectWithHint("dům".into()));
+        assert!(dum.is_correct("DŮM"));
+        let urad = translation("úřad", &[]);
+        assert_eq!(urad.grade("urad"), Grade::CorrectWithHint("úřad".into()));
+        // ú and ů meet in the loose pass — both fold to "u", so the
+        // one can stand in for the other in the accent-blind pass
+        // and still only count with the hint — the strict pass keeps
+        // them distinct, exactly as spelling demands
+        assert_eq!(urad.grade("ůrad"), Grade::CorrectWithHint("úřad".into()));
+        // the four the opening pass skipped — ď ť ň š, all riding the
+        // same caron entry shape: "dabel" for "ďábel" (the word every
+        // Czech fairy tale carries), "tukat" for "ťukat", "prominte"
+        // for "promiňte", "skola" for "škola"
+        let dabel = translation("ďábel", &[]);
+        assert_eq!(dabel.grade("dabel"), Grade::CorrectWithHint("ďábel".into()));
+        assert!(dabel.is_correct("ĎÁBEL"));
+        let tukat = translation("ťukat", &[]);
+        assert_eq!(tukat.grade("tukat"), Grade::CorrectWithHint("ťukat".into()));
+        assert!(tukat.is_correct("ŤUKAT"));
+        let prominte = translation("promiňte", &[]);
+        assert_eq!(
+            prominte.grade("prominte"),
+            Grade::CorrectWithHint("promiňte".into())
+        );
+        let skola = translation("škola", &[]);
+        assert_eq!(skola.grade("skola"), Grade::CorrectWithHint("škola".into()));
+        // and no Czech letter joins the closed club: there is no
+        // "smor" story here, because every letter of the set
+        // decomposes — the closed club keeps its four members (D9,
+        // D15) and gains nothing from this wave
+        let praha = translation("Praha", &[]);
+        assert_eq!(praha.grade("praha"), Grade::Correct);
+        assert!(!praha.is_correct("brno"));
     }
 
     #[test]
