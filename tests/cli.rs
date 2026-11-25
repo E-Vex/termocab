@@ -2522,7 +2522,10 @@ fn stages_eleven_to_fifteen_unlock_review_and_report_their_level() {
     // reviews present due cards in alphabetical word order, and
     // alphabetically mot10 and mot11 sort before mot2
     let order = [1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9];
-    let answers: String = order.iter().map(|n| format!("word{n}\n")).collect();
+    let mut answers = String::new();
+    for n in order {
+        answers.push_str(&format!("word{n}\n"));
+    }
     let out = feed(&mut cmd, &answers);
     assert!(out.status.success(), "{}", stderr(&out));
     let text = stdout(&out);
@@ -2673,7 +2676,10 @@ fn stages_sixteen_to_twenty_unlock_review_and_report_their_level() {
     // reviews present due cards in alphabetical word order, and
     // alphabetically mot10 through mot16 sort before mot2
     let order = [1, 10, 11, 12, 13, 14, 15, 16, 2, 3, 4, 5, 6, 7, 8, 9];
-    let answers: String = order.iter().map(|n| format!("word{n}\n")).collect();
+    let mut answers = String::new();
+    for n in order {
+        answers.push_str(&format!("word{n}\n"));
+    }
     let out = feed(&mut cmd, &answers);
     assert!(out.status.success(), "{}", stderr(&out));
     let text = stdout(&out);
@@ -2837,7 +2843,10 @@ fn stages_twentyone_to_twentyfive_unlock_review_and_report_their_level() {
     let first_sitting = [
         1, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2, 20, 21, 3, 4, 5, 6, 7, 8,
     ];
-    let answers: String = first_sitting.iter().map(|n| format!("word{n}\n")).collect();
+    let mut answers = String::new();
+    for n in first_sitting {
+        answers.push_str(&format!("word{n}\n"));
+    }
     let out = feed(&mut cmd, &answers);
     assert!(out.status.success(), "{}", stderr(&out));
     let text = stdout(&out);
