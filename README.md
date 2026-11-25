@@ -16,7 +16,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license"></a>
   <img src="https://img.shields.io/badge/rust-1.78%2B-orange.svg" alt="Rust 1.78+">
   <img src="https://img.shields.io/badge/platform-linux%20%7C%20macOS-lightgrey.svg" alt="Linux and macOS">
-  <img src="https://img.shields.io/badge/courses-14-2dd4bf.svg" alt="14 courses">
+  <img src="https://img.shields.io/badge/courses-15-2dd4bf.svg" alt="15 courses">
 </p>
 
 <p align="center">
@@ -33,7 +33,7 @@
 ## Why termocab
 
 - **Terminal-native.** Git-style subcommands: `termocab start french`, `termocab review french`. No menus, no TUI, no mouse.
-- **Offline and private.** All 14 courses are compiled into a single binary. No account, no network, nothing to sync.
+- **Offline and private.** All 15 courses are compiled into a single binary. No account, no network, nothing to sync.
 - **Plain text everywhere.** Courses are JSON. Progress and review state are small text files you can read, diff and back up.
 - **Real spaced repetition.** Leitner boxes (1 / 2 / 4 / 8 / 16 / 32 days) bring words back right before you forget them — 20 cards a sitting, oldest due first, so a backlog never lands on you all at once.
 - **Forgiving where it should be.** Case, spacing and missing accents never cost you a point: `perche` is accepted for `perché`, and shows you the right spelling.
@@ -122,7 +122,7 @@ Needs Rust 1.78 or newer, on Linux or macOS. If your shell says `termocab: comma
 
 ## Courses
 
-Fourteen courses ship inside the binary. Every course has 25 stages in five waves, **beginner** (1–5), **elementary** (6–10), **intermediate** (11–15), **upper-intermediate** (16–20) and **advanced** (21–25), and runs on the same engine with the same rules.
+Fifteen courses ship inside the binary. Every course has 25 stages in five waves, **beginner** (1–5), **elementary** (6–10), **intermediate** (11–15), **upper-intermediate** (16–20) and **advanced** (21–25), and runs on the same engine with the same rules.
 
 | Course | Stages | Words | Exercises |
 | --- | :---: | :---: | :---: |
@@ -140,8 +140,9 @@ Fourteen courses ship inside the binary. Every course has 25 stages in five wave
 | Catalan | 25 | 393 | 1098 |
 | Dutch | 25 | 393 | 1098 |
 | Norwegian (Bokmål) | 25 | 393 | 1098 |
+| Czech | 25 | 393 | 1098 |
 
-Each course keeps its own signature drills: articles blanked where they live in Romanian, Swedish and Icelandic, vowel harmony in Hungarian and Turkish, the separable verbs of Dutch, the three genders and the feminine `-a` of Norwegian, and more. See [docs/courses.md](docs/courses.md).
+Each course keeps its own signature drills: articles blanked where they live in Romanian, Swedish and Icelandic, vowel harmony in Hungarian and Turkish, the separable verbs of Dutch, the three genders and the feminine `-a` of Norwegian, the carons and the case engine of Czech, and more. See [docs/courses.md](docs/courses.md).
 
 ## Forgiving grading
 
@@ -153,6 +154,8 @@ Grading forgives case, whitespace, edge punctuation and missing accents, and an 
 | `strasse` | `Straße` | ✅ correct, `ß` shown |
 | `lodz` | `łódź` | ✅ correct, accents and stroke shown |
 | `het IJsselmeer` | `het Ĳsselmeer` | ✅ correct, ligature shown |
+| `cesky` | `česky` | ✅ correct, caron shown |
+| `reka` | `řeka` | ✅ correct, caron shown |
 | `hayir` | `hayır` | ❌ miss: `ı` is a different vowel |
 | `godur` | `góður` | ❌ miss: `ð` stays closed |
 | `smor` | `smør` | ❌ miss: `ø` stays closed |

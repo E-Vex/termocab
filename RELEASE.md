@@ -82,7 +82,7 @@ The bump a change earns:
 | Bump | A change earns it when… |
 |------|------|
 | **MAJOR** | It can strand state or flip an accepted answer: a storage-format change, stage renumbering or removal, course or vocabulary removal, removing a fold or an accepted answer, removing a verb or flag, changing an exit code. |
-| **MINOR** | Additive everything — a new course (the fourteenth language), a new stage wave appended to existing courses, new words, new accepted answers, a new engine table extension (a new fold), a new verb or flag. This is the wave bump: every landed session bumps MINOR, the rhythm the history already follows. |
+| **MINOR** | Additive everything — a new course (the fifteenth language), a new stage wave appended to existing courses, new words, new accepted answers, a new engine table extension (a new fold), a new verb or flag. This is the wave bump: every landed session bumps MINOR, the rhythm the history already follows. |
 | **PATCH** | Defect fixes that touch none of the contract above — engine bugs, broken-pipe-class fixes, prompt or hint typos that add nothing and remove nothing. |
 
 While the version is 0.x the discipline above is a **human contract**, not a
