@@ -29,6 +29,7 @@ Letters fall in one of two groups: they either **fold** (the plain letter is acc
 | Dutch | `ĳ` opens to the two letters it spells: `het IJsselmeer` → `het Ĳsselmeer`; `een` → `één` (the one word where the accent does grammar); the trema folds: `de ideeen` → `de ideeën` | the schoolbook `y`: `myn` is a miss for `mijn` |
 | Norwegian | `ar` → `år`; `traer` → `trær` (`æ` rides the ligature fold it shares with Icelandic and Dutch); letters around a closed one still fold: `spørsmal` → `spørsmål` | `ø`: `smor` is wrong for `smør` — the closed club's founding example, finally spoken by its own language |
 | Czech | `cesky` → `česky`; `dekuji` → `děkuji`; `reka` → `řeka` (the letter no other language spells); `dum` → `dům` (the ring rides the å rule); `zena` → `žena`; both spellings of the long u fold to plain `u`: `urad` → `úřad` | — |
+| Slovak | `ludia` → `ľudia` (the palatalized l, in no course before this one); `lahky` → `ľahký`; the syllabic pair folds with the rest: `stlp` → `stĺp`, `vrba` → `vŕba` (the long l and r that carry a syllable alone); the shared carons ride the Czech entries: `skola` → `škola`, `zena` → `žena` | — |
 
 ## Why some letters stay closed
 

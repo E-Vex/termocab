@@ -7,6 +7,35 @@ state is a MAJOR bump; defect fixes that touch no contract are PATCH bumps.
 History before 0.18.0 lives in the git log and in HANDOFF.md §2, one
 paragraph per session.
 
+## [0.24.0] — 2026-11-28
+
+### Added
+
+- Slovak, the sixteenth course (D26): twenty-five stages on the shared
+  five-band skeleton, 393 words, 1098 exercises — and the soft wave,
+  the sixth ACCENTED extension a language has forced and the small one
+  the large Czech one foreshadowed: three entries (ľ ĺ ŕ), every one of
+  them decomposable, none of them closed. Slovak rides the caron entries
+  its neighbour Czech just collected for six of its letters (č ď ň š
+  ť ž) and the Latin-1 acutes for the rest, so the whole remaining wave
+  is the three its neighbour never forced: ľ, the palatalized l of
+  ľudia and ľahký — a letter no course before this one spelled — and
+  the doubled syllabic sonorants ĺ and ŕ, the long l and r that carry
+  a syllable alone (stĺp, kĺb, vŕba, kŕdeľ), something no other
+  shipped language asks a letter to do. The course is Slovak through
+  and through: bare nouns (no articles, like Polish, Hungarian and
+  Czech), the case engine every band drills — v + locative (v malom
+  byte, v kuchyni), do + genitive (do mesta), s + instrumental (s
+  mliekom, kartou), k + dative (k lekárovi), the position prepositions
+  (na križovatke, pri moste) — the gendered past -l/-la with its som
+  auxiliary, homonym translations on mesiac (a month, also the Moon),
+  list (a letter, also a leaf), hlas (a voice, also a vote), voliť (to
+  vote, also to elect), pošta (the post office, also the mail) and
+  krajina (a country, also a landscape), and stage 25 closes the arc
+  with the past counterfactual (keby som to vedel, urobil by som to
+  inak). Additive content, so a MINOR bump per the semver policy in
+  RELEASE.md.
+
 ## [0.23.0] — 2026-11-25
 
 ### Added
