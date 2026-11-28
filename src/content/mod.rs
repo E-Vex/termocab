@@ -7,7 +7,7 @@
 //! separation principle. When SQLite replaces JSON later, only this module
 //! changes.
 //!
-//! This is also where the shipped courses live: the same fifteen
+//! This is also where the shipped courses live: the same sixteen
 //! `languages/<lang>/stages.json` files a checkout holds are embedded into
 //! the binary at compile time ([`builtin_languages`]), so an installed
 //! `termocab` works from any directory with zero setup (D16). Embedding is
@@ -186,10 +186,10 @@ pub fn parse_language(
 /// installed file, an override dir or a dev checkout still wins, so
 /// contributors and custom-content authors are unaffected.
 pub fn builtin_languages() -> &'static [(&'static str, &'static str)] {
-    // The fifteen shipped courses (Nov 2026): french, spanish, german,
+    // The sixteen shipped courses (Nov 2026): french, spanish, german,
     // italian, polish, romanian, portuguese, swedish, hungarian,
-    // turkish, icelandic, catalan, dutch, norwegian, czech — same
-    // engine, same rules, each twenty-five stages, 393 words.
+    // turkish, icelandic, catalan, dutch, norwegian, czech, slovak —
+    // same engine, same rules, each twenty-five stages, 393 words.
     &[
         ("french", include_str!("../../languages/french/stages.json")),
         (
@@ -236,6 +236,7 @@ pub fn builtin_languages() -> &'static [(&'static str, &'static str)] {
             include_str!("../../languages/norwegian/stages.json"),
         ),
         ("czech", include_str!("../../languages/czech/stages.json")),
+        ("slovak", include_str!("../../languages/slovak/stages.json")),
     ]
 }
 
