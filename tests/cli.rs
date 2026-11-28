@@ -509,6 +509,7 @@ fn builtin_courses_work_with_zero_setup() {
         "dutch",
         "norwegian",
         "czech",
+        "slovak",
     ] {
         let out = termocab(&scratch)
             .args(["progress", lang])
@@ -584,6 +585,7 @@ fn list_langs_shows_builtins_installed_and_overrides() {
         "dutch",
         "norwegian",
         "czech",
+        "slovak",
     ] {
         let stages = std::fs::read_to_string(
             PathBuf::from(env!("CARGO_MANIFEST_DIR"))
@@ -1205,6 +1207,13 @@ fn broken_pipe_is_silent_and_exits_141_like_cat_and_git() {
 /// and its course — bare nouns, the gendered past -l/-la, the case
 /// engine (v/na locative, do genitive, s instrumental, k dative) and
 /// the past counterfactual closing stage 25 — rides the same gate as
+/// every course before it. Slovak the sixteenth, the candidate the
+/// roadmap named next — the soft wave (D26): six of its carons and
+/// its acutes already on file from D9 and D25, its three new letters
+/// (ľ ĺ ŕ) riding the same validation gate, and its course — bare
+/// nouns, the case engine the Czech course drills, the homonym
+/// translations on mesiac list hlas voliť pošta krajina, and the past
+/// counterfactual keby closing stage 25 — rides the same gate as
 /// every course before it.
 #[test]
 fn shipped_courses_validate() {
@@ -1225,6 +1234,7 @@ fn shipped_courses_validate() {
         "dutch",
         "norwegian",
         "czech",
+        "slovak",
     ] {
         let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
             .join("languages")
@@ -3083,4 +3093,114 @@ fn czech_carons_fold_end_to_end() {
     assert!(srs.contains("word řeka box 2"), "{srs}");
     assert!(srs.contains("word děkuji box 2"), "{srs}");
     assert!(srs.contains("word Praha box 2"), "{srs}");
+}
+
+/// The sixteenth language end to end, in a Slovak course. The small
+/// wave the large Czech one foreshadowed: three letters (ľ ĺ ŕ), every
+/// one decomposable, none closed, so like Czech no Slovak word is
+/// closed — but where the Czech run had to lean on its own nine-entry
+/// wave, this one leans mostly on the table the fifteen courses
+/// already built: six of Slovak's carons ride the Czech entries and
+/// its acutes ride the Latin-1 set, so the new entries only carry ľ
+/// (the palatalized l of ľudia and ľahký), ĺ and ŕ (the doubled
+/// syllabic sonorants of stĺp and vŕba — the long l and r that carry
+/// a syllable alone). A learner without a Slovak keyboard types
+/// "ludia" for "ľudia", "lahky" for "ľahký", "stlp" for "stĺp",
+/// "vrba" for "vŕba" and "skola" for "škola" — the last one riding
+/// the caron entry Czech collected — every one correct with the
+/// properly spelled form as the hint, and the run lands at 10/10,
+/// the perfect score a folded typer reaches in a language whose
+/// whole alphabet rides the accent tier. The review then keeps every
+/// caron and both syllabic sonorants verbatim in the srs keys.
+#[test]
+fn slovak_soft_wave_folds_end_to_end() {
+    let scratch = Scratch::new("slovak");
+    let course = r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Slovenčina", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "ľudia", "translation": "people",
+                "pos": "noun", "example": "Ľudia sa smejú." },
+              { "word": "ľahký", "translation": "easy",
+                "pos": "adjective", "example": "Test je ľahký." },
+              { "word": "stĺp", "translation": "a column",
+                "pos": "noun", "example": "Kamenný stĺp." },
+              { "word": "vŕba", "translation": "a willow",
+                "pos": "noun", "example": "Vŕba pri potoku." },
+              { "word": "škola", "translation": "a school",
+                "pos": "noun", "example": "Deti idú do školy." },
+              { "word": "Bratislava", "translation": "Bratislava",
+                "pos": "noun", "example": "Bratislava je hlavné mesto." }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "people", "answer": "ľudia" },
+              { "type": "translation", "prompt": "easy", "answer": "ľahký" },
+              { "type": "translation", "prompt": "a column", "answer": "stĺp" },
+              { "type": "translation", "prompt": "a willow", "answer": "vŕba" },
+              { "type": "translation", "prompt": "a school", "answer": "škola" },
+              { "type": "translation", "prompt": "Bratislava", "answer": "Bratislava" },
+              { "type": "fill_blank", "prompt": "___ sa smejú. (ľudia)",
+                "answer": "ľudia" },
+              { "type": "fill_blank", "prompt": "Test je ___. (ľahký)",
+                "answer": "ľahký" },
+              { "type": "fill_blank", "prompt": "Kamenný ___ stojí. (stĺp)",
+                "answer": "stĺp" },
+              { "type": "fill_blank", "prompt": "___ rastie pri potoku. (vŕba)",
+                "answer": "vŕba" }
+            ] }
+       ] }"#;
+    let file = scratch.stages_file("slovak.json", course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    // typed the way a learner without a Slovak keyboard types: the
+    // three new letters folded — "ludia" for "ľudia", "lahky" for
+    // "ľahký", "stlp" for "stĺp", "vrba" for "vŕba" — and the shared
+    // caron folded too, "skola" for "škola" riding the Czech wave's
+    // entry. All correct with the properly spelled forms as the
+    // hints, and plain "bratislava" case-folded for "Bratislava"
+    // with no hint at all. No Slovak letter is closed, so nothing
+    // counts against the bar: 10/10, a perfect run
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "--no-shuffle", "test"]);
+    let out = feed(
+        &mut cmd,
+        "ludia\nlahky\nstlp\nvrba\nskola\nbratislava\nľudia\nľahký\nstĺp\nvŕba\n",
+    );
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("watch the accents: ľudia"), "{text}");
+    assert!(text.contains("watch the accents: ľahký"), "{text}");
+    assert!(text.contains("watch the accents: stĺp"), "{text}");
+    assert!(text.contains("watch the accents: vŕba"), "{text}");
+    assert!(text.contains("watch the accents: škola"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    assert!(text.contains("10/10"), "{text}");
+    assert!(text.contains("stage complete"), "{text}");
+
+    // review: due cards come in byte order (Bratislava, stĺp, vŕba,
+    // ľahký, ľudia, škola — the plain ASCII s and v sort before every
+    // caroned letter, ľ's C4 byte before š's C5, and ľahký's a before
+    // ľudia's u), every translation counts, and the srs keys keep the
+    // caron and both syllabic sonorants verbatim
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(
+        &mut cmd,
+        "Bratislava\na column\na willow\neasy\npeople\na school\n",
+    );
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("correct"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    let srs = scratch.home().join(".config/termocab/srs/test.txt");
+    let srs = std::fs::read_to_string(&srs).expect("srs file");
+    assert!(srs.contains("word ľudia box 2"), "{srs}");
+    assert!(srs.contains("word ľahký box 2"), "{srs}");
+    assert!(srs.contains("word stĺp box 2"), "{srs}");
+    assert!(srs.contains("word vŕba box 2"), "{srs}");
+    assert!(srs.contains("word škola box 2"), "{srs}");
+    assert!(srs.contains("word Bratislava box 2"), "{srs}");
 }
