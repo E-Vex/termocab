@@ -161,15 +161,25 @@ use std::iter::once;
 /// takes every caron; no Czech letter joins the closed club, because
 /// none of them is a letter in its own right the way ø þ ð ı are —
 /// they all decompose. ů rides the å rule on a new base letter: ú
-/// and ů spell the same sound twice, and both fold to "u".
-/// Decomposing (rather than stripping) in the strict
+/// and ů spell the same sound twice, and both fold to "u". The Slovak
+/// set (D26) is the sixth extension: three entries, the small wave the
+/// large Czech one foreshadowed — ľ (l + caron), ĺ (l + acute) and
+/// ŕ (r + acute), every one decomposable, none closed. ľ is the
+/// marquee: the palatalized l that lives in ľudia and ľahký, a
+/// letter Slovak shares with none of the fifteen courses before it;
+/// ĺ and ŕ are the doubled syllabic sonorants — the long l and r
+/// that carry a vowel's worth of sound all alone (stĺp, vŕba),
+/// something no other shipped language asks a letter to do, and
+/// both decompose like any acute, so Slovak rides the D10 shape
+/// with the Czech caron entries already on file for six of its
+/// letters. Decomposing (rather than stripping) in the strict
 /// pass makes precomposed "é" equal to "e" + U+0301 typed on a macOS
 /// keyboard — same letter, same accent, different encoding. Hand-
-/// written on purpose: fifty-one entries beat a Unicode-normalization
+/// written on purpose: fifty-four entries beat a Unicode-normalization
 /// crate, and §6 asks for justification before any dependency. The
 /// Nordic letters stay closed — "smør" is not "smor". Lowercase
 /// only: [`normalize_strict`] lowercases before it looks here (D9).
-const ACCENTED: [(char, &str); 51] = [
+const ACCENTED: [(char, &str); 54] = [
     ('à', "a\u{0300}"),
     ('á', "a\u{0301}"),
     ('â', "a\u{0302}"),
@@ -262,6 +272,24 @@ const ACCENTED: [(char, &str); 51] = [
     ('ť', "t\u{030C}"),
     ('ž', "z\u{030C}"),
     ('ů', "u\u{030A}"),
+    // Slovak (D26): the sixth extension, three entries — the small
+    // wave the large Czech one foreshadowed. Slovak rides the caron
+    // entries Czech collected for six of its letters (č ď ň š ť ž)
+    // and the Latin-1 acutes for the rest, and asks the table for
+    // exactly the three its neighbour never forced: ľ (l + caron —
+    // the palatalized l of ľudia and ľahký, a letter no course
+    // before this one spelled), ĺ (l + acute) and ŕ (r + acute) —
+    // the two doubled syllabic sonorants, the long l and r that
+    // carry a syllable alone (stĺp, kĺb, vŕba, kŕdeľ). Every one
+    // decomposes, so all three ride the accent tier; none is closed,
+    // because none is a letter in its own right the way ø þ ð ı are.
+    // The acute and the caron were both already waiting inside the
+    // U+0300..U+036F window the loose pass drops, so the entries
+    // only teach the strict pass that the precomposed letters
+    // decompose — the D10 shape, on the far side of the D25 wave.
+    ('ľ', "l\u{030C}"),
+    ('ĺ', "l\u{0301}"),
+    ('ŕ', "r\u{0301}"),
 ];
 
 /// The ligatures open up only in the loose pass — "œuvre" and
@@ -999,6 +1027,75 @@ mod tests {
         let praha = translation("Praha", &[]);
         assert_eq!(praha.grade("praha"), Grade::Correct);
         assert!(!praha.is_correct("brno"));
+    }
+
+    #[test]
+    fn the_slovak_soft_wave_rides_the_accent_tier() {
+        // The sixteenth-language wave (D26) is the small one the large
+        // Czech one foreshadowed: three entries — ľ (l + caron), ĺ
+        // (l + acute) and ŕ (r + acute) — every one decomposable,
+        // none closed. Six of Slovak's carons already ride the Czech
+        // entries and the acutes ride the Latin-1 set, so this is the
+        // whole remaining wave. The three behaviors every newcomer set
+        // gets:
+        // 1. the plain spelling counts, with the marked form as the
+        //    hint — a learner without a Slovak keyboard types "ludia"
+        //    for "ľudia" and "lahky" for "ľahký"
+        let ludia = translation("ľudia", &[]);
+        assert_eq!(ludia.grade("ludia"), Grade::CorrectWithHint("ľudia".into()));
+        let lahky = translation("ľahký", &[]);
+        assert_eq!(lahky.grade("lahky"), Grade::CorrectWithHint("ľahký".into()));
+        // 2. the properly spelled word is a full match — the caron
+        //    and the acute survive the strict pass — and case
+        //    round-trips
+        assert_eq!(ludia.grade("ľudia"), Grade::Correct);
+        assert!(ludia.is_correct("ĽUDIA"));
+        assert!(lahky.is_correct("ĽAHKÝ"));
+        // 3. composition folds both ways: a caron or an acute typed
+        //    as a combining mark on the same base letter equals the
+        //    precomposed letter, no hint — the macOS keyboard case
+        assert_eq!(ludia.grade("l\u{030C}udia"), Grade::Correct);
+        assert_eq!(lahky.grade("l\u{030C}ahky\u{0301}"), Grade::Correct);
+        // …and a wrong letter is still wrong — ľ is not a wildcard,
+        // and a doubled letter is a miss
+        assert!(!ludia.is_correct("ludua"));
+        assert!(!lahky.is_correct("lahkyy"));
+        // the syllabic pair — ĺ and ŕ, the long l and r that carry a
+        // syllable alone, the letters no other shipped language asks
+        // for: "stp" for "stĺp" counts with the hint, "vrba" for
+        // "vŕba" the same, and the doubled sonorant round-trips
+        let stlp = translation("stĺp", &[]);
+        assert_eq!(stlp.grade("stlp"), Grade::CorrectWithHint("stĺp".into()));
+        assert_eq!(stlp.grade("stĺp"), Grade::Correct);
+        assert!(stlp.is_correct("STĹP"));
+        let vrba = translation("vŕba", &[]);
+        assert_eq!(vrba.grade("vrba"), Grade::CorrectWithHint("vŕba".into()));
+        assert!(vrba.is_correct("VŔBA"));
+        // the other real syllabic words — kĺb (a joint) and kŕdeľ
+        // (a flock) — ride the same entries: "klb" and "krdel" count
+        // with the hints, and the composed form is a full match
+        let klb = translation("kĺb", &[]);
+        assert_eq!(klb.grade("klb"), Grade::CorrectWithHint("kĺb".into()));
+        assert_eq!(klb.grade("kl\u{0301}b"), Grade::Correct);
+        let krdel = translation("kŕdeľ", &[]);
+        assert_eq!(krdel.grade("krdel"), Grade::CorrectWithHint("kŕdeľ".into()));
+        assert_eq!(krdel.grade("kr\u{0301}deľ"), Grade::Correct);
+        // the shared carons the Czech wave already collected, live in
+        // real Slovak words this time — the nearest neighbour's table
+        // doing the sixteenth language's work: "skola" for "škola",
+        // "zeňa" stays a miss because žena's g is wrong — the caron
+        // is not a wildcard
+        let skola = translation("škola", &[]);
+        assert_eq!(skola.grade("skola"), Grade::CorrectWithHint("škola".into()));
+        let zena = translation("žena", &[]);
+        assert_eq!(zena.grade("zena"), Grade::CorrectWithHint("žena".into()));
+        assert!(!zena.is_correct("zeia"));
+        // and no Slovak letter joins the closed club: every letter of
+        // the wave decomposes, so the club keeps its four members
+        // (D9, D15) and gains nothing from this one either
+        let bratislava = translation("Bratislava", &[]);
+        assert_eq!(bratislava.grade("bratislava"), Grade::Correct);
+        assert!(!bratislava.is_correct("kosice"));
     }
 
     #[test]
