@@ -508,6 +508,7 @@ fn builtin_courses_work_with_zero_setup() {
         "catalan",
         "dutch",
         "norwegian",
+        "czech",
     ] {
         let out = termocab(&scratch)
             .args(["progress", lang])
@@ -582,6 +583,7 @@ fn list_langs_shows_builtins_installed_and_overrides() {
         "catalan",
         "dutch",
         "norwegian",
+        "czech",
     ] {
         let stages = std::fs::read_to_string(
             PathBuf::from(env!("CARGO_MANIFEST_DIR"))
@@ -1197,6 +1199,13 @@ fn broken_pipe_is_silent_and_exits_141_like_cat_and_git() {
 /// trema ë of ideeën, all D9), the one new question its ligature,
 /// answered by D19's fold: the Ĳ of "het Ĳsselmeer" rides the
 /// content through the same validation gate as every other character.
+/// Czech the fifteenth, the first candidate the post-Norwegian
+/// roadmap named — the caron wave (D25): its nine letters (č ď ě ň ř
+/// š ť ž ů) flow through content validation like everything else,
+/// and its course — bare nouns, the gendered past -l/-la, the case
+/// engine (v/na locative, do genitive, s instrumental, k dative) and
+/// the past counterfactual closing stage 25 — rides the same gate as
+/// every course before it.
 #[test]
 fn shipped_courses_validate() {
     let scratch = Scratch::new("shipped");
@@ -1215,6 +1224,7 @@ fn shipped_courses_validate() {
         "catalan",
         "dutch",
         "norwegian",
+        "czech",
     ] {
         let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
             .join("languages")
@@ -2522,7 +2532,10 @@ fn stages_eleven_to_fifteen_unlock_review_and_report_their_level() {
     // reviews present due cards in alphabetical word order, and
     // alphabetically mot10 and mot11 sort before mot2
     let order = [1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9];
-    let answers: String = order.iter().map(|n| format!("word{n}\n")).collect();
+    let mut answers = String::new();
+    for n in order {
+        answers.push_str(&format!("word{n}\n"));
+    }
     let out = feed(&mut cmd, &answers);
     assert!(out.status.success(), "{}", stderr(&out));
     let text = stdout(&out);
@@ -2673,7 +2686,10 @@ fn stages_sixteen_to_twenty_unlock_review_and_report_their_level() {
     // reviews present due cards in alphabetical word order, and
     // alphabetically mot10 through mot16 sort before mot2
     let order = [1, 10, 11, 12, 13, 14, 15, 16, 2, 3, 4, 5, 6, 7, 8, 9];
-    let answers: String = order.iter().map(|n| format!("word{n}\n")).collect();
+    let mut answers = String::new();
+    for n in order {
+        answers.push_str(&format!("word{n}\n"));
+    }
     let out = feed(&mut cmd, &answers);
     assert!(out.status.success(), "{}", stderr(&out));
     let text = stdout(&out);
@@ -2837,7 +2853,10 @@ fn stages_twentyone_to_twentyfive_unlock_review_and_report_their_level() {
     let first_sitting = [
         1, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2, 20, 21, 3, 4, 5, 6, 7, 8,
     ];
-    let answers: String = first_sitting.iter().map(|n| format!("word{n}\n")).collect();
+    let mut answers = String::new();
+    for n in first_sitting {
+        answers.push_str(&format!("word{n}\n"));
+    }
     let out = feed(&mut cmd, &answers);
     assert!(out.status.success(), "{}", stderr(&out));
     let text = stdout(&out);
@@ -2964,4 +2983,104 @@ fn norwegian_closed_o_slash_and_the_a_endings_grade_end_to_end() {
     assert!(srs.contains("word smør box 2"), "{srs}");
     assert!(srs.contains("word høy box 2"), "{srs}");
     assert!(srs.contains("word fjord box 2"), "{srs}");
+}
+
+/// The fifteenth language end to end, in a Czech course. The mirror
+/// image of the Norwegian story: where D24 collected a closed ruling
+/// (ø stayed shut and cost the folded typer two points), D25 collects
+/// nine folds — č ď ě ň ř š ť ž ů, every letter the language carries,
+/// decomposes and rides the accent tier, so no Czech word is closed.
+/// A learner without a Czech keyboard types "cesky" for "česky",
+/// "dum" for "dům", "zena" for "žena", "reka" for "řeka" and
+/// "dekuji" for "děkuji" — every one correct with the properly
+/// spelled form as the hint — and the run lands at 10/10, the perfect
+/// score a folded typer can only reach in a language whose whole
+/// alphabet rides the accent tier. The review then keeps every caron
+/// and the ring verbatim in the srs keys.
+#[test]
+fn czech_carons_fold_end_to_end() {
+    let scratch = Scratch::new("czech");
+    let course = r#"{ "language": "test", "stages": [
+         { "id": 1, "title": "Čeština", "level_hint": "beginner",
+            "vocabulary": [
+              { "word": "česky", "translation": "Czech",
+                "pos": "adverb", "example": "Mluvíš česky?" },
+              { "word": "dům", "translation": "house",
+                "pos": "noun", "example": "Náš dům je velký." },
+              { "word": "žena", "translation": "woman",
+                "pos": "noun", "example": "Ta žena čte knihu." },
+              { "word": "řeka", "translation": "river",
+                "pos": "noun", "example": "Řeka se vlévá do moře." },
+              { "word": "děkuji", "translation": "thank you",
+                "pos": "interjection", "example": "Děkuji za pomoc." },
+              { "word": "Praha", "translation": "Prague",
+                "pos": "noun", "example": "Praha je hlavní město." }
+            ],
+            "exercises": [
+              { "type": "translation", "prompt": "Czech", "answer": "česky" },
+              { "type": "translation", "prompt": "house", "answer": "dům" },
+              { "type": "translation", "prompt": "woman", "answer": "žena" },
+              { "type": "translation", "prompt": "river", "answer": "řeka" },
+              { "type": "translation", "prompt": "thank you", "answer": "děkuji" },
+              { "type": "translation", "prompt": "Prague", "answer": "Praha" },
+              { "type": "fill_blank", "prompt": "Mluvíte ___? (česky)",
+                "answer": "česky" },
+              { "type": "fill_blank", "prompt": "Náš ___ je velký. (dům)",
+                "answer": "dům" },
+              { "type": "fill_blank", "prompt": "Ta ___ čte knihu. (žena)",
+                "answer": "žena" },
+              { "type": "fill_blank", "prompt": "___ se vlévá do moře. (řeka)",
+                "answer": "řeka" }
+            ] }
+       ] }"#;
+    let file = scratch.stages_file("czech.json", course);
+    let out = termocab(&scratch)
+        .args(["add-lang", "test", file.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(out.status.success(), "{}", stderr(&out));
+
+    // typed the way a learner without a Czech keyboard types: every
+    // caron and the ring folded — "cesky" for "česky", "dum" for
+    // "dům", "zena" for "žena", "reka" for "řeka", "dekuji" for
+    // "děkuji" — all correct with the properly spelled forms as the
+    // hints, and plain "praha" case-folded for "Praha" with no hint
+    // at all. No Czech letter is closed, so nothing counts against
+    // the bar: 10/10, a perfect run
+    let mut cmd = termocab(&scratch);
+    cmd.args(["start", "--no-shuffle", "test"]);
+    let out = feed(
+        &mut cmd,
+        "cesky\ndum\nzena\nreka\ndekuji\npraha\nčesky\ndům\nžena\nřeka\n",
+    );
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("watch the accents: česky"), "{text}");
+    assert!(text.contains("watch the accents: dům"), "{text}");
+    assert!(text.contains("watch the accents: žena"), "{text}");
+    assert!(text.contains("watch the accents: řeka"), "{text}");
+    assert!(text.contains("watch the accents: děkuji"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    assert!(text.contains("10/10"), "{text}");
+    assert!(text.contains("stage complete"), "{text}");
+
+    // review: due cards come in byte order (Praha, děkuji, dům,
+    // česky, řeka, žena — the plain ASCII d-letters sort before the
+    // caroned c, and ě's C4 byte before ů's C5), every translation
+    // counts, and the srs keys keep every caron and the ring verbatim
+    let mut cmd = termocab(&scratch);
+    cmd.args(["review", "test"]);
+    let out = feed(&mut cmd, "Prague\nthank you\nhouse\nCzech\nriver\nwoman\n");
+    assert!(out.status.success(), "{}", stderr(&out));
+    let text = stdout(&out);
+    assert!(text.contains("correct"), "{text}");
+    assert!(!text.contains("not quite"), "{text}");
+    let srs = scratch.home().join(".config/termocab/srs/test.txt");
+    let srs = std::fs::read_to_string(&srs).expect("srs file");
+    assert!(srs.contains("word česky box 2"), "{srs}");
+    assert!(srs.contains("word dům box 2"), "{srs}");
+    assert!(srs.contains("word žena box 2"), "{srs}");
+    assert!(srs.contains("word řeka box 2"), "{srs}");
+    assert!(srs.contains("word děkuji box 2"), "{srs}");
+    assert!(srs.contains("word Praha box 2"), "{srs}");
 }
